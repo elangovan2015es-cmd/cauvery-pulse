@@ -8,22 +8,11 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Version: 2.1 | Build: 20260414-1800 -->
+<!-- Version: 2.1 | Build: 20260414-1820 -->
 <title>Cauvery Pulse – Life Canvas</title>
 <script>
-// ── IPHONE CACHE FIX — runs in <head> before page renders ──
+// ── IPHONE CACHE FIX ──
 (function() {
-  var VER = '2.1.20260414';
-  var key = 'cp_m0_version';
-  if (window.location.search.indexOf('v=') !== -1) {
-    localStorage.setItem(key, VER);
-    return;
-  }
-  if (localStorage.getItem(key) !== VER) {
-    localStorage.setItem(key, VER);
-    var base = window.location.pathname;
-    window.location.replace(base + '?v=' + Date.now());
-  }
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then(function(regs) {
       regs.forEach(function(r) { r.unregister(); });
