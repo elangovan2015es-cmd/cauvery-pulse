@@ -10,7 +10,7 @@
 <meta http-equiv="Expires" content="0">
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='36' fill='%2307091a'/><text x='96' y='130' font-size='110' text-anchor='middle'>🌊</text></svg>">
-<!-- Version: 2.1 | Build: 20260414-1900 -->
+<!-- Version: 2.2 | Build: 20260414-1900 -->
 <title>Cauvery Pulse – Life Canvas</title>
 <script>
 // ── IPHONE CACHE FIX ──
@@ -832,23 +832,11 @@ function toast(msg) {
 })();
 </script>
 <script>
-// ── SERVICE WORKER REGISTRATION ──
+// ── SERVICE WORKER: FULL UNREGISTER ──
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', function() {
-    navigator.serviceWorker.register('./sw.js')
-      .then(function(reg) {
-        reg.update();
-        reg.addEventListener('updatefound', function() {
-          var newSW = reg.installing;
-          newSW.addEventListener('statechange', function() {
-            if (newSW.state === 'installed' && navigator.serviceWorker.controller) {
-              window.location.reload();
-            }
-          });
-        });
-      });
-    navigator.serviceWorker.addEventListener('controllerchange', function() {
-      window.location.reload();
+    navigator.serviceWorker.getRegistrations().then(function(regs) {
+      regs.forEach(function(reg) { reg.unregister(); });
     });
   });
 }
