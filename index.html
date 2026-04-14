@@ -8,7 +8,9 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Version: 2.1 | Build: 20260414-1820 -->
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='36' fill='%23060f1e'/><text x='96' y='130' font-size='110' text-anchor='middle'>🌊</text></svg>">
+<!-- Version: 2.1 | Build: 20260414-1900 -->
 <title>Cauvery Pulse – Financial Health</title>
 <script>
 // ── IPHONE CACHE FIX ──
@@ -220,12 +222,13 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   </div>
   <div class="htitle">Know Your True<br><span>Financial Health</span></div>
   <div class="hdesc">3 steps · 15 minutes · India-specific<br>Personality + Structure + Behaviour = Real Score</div>
-  <div class="steps-row">
+  <div class="steps-row" id="stepsRow">
     <div class="step-box"><div class="si">🧠</div><div class="sn">5</div><div class="sl">Personality<br>Questions</div></div>
     <div class="step-box"><div class="si">🏛️</div><div class="sn">10</div><div class="sl">Finosis<br>Parameters</div></div>
     <div class="step-box"><div class="si">📊</div><div class="sn">100</div><div class="sl">Point<br>Score</div></div>
   </div>
-  <button class="btn-p" style="animation:pr 2s ease infinite" onclick="goStart()">🩺 &nbsp;Start My Health Check</button>
+  <div id="canvasBadge" style="display:none;background:linear-gradient(135deg,rgba(108,127,255,.12),rgba(46,196,182,.06));border:1px solid rgba(108,127,255,.25);border-radius:14px;padding:14px 16px;margin-bottom:16px;font-size:13px;line-height:1.8;color:var(--text)"></div>
+  <button class="btn-p" id="mainStartBtn" style="animation:pr 2s ease infinite" onclick="goStart()">🩺 &nbsp;Start My Health Check</button>
   <button class="btn-s" id="viewBtn" style="display:none" onclick="showScreen('results')">📊 &nbsp;View My Last Results</button>
   <div class="cp-mark">© Elango Industries Limited · Cauvery Pulse</div>
 </div>
@@ -599,7 +602,21 @@ function navTo(t){
   else if(t==='profile')goStart();
   else showScreen(t);
 }
-function goStart(){pqAns=[];pqIdx=0;pType=null;aSc={};aIdx=0;selScore=null;showScreen('profile');}
+function goStart(){
+  const canvas=localStorage.getItem('cp_canvas');
+  if(canvas){
+    const d=JSON.parse(canvas);
+    profile.name=d.name||'Friend';
+    profile.age=d.gen==='first_gen'?'young':d.gen==='second_gen'?'mid':d.gen==='transition_gen'?'young':d.gen==='restart'?'mid':'young';
+    profile.inc=d.inc||'';
+    if(d.ptypes&&d.ptypes.length>0){pqAns=d.ptypes;pType=d.primaryType||d.ptypes[0];}
+    aSc={};aIdx=0;selScore=null;
+    showScreen('assess');renderA(0);
+  } else {
+    pqAns=[];pqIdx=0;pType=null;aSc={};aIdx=0;selScore=null;
+    showScreen('profile');
+  }
+}
 
 // ══════════════════ PROFILE ══════════════════
 function selChip(el,g){
@@ -821,11 +838,94 @@ function doShare(){
   else{navigator.clipboard?.writeText(txt);toast('Score copied to clipboard ✓');}
 }
 
-// INIT
+// ══════════════════ INIT ══════════════════
 (function(){
+  // Restore previous Finosis score if exists
   const sc=localStorage.getItem('cp_sc'),tot=localStorage.getItem('cp_tot');
-  if(sc&&tot){aSc=JSON.parse(sc);const t=+tot;document.getElementById('heroNum').textContent=t;document.getElementById('viewBtn').style.display='block';setTimeout(()=>{document.getElementById('heroRing').style.strokeDashoffset=(502-(502*t/100));},300);}
+  if(sc&&tot){
+    aSc=JSON.parse(sc);
+    const t=+tot;
+    document.getElementById('heroNum').textContent=t;
+    document.getElementById('viewBtn').style.display='block';
+    setTimeout(()=>{document.getElementById('heroRing').style.strokeDashoffset=(502-(502*t/100));},300);
+  }
+
+  // ── CHECK IF ARRIVING FROM M0 LIFE CANVAS ──
+  const canvas=localStorage.getItem('cp_canvas');
+  if(canvas){
+    const d=JSON.parse(canvas);
+
+    // Pre-fill profile from canvas data
+    profile.name = d.name || 'Friend';
+    profile.age  = d.gen==='first_gen'?'young':d.gen==='second_gen'?'mid':d.gen==='third_gen'?'mid':d.gen==='restart'?'mid':'young';
+    profile.ptypes = d.ptypes || [];
+
+    // Pre-load personality answers from canvas
+    if(d.ptypes && d.ptypes.length > 0){
+      pqAns = d.ptypes;
+      pType = d.primaryType || d.ptypes[0];
+    }
+
+    // Show canvas summary badge on welcome screen
+    const PERS_NAMES={
+      avoid:'The Avoiding Type',spend:'The Spending Type',status:'The Status Seeker',
+      save:'The Saving Type',anxious:'The Financially Anxious',gamble:'The Gambling Type',
+      balanced:'The Balanced Investor',first_gen_earner:'First Generation Builder',
+      second_gen_builder:'Second Generation Guardian'
+    };
+    const GEN_NAMES={
+      first_gen:'First Generation Earner',transition_gen:'Transition Generation',
+      second_gen:'Second Gen Business Family',third_gen:'Multi-Generational',restart:'Rebuilding After Setback'
+    };
+    const pname = PERS_NAMES[d.primaryType] || 'Balanced Investor';
+    const gname = GEN_NAMES[d.gen] || '';
+    const badge = document.getElementById('canvasBadge');
+    if(badge){
+      badge.style.display='block';
+      badge.innerHTML=`✅ <strong>Life Canvas loaded</strong><br>
+        👤 ${d.name||'Friend'} &nbsp;·&nbsp; 🌿 ${gname}<br>
+        🧠 <strong>${pname}</strong><br>
+        <span style="font-size:11px;color:var(--muted)">Personality quiz is pre-filled from your Life Canvas. You will go straight to the Finosis assessment.</span>`;
+    }
+
+    // Update start button label
+    const btn=document.getElementById('mainStartBtn');
+    if(btn) btn.innerHTML='🩺 &nbsp;Start Finosis Assessment →';
+
+    // Hide steps row — quiz step is already done
+    const sr=document.getElementById('stepsRow');
+    if(sr) sr.innerHTML=`
+      <div class="step-box"><div class="si">✅</div><div class="sn" style="font-size:14px">Done</div><div class="sl">Life<br>Canvas</div></div>
+      <div class="step-box"><div class="si">🏛️</div><div class="sn">10</div><div class="sl">Finosis<br>Parameters</div></div>
+      <div class="step-box"><div class="si">📊</div><div class="sn">100</div><div class="sl">Point<br>Score</div></div>`;
+  }
 })();
+</script>
+<script>
+// ── SERVICE WORKER REGISTRATION ──
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+    navigator.serviceWorker.register('./sw.js')
+      .then(function(reg) {
+        // Check for update immediately on every load
+        reg.update();
+        // When new SW is waiting — force activate it
+        reg.addEventListener('updatefound', function() {
+          var newSW = reg.installing;
+          newSW.addEventListener('statechange', function() {
+            if (newSW.state === 'installed' && navigator.serviceWorker.controller) {
+              // New version ready — reload automatically
+              window.location.reload();
+            }
+          });
+        });
+      });
+    // If SW controller changes — reload for fresh content
+    navigator.serviceWorker.addEventListener('controllerchange', function() {
+      window.location.reload();
+    });
+  });
+}
 </script>
 </body>
 </html>
