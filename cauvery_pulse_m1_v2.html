@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<meta name="theme-color" content="#060f1e">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Cauvery Pulse – Financial Health</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:#060f1e;--deep:#0c1a30;--card:#112040;--card2:#172848;--border:rgba(255,255,255,0.07);
+  --gold:#e8b84b;--teal:#2ec4b6;--red:#e05252;--amber:#f4a535;--green:#3ecf8e;--purple:#9b72cf;
+  --text:#dde6f0;--muted:#5d7a96;
+  --ff-h:'Playfair Display',serif;--ff-b:'DM Sans',sans-serif;--ff-m:'DM Mono',monospace;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+body{font-family:var(--ff-b);background:var(--ink);color:var(--text);min-height:100vh;overflow-x:hidden}
+body::after{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(46,196,182,.06),transparent 70%),radial-gradient(ellipse 60% 40% at 80% 80%,rgba(232,184,75,.05),transparent 60%);pointer-events:none;z-index:0}
+#app{position:relative;z-index:1;max-width:480px;margin:0 auto;padding-bottom:82px}
+header{padding:22px 20px 14px;display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px}
+.blogo{width:38px;height:38px;background:linear-gradient(135deg,var(--gold),var(--teal));border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.bname{font-family:var(--ff-h);font-size:17px;font-weight:700;line-height:1}
+.bsub{font-size:10px;color:var(--muted);letter-spacing:1.2px;text-transform:uppercase;margin-top:2px}
+.vtag{font-family:var(--ff-m);font-size:11px;color:var(--muted);background:var(--card);border:1px solid var(--border);padding:4px 8px;border-radius:20px}
+.screen{display:none;animation:fu .35s ease}.screen.active{display:block}
+@keyframes fu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+.px{padding:0 20px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin-bottom:12px}
+.card-lbl{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.stitle{font-family:var(--ff-h);font-size:22px;font-weight:700;margin-bottom:6px;padding:0 20px}
+.ssub{font-size:13px;color:var(--muted);margin-bottom:22px;padding:0 20px;line-height:1.7}
+.btn-p{width:100%;padding:15px;background:linear-gradient(135deg,var(--gold),#c9951e);color:#060f1e;font-family:var(--ff-b);font-size:15px;font-weight:700;border:none;border-radius:13px;cursor:pointer;transition:all .2s;margin-bottom:10px}
+.btn-p:active{transform:scale(.98)}
+.btn-s{width:100%;padding:13px;background:transparent;color:var(--text);font-family:var(--ff-b);font-size:14px;font-weight:500;border:1px solid var(--border);border-radius:13px;cursor:pointer;transition:all .2s;margin-bottom:10px}
+.btn-s:hover{background:var(--card)}
+.field{margin-bottom:16px;padding:0 20px}
+.field label{display:block;font-size:11px;color:var(--muted);letter-spacing:.8px;text-transform:uppercase;margin-bottom:7px}
+.field input,.field select{width:100%;padding:12px 15px;background:var(--card);border:1px solid var(--border);border-radius:11px;color:var(--text);font-family:var(--ff-b);font-size:14px;outline:none;transition:border-color .2s;-webkit-appearance:none}
+.field input:focus,.field select:focus{border-color:var(--gold)}
+.field select option{background:var(--card)}
+.chips{display:flex;flex-wrap:wrap;gap:7px}
+.chip{padding:7px 13px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:13px;color:var(--muted);cursor:pointer;transition:all .2s;user-select:none}
+.chip.sel{background:rgba(232,184,75,.15);border-color:var(--gold);color:var(--gold)}
+
+/* WELCOME */
+#welcome{padding:0 20px 20px}
+.hero-wrap{display:flex;flex-direction:column;align-items:center;padding:18px 0 22px}
+.ring-outer{width:190px;height:190px;position:relative;display:flex;align-items:center;justify-content:center}
+.ring-outer svg{position:absolute;inset:0;transform:rotate(-90deg)}
+.rt{fill:none;stroke:var(--card2);stroke-width:10}
+.rf{fill:none;stroke:url(#rg);stroke-width:10;stroke-linecap:round;stroke-dasharray:502;stroke-dashoffset:502;transition:stroke-dashoffset 1.4s cubic-bezier(.4,0,.2,1)}
+.hnum{font-family:var(--ff-h);font-size:54px;font-weight:900;color:var(--gold);line-height:1;position:relative;z-index:2}
+.hlbl{font-size:10px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;position:relative;z-index:2}
+.htitle{font-family:var(--ff-h);font-size:26px;font-weight:900;text-align:center;line-height:1.25;margin-bottom:10px}
+.htitle span{color:var(--gold)}
+.hdesc{font-size:13px;color:var(--muted);text-align:center;line-height:1.7;margin-bottom:22px}
+.steps-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:20px}
+.step-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 8px;text-align:center}
+.step-box .si{font-size:20px;margin-bottom:4px}
+.step-box .sn{font-family:var(--ff-m);font-size:18px;font-weight:500;color:var(--gold);line-height:1}
+.step-box .sl{font-size:10px;color:var(--muted);margin-top:3px;line-height:1.4}
+
+/* QUIZ / ASSESS HEADER */
+.q-header{padding:20px 20px 14px;background:var(--deep);border-bottom:1px solid var(--border)}
+.prog-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.prog-track{flex:1;height:4px;background:var(--card2);border-radius:2px;overflow:hidden}
+.prog-fill{height:100%;border-radius:2px;transition:width .4s ease}
+.prog-txt{font-family:var(--ff-m);font-size:11px;color:var(--muted);white-space:nowrap}
+.qbadge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;margin-bottom:7px}
+.bpurple{background:rgba(155,114,207,.15);color:var(--purple)}
+.bscan{background:rgba(232,184,75,.15);color:var(--gold)}
+.bpulse{background:rgba(46,196,182,.15);color:var(--teal)}
+.qtitle{font-family:var(--ff-h);font-size:19px;font-weight:700;line-height:1.3}
+.q-block{padding:16px 20px 20px}
+.qdesc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:16px}
+.gopts{display:flex;flex-direction:column;gap:9px;margin-bottom:16px}
+.gopt{display:flex;align-items:center;gap:12px;padding:13px 14px;background:var(--card);border:1px solid var(--border);border-radius:12px;cursor:pointer;transition:all .2s}
+.gopt.sel{background:rgba(232,184,75,.1);border-color:var(--gold)}
+.gopt.psel{background:rgba(155,114,207,.1);border-color:var(--purple)}
+.gic{width:34px;height:34px;border-radius:9px;background:var(--card2);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.gopt.sel .gic,.gopt.psel .gic{background:rgba(232,184,75,.15)}
+.glbl{font-size:13px;font-weight:500}
+.gsub{font-size:11px;color:var(--muted);margin-top:2px}
+.gsc{font-family:var(--ff-m);font-size:12px;color:var(--muted);flex-shrink:0}
+
+/* OVERRIDE */
+.ov-tog{display:flex;align-items:center;justify-content:space-between;padding:11px 14px;background:var(--card);border:1px dashed var(--border);border-radius:11px;cursor:pointer;margin-bottom:14px}
+.ov-lbl{font-size:12px;color:var(--muted)}
+.tpill{width:34px;height:19px;background:var(--card2);border-radius:10px;position:relative;transition:background .2s}
+.tpill.on{background:var(--gold)}
+.tdot{position:absolute;top:3px;left:3px;width:13px;height:13px;border-radius:50%;background:var(--muted);transition:all .2s}
+.tpill.on .tdot{left:18px;background:var(--ink)}
+.ov-wrap{display:none;animation:fu .3s ease}.ov-wrap.show{display:block}
+.sld{display:flex;align-items:baseline;gap:5px;margin-bottom:10px}
+.slnum{font-family:var(--ff-h);font-size:44px;font-weight:900;color:var(--gold);line-height:1}
+.slmax{font-size:16px;color:var(--muted)}
+input[type=range]{-webkit-appearance:none;width:100%;height:6px;border-radius:3px;background:var(--card2);outline:none;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--gold);border:3px solid var(--ink);box-shadow:0 0 0 2px var(--gold);cursor:pointer}
+.sllbls{display:flex;justify-content:space-between;margin-top:5px}
+.sllbls span{font-size:11px;color:var(--muted)}
+
+/* RESULTS */
+#results{padding:0 20px 20px}
+.res-hero{display:flex;flex-direction:column;align-items:center;padding:20px 0 20px}
+.res-ring{width:175px;height:175px;position:relative;display:flex;align-items:center;justify-content:center;margin-bottom:10px}
+.res-ring svg{position:absolute;inset:0;transform:rotate(-90deg)}
+.resnum{font-family:var(--ff-h);font-size:52px;font-weight:900;line-height:1;position:relative;z-index:2}
+.resgrade{font-size:13px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;margin-top:4px}
+.restag{font-size:13px;color:var(--muted);text-align:center;line-height:1.65;max-width:300px;margin-top:6px}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.sec-card{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:14px;text-align:center}
+.sc-ic{font-size:20px;margin-bottom:5px}
+.sc-nm{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:7px}
+.sc-sc{font-family:var(--ff-h);font-size:26px;font-weight:700;line-height:1}
+.sc-mx{font-size:11px;color:var(--muted)}
+.sc-bar{height:3px;border-radius:2px;margin-top:9px;background:var(--card2);overflow:hidden}
+.sc-fill{height:100%;border-radius:2px;transition:width 1s ease}
+
+/* PERSONALITY CARD */
+.pers-card{background:linear-gradient(135deg,rgba(155,114,207,.15),rgba(46,196,182,.08));border:1px solid rgba(155,114,207,.3);border-radius:16px;padding:18px;margin-bottom:12px;display:flex;gap:14px;align-items:flex-start}
+.pers-big{font-size:36px;flex-shrink:0}
+.pers-name{font-family:var(--ff-h);font-size:18px;font-weight:700;color:var(--purple);margin-bottom:4px}
+.pers-tl{font-size:13px;color:var(--muted);line-height:1.6}
+.pers-fix{font-size:12px;color:var(--teal);margin-top:7px;font-weight:500;line-height:1.5}
+
+/* FORMULA */
+.formula-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border)}
+.formula-row:last-child{border-bottom:none}
+.fpct{font-family:var(--ff-h);font-size:20px;font-weight:700;width:48px;flex-shrink:0}
+.fbar{flex:1;height:8px;background:var(--card2);border-radius:4px;overflow:hidden}
+.ffill{height:100%;border-radius:4px}
+.fdesc{font-size:12px;color:var(--muted);text-align:right;flex-shrink:0;max-width:140px;line-height:1.4}
+
+/* PARAM ROWS */
+.param-row{display:flex;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border);gap:10px;cursor:pointer}
+.param-row:last-child{border-bottom:none}
+.pic{font-size:17px;width:26px;text-align:center;flex-shrink:0;margin-top:1px}
+.pinfo{flex:1}
+.pname{font-size:13px;font-weight:500}
+.phint{font-size:11px;margin-top:2px;font-weight:500}
+.pright{display:flex;align-items:center;gap:8px;flex-shrink:0}
+.pbar{width:50px;height:4px;background:var(--card2);border-radius:2px;overflow:hidden}
+.pfill{height:100%;border-radius:2px}
+.psc{font-family:var(--ff-m);font-size:12px;font-weight:600}
+.eico{font-size:11px;color:var(--muted);transition:transform .2s;margin-top:2px}
+.eico.open{transform:rotate(180deg)}
+
+/* ADVICE PANEL */
+.adv-panel{display:none;margin-top:10px;animation:fu .3s ease}
+.adv-panel.open{display:block}
+.adv-tip{background:var(--card2);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:10px 12px;margin-bottom:9px;font-size:12px;line-height:1.7;color:var(--text)}
+.adv-tip strong{color:var(--gold)}
+.stage-chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:9px}
+.sc-chip{padding:4px 9px;border-radius:12px;font-size:11px;font-weight:500;background:rgba(46,196,182,.1);color:var(--teal);border:1px solid rgba(46,196,182,.2);cursor:pointer;transition:all .2s;flex-shrink:0}
+.sc-chip.sel{background:rgba(46,196,182,.25);border-color:var(--teal)}
+.adv-detail{background:rgba(46,196,182,.07);border:1px solid rgba(46,196,182,.15);border-radius:10px;padding:12px;font-size:12px;line-height:1.8;color:var(--text);display:none}
+.adv-detail.show{display:block;animation:fu .3s ease}
+.adv-detail strong{color:var(--teal)}
+
+/* INSIGHTS */
+.ins-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:13px;margin-bottom:9px;display:flex;gap:10px;align-items:flex-start}
+.ins-dot{width:7px;height:7px;border-radius:50%;margin-top:5px;flex-shrink:0}
+.ins-txt{font-size:13px;line-height:1.7}
+.ins-txt strong{font-weight:600}
+
+/* BOTTOM NAV */
+.bnav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:rgba(6,15,30,.96);backdrop-filter:blur(20px);border-top:1px solid var(--border);padding:9px 20px 14px;display:flex;justify-content:space-around;z-index:100}
+.nb{display:flex;flex-direction:column;align-items:center;gap:3px;background:none;border:none;color:var(--muted);cursor:pointer;padding:4px 10px;border-radius:9px;transition:all .2s;font-family:var(--ff-b)}
+.nb.act{color:var(--gold)}
+.nb span:first-child{font-size:19px}
+.nb span:last-child{font-size:10px;font-weight:500;letter-spacing:.4px}
+.toast{position:fixed;bottom:78px;left:50%;transform:translateX(-50%);background:var(--card2);border:1px solid var(--border);border-radius:20px;padding:9px 18px;font-size:13px;color:var(--text);z-index:200;white-space:nowrap;opacity:0;transition:opacity .3s;pointer-events:none}
+.toast.show{opacity:1}
+.cp-mark{text-align:center;padding:14px;font-size:11px;color:rgba(93,122,150,.35);letter-spacing:.8px}
+@keyframes pr{0%{box-shadow:0 0 0 0 rgba(232,184,75,.3)}70%{box-shadow:0 0 0 14px rgba(232,184,75,0)}100%{box-shadow:0 0 0 0 rgba(232,184,75,0)}}
+</style>
+</head>
+<body>
+<div id="app">
+<header>
+  <div class="brand">
+    <div class="blogo">🌊</div>
+    <div><div class="bname">Cauvery Pulse</div><div class="bsub">Financial Health</div></div>
+  </div>
+  <div class="vtag">v2.0 · M1</div>
+</header>
+
+<!-- WELCOME -->
+<div id="welcome" class="screen active">
+  <div class="hero-wrap">
+    <div class="ring-outer">
+      <svg viewBox="0 0 190 190"><defs><linearGradient id="rg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#e8b84b"/><stop offset="100%" stop-color="#2ec4b6"/></linearGradient></defs>
+        <circle class="rt" cx="95" cy="95" r="80"/><circle class="rf" id="heroRing" cx="95" cy="95" r="80"/>
+      </svg>
+      <div style="text-align:center;position:relative;z-index:2">
+        <div class="hnum" id="heroNum">–</div><div class="hlbl">your score</div>
+      </div>
+    </div>
+  </div>
+  <div class="htitle">Know Your True<br><span>Financial Health</span></div>
+  <div class="hdesc">3 steps · 15 minutes · India-specific<br>Personality + Structure + Behaviour = Real Score</div>
+  <div class="steps-row">
+    <div class="step-box"><div class="si">🧠</div><div class="sn">5</div><div class="sl">Personality<br>Questions</div></div>
+    <div class="step-box"><div class="si">🏛️</div><div class="sn">10</div><div class="sl">Finosis<br>Parameters</div></div>
+    <div class="step-box"><div class="si">📊</div><div class="sn">100</div><div class="sl">Point<br>Score</div></div>
+  </div>
+  <button class="btn-p" style="animation:pr 2s ease infinite" onclick="goStart()">🩺 &nbsp;Start My Health Check</button>
+  <button class="btn-s" id="viewBtn" style="display:none" onclick="showScreen('results')">📊 &nbsp;View My Last Results</button>
+  <div class="cp-mark">© Elango Industries Limited · Cauvery Pulse</div>
+</div>
+
+<!-- PROFILE -->
+<div id="profile" class="screen">
+  <div style="height:20px"></div>
+  <div class="stitle">Your Profile</div>
+  <div class="ssub">Stored only on this device. Used to personalise advice for your life stage.</div>
+  <div class="field"><label>Your Name</label><input type="text" id="pName" placeholder="e.g. Elango" maxlength="30"></div>
+  <div class="field"><label>Age / Life Stage</label>
+    <div class="chips" id="ageC">
+      <div class="chip" data-v="student" onclick="selChip(this,'age')">Student</div>
+      <div class="chip" data-v="young" onclick="selChip(this,'age')">20s – Young earner</div>
+      <div class="chip" data-v="married" onclick="selChip(this,'age')">30s – Married</div>
+      <div class="chip" data-v="mid" onclick="selChip(this,'age')">40s – Mid career</div>
+      <div class="chip" data-v="senior" onclick="selChip(this,'age')">50+ – Senior</div>
+    </div>
+  </div>
+  <div class="field"><label>Income / Business Type</label>
+    <div class="chips" id="incC">
+      <div class="chip" data-v="salaried" onclick="selChip(this,'inc')">Salaried</div>
+      <div class="chip" data-v="professional" onclick="selChip(this,'inc')">Professional</div>
+      <div class="chip" data-v="small_biz" onclick="selChip(this,'inc')">Small Business</div>
+      <div class="chip" data-v="medium_biz" onclick="selChip(this,'inc')">Medium Business</div>
+      <div class="chip" data-v="large_biz" onclick="selChip(this,'inc')">Large Business / CMD</div>
+      <div class="chip" data-v="retired" onclick="selChip(this,'inc')">Retired</div>
+    </div>
+  </div>
+  <div class="field"><label>Monthly Income (₹)</label>
+    <select id="pInc">
+      <option value="">Select range</option>
+      <option value="lt25k">Below ₹25,000</option>
+      <option value="25-50k">₹25,000 – ₹50,000</option>
+      <option value="50-100k">₹50,000 – ₹1 Lakh</option>
+      <option value="1-3L">₹1 Lakh – ₹3 Lakh</option>
+      <option value="3L+">Above ₹3 Lakh</option>
+    </select>
+  </div>
+  <div class="field"><label>City Tier</label>
+    <div class="chips" id="cityC">
+      <div class="chip" data-v="metro" onclick="selChip(this,'city')">Metro (Chennai/Mumbai)</div>
+      <div class="chip" data-v="tier2" onclick="selChip(this,'city')">Tier 2</div>
+      <div class="chip" data-v="tier3" onclick="selChip(this,'city')">Tier 3 / Rural</div>
+    </div>
+  </div>
+  <div class="px">
+    <button class="btn-p" onclick="goPQ()">Continue → Personality Quiz</button>
+    <button class="btn-s" onclick="showScreen('welcome')">← Back</button>
+  </div>
+</div>
+
+<!-- PERSONALITY QUIZ -->
+<div id="pquiz" class="screen">
+  <div class="q-header">
+    <div class="prog-row">
+      <div class="prog-track"><div class="prog-fill" id="pqProg" style="width:20%;background:linear-gradient(90deg,var(--purple),var(--teal))"></div></div>
+      <div class="prog-txt" id="pqTxt">1 / 5</div>
+    </div>
+    <div class="qbadge bpurple">🧠 Personality Quiz</div>
+    <div class="qtitle" id="pqTitle"></div>
+  </div>
+  <div class="q-block">
+    <div class="qdesc" id="pqDesc"></div>
+    <div class="gopts" id="pqOpts"></div>
+    <button class="btn-p" id="pqNext" onclick="pqNext()">Next →</button>
+    <button class="btn-s" onclick="showScreen('profile')">← Back</button>
+  </div>
+</div>
+
+<!-- FINOSIS ASSESSMENT -->
+<div id="assess" class="screen">
+  <div class="q-header">
+    <div class="prog-row">
+      <div class="prog-track"><div class="prog-fill" id="aProg" style="width:10%;background:linear-gradient(90deg,var(--gold),var(--teal))"></div></div>
+      <div class="prog-txt" id="aTxt">1 / 10</div>
+    </div>
+    <div class="qbadge" id="aBadge"></div>
+    <div class="qtitle" id="aTitle"></div>
+  </div>
+  <div class="q-block">
+    <div class="qdesc" id="aDesc"></div>
+    <div class="gopts" id="aOpts"></div>
+    <div class="ov-tog" onclick="togOV()">
+      <span class="ov-lbl">🎛️ &nbsp;Override: Set my own score</span>
+      <div class="tpill" id="ovPill"><div class="tdot"></div></div>
+    </div>
+    <div class="ov-wrap" id="ovWrap">
+      <div class="sld"><span class="slnum" id="ovNum">5</span><span class="slmax">/10</span></div>
+      <input type="range" min="0" max="10" value="5" id="ovRange" oninput="document.getElementById('ovNum').textContent=this.value;selScore=+this.value">
+      <div class="sllbls"><span>0 — Weak</span><span>10 — Excellent</span></div>
+    </div>
+    <button class="btn-p" id="aNext" onclick="aNext()">Next →</button>
+  </div>
+</div>
+
+<!-- RESULTS -->
+<div id="results" class="screen">
+  <div class="res-hero">
+    <div class="res-ring">
+      <svg viewBox="0 0 180 180"><defs><linearGradient id="rg2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#e8b84b"/><stop offset="100%" stop-color="#2ec4b6"/></linearGradient></defs>
+        <circle class="rt" cx="90" cy="90" r="80"/><circle class="rf" id="resRing" cx="90" cy="90" r="80" style="stroke:url(#rg2)"/>
+      </svg>
+      <div class="resnum" id="resNum" style="color:var(--gold)">–</div>
+    </div>
+    <div class="resgrade" id="resGrade"></div>
+    <div class="restag" id="resTag"></div>
+  </div>
+
+  <!-- Personality -->
+  <div class="pers-card" id="persCard">
+    <div class="pers-big" id="persIco">🧠</div>
+    <div>
+      <div class="pers-name" id="persName">—</div>
+      <div class="pers-tl" id="persTL">—</div>
+      <div class="pers-fix" id="persFix">—</div>
+    </div>
+  </div>
+
+  <!-- Section scores -->
+  <div class="two-col">
+    <div class="sec-card"><div class="sc-ic">🏛️</div><div class="sc-nm">Financial Scan</div><div class="sc-sc" id="scanNum">–</div><div class="sc-mx">/ 50</div><div class="sc-bar"><div class="sc-fill" id="scanBar" style="background:var(--gold);width:0%"></div></div></div>
+    <div class="sec-card"><div class="sc-ic">🧠</div><div class="sc-nm">Behavioural Pulse</div><div class="sc-sc" id="pulseNum">–</div><div class="sc-mx">/ 50</div><div class="sc-bar"><div class="sc-fill" id="pulseBar" style="background:var(--teal);width:0%"></div></div></div>
+  </div>
+
+  <!-- Cauvery Formula -->
+  <div class="card">
+    <div class="card-lbl">🌊 The Cauvery Formula — for your profile</div>
+    <div class="formula-row"><div class="fpct" style="color:var(--teal)">33%</div><div class="fbar"><div class="ffill" style="background:var(--teal);width:33%"></div></div><div class="fdesc">Savings &amp; Investment<br><span style="color:var(--teal);font-size:11px" id="f1t">SIP + PPF + NPS</span></div></div>
+    <div class="formula-row"><div class="fpct" style="color:var(--gold)">33%</div><div class="fbar"><div class="ffill" style="background:var(--gold);width:33%"></div></div><div class="fdesc">Living Expenses<br><span style="color:var(--gold);font-size:11px" id="f2t">Rent, food, EMI</span></div></div>
+    <div class="formula-row"><div class="fpct" style="color:var(--purple)">33%</div><div class="fbar"><div class="ffill" style="background:var(--purple);width:33%"></div></div><div class="fdesc">Expansion / Growth<br><span style="color:var(--purple);font-size:11px" id="f3t">Business + skills</span></div></div>
+    <div class="formula-row"><div class="fpct" style="color:var(--amber)">10%</div><div class="fbar"><div class="ffill" style="background:var(--amber);width:10%"></div></div><div class="fdesc" style="color:var(--amber)">Flex — directed to<br><span id="fxt" style="font-size:11px">weakest area</span></div></div>
+  </div>
+
+  <!-- Parameters -->
+  <div class="card">
+    <div class="card-lbl">Parameter Breakdown — tap any row to expand life-stage advice</div>
+    <div id="paramList"></div>
+  </div>
+
+  <!-- Insights -->
+  <div class="card">
+    <div class="card-lbl">Key Insights</div>
+    <div id="insights"></div>
+  </div>
+
+  <div class="px">
+    <button class="btn-p" onclick="doShare()">📤 &nbsp;Share My Score</button>
+    <button class="btn-s" onclick="goStart()">🔄 &nbsp;Retake Assessment</button>
+  </div>
+  <div class="cp-mark">© Elango Industries Limited · Cauvery Pulse</div>
+</div>
+</div><!-- #app -->
+
+<div class="bnav">
+  <button class="nb act" id="nb-home" onclick="navTo('welcome')"><span>🏠</span><span>Home</span></button>
+  <button class="nb" id="nb-check" onclick="navTo('profile')"><span>🩺</span><span>Check</span></button>
+  <button class="nb" id="nb-res" onclick="navTo('results')"><span>📊</span><span>Results</span></button>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+// ══════════════════ PERSONALITY QUIZ DATA ══════════════════
+const PQ=[
+  {title:"When you get extra money (bonus, gift, windfall)…",desc:"Your first instinct reveals the most about your financial personality.",
+   opts:[{l:"Ignore it — deal with it later",s:"Procrastination is my style",i:"😶",t:"avoid"},
+         {l:"Spend it — I deserve it!",s:"Life is short, enjoy now",i:"🛍️",t:"spend"},
+         {l:"Upgrade my lifestyle",s:"Better phone, car or gadget",i:"✨",t:"status"},
+         {l:"Put it in FD or savings",s:"Safe is smart",i:"🏦",t:"save"},
+         {l:"Invest it in SIP or stocks",s:"Money must work",i:"📈",t:"balanced"},
+         {l:'Put it all in a "hot tip"',s:"Risk is exciting",i:"🎲",t:"gamble"}]},
+  {title:"When you think about your financial future, you feel…",desc:"Your emotional relationship with money shapes every decision.",
+   opts:[{l:"Nothing — I avoid thinking about it",s:"Future feels too far",i:"🙈",t:"avoid"},
+         {l:"Excited — today is what matters",s:"Future will sort itself",i:"🎉",t:"spend"},
+         {l:"Confident — I look successful",s:"Appearance = success",i:"😎",t:"status"},
+         {l:"Anxious — never feels enough in the bank",s:"Over-saver mentality",i:"😟",t:"anxious"},
+         {l:"Calm — my goals are mapped",s:"SIPs running, plan in place",i:"😌",t:"balanced"},
+         {l:"Thrilled — market is full of opportunity",s:"High risk high reward",i:"🚀",t:"gamble"}]},
+  {title:"When a friend shows off a luxury purchase, you…",desc:"Social comparison is the biggest hidden driver of poor financial decisions.",
+   opts:[{l:"Feel nothing — not my concern",s:"Indifferent to money talk",i:"😐",t:"avoid"},
+         {l:"Feel inspired to buy something too",s:"I want what they have",i:"🤩",t:"spend"},
+         {l:"Feel the urge to show something better",s:"Status competition",i:"🏆",t:"status"},
+         {l:"Feel worried about my own finances",s:"Comparison triggers anxiety",i:"😰",t:"anxious"},
+         {l:"Feel nothing — I know my numbers",s:"Grounded in my own plan",i:"🧘",t:"balanced"},
+         {l:"Ask how they made money",s:"Looking for the next big move",i:"🎯",t:"gamble"}]},
+  {title:"Your approach to monthly budgeting is…",desc:"How you manage monthly money is the foundation of financial health.",
+   opts:[{l:"No budget — I just spend",s:"Money comes and goes",i:"🌀",t:"avoid"},
+         {l:"Spend first, save if left",s:"Reverse order always",i:"🛒",t:"spend"},
+         {l:"Budget for appearances — car EMI, dining",s:"Status expenses first",i:"💳",t:"status"},
+         {l:"Over-save and under-spend out of fear",s:"Miser mentality",i:"💰",t:"save"},
+         {l:"Invest first, then spend the rest",s:"Pay yourself first",i:"📋",t:"balanced"},
+         {l:"Keep cash ready for market opportunities",s:"Always hunting next trade",i:"📊",t:"gamble"}]},
+  {title:"When the stock market crashes 20%, you…",desc:"Your reaction to financial stress reveals your true financial maturity.",
+   opts:[{l:"Do nothing — pretend it isn't happening",s:"Denial mode",i:"🙅",t:"avoid"},
+         {l:"Panic and sell everything",s:"Exit at the worst time",i:"😱",t:"anxious"},
+         {l:"Tell friends I predicted it",s:"Image over action",i:"🗣️",t:"status"},
+         {l:"Feel relieved — my money is in FD",s:"Too conservative",i:"😶",t:"save"},
+         {l:"Stay calm and keep SIPs running",s:"Disciplined long-term view",i:"🧘",t:"balanced"},
+         {l:"Add more — it's a buying opportunity!",s:"High conviction, high risk",i:"💪",t:"gamble"}]}
+];
+
+const PERS={
+  avoid:{name:"The Avoiding Type",icon:"🙈",tl:"You delay financial decisions hoping they resolve themselves. Procrastination is the most expensive habit in personal finance.",fix:"Automate everything — SIP, insurance premium, EMI. Remove the need to decide manually."},
+  spend:{name:"The Spending Type",icon:"🛍️",tl:"You live fully in the present. Quality of life today is good but tomorrow is unplanned. Income growth never translates to wealth.",fix:"Start a ₹500/day rule — every day you skip an impulse purchase, invest that ₹500."},
+  status:{name:"The Status Seeker",icon:"✨",tl:"You use money to signal success. The gap between appearance and reality grows every year. Lifestyle inflation is your biggest enemy.",fix:"Silent wealth exercise: for every ₹1 spent on appearance, invest ₹1 in assets."},
+  save:{name:"The Saving Type",icon:"🏦",tl:"Disciplined with money but savings sit idle. Inflation quietly erodes your hard-saved corpus. Safe is not always smart.",fix:"Move idle FD money above 6-month needs into Nifty 50 index SIP. Start with ₹5,000."},
+  anxious:{name:"The Financially Anxious",icon:"😰",tl:"You worry constantly but fear often leads to paralysis. Anxiety without action makes things worse over time.",fix:"Write your 3 biggest financial fears. Then write one concrete action for each. Fear shrinks when faced with a plan."},
+  gamble:{name:"The Gambling Type",icon:"🎲",tl:"You love high-risk bets. Occasional wins confirm the habit. Long-term trajectory without a base is negative.",fix:"Build 6-month emergency fund and term insurance first. Then risk money is truly disposable."},
+  balanced:{name:"The Balanced Investor",icon:"🧘",tl:"Healthy money habits — disciplined, goal-linked, calm under pressure. Your score reflects genuine financial maturity.",fix:"Next level: optimize tax efficiency and explore NPS Tier II + direct equity for wealth acceleration."}
+};
+
+// ══════════════════ FINOSIS QUESTIONS ══════════════════
+const QS=[
+  {id:'debt',sec:'scan',icon:'💳',title:'Debt Burden',
+   desc:'How much of monthly income goes toward EMIs? Lower debt = higher score. Includes home loan, car, personal loan, credit cards.',inv:true,
+   opts:[{l:'Zero debt',s:'No EMIs at all',sc:10,i:'🎉'},{l:'Light — below 20% of income',s:'Manageable',sc:8,i:'✅'},{l:'Moderate — 20–35%',s:'Watchable',sc:5,i:'⚠️'},{l:'Heavy — 35–50%',s:'Constrained',sc:3,i:'🔴'},{l:'Very heavy — above 50%',s:'Severe stress',sc:1,i:'🆘'}],
+   adv:{short:'Debt above 35% of income is a financial emergency. Pre-close highest-interest loans first.',
+     stages:{student:{t:'Avoid personal loans. Education loan is OK — prioritise placement. Keep credit card limit low.',p:'SBI/ICICI Education loan. Start repayment 6 months after job.'},
+             young:{t:'Avalanche method: list all loans by interest rate, attack highest first. Avoid car loan if possible.',p:'Personal loan rates: 11–18%. Prepay using bonus. Pre-closure available.'},
+             married:{t:'Home loan is good debt. Keep total EMI below 30% of combined income. No personal loans for weddings.',p:'HDFC/SBI Home loan at 8.5–9%. Prepayment after lock-in reduces tenure.'},
+             mid:{t:'Target debt-free by age 55. Use 15th year of home loan to aggressively prepay.',p:'1 extra EMI/year reduces tenure by 3 years. Use annual bonus for prepayment.'},
+             senior:{t:'No new debt at this stage. If home loan remains, consider partial liquidation of non-core assets.',p:'Reverse mortgage: SBI, LIC HFL — for retired homeowners.'},
+             small_biz:{t:'Separate business and personal debt. Business loan against assets, not personal guarantee.',p:'MUDRA loan up to ₹10L. SIDBI. Avoid moneylenders at all cost.'},
+             medium_biz:{t:'Debt-to-equity below 2:1 is healthy. Review working capital loan cost quarterly.',p:'CC limit vs OD facility — compare cost. CC rate 10–13%.'},
+             large_biz:{t:'Separate personal and corporate debt clearly. CMD must have financial independence from business.',p:'Director loan to equity conversion — consult Company Secretary.'},
+             professional:{t:'Professional degree loans are investment. Pay off in 5 years maximum.',p:'HDFC Credila for education loans. Early pre-closure cuts interest significantly.'},
+             retired:{t:'Any remaining debt is a threat to corpus. Liquidate non-essential assets to clear.',p:'SCSS for income. Do not take any new loans after retirement.'}}}},
+  {id:'insurance',sec:'scan',icon:'🛡️',title:'Risk Protection',
+   desc:'Adequate health insurance (₹5L+ family floater) and term life insurance (10–15× annual income)? Employer cover alone is NOT adequate.',inv:false,
+   opts:[{l:'Fully covered',s:'Health + adequate term plan',sc:10,i:'🛡️'},{l:'Health insurance only',s:'No term plan',sc:6,i:'✅'},{l:'Term plan only',s:'No health cover',sc:5,i:'⚠️'},{l:'Only employer group cover',s:'Coverage ends with job',sc:3,i:'⚠️'},{l:'No insurance at all',s:'Fully exposed',sc:0,i:'🆘'}],
+   adv:{short:'₹1 Cr term plan for age 35 = ₹12,000/year. Health insurance is not optional in India.',
+     stages:{student:{t:'Stay on parents family floater. Buy your own once employed. Health riders are cheap at 22.',p:'Star Family Health Optima, Niva Bupa Reassure. Family floater ₹5L–₹10L.'},
+             young:{t:'Buy ₹1 Cr term plan NOW. Premium at 25 is 30% cheaper than at 35. Every year you delay costs money forever.',p:'LIC Tech Term, HDFC Click2Protect 3D Plus. Online term plans are cheapest.'},
+             married:{t:'Upgrade to ₹2 Cr term + ₹10L family floater. Add critical illness rider. Spouse needs independent cover.',p:'Star Comprehensive, ICICI Lombard iHealth. CI rider: Max Life, HDFC Life.'},
+             mid:{t:'If no term plan yet — buy immediately despite higher premium. Add super top-up of ₹20L.',p:'Star Super Surplus top-up, Niva Bupa Booster. Critical illness from LIC.'},
+             senior:{t:'Focus on health — senior citizen plans. Ensure health cover is independent of any corporate policy.',p:'Star Senior Citizen Red Carpet, Niva Bupa Senior First. Lifetime renewal plans only.'},
+             small_biz:{t:'Business owner has NO employer cover. Buy personal + keyman insurance. Both are essential.',p:'Keyman insurance: LIC, HDFC Life. Business interruption cover for 12 months revenue.'},
+             medium_biz:{t:'Group health for employees is a tax-deductible expense. CMD/promoter must have independent personal cover.',p:'Group mediclaim: ICICI Lombard, HDFC Ergo. Personal cover strictly separate.'},
+             large_biz:{t:'Personal cover must be completely independent of business policies. Insulate family wealth.',p:'HNI health: ICICI Lombard, Star. Term ₹5 Cr+. ULIP for estate planning.'},
+             professional:{t:'Professional indemnity + personal health is essential. One lawsuit can wipe out years of earnings.',p:'Professional indemnity: New India, Oriental. Personal cover: Niva Bupa direct.'},
+             retired:{t:'Health cover is your #1 financial risk now. Ensure it renews for life. No new term needed.',p:'Star, Niva Bupa Senior — lifetime renewal. PMJAY if eligible.'}}}},
+  {id:'income_stability',sec:'scan',icon:'💼',title:'Income Stability',
+   desc:'How reliable and recurring is your income? Multiple income streams = resilient. Single client or single employer = vulnerable.',inv:false,
+   opts:[{l:'Government / PSU salaried',s:'Pension, job security, DA',sc:10,i:'🏛️'},{l:'Private salaried',s:'Regular, no pension',sc:8,i:'🏢'},{l:'Professional / consultant',s:'Good but client-dependent',sc:6,i:'👨‍💼'},{l:'Business owner',s:'Variable, market-linked',sc:5,i:'🏭'},{l:'Irregular / seasonal',s:'Unpredictable cash flows',sc:2,i:'🌊'}],
+   adv:{short:'The more variable your income, the larger your emergency fund — target 9–12 months expenses.',
+     stages:{student:{t:'Build highest-income skill possible. First job offer matters less than first skill mastered.',p:'Coursera, NPTEL, Udemy. Google, AWS, CFA, CA, NISM certifications.'},
+             young:{t:'Build a second income stream within 3 years of first job. Freelancing, consulting, or side business.',p:'Upwork, Toptal, LinkedIn for freelance. Side income goal: 20% of salary.'},
+             married:{t:'Dual income household is the best insurance. Spouse employment or income adds massive resilience.',p:'If spouse is homemaker: small business, part-time consulting, or online income.'},
+             mid:{t:'Should have 2–3 income sources by now. Rental income, dividends, or consulting alongside salary.',p:'Rental yield Chennai: 2.5–3.5%. Dividend stocks, REITs. Business equity stakes.'},
+             senior:{t:'Transition from active to passive income. Ensure 60–70% of retirement income is passive.',p:'SCSS 8.2%, PMVVY, senior FD, dividend stocks, LIC annuity plans.'},
+             small_biz:{t:'Build at least 3 customers so no single client exceeds 30% of revenue. Cash buffer = 3 months operating cost.',p:'Current account with OD: HDFC, ICICI. Trade credit for working capital.'},
+             medium_biz:{t:'Revenue diversification across products or geographies. No segment above 50% of revenue.',p:'Export credit, SIDBI working capital, trade finance, LC-backed deals.'},
+             large_biz:{t:'Personal income should be delinked from business performance. Fixed salary + dividends on defined schedule.',p:'Director remuneration structuring. Dividend policy formalisation via board resolution.'},
+             professional:{t:'Each client is a salary. Diversify client base. One client above 40% of income is a single point of failure.',p:'Retainer agreements, annual contracts. Referral network maintenance.'},
+             retired:{t:'Lock in fixed income now. Float rate products are risky in retirement.',p:'SCSS, Pradhan Mantri Vaya Vandana Yojana, annuities, senior citizen FD rates.'}}}},
+  {id:'investment',sec:'scan',icon:'📈',title:'Investment Ratio',
+   desc:'What % of take-home income is invested regularly? Target 20%+. EPF alone is not enough. Systematic investment is the only path to long-term wealth in India.',inv:false,
+   opts:[{l:'Above 30%',s:'Excellent — wealth building mode',sc:10,i:'🚀'},{l:'20–30%',s:'Very good — on track',sc:8,i:'✅'},{l:'10–20%',s:'Moderate — room to grow',sc:6,i:'📊'},{l:'5–10%',s:'Low — needs attention',sc:3,i:'⚠️'},{l:'Below 5%',s:'Near zero investing',sc:1,i:'🔴'}],
+   adv:{short:'₹2,000 SIP × 20 years × 12% = ₹19.8 Lakhs. Start today, not "someday".',
+     stages:{student:{t:'Even ₹500/month from age 22 becomes ₹35L by age 45. Start now, increase every year.',p:'Parag Parikh Flexi Cap, UTI Nifty 50 Index. Zerodha Coin or Groww for SIP.'},
+             young:{t:'30-3-10 rule: 30% invest, 3 months EF, 10% insurance. Automate on salary date.',p:'ELSS for 80C: Mirae Asset, Axis Long Term. NPS for 80CCD(1B) extra ₹50K.'},
+             married:{t:'Household investment must be minimum 25% of combined income. Both spouses need independent SIPs.',p:'Combined SIP + PPF + NPS. ELSS for joint 80C. LIC only if term is unavailable.'},
+             mid:{t:'At 40+, shift 20% of equity to debt gradually. NPS equity+debt. Target 15× annual expense as corpus.',p:'NPS Tier I auto choice: aggressive to moderate. HDFC Balanced Advantage Fund.'},
+             senior:{t:'Capital preservation over growth. Equity max 30% of portfolio. Income must cover monthly expenses.',p:'SCSS, Nifty 50 index fund (30%), LIC Jeevan Akshay annuity for base income.'},
+             small_biz:{t:'Business is NOT your retirement plan. Keep personal investments completely separate.',p:'PPF ₹1.5L/year, NPS, SIP in index fund. Keep 12-month business expense buffer.'},
+             medium_biz:{t:'20% of post-tax personal income must be invested. Tax-efficient structures matter at this level.',p:'NPS ₹50K (80CCD), ELSS, direct equity in blue chips. CA-guided tax planning.'},
+             large_biz:{t:'Personal wealth must grow independently of business equity. Diversify into stocks, real estate, debt.',p:'PMS: minimum ₹50L. AIFs for diversification. SEBI-registered wealth manager.'},
+             professional:{t:'Income is high but potentially volatile. Build 2 years expense corpus before aggressive investing.',p:'Liquid MF as buffer + ELSS + NPS. Avoid over-locking in illiquid real estate.'},
+             retired:{t:'Do not stop investing. Keep SWP (Systematic Withdrawal Plan) from equity mutual funds.',p:'SWP from balanced fund: draw 4–5% annually. Remaining corpus stays invested.'}}}},
+  {id:'safety',sec:'scan',icon:'🏠',title:'Safety Cushion',
+   desc:'Emergency fund (3–6 months expenses, liquid) + own home. This is your financial shock absorber. Without it, any setback becomes a full crisis.',inv:false,
+   opts:[{l:'Own house + 6-month fund',s:'Fully cushioned',sc:10,i:'🏠'},{l:'6-month fund, renting',s:'Good liquid buffer',sc:8,i:'💰'},{l:'3-month fund only',s:'Minimal cover',sc:6,i:'🪣'},{l:'Own house, no liquid fund',s:'Asset rich, cash poor',sc:5,i:'⚠️'},{l:'No fund, renting',s:'Fully exposed',sc:1,i:'🆘'}],
+   adv:{short:'6-month emergency fund in liquid MF is non-negotiable before any other investing.',
+     stages:{student:{t:'Keep 2 months pocket money as untouchable buffer. Habit-building at this stage matters most.',p:'AU Small Finance Bank savings: 7% interest. Easy mobile access.'},
+             young:{t:'Build 3-month fund first — 6 months later. Target: your salary × 3 in a liquid MF.',p:'Parag Parikh Liquid Fund, HDFC Liquid Fund. Same-day redemption available.'},
+             married:{t:'Emergency fund must cover family expenses — not just your salary. Separate account with joint access.',p:'Sweep-in FD: ICICI, HDFC. High yield savings: IDFC FIRST 7%. Health cover is part of safety.'},
+             mid:{t:'With dependents and EMIs, 9-month fund is the right target. Review annually.',p:'FD ladder: 3 FDs of 3 months each. Stagger maturity for liquidity + yield.'},
+             senior:{t:'Liquid reserve should cover 24 months post-retirement expenses. This is your first line of defence.',p:'SCSS (locked 5 years) + liquid fund for immediate needs. RBI Floating Rate Bonds medium term.'},
+             small_biz:{t:'Personal emergency fund must be completely separate from business cash. Business crisis cannot touch personal cushion.',p:'6-month personal expense fund in sweep-in FD. Business: separate OD facility.'},
+             medium_biz:{t:'Both personal and business emergency reserves are needed. Pre-approved working capital line.',p:'Personal: liquid MF. Business: CC limit + working capital loan pre-sanctioned.'},
+             large_biz:{t:'HNI liquidity management: 12 months personal expenses in liquid instruments, fully separate from business.',p:'Ultra-short duration fund: HDFC, ICICI Prudential. Arbitrage funds for tax efficiency.'},
+             professional:{t:'Variable income professionals need 9–12 months. One lost client = 3 months income risk.',p:'Liquid MF + short duration fund ladder. Keep strictly separate from investment corpus.'},
+             retired:{t:'Bucket strategy: Bucket 1 = 2 years in FD/savings. Bucket 2 = 5 years balanced fund. Rest in equity.',p:'SCSS + Post Office MIS + liquid fund for Bucket 1.'}}}},
+  {id:'impulse',sec:'pulse',icon:'🛍️',title:'Impulse Control',
+   desc:'Is spending disciplined or emotion-driven? Festival splurges, EMI purchases you regret, daily food delivery addiction — these drain wealth silently.',inv:false,
+   opts:[{l:'Very disciplined',s:'Every purchase planned',sc:10,i:'🎯'},{l:'Mostly controlled',s:'Occasional small splurges',sc:8,i:'✅'},{l:'Sometimes impulsive',s:'Monthly regret purchases',sc:5,i:'😅'},{l:'Often impulsive',s:'Shopping soothes stress',sc:3,i:'⚠️'},{l:'Highly impulsive',s:'Spending out of control',sc:1,i:'🆘'}],
+   adv:{short:'The 48-hour rule: wait 48 hours before any unplanned purchase above ₹2,000.',
+     stages:{student:{t:'Create a "fun budget" — fixed ₹X per month for anything. Once spent, it is done. Trains discipline without deprivation.',p:'Fi Money, Jupiter — zero-balance accounts with auto spending categorisation.'},
+             young:{t:'Automate savings on salary day. Whatever remains is yours guilt-free. Spending from the rest is not impulsive.',p:'SIP auto-debit on 1st of month via Zerodha or Groww.'},
+             married:{t:'Joint budget with personal allowance for each. No questions asked within personal budget = no resentment.',p:'Walnut app, YNAB, or shared Google Sheet for household tracking.'},
+             mid:{t:"Children's influence peaks now. School fees, activities, gadgets, clothes. Set clear household limits.",p:'INDmoney or Money Manager app. Track all categories weekly.'},
+             senior:{t:'Retirement spending discipline is different. Spend on health and experience. Cut status spending completely.',p:'Fixed monthly draw from corpus. Health 30%, living 40%, leisure 20%, family 10%.'},
+             small_biz:{t:'Business and personal spending are often mixed. Separate accounts are non-negotiable.',p:'Current account for business only. Personal savings account strictly personal.'},
+             medium_biz:{t:'Lifestyle inflation is the enemy. Revenue grows but net worth must grow faster than expenses.',p:'Track net worth annually. If growth below 15%, review spending categories immediately.'},
+             large_biz:{t:"CMD's spending is visible to everyone. Silent wealth builds more respect than visible spending.",p:'Personal CFO concept: hire a wealth manager or CA for annual personal spending review.'},
+             professional:{t:'High income professionals overspend on lifestyle — car upgrades, premium clubs, holidays. Track savings rate, not income.',p:'Target savings rate above 30%. If below, impulse is winning. Review monthly.'},
+             retired:{t:'Bucket strategy limits impulse by design — only Bucket 1 money is spendable.',p:'Fixed monthly transfer to current account. Never dip into investment corpus directly.'}}}},
+  {id:'awareness',sec:'pulse',icon:'📋',title:'Money-Flow Awareness',
+   desc:'Do you know where your money goes? Tracking does not require a spreadsheet — even a mental monthly review changes financial behaviour significantly.',inv:false,
+   opts:[{l:'Full tracking — app or spreadsheet',s:'Monthly review habit',sc:10,i:'📊'},{l:'Rough tracking — mental budget',s:'Broad awareness',sc:7,i:'🧮'},{l:'Partial — know big items only',s:'Surprised by balance sometimes',sc:5,i:'📝'},{l:'Vague — often surprised by low balance',s:'Limited awareness',sc:3,i:'😕'},{l:'No tracking at all',s:'Complete unawareness',sc:1,i:'😵'}],
+   adv:{short:'10-minute monthly money review: check last month bank statement. That one habit changes everything.',
+     stages:{student:{t:'Use your bank app spending summary. 5 minutes. Notice the biggest category — that is where awareness starts.',p:'Paytm, PhonePe spending summary. Fi Money for auto-categorisation.'},
+             young:{t:'Track income vs investment vs expenses ratio — not individual transactions. Ratio tracking is faster and more useful.',p:'INDmoney app: tracks net worth, SIP progress, bank balance all in one.'},
+             married:{t:'Monthly money date: 30 minutes together reviewing household P&L. Joint visibility changes behaviour.',p:'Google Sheets shared budget template. Walnut app — connects all bank accounts.'},
+             mid:{t:'At this stage you manage 5–7 financial products. Consolidate all — investments, loans, insurance in one view.',p:'INDmoney or Kuvera for portfolio tracking. One view for all investments.'},
+             senior:{t:'Track withdrawal rate from corpus. If withdrawing above 6%, you are eroding capital too fast.',p:'Simple notebook + monthly review. Or INDmoney for digital tracking.'},
+             small_biz:{t:'Personal and business P&L must be tracked separately. Business profitability is not personal financial health.',p:'Tally for business, separate Excel for personal finances.'},
+             medium_biz:{t:'Business cash flow is not personal wealth. Track personal net worth separately from business balance sheet.',p:'CA-prepared monthly personal MIS. Separate from business MIS.'},
+             large_biz:{t:'Personal financial reporting should match business rigour. Quarterly personal financial review with advisors.',p:'Wealth management: ICICI Securities, Motilal Oswal, Nuvama. Monthly portfolio review.'},
+             professional:{t:'Track by client, not by month. Know which clients are profitable versus time-consuming.',p:'Zoho Invoice, Freshbooks for income clarity. Client ROI tracking.'},
+             retired:{t:'Track monthly draw vs monthly need. Alert yourself if draw exceeds need by more than 10%.',p:'Simple ledger or Excel. Bank statement review on 1st of every month.'}}}},
+  {id:'income_fear',sec:'pulse',icon:'😰',title:'Fear of Income Loss',
+   desc:'How anxious are you about losing your income source? High fear = poor buffer or overdependence on single source. Lower fear = higher score.',inv:true,
+   opts:[{l:'Zero anxiety',s:'Multiple incomes, 12-month buffer',sc:10,i:'😌'},{l:'Low anxiety',s:'Confident with reserves',sc:8,i:'🙂'},{l:'Moderate anxiety',s:'Uncomfortable thought',sc:5,i:'😟'},{l:'High anxiety',s:'Affects daily peace of mind',sc:3,i:'😰'},{l:'Severe anxiety',s:'Constant financial dread',sc:1,i:'😱'}],
+   adv:{short:'Every additional income stream reduces income fear by 40%. Build income, not just savings.',
+     stages:{student:{t:'No income yet — fear is normal. Build multiple marketable skills before graduation.',p:'LinkedIn Learning, Coursera. 2–3 certifications before first job.'},
+             young:{t:'Fear at this stage is healthy — it should motivate action. 6-month fund converts fear to confidence.',p:'SBI/HDFC savings + liquid MF for emergency buffer. Takes 12–18 months to build.'},
+             married:{t:'Dual income eliminates half the fear. If single income, life insurance must be adequate — 15× annual income.',p:'LIC Tech Term, HDFC Click2Protect. ₹1–2 Cr cover minimum.'},
+             mid:{t:'By 40, you must have 2 income sources. Job + rental / business / dividends. Fear should be fading.',p:'Build rental income, dividend portfolio, or consulting. Target 2nd income = 30% of total.'},
+             senior:{t:'Fear at this stage = inadequate retirement planning. The corpus either covers expenses or it does not.',p:'Retirement calculator: NPS, HDFC Life. Monthly annuity quote from LIC Jeevan Akshay.'},
+             small_biz:{t:'Business owner fear is natural — higher. Mitigate with 9-month personal buffer + business contingency.',p:'Business contingency: 3 months operating cost in FD. Personal: liquid MF separate.'},
+             medium_biz:{t:'Systematise business so it can run without you. That is the real income protection for an owner.',p:'SOP documentation, second-level management, ERP systems like Zoho or SAP.'},
+             large_biz:{t:'Personal income must be protected from business risk by legal and financial structure.',p:'Holding company, personal trust for assets, wills, family settlement agreements.'},
+             professional:{t:'Professional reputation is your income insurance. Build it one article, one talk, one referral at a time.',p:'LinkedIn content. Industry speaking. Referral network maintenance.'},
+             retired:{t:'If fear is high, corpus is insufficient or withdrawal rate is too high. Act on both immediately.',p:'Annuity for base income, SWP for additional. Fixed income covers 80% of expenses target.'}}}},
+  {id:'future_fear',sec:'pulse',icon:'🔮',title:'Fear of the Future',
+   desc:'Confident about retirement, children education, health emergencies? Visible goal-linked investments reduce this fear significantly. Lower fear = higher score.',inv:true,
+   opts:[{l:'Highly confident',s:'Goals mapped, SIPs running',sc:10,i:'🌟'},{l:'Reasonably confident',s:'Rough plan in place',sc:7,i:'😊'},{l:'Uncertain',s:'Aware of goals, not started',sc:5,i:'🤔'},{l:'Worried',s:'Goals feel far and unclear',sc:3,i:'😟'},{l:'Very fearful',s:'Future completely unplanned',sc:1,i:'😱'}],
+   adv:{short:'Name 3 financial goals. Assign a rupee amount and a year to each. Visible goals reduce fear immediately.',
+     stages:{student:{t:'Biggest future goal: employment + financial independence. That one goal should guide all current choices.',p:'NISM, CFA, CA, MBA — choose highest ROI path for your interests.'},
+             young:{t:'Start retirement SIP NOW — even ₹1,000/month. At 25, time is your biggest asset. At 45, it is your biggest regret.',p:'NPS Tier I: ₹500/month minimum. 80CCD benefit ₹50K/year. Parag Parikh Flexi Cap.'},
+             married:{t:'Education corpus for child: ₹50L needed in 15 years. Start ₹7,500/month in Nifty 50 index fund today.',p:'Sukanya Samriddhi for girl child. ELSS SIP for education goal. Mirae Asset.'},
+             mid:{t:'Retirement is 15–20 years away. Formula: monthly expense × 300 = target corpus. Are you on track?',p:'NPS voluntary contribution. EPFO VPF. ETF: Nifty 50 + Nifty Next 50 index.'},
+             senior:{t:'Fear at this stage is a planning deficit. Gap = (Monthly expense × 12 × 25) minus current corpus.',p:'LIC Jeevan Akshay annuity. SCSS for 5-year return. Liquid fund for immediate needs.'},
+             small_biz:{t:'Business exit planning is part of future planning. Know your business valuation — it is part of retirement corpus.',p:'Business valuation: CA firm. NSE Emerge, BSE SME for listing options.'},
+             medium_biz:{t:'Create personal financial plan independent of business valuation. Exit may not happen at desired price.',p:'Personal pension + PMS + real estate outside business. Diversify away from own business.'},
+             large_biz:{t:'Succession planning = future confidence. Family constitution, shareholder agreement, personal estate plan.',p:'Family office: IIFL Wealth, Nuvama. Estate planning: legal firm with succession specialty.'},
+             professional:{t:'Professional peak income is 45–55. Plan retirement assuming post-55 reduced earnings, not current income.',p:'NPS auto choice, balanced advantage fund. Target: 25× annual expense corpus.'},
+             retired:{t:'Longevity is the real risk — plan for age 90, not 75. Corpus must last 30+ years if you retire at 60.',p:'HDFC Life Pension. Annuity review every 3 years. Keep 20% in equity for inflation.'}}}},
+  {id:'skill',sec:'pulse',icon:'🎓',title:'Skill Development',
+   desc:'Investing in earning ability? Skills are the only asset that cannot be taxed, inflated away, or stolen. Your income capacity is your biggest investment.',inv:false,
+   opts:[{l:'Actively upgrading',s:'Courses, certifications, new domain',sc:10,i:'🚀'},{l:'Occasional learning',s:'Read, follow trends informally',sc:7,i:'📚'},{l:'Stable but static',s:'Same skills for years',sc:5,i:'🔄'},{l:'Rarely think about it',s:'Learning not a priority',sc:3,i:'💤'},{l:'No effort at all',s:'Skills stagnating',sc:1,i:'🪨'}],
+   adv:{short:'Invest 3% of income and 5 hours/week in skill building. Highest-return investment available.',
+     stages:{student:{t:'Every skill before employment has 10× ROI. Use all free time for certifications, internships, projects.',p:'Coursera, NPTEL free courses. Google Career Certificates. LinkedIn Learning.'},
+             young:{t:'One skill that makes you 20% better at your job every year. That compounds into promotions and raises.',p:'AWS, Azure, CFA Level 1, PMP, Google Data Analytics. All under ₹10,000 online.'},
+             married:{t:'Family time competes with learning. 30 minutes/day — podcast or audiobook during commute counts.',p:'Blinkist (book summaries), Spotify podcasts, Audible. Car university concept.'},
+             mid:{t:'Reinvent at 40. Skills that got you here may not get you further. Leadership, strategy, and digital.',p:'IIM Executive programmes, ISB, INSEAD online. LinkedIn Learning leadership paths.'},
+             senior:{t:'Teaching is the best skill for post-retirement income. Mentoring, consulting, advisory roles.',p:'NIIT, NSDC. Freelance consulting on Toptal. Teaching on Udemy India.'},
+             small_biz:{t:'Business owner must understand digital marketing, basic accounting, and HR. Ignorance costs money daily.',p:'Google Skillshop (free), Zoho Academy (free), SCORE India business learning.'},
+             medium_biz:{t:'Leadership and delegation skills now more valuable than technical. Invest in management capability.',p:'IMT Ghaziabad, Symbiosis executive MBA. Harvard ManageMentor online.'},
+             large_biz:{t:'Governance, board effectiveness, and stakeholder management are the critical skills at CMD level.',p:'IIM Ahmedabad AMP, ISB Chief Executive Programme. SEBI board training for listed entities.'},
+             professional:{t:'Niche specialisation doubles income. Generic professionals are commoditised. Deep expertise is the strategy.',p:'ICAI CPE courses, Bar Council CPD. Subspecialty conferences and publications.'},
+             retired:{t:'Learning keeps mind sharp and can generate supplementary income. Digital literacy key for managing own finances.',p:'Senior skill programmes: NIIT Silver Academy. Online tutoring: SuperProf, UrbanPro.'}}}}
+];
+
+// ══════════════════ STATE ══════════════════
+let profile={},pqAns=[],pqIdx=0,pType=null,aSc={},aIdx=0,selScore=null;
+
+// ══════════════════ NAVIGATION ══════════════════
+function showScreen(id){
+  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  ['nb-home','nb-check','nb-res'].forEach(n=>document.getElementById(n)?.classList.remove('act'));
+  const m={welcome:'nb-home',profile:'nb-check',pquiz:'nb-check',assess:'nb-check',results:'nb-res'};
+  document.getElementById(m[id]||'nb-home')?.classList.add('act');
+  window.scrollTo(0,0);
+}
+function navTo(t){
+  if(t==='results'&&Object.keys(aSc).length<QS.length){toast('Complete the health check first 🩺');return;}
+  if(t==='welcome')showScreen('welcome');
+  else if(t==='profile')goStart();
+  else showScreen(t);
+}
+function goStart(){pqAns=[];pqIdx=0;pType=null;aSc={};aIdx=0;selScore=null;showScreen('profile');}
+
+// ══════════════════ PROFILE ══════════════════
+function selChip(el,g){
+  document.querySelectorAll(`#${g}C .chip`).forEach(c=>c.classList.remove('sel'));
+  el.classList.add('sel');profile[g]=el.dataset.v;
+}
+function goPQ(){
+  profile.name=document.getElementById('pName').value||'Friend';
+  profile.inc=document.getElementById('pInc').value;
+  showScreen('pquiz');renderPQ(0);
+}
+
+// ══════════════════ PERSONALITY QUIZ ══════════════════
+function renderPQ(i){
+  const q=PQ[i];
+  document.getElementById('pqProg').style.width=((i+1)/5*100)+'%';
+  document.getElementById('pqTxt').textContent=`${i+1} / 5`;
+  document.getElementById('pqTitle').textContent=q.title;
+  document.getElementById('pqDesc').textContent=q.desc;
+  const c=document.getElementById('pqOpts');c.innerHTML='';
+  q.opts.forEach(o=>{
+    const d=document.createElement('div');d.className='gopt';d.dataset.type=o.t;
+    d.innerHTML=`<div class="gic">${o.i}</div><div style="flex:1"><div class="glbl">${o.l}</div><div class="gsub">${o.s}</div></div>`;
+    d.onclick=()=>{c.querySelectorAll('.gopt').forEach(x=>x.classList.remove('psel'));d.classList.add('psel');};
+    c.appendChild(d);
+  });
+  document.getElementById('pqNext').textContent=i<4?'Next →':'Start Financial Assessment →';
+}
+function pqNext(){
+  const s=document.querySelector('#pqOpts .gopt.psel');
+  if(!s){toast('Please select an option ☝️');return;}
+  pqAns.push(s.dataset.type);
+  if(pqIdx<4){pqIdx++;renderPQ(pqIdx);}
+  else{computePersonality();showScreen('assess');renderA(0);}
+}
+function computePersonality(){
+  const cnt={};pqAns.forEach(t=>cnt[t]=(cnt[t]||0)+1);
+  pType=Object.entries(cnt).sort((a,b)=>b[1]-a[1])[0][0];
+}
+
+// ══════════════════ FINOSIS ASSESSMENT ══════════════════
+function renderA(i){
+  const q=QS[i];selScore=null;
+  document.getElementById('aProg').style.width=((i+1)/10*100)+'%';
+  document.getElementById('aTxt').textContent=`${i+1} / 10`;
+  const b=document.getElementById('aBadge');
+  b.className='qbadge '+(q.sec==='scan'?'bscan':'bpulse');
+  b.textContent=q.sec==='scan'?'🏛️ Financial Scan':'🧠 Behavioural Pulse';
+  document.getElementById('aTitle').textContent=q.title;
+  document.getElementById('aDesc').textContent=q.desc;
+  const c=document.getElementById('aOpts');c.innerHTML='';
+  q.opts.forEach(o=>{
+    const d=document.createElement('div');d.className='gopt';
+    d.innerHTML=`<div class="gic">${o.i}</div><div style="flex:1"><div class="glbl">${o.l}</div><div class="gsub">${o.s}</div></div><div class="gsc">${o.sc}/10</div>`;
+    d.onclick=()=>{c.querySelectorAll('.gopt').forEach(x=>x.classList.remove('sel'));d.classList.add('sel');selScore=o.sc;document.getElementById('ovPill').classList.remove('on');document.getElementById('ovWrap').classList.remove('show');};
+    c.appendChild(d);
+  });
+  document.getElementById('ovPill').classList.remove('on');
+  document.getElementById('ovWrap').classList.remove('show');
+  document.getElementById('ovRange').value=5;document.getElementById('ovNum').textContent=5;
+  document.getElementById('aNext').textContent=i<9?'Next →':'View My Score 🎯';
+}
+function togOV(){
+  const p=document.getElementById('ovPill'),w=document.getElementById('ovWrap');
+  p.classList.toggle('on');w.classList.toggle('show');
+  if(p.classList.contains('on')){selScore=+document.getElementById('ovRange').value;document.querySelectorAll('#aOpts .gopt').forEach(o=>o.classList.remove('sel'));}
+  else selScore=null;
+}
+function aNext(){
+  if(selScore===null){toast('Please select an option or set your score ☝️');return;}
+  aSc[QS[aIdx].id]=selScore;
+  if(aIdx<9){aIdx++;renderA(aIdx);}else buildResults();
+}
+
+// ══════════════════ RESULTS ══════════════════
+function buildResults(){
+  const sk=['debt','insurance','income_stability','investment','safety'];
+  const pk=['impulse','awareness','income_fear','future_fear','skill'];
+  const sT=sk.reduce((s,k)=>s+(aSc[k]||0),0);
+  const pT=pk.reduce((s,k)=>s+(aSc[k]||0),0);
+  const tot=sT+pT;
+
+  // Confirm personality via score pattern
+  let sType=detectSType(aSc);
+  let fType=(sType&&pqAns.filter(a=>a===sType).length>=2)?sType:pType||sType||'balanced';
+
+  let grade,gc,tag;
+  if(tot>=80){grade='Strong Financial Health';gc='var(--green)';tag=`${profile.name}, your financial foundation is solid. Keep building on this strength.`;}
+  else if(tot>=60){grade='Reasonably Healthy';gc='var(--gold)';tag=`${profile.name}, you are on track but 2–3 areas need focused attention.`;}
+  else if(tot>=40){grade='Vulnerable — Needs Work';gc='var(--amber)';tag=`${profile.name}, visible weaknesses exist. Consistent action now prevents big stress later.`;}
+  else{grade='Financial Stress Zone';gc='var(--red)';tag=`${profile.name}, urgent corrections needed. Start with debt and insurance today.`;}
+
+  showScreen('results');
+  setTimeout(()=>{document.getElementById('resRing').style.strokeDashoffset=(502-(502*tot/100));},100);
+  animN(document.getElementById('resNum'),tot,900);
+  document.getElementById('resNum').style.color=gc;
+  document.getElementById('resGrade').textContent=grade;document.getElementById('resGrade').style.color=gc;
+  document.getElementById('resTag').textContent=tag;
+  setTimeout(()=>{document.getElementById('scanNum').textContent=sT;document.getElementById('pulseNum').textContent=pT;document.getElementById('scanBar').style.width=(sT/50*100)+'%';document.getElementById('pulseBar').style.width=(pT/50*100)+'%';},400);
+
+  const pt=PERS[fType]||PERS.balanced;
+  document.getElementById('persIco').textContent=pt.icon;
+  document.getElementById('persName').textContent=pt.name;
+  document.getElementById('persTL').textContent=pt.tl;
+  document.getElementById('persFix').textContent='💡 '+pt.fix;
+
+  setFormula(profile.age||'young',fType,aSc);
+  buildParams(aSc,profile.age||'young');
+  buildInsights(aSc,sT,pT,fType);
+
+  localStorage.setItem('cp_sc',JSON.stringify(aSc));
+  localStorage.setItem('cp_prof',JSON.stringify(profile));
+  localStorage.setItem('cp_tot',tot);
+  localStorage.setItem('cp_pt',fType);
+
+  document.getElementById('heroNum').textContent=tot;
+  document.getElementById('viewBtn').style.display='block';
+  setTimeout(()=>{document.getElementById('heroRing').style.strokeDashoffset=(502-(502*tot/100));},200);
+}
+
+function detectSType(sc){
+  if((sc.impulse||10)<=3)return 'spend';
+  if((sc.income_fear||10)<=3&&(sc.future_fear||10)<=3)return 'anxious';
+  if((sc.investment||0)>=8&&(sc.impulse||0)>=7)return 'balanced';
+  if((sc.insurance||10)<=2&&(sc.safety||10)<=2)return 'gamble';
+  if((sc.awareness||10)<=3)return 'avoid';
+  return null;
+}
+
+function setFormula(stage,ptype,sc){
+  const wk=Object.entries(sc).sort((a,b)=>a[1]-b[1])[0][0];
+  const fm={debt:'extra debt pre-payment',insurance:'insurance premium top-up',investment:'SIP increase',safety:'emergency fund top-up',impulse:'behavioural coaching',awareness:'tracking tools',income_fear:'income diversification effort',future_fear:'goal-linked SIP start',skill:'skill investment'};
+  const f1={student:'₹500 SIP + PPF ₹500/month',young:'SIP 20% + NPS 5% + PPF 5%',married:'SIP + PPF + ELSS for 80C',mid:'NPS + SIP + PF top-up',senior:'SCSS + SWP from equity MF',small_biz:'SIP + PPF + NPS 80CCD',medium_biz:'SIP + NPS + PMS when corpus ₹50L+',large_biz:'PMS + AIF + direct equity',professional:'NPS + SIP + ELSS',retired:'SCSS + SWP + FD ladder'};
+  const f2={student:'Hostel, food, transport, books',young:'Rent, food, utilities, subscriptions',married:'Family living + school fees + utilities',mid:'Family + EMIs + medical + car',senior:'Health + living + family support',small_biz:'Personal living only — biz separate',medium_biz:'Personal household + capped lifestyle',large_biz:'Household + travel + philanthropy',professional:'Rent/mortgage + living + practice costs',retired:'Health 30% + living 40% + leisure 20%'};
+  const f3={student:'Certifications, skill courses',young:'Side project, upskilling courses',married:'Child education fund + career growth',mid:'Business equity, real estate',senior:'Legacy + gifting + health buffer',small_biz:'Business reinvestment + new markets',medium_biz:'Expansion capex + new product line',large_biz:'New ventures + listed entity growth',professional:'Practice expansion + niche deepening',retired:'Travel + experiences + giving'};
+  document.getElementById('f1t').textContent=f1[stage]||f1.young;
+  document.getElementById('f2t').textContent=f2[stage]||f2.young;
+  document.getElementById('f3t').textContent=f3[stage]||f3.young;
+  document.getElementById('fxt').textContent=fm[wk]||'your weakest area';
+}
+
+function buildParams(sc,stage){
+  const c=document.getElementById('paramList');c.innerHTML='';
+  QS.forEach(q=>{
+    const s=sc[q.id]||0;
+    const col=s>=7?'var(--green)':s>=4?'var(--amber)':'var(--red)';
+    const hint=s>=7?'Good':s>=4?'Needs work':'Urgent';
+    const stageAdv=q.adv.stages[stage]||q.adv.stages.young||{};
+    const stageChips=['student','young','married','mid','senior','small_biz','medium_biz','large_biz','professional','retired'];
+    const stageLabels={student:'Student',young:'Young Earner',married:'Married/30s',mid:'Mid Career',senior:'Senior/50+',small_biz:'Small Biz',medium_biz:'Med Biz',large_biz:'Large Biz',professional:'Professional',retired:'Retired'};
+
+    const row=document.createElement('div');row.className='param-row';
+    row.innerHTML=`
+      <div class="pic">${q.icon}</div>
+      <div class="pinfo">
+        <div class="pname">${q.title}</div>
+        <div class="phint" style="color:${col}">${hint} · tap for advice</div>
+        <div class="adv-panel" id="ap-${q.id}">
+          <div class="adv-tip">${q.adv.short}</div>
+          <div class="stage-chips" id="sc-${q.id}">
+            ${stageChips.map(st=>`<div class="sc-chip${st===stage?' sel':''}" onclick="swStage('${q.id}','${st}',this,event)">${stageLabels[st]}</div>`).join('')}
+          </div>
+          <div class="adv-detail${stageAdv.t?' show':''}" id="ad-${q.id}">
+            ${stageAdv.t||''}<br><br><strong>Products / Tools:</strong> ${stageAdv.p||'—'}
+          </div>
+        </div>
+      </div>
+      <div class="pright">
+        <div class="pbar"><div class="pfill" style="background:${col};width:${s*10}%"></div></div>
+        <div class="psc" style="color:${col}">${s}/10</div>
+        <span class="eico" id="ei-${q.id}">▼</span>
+      </div>`;
+    row.onclick=e=>{
+      if(e.target.classList.contains('sc-chip'))return;
+      document.getElementById(`ap-${q.id}`).classList.toggle('open');
+      document.getElementById(`ei-${q.id}`).classList.toggle('open');
+    };
+    c.appendChild(row);
+  });
+}
+
+function swStage(qid,stage,el,e){
+  e.stopPropagation();
+  document.querySelectorAll(`#sc-${qid} .sc-chip`).forEach(c=>c.classList.remove('sel'));
+  el.classList.add('sel');
+  const q=QS.find(x=>x.id===qid);
+  const a=q.adv.stages[stage]||q.adv.stages.young||{};
+  const det=document.getElementById(`ad-${qid}`);
+  det.innerHTML=`${a.t||'No specific advice for this stage.'}<br><br><strong>Products / Tools:</strong> ${a.p||'—'}`;
+  det.classList.add('show');
+}
+
+function buildInsights(sc,sT,pT,ptype){
+  const c=document.getElementById('insights');c.innerHTML='';
+  const ins=[];
+  const wk=Object.entries(sc).sort((a,b)=>a[1]-b[1])[0];
+  const st=Object.entries(sc).sort((a,b)=>b[1]-a[1])[0];
+  const wq=QS.find(q=>q.id===wk[0]);
+  const sq=QS.find(q=>q.id===st[0]);
+  ins.push({c:'var(--red)',t:`<strong>Biggest gap: ${wq.title}</strong> (${wk[1]}/10) — highest priority action area.`});
+  ins.push({c:'var(--green)',t:`<strong>Strongest area: ${sq.title}</strong> (${st[1]}/10) — your financial anchor.`});
+  const pt=PERS[ptype];
+  if(pt)ins.push({c:'var(--purple)',t:`<strong>As ${pt.name}:</strong> ${pt.fix}`});
+  if(sT>pT+10)ins.push({c:'var(--amber)',t:`Your <strong>financial structure is better than behaviour</strong>. Good assets, but spending habits are holding back progress.`});
+  else if(pT>sT+10)ins.push({c:'var(--amber)',t:`Your <strong>mindset is stronger than financial structure</strong>. Good discipline but weak insurance or high debt is the real risk.`});
+  if((sc.insurance||0)<5)ins.push({c:'var(--red)',t:`<strong>Insurance gap is critical.</strong> ₹1 Cr term at age 35 = ₹12,000/year. Buy today — not tomorrow.`});
+  if((sc.investment||0)<4)ins.push({c:'var(--amber)',t:`<strong>Start a ₹2,000 SIP in Nifty 50 index fund today.</strong> Small amounts compounded over 20 years build serious wealth.`});
+  ins.forEach(i=>{c.innerHTML+=`<div class="ins-card"><div class="ins-dot" style="background:${i.c}"></div><div class="ins-txt">${i.t}</div></div>`;});
+}
+
+function animN(el,target,dur){let s=0;const step=target/(dur/16);const t=setInterval(()=>{s=Math.min(s+step,target);el.textContent=Math.round(s);if(s>=target)clearInterval(t);},16);}
+function toast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2400);}
+function doShare(){
+  const tot=localStorage.getItem('cp_tot')||'?';
+  const pt=localStorage.getItem('cp_pt')||'';
+  const pn=PERS[pt]?.name||'';
+  const txt=`My Cauvery Pulse Financial Health Score: ${tot}/100 🌊\nPersonality type: ${pn}\nCauvery Pulse by Elango Industries Limited.`;
+  if(navigator.share)navigator.share({title:'Cauvery Pulse Score',text:txt}).catch(()=>{});
+  else{navigator.clipboard?.writeText(txt);toast('Score copied to clipboard ✓');}
+}
+
+// INIT
+(function(){
+  const sc=localStorage.getItem('cp_sc'),tot=localStorage.getItem('cp_tot');
+  if(sc&&tot){aSc=JSON.parse(sc);const t=+tot;document.getElementById('heroNum').textContent=t;document.getElementById('viewBtn').style.display='block';setTimeout(()=>{document.getElementById('heroRing').style.strokeDashoffset=(502-(502*t/100));},300);}
+})();
+</script>
+</body>
+</html>
