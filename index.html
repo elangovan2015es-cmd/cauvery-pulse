@@ -373,17 +373,28 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div class="toast" id="toast"></div>
 
 <script>
-// ── CACHE BUSTER + SERVICE WORKER UNREGISTER ──
+// ── NUCLEAR CACHE BUSTER (proven iPhone fix) ──
 const APP_VERSION = '2.1.20260414';
 const _sv = localStorage.getItem('cp_version');
+
+// Step 1: Unregister all service workers
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(regs => {
+    regs.forEach(r => r.unregister());
+  });
+}
+// Step 2: Clear all caches
+if ('caches' in window) {
+  caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
+}
+// Step 3: If version mismatch — hard reload with timestamp (bypasses ALL iPhone cache)
 if (_sv !== APP_VERSION) {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations().then(regs => { regs.forEach(r => r.unregister()); });
-  }
-  if ('caches' in window) {
-    caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
-  }
   localStorage.setItem('cp_version', APP_VERSION);
+  const url = window.location.href.split('?')[0];
+  const ts = new Date().getTime();
+  if (!window.location.search.includes('v=')) {
+    window.location.replace(url + '?v=' + ts);
+  }
 }
 </script>
 
