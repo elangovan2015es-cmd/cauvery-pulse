@@ -8,8 +8,37 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Version: 2.1 | Build: 20260414-1745 -->
+<!-- Version: 2.1 | Build: 20260414-1800 -->
 <title>Cauvery Pulse – Financial Health</title>
+<script>
+// ── IPHONE CACHE FIX — runs in <head> before page renders ──
+(function() {
+  var VER = '2.1.20260414';
+  var key = 'cp_version';
+  // If already on a ?v= URL, we are the fresh load — just save version and stop
+  if (window.location.search.indexOf('v=') !== -1) {
+    localStorage.setItem(key, VER);
+    return;
+  }
+  // If version is outdated, redirect once with timestamp
+  if (localStorage.getItem(key) !== VER) {
+    localStorage.setItem(key, VER);
+    var base = window.location.pathname;
+    window.location.replace(base + '?v=' + Date.now());
+  }
+  // Unregister service workers silently
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(function(regs) {
+      regs.forEach(function(r) { r.unregister(); });
+    });
+  }
+  if ('caches' in window) {
+    caches.keys().then(function(keys) {
+      keys.forEach(function(k) { caches.delete(k); });
+    });
+  }
+})();
+</script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root {
@@ -371,32 +400,6 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   <button class="nb" id="nb-res" onclick="navTo('results')"><span>📊</span><span>Results</span></button>
 </div>
 <div class="toast" id="toast"></div>
-
-<script>
-// ── NUCLEAR CACHE BUSTER (proven iPhone fix) ──
-const APP_VERSION = '2.1.20260414';
-const _sv = localStorage.getItem('cp_version');
-
-// Step 1: Unregister all service workers
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.getRegistrations().then(regs => {
-    regs.forEach(r => r.unregister());
-  });
-}
-// Step 2: Clear all caches
-if ('caches' in window) {
-  caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
-}
-// Step 3: If version mismatch — hard reload with timestamp (bypasses ALL iPhone cache)
-if (_sv !== APP_VERSION) {
-  localStorage.setItem('cp_version', APP_VERSION);
-  const url = window.location.href.split('?')[0];
-  const ts = new Date().getTime();
-  if (!window.location.search.includes('v=')) {
-    window.location.replace(url + '?v=' + ts);
-  }
-}
-</script>
 
 <script>
 // ══════════════════ PERSONALITY QUIZ DATA ══════════════════
