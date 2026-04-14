@@ -588,17 +588,25 @@ header{padding:22px 20px 14px;display:flex;align-items:center;justify-content:sp
 <div class="toast" id="toast"></div>
 
 <script>
-// ── CACHE BUSTER + SERVICE WORKER UNREGISTER ──
+// ── NUCLEAR CACHE BUSTER (proven iPhone fix) ──
 const APP_VERSION = '2.1.20260414';
 const _sv = localStorage.getItem('cp_m0_version');
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.getRegistrations().then(regs => {
+    regs.forEach(r => r.unregister());
+  });
+}
+if ('caches' in window) {
+  caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
+}
 if (_sv !== APP_VERSION) {
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.getRegistrations().then(regs => { regs.forEach(r => r.unregister()); });
-  }
-  if ('caches' in window) {
-    caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
-  }
   localStorage.setItem('cp_m0_version', APP_VERSION);
+  const url = window.location.href.split('?')[0];
+  const ts = new Date().getTime();
+  if (!window.location.search.includes('v=')) {
+    window.location.replace(url + '?v=' + ts);
+  }
 }
 </script>
 
