@@ -8,25 +8,11 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Version: 2.1 | Build: 20260414-1800 -->
+<!-- Version: 2.1 | Build: 20260414-1820 -->
 <title>Cauvery Pulse – Financial Health</title>
 <script>
-// ── IPHONE CACHE FIX — runs in <head> before page renders ──
+// ── IPHONE CACHE FIX ──
 (function() {
-  var VER = '2.1.20260414';
-  var key = 'cp_version';
-  // If already on a ?v= URL, we are the fresh load — just save version and stop
-  if (window.location.search.indexOf('v=') !== -1) {
-    localStorage.setItem(key, VER);
-    return;
-  }
-  // If version is outdated, redirect once with timestamp
-  if (localStorage.getItem(key) !== VER) {
-    localStorage.setItem(key, VER);
-    var base = window.location.pathname;
-    window.location.replace(base + '?v=' + Date.now());
-  }
-  // Unregister service workers silently
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then(function(regs) {
       regs.forEach(function(r) { r.unregister(); });
