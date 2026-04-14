@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 <meta name="theme-color" content="#07091a">
 <meta name="apple-mobile-web-app-capable" content="yes">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<!-- Version: 2.1 | Build: 20260414-1745 -->
 <title>Cauvery Pulse – Life Canvas</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
@@ -582,6 +586,21 @@ header{padding:22px 20px 14px;display:flex;align-items:center;justify-content:sp
   <button class="nb" id="nb-m1" onclick="goToM1()"><span>🩺</span><span>Health Check</span></button>
 </div>
 <div class="toast" id="toast"></div>
+
+<script>
+// ── CACHE BUSTER + SERVICE WORKER UNREGISTER ──
+const APP_VERSION = '2.1.20260414';
+const _sv = localStorage.getItem('cp_m0_version');
+if (_sv !== APP_VERSION) {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.getRegistrations().then(regs => { regs.forEach(r => r.unregister()); });
+  }
+  if ('caches' in window) {
+    caches.keys().then(keys => keys.forEach(k => caches.delete(k)));
+  }
+  localStorage.setItem('cp_m0_version', APP_VERSION);
+}
+</script>
 
 <script>
 // ══════════════════ DATA ══════════════════
