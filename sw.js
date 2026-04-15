@@ -5,7 +5,7 @@
   Owner   : Elango Industries Limited
   NOTE    : Change CACHE_NAME on every release to force iPhone refresh
 */
-const CACHE_NAME = 'cauvery-pulse-v2.3-20260415';
+const CACHE_NAME = 'cauvery-pulse-v2.2-20260415';
 const ASSETS = [
   './index.html',
   './m0.html',
