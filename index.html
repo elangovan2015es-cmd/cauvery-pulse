@@ -957,18 +957,394 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div class="toast" id="toast"></div>
 </div>
 
+<!-- ══════ MODULE 2: INVESTMENT SCHOOL ══════ -->
+<div id="mod2" class="mod">
+<div id="app2">
+<header>
+  <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Investment School · M2</div></div></div>
+  <div class="vtag">v2.2</div>
+</header>
+
+<div style="padding:0 20px 80px">
+
+<!-- Hero -->
+<div style="text-align:center;padding:20px 0 24px">
+  <div style="font-size:48px;margin-bottom:10px">📚</div>
+  <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:900;line-height:1.25;margin-bottom:10px">Investment <span style="color:var(--gold)">School</span></div>
+  <div style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:6px">10 instruments. Every Indian needs to understand these before investing a single rupee.</div>
+  <div style="display:inline-block;padding:5px 14px;background:rgba(232,184,75,.12);border:1px solid rgba(232,184,75,.25);border-radius:20px;font-size:12px;color:var(--gold)">Tap any card to learn fully</div>
+</div>
+
+<!-- Filter tabs -->
+<div style="display:flex;gap:6px;overflow-x:auto;padding-bottom:8px;margin-bottom:16px;scrollbar-width:none" id="m2filters">
+  <div class="m2tab act" onclick="filterM2('all',this)">All</div>
+  <div class="m2tab" onclick="filterM2('safe',this)">🔵 Safe</div>
+  <div class="m2tab" onclick="filterM2('growth',this)">🟢 Growth</div>
+  <div class="m2tab" onclick="filterM2('tax',this)">🟡 Tax Saving</div>
+  <div class="m2tab" onclick="filterM2('protection',this)">🔴 Protection</div>
+</div>
+
+<!-- Instrument Cards Grid -->
+<div id="m2grid"></div>
+
+<!-- Detail Panel -->
+<div id="m2detail" style="display:none;animation:fu .35s ease">
+  <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;cursor:pointer" onclick="closeM2Detail()">
+    <div style="width:32px;height:32px;background:var(--card);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px">←</div>
+    <div style="font-size:13px;color:var(--muted)">Back to all instruments</div>
+  </div>
+  <div id="m2detailContent"></div>
+</div>
+
+</div>
+</div><!-- #app2 -->
+<div class="bnav">
+  <button class="nb" onclick="switchToM1()"><span>🩺</span><span>My Score</span></button>
+  <button class="nb act" onclick="switchToM2()"><span>📚</span><span>School</span></button>
+  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>
+</div>
+<div class="toast" id="toast2"></div>
+</div>
+
+<style>
+/* ── M2 STYLES ── */
+.m2tab{padding:7px 14px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:12px;color:var(--muted);cursor:pointer;white-space:nowrap;flex-shrink:0;transition:all .2s}
+.m2tab.act{background:rgba(232,184,75,.15);border-color:var(--gold);color:var(--gold)}
+.m2card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:12px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+.m2card:active{transform:scale(.99)}
+.m2card-top{display:flex;align-items:center;gap:12px;margin-bottom:10px}
+.m2card-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
+.m2card-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;line-height:1.2}
+.m2card-tag{font-size:10px;padding:2px 8px;border-radius:10px;margin-top:3px;display:inline-block;font-weight:600;letter-spacing:.5px}
+.m2card-desc{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:12px}
+.m2metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.m2metric{background:var(--card2);border-radius:8px;padding:8px;text-align:center}
+.m2metric-val{font-family:'DM Mono',monospace;font-size:13px;font-weight:600;line-height:1}
+.m2metric-lbl{font-size:10px;color:var(--muted);margin-top:3px}
+.m2card-arrow{position:absolute;top:16px;right:16px;font-size:16px;color:var(--muted)}
+
+/* Detail view */
+.det-hero{background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:16px;padding:20px;margin-bottom:14px;text-align:center}
+.det-icon{font-size:48px;margin-bottom:8px}
+.det-name{font-family:'Playfair Display',serif;font-size:24px;font-weight:900;margin-bottom:6px}
+.det-oneliner{font-size:13px;color:var(--muted);line-height:1.6}
+.det-metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:14px}
+.det-metric{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px;text-align:center}
+.det-metric-val{font-family:'DM Mono',monospace;font-size:16px;font-weight:600;margin-bottom:3px}
+.det-metric-lbl{font-size:11px;color:var(--muted)}
+.det-section{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:12px}
+.det-section-title{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.det-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;line-height:1.6}
+.det-row:last-child{border-bottom:none}
+.det-dot{width:6px;height:6px;border-radius:50%;margin-top:6px;flex-shrink:0}
+.truth-box{border-radius:12px;padding:14px 16px;margin-bottom:12px;font-size:13px;line-height:1.75}
+.truth-box strong{font-weight:600}
+.prod-chip{display:inline-block;padding:5px 12px;background:var(--card2);border:1px solid var(--border);border-radius:20px;font-size:12px;color:var(--teal);margin:3px}
+</style>
+
 <script>
-// ══ MODULE SWITCHER ══
+// ══ M2 INVESTMENT DATA ══
+const M2_INSTRUMENTS = [
+  {
+    id:'fd', tag:'safe', tagLabel:'Safe', tagColor:'#4a9eff',
+    icon:'🏦', iconBg:'rgba(74,158,255,.15)',
+    name:'Fixed Deposit',
+    desc:'Money locked for a fixed period at a guaranteed interest rate. The most popular savings instrument in India.',
+    returns:'6.5–9%', risk:'Very Low', liquidity:'Medium', taxTag:'Taxable',
+    returnColor:'var(--teal)', riskColor:'var(--green)',
+    oneliner:'Guaranteed returns, zero market risk, but interest is fully taxable — and often loses to inflation after tax.',
+    whoSuits:['Senior citizens seeking safe income','Emergency fund parking (sweep-in FD)','Short-term goals under 3 years','Conservative investors with low risk appetite'],
+    pros:['Guaranteed returns — no market risk','DICGC insurance up to ₹5 lakh per bank','Flexible tenure from 7 days to 10 years','Loan against FD available','Senior citizen extra 0.25–0.50% rate'],
+    cons:['Interest fully taxable as per your slab','Returns often below inflation after tax','Premature withdrawal penalty 0.5–1%','No growth — just preservation','Long-term FDs lose real value to inflation'],
+    taxNote:'Interest added to income — taxed at your slab rate. TDS at 10% if interest exceeds ₹40,000/year (₹50,000 for seniors). Submit Form 15G/15H to avoid TDS if income is below taxable limit.',
+    truth:'FD is safety, not wealth. After 30% tax on 7% return = effective 4.9%. Inflation at 6% means you are losing 1.1% real value per year. Use FD for safety — not as a primary investment.',
+    truthColor:'rgba(244,165,53,.1)', truthBorder:'rgba(244,165,53,.3)',
+    products:['AU Small Finance Bank — 8.5%','IDFC FIRST Bank — 7.9%','SBI — 7.1% (senior 7.6%)','HDFC Bank — 7.25%','Post Office TD — 7.5% (tax-free on 5-year)'],
+    lifeStageNote:{student:'Keep 2 months pocket money in FD. Learn the habit.',young:'6-month emergency fund in sweep-in FD. Not for primary investing.',married:'Family emergency buffer only. Joint FD for joint access.',mid:'FD ladder for predictable income alongside equity.',senior:'Senior citizen FD for guaranteed monthly/quarterly income.',small_biz:'Business contingency fund — 3 months operating cost.',large_biz:'Director personal buffer only. Corporate FD for business surplus.'}
+  },
+  {
+    id:'epf', tag:'safe', tagLabel:'Tax Saving', tagColor:'#e8b84b',
+    icon:'🏛️', iconBg:'rgba(232,184,75,.15)',
+    name:'EPF — Employee Provident Fund',
+    desc:'Mandatory retirement savings for salaried employees. Both you and employer contribute 12% of basic salary each.',
+    returns:'8.15%', risk:'Zero', liquidity:'Low', taxTag:'EEE',
+    returnColor:'var(--green)', riskColor:'var(--green)',
+    oneliner:'Free money from employer + tax-free returns + EEE status. The single best guaranteed return instrument for salaried employees.',
+    whoSuits:['All salaried employees — mandatory','Those wanting forced savings discipline','Retirement corpus building','Low risk investors who want equity-like returns safely'],
+    pros:['Employer matches your 12% contribution — free money','8.15% tax-free return — beats most instruments','EEE: Exempt on contribution, interest, and withdrawal','Deduction under Section 80C up to ₹1.5L','Transferable when you change jobs via UAN'],
+    cons:['Cannot withdraw freely before 58 — locked','No control over fund management','If you resign before 5 years, withdrawal is taxable','No option to increase beyond 12% basic (VPF is separate)','Business owners and self-employed cannot contribute'],
+    taxNote:'EEE status: Contribution deductible under 80C. Interest earned is tax-free. Withdrawal after 5 years is fully tax-free. Before 5 years — TDS applies on withdrawal.',
+    truth:'EPF is mandatory wealth creation. Your employer is giving you 12% of your basic salary for free. Never opt out. Add VPF (Voluntary PF) on top — same 8.15% tax-free returns, no limit.',
+    truthColor:'rgba(62,207,142,.08)', truthBorder:'rgba(62,207,142,.25)',
+    products:['EPFO — managed by government','Check balance: EPFO member portal / Umang app','VPF: Ask HR to deduct extra from salary','UAN: Activate at unifiedportal-mem.epfindia.gov.in'],
+    lifeStageNote:{student:'Not applicable — joins when employed.',young:'Start from Day 1 of first job. Activate UAN immediately. Never withdraw early.',married:'Add VPF for extra tax-free savings. Nominate spouse.',mid:'Check EPF balance annually. Do not withdraw on job change — transfer via UAN.',senior:'Withdraw after 58 for full tax-free corpus. Or continue if employed.',small_biz:'Mandatory if 20+ employees. Register with EPFO.',large_biz:'Ensure compliance. Can set up Exempted PF Trust for better returns.'}
+  },
+  {
+    id:'ppf', tag:'tax', tagLabel:'Tax Saving', tagColor:'#e8b84b',
+    icon:'📮', iconBg:'rgba(232,184,75,.15)',
+    name:'PPF — Public Provident Fund',
+    desc:'Government-backed 15-year savings scheme. Open to everyone — salaried, self-employed, business owners.',
+    returns:'7.1%', risk:'Zero', liquidity:'Low', taxTag:'EEE',
+    returnColor:'var(--teal)', riskColor:'var(--green)',
+    oneliner:'Best instrument for self-employed and business owners who have no EPF. Tax-free returns, government guarantee, ₹1.5L per year.',
+    whoSuits:['Self-employed, professionals, business owners','Anyone without EPF access','Long-term goal builders — 15 years+','Conservative investors wanting tax-free returns'],
+    pros:['Government guarantee — zero default risk','EEE tax status — completely tax-free','7.1% is higher than most bank FDs after tax','Loan against PPF from Year 3','Partial withdrawal from Year 7','Can extend in 5-year blocks after 15 years'],
+    cons:['15-year lock-in — long commitment','Maximum ₹1.5 lakh per year — limited','Only 1 account per person — no joint accounts','Interest rate revised quarterly by government','No premature closure (except special cases)'],
+    taxNote:'EEE: Contribution deductible under 80C (within ₹1.5L limit). Interest earned is tax-free. Maturity amount fully tax-free. Best tax efficiency for long-term savings.',
+    truth:'PPF is the business owner\'s EPF. If you do not have an employer matching your PF, PPF is the foundation. ₹1.5L per year for 15 years at 7.1% = ₹40.68 lakhs — all tax-free.',
+    truthColor:'rgba(232,184,75,.08)', truthBorder:'rgba(232,184,75,.25)',
+    products:['SBI PPF Account — branch or YONO app','Post Office PPF — offline, reliable','HDFC/ICICI bank PPF — online management','Sukanya Samriddhi for girl child — 8.2% (better than PPF)'],
+    lifeStageNote:{student:'Open PPF account as soon as you have income. 15 years starts now.',young:'₹1.5L per year = ₹12,500/month. Automate on 5th of each month for maximum interest.',married:'One PPF each for husband and wife. That is ₹3L/year tax-free.',mid:'Check maturity date. Extend in 5-year blocks if corpus not needed.',senior:'If already running, continue for tax-free returns. Withdraw at maturity.',small_biz:'Essential — your substitute for EPF. Max ₹1.5L per year.',large_biz:'Personal PPF for CMD. Separate from business investments.'}
+  },
+  {
+    id:'nps', tag:'tax', tagLabel:'Tax Saving', tagColor:'#e8b84b',
+    icon:'🎯', iconBg:'rgba(155,114,207,.15)',
+    name:'NPS — National Pension System',
+    desc:'Market-linked pension scheme with unique tax benefits. Best for retirement planning with extra ₹50,000 deduction.',
+    returns:'9–12%', risk:'Low-Medium', liquidity:'Very Low', taxTag:'EET',
+    returnColor:'var(--green)', riskColor:'var(--amber)',
+    oneliner:'Extra ₹50,000 tax deduction over and above 80C. Market-linked equity returns with government regulation. Best retirement tool for high income earners.',
+    whoSuits:['High income earners in 30% tax bracket','Those who have exhausted 80C limit','Long-term retirement planners','Self-employed wanting pension-like structure'],
+    pros:['Extra ₹50,000 deduction under 80CCD(1B) — saves ₹15,000/year in 30% bracket','Equity component gives 10–12% long-term returns','Government regulated — PFRDA oversight','Low fund management charges — 0.01%','Choice of fund managers — SBI, HDFC, ICICI, Kotak'],
+    cons:['60% lump sum + 40% mandatory annuity at retirement','Annuity income is taxable','Cannot withdraw freely before 60','Partial withdrawal only for specific reasons','Returns depend on market performance'],
+    taxNote:'Section 80CCD(1): Up to 10% of salary (within ₹1.5L 80C limit). Section 80CCD(1B): Additional ₹50,000 — this is the unique benefit. Employer contribution: 80CCD(2) — no upper limit, not counted in 80C.',
+    truth:'NPS is a retirement tool, not a savings tool. The ₹50,000 extra deduction saves ₹15,600/year in tax (30% bracket). Over 20 years that is ₹3.12L in tax saved — plus market returns on the corpus.',
+    truthColor:'rgba(155,114,207,.08)', truthBorder:'rgba(155,114,207,.25)',
+    products:['Open online: enps.nsdl.com','Banks: SBI, HDFC, ICICI offer NPS accounts','PRAN (Permanent Retirement Account Number) is your NPS ID','Tier I: Tax benefits, locked. Tier II: No lock, no extra tax benefit'],
+    lifeStageNote:{student:'Not yet — focus on EPF when employed.',young:'Start NPS Tier I with ₹500/month from Day 1. Habit building.',married:'If income above ₹10L — NPS is essential for the ₹50K extra deduction.',mid:'Maximum NPS contribution for tax benefit. Auto choice if unsure.',senior:'Approaching 60 — plan annuity purchase. Compare LIC, SBI annuity rates.',small_biz:'NPS for self-employed: 20% of gross income deductible under 80CCD(1).',large_biz:'Corporate NPS: employer contribution under 80CCD(2) — no cap, full deduction.'}
+  },
+  {
+    id:'mf', tag:'growth', tagLabel:'Growth', tagColor:'#3ecf8e',
+    icon:'📈', iconBg:'rgba(62,207,142,.15)',
+    name:'Mutual Funds — SIP',
+    desc:'Pooled investment in stocks or bonds managed by professional fund managers. SIP is the most powerful wealth-building tool for India.',
+    returns:'10–15%', risk:'Medium', liquidity:'High', taxTag:'LTCG 10%',
+    returnColor:'var(--green)', riskColor:'var(--amber)',
+    oneliner:'₹2,000 SIP per month at 12% CAGR for 20 years = ₹19.8 lakhs. The single most accessible wealth creator for every Indian.',
+    whoSuits:['Anyone with 5+ year horizon','First-time investors — start with index funds','Those wanting equity returns without stock-picking','Tax savers — ELSS gives 80C benefit with 3-year lock'],
+    pros:['Start with as little as ₹100/month','Professional management — no stock picking needed','Rupee cost averaging through SIP','High liquidity — redeem in 1-3 business days','ELSS gives 80C deduction with lowest 3-year lock','Regulated by SEBI — investor protection'],
+    cons:['No guaranteed returns — market risk','Requires 5+ year patience for meaningful returns','ELSS locked for 3 years','Exit load on early redemption (usually 1 year)','Past performance does not guarantee future returns'],
+    taxNote:'Equity MF held >1 year: LTCG at 10% above ₹1 lakh gain/year. Held <1 year: STCG at 15%. Debt MF: taxed as per income slab (after April 2023 change). ELSS: 80C deduction, gains taxed at LTCG.',
+    truth:'Index funds beat 80% of active fund managers over 10 years. Start with Nifty 50 index fund. Low cost (0.1–0.2% expense ratio) vs active funds (1–2%). ₹500/month in Nifty 50 from age 25 = ₹1.7 crore by age 60.',
+    truthColor:'rgba(62,207,142,.08)', truthBorder:'rgba(62,207,142,.25)',
+    products:['Nifty 50 Index: UTI, HDFC, SBI, Nippon (expense ratio 0.1%)','Parag Parikh Flexi Cap — consistent long-term performer','Mirae Asset ELSS — for 80C with 3-year lock','Platform: Zerodha Coin, Groww, Kuvera — direct plans only','Avoid: Regular plans through agents — 1% higher cost eats ₹15L over 20 years'],
+    lifeStageNote:{student:'₹500/month from first income. Parag Parikh Flexi Cap or UTI Nifty 50.',young:'20% of salary in SIP. ELSS for 80C. Auto-debit on salary date.',married:'Combined SIP target 25% of household income. Separate goal-based SIPs.',mid:'Shift 20% of equity to debt via balanced advantage fund. Continue SIPs.',senior:'Continue SIP with 30% equity. Start SWP (Systematic Withdrawal Plan) at retirement.',small_biz:'Personal SIP separate from business. Index fund first. Do not time market.',large_biz:'PMS when corpus exceeds ₹50L. SEBI-registered portfolio manager.'}
+  },
+  {
+    id:'equity', tag:'growth', tagLabel:'Growth', tagColor:'#3ecf8e',
+    icon:'📊', iconBg:'rgba(62,207,142,.12)',
+    name:'Direct Equity — Stocks',
+    desc:'Buying shares of individual companies listed on NSE/BSE. Highest return potential, highest risk, requires research.',
+    returns:'15–25%+', risk:'High', liquidity:'Very High', taxTag:'LTCG 10%',
+    returnColor:'var(--green)', riskColor:'var(--red)',
+    oneliner:'Owning a piece of real businesses. Highest long-term wealth creator — but only with knowledge, patience, and emotional control.',
+    whoSuits:['Those with 7+ year horizon','Investors willing to research companies','People who can handle 30–50% temporary drops','Those who want to beat index fund returns'],
+    pros:['Highest long-term return potential','Dividend income on top of capital gains','Full control over portfolio','No fund management fee','Direct ownership in companies you believe in','High liquidity — sell within seconds'],
+    cons:['Requires research — time and knowledge','Emotional decisions destroy returns','Concentration risk — one wrong stock hurts','Short-term volatility is extreme','Requires demat account and trading discipline','Easy to overtrade and incur losses'],
+    taxNote:'Held >1 year: LTCG at 10% above ₹1 lakh/year. Held <1 year: STCG at 15%. Dividend taxable at your slab. STT (Securities Transaction Tax) on every trade.',
+    truth:'90% of retail traders lose money. But 90% of long-term investors in quality businesses make money. The difference is time horizon. Buy Nifty 50 stocks and hold 10+ years. Avoid tips, F&O, and intraday.',
+    truthColor:'rgba(224,82,82,.08)', truthBorder:'rgba(224,82,82,.2)',
+    products:['Demat: Zerodha (lowest cost), Groww, Angel One','Screener.in — free stock research','Top holdings: HDFC Bank, TCS, Reliance, Infosys, ITC','Start: Buy 1 share each of 5 Nifty 50 companies','Never: F&O, penny stocks, operator stocks, SMS tips'],
+    lifeStageNote:{student:'Learn with ₹1,000. Buy 1 share of a company you understand.',young:'10–15% of portfolio in direct equity. Only companies you understand.',married:'Reduce to 10% direct equity. MF is safer for family goals.',mid:'Quality dividend stocks for passive income. HDFC Bank, ITC, Infosys.',senior:'Shift to dividend-paying blue chips. Capital preservation over growth.',small_biz:'Never mix business and personal equity. Separate demat account.',large_biz:'Promoter holding strategy. SEBI regulations on insider trading — consult CS.'}
+  },
+  {
+    id:'gold', tag:'safe', tagLabel:'Safe', tagColor:'#4a9eff',
+    icon:'🥇', iconBg:'rgba(232,184,75,.15)',
+    name:'Gold',
+    desc:'Traditional wealth protection asset. Available as physical gold, Sovereign Gold Bonds (SGB), or Gold ETFs.',
+    returns:'8–10%', risk:'Low-Medium', liquidity:'Medium', taxTag:'LTCG 20%',
+    returnColor:'var(--gold)', riskColor:'var(--green)',
+    oneliner:'Gold protects against inflation and currency devaluation. SGBs are the smartest way to hold gold — 2.5% extra interest from government, zero making charges.',
+    whoSuits:['All investors as 10–15% portfolio allocation','Those protecting against inflation','Investors wanting non-correlated asset','Tamil Nadu families with traditional gold affinity'],
+    pros:['Inflation hedge — gold holds real value over decades','SGBs give 2.5% interest PLUS gold price appreciation','SGB capital gains fully tax-free at maturity (8 years)','No storage risk, no making charges with SGB/ETF','International currency protection'],
+    cons:['Physical gold: making charges 8–25%, storage risk, no income','No dividends or cash flow from gold','Can underperform equity over 20-year periods','SGB locked for 8 years (early exit via exchange)','Gold ETF: expense ratio + demat needed'],
+    taxNote:'Physical gold held >3 years: LTCG at 20% with indexation. SGB held to 8-year maturity: capital gains COMPLETELY TAX-FREE. SGB interest: taxable at your slab. Gold ETF: taxed like debt MF after 2023.',
+    truth:'Never buy physical gold as investment — making charges alone cost 15–25% upfront. Buy Sovereign Gold Bonds (SGB) when available. Same gold exposure + 2.5% annual interest + tax-free maturity. Physical gold is for jewellery and emotion — not for returns.',
+    truthColor:'rgba(232,184,75,.08)', truthBorder:'rgba(232,184,75,.3)',
+    products:['SGB: Available via RBI, banks, exchanges — buy during tranches','Gold ETF: Nippon Gold ETF, HDFC Gold ETF on Zerodha','Gold MF: SBI Gold Fund (invests in Gold ETF — no demat needed)','Avoid: Gold jewellery as investment, gold chit funds'],
+    lifeStageNote:{student:'Buy 1g digital gold as learning. Or wait for SGB tranche.',young:'5–10% of portfolio in SGB. Buy every tranche RBI announces.',married:'SGB for family gold allocation. No physical gold purchase for investment.',mid:'10–15% in gold as portfolio stabiliser. Rebalance annually.',senior:'Hold existing gold. SGB interest provides additional income.',small_biz:'Business owner gold as personal portfolio only. Not business asset.',large_biz:'Gold as 5–10% personal wealth preservation. HNI family office may hold more.'}
+  },
+  {
+    id:'reits', tag:'growth', tagLabel:'Growth', tagColor:'#3ecf8e',
+    icon:'🏢', iconBg:'rgba(46,196,182,.15)',
+    name:'REITs — Real Estate Investment Trusts',
+    desc:'Own real estate — offices, malls, warehouses — without buying property. Listed on stock exchange, pays regular dividend-like income.',
+    returns:'8–12%', risk:'Medium', liquidity:'High', taxTag:'Mostly Taxable',
+    returnColor:'var(--teal)', riskColor:'var(--amber)',
+    oneliner:'Real estate income without buying property. Invest ₹300 and earn monthly rent from premium office buildings across India.',
+    whoSuits:['Those wanting real estate exposure without large capital','Investors seeking regular monthly income','Portfolio diversification from pure equity','Mid to long-term horizon — 5+ years'],
+    pros:['Regular distribution — like rent income, paid quarterly','Minimum investment as low as ₹300–500 (1 unit)','High liquidity — sell on exchange like a stock','Professional property management — no tenant issues','Diversified across multiple premium properties','Mandatory 90% income distribution to unitholders'],
+    cons:['Distributions mostly taxable as per slab','Interest rate sensitive — rises hurt REIT values','Limited options in India — only 4 listed REITs','Relatively new in India — limited track record','Not suitable for capital appreciation as primary goal'],
+    taxNote:'REIT distributions have multiple components: interest income (taxable at slab), dividend (exempt if SPV pays tax), amortisation (return of capital — not immediately taxed). Complex — consult CA for optimisation.',
+    truth:'REITs are the middle path between FD and property. You get office rent income from Mindspace, Embassy, Brookfield, Nexus Malls — premium properties in Bangalore, Mumbai, Chennai — with ₹300. No EMI, no tenant, no maintenance.',
+    truthColor:'rgba(46,196,182,.08)', truthBorder:'rgba(46,196,182,.25)',
+    products:['Embassy Office Parks REIT — Bangalore offices','Mindspace Business Parks REIT — Mumbai/Hyderabad','Brookfield India REIT — pan-India offices','Nexus Select Trust REIT — retail malls','Buy on: Zerodha, Groww, Angel One — listed on NSE/BSE'],
+    lifeStageNote:{student:'Not yet — learn about it. Track one REIT\'s quarterly distribution.',young:'5% of portfolio after 6-month emergency fund is built.',married:'REITs as income layer. Quarterly distributions supplement salary.',mid:'10% in REITs for passive income as you approach retirement.',senior:'15–20% in REITs for regular income. Lower risk than direct property.',small_biz:'REITs as passive income alternative to buying commercial property.',large_biz:'REITs for portfolio diversification alongside direct property holdings.'}
+  },
+  {
+    id:'insurance_inv', tag:'protection', tagLabel:'Protection', tagColor:'#e05252',
+    icon:'🛡️', iconBg:'rgba(224,82,82,.12)',
+    name:'Insurance — The Truth',
+    desc:'Term insurance protects your family. Health insurance protects your savings. ULIP and endowment mix investment with insurance — and do both poorly.',
+    returns:'4–6%', risk:'N/A', liquidity:'Very Low', taxTag:'80C + 80D',
+    returnColor:'var(--amber)', riskColor:'var(--green)',
+    oneliner:'Buy term for protection. Buy health for expenses. Never mix insurance with investment — it is the most expensive financial mistake Indians make.',
+    whoSuits:['Everyone needs health insurance — no exception','All earning members need term insurance','Nobody should buy ULIP or endowment as investment'],
+    pros:['Term: ₹1 crore cover for ₹12,000/year — pure protection','Health: Protects your entire savings from medical emergency','80C deduction on term premium','80D deduction on health premium (₹25,000 self + ₹25,000 parents)','Online term plans are cheapest — no agent commission'],
+    cons:['ULIP: 5% charges in Year 1, 2.5% ongoing — destroys returns','Endowment/money-back: 4–5% effective return — worse than PPF','LIC policies as investment: low returns + low cover — worst of both','Mixed products confuse insurance with investment — do neither well','Traditional policies have very low sum assured for high premium'],
+    taxNote:'Term premium: 80C deduction. Health premium: 80D — ₹25,000 self/family, ₹25,000 parents (₹50,000 if parents are senior citizens). Maturity of term: tax-free (death claim). ULIP maturity: tax-free if annual premium under ₹2.5L.',
+    truth:'ULIP and endowment plans are the biggest wealth destroyers in India. The agent earns 25–35% commission in Year 1. You get 4–5% returns. Instead: Buy Term (₹12,000/year for ₹1 Cr) + invest the rest in SIP. The difference over 20 years is ₹50–80 lakhs.',
+    truthColor:'rgba(224,82,82,.08)', truthBorder:'rgba(224,82,82,.25)',
+    products:['Term: LIC Tech Term, HDFC Click2Protect, ICICI iProtect Smart','Health: Star Comprehensive, Niva Bupa Reassure, ICICI Lombard iHealth','Super top-up: Star Super Surplus (₹20L extra for ₹3,000/year)','Never buy: LIC Jeevan Anand, Money Back, ULIP — as investment','Platform: PolicyBazaar for comparison, buy direct from insurer'],
+    lifeStageNote:{student:'Stay on parents health floater. Read and understand insurance basics.',young:'Buy ₹1 Cr term TODAY. Buy ₹5L health insurance TODAY. Do not wait.',married:'Upgrade to ₹2 Cr term. ₹10L family floater health. Both spouses covered.',mid:'Critical illness rider if not already done. Health super top-up ₹20L.',senior:'Health cover is #1 priority. No new term needed. Ensure lifetime renewal.',small_biz:'Keyman insurance + personal term + health. All three are essential.',large_biz:'Personal term ₹5Cr+. Premium health HNI plan. Estate planning insurance.'}
+  },
+  {
+    id:'inflation', tag:'growth', tagLabel:'Essential', tagColor:'#9b72cf',
+    icon:'🔥', iconBg:'rgba(155,114,207,.15)',
+    name:'Inflation — The Silent Thief',
+    desc:'Inflation is not just an economic number. It is the invisible force that quietly reduces the value of every rupee you save.',
+    returns:'6–7%', risk:'Certain', liquidity:'N/A', taxTag:'Enemy',
+    returnColor:'var(--red)', riskColor:'var(--red)',
+    oneliner:'Your ₹1 lakh today becomes ₹54,379 in real value after 10 years at 6% inflation. Every investment must beat inflation or you are losing money silently.',
+    whoSuits:['This is not an investment — it is the enemy every investment must beat','Understanding inflation helps choose the RIGHT instruments'],
+    pros:['Forces you to invest in growth assets','Equity and real estate historically beat inflation','Gold protects against currency inflation','Helps you understand real returns vs nominal returns'],
+    cons:['FD after tax often fails to beat inflation','Keeping cash loses value every year','Savings account at 3% loses to 6% inflation — guaranteed','Even PPF at 7.1% barely beats inflation after tax treatment'],
+    taxNote:'Inflation erodes purchasing power. Real return = Nominal return minus Inflation. FD at 7% with 30% tax = 4.9% net. Inflation at 6% = REAL LOSS of 1.1% per year. This is why FD alone cannot build wealth.',
+    truth:'₹1 lakh in 2004 needed ₹3.2 lakhs in 2024 to buy the same things. That is 6.2% annual inflation over 20 years. Your savings must grow faster than this or you are getting poorer every year without realising it.',
+    truthColor:'rgba(155,114,207,.08)', truthBorder:'rgba(155,114,207,.25)',
+    products:['Beat inflation with: Equity MF (12% avg), Direct Equity (15%+), REITs (10%)','Protect against inflation: Gold (8–10%), SGB (10.5% with interest)','Safe but barely beats: PPF (7.1%), EPF (8.15%), NPS (10%+)','Loses to inflation after tax: FD (4.9% net), Savings account (2.1% net)','Multi-asset rule: No single asset — diversify to beat inflation in all conditions'],
+    lifeStageNote:{student:'Understand this: ₹1,000 today = ₹540 in real value in 10 years. This is why you must invest.',young:'Your biggest inflation fighter is time. Start SIP at 25. At 45 your money has 20 years of compounding.',married:'Family expenses inflate faster than CPI — children\'s education inflates at 10–12%.',mid:'Medical inflation is 12–15%/year. Your health insurance sum must grow with it.',senior:'Retirement inflation is real — plan for 7% expense increase per year.',small_biz:'Business costs inflate — build pricing power and margin protection.',large_biz:'Corporate strategy must account for input cost inflation — pricing and hedging.'}
+  }
+];
+
+// ══ M2 RENDER ══
+function renderM2(){
+  var grid=document.getElementById('m2grid');
+  if(!grid)return;
+  grid.innerHTML='';
+  M2_INSTRUMENTS.forEach(function(ins){
+    var card=document.createElement('div');
+    card.className='m2card';
+    card.dataset.tag=ins.tag;
+    card.innerHTML=
+      '<div class="m2card-top">'+
+        '<div class="m2card-icon" style="background:'+ins.iconBg+'">'+ins.icon+'</div>'+
+        '<div>'+
+          '<div class="m2card-name">'+ins.name+'</div>'+
+          '<span class="m2card-tag" style="background:'+ins.iconBg+';color:'+ins.tagColor+'">'+ins.tagLabel+'</span>'+
+        '</div>'+
+        '<div class="m2card-arrow">›</div>'+
+      '</div>'+
+      '<div class="m2card-desc">'+ins.desc+'</div>'+
+      '<div class="m2metrics">'+
+        '<div class="m2metric"><div class="m2metric-val" style="color:'+ins.returnColor+'">'+ins.returns+'</div><div class="m2metric-lbl">Returns</div></div>'+
+        '<div class="m2metric"><div class="m2metric-val" style="color:'+ins.riskColor+'">'+ins.risk+'</div><div class="m2metric-lbl">Risk</div></div>'+
+        '<div class="m2metric"><div class="m2metric-val" style="color:var(--teal)">'+ins.taxTag+'</div><div class="m2metric-lbl">Tax</div></div>'+
+      '</div>';
+    card.onclick=function(){openM2Detail(ins);};
+    grid.appendChild(card);
+  });
+}
+
+function filterM2(tag,el){
+  document.querySelectorAll('.m2tab').forEach(function(t){t.classList.remove('act');});
+  el.classList.add('act');
+  document.querySelectorAll('.m2card').forEach(function(c){
+    c.style.display=(tag==='all'||c.dataset.tag===tag)?'block':'none';
+  });
+}
+
+function openM2Detail(ins){
+  document.getElementById('m2grid').style.display='none';
+  document.getElementById('m2filters').style.display='none';
+  var det=document.getElementById('m2detail');
+  det.style.display='block';
+  var canvas=localStorage.getItem('cp_canvas');
+  var stage='young';
+  if(canvas){var d=JSON.parse(canvas);stage=d.gen==='first_gen'?'young':d.gen==='second_gen'?'mid':'young';}
+  var stageNote=ins.lifeStageNote[stage]||ins.lifeStageNote.young||'';
+  var prosHTML=ins.pros.map(function(p){return '<div class="det-row"><div class="det-dot" style="background:var(--green)"></div><div>'+p+'</div></div>';}).join('');
+  var consHTML=ins.cons.map(function(c){return '<div class="det-row"><div class="det-dot" style="background:var(--red)"></div><div>'+c+'</div></div>';}).join('');
+  var prodsHTML=ins.products.map(function(p){return '<span class="prod-chip">'+p+'</span>';}).join('');
+  var suitHTML=ins.whoSuits.map(function(s){return '<div class="det-row"><div class="det-dot" style="background:var(--teal)"></div><div>'+s+'</div></div>';}).join('');
+  document.getElementById('m2detailContent').innerHTML=
+    '<div class="det-hero">'+
+      '<div class="det-icon">'+ins.icon+'</div>'+
+      '<div class="det-name">'+ins.name+'</div>'+
+      '<div class="det-oneliner">'+ins.oneliner+'</div>'+
+    '</div>'+
+    '<div class="det-metrics">'+
+      '<div class="det-metric"><div class="det-metric-val" style="color:'+ins.returnColor+'">'+ins.returns+'</div><div class="det-metric-lbl">Expected Returns</div></div>'+
+      '<div class="det-metric"><div class="det-metric-val" style="color:'+ins.riskColor+'">'+ins.risk+'</div><div class="det-metric-lbl">Risk Level</div></div>'+
+      '<div class="det-metric"><div class="det-metric-val" style="color:var(--teal)">'+ins.liquidity+'</div><div class="det-metric-lbl">Liquidity</div></div>'+
+      '<div class="det-metric"><div class="det-metric-val" style="color:var(--gold)">'+ins.taxTag+'</div><div class="det-metric-lbl">Tax Status</div></div>'+
+    '</div>'+
+    '<div class="det-section"><div class="det-section-title">Who Should Use This</div>'+suitHTML+'</div>'+
+    '<div class="det-section"><div class="det-section-title">✅ Advantages</div>'+prosHTML+'</div>'+
+    '<div class="det-section"><div class="det-section-title">⚠️ Disadvantages</div>'+consHTML+'</div>'+
+    '<div class="det-section"><div class="det-section-title">💰 Tax Treatment</div><div style="font-size:13px;line-height:1.8;color:var(--muted)">'+ins.taxNote+'</div></div>'+
+    '<div class="truth-box" style="background:'+ins.truthColor+';border:1px solid '+ins.truthBorder+'">'+
+      '<div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:8px">📢 The Honest Truth</div>'+
+      '<div style="font-size:13px;line-height:1.8">'+ins.truth+'</div>'+
+    '</div>'+
+    (stageNote?'<div class="det-section" style="border-color:rgba(46,196,182,.2);background:rgba(46,196,182,.05)"><div class="det-section-title" style="color:var(--teal)">🎯 For Your Life Stage</div><div style="font-size:13px;line-height:1.8;color:var(--text)">'+stageNote+'</div></div>':'')+
+    '<div class="det-section"><div class="det-section-title">🛒 Products & Platforms</div><div style="padding-top:4px">'+prodsHTML+'</div></div>'+
+    '<div style="height:20px"></div>';
+  window.scrollTo(0,0);
+}
+
+function closeM2Detail(){
+  document.getElementById('m2detail').style.display='none';
+  document.getElementById('m2grid').style.display='block';
+  document.getElementById('m2filters').style.display='flex';
+  window.scrollTo(0,0);
+}
+
+// ══ UPDATED MODULE SWITCHER (now includes M2) ══
+function switchToM2(){
+  document.getElementById('mod0').classList.remove('act');
+  document.getElementById('mod1').classList.remove('act');
+  document.getElementById('mod2').classList.add('act');
+  window.scrollTo(0,0);
+  renderM2();
+}
 function switchToM1(){
   document.getElementById('mod0').classList.remove('act');
+  document.getElementById('mod2')&&document.getElementById('mod2').classList.remove('act');
   document.getElementById('mod1').classList.add('act');
   window.scrollTo(0,0);
 }
 function switchToM0(){
   document.getElementById('mod1').classList.remove('act');
+  document.getElementById('mod2')&&document.getElementById('mod2').classList.remove('act');
   document.getElementById('mod0').classList.add('act');
   window.scrollTo(0,0);
 }
+
+// Override toast for M2
+var _baseToast=toast;
+function toast(msg){
+  var mod2on=document.getElementById('mod2')&&document.getElementById('mod2').classList.contains('act');
+  if(mod2on){
+    var t=document.getElementById('toast2');
+    if(t){t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2400);}
+    return;
+  }
+  if(typeof _baseToast==='function')_baseToast(msg);
+}
+
+// Update M1 nav to include M2 link
+document.addEventListener('DOMContentLoaded',function(){
+  var m1nav=document.querySelector('#mod1 .bnav');
+  if(m1nav){
+    m1nav.innerHTML=
+      '<button class="nb" onclick="navTo(\'welcome\')"><span>🏠</span><span>Home</span></button>'+
+      '<button class="nb" onclick="navTo(\'profile\')"><span>🩺</span><span>Check</span></button>'+
+      '<button class="nb" onclick="navTo(\'results\')"><span>📊</span><span>Results</span></button>'+
+      '<button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button>';
+  }
+});
+</script>
 // ══ M0 CODE ══
 
 // ── IPHONE CACHE FIX — unregister any old SW ──
