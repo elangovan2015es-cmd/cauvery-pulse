@@ -8,12 +8,10 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'><rect width='192' height='192' rx='36' fill='%23060f1e'/><text x='96' y='130' font-size='110' text-anchor='middle'>🌊</text></svg>">
-<!-- Version: 2.2 | Build: 20260415-0915 -->
+<!-- Version: 2.2 | Build: 20260415-0940 -->
 <title>Cauvery Pulse – Financial Health</title>
 <script>
-// ── IPHONE CACHE FIX ──
+// ── IPHONE CACHE FIX — unregister any old SW ──
 (function() {
   if ('serviceWorker' in navigator) {
     navigator.serviceWorker.getRegistrations().then(function(regs) {
@@ -25,6 +23,7 @@
       keys.forEach(function(k) { caches.delete(k); });
     });
   }
+})();
 })();
 </script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -900,32 +899,6 @@ function doShare(){
       <div class="step-box"><div class="si">📊</div><div class="sn">100</div><div class="sl">Point<br>Score</div></div>`;
   }
 })();
-</script>
-<script>
-// ── SERVICE WORKER REGISTRATION ──
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('./sw.js')
-      .then(function(reg) {
-        // Check for update immediately on every load
-        reg.update();
-        // When new SW is waiting — force activate it
-        reg.addEventListener('updatefound', function() {
-          var newSW = reg.installing;
-          newSW.addEventListener('statechange', function() {
-            if (newSW.state === 'installed' && navigator.serviceWorker.controller) {
-              // New version ready — reload automatically
-              window.location.reload();
-            }
-          });
-        });
-      });
-    // If SW controller changes — reload for fresh content
-    navigator.serviceWorker.addEventListener('controllerchange', function() {
-      window.location.reload();
-    });
-  });
-}
 </script>
 </body>
 </html>
