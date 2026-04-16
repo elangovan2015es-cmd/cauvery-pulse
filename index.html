@@ -1494,6 +1494,7 @@ function closeM2Detail(){
 function switchToM2(){
   document.getElementById('mod0').classList.remove('act');
   document.getElementById('mod1').classList.remove('act');
+  var m4=document.getElementById('mod4');if(m4)m4.classList.remove('act');
   document.getElementById('mod2').classList.add('act');
   window.scrollTo(0,0);
   renderM2();
@@ -1501,6 +1502,7 @@ function switchToM2(){
 function switchToM1(){
   document.getElementById('mod0').classList.remove('act');
   document.getElementById('mod2')&&document.getElementById('mod2').classList.remove('act');
+  var m4=document.getElementById('mod4');if(m4)m4.classList.remove('act');
   document.getElementById('mod1').classList.add('act');
   window.scrollTo(0,0);
 }
@@ -3165,10 +3167,10 @@ function saveM3Rates(){
 }
 
 // ── SWITCHERS ──
-function switchToM3(){['mod0','mod1','mod2','mod3'].forEach(function(id){var el=document.getElementById(id);if(el)el.classList.remove('act');});document.getElementById('mod3').classList.add('act');window.scrollTo(0,0);renderM3();}
+function switchToM3(){['mod0','mod1','mod2','mod3','mod4'].forEach(function(id){var el=document.getElementById(id);if(el)el.classList.remove('act');});document.getElementById('mod3').classList.add('act');window.scrollTo(0,0);renderM3();}
 document.addEventListener('DOMContentLoaded',function(){
-  var nh='<button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM1()"><span>🩺</span><span>Score</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>';
-  ['#mod0 .bnav','#mod1 .bnav','#mod2 .bnav'].forEach(function(s){var el=document.querySelector(s);if(el)el.innerHTML=nh;});
+  var nh='<button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM1()"><span>🩺</span><span>Score</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>';
+  ['#mod0 .bnav','#mod1 .bnav','#mod2 .bnav','#mod3 .bnav','#mod4 .bnav'].forEach(function(s){var el=document.querySelector(s);if(el)el.innerHTML=nh;});
 });
 var _sm0=switchToM0;switchToM0=function(){var m=document.getElementById('mod3');if(m)m.classList.remove('act');_sm0();};
 var _sm1=switchToM1;switchToM1=function(){var m=document.getElementById('mod3');if(m)m.classList.remove('act');_sm1();};
@@ -3273,6 +3275,18 @@ var _sm2=switchToM2;switchToM2=function(){var m=document.getElementById('mod3');
 .m4-tab.act{background:#FEF2F2;border-color:#FECACA;color:#DC2626}
 
 /* Profile banner */
+
+/* M4 Arrow Navigation */
+.m4-arrow-nav{display:flex;align-items:center;justify-content:space-between;padding:16px 0 4px;margin-top:8px}
+.m4-arrow-btn{display:flex;align-items:center;gap:8px;padding:12px 18px;background:#fff;border:1.5px solid #E5E7EB;border-radius:12px;cursor:pointer;font-size:13px;font-weight:600;color:#374151;transition:all .2s;min-width:110px}
+.m4-arrow-btn:hover{background:#FEF2F2;border-color:#FECACA;color:#DC2626}
+.m4-arrow-btn.next{background:linear-gradient(135deg,#DC2626,#B91C1C);color:#fff;border-color:transparent;justify-content:flex-end}
+.m4-arrow-btn.next:hover{opacity:.9}
+.m4-arrow-btn.invisible{visibility:hidden}
+.m4-step-dots{display:flex;align-items:center;gap:6px}
+.m4-dot{width:8px;height:8px;border-radius:50%;background:#E5E7EB;transition:all .2s}
+.m4-dot.act{background:#DC2626;width:20px;border-radius:4px}
+
 .m4-profile-banner{background:#FFFBEB;border:1px solid #FCD34D;border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:12px;color:#78350F;display:flex;align-items:center;gap:8px}
 </style>
 
@@ -3626,9 +3640,9 @@ var _sm2=switchToM2;switchToM2=function(){var m=document.getElementById('mod3');
 
 <div class="bnav" style="background:#fff;border-top:1px solid #E5E7EB">
   <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>
-  <button class="nb" onclick="switchToM1()"><span>🩺</span><span>Score</span></button>
+  <button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button>
   <button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>
-  <button class="nb act" style="color:#DC2626"><span>💳</span><span>Debt</span></button>
+  <button class="nb act" style="color:#DC2626" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>
 </div>
 <div class="toast" id="toast4"></div>
 </div><!-- #mod4 -->
@@ -3643,15 +3657,67 @@ function fmtC(n){if(n>=10000000)return '₹'+(n/10000000).toFixed(2)+'Cr';if(n>=
 function m4Toast(msg){var t=document.getElementById('toast4');if(t){t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2400);}}
 
 // ── TAB SWITCHER ──
+var M4_TABS=['emi','dti','goodbad','payoff','cc','prepay','sebi'];
+var M4_TAB_NAMES={emi:'EMI Calc',dti:'DTI Health',goodbad:'Good vs Bad',payoff:'Payoff Strategy',cc:'Credit Card Trap',prepay:'Prepayment',sebi:'SEBI Tools'};
+var M4_TAB_ICONS={emi:'📐',dti:'📊',goodbad:'⚖️',payoff:'🎯',cc:'💳',prepay:'⚡',sebi:'🏛️'};
 var m4ActiveTab='emi';
-function m4ShowTab(tab,el){
+
+function m4ShowTab(tab,elOrNull){
   document.querySelectorAll('.m4-tab-content').forEach(function(t){t.style.display='none';});
   document.querySelectorAll('.m4-tab').forEach(function(t){t.classList.remove('act');});
   document.getElementById('m4tab-'+tab).style.display='block';
-  if(el)el.classList.add('act');
+  // Highlight matching tab button
+  document.querySelectorAll('.m4-tab').forEach(function(t){
+    if(t.getAttribute('onclick')&&t.getAttribute('onclick').indexOf("'"+tab+"'")>-1)t.classList.add('act');
+  });
   m4ActiveTab=tab;
   if(tab==='goodbad')renderDebtTypes();
   if(tab==='sebi')renderSebiTools();
+  m4UpdateArrows();
+  // Scroll tab into view
+  var tabEl=document.querySelector('.m4-tab.act');
+  if(tabEl)tabEl.scrollIntoView({behavior:'smooth',block:'nearest',inline:'center'});
+}
+
+function m4UpdateArrows(){
+  var idx=M4_TABS.indexOf(m4ActiveTab);
+  var prevTab=idx>0?M4_TABS[idx-1]:null;
+  var nextTab=idx<M4_TABS.length-1?M4_TABS[idx+1]:null;
+
+  // Update arrows in current tab
+  document.querySelectorAll('.m4-arrow-nav').forEach(function(nav){nav.remove();});
+  var currentContent=document.getElementById('m4tab-'+m4ActiveTab);
+  if(!currentContent)return;
+
+  // Dots
+  var dots=M4_TABS.map(function(t,i){
+    return '<div class="m4-dot'+(t===m4ActiveTab?' act':'')+'"></div>';
+  }).join('');
+
+  var prevHTML=prevTab?
+    '<button class="m4-arrow-btn" onclick="m4ShowTab(''+prevTab+'')">'+
+      '<span style="font-size:16px">←</span>'+
+      '<div style="text-align:left"><div style="font-size:10px;opacity:.6;text-transform:uppercase;letter-spacing:.6px">Back</div>'+
+      '<div>'+M4_TAB_ICONS[prevTab]+' '+M4_TAB_NAMES[prevTab]+'</div></div>'+
+    '</button>':
+    '<div class="m4-arrow-btn invisible"></div>';
+
+  var nextHTML=nextTab?
+    '<button class="m4-arrow-btn next" onclick="m4ShowTab(''+nextTab+'')">'+
+      '<div style="text-align:right"><div style="font-size:10px;opacity:.8;text-transform:uppercase;letter-spacing:.6px">Next</div>'+
+      '<div>'+M4_TAB_ICONS[nextTab]+' '+M4_TAB_NAMES[nextTab]+'</div></div>'+
+      '<span style="font-size:16px">→</span>'+
+    '</button>':
+    '<button class="m4-arrow-btn next" style="background:linear-gradient(135deg,#059669,#047857)" onclick="m4Toast('✅ All 7 modules complete!')">'+
+      '<div style="text-align:right"><div style="font-size:10px;opacity:.8;text-transform:uppercase;letter-spacing:.6px">Done</div>'+
+      '<div>All Covered ✓</div></div>'+
+      '<span style="font-size:16px">🎉</span>'+
+    '</button>';
+
+  var navDiv=document.createElement('div');
+  navDiv.className='m4-arrow-nav';
+  navDiv.innerHTML=prevHTML+'<div class="m4-step-dots">'+dots+'</div>'+nextHTML;
+  currentContent.appendChild(navDiv);
 }
 
 // ── PROFILE BANNER ──
@@ -4053,20 +4119,12 @@ function switchToM4(){
   window.scrollTo(0,0);
   m4LoadProfile();
   m4SetStrategy('avalanche');
+  setTimeout(function(){m4UpdateArrows();},100);
 }
 
-// Update all navbars to include M4
+// M4 init — strategy explain only (nav already updated by M3 block)
 document.addEventListener('DOMContentLoaded',function(){
-  // re-init strategy explain
   m4SetStrategy('avalanche');
-  // Update all navbars
-  var nh='<button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>'+
-    '<button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button>'+
-    '<button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>'+
-    '<button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>';
-  ['#mod0 .bnav','#mod1 .bnav','#mod2 .bnav','#mod3 .bnav'].forEach(function(s){
-    var el=document.querySelector(s);if(el)el.innerHTML=nh;
-  });
 });
 
 // Patch existing switchers to also clear mod4
