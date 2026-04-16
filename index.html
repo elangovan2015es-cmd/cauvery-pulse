@@ -873,9 +873,10 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 
 </div><!-- #app0 -->
 <div class="bnav">
-  <button class="nb act" id="nb-home" onclick="showScreen('s0')"><span>🏠</span><span>Home</span></button>
-  <button class="nb" id="nb-canvas" onclick="showScreen('s0')"><span>🎨</span><span>Canvas</span></button>
-  <button class="nb" id="nb-m1" onclick="goToM1()"><span>🩺</span><span>Health Check</span></button>
+  <button class="nb act" onclick="showScreen('s0')"><span>🎨</span><span>Canvas</span></button>
+  <button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button>
+  <button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>
+  <button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>
 </div>
 <div class="toast" id="toast0"></div>
 </div>
@@ -1063,9 +1064,10 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 
 </div><!-- #app -->
 <div class="bnav">
-  <button class="nb act" id="nb-home" onclick="navTo('welcome')"><span>🏠</span><span>Home</span></button>
-  <button class="nb" id="nb-check" onclick="navTo('profile')"><span>🩺</span><span>Check</span></button>
-  <button class="nb" id="nb-res" onclick="navTo('results')"><span>📊</span><span>Results</span></button>
+  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>
+  <button class="nb" onclick="navTo('profile')"><span>🩺</span><span>Score</span></button>
+  <button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>
+  <button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>
 </div>
 <div class="toast" id="toast"></div>
 </div>
@@ -1112,9 +1114,10 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 </div>
 </div><!-- #app2 -->
 <div class="bnav">
-  <button class="nb" onclick="switchToM1()"><span>🩺</span><span>My Score</span></button>
-  <button class="nb act" onclick="switchToM2()"><span>📚</span><span>School</span></button>
   <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>
+  <button class="nb act" onclick="switchToM2()"><span>📚</span><span>School</span></button>
+  <button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>
+  <button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>
 </div>
 <div class="toast" id="toast2"></div>
 </div>
@@ -2628,9 +2631,9 @@ function toast(msg){
 
 <div class="bnav" style="background:#fff;border-top:1px solid #E5E7EB">
   <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>
-  <button class="nb" onclick="switchToM1()"><span>🩺</span><span>Score</span></button>
   <button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button>
-  <button class="nb act" style="color:#D97706"><span>🗺️</span><span>Blueprint</span></button>
+  <button class="nb act" style="color:#D97706" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>
+  <button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>
 </div>
 <div class="toast" id="toast3"></div>
 </div><!-- #mod3 -->
