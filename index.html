@@ -1162,6 +1162,7 @@ const M2_INSTRUMENTS = [
     id:'fd', tag:'safe', tagLabel:'Safe', tagColor:'#4a9eff',
     icon:'\uD83C\uDFE6', iconBg:'rgba(74,158,255,.15)',
     name:'Fixed Deposit',
+    purpose:'Safety',
     desc:'Money locked for a fixed period at a guaranteed interest rate. The most popular savings instrument in India.',
     returns:'6.5–9%', risk:'Very Low', liquidity:'Medium', taxTag:'Taxable',
     returnColor:'var(--teal)', riskColor:'var(--green)',
@@ -1179,6 +1180,7 @@ const M2_INSTRUMENTS = [
     id:'epf', tag:'safe', tagLabel:'Tax Saving', tagColor:'#e8b84b',
     icon:'\uD83C\uDFDB️', iconBg:'rgba(232,184,75,.15)',
     name:'EPF — Employee Provident Fund',
+    purpose:'Retirement + Tax',
     desc:'Mandatory retirement savings for salaried employees. Both you and employer contribute 12% of basic salary each.',
     returns:'8.15%', risk:'Zero', liquidity:'Low', taxTag:'EEE',
     returnColor:'var(--green)', riskColor:'var(--green)',
@@ -1196,6 +1198,7 @@ const M2_INSTRUMENTS = [
     id:'ppf', tag:'tax', tagLabel:'Tax Saving', tagColor:'#e8b84b',
     icon:'\uD83D\uDCEE', iconBg:'rgba(232,184,75,.15)',
     name:'PPF — Public Provident Fund',
+    purpose:'Safe Growth + Tax',
     desc:'Government-backed 15-year savings scheme. Open to everyone — salaried, self-employed, business owners.',
     returns:'7.1%', risk:'Zero', liquidity:'Low', taxTag:'EEE',
     returnColor:'var(--teal)', riskColor:'var(--green)',
@@ -1213,6 +1216,7 @@ const M2_INSTRUMENTS = [
     id:'nps', tag:'tax', tagLabel:'Tax Saving', tagColor:'#e8b84b',
     icon:'\uD83C\uDFAF', iconBg:'rgba(155,114,207,.15)',
     name:'NPS — National Pension System',
+    purpose:'Retirement + Tax',
     desc:'Market-linked pension scheme with unique tax benefits. Best for retirement planning with extra ₹50,000 deduction.',
     returns:'9–12%', risk:'Low-Medium', liquidity:'Very Low', taxTag:'EET',
     returnColor:'var(--green)', riskColor:'var(--amber)',
@@ -1230,6 +1234,7 @@ const M2_INSTRUMENTS = [
     id:'mf', tag:'growth', tagLabel:'Growth', tagColor:'#3ecf8e',
     icon:'\uD83D\uDCC8', iconBg:'rgba(62,207,142,.15)',
     name:'Mutual Funds — SIP',
+    purpose:'Wealth Creation',
     desc:'Pooled investment in stocks or bonds managed by professional fund managers. SIP is the most powerful wealth-building tool for India.',
     returns:'10–15%', risk:'Medium', liquidity:'High', taxTag:'LTCG 12.5%',
     returnColor:'var(--green)', riskColor:'var(--amber)',
@@ -1247,6 +1252,7 @@ const M2_INSTRUMENTS = [
     id:'equity', tag:'growth', tagLabel:'Growth', tagColor:'#3ecf8e',
     icon:'\uD83D\uDCCA', iconBg:'rgba(62,207,142,.12)',
     name:'Direct Equity — Stocks',
+    purpose:'Wealth Creation',
     desc:'Buying shares of individual companies listed on NSE/BSE. Highest return potential, highest risk, requires research.',
     returns:'15–25%+', risk:'High', liquidity:'Very High', taxTag:'LTCG 12.5%',
     returnColor:'var(--green)', riskColor:'var(--red)',
@@ -1264,6 +1270,7 @@ const M2_INSTRUMENTS = [
     id:'gold', tag:'safe', tagLabel:'Safe', tagColor:'#4a9eff',
     icon:'\uD83E\uDD47', iconBg:'rgba(232,184,75,.15)',
     name:'Gold',
+    purpose:'Crisis Hedge',
     desc:'Traditional wealth protection asset. Available as physical gold, Sovereign Gold Bonds (SGB), or Gold ETFs.',
     returns:'8–10%', risk:'Low-Medium', liquidity:'Medium', taxTag:'LTCG 20%',
     returnColor:'var(--gold)', riskColor:'var(--green)',
@@ -1281,6 +1288,7 @@ const M2_INSTRUMENTS = [
     id:'reits', tag:'growth', tagLabel:'Growth', tagColor:'#3ecf8e',
     icon:'\uD83C\uDFE2', iconBg:'rgba(46,196,182,.15)',
     name:'REITs — Real Estate Investment Trusts',
+    purpose:'Property Income',
     desc:'Own real estate — offices, malls, warehouses — without buying property. Listed on stock exchange, pays regular dividend-like income.',
     returns:'8–12%', risk:'Medium', liquidity:'High', taxTag:'Mostly Taxable',
     returnColor:'var(--teal)', riskColor:'var(--amber)',
@@ -1298,6 +1306,7 @@ const M2_INSTRUMENTS = [
     id:'insurance_inv', tag:'protection', tagLabel:'Protection', tagColor:'#e05252',
     icon:'\uD83D\uDEE1️', iconBg:'rgba(224,82,82,.12)',
     name:'Insurance — The Truth',
+    purpose:'Protection Only',
     desc:'Term insurance protects your family. Health insurance protects your savings. ULIP and endowment mix investment with insurance — and do both poorly.',
     returns:'4–6%', risk:'N/A', liquidity:'Very Low', taxTag:'80C + 80D',
     returnColor:'var(--amber)', riskColor:'var(--green)',
@@ -1315,6 +1324,7 @@ const M2_INSTRUMENTS = [
     id:'inflation', tag:'growth', tagLabel:'Essential', tagColor:'#9b72cf',
     icon:'\uD83D\uDD25', iconBg:'rgba(155,114,207,.15)',
     name:'Inflation — The Silent Thief',
+    purpose:'Know Your Enemy',
     desc:'Inflation is not just an economic number. It is the invisible force that quietly reduces the value of every rupee you save.',
     returns:'6–7%', risk:'Certain', liquidity:'N/A', taxTag:'Enemy',
     returnColor:'var(--red)', riskColor:'var(--red)',
@@ -1342,11 +1352,22 @@ function renderM2(){
     card.innerHTML=
       '<div class="m2card-top">'+
         '<div class="m2card-icon" style="background:'+ins.iconBg+'">'+ins.icon+'</div>'+
-        '<div>'+
+        '<div style="flex:1">'+
           '<div class="m2card-name">'+ins.name+'</div>'+
           '<span class="m2card-tag" style="background:'+ins.iconBg+';color:'+ins.tagColor+'">'+ins.tagLabel+'</span>'+
         '</div>'+
         '<div class="m2card-arrow">›</div>'+
+      '</div>'+
+      // PURPOSE + LIQUIDITY row — first thing user sees
+      '<div style="display:flex;align-items:center;gap:8px;margin:8px 0 6px">'+
+        '<div style="display:flex;align-items:center;gap:4px;background:rgba(46,196,182,.1);border:1px solid rgba(46,196,182,.25);border-radius:20px;padding:3px 10px">'+
+          '<span style="font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--teal)">PURPOSE</span>'+
+          '<span style="font-size:12px;font-weight:600;color:var(--text);margin-left:4px">'+(ins.purpose||'—')+'</span>'+
+        '</div>'+
+        '<div style="display:flex;align-items:center;gap:4px;background:rgba(108,127,255,.1);border:1px solid rgba(108,127,255,.25);border-radius:20px;padding:3px 10px">'+
+          '<span style="font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--indigo,#6c7fff)">LIQUIDITY</span>'+
+          '<span style="font-size:12px;font-weight:600;color:var(--text);margin-left:4px">'+ins.liquidity+'</span>'+
+        '</div>'+
       '</div>'+
       '<div class="m2card-desc">'+ins.desc+'</div>'+
       '<div class="m2metrics">'+
@@ -1380,10 +1401,64 @@ function openM2Detail(ins){
   var consHTML=ins.cons.map(function(c){return '<div class="det-row"><div class="det-dot" style="background:var(--red)"></div><div>'+c+'</div></div>';}).join('');
   var prodsHTML=ins.products.map(function(p){return '<span class="prod-chip">'+p+'</span>';}).join('');
   var suitHTML=ins.whoSuits.map(function(s){return '<div class="det-row"><div class="det-dot" style="background:var(--teal)"></div><div>'+s+'</div></div>';}).join('');
+  // Build tax harvesting section for MF and Stocks
+  var taxHarvestHTML = '';
+  if(ins.name && (ins.name.indexOf('Mutual Fund')>-1 || ins.name.indexOf('Stock')>-1)){
+    taxHarvestHTML =
+      '<div class="det-section" style="background:rgba(62,207,142,.06);border-color:rgba(62,207,142,.2)">'+
+        '<div class="det-section-title" style="color:var(--green)">🌾 Tax Harvesting — Pay Zero LTCG Legally</div>'+
+        '<div style="font-size:13px;line-height:1.85;color:var(--text)">'+
+          'LTCG on equity is <strong>12.5% above ₹1.25 lakh per year</strong>. Harvest before crossing the limit.<br><br>'+
+          '<strong>How it works:</strong><br>'+
+          '1. Before 31 March — check your total unrealised LTCG across all MF/stocks<br>'+
+          '2. Sell enough units so gain booked = ₹1.25 lakh exactly → <strong>zero tax</strong><br>'+
+          '3. Immediately buy back the same units at the new higher price<br>'+
+          '4. Your cost basis resets — future gains calculated from new price<br><br>'+
+          '<div style="background:rgba(62,207,142,.1);border-radius:10px;padding:12px;font-size:12px;color:var(--green)">'+
+            '<strong>Example:</strong> Invested ₹5L. Current value ₹6.4L. Gain = ₹1.4L.<br>'+
+            'Sell ₹6.25L worth → gain = ₹1.25L → <strong>ZERO tax</strong><br>'+
+            'Buy back at ₹6.25L. New cost basis = ₹6.25L.<br>'+
+            'Tax saved this year. Done every April = serious wealth compounding.'+
+          '</div>'+
+        '</div>'+
+      '</div>';
+  }
+
+  // Build gifting section for Stocks
+  var giftHTML = '';
+  if(ins.name && ins.name.indexOf('Stock')>-1){
+    giftHTML =
+      '<div class="det-section" style="background:rgba(155,114,207,.06);border-color:rgba(155,114,207,.2)">'+
+        '<div class="det-section-title" style="color:var(--purple,#9b72cf)">🎁 Gifting Shares — Tax-Free Wealth Transfer</div>'+
+        '<div style="font-size:13px;line-height:1.85;color:var(--text)">'+
+          'Gifts to <strong>specified relatives are completely tax-free</strong> — no rupee limit.<br>'+
+          'Specified relatives: spouse, children, parents, siblings, spouse\'s siblings, grandparents.<br><br>'+
+          '<div style="background:rgba(155,114,207,.1);border-radius:10px;padding:12px;font-size:12px;color:var(--purple,#9b72cf);margin-bottom:8px">'+
+            '<strong>Example 1 — Parent to adult child:</strong><br>'+
+            'Parent transfers shares worth ₹15L → child receives: ZERO tax<br>'+
+            'Child sells later: capital gains taxed in child\'s hands (lower bracket)<br>'+
+            'Family tax saving: significant'+
+          '</div>'+
+          '<div style="background:rgba(155,114,207,.1);border-radius:10px;padding:12px;font-size:12px;color:var(--purple,#9b72cf)">'+
+            '<strong>Example 2 — Gift to retired parent (zero tax bracket):</strong><br>'+
+            'Gift appreciated shares. Parent sells. Pays minimal or zero tax.<br>'+
+            'Can gift cash back. Perfectly legal wealth transfer strategy.'+
+          '</div>'+
+          '<br><strong>⚠️ Clubbing rule:</strong> Gifting to spouse — income clubbed back to your income until the money earns its own return. Gift to children (above 18) — no clubbing.<br>'+
+          '<strong>Cost basis:</strong> Receiver inherits original purchase price. Holding period for LTCG counts from original purchase date.'+
+        '</div>'+
+      '</div>';
+  }
+
   document.getElementById('m2detailContent').innerHTML=
     '<div class="det-hero">'+
       '<div class="det-icon">'+ins.icon+'</div>'+
       '<div class="det-name">'+ins.name+'</div>'+
+      // PURPOSE prominently at top
+      (ins.purpose?'<div style="display:inline-flex;align-items:center;gap:6px;background:rgba(46,196,182,.12);border:1px solid rgba(46,196,182,.3);border-radius:20px;padding:4px 12px;margin:6px 0 4px">'+
+        '<span style="font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--teal)">PURPOSE</span>'+
+        '<span style="font-size:13px;font-weight:600;color:var(--text)">'+ins.purpose+'</span>'+
+      '</div>':'')+
       '<div class="det-oneliner">'+ins.oneliner+'</div>'+
     '</div>'+
     '<div class="det-metrics">'+
@@ -1396,6 +1471,8 @@ function openM2Detail(ins){
     '<div class="det-section"><div class="det-section-title">✅ Advantages</div>'+prosHTML+'</div>'+
     '<div class="det-section"><div class="det-section-title">⚠️ Disadvantages</div>'+consHTML+'</div>'+
     '<div class="det-section"><div class="det-section-title">\uD83D\uDCB0 Tax Treatment</div><div style="font-size:13px;line-height:1.8;color:var(--muted)">'+ins.taxNote+'</div></div>'+
+    taxHarvestHTML+
+    giftHTML+
     '<div class="truth-box" style="background:'+ins.truthColor+';border:1px solid '+ins.truthBorder+'">'+
       '<div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:8px">\uD83D\uDCE2 The Honest Truth</div>'+
       '<div style="font-size:13px;line-height:1.8">'+ins.truth+'</div>'+
