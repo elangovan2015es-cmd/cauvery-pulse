@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Cauvery Pulse | v2.3 | Build: 20260415-1115 | Elango Industries Limited -->
+<!-- Cauvery Pulse | v2.4 | Build: 20260417-0100 | Elango Industries Limited -->
 <title>Cauvery Pulse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
@@ -159,6 +159,13 @@ header{padding:22px 20px 14px;display:flex;align-items:center;justify-content:sp
 .decl-check.checked::after{content:'✓';font-size:12px;color:#fff;font-weight:700}
 .decl-text{font-size:13px;line-height:1.6;color:var(--text)}
 .decl-text em{color:var(--gold2);font-style:italic}
+
+/* ══════════ INVESTOR PROFILER TILES ══════════ */
+.ls-tile{display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 12px;background:var(--card);border:1px solid var(--border);border-radius:12px;cursor:pointer;transition:all .2s;min-width:72px;font-size:12px;font-weight:500;color:var(--muted);text-align:center}
+.ls-tile span:first-child{font-size:20px}
+.ls-tile.sm{min-width:60px;padding:8px 10px;font-size:11px}
+.ls-tile.sm span:first-child{font-size:17px}
+.ls-tile.sel{background:rgba(232,184,75,.14);border-color:var(--gold);color:var(--gold)}
 
 /* ══════════ SCREEN 4: PERSONALITY — PART 1 ══════════ */
 #s4{padding:0 20px 20px}
@@ -412,7 +419,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="app0">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Life Canvas · M0</div></div></div>
-  <div class="vtag">v2.3</div>
+  <div class="vtag">v2.4</div>
 </header>
 <div class="starfield" id="starfield"></div>
 <div class="aurora"></div>
@@ -637,7 +644,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
       <div class="prog-step done"></div><div class="prog-step done"></div>
       <div class="prog-step done"></div><div class="prog-step done"></div><div class="prog-step active"></div>
     </div>
-    <div class="prog-label">Step 5 of 5 — Your Money Personality</div>
+    <div class="prog-label">Step 4 of 5 — Your Money Personality</div>
   </div>
 
   <div class="pt-intro">
@@ -698,8 +705,108 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   <div class="pt-limit-note" id="ptNote">Select 1 to 3 options that feel true</div>
 
   <div class="px">
-    <button class="btn-p" onclick="buildLifeCanvas()">See My Life Canvas →</button>
+    <button class="btn-p" onclick="goStep(5)">Continue →</button>
     <button class="btn-s" onclick="goStep(3)">← Back</button>
+  </div>
+</div>
+
+<!-- ══════════ S5: WHO ARE YOU — INVESTOR PROFILER ══════════ -->
+<div id="s5" class="screen">
+  <div class="prog-wrap">
+    <div class="prog-steps">
+      <div class="prog-step done"></div><div class="prog-step done"></div>
+      <div class="prog-step done"></div><div class="prog-step done"></div>
+      <div class="prog-step active"></div>
+    </div>
+    <div class="prog-label">Step 5 of 5 — Who You Are Today</div>
+  </div>
+
+  <div style="text-align:center;padding:16px 0 22px">
+    <div style="font-size:52px;margin-bottom:10px">🧭</div>
+    <div style="font-family:var(--ff-h);font-size:26px;font-weight:700;line-height:1.3;margin-bottom:10px">
+      Every rupee you invest<br><span style="color:var(--gold);font-style:italic">carries your story</span>
+    </div>
+    <div style="font-size:13px;color:var(--muted);line-height:1.8;max-width:320px;margin:0 auto 6px">
+      A school child's first ₹100, a homemaker's careful savings, a doctor's first SIP — each is precious. Cauvery Pulse respects every rupee equally.
+    </div>
+  </div>
+
+  <!-- Life Stage -->
+  <div class="card" style="margin-bottom:12px">
+    <div class="card-lbl">🌱 Your Life Stage — Who are you today?</div>
+    <div style="display:flex;flex-wrap:wrap;gap:7px" id="lifeStageGrid">
+      <div class="ls-tile" data-v="school" onclick="selLS(this)"><span>🎒</span><span>School</span></div>
+      <div class="ls-tile" data-v="college" onclick="selLS(this)"><span>🎓</span><span>College</span></div>
+      <div class="ls-tile" data-v="young_adult" onclick="selLS(this)"><span>🌟</span><span>Young Adult</span></div>
+      <div class="ls-tile" data-v="first_earner" onclick="selLS(this)"><span>💼</span><span>First Earner</span></div>
+      <div class="ls-tile" data-v="professional" onclick="selLS(this)"><span>🏅</span><span>Professional</span></div>
+      <div class="ls-tile" data-v="homemaker" onclick="selLS(this)"><span>🏠</span><span>Homemaker</span></div>
+      <div class="ls-tile" data-v="differently_abled" onclick="selLS(this)"><span>💪</span><span>Diff. Abled</span></div>
+      <div class="ls-tile" data-v="thirties" onclick="selLS(this)"><span>🔥</span><span>Thirties</span></div>
+      <div class="ls-tile" data-v="forties" onclick="selLS(this)"><span>⚡</span><span>Forties</span></div>
+      <div class="ls-tile" data-v="pre_retire" onclick="selLS(this)"><span>🌅</span><span>Pre-Retire</span></div>
+      <div class="ls-tile" data-v="post_retire" onclick="selLS(this)"><span>🌿</span><span>Post-Retire</span></div>
+      <div class="ls-tile" data-v="senior65" onclick="selLS(this)"><span>🕊️</span><span>65 Plus</span></div>
+      <div class="ls-tile" data-v="senior75" onclick="selLS(this)"><span>🙏</span><span>75 Plus</span></div>
+    </div>
+    <!-- Life stage wisdom line -->
+    <div id="lsWisdom" style="display:none;margin-top:12px;font-size:12px;color:var(--teal);font-style:italic;line-height:1.7;padding:10px 12px;background:rgba(46,196,182,.07);border-radius:10px;border-left:2px solid var(--teal)"></div>
+  </div>
+
+  <!-- Profession — conditional on Professional -->
+  <div class="card" id="profCard" style="display:none;margin-bottom:12px">
+    <div class="card-lbl">🏅 Your Profession</div>
+    <div style="display:flex;flex-wrap:wrap;gap:7px" id="profGrid">
+      <div class="ls-tile sm" data-v="ca" onclick="selProf(this)"><span>📋</span><span>CA</span></div>
+      <div class="ls-tile sm" data-v="lawyer" onclick="selProf(this)"><span>⚖️</span><span>Lawyer</span></div>
+      <div class="ls-tile sm" data-v="cs" onclick="selProf(this)"><span>🗂️</span><span>CS</span></div>
+      <div class="ls-tile sm" data-v="doctor" onclick="selProf(this)"><span>🩺</span><span>Doctor</span></div>
+      <div class="ls-tile sm" data-v="engineer" onclick="selProf(this)"><span>⚙️</span><span>Engineer</span></div>
+      <div class="ls-tile sm" data-v="fin_advisor" onclick="selProf(this)"><span>📊</span><span>Fin. Advisor</span></div>
+    </div>
+  </div>
+
+  <!-- Business Type — conditional on business stages -->
+  <div class="card" id="bizCard" style="display:none;margin-bottom:12px">
+    <div class="card-lbl">🏢 Your Business — Size &amp; Structure</div>
+    <div style="margin-bottom:10px">
+      <div style="font-size:11px;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.8px">Business Size</div>
+      <div style="display:flex;gap:7px;flex-wrap:wrap" id="bizSizeGrid">
+        <div class="ls-tile sm" data-v="small_biz" onclick="selBizSize(this)"><span>🌱</span><span>Small</span></div>
+        <div class="ls-tile sm" data-v="medium_biz" onclick="selBizSize(this)"><span>🌳</span><span>Medium</span></div>
+        <div class="ls-tile sm" data-v="large_biz" onclick="selBizSize(this)"><span>🏛️</span><span>Large</span></div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:11px;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.8px">Business Structure</div>
+      <div style="display:flex;gap:7px;flex-wrap:wrap" id="bizStructGrid">
+        <div class="ls-tile sm" data-v="proprietor" onclick="selBizStruct(this)"><span>👤</span><span>Proprietor</span></div>
+        <div class="ls-tile sm" data-v="partnership" onclick="selBizStruct(this)"><span>🤝</span><span>Partnership</span></div>
+        <div class="ls-tile sm" data-v="pvt_ltd" onclick="selBizStruct(this)"><span>🏢</span><span>Pvt Ltd</span></div>
+        <div class="ls-tile sm" data-v="pub_ltd" onclick="selBizStruct(this)"><span>📈</span><span>Public Ltd</span></div>
+        <div class="ls-tile sm" data-v="huf" onclick="selBizStruct(this)"><span>👨‍👩‍👧</span><span>HUF</span></div>
+        <div class="ls-tile sm" data-v="trust" onclick="selBizStruct(this)"><span>🏛️</span><span>Trust</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Monthly Investment Capacity -->
+  <div class="card" style="margin-bottom:12px">
+    <div class="card-lbl">💰 Monthly Investment Capacity</div>
+    <div style="font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:10px;font-style:italic">
+      "Every rupee invested with intention grows — even ₹500 started early beats ₹50,000 started late."
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:7px" id="invCapGrid">
+      <div class="ls-tile sm" data-v="lt2k" onclick="selInvCap(this)"><span>🌱</span><span>Below ₹2K</span></div>
+      <div class="ls-tile sm" data-v="2k_10k" onclick="selInvCap(this)"><span>🌿</span><span>₹2K–₹10K</span></div>
+      <div class="ls-tile sm" data-v="10k_50k" onclick="selInvCap(this)"><span>🌳</span><span>₹10K–₹50K</span></div>
+      <div class="ls-tile sm" data-v="gt50k" onclick="selInvCap(this)"><span>🏛️</span><span>Above ₹50K</span></div>
+    </div>
+  </div>
+
+  <div class="px">
+    <button class="btn-p" onclick="buildLifeCanvas()">Complete My Life Canvas →</button>
+    <button class="btn-s" onclick="goStep(4)">← Back</button>
   </div>
 </div>
 
@@ -739,7 +846,13 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
     <div class="dc-text" id="declConfirm">—</div>
   </div>
 
-  <!-- What This Means for Finosis -->
+  <!-- Investor Profiler Summary -->
+  <div class="context-card" id="profilerCard">
+    <div class="cc-header"><span class="cc-icon">🧭</span><div class="cc-title">Your Investor Profile</div></div>
+    <div class="cc-body" id="profilerBody">—</div>
+  </div>
+
+  <!-- What This Means for Cauvery Pulse -->
   <div class="proceed-to-m1">
     <div class="p-m1-title">Your Life Canvas is Set</div>
     <div class="p-m1-desc" id="canvasReadyDesc">Now we measure your financial health across 10 parameters — personalised for your generation, starting point, and personality blend.</div>
@@ -751,8 +864,8 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   </div>
 
   <div class="px">
-    <button class="btn-p" onclick="goToM1()">Proceed to Finosis Score →</button>
-    <button class="btn-s" onclick="goStep(4)">← Revise</button>
+    <button class="btn-p" onclick="goToM1()">Proceed to Cauvery Pulse Score →</button>
+    <button class="btn-s" onclick="goStep(5)">← Revise</button>
   </div>
   <div class="cp-mark">© Elango Industries Limited · Cauvery Pulse</div>
 </div>
@@ -767,12 +880,12 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div class="toast" id="toast0"></div>
 </div>
 
-<!-- ══════ MODULE 1: FINOSIS SCORE ══════ -->
+<!-- ══════ MODULE 1: CAUVERY PULSE SCORE ══════ -->
 <div id="mod1" class="mod">
 <div id="app">
 <header>
-  <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Finosis Score · M1</div></div></div>
-  <div class="vtag">v2.3</div>
+  <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Cauvery Pulse Score · M1</div></div></div>
+  <div class="vtag">v2.4</div>
 </header>
 <!-- WELCOME -->
 <div id="welcome" class="screen active">
@@ -790,7 +903,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   <div class="hdesc">3 steps · 15 minutes · India-specific<br>Personality + Structure + Behaviour = Real Score</div>
   <div class="steps-row" id="stepsRow">
     <div class="step-box"><div class="si">🧠</div><div class="sn">5</div><div class="sl">Personality<br>Questions</div></div>
-    <div class="step-box"><div class="si">🏛️</div><div class="sn">10</div><div class="sl">Finosis<br>Parameters</div></div>
+    <div class="step-box"><div class="si">🏛️</div><div class="sn">10</div><div class="sl">Cauvery<br>Parameters</div></div>
     <div class="step-box"><div class="si">📊</div><div class="sn">100</div><div class="sl">Point<br>Score</div></div>
   </div>
   <div id="canvasBadge" style="display:none;background:linear-gradient(135deg,rgba(108,127,255,.12),rgba(46,196,182,.06));border:1px solid rgba(108,127,255,.25);border-radius:14px;padding:14px 16px;margin-bottom:16px;font-size:13px;line-height:1.8;color:var(--text)"></div>
@@ -865,7 +978,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   </div>
 </div>
 
-<!-- FINOSIS ASSESSMENT -->
+<!-- CAUVERY PULSE ASSESSMENT -->
 <div id="assess" class="screen">
   <div class="q-header">
     <div class="prog-row">
@@ -962,7 +1075,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="app2">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Investment School · M2</div></div></div>
-  <div class="vtag">v2.3</div>
+  <div class="vtag">v2.4</div>
 </header>
 
 <div style="padding:0 20px 80px">
@@ -1420,7 +1533,7 @@ let state = {
 };
 
 // ══════════════════ SCREEN FLOW ══════════════════
-const STEPS = ['s0','s1','s2','s3','s4','s6'];
+const STEPS = ['s0','s1','s2','s3','s4','s5','s6'];
 
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
@@ -1480,9 +1593,73 @@ function togPT(el) {
   document.getElementById('ptNote').textContent = n === 0 ? 'Select 1 to 3 options that feel true' : `${n} selected — ${3-n} more allowed`;
 }
 
+// ══════════════════ INVESTOR PROFILER — S5 ══════════════════
+const LS_WISDOM = {
+  school:         "Your first rupee invested today will be your most powerful. Time is a gift you have that no one else can buy.",
+  college:        "Most students ignore money. The ones who don't — retire early. You have a rare head start.",
+  young_adult:    "This is the golden decade. The habits formed now will define your financial life at 50.",
+  first_earner:   "The most important salary is the first one. How you treat it sets the pattern for everything that follows.",
+  professional:   "High income is not wealth. Many high earners retire poor. Investing discipline matters more than income level.",
+  homemaker:      "Managing a household is an economic act of extraordinary value. Your financial decisions shape the entire family.",
+  differently_abled: "Financial independence is not a privilege — it is your right. Every rupee invested strengthens that independence.",
+  thirties:       "The 30s are the decade of building. Income is growing, responsibilities too. Invest before life gets louder.",
+  forties:        "The 40s are the wealth accumulation peak. Every year now multiplies what you will have at 60.",
+  pre_retire:     "The last mile matters most. Capital preservation and income planning now determine how you live for 30 more years.",
+  post_retire:    "Your wealth now works for you. The goal is income stability, health security, and legacy.",
+  senior65:       "At this stage, protecting what you built is the priority. Inflation and healthcare are the real risks.",
+  senior75:       "Legacy, liquidity, and love — these are the only three financial priorities that matter now."
+};
+
+state.lifeStage = '';
+state.profession = '';
+state.bizSize = '';
+state.bizStruct = '';
+state.invCap = '';
+
+function selLS(el) {
+  document.querySelectorAll('#lifeStageGrid .ls-tile').forEach(t => t.classList.remove('sel'));
+  el.classList.add('sel');
+  state.lifeStage = el.dataset.v;
+  // Show wisdom
+  const w = document.getElementById('lsWisdom');
+  w.textContent = LS_WISDOM[state.lifeStage] || '';
+  w.style.display = 'block';
+  // Show/hide conditional cards
+  const isBiz = ['thirties','forties','pre_retire','post_retire','young_adult','first_earner'].includes(state.lifeStage);
+  const isProf = state.lifeStage === 'professional';
+  document.getElementById('profCard').style.display = isProf ? 'block' : 'none';
+  document.getElementById('bizCard').style.display = isBiz ? 'block' : 'none';
+}
+
+function selProf(el) {
+  document.querySelectorAll('#profGrid .ls-tile').forEach(t => t.classList.remove('sel'));
+  el.classList.add('sel');
+  state.profession = el.dataset.v;
+}
+
+function selBizSize(el) {
+  document.querySelectorAll('#bizSizeGrid .ls-tile').forEach(t => t.classList.remove('sel'));
+  el.classList.add('sel');
+  state.bizSize = el.dataset.v;
+}
+
+function selBizStruct(el) {
+  document.querySelectorAll('#bizStructGrid .ls-tile').forEach(t => t.classList.remove('sel'));
+  el.classList.add('sel');
+  state.bizStruct = el.dataset.v;
+}
+
+function selInvCap(el) {
+  document.querySelectorAll('#invCapGrid .ls-tile').forEach(t => t.classList.remove('sel'));
+  el.classList.add('sel');
+  state.invCap = el.dataset.v;
+}
+
 // ══════════════════ BUILD LIFE CANVAS RESULT ══════════════════
 function buildLifeCanvas() {
   if (state.ptSelected.length === 0) { toast('Please select at least one personality type ☝️'); return; }
+  if (!state.lifeStage) { toast('Please select your life stage ☝️'); return; }
+  if (!state.invCap) { toast('Please select your monthly investment capacity ☝️'); return; }
 
   // Primary type = first selected (highest priority)
   state.primaryType = state.ptSelected[0];
@@ -1518,7 +1695,7 @@ function buildLifeCanvas() {
     const p = PERS9[t];
     return p ? `<strong>${p.icon} ${p.name}</strong>` : '';
   }).filter(Boolean).join(' · ');
-  document.getElementById('traitBody').innerHTML = `Your personality blend: ${blend}<br><br>The strongest trait — <strong>${pt.name}</strong> — will most influence your financial behaviour. The Finosis Score will confirm this with hard data.`;
+  document.getElementById('traitBody').innerHTML = `Your personality blend: ${blend}<br><br>The strongest trait — <strong>${pt.name}</strong> — will most influence your financial behaviour. The Cauvery Pulse Score will confirm this with real data.`;
 
   // Declaration confirmation
   const checked = state.declChecked.filter(Boolean).length;
@@ -1527,7 +1704,32 @@ function buildLifeCanvas() {
 
   // Canvas ready description
   document.getElementById('canvasReadyDesc').textContent =
-    `Your Life Canvas — ${gc.title}, ${ol.title}, ${pt.name} — is set. Now we measure the 10 Finosis parameters calibrated for your exact profile.`;
+    `Your Life Canvas — ${gc.title}, ${ol.title}, ${pt.name} — is set. Now we measure the 10 Cauvery Pulse parameters calibrated for your exact profile.`;
+
+  // Investor profiler summary
+  const LS_LABELS = {
+    school:'School Student',college:'College Student',young_adult:'Young Adult',
+    first_earner:'First Time Earner',professional:'Professional',homemaker:'Homemaker',
+    differently_abled:'Differently Abled',thirties:'Thirties',forties:'Forties',
+    pre_retire:'Pre-Retirement',post_retire:'Post-Retirement',senior65:'65 Plus',senior75:'75 Plus'
+  };
+  const PROF_LABELS = {ca:'CA',lawyer:'Lawyer',cs:'CS',doctor:'Doctor',engineer:'Engineer',fin_advisor:'Financial Advisor'};
+  const BIZ_SIZE_LABELS = {small_biz:'Small Business',medium_biz:'Medium Business',large_biz:'Large Business'};
+  const BIZ_STRUCT_LABELS = {proprietor:'Proprietorship',partnership:'Partnership',pvt_ltd:'Pvt Ltd',pub_ltd:'Public Ltd',huf:'HUF',trust:'Trust'};
+  const INV_CAP_LABELS = {lt2k:'Below ₹2,000/month',  '2k_10k':'₹2,000 – ₹10,000/month','10k_50k':'₹10,000 – ₹50,000/month',gt50k:'Above ₹50,000/month'};
+  const INV_CAP_WISDOM = {
+    lt2k:'Every rupee here is precious. Small amounts invested consistently build life-changing wealth.',
+    '2k_10k':'This is the heartbeat of middle India. Disciplined SIPs at this level build crores over 20 years.',
+    '10k_50k':'Significant capital. The focus now shifts to asset allocation and tax efficiency.',
+    gt50k:'At this level, structure matters as much as returns. Estate planning and diversification become critical.'
+  };
+  let profHtml = `<strong>Life Stage:</strong> ${LS_LABELS[state.lifeStage]||state.lifeStage}`;
+  if (state.profession) profHtml += ` · <strong>Profession:</strong> ${PROF_LABELS[state.profession]||state.profession}`;
+  if (state.bizSize) profHtml += ` · <strong>Business:</strong> ${BIZ_SIZE_LABELS[state.bizSize]||state.bizSize}`;
+  if (state.bizStruct) profHtml += ` (${BIZ_STRUCT_LABELS[state.bizStruct]||state.bizStruct})`;
+  profHtml += `<br><br><strong>Monthly Investment Capacity:</strong> ${INV_CAP_LABELS[state.invCap]||state.invCap}`;
+  profHtml += `<br><span style="color:var(--teal);font-style:italic">${INV_CAP_WISDOM[state.invCap]||''}</span>`;
+  document.getElementById('profilerBody').innerHTML = profHtml;
 
   // Save to localStorage
   localStorage.setItem('cp_canvas', JSON.stringify({
@@ -1535,7 +1737,12 @@ function buildLifeCanvas() {
     gen: state.genChoice,
     decl: state.declChecked,
     ptypes: state.ptSelected,
-    primaryType: state.primaryType
+    primaryType: state.primaryType,
+    lifeStage: state.lifeStage,
+    profession: state.profession,
+    bizSize: state.bizSize,
+    bizStruct: state.bizStruct,
+    invCap: state.invCap
   }));
 }
 
@@ -1653,7 +1860,7 @@ const PERS={
   balanced:{name:"The Balanced Investor",icon:"\uD83E\uDDD8",tl:"Healthy money habits — disciplined, goal-linked, calm under pressure. Your score reflects genuine financial maturity.",fix:"Next level: optimize tax efficiency and explore NPS Tier II + direct equity for wealth acceleration."}
 };
 
-// ══════════════════ FINOSIS QUESTIONS ══════════════════
+// ══════════════════ CAUVERY PULSE QUESTIONS ══════════════════
 const QS=[
   {id:'debt',sec:'scan',icon:'\uD83D\uDCB3',title:'Debt Burden',
    desc:'How much of monthly income goes toward EMIs? Lower debt = higher score. Includes home loan, car, personal loan, credit cards.',inv:true,
@@ -1870,7 +2077,7 @@ function computePersonality(){
   pType=Object.entries(cnt).sort((a,b)=>b[1]-a[1])[0][0];
 }
 
-// ══════════════════ FINOSIS ASSESSMENT ══════════════════
+// ══════════════════ CAUVERY PULSE ASSESSMENT ══════════════════
 function renderA(i){
   const q=QS[i];selScore=null;
   document.getElementById('aProg').style.width=((i+1)/10*100)+'%';
@@ -2053,7 +2260,7 @@ function doShare(){
 
 // ══════════════════ INIT ══════════════════
 (function(){
-  // Restore previous Finosis score if exists
+  // Restore previous Cauvery Pulse score if exists
   const sc=localStorage.getItem('cp_sc'),tot=localStorage.getItem('cp_tot');
   if(sc&&tot){
     aSc=JSON.parse(sc);
@@ -2098,18 +2305,18 @@ function doShare(){
       badge.innerHTML=`✅ <strong>Life Canvas loaded</strong><br>
         \uD83D\uDC64 ${d.name||'Friend'} &nbsp;·&nbsp; \uD83C\uDF3F ${gname}<br>
         \uD83E\uDDE0 <strong>${pname}</strong><br>
-        <span style="font-size:11px;color:var(--muted)">Personality quiz is pre-filled from your Life Canvas. You will go straight to the Finosis assessment.</span>`;
+        <span style="font-size:11px;color:var(--muted)">Personality quiz is pre-filled from your Life Canvas. You will go straight to the Cauvery Pulse assessment.</span>`;
     }
 
     // Update start button label
     const btn=document.getElementById('mainStartBtn');
-    if(btn) btn.innerHTML='\uD83E\uDE7A &nbsp;Start Finosis Assessment →';
+    if(btn) btn.innerHTML='\uD83E\uDE7A &nbsp;Start Cauvery Pulse Assessment →';
 
     // Hide steps row — quiz step is already done
     const sr=document.getElementById('stepsRow');
     if(sr) sr.innerHTML=`
       <div class="step-box"><div class="si">✅</div><div class="sn" style="font-size:14px">Done</div><div class="sl">Life<br>Canvas</div></div>
-      <div class="step-box"><div class="si">\uD83C\uDFDB️</div><div class="sn">10</div><div class="sl">Finosis<br>Parameters</div></div>
+      <div class="step-box"><div class="si">\uD83C\uDFDB️</div><div class="sn">10</div><div class="sl">Cauvery<br>Parameters</div></div>
       <div class="step-box"><div class="si">\uD83D\uDCCA</div><div class="sn">100</div><div class="sl">Point<br>Score</div></div>`;
   }
 })();
