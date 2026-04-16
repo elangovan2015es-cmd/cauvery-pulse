@@ -1172,7 +1172,7 @@ const M2_INSTRUMENTS = [
     taxNote:'Interest added to income — taxed at your slab rate. TDS at 10% if interest exceeds ₹40,000/year (₹50,000 for seniors). Submit Form 15G/15H to avoid TDS if income is below taxable limit.',
     truth:'FD is safety, not wealth. After 30% tax on 7% return = effective 4.9%. Inflation at 6% means you are losing 1.1% real value per year. Use FD for safety — not as a primary investment.',
     truthColor:'rgba(244,165,53,.1)', truthBorder:'rgba(244,165,53,.3)',
-    products:['AU Small Finance Bank — 8.5%','IDFC FIRST Bank — 7.9%','SBI — 7.1% (senior 7.6%)','HDFC Bank — 7.25%','Post Office TD — 7.5% (tax-free on 5-year)'],
+    products:['IDFC First Bank — 7.75%','YES Bank — 7.75%','IndusInd Bank — 7.50%','Bandhan Bank — 8.05%','AU Small Finance Bank — 8.00%','Canara Bank — 7.25%','IOB — 7.30%','Indian Bank — 7.25%','Note: Avoid SBI and HDFC for FD — they offer lower rates. Spread ₹5L max per bank (DICGC insurance limit).'],
     lifeStageNote:{student:'Keep 2 months pocket money in FD. Learn the habit.',young:'6-month emergency fund in sweep-in FD. Not for primary investing.',married:'Family emergency buffer only. Joint FD for joint access.',mid:'FD ladder for predictable income alongside equity.',senior:'Senior citizen FD for guaranteed monthly/quarterly income.',small_biz:'Business contingency fund — 3 months operating cost.',large_biz:'Director personal buffer only. Corporate FD for business surplus.'}
   },
   {
@@ -1204,7 +1204,7 @@ const M2_INSTRUMENTS = [
     pros:['Government guarantee — zero default risk','EEE tax status — completely tax-free','7.1% is higher than most bank FDs after tax','Loan against PPF from Year 3','Partial withdrawal from Year 7','Can extend in 5-year blocks after 15 years'],
     cons:['15-year lock-in — long commitment','Maximum ₹1.5 lakh per year — limited','Only 1 account per person — no joint accounts','Interest rate revised quarterly by government','No premature closure (except special cases)'],
     taxNote:'EEE: Contribution deductible under 80C (within ₹1.5L limit). Interest earned is tax-free. Maturity amount fully tax-free. Best tax efficiency for long-term savings.',
-    truth:'PPF is the business owner\'s EPF. If you do not have an employer matching your PF, PPF is the foundation. ₹1.5L per year for 15 years at 7.1% = ₹40.68 lakhs — all tax-free.',
+    truth:'PPF returns just 7.1% — which barely beats 6–7% inflation. The real return after inflation is near zero. It is also completely illiquid for 15 years. PPF is not a wealth creation tool — it is a tax-free savings box for ultra-conservative capital. Index fund SIP outperforms PPF by 5–6% CAGR over the same period.',
     truthColor:'rgba(232,184,75,.08)', truthBorder:'rgba(232,184,75,.25)',
     products:['SBI PPF Account — branch or YONO app','Post Office PPF — offline, reliable','HDFC/ICICI bank PPF — online management','Sukanya Samriddhi for girl child — 8.2% (better than PPF)'],
     lifeStageNote:{student:'Open PPF account as soon as you have income. 15 years starts now.',young:'₹1.5L per year = ₹12,500/month. Automate on 5th of each month for maximum interest.',married:'One PPF each for husband and wife. That is ₹3L/year tax-free.',mid:'Check maturity date. Extend in 5-year blocks if corpus not needed.',senior:'If already running, continue for tax-free returns. Withdraw at maturity.',small_biz:'Essential — your substitute for EPF. Max ₹1.5L per year.',large_biz:'Personal PPF for CMD. Separate from business investments.'}
@@ -1223,7 +1223,7 @@ const M2_INSTRUMENTS = [
     taxNote:'Section 80CCD(1): Up to 10% of salary (within ₹1.5L 80C limit). Section 80CCD(1B): Additional ₹50,000 — this is the unique benefit. Employer contribution: 80CCD(2) — no upper limit, not counted in 80C.',
     truth:'NPS is a retirement tool, not a savings tool. The ₹50,000 extra deduction saves ₹15,600/year in tax (30% bracket). Over 20 years that is ₹3.12L in tax saved — plus market returns on the corpus.',
     truthColor:'rgba(155,114,207,.08)', truthBorder:'rgba(155,114,207,.25)',
-    products:['Open online: enps.nsdl.com','Banks: SBI, HDFC, ICICI offer NPS accounts','PRAN (Permanent Retirement Account Number) is your NPS ID','Tier I: Tax benefits, locked. Tier II: No lock, no extra tax benefit'],
+    products:['Open online: enps.nsdl.com — Aadhaar + PAN, instant PRAN','Fund Managers: SBI Pension, LIC Pension, UTI Retirement Solutions, HDFC Pension, ICICI Prudential Pension, Kotak Pension, Aditya Birla Pension, Tata Pension, Max Life Pension','Tier I: Retirement-locked, full tax benefits. Tier II: No lock-in, no extra tax benefit for private sector','Employer NPS 80CCD(2): No upper rupee limit — most powerful tax tool for professionals','Auto Choice (LC75): Age-based rebalancing — equity reduces as you age'],
     lifeStageNote:{student:'Not yet — focus on EPF when employed.',young:'Start NPS Tier I with ₹500/month from Day 1. Habit building.',married:'If income above ₹10L — NPS is essential for the ₹50K extra deduction.',mid:'Maximum NPS contribution for tax benefit. Auto choice if unsure.',senior:'Approaching 60 — plan annuity purchase. Compare LIC, SBI annuity rates.',small_biz:'NPS for self-employed: 20% of gross income deductible under 80CCD(1).',large_biz:'Corporate NPS: employer contribution under 80CCD(2) — no cap, full deduction.'}
   },
   {
@@ -1231,30 +1231,30 @@ const M2_INSTRUMENTS = [
     icon:'\uD83D\uDCC8', iconBg:'rgba(62,207,142,.15)',
     name:'Mutual Funds — SIP',
     desc:'Pooled investment in stocks or bonds managed by professional fund managers. SIP is the most powerful wealth-building tool for India.',
-    returns:'10–15%', risk:'Medium', liquidity:'High', taxTag:'LTCG 10%',
+    returns:'10–15%', risk:'Medium', liquidity:'High', taxTag:'LTCG 12.5%',
     returnColor:'var(--green)', riskColor:'var(--amber)',
     oneliner:'₹2,000 SIP per month at 12% CAGR for 20 years = ₹19.8 lakhs. The single most accessible wealth creator for every Indian.',
     whoSuits:['Anyone with 5+ year horizon','First-time investors — start with index funds','Those wanting equity returns without stock-picking','Tax savers — ELSS gives 80C benefit with 3-year lock'],
-    pros:['Start with as little as ₹100/month','Professional management — no stock picking needed','Rupee cost averaging through SIP','High liquidity — redeem in 1-3 business days','ELSS gives 80C deduction with lowest 3-year lock','Regulated by SEBI — investor protection'],
+    pros:['Start with as little as ₹100/month','Professional management — no stock picking needed','Rupee cost averaging through SIP','High liquidity — redeem in 1-3 business days','ELSS gives 80C deduction with 3-year lock (relevant only if on old tax regime)','Regulated by SEBI — investor protection'],
     cons:['No guaranteed returns — market risk','Requires 5+ year patience for meaningful returns','ELSS locked for 3 years','Exit load on early redemption (usually 1 year)','Past performance does not guarantee future returns'],
-    taxNote:'Equity MF held >1 year: LTCG at 10% above ₹1 lakh gain/year. Held <1 year: STCG at 15%. Debt MF: taxed as per income slab (after April 2023 change). ELSS: 80C deduction, gains taxed at LTCG.',
+    taxNote:'Equity MF held >1 year: LTCG at 12.5% above ₹1.25 lakh gain/year. Held <1 year: STCG at 20%. Debt MF: taxed as per income slab (after April 2023 change). ELSS: 80C deduction under old regime only — under new tax regime 80C deduction is not available, making ELSS less relevant. Gains taxed at LTCG 12.5%. Tax Harvesting: Book up to ₹1.25L LTCG each year before 31 March — completely tax free. Sell and immediately rebuy to reset cost basis.',
     truth:'Index funds beat 80% of active fund managers over 10 years. Start with Nifty 50 index fund. Low cost (0.1–0.2% expense ratio) vs active funds (1–2%). ₹500/month in Nifty 50 from age 25 = ₹1.7 crore by age 60.',
     truthColor:'rgba(62,207,142,.08)', truthBorder:'rgba(62,207,142,.25)',
-    products:['Nifty 50 Index: UTI, HDFC, SBI, Nippon (expense ratio 0.1%)','Parag Parikh Flexi Cap — consistent long-term performer','Mirae Asset ELSS — for 80C with 3-year lock','Platform: Zerodha Coin, Groww, Kuvera — direct plans only','Avoid: Regular plans through agents — 1% higher cost eats ₹15L over 20 years'],
-    lifeStageNote:{student:'₹500/month from first income. Parag Parikh Flexi Cap or UTI Nifty 50.',young:'20% of salary in SIP. ELSS for 80C. Auto-debit on salary date.',married:'Combined SIP target 25% of household income. Separate goal-based SIPs.',mid:'Shift 20% of equity to debt via balanced advantage fund. Continue SIPs.',senior:'Continue SIP with 30% equity. Start SWP (Systematic Withdrawal Plan) at retirement.',small_biz:'Personal SIP separate from business. Index fund first. Do not time market.',large_biz:'PMS when corpus exceeds ₹50L. SEBI-registered portfolio manager.'}
+    products:['Nifty 50 Index: UTI, HDFC, SBI, Nippon (expense ratio 0.1%)','Parag Parikh Flexi Cap — consistent long-term performer','Index Fund: UTI Nifty 50, Nippon India Index (expense ratio 0.1%) — better than ELSS under new tax regime','Platform: Zerodha Coin, Groww, Kuvera — direct plans only','Avoid: Regular plans through agents — 1% higher cost eats ₹15L over 20 years'],
+    lifeStageNote:{student:'₹500/month from first income. Parag Parikh Flexi Cap or UTI Nifty 50.',young:'20% of salary in SIP. Index fund SIP first. ELSS only if on old tax regime for 80C benefit.',married:'Combined SIP target 25% of household income. Separate goal-based SIPs. Tax harvest ₹1.25L LTCG each March — zero tax.',mid:'Shift 20% of equity to debt via balanced advantage fund. Continue SIPs.',senior:'Continue SIP with 30% equity. Start SWP (Systematic Withdrawal Plan) at retirement.',small_biz:'Personal SIP separate from business. Index fund first. Do not time market.',large_biz:'PMS when corpus exceeds ₹50L. SEBI-registered portfolio manager.'}
   },
   {
     id:'equity', tag:'growth', tagLabel:'Growth', tagColor:'#3ecf8e',
     icon:'\uD83D\uDCCA', iconBg:'rgba(62,207,142,.12)',
     name:'Direct Equity — Stocks',
     desc:'Buying shares of individual companies listed on NSE/BSE. Highest return potential, highest risk, requires research.',
-    returns:'15–25%+', risk:'High', liquidity:'Very High', taxTag:'LTCG 10%',
+    returns:'15–25%+', risk:'High', liquidity:'Very High', taxTag:'LTCG 12.5%',
     returnColor:'var(--green)', riskColor:'var(--red)',
     oneliner:'Owning a piece of real businesses. Highest long-term wealth creator — but only with knowledge, patience, and emotional control.',
     whoSuits:['Those with 7+ year horizon','Investors willing to research companies','People who can handle 30–50% temporary drops','Those who want to beat index fund returns'],
     pros:['Highest long-term return potential','Dividend income on top of capital gains','Full control over portfolio','No fund management fee','Direct ownership in companies you believe in','High liquidity — sell within seconds'],
     cons:['Requires research — time and knowledge','Emotional decisions destroy returns','Concentration risk — one wrong stock hurts','Short-term volatility is extreme','Requires demat account and trading discipline','Easy to overtrade and incur losses'],
-    taxNote:'Held >1 year: LTCG at 10% above ₹1 lakh/year. Held <1 year: STCG at 15%. Dividend taxable at your slab. STT (Securities Transaction Tax) on every trade.',
+    taxNote:'Tax Harvesting: Book up to ₹1.25L LTCG before 31 March each year — zero tax. Sell and immediately rebuy to reset cost basis. Gifting: Transfer shares to specified relatives tax-free. Held >1 year: LTCG at 12.5% above ₹1.25 lakh/year. Held <1 year: STCG at 20%. Dividend taxable at your slab. STT (Securities Transaction Tax) on every trade.',
     truth:'90% of retail traders lose money. But 90% of long-term investors in quality businesses make money. The difference is time horizon. Buy Nifty 50 stocks and hold 10+ years. Avoid tips, F&O, and intraday.',
     truthColor:'rgba(224,82,82,.08)', truthBorder:'rgba(224,82,82,.2)',
     products:['Demat: Zerodha (lowest cost), Groww, Angel One','Screener.in — free stock research','Top holdings: HDFC Bank, TCS, Reliance, Infosys, ITC','Start: Buy 1 share each of 5 Nifty 50 companies','Never: F&O, penny stocks, operator stocks, SMS tips'],
@@ -1267,14 +1267,14 @@ const M2_INSTRUMENTS = [
     desc:'Traditional wealth protection asset. Available as physical gold, Sovereign Gold Bonds (SGB), or Gold ETFs.',
     returns:'8–10%', risk:'Low-Medium', liquidity:'Medium', taxTag:'LTCG 20%',
     returnColor:'var(--gold)', riskColor:'var(--green)',
-    oneliner:'Gold protects against inflation and currency devaluation. SGBs are the smartest way to hold gold — 2.5% extra interest from government, zero making charges.',
+    oneliner:'Gold protects against inflation and currency devaluation. Gold ETF is now the primary gold vehicle. Government has stopped issuing new SGB tranches. No new SGB available — existing holders continue to maturity.',
     whoSuits:['All investors as 10–15% portfolio allocation','Those protecting against inflation','Investors wanting non-correlated asset','Tamil Nadu families with traditional gold affinity'],
     pros:['Inflation hedge — gold holds real value over decades','SGBs give 2.5% interest PLUS gold price appreciation','SGB capital gains fully tax-free at maturity (8 years)','No storage risk, no making charges with SGB/ETF','International currency protection'],
     cons:['Physical gold: making charges 8–25%, storage risk, no income','No dividends or cash flow from gold','Can underperform equity over 20-year periods','SGB locked for 8 years (early exit via exchange)','Gold ETF: expense ratio + demat needed'],
     taxNote:'Physical gold held >3 years: LTCG at 20% with indexation. SGB held to 8-year maturity: capital gains COMPLETELY TAX-FREE. SGB interest: taxable at your slab. Gold ETF: taxed like debt MF after 2023.',
-    truth:'Never buy physical gold as investment — making charges alone cost 15–25% upfront. Buy Sovereign Gold Bonds (SGB) when available. Same gold exposure + 2.5% annual interest + tax-free maturity. Physical gold is for jewellery and emotion — not for returns.',
+    truth:'Government has stopped issuing new SGB tranches — Gold ETF is now the only rational new gold investment. Never buy physical gold as investment — making charges 15–25%. Gold ETF: same exposure, instant liquidity, no storage risk.',
     truthColor:'rgba(232,184,75,.08)', truthBorder:'rgba(232,184,75,.3)',
-    products:['SGB: Available via RBI, banks, exchanges — buy during tranches','Gold ETF: Nippon Gold ETF, HDFC Gold ETF on Zerodha','Gold MF: SBI Gold Fund (invests in Gold ETF — no demat needed)','Avoid: Gold jewellery as investment, gold chit funds'],
+    products:['Gold ETF: Nippon Gold ETF, HDFC Gold ETF, Kotak Gold ETF — buy on exchange via demat (SGB no longer issued by Government)','Gold MF: SBI Gold Fund (invests in Gold ETF — no demat needed)','Avoid: Gold jewellery as investment, gold chit funds'],
     lifeStageNote:{student:'Buy 1g digital gold as learning. Or wait for SGB tranche.',young:'5–10% of portfolio in SGB. Buy every tranche RBI announces.',married:'SGB for family gold allocation. No physical gold purchase for investment.',mid:'10–15% in gold as portfolio stabiliser. Rebalance annually.',senior:'Hold existing gold. SGB interest provides additional income.',small_biz:'Business owner gold as personal portfolio only. Not business asset.',large_biz:'Gold as 5–10% personal wealth preservation. HNI family office may hold more.'}
   },
   {
@@ -2169,7 +2169,7 @@ function detectSType(sc){
 function setFormula(stage,ptype,sc){
   const wk=Object.entries(sc).sort((a,b)=>a[1]-b[1])[0][0];
   const fm={debt:'extra debt pre-payment',insurance:'insurance premium top-up',investment:'SIP increase',safety:'emergency fund top-up',impulse:'behavioural coaching',awareness:'tracking tools',income_fear:'income diversification effort',future_fear:'goal-linked SIP start',skill:'skill investment'};
-  const f1={student:'₹500 SIP + PPF ₹500/month',young:'SIP 20% + NPS 5% + PPF 5%',married:'SIP + PPF + ELSS for 80C',mid:'NPS + SIP + PF top-up',senior:'SCSS + SWP from equity MF',small_biz:'SIP + PPF + NPS 80CCD',medium_biz:'SIP + NPS + PMS when corpus ₹50L+',large_biz:'PMS + AIF + direct equity',professional:'NPS + SIP + ELSS',retired:'SCSS + SWP + FD ladder'};
+  const f1={student:'₹500 SIP in Nifty 50 Index Fund',young:'SIP 20% + NPS 5% + Liquid MF 5% emergency',married:'SIP + NPS + Gold ETF 10%',mid:'NPS + SIP + PF top-up',senior:'SCSS + SWP from equity MF',small_biz:'SIP + NPS (80CCD) + Gold ETF',medium_biz:'SIP + NPS + PMS when corpus ₹50L+',large_biz:'PMS + AIF + direct equity',professional:'NPS (80CCD2 via employer) + SIP + Gold ETF',retired:'SCSS + SWP + FD ladder'};
   const f2={student:'Hostel, food, transport, books',young:'Rent, food, utilities, subscriptions',married:'Family living + school fees + utilities',mid:'Family + EMIs + medical + car',senior:'Health + living + family support',small_biz:'Personal living only — biz separate',medium_biz:'Personal household + capped lifestyle',large_biz:'Household + travel + philanthropy',professional:'Rent/mortgage + living + practice costs',retired:'Health 30% + living 40% + leisure 20%'};
   const f3={student:'Certifications, skill courses',young:'Side project, upskilling courses',married:'Child education fund + career growth',mid:'Business equity, real estate',senior:'Legacy + gifting + health buffer',small_biz:'Business reinvestment + new markets',medium_biz:'Expansion capex + new product line',large_biz:'New ventures + listed entity growth',professional:'Practice expansion + niche deepening',retired:'Travel + experiences + giving'};
   document.getElementById('f1t').textContent=f1[stage]||f1.young;
