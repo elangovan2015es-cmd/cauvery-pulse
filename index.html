@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Cauvery Pulse | v2.4 | Build: 20260417-0100 | Elango Industries Limited -->
+<!-- Cauvery Pulse | v2.5 | Build: 20260417-0155 | Elango Industries Limited -->
 <title>Cauvery Pulse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
@@ -419,7 +419,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="app0">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Life Canvas · M0</div></div></div>
-  <div class="vtag">v2.4</div>
+  <div class="vtag">v2.5</div>
 </header>
 <div class="starfield" id="starfield"></div>
 <div class="aurora"></div>
@@ -885,7 +885,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="app">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Cauvery Pulse Score · M1</div></div></div>
-  <div class="vtag">v2.4</div>
+  <div class="vtag">v2.5</div>
 </header>
 <!-- WELCOME -->
 <div id="welcome" class="screen active">
@@ -1075,7 +1075,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="app2">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Investment School · M2</div></div></div>
-  <div class="vtag">v2.4</div>
+  <div class="vtag">v2.5</div>
 </header>
 
 <div style="padding:0 20px 80px">
@@ -2342,6 +2342,510 @@ function toast(msg){
   t.textContent=msg;t.classList.add('show');
   setTimeout(function(){t.classList.remove('show');},2400);
 }
+</script>
+
+<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT ══════ -->
+<div id="mod3" class="mod">
+<style>
+/* M3 STYLES */
+#mod3 :root{--ink:#060f1e;--deep:#0c1a30;--card:#112040;--card2:#172848;--border:rgba(255,255,255,0.07);--gold:#e8b84b;--teal:#2ec4b6;--red:#e05252;--amber:#f4a535;--green:#3ecf8e;--purple:#9b72cf;--text:#dde6f0;--muted:#5d7a96}
+.m3-wrap{padding:0 20px 100px;max-width:480px;margin:0 auto}
+.m3-hero{text-align:center;padding:24px 0 20px}
+.m3-icon{font-size:52px;margin-bottom:10px;display:block}
+.m3-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;line-height:1.3;margin-bottom:10px}
+.m3-title span{color:var(--gold)}
+.m3-quote{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:var(--gold2,#f7d98a);line-height:1.7;margin-bottom:6px;padding:14px 16px;background:rgba(232,184,75,.07);border-left:2px solid var(--gold);border-radius:0 10px 10px 0}
+.m3-sub{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:20px}
+
+/* Narrative card */
+.m3-narrative{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin-bottom:16px}
+.m3-nar-hdr{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.m3-nar-body{font-size:13px;color:var(--text);line-height:1.9}
+.m3-nar-body strong{color:var(--gold)}
+.m3-nar-body em{color:var(--teal);font-style:italic}
+
+/* Donut chart */
+.m3-chart-wrap{display:flex;flex-direction:column;align-items:center;margin-bottom:16px}
+.m3-donut-ring{position:relative;width:220px;height:220px;margin-bottom:16px}
+.m3-donut-ring svg{width:100%;height:100%}
+.m3-donut-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.m3-donut-label{font-family:'Playfair Display',serif;font-size:13px;color:var(--muted);text-align:center;line-height:1.4}
+.m3-donut-name{font-size:11px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.8px;margin-top:4px}
+
+/* Legend */
+.m3-legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:20px}
+.m3-leg-item{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}
+.m3-leg-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+
+/* Allocation table */
+.m3-alloc-table{width:100%;border-collapse:collapse;margin-bottom:16px}
+.m3-alloc-table th{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);padding:8px 10px;text-align:left;border-bottom:1px solid var(--border)}
+.m3-alloc-table td{padding:10px;font-size:13px;color:var(--text);border-bottom:1px solid rgba(255,255,255,.04)}
+.m3-alloc-table tr:last-child td{border-bottom:none}
+.m3-alloc-bar-wrap{width:100%;background:rgba(255,255,255,.06);border-radius:4px;height:6px;margin-top:5px}
+.m3-alloc-bar{height:6px;border-radius:4px;transition:width .6s ease}
+.m3-pct-badge{display:inline-block;font-family:'DM Mono',monospace;font-size:13px;font-weight:500}
+.m3-amt{font-size:11px;color:var(--muted);margin-top:2px}
+
+/* Asset insight cards */
+.m3-asset-card{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:15px;margin-bottom:10px;cursor:pointer;transition:all .2s}
+.m3-asset-card:hover{border-color:rgba(255,255,255,.15)}
+.m3-asset-hdr{display:flex;align-items:center;gap:10px;margin-bottom:0}
+.m3-asset-icon{font-size:22px;width:36px;text-align:center;flex-shrink:0}
+.m3-asset-info{flex:1}
+.m3-asset-name{font-size:14px;font-weight:600;margin-bottom:2px}
+.m3-asset-why{font-size:12px;color:var(--teal);line-height:1.5}
+.m3-asset-expand{display:none;margin-top:12px;font-size:12px;color:var(--muted);line-height:1.8;border-top:1px solid var(--border);padding-top:10px}
+.m3-asset-expand.open{display:block}
+.m3-asset-expand strong{color:var(--text)}
+
+/* Profile badge */
+.m3-profile-badge{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.m3-pbadge{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:11px;color:var(--muted)}
+.m3-pbadge strong{color:var(--text)}
+
+/* Rebalance note */
+.m3-rebal{background:linear-gradient(135deg,rgba(46,196,182,.08),rgba(108,127,255,.05));border:1px solid rgba(46,196,182,.2);border-radius:14px;padding:16px;margin-bottom:14px}
+.m3-rebal-title{font-size:12px;font-weight:700;color:var(--teal);letter-spacing:.5px;margin-bottom:8px}
+.m3-rebal-body{font-size:12px;color:var(--muted);line-height:1.8}
+</style>
+
+<div id="app3">
+<header>
+  <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Portfolio Blueprint · M3</div></div></div>
+  <div class="vtag">v2.5</div>
+</header>
+<div class="m3-wrap" id="m3content">
+  <div style="text-align:center;padding:60px 20px;color:var(--muted);font-size:14px" id="m3loading">
+    Loading your blueprint…
+  </div>
+</div>
+</div>
+
+<div class="bnav">
+  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>
+  <button class="nb" onclick="switchToM1()"><span>🩺</span><span>Score</span></button>
+  <button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button>
+  <button class="nb act" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>
+</div>
+<div class="toast" id="toast3"></div>
+</div><!-- #mod3 -->
+
+<script>
+// ══════════════════════════════════════════════
+// M3 — PORTFOLIO BLUEPRINT ENGINE
+// ══════════════════════════════════════════════
+
+// ── ALLOCATION ENGINE ──
+// Returns allocation % array based on profile
+function m3ComputeAllocation(profile){
+  // Asset classes: equity, debt, gold, realestate, emergency, insurance_gap
+  // Base by life stage
+  var bases = {
+    school:          {equity:30,debt:10,gold:10,realestate:0,emergency:50},
+    college:         {equity:40,debt:10,gold:10,realestate:0,emergency:40},
+    young_adult:     {equity:60,debt:10,gold:10,realestate:0,emergency:20},
+    first_earner:    {equity:55,debt:10,gold:10,realestate:0,emergency:25},
+    professional:    {equity:55,debt:15,gold:10,realestate:5,emergency:15},
+    homemaker:       {equity:40,debt:20,gold:15,realestate:5,emergency:20},
+    differently_abled:{equity:35,debt:25,gold:15,realestate:5,emergency:20},
+    thirties:        {equity:55,debt:15,gold:10,realestate:10,emergency:10},
+    forties:         {equity:45,debt:20,gold:10,realestate:15,emergency:10},
+    pre_retire:      {equity:30,debt:35,gold:15,realestate:10,emergency:10},
+    post_retire:     {equity:20,debt:45,gold:15,realestate:10,emergency:10},
+    senior65:        {equity:10,debt:55,gold:15,realestate:10,emergency:10},
+    senior75:        {equity:5, debt:60,gold:15,realestate:10,emergency:10},
+  };
+  var alloc = Object.assign({}, bases[profile.lifeStage] || bases.thirties);
+
+  // ── Personality adjustment ──
+  var pt = profile.primaryType || '';
+  if(pt==='gamble'||pt==='spend'){alloc.equity=Math.max(alloc.equity-10,5);alloc.emergency=Math.min(alloc.emergency+10,50);}
+  if(pt==='anxious'){alloc.equity=Math.max(alloc.equity-5,5);alloc.debt=Math.min(alloc.debt+5,70);}
+  if(pt==='save'){alloc.equity=Math.min(alloc.equity+5,70);alloc.debt=Math.max(alloc.debt-5,5);}
+  if(pt==='balanced'){alloc.equity=Math.min(alloc.equity+5,75);}
+  if(pt==='status'){alloc.emergency=Math.min(alloc.emergency+5,40);alloc.equity=Math.max(alloc.equity-5,10);}
+
+  // ── Generation adjustment ──
+  var gen = profile.gen || '';
+  if(gen==='third_gen'||gen==='second_gen'){alloc.realestate=Math.min(alloc.realestate+5,25);alloc.equity=Math.max(alloc.equity-5,5);}
+  if(gen==='restart'){alloc.emergency=Math.min(alloc.emergency+10,50);alloc.equity=Math.max(alloc.equity-10,5);}
+
+  // ── M1 score adjustment ──
+  var score = profile.m1score || 50;
+  if(score < 40){alloc.emergency=Math.min(alloc.emergency+10,50);alloc.equity=Math.max(alloc.equity-10,5);}
+  if(score > 75){alloc.equity=Math.min(alloc.equity+5,75);}
+
+  // Normalise to 100
+  var total = Object.values(alloc).reduce(function(a,b){return a+b;},0);
+  var keys = Object.keys(alloc);
+  keys.forEach(function(k){alloc[k]=Math.round(alloc[k]/total*100);});
+  // Fix rounding drift on equity
+  var sum2 = Object.values(alloc).reduce(function(a,b){return a+b;},0);
+  alloc.equity += (100-sum2);
+  return alloc;
+}
+
+// ── NARRATIVE ENGINE ──
+function m3BuildNarrative(p, alloc){
+  var LS_NAMES={school:'School Student',college:'College Student',young_adult:'Young Adult',first_earner:'First Time Earner',professional:'Professional',homemaker:'Homemaker',differently_abled:'Differently Abled',thirties:'Person in their Thirties',forties:'Person in their Forties',pre_retire:'Pre-Retirement',post_retire:'Post-Retirement',senior65:'65 Plus',senior75:'75 Plus'};
+  var PT_NAMES={avoid:'The Avoiding Type',spend:'The Spending Type',status:'The Status Seeker',save:'The Saving Type',anxious:'The Financially Anxious',gamble:'The Gambling Type',balanced:'The Balanced Investor',first_gen_earner:'The First Generation Builder',second_gen_builder:'The Second Generation Guardian'};
+  var CAP_NAMES={lt2k:'below ₹2,000',  '2k_10k':'between ₹2,000 and ₹10,000','10k_50k':'between ₹10,000 and ₹50,000',gt50k:'above ₹50,000'};
+  var lsName = LS_NAMES[p.lifeStage]||p.lifeStage||'this stage';
+  var ptName = PT_NAMES[p.primaryType]||'';
+  var capName = CAP_NAMES[p.invCap]||'some amount each month';
+  var score = p.m1score||50;
+
+  // Opening — deeply personal
+  var opening = '';
+  if(p.lifeStage==='school'||p.lifeStage==='college'){
+    opening = 'You are at the most powerful starting point in personal finance — <strong>early</strong>. The rupee you invest at this age carries a multiplier that no amount of income can buy later. Time is your only irreplaceable asset, and right now, you have it in abundance.';
+  } else if(p.lifeStage==='first_earner'||p.lifeStage==='young_adult'){
+    opening = 'The first salary is the most important salary. Not because of what it can buy — but because of <strong>what habits it can build</strong>. The blueprint below is designed for someone at the beginning of a financial life. Every percentage here has been chosen to give you the best foundation for the next 30 years.';
+  } else if(p.lifeStage==='thirties'){
+    opening = 'The thirties are the wealth-building decade. Income is real, responsibilities are real, and <strong>the compounding clock is still running strongly</strong>. This is not the time to be conservative — it is the time to invest aggressively within discipline.';
+  } else if(p.lifeStage==='forties'){
+    opening = 'In your forties, the window for aggressive wealth creation is still open — but it is narrowing. Every year of inaction now costs significantly more than it did at 30. <strong>The allocation below is calibrated for maximum accumulation within a tightening horizon.</strong>';
+  } else if(p.lifeStage==='pre_retire'){
+    opening = 'You are approaching the finish line of accumulation and the starting line of distribution. <strong>Preservation now matters as much as growth.</strong> The blueprint shifts accordingly — protecting what has been built while maintaining enough growth to beat inflation for 25+ more years.';
+  } else if(p.lifeStage==='post_retire'||p.lifeStage==='senior65'||p.lifeStage==='senior75'){
+    opening = 'Your wealth is now your income. The blueprint at this stage is not about growing fast — it is about <strong>growing steadily, protecting fiercely, and living with certainty</strong>. Every allocation decision here prioritises your peace of mind and your family\'s security.';
+  } else if(p.lifeStage==='homemaker'){
+    opening = 'Running a household is an act of immense economic value — often invisible, never unimportant. <strong>Your financial independence matters deeply.</strong> This blueprint is designed for someone who manages real resources and deserves real financial security in their own name.';
+  } else if(p.lifeStage==='differently_abled'){
+    opening = 'Financial independence is not a privilege — <strong>it is your right</strong>. This blueprint is built with an extra emphasis on liquidity, security, and building a financial cushion that gives you control over your own life — unconditionally.';
+  } else if(p.lifeStage==='professional'){
+    opening = 'High income is not the same as wealth. Many high-earning professionals retire with less than they expect — because income was spent faster than it was invested. <strong>This blueprint is designed to convert your professional income into permanent, compounding capital.</strong>';
+  } else {
+    opening = 'This portfolio blueprint has been built specifically for your profile — your life stage, your personality, and your starting point. <strong>It is not a generic allocation.</strong> Every percentage has been assigned for a reason. Read the narrative for each asset class to understand why.';
+  }
+
+  // Personality layer
+  var ptNote = '';
+  if(p.primaryType==='save'){ptNote='As <strong>The Saving Type</strong>, your instinct to preserve is an asset — but idle savings lose 5-6% in purchasing power every year to inflation. This blueprint converts your disciplined saving into disciplined investing.';}
+  else if(p.primaryType==='anxious'){ptNote='As <strong>The Financially Anxious</strong>, this blueprint deliberately holds a higher emergency buffer. A well-funded safety net is the foundation that makes investing feel safe — not reckless.';}
+  else if(p.primaryType==='gamble'){ptNote='As <strong>The Gambling Type</strong>, the high-risk allocation you prefer must be earned — by building the base first. Emergency fund and insurance come before any growth play. The blueprint reflects this sequence.';}
+  else if(p.primaryType==='balanced'){ptNote='As <strong>The Balanced Investor</strong>, your maturity allows a slightly higher equity tilt than average. You will not panic when markets fall. That is worth a 5% premium in growth allocation.';}
+  else if(p.primaryType==='spend'){ptNote='As <strong>The Spending Type</strong>, this blueprint automates your investments before your spending begins. Automate first, live on what remains. That is the only system that works for your personality.';}
+  else if(p.primaryType==='status'){ptNote='As <strong>The Status Seeker</strong>, the most powerful status signal is not what you spend — it is what you own. A well-built portfolio is the most silent, most powerful status symbol there is.';}
+  else if(p.primaryType==='first_gen_earner'){ptNote='As <strong>The First Generation Builder</strong>, you are creating a template that your children and grandchildren may follow. The habits you build now echo across generations. Invest with that gravity in mind.';}
+
+  // Score layer
+  var scoreNote = '';
+  if(score<40){scoreNote='Your Cauvery Pulse Score of <strong>'+score+'/100</strong> signals that the foundation needs strengthening before aggressive growth. The blueprint reflects this — higher emergency allocation, more conservative equity, building the base first.';}
+  else if(score>=40&&score<65){scoreNote='Your Cauvery Pulse Score of <strong>'+score+'/100</strong> shows a developing financial structure. There is meaningful growth happening — and meaningful gaps to close. The blueprint balances growth with protection accordingly.';}
+  else{scoreNote='Your Cauvery Pulse Score of <strong>'+score+'/100</strong> reflects a healthy financial foundation. The blueprint leverages this strength with a more growth-oriented tilt — you have earned the right to take considered risk.';}
+
+  return {opening:opening, ptNote:ptNote, scoreNote:scoreNote};
+}
+
+// ── ASSET INSIGHT DATA ──
+var M3_ASSETS = {
+  equity:{
+    icon:'📈', name:'Equity',
+    color:'#3ecf8e', label:'Growth Engine',
+    why:function(p,pct){
+      if(pct<=15)return 'A conservative equity position — wealth preservation is your priority at this stage.';
+      if(pct<=35)return 'A moderate equity position — steady growth while protecting what you have built.';
+      return 'Equity is the primary wealth engine. At your life stage, time horizon justifies this allocation.';
+    },
+    deep:function(p){
+      return '<strong>Why equity for you:</strong> Equity is the only asset class that has consistently beaten inflation over a 10-year horizon in India. It is not without risk — but the risk of not holding equity (losing purchasing power) is a greater long-term threat for your profile.<br><br><strong>How to think about market falls:</strong> When markets fall 20%, your equity holding has not disappeared — it is on sale. The discipline to hold during a fall is what separates those who build wealth from those who chase it.';
+    }
+  },
+  debt:{
+    icon:'🏛️', name:'Debt',
+    color:'#6c7fff', label:'Stability Anchor',
+    why:function(p,pct){
+      if(pct>=45)return 'Debt forms the majority — capital protection and steady income are the priority here.';
+      if(pct>=25)return 'A significant debt allocation — providing stability and predictable returns as a counterweight to equity.';
+      return 'A foundation of stability. Even a small debt allocation reduces portfolio volatility meaningfully.';
+    },
+    deep:function(p){
+      return '<strong>Why debt for you:</strong> Debt instruments (government bonds, PPF, FDs, debt mutual funds) provide two things — stability and income. For every equity market crash, your debt portion holds steady. This is not about returns — it is about <em>sleeping well at night</em>.<br><br><strong>The inflation trap in debt:</strong> Debt returns barely beat inflation. That is why debt alone is never the answer — it is a component, not a strategy.';
+    }
+  },
+  gold:{
+    icon:'🪙', name:'Gold',
+    color:'#e8b84b', label:'Crisis Hedge',
+    why:function(p,pct){
+      return 'Gold is not an investment — it is insurance against systemic failure. Currency crises, geopolitical shocks, and market collapses are when gold earns its place.';
+    },
+    deep:function(p){
+      return '<strong>Why gold for you:</strong> Gold has a near-zero or negative correlation with equity. When everything else falls, gold tends to hold or rise. This makes it the most valuable portfolio diversifier over a 15–20 year horizon.<br><br><strong>The right way to hold gold:</strong> Not physical gold (storage, purity risk). Sovereign Gold Bonds (SGB) give gold returns + 2.5% annual interest + tax-free maturity at 8 years. That is the only gold worth holding.';
+    }
+  },
+  realestate:{
+    icon:'🏢', name:'Real Estate',
+    color:'#f4a535', label:'Inflation Hedge',
+    why:function(p,pct){
+      if(pct===0)return 'No direct real estate allocation at this stage — liquidity and flexibility matter more right now.';
+      return 'Real estate provides an inflation hedge and potential rental income. At your stage, this allocation makes sense as a long-term anchor.';
+    },
+    deep:function(p){
+      if((p.lifeStage==='school'||p.lifeStage==='college'||p.lifeStage==='first_earner'||p.lifeStage==='young_adult')){
+        return '<strong>Why no real estate yet:</strong> Real estate requires large capital, creates illiquidity, and charges massive transaction costs. At your stage, the same capital in equity generates better returns with far more flexibility. Real estate comes after the foundation is built.';
+      }
+      return '<strong>Why real estate for you:</strong> Property provides two things — a hedge against inflation and a forced savings mechanism. For business families and professionals, real estate also provides collateral for growth financing.<br><br><strong>Important:</strong> Your primary residence is not an investment. Only income-generating or appreciating property earns a place in the financial blueprint.';
+    }
+  },
+  emergency:{
+    icon:'🛡️', name:'Emergency / Liquid',
+    color:'#2ec4b6', label:'Safety Net',
+    why:function(p,pct){
+      if(pct>=35)return 'A large emergency allocation — the foundation must be built before growth can happen safely.';
+      if(pct>=20)return 'A healthy emergency buffer — 4–6 months of expenses in liquid form before investing further.';
+      return 'A lean but present emergency buffer — you have a solid foundation; now growth takes priority.';
+    },
+    deep:function(p){
+      return '<strong>Why emergency allocation first:</strong> Every financial plan fails without a liquid buffer. A medical emergency, job loss, or business shock without a safety net forces you to break long-term investments at the worst possible time.<br><br><strong>Where to keep it:</strong> Not in a savings account (2-3% returns). Liquid mutual funds or a high-yield savings account (4–7%) — instantly accessible, earning more than a savings account, zero lock-in.';
+    }
+  }
+};
+
+// ── MONTHLY AMOUNT CALCULATOR ──
+function m3GetMonthlyAmount(invCap, pct){
+  var midpoints = {lt2k:1000, '2k_10k':6000, '10k_50k':30000, gt50k:75000};
+  var base = midpoints[invCap] || 6000;
+  return Math.round(base * pct / 100 / 100) * 100;
+}
+
+function fmtInr(n){
+  if(n>=100000)return '₹'+(n/100000).toFixed(1)+'L';
+  if(n>=1000)return '₹'+(n/1000).toFixed(1)+'K';
+  return '₹'+n;
+}
+
+// ── DONUT CHART SVG ──
+function m3DrawDonut(alloc, label){
+  var COLORS={equity:'#3ecf8e',debt:'#6c7fff',gold:'#e8b84b',realestate:'#f4a535',emergency:'#2ec4b6'};
+  var LABELS={equity:'Equity',debt:'Debt',gold:'Gold',realestate:'Real Estate',emergency:'Emergency'};
+  var cx=110, cy=110, r=85, strokeW=28;
+  var total=100, offset=0;
+  var paths='';
+  var circumference=2*Math.PI*r;
+  var keys=Object.keys(alloc).filter(function(k){return alloc[k]>0;});
+  // Gap between segments
+  var gap=2;
+  keys.forEach(function(k){
+    var pct=alloc[k];
+    var dashLen=(pct/100)*circumference - gap;
+    var dashOff=-offset/100*circumference;
+    paths+=`<circle cx="${cx}" cy="${cy}" r="${r}" fill="none" stroke="${COLORS[k]||'#888'}" stroke-width="${strokeW}" stroke-dasharray="${dashLen} ${circumference}" stroke-dashoffset="${dashOff}" stroke-linecap="round"/>`;
+    offset+=pct;
+  });
+  return `<svg viewBox="0 0 220 220" style="transform:rotate(-90deg);overflow:visible">${paths}</svg>`;
+}
+
+// ── RENDER M3 ──
+function renderM3(){
+  // Load profile from localStorage
+  var canvas = JSON.parse(localStorage.getItem('cp_canvas')||'{}');
+  var m1sc   = parseInt(localStorage.getItem('cp_tot')||'0');
+  var p = {
+    lifeStage:   canvas.lifeStage   || 'thirties',
+    primaryType: canvas.primaryType || 'balanced',
+    gen:         canvas.gen         || 'first_gen',
+    invCap:      canvas.invCap      || '2k_10k',
+    name:        canvas.name        || 'Friend',
+    m1score:     m1sc
+  };
+
+  var alloc = m3ComputeAllocation(p);
+  var narr  = m3BuildNarrative(p, alloc);
+
+  var LS_NAMES={school:'School Student',college:'College Student',young_adult:'Young Adult',first_earner:'First Time Earner',professional:'Professional',homemaker:'Homemaker',differently_abled:'Differently Abled',thirties:'Thirties',forties:'Forties',pre_retire:'Pre-Retirement',post_retire:'Post-Retirement',senior65:'65 Plus',senior75:'75 Plus'};
+  var PT_NAMES={avoid:'Avoiding Type',spend:'Spending Type',status:'Status Seeker',save:'Saving Type',anxious:'Financially Anxious',gamble:'Gambling Type',balanced:'Balanced Investor',first_gen_earner:'First Gen Builder',second_gen_builder:'Second Gen Guardian'};
+  var CAP_LABELS={lt2k:'Below ₹2K/mo','2k_10k':'₹2K–₹10K/mo','10k_50k':'₹10K–₹50K/mo',gt50k:'Above ₹50K/mo'};
+  var GEN_LABELS={first_gen:'First Generation',transition_gen:'Transition Gen',second_gen:'Business Family',third_gen:'Multi-Generational',restart:'Rebuilding'};
+
+  // Profile badges
+  var badgesHTML='';
+  badgesHTML+=`<div class="m3-pbadge"><strong>${LS_NAMES[p.lifeStage]||p.lifeStage}</strong></div>`;
+  if(PT_NAMES[p.primaryType])badgesHTML+=`<div class="m3-pbadge">🧠 <strong>${PT_NAMES[p.primaryType]}</strong></div>`;
+  if(CAP_LABELS[p.invCap])badgesHTML+=`<div class="m3-pbadge">💰 <strong>${CAP_LABELS[p.invCap]}</strong></div>`;
+  if(GEN_LABELS[p.gen])badgesHTML+=`<div class="m3-pbadge">🌿 <strong>${GEN_LABELS[p.gen]}</strong></div>`;
+  if(m1sc>0)badgesHTML+=`<div class="m3-pbadge">📊 Score <strong>${m1sc}/100</strong></div>`;
+
+  // Legend
+  var COLORS={equity:'#3ecf8e',debt:'#6c7fff',gold:'#e8b84b',realestate:'#f4a535',emergency:'#2ec4b6'};
+  var LABELS={equity:'Equity',debt:'Debt',gold:'Gold',realestate:'Real Estate',emergency:'Emergency'};
+  var legendHTML='';
+  Object.keys(alloc).forEach(function(k){
+    if(alloc[k]>0)legendHTML+=`<div class="m3-leg-item"><div class="m3-leg-dot" style="background:${COLORS[k]}"></div>${LABELS[k]}: <strong style="color:var(--text);margin-left:3px">${alloc[k]}%</strong></div>`;
+  });
+
+  // Alloc table rows
+  var tableRows='';
+  Object.keys(alloc).forEach(function(k){
+    if(alloc[k]===0&&k==='realestate'&&['school','college','young_adult','first_earner'].includes(p.lifeStage))return;
+    var amt=m3GetMonthlyAmount(p.invCap,alloc[k]);
+    var asset=M3_ASSETS[k];
+    tableRows+=`
+    <tr>
+      <td>
+        <div style="display:flex;align-items:center;gap:8px">
+          <span style="font-size:18px">${asset.icon}</span>
+          <div>
+            <div style="font-weight:600">${LABELS[k]}</div>
+            <div style="font-size:11px;color:${COLORS[k]}">${asset.label}</div>
+          </div>
+        </div>
+      </td>
+      <td style="text-align:right;white-space:nowrap">
+        <div class="m3-pct-badge" style="color:${COLORS[k]}">${alloc[k]}%</div>
+        <div class="m3-alloc-bar-wrap"><div class="m3-alloc-bar" style="background:${COLORS[k]};width:${alloc[k]}%"></div></div>
+        <div class="m3-amt">${amt>0?'~'+fmtInr(amt)+'/mo':'—'}</div>
+      </td>
+    </tr>`;
+  });
+
+  // Asset insight cards
+  var assetCards='';
+  Object.keys(alloc).forEach(function(k){
+    var asset=M3_ASSETS[k];
+    if(!asset)return;
+    assetCards+=`
+    <div class="m3-asset-card" onclick="m3ToggleAsset('${k}')">
+      <div class="m3-asset-hdr">
+        <div class="m3-asset-icon">${asset.icon}</div>
+        <div class="m3-asset-info">
+          <div class="m3-asset-name" style="color:${COLORS[k]}">${LABELS[k]} — ${alloc[k]}%</div>
+          <div class="m3-asset-why">${asset.why(p,alloc[k])}</div>
+        </div>
+        <span style="font-size:12px;color:var(--muted);margin-left:6px" id="m3tog-${k}">▼</span>
+      </div>
+      <div class="m3-asset-expand" id="m3exp-${k}">${asset.deep(p)}</div>
+    </div>`;
+  });
+
+  // Build the full HTML
+  var html=`
+  <div class="m3-hero">
+    <span class="m3-icon">🗺️</span>
+    <div class="m3-title">Your Portfolio <span>Blueprint</span></div>
+  </div>
+
+  <div class="m3-quote">"A portfolio is not a collection of assets. It is a reflection of who you are, where you stand, and where you are going."</div>
+
+  <div class="m3-sub">This allocation has been built specifically for your profile — not a generic template. Every percentage below carries a reason.</div>
+
+  <div class="m3-profile-badge">${badgesHTML}</div>
+
+  <div class="m3-narrative">
+    <div class="m3-nar-hdr">📖 Your Financial Narrative</div>
+    <div class="m3-nar-body">
+      ${narr.opening}
+      ${narr.ptNote?'<br><br>'+narr.ptNote:''}
+      ${narr.scoreNote?'<br><br>'+narr.scoreNote:''}
+    </div>
+  </div>
+
+  <div class="m3-chart-wrap">
+    <div class="m3-donut-ring">
+      ${m3DrawDonut(alloc)}
+      <div class="m3-donut-center">
+        <div class="m3-donut-label">${p.name}</div>
+        <div class="m3-donut-name">Blueprint</div>
+      </div>
+    </div>
+    <div class="m3-legend">${legendHTML}</div>
+  </div>
+
+  <div class="m3-narrative" style="padding:0">
+    <table class="m3-alloc-table">
+      <thead><tr>
+        <th>Asset Class</th>
+        <th style="text-align:right">Allocation · Amount</th>
+      </tr></thead>
+      <tbody>${tableRows}</tbody>
+    </table>
+  </div>
+
+  <div style="height:16px"></div>
+
+  <div class="m3-nar-hdr" style="padding:0 4px;margin-bottom:10px">💡 Why Each Asset — Tap to Expand</div>
+  ${assetCards}
+
+  <div class="m3-rebal">
+    <div class="m3-rebal-title">🔄 Rebalancing Rule</div>
+    <div class="m3-rebal-body">
+      Review this blueprint <strong>once a year</strong> — not every month. Markets move. Life changes. When any asset class drifts more than <strong>5% from the target</strong>, rebalance.<br><br>
+      <em>Do not try to time the market. The plan is the discipline.</em>
+    </div>
+  </div>
+
+  <div class="cp-mark">© Elango Industries Limited · Cauvery Pulse · M3</div>`;
+
+  document.getElementById('m3content').innerHTML=html;
+}
+
+function m3ToggleAsset(k){
+  var exp=document.getElementById('m3exp-'+k);
+  var tog=document.getElementById('m3tog-'+k);
+  if(!exp)return;
+  exp.classList.toggle('open');
+  tog.textContent=exp.classList.contains('open')?'▲':'▼';
+}
+
+// ── MODULE SWITCHER UPDATE ──
+function switchToM3(){
+  ['mod0','mod1','mod2','mod3'].forEach(function(id){
+    var el=document.getElementById(id);
+    if(el)el.classList.remove('act');
+  });
+  document.getElementById('mod3').classList.add('act');
+  window.scrollTo(0,0);
+  renderM3();
+}
+
+// Update all nav bars to include M3
+document.addEventListener('DOMContentLoaded',function(){
+  // Update M2 nav
+  var m2nav=document.querySelector('#mod2 .bnav');
+  if(m2nav){
+    m2nav.innerHTML=
+      '<button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>'+
+      '<button class="nb" onclick="switchToM1()"><span>🩺</span><span>Score</span></button>'+
+      '<button class="nb act" onclick="switchToM2()"><span>📚</span><span>School</span></button>'+
+      '<button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>';
+  }
+  // Update M1 nav
+  var m1nav=document.querySelector('#mod1 .bnav');
+  if(m1nav){
+    m1nav.innerHTML=
+      '<button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>'+
+      '<button class="nb act" onclick="switchToM1()"><span>🩺</span><span>Score</span></button>'+
+      '<button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button>'+
+      '<button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>';
+  }
+  // Update M0 nav
+  var m0nav=document.querySelector('#mod0 .bnav');
+  if(m0nav){
+    m0nav.innerHTML=
+      '<button class="nb act" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>'+
+      '<button class="nb" onclick="switchToM1()"><span>🩺</span><span>Score</span></button>'+
+      '<button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button>'+
+      '<button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>';
+  }
+});
+
+// Update switchToM0/M1/M2 to also clear mod3
+var _origSwitchToM0=switchToM0;
+switchToM0=function(){
+  var m3=document.getElementById('mod3');if(m3)m3.classList.remove('act');
+  _origSwitchToM0();
+};
+var _origSwitchToM1=switchToM1;
+switchToM1=function(){
+  var m3=document.getElementById('mod3');if(m3)m3.classList.remove('act');
+  _origSwitchToM1();
+};
+var _origSwitchToM2=switchToM2;
+switchToM2=function(){
+  var m3=document.getElementById('mod3');if(m3)m3.classList.remove('act');
+  _origSwitchToM2();
+};
 </script>
 </body>
 </html>
