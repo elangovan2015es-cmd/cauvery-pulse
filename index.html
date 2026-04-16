@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Cauvery Pulse | v2.7 | Build: 20260417-0355 | Elango Industries Limited -->
+<!-- Cauvery Pulse | v2.8 | Build: 20260417-0500 | Elango Industries Limited -->
 <title>Cauvery Pulse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
@@ -419,7 +419,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="app0">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Life Canvas · M0</div></div></div>
-  <div class="vtag">v2.7</div>
+  <div class="vtag">v2.8</div>
 </header>
 <div class="starfield" id="starfield"></div>
 <div class="aurora"></div>
@@ -885,7 +885,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="app">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Cauvery Pulse Score · M1</div></div></div>
-  <div class="vtag">v2.7</div>
+  <div class="vtag">v2.8</div>
 </header>
 <!-- WELCOME -->
 <div id="welcome" class="screen active">
@@ -1075,7 +1075,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="app2">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Investment School · M2</div></div></div>
-  <div class="vtag">v2.7</div>
+  <div class="vtag">v2.8</div>
 </header>
 
 <div style="padding:0 20px 80px">
@@ -2423,7 +2423,7 @@ function toast(msg){
 
 
 
-<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v2.7 ══════ -->
+<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v2.8 ══════ -->
 <div id="mod3" class="mod">
 <style>
 /* ── M3 LIGHT THEME ── */
@@ -2607,7 +2607,7 @@ function toast(msg){
   </div>
   <div style="display:flex;align-items:center;gap:8px">
     <button onclick="openM3Settings()" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:6px 10px;font-size:13px;color:#6B7280;cursor:pointer">⚙️ Rates</button>
-    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v2.7</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v2.8</div>
   </div>
 </header>
 
@@ -2645,7 +2645,7 @@ function toast(msg){
 
 <script>
 // ══════════════════════════════════════════════════════
-// M3 PORTFOLIO BLUEPRINT ENGINE v2.7
+// M3 PORTFOLIO BLUEPRINT ENGINE v2.8
 // ══════════════════════════════════════════════════════
 
 // ── COLOURS ──
@@ -3173,6 +3173,1639 @@ document.addEventListener('DOMContentLoaded',function(){
 var _sm0=switchToM0;switchToM0=function(){var m=document.getElementById('mod3');if(m)m.classList.remove('act');_sm0();};
 var _sm1=switchToM1;switchToM1=function(){var m=document.getElementById('mod3');if(m)m.classList.remove('act');_sm1();};
 var _sm2=switchToM2;switchToM2=function(){var m=document.getElementById('mod3');if(m)m.classList.remove('act');_sm2();};
+</script>
+
+<!-- ══════ MODULE 4: DEBT ANALYSER ══════ -->
+<div id="mod4" class="mod">
+<style>
+#mod4{background:#F5F6FA;min-height:100vh}
+#mod4 header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+#mod4 .bnav{background:#fff;border-top:1px solid #E5E7EB}
+#mod4 .nb{color:#9CA3AF}
+#mod4 .nb.act{color:#DC2626}
+#mod4 .blogo{background:linear-gradient(135deg,#DC2626,#D97706)}
+
+.m4w{padding:0 16px 100px;max-width:480px;margin:0 auto}
+.m4-h1{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:#111827;margin-bottom:6px}
+.m4-h1 span{color:#DC2626}
+.m4-card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.m4-card-title{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#9CA3AF;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.m4-label{font-size:13px;color:#374151;margin-bottom:5px;font-weight:500}
+.m4-input{width:100%;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:15px;color:#111827;font-family:'DM Mono',monospace;margin-bottom:12px}
+.m4-input:focus{outline:none;border-color:#DC2626;background:#fff}
+.m4-select{width:100%;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:14px;color:#111827;margin-bottom:12px;appearance:none}
+.m4-btn{width:100%;padding:13px;background:linear-gradient(135deg,#DC2626,#B91C1C);color:#fff;font-weight:700;border:none;border-radius:12px;cursor:pointer;font-size:15px;margin-top:4px}
+.m4-btn-s{width:100%;padding:11px;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;color:#374151;font-weight:500;cursor:pointer;font-size:14px;margin-top:8px}
+.m4-result{background:linear-gradient(135deg,#FEF2F2,#FFF7F7);border:1px solid #FECACA;border-radius:14px;padding:16px;margin-top:12px}
+.m4-result-title{font-size:11px;font-weight:700;color:#991B1B;text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px}
+.m4-result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.m4-result-box{background:#fff;border:1px solid #FECACA;border-radius:10px;padding:12px;text-align:center}
+.m4-result-val{font-family:'DM Mono',monospace;font-size:18px;font-weight:700;color:#DC2626;margin-bottom:3px}
+.m4-result-lbl{font-size:10px;color:#9CA3AF;text-transform:uppercase;letter-spacing:.6px}
+.m4-result-full{grid-column:1/-1}
+.m4-insight{font-size:13px;color:#374151;line-height:1.8;margin-top:10px;padding:10px 12px;background:#FEF2F2;border-radius:10px;border-left:3px solid #DC2626}
+
+/* Interest breakdown bar */
+.m4-breakdown{margin-top:12px}
+.m4-breakdown-row{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.m4-breakdown-label{font-size:12px;color:#6B7280;width:100px;flex-shrink:0}
+.m4-breakdown-bar-wrap{flex:1;background:#F3F4F6;border-radius:4px;height:8px}
+.m4-breakdown-bar{height:8px;border-radius:4px;transition:width .5s}
+.m4-breakdown-val{font-size:12px;font-weight:600;color:#111827;width:70px;text-align:right}
+
+/* DTI meter */
+.m4-dti-meter{margin:12px 0}
+.m4-dti-track{width:100%;height:16px;background:#F3F4F6;border-radius:8px;overflow:hidden;margin:8px 0}
+.m4-dti-fill{height:100%;border-radius:8px;transition:width .5s}
+.m4-dti-labels{display:flex;justify-content:space-between;font-size:10px;color:#9CA3AF}
+.m4-status-pill{display:inline-block;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;margin-top:6px}
+
+/* Debt type cards */
+.m4-debt-type{border:1px solid #E5E7EB;border-radius:12px;padding:14px;margin-bottom:10px;cursor:pointer;transition:all .2s}
+.m4-debt-type:hover{border-color:#D1D5DB;background:#F9FAFB}
+.m4-debt-type-hdr{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.m4-debt-icon{font-size:22px;width:34px;text-align:center}
+.m4-debt-name{font-size:14px;font-weight:700;color:#111827}
+.m4-debt-rate{font-size:12px;font-weight:700;padding:2px 8px;border-radius:10px}
+.m4-debt-desc{font-size:12px;color:#6B7280;line-height:1.6}
+.m4-verdict{font-size:12px;font-weight:600;padding:3px 10px;border-radius:10px;margin-top:6px;display:inline-block}
+
+/* Payoff strategy toggle */
+.m4-strategy-tabs{display:flex;gap:8px;margin-bottom:14px}
+.m4-stab{flex:1;padding:10px;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;text-align:center;cursor:pointer;font-size:13px;font-weight:600;color:#6B7280;transition:all .2s}
+.m4-stab.act{background:#FEF2F2;border-color:#FECACA;color:#DC2626}
+
+/* Loan entry rows */
+.m4-loan-row{display:flex;align-items:center;gap:8px;padding:10px 12px;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;margin-bottom:8px}
+.m4-loan-row-name{font-size:13px;font-weight:600;color:#111827;flex:1}
+.m4-loan-row-bal{font-size:12px;color:#DC2626;font-family:'DM Mono',monospace}
+.m4-loan-row-rate{font-size:11px;color:#6B7280}
+.m4-remove-btn{background:none;border:none;color:#9CA3AF;cursor:pointer;font-size:16px;padding:2px}
+
+/* Credit card trap visualiser */
+.m4-cc-vis{background:#FFF7ED;border:1px solid #FED7AA;border-radius:12px;padding:14px;margin-top:10px}
+.m4-cc-vis-title{font-size:11px;font-weight:700;color:#C2410C;text-transform:uppercase;letter-spacing:.6px;margin-bottom:10px}
+.m4-cc-timeline{display:flex;flex-direction:column;gap:6px}
+.m4-cc-yr-row{display:flex;align-items:center;gap:8px}
+.m4-cc-yr-lbl{font-size:11px;color:#6B7280;width:40px;flex-shrink:0}
+.m4-cc-yr-bar-wrap{flex:1;background:#FEE2E2;border-radius:4px;height:10px;overflow:hidden}
+.m4-cc-yr-bar{height:10px;border-radius:4px;background:#DC2626}
+.m4-cc-yr-val{font-size:11px;color:#DC2626;font-family:'DM Mono',monospace;width:55px;text-align:right}
+
+/* SEBI tools section */
+.m4-sebi{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:14px;padding:16px;margin-bottom:14px}
+.m4-sebi-title{font-size:11px;font-weight:700;color:#1D4ED8;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+.m4-sebi-sub{font-size:12px;color:#3B82F6;margin-bottom:12px}
+.m4-sebi-tool{background:#fff;border:1px solid #BFDBFE;border-radius:10px;padding:12px;margin-bottom:8px;cursor:pointer;transition:all .2s}
+.m4-sebi-tool:hover{background:#EFF6FF}
+.m4-sebi-tool-name{font-size:13px;font-weight:600;color:#1E40AF;margin-bottom:2px}
+.m4-sebi-tool-desc{font-size:12px;color:#6B7280}
+
+/* Prepayment */
+.m4-prepay-result{background:#ECFDF5;border:1px solid #A7F3D0;border-radius:12px;padding:14px;margin-top:10px}
+.m4-prepay-stat{text-align:center;padding:8px}
+.m4-prepay-val{font-family:'DM Mono',monospace;font-size:20px;font-weight:700;color:#059669}
+.m4-prepay-lbl{font-size:11px;color:#6B7280;margin-top:2px}
+
+/* Tab navigation inside M4 */
+.m4-tabs{display:flex;overflow-x:auto;gap:6px;padding-bottom:4px;margin-bottom:16px;scrollbar-width:none}
+.m4-tab{flex-shrink:0;padding:7px 14px;background:#fff;border:1px solid #E5E7EB;border-radius:20px;font-size:12px;font-weight:600;color:#6B7280;cursor:pointer;transition:all .2s;white-space:nowrap}
+.m4-tab.act{background:#FEF2F2;border-color:#FECACA;color:#DC2626}
+
+/* Profile banner */
+.m4-profile-banner{background:#FFFBEB;border:1px solid #FCD34D;border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:12px;color:#78350F;display:flex;align-items:center;gap:8px}
+</style>
+
+<div id="app4">
+<header>
+  <div class="brand">
+    <div class="blogo">🌊</div>
+    <div>
+      <div class="bname" style="color:#111827;font-size:17px;font-weight:700">Cauvery Pulse</div>
+      <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Debt Analyser · M4</div>
+    </div>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v2.8</div>
+</header>
+
+<div class="m4w">
+
+  <!-- Profile banner -->
+  <div class="m4-profile-banner" id="m4ProfileBanner" style="display:none">
+    <span style="font-size:18px">👤</span>
+    <div id="m4ProfileText"></div>
+  </div>
+
+  <!-- Hero -->
+  <div style="padding:20px 0 16px;text-align:center">
+    <span style="font-size:48px;display:block;margin-bottom:8px">💳</span>
+    <div class="m4-h1">Debt <span>Analyser</span></div>
+    <div style="font-size:14px;color:#6B7280;line-height:1.7">Understand your debt. Control it. Eliminate it intelligently.</div>
+  </div>
+
+  <!-- Tab navigation -->
+  <div class="m4-tabs" id="m4Tabs">
+    <div class="m4-tab act" onclick="m4ShowTab('emi',this)">📐 EMI Calc</div>
+    <div class="m4-tab" onclick="m4ShowTab('dti',this)">📊 DTI Health</div>
+    <div class="m4-tab" onclick="m4ShowTab('goodbad',this)">⚖️ Good vs Bad</div>
+    <div class="m4-tab" onclick="m4ShowTab('payoff',this)">🎯 Payoff Strategy</div>
+    <div class="m4-tab" onclick="m4ShowTab('cc',this)">💳 Credit Card Trap</div>
+    <div class="m4-tab" onclick="m4ShowTab('prepay',this)">⚡ Prepayment</div>
+    <div class="m4-tab" onclick="m4ShowTab('sebi',this)">🏛️ SEBI Tools</div>
+  </div>
+
+  <!-- ── TAB 1: EMI CALCULATOR ── -->
+  <div id="m4tab-emi" class="m4-tab-content">
+    <div class="m4-card">
+      <div class="m4-card-title">📐 EMI Calculator</div>
+      <div class="m4-label">Loan Amount (₹)</div>
+      <input class="m4-input" type="number" id="emiAmount" placeholder="e.g. 3000000" oninput="calcEMI()">
+      <div class="m4-label">Annual Interest Rate (%)</div>
+      <input class="m4-input" type="number" id="emiRate" placeholder="e.g. 8.5" step="0.1" oninput="calcEMI()">
+      <div class="m4-label">Loan Tenure (Years)</div>
+      <input class="m4-input" type="number" id="emiTenure" placeholder="e.g. 20" oninput="calcEMI()">
+      <div class="m4-label">Loan Type</div>
+      <select class="m4-select" id="emiType" onchange="calcEMI()">
+        <option value="home">Home Loan (~8.5–9.5%)</option>
+        <option value="car">Car Loan (~8.5–10%)</option>
+        <option value="personal">Personal Loan (~11–18%)</option>
+        <option value="education">Education Loan (~8–11%)</option>
+        <option value="business">Business Loan (~12–18%)</option>
+        <option value="other">Other / Custom</option>
+      </select>
+      <div id="emiResult" style="display:none" class="m4-result">
+        <div class="m4-result-title">📊 Loan Breakdown</div>
+        <div class="m4-result-grid">
+          <div class="m4-result-box">
+            <div class="m4-result-val" id="emiMonthly">—</div>
+            <div class="m4-result-lbl">Monthly EMI</div>
+          </div>
+          <div class="m4-result-box">
+            <div class="m4-result-val" id="emiTotal">—</div>
+            <div class="m4-result-lbl">Total Paid</div>
+          </div>
+          <div class="m4-result-box">
+            <div class="m4-result-val" id="emiInterest">—</div>
+            <div class="m4-result-lbl">Total Interest</div>
+          </div>
+          <div class="m4-result-box">
+            <div class="m4-result-val" id="emiInterestPct" style="color:#D97706">—</div>
+            <div class="m4-result-lbl">Interest as % of Loan</div>
+          </div>
+        </div>
+        <div class="m4-breakdown">
+          <div class="m4-breakdown-row">
+            <div class="m4-breakdown-label">Principal</div>
+            <div class="m4-breakdown-bar-wrap"><div class="m4-breakdown-bar" id="emiPrincipalBar" style="background:#059669"></div></div>
+            <div class="m4-breakdown-val" id="emiPrincipalVal">—</div>
+          </div>
+          <div class="m4-breakdown-row">
+            <div class="m4-breakdown-label">Interest</div>
+            <div class="m4-breakdown-bar-wrap"><div class="m4-breakdown-bar" id="emiInterestBar" style="background:#DC2626"></div></div>
+            <div class="m4-breakdown-val" id="emiInterestVal">—</div>
+          </div>
+        </div>
+        <div class="m4-insight" id="emiInsight"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TAB 2: DTI HEALTH ── -->
+  <div id="m4tab-dti" class="m4-tab-content" style="display:none">
+    <div class="m4-card">
+      <div class="m4-card-title">📊 Debt-to-Income Ratio</div>
+      <div style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:14px">Your DTI ratio tells you — and your bank — how much of your income is already committed to debt repayment. Below 30% is healthy. Above 50% is a warning sign.</div>
+      <div class="m4-label">Monthly Take-Home Income (₹)</div>
+      <input class="m4-input" type="number" id="dtiIncome" placeholder="e.g. 80000" oninput="calcDTI()">
+      <div class="m4-label">Total Monthly EMI Outflow (₹)</div>
+      <input class="m4-input" type="number" id="dtiEMI" placeholder="e.g. 25000" oninput="calcDTI()">
+      <div id="dtiResult" style="display:none">
+        <div class="m4-dti-meter">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+            <span style="font-size:13px;font-weight:600;color:#111827">Your DTI Ratio</span>
+            <span style="font-family:'DM Mono',monospace;font-size:18px;font-weight:700;color:#DC2626" id="dtiPct">—</span>
+          </div>
+          <div class="m4-dti-track">
+            <div class="m4-dti-fill" id="dtiFill"></div>
+          </div>
+          <div class="m4-dti-labels">
+            <span>0%</span><span>30% Healthy</span><span>50% Danger</span><span>70%+</span>
+          </div>
+        </div>
+        <div id="dtiStatus"></div>
+        <div class="m4-insight" id="dtiInsight" style="margin-top:10px"></div>
+        <div style="margin-top:14px">
+          <div style="font-size:12px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px">What Your Bank Sees</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px" id="dtiZones">
+            <div style="background:#ECFDF5;border:1px solid #A7F3D0;border-radius:10px;padding:10px;text-align:center">
+              <div style="font-size:16px;font-weight:700;color:#059669">Below 30%</div>
+              <div style="font-size:11px;color:#065F46;margin-top:3px">Excellent — loan approved easily</div>
+            </div>
+            <div style="background:#FFFBEB;border:1px solid #FCD34D;border-radius:10px;padding:10px;text-align:center">
+              <div style="font-size:16px;font-weight:700;color:#D97706">30–50%</div>
+              <div style="font-size:11px;color:#92400E;margin-top:3px">Caution — loan possible, higher rate</div>
+            </div>
+            <div style="background:#FEF2F2;border:1px solid #FECACA;border-radius:10px;padding:10px;text-align:center">
+              <div style="font-size:16px;font-weight:700;color:#DC2626">Above 50%</div>
+              <div style="font-size:11px;color:#991B1B;margin-top:3px">Danger — loan likely rejected</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TAB 3: GOOD VS BAD DEBT ── -->
+  <div id="m4tab-goodbad" class="m4-tab-content" style="display:none">
+    <div class="m4-card">
+      <div class="m4-card-title">⚖️ Good Debt vs Bad Debt</div>
+      <div style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:14px">Not all debt is the enemy. Good debt builds assets or income. Bad debt funds consumption. The difference determines your financial trajectory.</div>
+    </div>
+    <div id="m4DebtTypes"></div>
+  </div>
+
+  <!-- ── TAB 4: PAYOFF STRATEGY ── -->
+  <div id="m4tab-payoff" class="m4-tab-content" style="display:none">
+    <div class="m4-card">
+      <div class="m4-card-title">🎯 Debt Payoff Strategy</div>
+      <div style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:12px">Two proven strategies to get out of debt faster. Add your loans below and choose your approach.</div>
+
+      <div class="m4-strategy-tabs">
+        <div class="m4-stab act" id="avalancheTab" onclick="m4SetStrategy('avalanche')">
+          <div style="font-size:15px;margin-bottom:2px">🏔️ Avalanche</div>
+          <div style="font-size:10px;color:#6B7280">Highest rate first — saves most interest</div>
+        </div>
+        <div class="m4-stab" id="snowballTab" onclick="m4SetStrategy('snowball')">
+          <div style="font-size:15px;margin-bottom:2px">⛄ Snowball</div>
+          <div style="font-size:10px;color:#6B7280">Smallest balance first — quick wins</div>
+        </div>
+      </div>
+
+      <div id="strategyExplain" style="font-size:12px;color:#374151;background:#F9FAFB;border-radius:10px;padding:10px 12px;margin-bottom:12px;line-height:1.7"></div>
+
+      <div class="m4-label">Add Your Loans</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:8px">
+        <input class="m4-input" type="text" id="loanName" placeholder="Name" style="margin:0;font-size:13px">
+        <input class="m4-input" type="number" id="loanBal" placeholder="Balance ₹" style="margin:0;font-size:13px">
+        <input class="m4-input" type="number" id="loanRate" placeholder="Rate %" style="margin:0;font-size:13px">
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px">
+        <input class="m4-input" type="number" id="loanEMI" placeholder="Min EMI ₹" style="margin:0;font-size:13px">
+        <button onclick="m4AddLoan()" style="background:#DC2626;color:#fff;border:none;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer">+ Add Loan</button>
+      </div>
+
+      <div id="m4LoanList" style="margin-bottom:12px"></div>
+
+      <div class="m4-label">Extra Monthly Payment (₹)</div>
+      <input class="m4-input" type="number" id="extraPayment" placeholder="e.g. 5000" oninput="m4CalcPayoff()">
+
+      <div id="m4PayoffResult" style="display:none" class="m4-result">
+        <div class="m4-result-title">📋 Payoff Plan</div>
+        <div id="m4PayoffContent"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TAB 5: CREDIT CARD TRAP ── -->
+  <div id="m4tab-cc" class="m4-tab-content" style="display:none">
+    <div class="m4-card">
+      <div class="m4-card-title">💳 Credit Card Minimum Payment Trap</div>
+      <div style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:14px">Credit card interest is 36–42% per year in India. Paying only the minimum is a trap that can keep you in debt for decades. See the true cost below.</div>
+      <div class="m4-label">Credit Card Outstanding Balance (₹)</div>
+      <input class="m4-input" type="number" id="ccBalance" placeholder="e.g. 100000" oninput="calcCC()">
+      <div class="m4-label">Monthly Interest Rate (%)</div>
+      <input class="m4-input" type="number" id="ccRate" placeholder="e.g. 3.5" step="0.1" value="3.5" oninput="calcCC()">
+      <div class="m4-label">Minimum Payment (% of balance)</div>
+      <input class="m4-input" type="number" id="ccMinPct" placeholder="e.g. 5" value="5" oninput="calcCC()">
+      <div id="ccResult" style="display:none">
+        <div class="m4-result">
+          <div class="m4-result-title">💀 The Minimum Payment Trap</div>
+          <div class="m4-result-grid">
+            <div class="m4-result-box">
+              <div class="m4-result-val" id="ccMonths">—</div>
+              <div class="m4-result-lbl">Months to Clear</div>
+            </div>
+            <div class="m4-result-box">
+              <div class="m4-result-val" id="ccYears">—</div>
+              <div class="m4-result-lbl">Years to Clear</div>
+            </div>
+            <div class="m4-result-box">
+              <div class="m4-result-val" id="ccTotalPaid">—</div>
+              <div class="m4-result-lbl">Total Paid</div>
+            </div>
+            <div class="m4-result-box">
+              <div class="m4-result-val" id="ccInterestPaid" style="color:#DC2626">—</div>
+              <div class="m4-result-lbl">Total Interest</div>
+            </div>
+          </div>
+          <div class="m4-insight" id="ccInsight" style="margin-top:10px"></div>
+        </div>
+        <div class="m4-cc-vis" id="ccVis"></div>
+        <div class="m4-result" style="margin-top:10px;background:#ECFDF5;border-color:#A7F3D0">
+          <div class="m4-result-title" style="color:#065F46">✅ If You Pay Fixed ₹ Instead</div>
+          <div id="ccFixed"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TAB 6: PREPAYMENT ── -->
+  <div id="m4tab-prepay" class="m4-tab-content" style="display:none">
+    <div class="m4-card">
+      <div class="m4-card-title">⚡ Loan Prepayment Analyser</div>
+      <div style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:14px">Every extra rupee you pay towards your loan principal saves multiple rupees in future interest. See exactly how much you save by prepaying.</div>
+      <div class="m4-label">Original Loan Amount (₹)</div>
+      <input class="m4-input" type="number" id="ppLoan" placeholder="e.g. 3000000" oninput="calcPrepay()">
+      <div class="m4-label">Annual Interest Rate (%)</div>
+      <input class="m4-input" type="number" id="ppRate" placeholder="e.g. 8.75" step="0.1" oninput="calcPrepay()">
+      <div class="m4-label">Original Tenure (Years)</div>
+      <input class="m4-input" type="number" id="ppTenure" placeholder="e.g. 20" oninput="calcPrepay()">
+      <div class="m4-label">Extra Monthly Payment (₹)</div>
+      <input class="m4-input" type="number" id="ppExtra" placeholder="e.g. 5000" oninput="calcPrepay()">
+      <div class="m4-label">One-Time Lump Sum Prepayment (₹)</div>
+      <input class="m4-input" type="number" id="ppLump" placeholder="e.g. 200000" oninput="calcPrepay()">
+      <div id="ppResult" style="display:none">
+        <div class="m4-prepay-result">
+          <div style="font-size:11px;font-weight:700;color:#065F46;text-transform:uppercase;letter-spacing:.6px;margin-bottom:12px">💚 Your Savings from Prepayment</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div class="m4-prepay-stat">
+              <div class="m4-prepay-val" id="ppYearsSaved">—</div>
+              <div class="m4-prepay-lbl">Years Saved</div>
+            </div>
+            <div class="m4-prepay-stat">
+              <div class="m4-prepay-val" id="ppInterestSaved">—</div>
+              <div class="m4-prepay-lbl">Interest Saved</div>
+            </div>
+            <div class="m4-prepay-stat">
+              <div class="m4-prepay-val" id="ppNewTenure" style="color:#D97706">—</div>
+              <div class="m4-prepay-lbl">New Tenure</div>
+            </div>
+            <div class="m4-prepay-stat">
+              <div class="m4-prepay-val" id="ppOrigInterest" style="color:#DC2626">—</div>
+              <div class="m4-prepay-lbl">Original Interest</div>
+            </div>
+          </div>
+          <div class="m4-insight" id="ppInsight" style="background:#ECFDF5;border-color:#A7F3D0;color:#065F46;margin-top:12px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TAB 7: SEBI TOOLS ── -->
+  <div id="m4tab-sebi" class="m4-tab-content" style="display:none">
+    <div class="m4-sebi">
+      <div class="m4-sebi-title">🏛️ SEBI Investor Tools</div>
+      <div class="m4-sebi-sub">SEBI provides free financial calculators for Indian investors. These are built on the same mathematical principles used by registered financial advisors.</div>
+    </div>
+    <div id="m4SebiTools"></div>
+    <div class="m4-card" style="margin-top:4px">
+      <div class="m4-card-title">📐 Compound Interest Analyser</div>
+      <div style="font-size:13px;color:#6B7280;margin-bottom:12px">SEBI's compound interest formula — the foundation of all investment and debt calculations.</div>
+      <div class="m4-label">Principal Amount (₹)</div>
+      <input class="m4-input" type="number" id="ciPrincipal" placeholder="e.g. 100000" oninput="calcCI()">
+      <div class="m4-label">Annual Rate (%)</div>
+      <input class="m4-input" type="number" id="ciRate" placeholder="e.g. 12" oninput="calcCI()">
+      <div class="m4-label">Years</div>
+      <input class="m4-input" type="number" id="ciYears" placeholder="e.g. 10" oninput="calcCI()">
+      <div class="m4-label">Compounding Frequency</div>
+      <select class="m4-select" id="ciFreq" onchange="calcCI()">
+        <option value="1">Annual</option>
+        <option value="2">Half-Yearly</option>
+        <option value="4">Quarterly</option>
+        <option value="12" selected>Monthly</option>
+        <option value="365">Daily</option>
+      </select>
+      <div id="ciResult" style="display:none" class="m4-result">
+        <div class="m4-result-title">📈 Compound Interest Result</div>
+        <div class="m4-result-grid">
+          <div class="m4-result-box"><div class="m4-result-val" id="ciMaturity" style="color:#059669">—</div><div class="m4-result-lbl">Maturity Value</div></div>
+          <div class="m4-result-box"><div class="m4-result-val" id="ciGain" style="color:#059669">—</div><div class="m4-result-lbl">Total Gain</div></div>
+          <div class="m4-result-box"><div class="m4-result-val" id="ciMultiple" style="color:#D97706">—</div><div class="m4-result-lbl">Money Multiplied</div></div>
+          <div class="m4-result-box"><div class="m4-result-val" id="ciXIRR" style="color:#D97706">—</div><div class="m4-result-lbl">Effective Annual Rate</div></div>
+        </div>
+        <div class="m4-insight" id="ciInsight" style="background:#ECFDF5;border-color:#A7F3D0;color:#065F46"></div>
+      </div>
+    </div>
+
+    <div class="m4-card">
+      <div class="m4-card-title">📊 Rule of 72 — Doubling Time</div>
+      <div style="font-size:13px;color:#6B7280;margin-bottom:12px">SEBI's simplest mental math tool. Divide 72 by the interest rate to get years to double your money. Applies equally to debt compounding against you.</div>
+      <div class="m4-label">Annual Rate (%)</div>
+      <input class="m4-input" type="number" id="r72Rate" placeholder="e.g. 8" oninput="calcR72()">
+      <div id="r72Result" style="display:none" class="m4-result">
+        <div class="m4-result-grid">
+          <div class="m4-result-box"><div class="m4-result-val" id="r72Years" style="color:#D97706">—</div><div class="m4-result-lbl">Years to Double</div></div>
+          <div class="m4-result-box"><div class="m4-result-val" id="r72Rate4x" style="color:#DC2626">—</div><div class="m4-result-lbl">Years to 4x</div></div>
+        </div>
+        <div class="m4-insight" id="r72Insight"></div>
+      </div>
+    </div>
+
+    <div class="m4-card">
+      <div class="m4-card-title">📉 Inflation Real Value Calculator</div>
+      <div style="font-size:13px;color:#6B7280;margin-bottom:12px">SEBI uses this to educate investors on purchasing power erosion. What is ₹1 lakh today worth in future — or what was it worth in the past?</div>
+      <div class="m4-label">Amount Today (₹)</div>
+      <input class="m4-input" type="number" id="inflAmount" placeholder="e.g. 100000" oninput="calcInflation()">
+      <div class="m4-label">Annual Inflation Rate (%)</div>
+      <input class="m4-input" type="number" id="inflRate" placeholder="e.g. 6" value="6" oninput="calcInflation()">
+      <div class="m4-label">Years into Future</div>
+      <input class="m4-input" type="number" id="inflYears" placeholder="e.g. 20" oninput="calcInflation()">
+      <div id="inflResult" style="display:none" class="m4-result">
+        <div class="m4-result-grid">
+          <div class="m4-result-box"><div class="m4-result-val" id="inflFutureVal" style="color:#DC2626">—</div><div class="m4-result-lbl">Future Buying Power</div></div>
+          <div class="m4-result-box"><div class="m4-result-val" id="inflLoss">—</div><div class="m4-result-lbl">Real Value Lost</div></div>
+        </div>
+        <div class="m4-insight" id="inflInsight"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:14px;font-size:11px;color:#9CA3AF;letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse · M4</div>
+</div>
+</div><!-- #app4 -->
+
+<div class="bnav" style="background:#fff;border-top:1px solid #E5E7EB">
+  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>
+  <button class="nb" onclick="switchToM1()"><span>🩺</span><span>Score</span></button>
+  <button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>
+  <button class="nb act" style="color:#DC2626"><span>💳</span><span>Debt</span></button>
+</div>
+<div class="toast" id="toast4"></div>
+</div><!-- #mod4 -->
+
+<script>
+// ══════════════════════════════════════════════════
+// M4 — DEBT ANALYSER ENGINE v2.8
+// ══════════════════════════════════════════════════
+
+// ── HELPERS ──
+function fmtC(n){if(n>=10000000)return '₹'+(n/10000000).toFixed(2)+'Cr';if(n>=100000)return '₹'+(n/100000).toFixed(2)+'L';if(n>=1000)return '₹'+(n/1000).toFixed(1)+'K';return '₹'+Math.round(n);}
+function m4Toast(msg){var t=document.getElementById('toast4');if(t){t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2400);}}
+
+// ── TAB SWITCHER ──
+var m4ActiveTab='emi';
+function m4ShowTab(tab,el){
+  document.querySelectorAll('.m4-tab-content').forEach(function(t){t.style.display='none';});
+  document.querySelectorAll('.m4-tab').forEach(function(t){t.classList.remove('act');});
+  document.getElementById('m4tab-'+tab).style.display='block';
+  if(el)el.classList.add('act');
+  m4ActiveTab=tab;
+  if(tab==='goodbad')renderDebtTypes();
+  if(tab==='sebi')renderSebiTools();
+}
+
+// ── PROFILE BANNER ──
+function m4LoadProfile(){
+  var cv=JSON.parse(localStorage.getItem('cp_canvas')||'{}');
+  if(!cv.lifeStage)return;
+  var LS={school:'School Student',college:'College Student',young_adult:'Young Adult',first_earner:'First Time Earner',professional:'Professional',homemaker:'Homemaker',thirties:'Thirties',forties:'Forties',pre_retire:'Pre-Retirement',post_retire:'Post-Retirement',senior65:'65 Plus',senior75:'75 Plus'};
+  var banner=document.getElementById('m4ProfileBanner');
+  var text=document.getElementById('m4ProfileText');
+  if(banner&&text){
+    banner.style.display='flex';
+    var advice={school:'Focus: Build emergency fund first. Avoid all consumer debt.',college:'Focus: Education loan is the only good debt at this stage. Avoid credit cards.',young_adult:'Focus: DTI below 30%. Do not take personal loans.',first_earner:'Focus: Zero credit card debt. Home loan when DTI allows.',thirties:'Focus: Aggressive home loan prepayment. Clear all bad debt by 40.',forties:'Focus: Become debt-free before retirement. Prepay aggressively.',pre_retire:'Focus: Enter retirement with zero debt — non-negotiable.',post_retire:'Focus: No new debt. Fixed income should not service debt.',professional:'Focus: Home loan only. Avoid lifestyle loans.',homemaker:'Focus: Joint home loan. Understand your EMI exposure.'};
+    text.innerHTML='<strong>'+(LS[cv.lifeStage]||cv.lifeStage)+' Profile:</strong> '+(advice[cv.lifeStage]||'Manage debt intelligently — DTI below 30%.');
+  }
+}
+
+// ── 1. EMI CALCULATOR ──
+function calcEMI(){
+  var P=parseFloat(document.getElementById('emiAmount').value)||0;
+  var rAnn=parseFloat(document.getElementById('emiRate').value)||0;
+  var yrs=parseFloat(document.getElementById('emiTenure').value)||0;
+  var type=document.getElementById('emiType').value;
+  if(!P||!rAnn||!yrs)return;
+  var r=rAnn/12/100, n=yrs*12;
+  var emi=P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+  var total=emi*n;
+  var interest=total-P;
+  var intPct=(interest/P*100).toFixed(1);
+  var pBar=Math.round(P/total*100), iBar=100-pBar;
+  document.getElementById('emiMonthly').textContent=fmtC(emi);
+  document.getElementById('emiTotal').textContent=fmtC(total);
+  document.getElementById('emiInterest').textContent=fmtC(interest);
+  document.getElementById('emiInterestPct').textContent=intPct+'%';
+  document.getElementById('emiPrincipalBar').style.width=pBar+'%';
+  document.getElementById('emiInterestBar').style.width=iBar+'%';
+  document.getElementById('emiPrincipalVal').textContent=fmtC(P);
+  document.getElementById('emiInterestVal').textContent=fmtC(interest);
+  // Insight
+  var insights={home:'Home loan interest is tax-deductible under Section 24(b) — up to ₹2L per year. This partially offsets the interest cost.',car:'Car is a depreciating asset. The car loses value while you pay interest. Avoid long tenures.',personal:'Personal loan at 15%+ is expensive debt. Repay as fast as possible — treat it like a fire.',education:'Education loan interest is deductible under Section 80E for 8 years — the only loan with no upper deduction limit.',business:'Business loan interest is fully deductible as a business expense. Keep business and personal debt separate.'};
+  document.getElementById('emiInsight').innerHTML='<strong>Reality check:</strong> You borrowed '+fmtC(P)+' but will pay back '+fmtC(total)+'. The bank earns '+fmtC(interest)+' ('+intPct+'% of your loan) in interest. '+(insights[type]||'');
+  document.getElementById('emiResult').style.display='block';
+}
+
+// ── 2. DTI ──
+function calcDTI(){
+  var inc=parseFloat(document.getElementById('dtiIncome').value)||0;
+  var emi=parseFloat(document.getElementById('dtiEMI').value)||0;
+  if(!inc||!emi)return;
+  var dti=emi/inc*100;
+  var color=dti<30?'#059669':dti<50?'#D97706':'#DC2626';
+  var status=dti<30?'🟢 Healthy':'⚠️ Caution — getting stretched':'🔴 Danger zone';
+  if(dti>=50)status='🔴 Danger zone';
+  else if(dti>=30)status='⚠️ Caution — getting stretched';
+  document.getElementById('dtiPct').textContent=dti.toFixed(1)+'%';
+  document.getElementById('dtiPct').style.color=color;
+  document.getElementById('dtiFill').style.width=Math.min(dti,100)+'%';
+  document.getElementById('dtiFill').style.background=color;
+  document.getElementById('dtiStatus').innerHTML='<span class="m4-status-pill" style="background:'+color+'22;color:'+color+'">'+status+'</span>';
+  var surplus=inc-emi;
+  var safe=inc*0.3;
+  document.getElementById('dtiInsight').innerHTML=
+    'Monthly surplus after EMIs: <strong>'+fmtC(surplus)+'</strong><br>'+
+    'Maximum healthy EMI (30% of income): <strong>'+fmtC(safe)+'</strong><br>'+
+    (dti>30?'You could reduce EMI by <strong>'+fmtC(emi-safe)+'</strong> to reach the 30% healthy zone.':'Your debt load is well managed. Headroom for additional loan: <strong>'+fmtC(safe-emi)+'/month</strong>.');
+  document.getElementById('dtiResult').style.display='block';
+}
+
+// ── 3. GOOD vs BAD DEBT ──
+var DEBT_TYPES=[
+  {icon:'🏠',name:'Home Loan',rate:'8.5–9.5% p.a.',verdict:'GOOD DEBT',verdictColor:'#059669',verdictBg:'#ECFDF5',
+   desc:'Buying an appreciating asset. Tax benefits on principal (80C) and interest (Sec 24b ₹2L/yr). Builds long-term equity. Forced savings mechanism.',
+   notes:'Keep tenure as short as you can manage. Prepay aggressively. Avoid top-ups for consumption.'},
+  {icon:'🎓',name:'Education Loan',rate:'8–11% p.a.',verdict:'GOOD DEBT',verdictColor:'#059669',verdictBg:'#ECFDF5',
+   desc:'Investing in your own income-generating capacity. Interest deductible under Section 80E — no upper limit, for 8 years. Returns depend on how you use the degree.',
+   notes:'Repay within 5–7 years of first job. Never defer beyond the moratorium period.'},
+  {icon:'🚗',name:'Car Loan',rate:'8.5–10% p.a.',verdict:'ACCEPTABLE',verdictColor:'#D97706',verdictBg:'#FFFBEB',
+   desc:'Depreciating asset — the car loses 15–20% value in Year 1 alone. No tax benefit. But sometimes necessary for livelihood or logistics.',
+   notes:'Keep tenure maximum 3–4 years. Down payment 30%+. Avoid for status. Never for a luxury car on EMI.'},
+  {icon:'💼',name:'Business Loan',rate:'12–18% p.a.',verdict:'CONTEXT-BASED',verdictColor:'#D97706',verdictBg:'#FFFBEB',
+   desc:'Good debt if the business ROI exceeds the loan rate. Bad debt if used for working capital of a struggling business. Fully tax-deductible as business expense.',
+   notes:'Clear benchmark: business must generate 2x the loan rate in return. If not, the debt is destroying value.'},
+  {icon:'💰',name:'Personal Loan',rate:'11–18% p.a.',verdict:'BAD DEBT',verdictColor:'#DC2626',verdictBg:'#FEF2F2',
+   desc:'Pure consumption debt. No asset created. No tax benefit. Highest rate among secured loans. Used for weddings, holidays, gadgets — all depreciating or zero-value.',
+   notes:'The only acceptable use: emergency when no other option. Clear it at maximum speed. Never rollover.'},
+  {icon:'💳',name:'Credit Card (Revolving)',rate:'36–42% p.a.',verdict:'WORST DEBT',verdictColor:'#7F1D1D',verdictBg:'#FEF2F2',
+   desc:'The most expensive debt in the Indian financial system. 3–3.5% per month = 42% per year. Minimum payment trap can keep you indebted for a decade on a small balance.',
+   notes:'Rule: Never carry a credit card balance. Pay in full every month or do not use the card. Cash advance is even worse — fee + interest from Day 1.'},
+  {icon:'💎',name:'Gold Loan',rate:'8–12% p.a.',verdict:'CAUTION',verdictColor:'#D97706',verdictBg:'#FFFBEB',
+   desc:'Secured against gold. Lower rate than personal loan. Acceptable for short-term emergency. Risk: if you cannot repay, you lose your gold.',
+   notes:'Use only for genuine emergencies. Repay within 12 months. Never use for consumption or speculation.'},
+];
+
+function renderDebtTypes(){
+  var container=document.getElementById('m4DebtTypes');
+  if(!container||container.innerHTML!=='')return;
+  container.innerHTML=DEBT_TYPES.map(function(d){
+    return '<div class="m4-debt-type">'+
+      '<div class="m4-debt-type-hdr">'+
+        '<div class="m4-debt-icon">'+d.icon+'</div>'+
+        '<div style="flex:1">'+
+          '<div class="m4-debt-name">'+d.name+'</div>'+
+          '<div style="font-size:12px;color:#6B7280">Interest: <strong>'+d.rate+'</strong></div>'+
+        '</div>'+
+        '<div class="m4-debt-rate" style="background:'+d.verdictBg+';color:'+d.verdictColor+'">'+d.verdict+'</div>'+
+      '</div>'+
+      '<div class="m4-debt-desc">'+d.desc+'</div>'+
+      '<div class="m4-insight" style="background:'+d.verdictBg+';border-color:'+d.verdictColor+'33;color:'+d.verdictColor+';margin-top:8px">'+
+        '<strong>Key rule:</strong> '+d.notes+
+      '</div>'+
+    '</div>';
+  }).join('');
+}
+
+// ── 4. PAYOFF STRATEGY ──
+var m4Loans=[];
+var m4Strategy='avalanche';
+
+function m4SetStrategy(s){
+  m4Strategy=s;
+  document.getElementById('avalancheTab').classList.toggle('act',s==='avalanche');
+  document.getElementById('snowballTab').classList.toggle('act',s==='snowball');
+  var exp=document.getElementById('strategyExplain');
+  if(s==='avalanche'){
+    exp.innerHTML='<strong>🏔️ Avalanche Method:</strong> Pay minimums on all loans. Throw every extra rupee at the <strong>highest interest rate loan first</strong>. Mathematically optimal — saves the most money in total interest paid. Requires discipline.';
+  } else {
+    exp.innerHTML='<strong>⛄ Snowball Method:</strong> Pay minimums on all loans. Throw every extra rupee at the <strong>smallest balance loan first</strong>. Psychologically powerful — you clear loans faster, building momentum. You may pay slightly more total interest but you stay motivated.';
+  }
+  m4CalcPayoff();
+}
+
+function m4AddLoan(){
+  var name=document.getElementById('loanName').value.trim()||'Loan '+(m4Loans.length+1);
+  var bal=parseFloat(document.getElementById('loanBal').value)||0;
+  var rate=parseFloat(document.getElementById('loanRate').value)||0;
+  var emi=parseFloat(document.getElementById('loanEMI').value)||0;
+  if(!bal||!rate||!emi){m4Toast('Fill name, balance, rate and EMI ☝️');return;}
+  m4Loans.push({name:name,bal:bal,rate:rate,emi:emi,id:Date.now()});
+  renderLoanList();
+  ['loanName','loanBal','loanRate','loanEMI'].forEach(function(id){document.getElementById(id).value='';});
+  m4CalcPayoff();
+}
+
+function m4RemoveLoan(id){
+  m4Loans=m4Loans.filter(function(l){return l.id!==id;});
+  renderLoanList();m4CalcPayoff();
+}
+
+function renderLoanList(){
+  var c=document.getElementById('m4LoanList');
+  if(!m4Loans.length){c.innerHTML='';return;}
+  c.innerHTML=m4Loans.map(function(l){
+    return '<div class="m4-loan-row">'+
+      '<div>'+
+        '<div class="m4-loan-row-name">'+l.name+'</div>'+
+        '<div class="m4-loan-row-rate">'+l.rate+'% p.a. · EMI '+fmtC(l.emi)+'/mo</div>'+
+      '</div>'+
+      '<div class="m4-loan-row-bal">'+fmtC(l.bal)+'</div>'+
+      '<button class="m4-remove-btn" onclick="m4RemoveLoan('+l.id+')">✕</button>'+
+    '</div>';
+  }).join('');
+}
+
+function m4CalcPayoff(){
+  if(!m4Loans.length){document.getElementById('m4PayoffResult').style.display='none';return;}
+  var extra=parseFloat(document.getElementById('extraPayment').value)||0;
+  // Sort loans by strategy
+  var sorted=m4Loans.slice().sort(function(a,b){
+    return m4Strategy==='avalanche'?(b.rate-a.rate):(a.bal-b.bal);
+  });
+  // Simulate payoff
+  var balances=sorted.map(function(l){return l.bal;});
+  var minEMIs=sorted.map(function(l){return l.emi;});
+  var rates=sorted.map(function(l){return l.rate/12/100;});
+  var totalInterest=0, months=0, maxMonths=600;
+  var extraPool=extra;
+  while(balances.some(function(b){return b>0;})&&months<maxMonths){
+    months++;
+    extraPool=extra;
+    // Apply interest, then payment
+    for(var i=0;i<balances.length;i++){
+      if(balances[i]<=0)continue;
+      balances[i]+=balances[i]*rates[i];
+      var pay=Math.min(minEMIs[i],balances[i]);
+      balances[i]-=pay;
+      totalInterest+=balances[i]*rates[i]; // approx
+    }
+    // Apply extra to first non-zero loan (sorted by strategy)
+    for(var i=0;i<balances.length;i++){
+      if(balances[i]>0&&extraPool>0){
+        var apply=Math.min(extraPool,balances[i]);
+        balances[i]-=apply;
+        extraPool-=apply;
+        break;
+      }
+    }
+    // Redirect cleared loan minimums
+    for(var i=0;i<balances.length;i++){
+      if(balances[i]<=0&&balances[i]>-0.01){balances[i]=0;}
+    }
+  }
+  var yrs=Math.floor(months/12), mos=months%12;
+  var totalMin=m4Loans.reduce(function(s,l){return s+l.emi;},0);
+  var html='<div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px">'+
+    '<div class="m4-result-box"><div class="m4-result-val" style="color:#DC2626">'+yrs+'yr '+mos+'mo</div><div class="m4-result-lbl">Time to Debt-Free</div></div>'+
+    '<div class="m4-result-box"><div class="m4-result-val" style="color:#D97706">'+fmtC(totalMin+extra)+'/mo</div><div class="m4-result-lbl">Total Monthly Payment</div></div>'+
+  '</div>'+
+  '<div style="font-size:12px;color:#374151;line-height:1.8">'+
+    '<strong>Payoff order ('+m4Strategy+'):</strong><br>'+
+    sorted.map(function(l,i){return (i+1)+'. '+l.name+' — '+l.rate+'% — '+fmtC(l.bal);}).join('<br>')+
+  '</div>'+
+  '<div class="m4-insight" style="margin-top:8px">'+
+    (extra>0?'Adding <strong>'+fmtC(extra)+'/month</strong> extra accelerates your payoff significantly. Every extra rupee goes directly to principal.':'Add an extra monthly payment above to see how fast you can become debt-free.')+
+  '</div>';
+  document.getElementById('m4PayoffContent').innerHTML=html;
+  document.getElementById('m4PayoffResult').style.display='block';
+}
+
+// ── 5. CREDIT CARD TRAP ──
+function calcCC(){
+  var bal=parseFloat(document.getElementById('ccBalance').value)||0;
+  var mRate=parseFloat(document.getElementById('ccRate').value)||3.5;
+  var minPct=parseFloat(document.getElementById('ccMinPct').value)||5;
+  if(!bal)return;
+  var r=mRate/100;
+  var b=bal,months=0,totalPaid=0,maxM=1200;
+  while(b>0.5&&months<maxM){
+    b+=b*r;
+    var pay=Math.max(b*minPct/100,500);
+    pay=Math.min(pay,b);
+    totalPaid+=pay;b-=pay;months++;
+  }
+  var totalInterest=totalPaid-bal;
+  var yrs=(months/12).toFixed(1);
+  document.getElementById('ccMonths').textContent=months+'mo';
+  document.getElementById('ccYears').textContent=yrs+'yrs';
+  document.getElementById('ccTotalPaid').textContent=fmtC(totalPaid);
+  document.getElementById('ccInterestPaid').textContent=fmtC(totalInterest);
+  document.getElementById('ccInsight').innerHTML=
+    'You owe <strong>'+fmtC(bal)+'</strong>. Paying only the minimum, you will repay <strong>'+fmtC(totalPaid)+'</strong> over <strong>'+yrs+' years</strong>. The bank earns <strong>'+fmtC(totalInterest)+'</strong> — '+(totalInterest/bal*100).toFixed(0)+'% of your original balance — in pure interest.';
+
+  // Build timeline visualiser
+  var visRows='';
+  var b2=bal,m2=0,paid2=0;
+  var milestones=[3,6,12,24,36,48,60];
+  milestones.forEach(function(mo){
+    var bTmp=bal;
+    for(var i=0;i<mo&&bTmp>0.5;i++){bTmp+=bTmp*r;var p=Math.max(bTmp*minPct/100,500);bTmp-=Math.min(p,bTmp);}
+    var pct=Math.min(100,bTmp/bal*100);
+    visRows+='<div class="m4-cc-yr-row">'+
+      '<div class="m4-cc-yr-lbl">'+mo+'mo</div>'+
+      '<div class="m4-cc-yr-bar-wrap"><div class="m4-cc-yr-bar" style="width:'+pct+'%"></div></div>'+
+      '<div class="m4-cc-yr-val">'+fmtC(bTmp)+'</div>'+
+    '</div>';
+  });
+  document.getElementById('ccVis').innerHTML='<div class="m4-cc-vis-title">Remaining Balance Over Time (Min Payment Only)</div><div class="m4-cc-timeline">'+visRows+'</div>';
+
+  // Fixed payment comparison
+  var fixedAmounts=[Math.round(bal*0.05/100)*100+2000, Math.round(bal*0.1/100)*100+2000];
+  var fixedHTML='';
+  [bal*0.05, bal*0.10, bal*0.15].forEach(function(fp){
+    fp=Math.max(fp,1000);
+    var b3=bal,m3=0,paid3=0;
+    while(b3>0.5&&m3<maxM){b3+=b3*r;var p=Math.min(fp,b3);paid3+=p;b3-=p;m3++;}
+    fixedHTML+='<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid #A7F3D0;font-size:12px">'+
+      '<span style="color:#374151">Pay <strong>'+fmtC(fp)+'</strong>/month</span>'+
+      '<span style="color:#059669"><strong>'+Math.ceil(m3/12)+' years</strong> · saves '+fmtC(totalPaid-paid3)+'</span>'+
+    '</div>';
+  });
+  document.getElementById('ccFixed').innerHTML=fixedHTML+'<div style="font-size:12px;color:#065F46;margin-top:6px">The faster you pay, the more you save. Every extra rupee goes directly to principal.</div>';
+
+  document.getElementById('ccResult').style.display='block';
+}
+
+// ── 6. PREPAYMENT ──
+function calcPrepay(){
+  var P=parseFloat(document.getElementById('ppLoan').value)||0;
+  var rAnn=parseFloat(document.getElementById('ppRate').value)||0;
+  var yrs=parseFloat(document.getElementById('ppTenure').value)||0;
+  var extra=parseFloat(document.getElementById('ppExtra').value)||0;
+  var lump=parseFloat(document.getElementById('ppLump').value)||0;
+  if(!P||!rAnn||!yrs)return;
+  var r=rAnn/12/100, n=yrs*12;
+  var emi=P*r*Math.pow(1+r,n)/(Math.pow(1+r,n)-1);
+  var origInterest=emi*n-P;
+
+  function simLoan(principal,rate,baseEMI,extraMonthly,lumpSum){
+    var b=principal,m=0,interest=0;
+    if(lumpSum>0&&b>lumpSum){b-=lumpSum;}
+    while(b>0.5&&m<n*3){
+      var iCharge=b*rate;
+      interest+=iCharge;
+      b+=iCharge;
+      var pay=Math.min(baseEMI+extraMonthly,b);
+      b-=pay;m++;
+    }
+    return {months:m,interest:interest};
+  }
+
+  var orig=simLoan(P,r,emi,0,0);
+  var withPrepay=simLoan(P,r,emi,extra,lump);
+  var monthsSaved=orig.months-withPrepay.months;
+  var interestSaved=origInterest-withPrepay.interest;
+  var yrsSaved=Math.floor(monthsSaved/12),mosSaved=monthsSaved%12;
+  var newYrs=Math.floor(withPrepay.months/12),newMos=withPrepay.months%12;
+
+  document.getElementById('ppYearsSaved').textContent=yrsSaved+'yr '+mosSaved+'mo';
+  document.getElementById('ppInterestSaved').textContent=fmtC(Math.max(0,interestSaved));
+  document.getElementById('ppNewTenure').textContent=newYrs+'yr '+newMos+'mo';
+  document.getElementById('ppOrigInterest').textContent=fmtC(origInterest);
+  document.getElementById('ppInsight').innerHTML=
+    'Original loan: <strong>'+fmtC(P)+'</strong> at <strong>'+rAnn+'%</strong> for <strong>'+yrs+' years</strong><br>'+
+    'With prepayment of '+(extra>0?fmtC(extra)+'/month':'')+(lump>0?(extra>0?' + ':'')+fmtC(lump)+' lump sum':'')+
+    ': you save <strong>'+fmtC(Math.max(0,interestSaved))+'</strong> and finish <strong>'+(yrsSaved>0?yrsSaved+' years ':'')+mosSaved+' months early</strong>.';
+  document.getElementById('ppResult').style.display='block';
+}
+
+// ── 7. SEBI TOOLS ──
+var SEBI_TOOLS=[
+  {name:'EMI Calculator',desc:'Calculate loan EMI — principal, rate, tenure. Same as Tab 1 above.', link:'https://www.sebi.gov.in/'},
+  {name:'SIP Returns Calculator',desc:'Project SIP corpus growth over time. Helps set realistic return expectations.', link:'https://www.sebi.gov.in/'},
+  {name:'Goal Planning Calculator',desc:'How much to invest monthly to reach a specific goal in N years.', link:'https://www.sebi.gov.in/'},
+  {name:'Inflation Impact Calculator',desc:'Shows how inflation erodes purchasing power — used in compound interest section below.', link:'https://www.sebi.gov.in/'},
+  {name:'Risk Profiler',desc:'SEBI-guided risk tolerance assessment — determines appropriate asset allocation.', link:'https://www.sebi.gov.in/'},
+  {name:'Loan Comparison Tool',desc:'Compare two loans side by side — total cost, EMI, interest. Helps choose the cheaper loan.', link:'https://www.sebi.gov.in/'},
+];
+
+function renderSebiTools(){
+  var c=document.getElementById('m4SebiTools');
+  if(!c||c.innerHTML!=='')return;
+  c.innerHTML='<div class="m4-card">'+
+    '<div class="m4-card-title">🏛️ SEBI Registered Tools — What They Cover</div>'+
+    SEBI_TOOLS.map(function(t){
+      return '<div class="m4-sebi-tool">'+
+        '<div class="m4-sebi-tool-name">'+t.name+'</div>'+
+        '<div class="m4-sebi-tool-desc">'+t.desc+'</div>'+
+      '</div>';
+    }).join('')+
+    '<div style="font-size:12px;color:#6B7280;margin-top:10px;padding:10px;background:#EFF6FF;border-radius:8px">The mathematical equivalents of all SEBI tools are built into this Debt Analyser. The SEBI tools are available at sebi.gov.in/investors — use them for official reference.</div>'+
+  '</div>';
+}
+
+// ── Compound Interest ──
+function calcCI(){
+  var P=parseFloat(document.getElementById('ciPrincipal').value)||0;
+  var r=parseFloat(document.getElementById('ciRate').value)||0;
+  var y=parseFloat(document.getElementById('ciYears').value)||0;
+  var n=parseInt(document.getElementById('ciFreq').value)||12;
+  if(!P||!r||!y)return;
+  var A=P*Math.pow(1+r/100/n,n*y);
+  var gain=A-P;
+  var multiple=(A/P).toFixed(2);
+  var ear=(Math.pow(1+r/100/n,n)-1)*100;
+  document.getElementById('ciMaturity').textContent=fmtC(A);
+  document.getElementById('ciGain').textContent=fmtC(gain);
+  document.getElementById('ciMultiple').textContent=multiple+'x';
+  document.getElementById('ciXIRR').textContent=ear.toFixed(2)+'%';
+  document.getElementById('ciInsight').innerHTML=
+    '₹'+P.toLocaleString('en-IN')+' compounded at '+r+'% for '+y+' years = <strong>'+fmtC(A)+'</strong>. '+
+    'Your money multiplied <strong>'+multiple+'x</strong>. The effective annual rate with '+document.getElementById('ciFreq').options[document.getElementById('ciFreq').selectedIndex].text+' compounding is <strong>'+ear.toFixed(2)+'%</strong> vs stated '+r+'%.';
+  document.getElementById('ciResult').style.display='block';
+}
+
+// ── Rule of 72 ──
+function calcR72(){
+  var r=parseFloat(document.getElementById('r72Rate').value)||0;
+  if(!r)return;
+  var yrs=(72/r).toFixed(1);
+  var yrs4x=(yrs*2).toFixed(1);
+  document.getElementById('r72Years').textContent=yrs+' yrs';
+  document.getElementById('r72Rate4x').textContent=yrs4x+' yrs';
+  document.getElementById('r72Insight').innerHTML=
+    'At '+r+'%, your money doubles every <strong>'+yrs+' years</strong> and quadruples in <strong>'+yrs4x+' years</strong>.<br>'+
+    'Flip side — credit card debt at 42% doubles in <strong>'+(72/42).toFixed(1)+' years</strong>. A ₹1L credit card balance unpaid becomes ₹2L in just 1.7 years.';
+  document.getElementById('r72Result').style.display='block';
+}
+
+// ── Inflation ──
+function calcInflation(){
+  var A=parseFloat(document.getElementById('inflAmount').value)||0;
+  var r=parseFloat(document.getElementById('inflRate').value)||6;
+  var y=parseFloat(document.getElementById('inflYears').value)||0;
+  if(!A||!y)return;
+  var future=A/Math.pow(1+r/100,y);
+  var loss=A-future;
+  document.getElementById('inflFutureVal').textContent=fmtC(future);
+  document.getElementById('inflLoss').textContent=fmtC(loss);
+  document.getElementById('inflInsight').innerHTML=
+    'At '+r+'% inflation, your <strong>'+fmtC(A)+' today</strong> will only buy what <strong>'+fmtC(future)+'</strong> buys in '+y+' years. '+
+    'You silently lose <strong>'+fmtC(loss)+'</strong> in real purchasing power — without spending a rupee.';
+  document.getElementById('inflResult').style.display='block';
+}
+
+// ── MODULE SWITCHER ──
+function switchToM4(){
+  ['mod0','mod1','mod2','mod3','mod4'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.classList.remove('act');
+  });
+  document.getElementById('mod4').classList.add('act');
+  window.scrollTo(0,0);
+  m4LoadProfile();
+  m4SetStrategy('avalanche');
+}
+
+// Update all navbars to include M4
+document.addEventListener('DOMContentLoaded',function(){
+  // re-init strategy explain
+  m4SetStrategy('avalanche');
+  // Update all navbars
+  var nh='<button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>'+
+    '<button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button>'+
+    '<button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>'+
+    '<button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>';
+  ['#mod0 .bnav','#mod1 .bnav','#mod2 .bnav','#mod3 .bnav'].forEach(function(s){
+    var el=document.querySelector(s);if(el)el.innerHTML=nh;
+  });
+});
+
+// Patch existing switchers to also clear mod4
+var _sm3_orig=switchToM3;
+switchToM3=function(){var m=document.getElementById('mod4');if(m)m.classList.remove('act');_sm3_orig();};
+var _sm0_4=switchToM0;
+switchToM0=function(){var m=document.getElementById('mod4');if(m)m.classList.remove('act');_sm0_4();};
+</script>
+
+<script>
+// ══════════════════════════════════════════════════════
+// M4 SEBI-INSPIRED FINANCIAL TOOLS — ORIGINAL CODE
+// 20 calculators across 13 categories
+// Mathematical principles from SEBI investor education
+// Code, design, language: original — Cauvery Pulse
+// ══════════════════════════════════════════════════════
+
+var SEBI_CATS = [
+  {
+    id:'interest', title:'Interest Calculators', icon:'📐', color:'#1D4ED8',
+    tools:[
+      {id:'fv',    name:'Future Value',           desc:'What is your money worth in N years at a given rate?'},
+      {id:'rrr',   name:'Rate of Return',         desc:'What annual return did your investment actually earn?'},
+      {id:'bond',  name:'Bond Yield',             desc:'Calculate yield to maturity on a bond investment.'},
+    ]
+  },
+  {
+    id:'mf', title:'Mutual Fund Calculators', icon:'📈', color:'#059669',
+    tools:[
+      {id:'sip',      name:'SIP Calculator',       desc:'Monthly SIP → corpus at target date.'},
+      {id:'goalsip',  name:'Goal SIP',             desc:'Target corpus → how much SIP monthly?'},
+      {id:'lumpsum',  name:'Lump Sum Growth',      desc:'One-time investment growth over time.'},
+    ]
+  },
+  {
+    id:'tvm', title:'Time Value of Money', icon:'⏳', color:'#7C3AED',
+    tools:[
+      {id:'pv',       name:'Present Value',        desc:'What is a future amount worth today?'},
+      {id:'fci',      name:'Flexible Compounding', desc:'Compounding with variable contribution schedule.'},
+      {id:'incr',     name:'Increasing SIP',       desc:'SIP that grows by X% every year — realistic planning.'},
+    ]
+  },
+  {
+    id:'retire', title:'Retirement Planning', icon:'🧓', color:'#0D9488',
+    tools:[
+      {id:'retcorpus', name:'Retirement Corpus',   desc:'How much do you need to retire comfortably?'},
+      {id:'retincome', name:'Retirement Income',   desc:'Monthly income your corpus can generate for N years.'},
+    ]
+  },
+  {
+    id:'insurance', title:'Insurance Calculator', icon:'🛡️', color:'#DC2626',
+    tools:[
+      {id:'insyoung',  name:'Cover for Young Earner', desc:'How much life cover do you actually need?'},
+      {id:'insmarried',name:'Cover for Family',       desc:'Family protection — income replacement calculator.'},
+    ]
+  },
+  {
+    id:'goal', title:'Goal Planner', icon:'🎯', color:'#D97706',
+    tools:[
+      {id:'goalplanner',name:'Financial Goal',     desc:'Any goal → monthly investment needed from today.'},
+      {id:'assetalloc', name:'Asset Allocation',   desc:'Age-based equity/debt split recommendation.'},
+    ]
+  },
+  {
+    id:'special', title:'Special Calculators', icon:'✨', color:'#6D28D9',
+    tools:[
+      {id:'impact1',   name:'Impact of 1%',        desc:'How 1% extra return compounds to life-changing difference.'},
+      {id:'delay',     name:'Cost of Delay',        desc:'What does waiting 1 year to invest actually cost you?'},
+      {id:'networth',  name:'Net Worth',            desc:'Assets minus liabilities — your real financial picture.'},
+      {id:'annuity',   name:'Annuity Payout',       desc:'Corpus → fixed monthly income for a chosen period.'},
+      {id:'compound',  name:'Power of Compounding', desc:'Visual compounding growth — the 8th wonder of the world.'},
+    ]
+  },
+];
+
+// ── RENDER SEBI TOOL GRID ──
+function renderSebiTools(){
+  var c=document.getElementById('m4SebiTools');
+  if(!c)return;
+  c.innerHTML='';
+
+  // Grid of categories
+  var gridHTML='<div style="margin-bottom:14px">';
+  SEBI_CATS.forEach(function(cat){
+    gridHTML+='<div class="m4-card" style="margin-bottom:10px">'+
+      '<div class="m4-card-title" style="color:'+cat.color+'">'+cat.icon+' '+cat.title+'</div>'+
+      cat.tools.map(function(t){
+        return '<div onclick="showSebiTool(\''+t.id+'\')" style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;margin-bottom:7px;cursor:pointer;transition:all .15s" onmouseover="this.style.background=\''+cat.color+'18\';this.style.borderColor=\''+cat.color+'44\'" onmouseout="this.style.background=\'#F9FAFB\';this.style.borderColor=\'#E5E7EB\'">'+
+          '<div>'+
+            '<div style="font-size:13px;font-weight:600;color:#111827">'+t.name+'</div>'+
+            '<div style="font-size:11px;color:#9CA3AF;margin-top:2px">'+t.desc+'</div>'+
+          '</div>'+
+          '<span style="color:'+cat.color+';font-size:16px">›</span>'+
+        '</div>';
+      }).join('')+
+    '</div>';
+  });
+  gridHTML+='</div>';
+
+  // Tool workspace
+  gridHTML+='<div id="sebiToolWS" style="display:none"></div>';
+  c.innerHTML=gridHTML;
+}
+
+function showSebiTool(id){
+  var ws=document.getElementById('sebiToolWS');
+  if(!ws)return;
+  ws.style.display='block';
+  ws.scrollIntoView({behavior:'smooth',block:'start'});
+  var html=buildSebiTool(id);
+  ws.innerHTML='<div class="m4-card">'+
+    '<div style="display:flex;align-items:center;gap:8px;margin-bottom:14px">'+
+      '<button onclick="document.getElementById(\'sebiToolWS\').style.display=\'none\'" style="background:#F3F4F6;border:1px solid #E5E7EB;border-radius:8px;padding:5px 10px;font-size:13px;cursor:pointer">← Back</button>'+
+    '</div>'+
+    html+
+  '</div>';
+}
+
+function sebiInr(n){if(n>=10000000)return '₹'+(n/10000000).toFixed(2)+' Cr';if(n>=100000)return '₹'+(n/100000).toFixed(2)+' L';if(n>=1000)return '₹'+(n/1000).toFixed(1)+' K';return '₹'+Math.round(n);}
+
+function sebiResult(rows){
+  return '<div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:12px;padding:14px;margin-top:10px">'+
+    '<div style="font-size:10px;font-weight:700;color:#1D4ED8;text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px">Result</div>'+
+    '<div style="display:grid;grid-template-columns:repeat('+Math.min(rows.length,2)+',1fr);gap:8px">'+
+    rows.map(function(r){return '<div style="background:#fff;border:1px solid #BFDBFE;border-radius:10px;padding:10px;text-align:center"><div style="font-family:\'DM Mono\',monospace;font-size:17px;font-weight:700;color:'+( r.color||'#1D4ED8')+';margin-bottom:3px">'+r.val+'</div><div style="font-size:10px;color:#9CA3AF;text-transform:uppercase;letter-spacing:.5px">'+r.lbl+'</div></div>';}).join('')+
+    '</div>'+
+  '</div>';
+}
+
+function sebiInsight(text){
+  return '<div style="margin-top:10px;font-size:13px;color:#1E40AF;background:#EFF6FF;border-radius:10px;padding:10px 12px;line-height:1.8;border-left:3px solid #3B82F6">'+text+'</div>';
+}
+
+function buildSebiTool(id){
+  var tools={
+
+    // ─── FUTURE VALUE ───
+    fv:'<div class="m4-card-title">📐 Future Value Calculator</div>'+
+      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">What will your money be worth in N years? Accounts for regular contributions and compounding.</div>'+
+      sebiField('fvP','Present Value / Principal (₹)','e.g. 100000')+
+      sebiField('fvR','Annual Rate (%)','e.g. 12')+
+      sebiField('fvY','Years','e.g. 10')+
+      sebiField('fvC','Monthly Contribution (₹) — optional','e.g. 5000')+
+      '<button class="m4-btn" onclick="calcFV()">Calculate Future Value</button>'+
+      '<div id="fvResult"></div>',
+
+    // ─── RATE OF RETURN ───
+    rrr:'<div class="m4-card-title">📊 Rate of Return Calculator</div>'+
+      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">Find the actual annualised return your investment earned (CAGR).</div>'+
+      sebiField('rrrInv','Amount Invested (₹)','e.g. 500000')+
+      sebiField('rrrCurr','Current Value (₹)','e.g. 850000')+
+      sebiField('rrrY','Years Held','e.g. 5')+
+      '<button class="m4-btn" onclick="calcRRR()">Calculate CAGR</button>'+
+      '<div id="rrrResult"></div>',
+
+    // ─── BOND YIELD ───
+    bond:'<div class="m4-card-title">🏛️ Bond Yield Calculator</div>'+
+      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">Calculate yield to maturity (YTM) on a government bond or corporate bond.</div>'+
+      sebiField('bondFace','Face Value (₹)','e.g. 1000')+
+      sebiField('bondPrice','Market Price (₹)','e.g. 950')+
+      sebiField('bondCoupon','Annual Coupon Rate (%)','e.g. 7')+
+      sebiField('bondYears','Years to Maturity','e.g. 5')+
+      '<button class="m4-btn" onclick="calcBond()">Calculate YTM</button>'+
+      '<div id="bondResult"></div>',
+
+    // ─── SIP CALCULATOR ───
+    sip:'<div class="m4-card-title">📈 SIP Calculator</div>'+
+      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">How much will your monthly SIP grow to in N years?</div>'+
+      sebiField('sipAmt','Monthly SIP Amount (₹)','e.g. 5000')+
+      sebiField('sipR','Expected Annual Return (%)','e.g. 12')+
+      sebiField('sipY','Investment Period (Years)','e.g. 20')+
+      '<button class="m4-btn" onclick="calcSIP()">Calculate SIP Corpus</button>'+
+      '<div id="sipResult"></div>',
+
+    // ─── GOAL SIP ───
+    goalsip:'<div class="m4-card-title">🎯 Goal SIP Calculator</div>'+
+      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">You have a target. How much SIP monthly to reach it?</div>'+
+      sebiField('gsTarget','Target Amount (₹)','e.g. 5000000')+
+      sebiField('gsR','Expected Annual Return (%)','e.g. 12')+
+      sebiField('gsY','Years Available','e.g. 15')+
+      '<button class="m4-btn" onclick="calcGoalSIP()">Calculate Required SIP</button>'+
+      '<div id="gsResult"></div>',
+
+    // ─── LUMP SUM ───
+    lumpsum:'<div class="m4-card-title">💰 Lump Sum Growth</div>'+
+      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">One-time investment growth projection.</div>'+
+      sebiField('lsAmt','Investment Amount (₹)','e.g. 1000000')+
+      sebiField('lsR','Expected Annual Return (%)','e.g. 12')+
+      sebiField('lsY','Years','e.g. 10')+
+      '<button class="m4-btn" onclick="calcLS()">Calculate Growth</button>'+
+      '<div id="lsResult"></div>',
+
+    // ─── PRESENT VALUE ───
+    pv:'<div class="m4-card-title">⏳ Present Value Calculator</div>'+
+      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">What is a future amount worth in today\'s money? Used in bond pricing, pension valuation, and annuity planning.</div>'+
+      sebiField('pvFV','Future Value / Amount (₹)','e.g. 1000000')+
+      sebiField('pvR','Discount Rate / Return (%)','e.g. 8')+
+      sebiField('pvY','Years Away','e.g. 10')+
+      '<button class="m4-btn" onclick="calcPV()">Calculate Present Value</button>'+
+      '<div id="pvResult"></div>',
+
+    // ─── FLEXIBLE COMPOUNDING ───
+    fci:'<div class="m4-card-title">⚙️ Flexible Compound Interest</div>'+
+      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">Compound interest with your choice of compounding frequency — annual, quarterly, monthly, daily.</div>'+
+      sebiField('fciP','Principal (₹)','e.g. 200000')+
+      sebiField('fciR','Annual Rate (%)','e.g. 8.5')+
+      sebiField('fciY','Years','e.g. 5')+
+      '<div class="m4-label">Compounding Frequency</div>'+
+      '<select class="m4-select" id="fciFreq">'+
+        '<option value="1">Annual (1x/year)</option>'+
+        '<option value="2">Semi-annual (2x/year)</option>'+
+        '<option value="4" selected>Quarterly (4x/year)</option>'+
+        '<option value="12">Monthly (12x/year)</option>'+
+        '<option value="365">Daily (365x/year)</option>'+
+      '</select>'+
+      '<button class="m4-btn" onclick="calcFCI()">Calculate</button>'+
+      '<div id="fciResult"></div>',
+
+    // ─── INCREASING SIP ───
+    incr:'<div class="m4-card-title">📊 Increasing SIP Calculator</div>'+
+      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">Your SIP grows by X% every year as your salary grows. More realistic than fixed SIP assumption.</div>'+
+      sebiField('incrSIP','Starting Monthly SIP (₹)','e.g. 5000')+
+      sebiField('incrIncrease','Annual SIP Increase (%)','e.g. 10')+
+      sebiField('incrR','Expected Return (%)','e.g. 12')+
+      sebiField('incrY','Years','e.g. 20')+
+      '<button class="m4-btn" onclick="calcIncrSIP()">Calculate Corpus</button>'+
+      '<div id="incrResult"></div>',
+
+    // ─── RETIREMENT CORPUS ───
+    retcorpus:'<div class="m4-card-title">🧓 Retirement Corpus Calculator</div>'+
+      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">How much do you need to retire comfortably — accounting for inflation and life expectancy?</div>'+
+      sebiField('rcAge','Current Age','e.g. 35')+
+      sebiField('rcRetire','Retirement Age','e.g. 60')+
+      sebiField('rcMonthly','Monthly Expenses Today (₹)','e.g. 50000')+
+      sebiField('rcLife','Expected Life to (Age)','e.g. 85')+
+      sebiField('rcInfl','Inflation Rate (%)','e.g. 6')+
+      sebiField('rcReturn','Post-retirement Return (%)','e.g. 7')+
+      '<button class="m4-btn" onclick="calcRetCorpus()">Calculate Corpus Needed</button>'+
+      '<div id="rcResult"></div>',
+
+    // ─── RETIREMENT INCOME ───
+    retincome:'<div class="m4-card-title">💵 Retirement Income Calculator</div>'+
+      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">You have a corpus. How much monthly income can it generate for N years?</div>'+
+      sebiField('riCorpus','Retirement Corpus (₹)','e.g. 20000000')+
+      sebiField('riReturn','Annual Return on Corpus (%)','e.g. 7')+
+      sebiField('riYears','Years of Income Needed','e.g. 25')+
+      '<button class="m4-btn" onclick="calcRetIncome()">Calculate Monthly Income</button>'+
+      '<div id="riResult"></div>',
+
+    // ─── INSURANCE YOUNG EARNER ───
+    insyoung:'<div class="m4-card-title">🛡️ Life Cover — Young Earner</div>'+
+      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">Income replacement method: how much life cover do you need to protect your family?</div>'+
+      sebiField('iyIncome','Annual Income (₹)','e.g. 1200000')+
+      sebiField('iyAge','Current Age','e.g. 28')+
+      sebiField('iyRetire','Retirement Age','e.g. 60')+
+      sebiField('iyLoans','Total Outstanding Loans (₹)','e.g. 500000')+
+      sebiField('iyGoals','Future Financial Goals (₹)','e.g. 2000000')+
+      '<button class="m4-btn" onclick="calcInsYoung()">Calculate Cover Needed</button>'+
+      '<div id="iyResult"></div>',
+
+    // ─── INSURANCE FAMILY ───
+    insmarried:'<div class="m4-card-title">👨‍👩‍👧 Family Protection Calculator</div>'+
+      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">Married with dependents — DIME method (Debt + Income + Mortgage + Education) for life cover.</div>'+
+      sebiField('imDebt','Total Debts / Loans (₹)','e.g. 3000000')+
+      sebiField('imIncome','Annual Income (₹)','e.g. 1500000')+
+      sebiField('imYears','Income Replacement Years','e.g. 20')+
+      sebiField('imEducation','Children Education Fund (₹)','e.g. 2000000')+
+      '<button class="m4-btn" onclick="calcInsFamily()">Calculate DIME Cover</button>'+
+      '<div id="imResult"></div>',
+
+    // ─── GOAL PLANNER ───
+    goalplanner:'<div class="m4-card-title">🎯 Financial Goal Planner</div>'+
+      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">Any goal — home, car, child\'s education, world tour. How much to invest monthly from today?</div>'+
+      sebiField('gpGoal','Goal Amount (₹)','e.g. 5000000')+
+      sebiField('gpYears','Years to Goal','e.g. 10')+
+      sebiField('gpInfl','Inflation Adjustment (%)','e.g. 6')+
+      sebiField('gpReturn','Expected Return (%)','e.g. 12')+
+      sebiField('gpAlready','Already Saved (₹) — if any','e.g. 0')+
+      '<button class="m4-btn" onclick="calcGoalPlan()">Calculate Monthly Investment</button>'+
+      '<div id="gpResult"></div>',
+
+    // ─── ASSET ALLOCATION ───
+    assetalloc:'<div class="m4-card-title">📊 Age-Based Asset Allocation</div>'+
+      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">SEBI guideline: 100 minus your age = equity %. Adjust for risk tolerance. Enter your details for a personalised split.</div>'+
+      sebiField('aaAge','Current Age','e.g. 35')+
+      sebiField('aaRisk','Risk Tolerance (1=Low, 5=High)','e.g. 3')+
+      '<button class="m4-btn" onclick="calcAssetAlloc()">Get Allocation</button>'+
+      '<div id="aaResult"></div>',
+
+    // ─── IMPACT OF 1% ───
+    impact1:'<div class="m4-card-title">✨ Impact of 1% Extra Return</div>'+
+      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">This is SEBI\'s most powerful educational tool. One extra percent return sounds small — but compounded over 20 years, it changes your life.</div>'+
+      sebiField('i1Monthly','Monthly Investment (₹)','e.g. 10000')+
+      sebiField('i1Years','Investment Period (Years)','e.g. 20')+
+      sebiField('i1Base','Base Return (%)','e.g. 11')+
+      '<button class="m4-btn" onclick="calcImpact1()">Show Impact of 1%</button>'+
+      '<div id="i1Result"></div>',
+
+    // ─── COST OF DELAY ───
+    delay:'<div class="m4-card-title">⏰ Cost of Delay Calculator</div>'+
+      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">What does waiting just 1 year — or 5 years — to start investing actually cost you in final corpus?</div>'+
+      sebiField('cdMonthly','Monthly Investment (₹)','e.g. 5000')+
+      sebiField('cdReturn','Expected Return (%)','e.g. 12')+
+      sebiField('cdTarget','Target Retirement Age','e.g. 60')+
+      sebiField('cdCurrentAge','Your Current Age','e.g. 30')+
+      '<button class="m4-btn" onclick="calcDelay()">Calculate Cost of Delay</button>'+
+      '<div id="cdResult"></div>',
+
+    // ─── NET WORTH ───
+    networth:'<div class="m4-card-title">💎 Net Worth Calculator</div>'+
+      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">Assets minus liabilities = your true financial picture. Track this number every year. Wealth is built when this grows consistently.</div>'+
+      '<div style="font-size:12px;font-weight:700;color:#059669;margin-bottom:8px;text-transform:uppercase;letter-spacing:.6px">Your Assets</div>'+
+      sebiField('nwCash','Cash + Savings Account + FD (₹)','e.g. 200000')+
+      sebiField('nwMF','Mutual Funds + Stocks (₹)','e.g. 500000')+
+      sebiField('nwPF','PF + PPF + NPS (₹)','e.g. 300000')+
+      sebiField('nwProperty','Property Market Value (₹)','e.g. 5000000')+
+      sebiField('nwGold','Gold Value (₹)','e.g. 200000')+
+      sebiField('nwOther','Other Assets (₹)','e.g. 0')+
+      '<div style="font-size:12px;font-weight:700;color:#DC2626;margin-bottom:8px;margin-top:4px;text-transform:uppercase;letter-spacing:.6px">Your Liabilities</div>'+
+      sebiField('nwHomeLoan','Home Loan Outstanding (₹)','e.g. 2500000')+
+      sebiField('nwCarLoan','Car Loan Outstanding (₹)','e.g. 300000')+
+      sebiField('nwPersonal','Personal Loans + CC Dues (₹)','e.g. 0')+
+      '<button class="m4-btn" onclick="calcNetWorth()">Calculate Net Worth</button>'+
+      '<div id="nwResult"></div>',
+
+    // ─── ANNUITY PAYOUT ───
+    annuity:'<div class="m4-card-title">💵 Annuity Payout Calculator</div>'+
+      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">You have a retirement corpus. How much monthly income can it generate for a fixed period at a given rate?</div>'+
+      sebiField('anCorpus','Corpus / Present Value (₹)','e.g. 10000000')+
+      sebiField('anRate','Annual Rate of Return (%)','e.g. 6.5')+
+      sebiField('anYears','Payout Period (Years)','e.g. 20')+
+      '<button class="m4-btn" onclick="calcAnnuity()">Calculate Monthly Payout</button>'+
+      '<div id="anResult"></div>',
+
+    // ─── POWER OF COMPOUNDING ───
+    compound:'<div class="m4-card-title">🌊 Power of Compounding</div>'+
+      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">Einstein called it the 8th wonder of the world. See how compounding transforms small amounts into large wealth over time.</div>'+
+      sebiField('pcMonthly','Monthly Investment (₹)','e.g. 5000')+
+      sebiField('pcRate','Annual Return (%)','e.g. 12')+
+      sebiField('pcYears','Investment Period (Years)','e.g. 30')+
+      '<button class="m4-btn" onclick="calcCompound()">Show Compounding Power</button>'+
+      '<div id="pcResult"></div>',
+  };
+
+  return tools[id]||'<div style="color:#9CA3AF;font-size:14px;padding:20px;text-align:center">Tool not found</div>';
+}
+
+function sebiField(id,label,placeholder){
+  return '<div class="m4-label">'+label+'</div>'+
+    '<input class="m4-input" type="number" id="'+id+'" placeholder="'+placeholder+'">';
+}
+
+// ══ CALCULATION FUNCTIONS ══
+
+function calcFV(){
+  var P=+document.getElementById('fvP').value||0;
+  var r=+document.getElementById('fvR').value/100||0;
+  var y=+document.getElementById('fvY').value||0;
+  var c=+document.getElementById('fvC').value||0;
+  if(!y||!r)return;
+  var fvLump=P*Math.pow(1+r,y);
+  var fvSIP=c>0?c*12*((Math.pow(1+r,y)-1)/r):0;
+  var total=fvLump+fvSIP;
+  document.getElementById('fvResult').innerHTML=
+    sebiResult([
+      {val:sebiInr(fvLump),lbl:'Lump Sum Growth',color:'#059669'},
+      {val:sebiInr(fvSIP),lbl:'SIP Growth',color:'#2563EB'},
+      {val:sebiInr(total),lbl:'Total Future Value',color:'#D97706'},
+      {val:(total/(P+c*12*y)).toFixed(2)+'x',lbl:'Wealth Multiplier',color:'#7C3AED'},
+    ])+
+    sebiInsight('Investing '+sebiInr(P)+(c>0?' + '+sebiInr(c)+'/mo':'')+' at '+((+document.getElementById('fvR').value)||0)+'% for '+y+' years grows to <strong>'+sebiInr(total)+'</strong>.');
+}
+
+function calcRRR(){
+  var inv=+document.getElementById('rrrInv').value||0;
+  var curr=+document.getElementById('rrrCurr').value||0;
+  var y=+document.getElementById('rrrY').value||0;
+  if(!inv||!curr||!y)return;
+  var cagr=(Math.pow(curr/inv,1/y)-1)*100;
+  var abs=(curr-inv)/inv*100;
+  document.getElementById('rrrResult').innerHTML=
+    sebiResult([
+      {val:cagr.toFixed(2)+'%',lbl:'CAGR (Annualised)',color:'#059669'},
+      {val:abs.toFixed(1)+'%',lbl:'Absolute Return',color:'#D97706'},
+      {val:sebiInr(curr-inv),lbl:'Total Gain',color:'#2563EB'},
+    ])+
+    sebiInsight('Your investment grew at <strong>'+cagr.toFixed(2)+'% per year</strong>. Compare this to Nifty 50\'s ~12% CAGR to assess performance.');
+}
+
+function calcBond(){
+  var F=+document.getElementById('bondFace').value||1000;
+  var P=+document.getElementById('bondPrice').value||0;
+  var c=+document.getElementById('bondCoupon').value/100||0;
+  var y=+document.getElementById('bondYears').value||0;
+  if(!P||!y)return;
+  // Approximate YTM = (Annual Coupon + (Face-Price)/N) / ((Face+Price)/2)
+  var coupon=F*c;
+  var ytm=((coupon+(F-P)/y)/((F+P)/2))*100;
+  var currentYield=(coupon/P)*100;
+  document.getElementById('bondResult').innerHTML=
+    sebiResult([
+      {val:ytm.toFixed(2)+'%',lbl:'Yield to Maturity (YTM)',color:'#059669'},
+      {val:currentYield.toFixed(2)+'%',lbl:'Current Yield',color:'#D97706'},
+      {val:sebiInr(coupon),lbl:'Annual Coupon',color:'#2563EB'},
+    ])+
+    sebiInsight(P<F?'Bond is trading at a <strong>discount</strong> — YTM > coupon rate. Good time to buy if you hold to maturity.':'Bond is trading at a <strong>premium</strong> — YTM < coupon rate. Factor this into your return calculation.');
+}
+
+function calcSIP(){
+  var m=+document.getElementById('sipAmt').value||0;
+  var r=+document.getElementById('sipR').value/12/100||0;
+  var n=+document.getElementById('sipY').value*12||0;
+  if(!m||!r||!n)return;
+  var corpus=m*(Math.pow(1+r,n)-1)/r*(1+r);
+  var invested=m*n;
+  document.getElementById('sipResult').innerHTML=
+    sebiResult([
+      {val:sebiInr(corpus),lbl:'Final Corpus',color:'#059669'},
+      {val:sebiInr(invested),lbl:'Total Invested',color:'#2563EB'},
+      {val:sebiInr(corpus-invested),lbl:'Wealth Gain',color:'#D97706'},
+      {val:((corpus-invested)/invested*100).toFixed(0)+'%',lbl:'Return on Investment',color:'#7C3AED'},
+    ])+
+    sebiInsight('Monthly SIP of <strong>'+sebiInr(m)+'</strong> for <strong>'+document.getElementById('sipY').value+' years</strong> at '+document.getElementById('sipR').value+'% creates <strong>'+sebiInr(corpus)+'</strong>. You invested '+sebiInr(invested)+' and wealth gain is <strong>'+sebiInr(corpus-invested)+'</strong>.');
+}
+
+function calcGoalSIP(){
+  var T=+document.getElementById('gsTarget').value||0;
+  var r=+document.getElementById('gsR').value/12/100||0;
+  var n=+document.getElementById('gsY').value*12||0;
+  if(!T||!r||!n)return;
+  var sip=T*r/(Math.pow(1+r,n)-1)/(1+r);
+  document.getElementById('gsResult').innerHTML=
+    sebiResult([
+      {val:sebiInr(sip)+'/mo',lbl:'Required Monthly SIP',color:'#DC2626'},
+      {val:sebiInr(sip*n),lbl:'Total Investment',color:'#2563EB'},
+      {val:sebiInr(T-sip*n),lbl:'Market Will Generate',color:'#059669'},
+    ])+
+    sebiInsight('To reach <strong>'+sebiInr(T)+'</strong> in '+document.getElementById('gsY').value+' years, invest <strong>'+sebiInr(sip)+'</strong> every month. The market generates the rest.');
+}
+
+function calcLS(){
+  var P=+document.getElementById('lsAmt').value||0;
+  var r=+document.getElementById('lsR').value/100||0;
+  var y=+document.getElementById('lsY').value||0;
+  if(!P||!y)return;
+  var A=P*Math.pow(1+r,y);
+  document.getElementById('lsResult').innerHTML=
+    sebiResult([
+      {val:sebiInr(A),lbl:'Future Value',color:'#059669'},
+      {val:sebiInr(A-P),lbl:'Total Gain',color:'#D97706'},
+      {val:(A/P).toFixed(2)+'x',lbl:'Money Multiplied',color:'#7C3AED'},
+    ])+
+    sebiInsight(sebiInr(P)+' invested as lump sum at '+document.getElementById('lsR').value+'% grows to <strong>'+sebiInr(A)+'</strong> in '+y+' years.');
+}
+
+function calcPV(){
+  var FV=+document.getElementById('pvFV').value||0;
+  var r=+document.getElementById('pvR').value/100||0;
+  var y=+document.getElementById('pvY').value||0;
+  if(!FV||!y)return;
+  var pv=FV/Math.pow(1+r,y);
+  document.getElementById('pvResult').innerHTML=
+    sebiResult([
+      {val:sebiInr(pv),lbl:'Present Value Today',color:'#059669'},
+      {val:sebiInr(FV-pv),lbl:'Inflation / Discount Impact',color:'#DC2626'},
+    ])+
+    sebiInsight('<strong>'+sebiInr(FV)+'</strong> received in '+y+' years is worth only <strong>'+sebiInr(pv)+'</strong> in today\'s money at '+document.getElementById('pvR').value+'% discount rate.');
+}
+
+function calcFCI(){
+  var P=+document.getElementById('fciP').value||0;
+  var r=+document.getElementById('fciR').value/100||0;
+  var y=+document.getElementById('fciY').value||0;
+  var n=+document.getElementById('fciFreq').value||4;
+  if(!P||!y)return;
+  var A=P*Math.pow(1+r/n,n*y);
+  var ear=(Math.pow(1+r/n,n)-1)*100;
+  document.getElementById('fciResult').innerHTML=
+    sebiResult([
+      {val:sebiInr(A),lbl:'Maturity Value',color:'#059669'},
+      {val:sebiInr(A-P),lbl:'Interest Earned',color:'#D97706'},
+      {val:ear.toFixed(3)+'%',lbl:'Effective Annual Rate',color:'#7C3AED'},
+    ])+
+    sebiInsight('With '+['','Annual','Semi-annual','','Quarterly','','','','','','','','Monthly'][n]||n+'x compounding, effective annual rate = <strong>'+ear.toFixed(3)+'%</strong> vs stated '+document.getElementById('fciR').value+'%.');
+}
+
+function calcIncrSIP(){
+  var s=+document.getElementById('incrSIP').value||0;
+  var inc=+document.getElementById('incrIncrease').value/100||0;
+  var r=+document.getElementById('incrR').value/100||0;
+  var y=+document.getElementById('incrY').value||0;
+  if(!s||!y)return;
+  var corpus=0,invested=0,monthly=s;
+  for(var yr=0;yr<y;yr++){
+    for(var mo=0;mo<12;mo++){
+      corpus=(corpus+monthly)*(1+r/12);
+      invested+=monthly;
+    }
+    monthly*=(1+inc);
+  }
+  document.getElementById('incrResult').innerHTML=
+    sebiResult([
+      {val:sebiInr(corpus),lbl:'Final Corpus',color:'#059669'},
+      {val:sebiInr(invested),lbl:'Total Invested',color:'#2563EB'},
+      {val:sebiInr(corpus-invested),lbl:'Wealth Gain',color:'#D97706'},
+      {val:sebiInr(monthly/12),lbl:'SIP in Final Year',color:'#7C3AED'},
+    ])+
+    sebiInsight('Starting at '+sebiInr(s)+'/mo and increasing '+document.getElementById('incrIncrease').value+'% yearly, your corpus grows to <strong>'+sebiInr(corpus)+'</strong> — significantly more than a flat SIP.');
+}
+
+function calcRetCorpus(){
+  var age=+document.getElementById('rcAge').value||0;
+  var retAge=+document.getElementById('rcRetire').value||60;
+  var monthly=+document.getElementById('rcMonthly').value||0;
+  var life=+document.getElementById('rcLife').value||85;
+  var infl=+document.getElementById('rcInfl').value/100||0.06;
+  var retReturn=+document.getElementById('rcReturn').value/100||0.07;
+  if(!age||!monthly)return;
+  var yearsToRetire=retAge-age;
+  var retireYears=life-retAge;
+  var monthlyAtRetire=monthly*Math.pow(1+infl,yearsToRetire);
+  var r=retReturn/12;
+  var n=retireYears*12;
+  var corpus=monthlyAtRetire*(1-Math.pow(1+r,-n))/r;
+  document.getElementById('rcResult').innerHTML=
+    sebiResult([
+      {val:sebiInr(corpus),lbl:'Corpus Needed at Retirement',color:'#DC2626'},
+      {val:sebiInr(monthlyAtRetire),lbl:'Monthly Expense at Retirement',color:'#D97706'},
+      {val:yearsToRetire+' years',lbl:'Years to Build',color:'#2563EB'},
+      {val:sebiInr(corpus/12/yearsToRetire),lbl:'Approx Monthly Investment Needed',color:'#059669'},
+    ])+
+    sebiInsight('Your ₹'+monthly.toLocaleString('en-IN')+'/mo expense today inflates to <strong>'+sebiInr(monthlyAtRetire)+'/mo</strong> at retirement. To fund '+retireYears+' years of this, you need <strong>'+sebiInr(corpus)+'</strong>.');
+}
+
+function calcRetIncome(){
+  var C=+document.getElementById('riCorpus').value||0;
+  var r=+document.getElementById('riReturn').value/12/100||0;
+  var n=+document.getElementById('riYears').value*12||0;
+  if(!C||!n)return;
+  var income=C*r*(1+r)/(Math.pow(1+r,n)-1)/Math.pow(1+r,-1);
+  document.getElementById('riResult').innerHTML=
+    sebiResult([
+      {val:sebiInr(income)+'/mo',lbl:'Monthly Income',color:'#059669'},
+      {val:sebiInr(income*12),lbl:'Annual Income',color:'#D97706'},
+      {val:sebiInr(income*n/12),lbl:'Total Withdrawn',color:'#2563EB'},
+    ])+
+    sebiInsight('A corpus of <strong>'+sebiInr(C)+'</strong> at '+document.getElementById('riReturn').value+'% generates <strong>'+sebiInr(income)+'/month</strong> for '+document.getElementById('riYears').value+' years before depleting.');
+}
+
+function calcInsYoung(){
+  var inc=+document.getElementById('iyIncome').value||0;
+  var age=+document.getElementById('iyAge').value||0;
+  var retire=+document.getElementById('iyRetire').value||60;
+  var loans=+document.getElementById('iyLoans').value||0;
+  var goals=+document.getElementById('iyGoals').value||0;
+  if(!inc||!age)return;
+  var incomeReplacement=inc*(retire-age);
+  var total=incomeReplacement+loans+goals;
+  document.getElementById('iyResult').innerHTML=
+    sebiResult([
+      {val:sebiInr(total),lbl:'Cover Needed',color:'#DC2626'},
+      {val:sebiInr(incomeReplacement),lbl:'Income Replacement',color:'#D97706'},
+      {val:sebiInr(Math.round(total/100000)*100000/1000)+'K/yr',lbl:'Approx Annual Premium at '+age,color:'#059669'},
+    ])+
+    sebiInsight('Income replacement method: '+sebiInr(inc)+' × '+(retire-age)+' years = '+sebiInr(incomeReplacement)+'. Add loans and goals. Total cover needed: <strong>'+sebiInr(total)+'</strong>. Buy term, not ULIP.');
+}
+
+function calcInsFamily(){
+  var debt=+document.getElementById('imDebt').value||0;
+  var inc=+document.getElementById('imIncome').value||0;
+  var y=+document.getElementById('imYears').value||20;
+  var edu=+document.getElementById('imEducation').value||0;
+  if(!inc)return;
+  var total=debt+inc*y+edu;
+  document.getElementById('imResult').innerHTML=
+    sebiResult([
+      {val:sebiInr(total),lbl:'DIME Cover Needed',color:'#DC2626'},
+      {val:sebiInr(debt),lbl:'Debt Component',color:'#D97706'},
+      {val:sebiInr(inc*y),lbl:'Income Replacement',color:'#2563EB'},
+      {val:sebiInr(edu),lbl:'Education Fund',color:'#7C3AED'},
+    ])+
+    sebiInsight('DIME method: Debt + Income×Years + Education = <strong>'+sebiInr(total)+'</strong>. This is your family\'s protection floor. Pure term insurance, not ULIP.');
+}
+
+function calcGoalPlan(){
+  var G=+document.getElementById('gpGoal').value||0;
+  var y=+document.getElementById('gpYears').value||0;
+  var infl=+document.getElementById('gpInfl').value/100||0;
+  var ret=+document.getElementById('gpReturn').value/100||0;
+  var saved=+document.getElementById('gpAlready').value||0;
+  if(!G||!y)return;
+  var inflatedGoal=G*Math.pow(1+infl,y);
+  var fvSaved=saved*Math.pow(1+ret,y);
+  var remaining=Math.max(0,inflatedGoal-fvSaved);
+  var r=ret/12; var n=y*12;
+  var sip=remaining*r/(Math.pow(1+r,n)-1)/(1+r);
+  document.getElementById('gpResult').innerHTML=
+    sebiResult([
+      {val:sebiInr(inflatedGoal),lbl:'Inflation-Adjusted Goal',color:'#DC2626'},
+      {val:sebiInr(sip)+'/mo',lbl:'Monthly SIP Needed',color:'#059669'},
+      {val:sebiInr(fvSaved),lbl:'Your Savings Will Grow To',color:'#D97706'},
+      {val:sebiInr(remaining),lbl:'Remaining to Fund',color:'#2563EB'},
+    ])+
+    sebiInsight('Your goal of '+sebiInr(G)+' inflates to <strong>'+sebiInr(inflatedGoal)+'</strong> in '+y+' years. Start a monthly SIP of <strong>'+sebiInr(sip)+'</strong> from today.');
+}
+
+function calcAssetAlloc(){
+  var age=+document.getElementById('aaAge').value||30;
+  var risk=+document.getElementById('aaRisk').value||3;
+  var baseEq=Math.max(0,Math.min(100,(100-age)+(risk-3)*5));
+  var debt=100-baseEq-10; var gold=10;
+  document.getElementById('aaResult').innerHTML=
+    sebiResult([
+      {val:baseEq+'%',lbl:'Equity',color:'#059669'},
+      {val:debt+'%',lbl:'Debt',color:'#2563EB'},
+      {val:gold+'%',lbl:'Gold',color:'#D97706'},
+    ])+
+    '<div style="background:#F9FAFB;border-radius:10px;padding:12px;margin-top:10px">'+
+    ['Equity: Nifty 50 Index Fund + Mid Cap MF','Debt: EPF + NPS + FD','Gold: Gold ETF (10% always)'].map(function(t){return '<div style="font-size:12px;color:#374151;padding:4px 0;border-bottom:1px solid #F3F4F6">'+t+'</div>';}).join('')+
+    '</div>'+
+    sebiInsight('At age '+age+' with risk level '+risk+': <strong>'+baseEq+'% equity</strong>. As you age, shift 1–2% from equity to debt every year. Review annually.');
+}
+
+function calcImpact1(){
+  var m=+document.getElementById('i1Monthly').value||0;
+  var y=+document.getElementById('i1Years').value||0;
+  var r1=+document.getElementById('i1Base').value/12/100||0;
+  var r2=r1+1/12/100;
+  if(!m||!y)return;
+  var n=y*12;
+  var c1=m*(Math.pow(1+r1,n)-1)/r1*(1+r1);
+  var c2=m*(Math.pow(1+r2,n)-1)/r2*(1+r2);
+  document.getElementById('i1Result').innerHTML=
+    sebiResult([
+      {val:sebiInr(c1),lbl:'At '+document.getElementById('i1Base').value+'%',color:'#2563EB'},
+      {val:sebiInr(c2),lbl:'At '+(+document.getElementById('i1Base').value+1)+'%',color:'#059669'},
+      {val:sebiInr(c2-c1),lbl:'Extra Wealth from 1% More',color:'#D97706'},
+      {val:((c2-c1)/c1*100).toFixed(1)+'%',lbl:'Improvement',color:'#DC2626'},
+    ])+
+    sebiInsight('One percent extra return generates <strong>'+sebiInr(c2-c1)+' extra wealth</strong> over '+y+' years. This is why low-cost index funds beat high-fee active funds so dramatically.');
+}
+
+function calcDelay(){
+  var m=+document.getElementById('cdMonthly').value||0;
+  var r=+document.getElementById('cdReturn').value/12/100||0;
+  var retire=+document.getElementById('cdTarget').value||60;
+  var age=+document.getElementById('cdCurrentAge').value||30;
+  if(!m||!age)return;
+  function sipCorpus(yrs){var n=yrs*12;return m*(Math.pow(1+r,n)-1)/r*(1+r);}
+  var c0=sipCorpus(retire-age);
+  var c1=sipCorpus(retire-age-1);
+  var c5=sipCorpus(retire-age-5);
+  document.getElementById('cdResult').innerHTML=
+    sebiResult([
+      {val:sebiInr(c0),lbl:'Start Today',color:'#059669'},
+      {val:sebiInr(c1),lbl:'Delay 1 Year',color:'#D97706'},
+      {val:sebiInr(c5),lbl:'Delay 5 Years',color:'#DC2626'},
+      {val:sebiInr(c0-c1),lbl:'Cost of 1 Year Delay',color:'#7C3AED'},
+    ])+
+    sebiInsight('Waiting just <strong>1 year</strong> costs you <strong>'+sebiInr(c0-c1)+'</strong> in final corpus. Waiting 5 years costs <strong>'+sebiInr(c0-c5)+'</strong>. Every month of delay is permanently lost compounding.');
+}
+
+function calcNetWorth(){
+  var assets=['nwCash','nwMF','nwPF','nwProperty','nwGold','nwOther'].reduce(function(s,id){return s+(+document.getElementById(id).value||0);},0);
+  var liab=['nwHomeLoan','nwCarLoan','nwPersonal'].reduce(function(s,id){return s+(+document.getElementById(id).value||0);},0);
+  var nw=assets-liab;
+  document.getElementById('nwResult').innerHTML=
+    sebiResult([
+      {val:sebiInr(assets),lbl:'Total Assets',color:'#059669'},
+      {val:sebiInr(liab),lbl:'Total Liabilities',color:'#DC2626'},
+      {val:sebiInr(nw),lbl:'Net Worth',color:nw>=0?'#059669':'#DC2626'},
+      {val:(liab/assets*100).toFixed(1)+'%',lbl:'Debt to Asset Ratio',color:liab/assets<0.5?'#D97706':'#DC2626'},
+    ])+
+    sebiInsight(nw>=0?'Your net worth is <strong>'+sebiInr(nw)+'</strong>. Track this annually — consistent growth means you are building real wealth.':'Net worth is <strong>negative</strong> — liabilities exceed assets. Priority: stop new debt, accelerate asset building.');
+}
+
+function calcAnnuity(){
+  var P=+document.getElementById('anCorpus').value||0;
+  var r=+document.getElementById('anRate').value/12/100||0;
+  var n=+document.getElementById('anYears').value*12||0;
+  if(!P||!n)return;
+  var pmt=P*r*(1+r)/(Math.pow(1+r,n)-1)/(1+r);
+  document.getElementById('anResult').innerHTML=
+    sebiResult([
+      {val:sebiInr(pmt)+'/mo',lbl:'Monthly Payout',color:'#059669'},
+      {val:sebiInr(pmt*12),lbl:'Annual Payout',color:'#D97706'},
+      {val:sebiInr(pmt*n/12),lbl:'Total Received',color:'#2563EB'},
+    ])+
+    sebiInsight('A corpus of <strong>'+sebiInr(P)+'</strong> at '+document.getElementById('anRate').value+'% generates <strong>'+sebiInr(pmt)+'</strong> monthly for '+document.getElementById('anYears').value+' years. This is the NPS annuity logic.');
+}
+
+function calcCompound(){
+  var m=+document.getElementById('pcMonthly').value||0;
+  var r=+document.getElementById('pcRate').value/12/100||0;
+  var y=+document.getElementById('pcYears').value||0;
+  if(!m||!y)return;
+  var bars='';
+  var maxC=0;
+  var milestones=[];
+  for(var yr=1;yr<=y;yr++){
+    var n=yr*12;
+    var c=m*(Math.pow(1+r,n)-1)/r*(1+r);
+    var inv=m*n;
+    if(yr===5||yr===10||yr===15||yr===20||yr===25||yr===30||yr===y)milestones.push({yr:yr,c:c,inv:inv});
+    if(c>maxC)maxC=c;
+  }
+  milestones.forEach(function(ms){
+    var barW=Math.round(ms.c/maxC*100);
+    var invW=Math.round(ms.inv/maxC*100);
+    bars+='<div style="margin-bottom:10px">'+
+      '<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px">'+
+        '<span style="color:#6B7280">Year '+ms.yr+'</span>'+
+        '<span style="color:#059669;font-weight:700">'+sebiInr(ms.c)+'</span>'+
+      '</div>'+
+      '<div style="background:#F3F4F6;border-radius:4px;height:10px;overflow:hidden;margin-bottom:2px">'+
+        '<div style="height:10px;border-radius:4px;background:linear-gradient(90deg,#2563EB,#059669);width:'+barW+'%"></div>'+
+      '</div>'+
+      '<div style="background:#F3F4F6;border-radius:4px;height:6px;overflow:hidden">'+
+        '<div style="height:6px;border-radius:4px;background:#E5E7EB;width:'+invW+'%"></div>'+
+      '</div>'+
+      '<div style="font-size:10px;color:#9CA3AF;margin-top:1px">Invested: '+sebiInr(ms.inv)+' · Gain: '+sebiInr(ms.c-ms.inv)+'</div>'+
+    '</div>';
+  });
+  var n=y*12;
+  var final=m*(Math.pow(1+r,n)-1)/r*(1+r);
+  var invested=m*n;
+  document.getElementById('pcResult').innerHTML=
+    sebiResult([
+      {val:sebiInr(final),lbl:'Final Corpus',color:'#059669'},
+      {val:sebiInr(invested),lbl:'Total Invested',color:'#2563EB'},
+      {val:sebiInr(final-invested),lbl:'Wealth Gain',color:'#D97706'},
+      {val:(final/invested).toFixed(1)+'x',lbl:'Money Multiplied',color:'#7C3AED'},
+    ])+
+    '<div style="margin-top:12px">'+
+      '<div style="font-size:11px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px">Growth Timeline — Blue bar=corpus, Grey=invested</div>'+
+      bars+
+    '</div>'+
+    sebiInsight('In year '+Math.ceil(y/2)+', gains from compounding <em>exceed</em> your total contributions. This is the magic inflection point — the later years produce more wealth than all the early years combined.');
+}
 </script>
 </body>
 </html>
