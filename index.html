@@ -1525,17 +1525,7 @@ function toast(msg){
   if(typeof _baseToast==='function')_baseToast(msg);
 }
 
-// Update M1 nav to include M2 link
-document.addEventListener('DOMContentLoaded',function(){
-  var m1nav=document.querySelector('#mod1 .bnav');
-  if(m1nav){
-    m1nav.innerHTML=
-      '<button class="nb" onclick="navTo(\'welcome\')"><span>\uD83C\uDFE0</span><span>Home</span></button>'+
-      '<button class="nb" onclick="navTo(\'profile\')"><span>\uD83E\uDE7A</span><span>Check</span></button>'+
-      '<button class="nb" onclick="navTo(\'results\')"><span>\uD83D\uDCCA</span><span>Results</span></button>'+
-      '<button class="nb" onclick="switchToM2()"><span>\uD83D\uDCDA</span><span>School</span></button>';
-  }
-});
+// M1 nav handled by master nav initialiser
 // ══ M0 CODE ══
 
 // ── IPHONE CACHE FIX — unregister any old SW ──
@@ -3168,10 +3158,7 @@ function saveM3Rates(){
 
 // ── SWITCHERS ──
 function switchToM3(){['mod0','mod1','mod2','mod3','mod4'].forEach(function(id){var el=document.getElementById(id);if(el)el.classList.remove('act');});document.getElementById('mod3').classList.add('act');window.scrollTo(0,0);renderM3();}
-document.addEventListener('DOMContentLoaded',function(){
-  var nh='<button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM1()"><span>🩺</span><span>Score</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>';
-  ['#mod0 .bnav','#mod1 .bnav','#mod2 .bnav','#mod3 .bnav','#mod4 .bnav'].forEach(function(s){var el=document.querySelector(s);if(el)el.innerHTML=nh;});
-});
+// M3 nav handled by master nav init
 var _sm0=switchToM0;switchToM0=function(){var m=document.getElementById('mod3');if(m)m.classList.remove('act');_sm0();};
 var _sm1=switchToM1;switchToM1=function(){var m=document.getElementById('mod3');if(m)m.classList.remove('act');_sm1();};
 var _sm2=switchToM2;switchToM2=function(){var m=document.getElementById('mod3');if(m)m.classList.remove('act');_sm2();};
@@ -4122,10 +4109,7 @@ function switchToM4(){
   setTimeout(function(){m4UpdateArrows();},100);
 }
 
-// M4 init — strategy explain only (nav already updated by M3 block)
-document.addEventListener('DOMContentLoaded',function(){
-  m4SetStrategy('avalanche');
-});
+// M4 init handled by master nav init
 
 // Patch existing switchers to also clear mod4
 var _sm3_orig=switchToM3;
@@ -4865,5 +4849,53 @@ function calcCompound(){
     sebiInsight('In year '+Math.ceil(y/2)+', gains from compounding <em>exceed</em> your total contributions. This is the magic inflection point — the later years produce more wealth than all the early years combined.');
 }
 </script>
+
+<script>
+// ══ MASTER NAV INITIALISER — runs once, sets all navbars consistently ══
+(function initAllNavs(){
+  function doInit(){
+    // Full 5-module nav for M0, M2, M3, M4
+    var moduleNav =
+      '<button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>'+
+      '<button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button>'+
+      '<button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>'+
+      '<button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>';
+
+    // M1 keeps its internal screen nav + module jump
+    var m1Nav =
+      '<button class="nb" onclick="navTo('welcome')"><span>🏠</span><span>Home</span></button>'+
+      '<button class="nb" onclick="navTo('profile')"><span>🩺</span><span>Check</span></button>'+
+      '<button class="nb" onclick="navTo('results')"><span>📊</span><span>Results</span></button>'+
+      '<button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>';
+
+    var m0nav = document.querySelector('#mod0 .bnav');
+    var m1nav = document.querySelector('#mod1 .bnav');
+    var m2nav = document.querySelector('#mod2 .bnav');
+    var m3nav = document.querySelector('#mod3 .bnav');
+    var m4nav = document.querySelector('#mod4 .bnav');
+
+    if(m0nav) m0nav.innerHTML = moduleNav;
+    if(m1nav) m1nav.innerHTML = m1Nav;
+    if(m2nav) m2nav.innerHTML = moduleNav;
+    if(m3nav) m3nav.innerHTML = moduleNav;
+    if(m4nav) m4nav.innerHTML =
+      '<button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>'+
+      '<button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button>'+
+      '<button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>'+
+      '<button class="nb act" style="color:#DC2626" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>';
+
+    // Init M4 strategy
+    if(typeof m4SetStrategy === 'function') m4SetStrategy('avalanche');
+    if(typeof m4UpdateArrows === 'function') m4UpdateArrows();
+  }
+
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', doInit);
+  } else {
+    doInit();
+  }
+})();
+</script>
+
 </body>
 </html>
