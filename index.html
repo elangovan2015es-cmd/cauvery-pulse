@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Cauvery Pulse | v2.6 | Build: 20260417-0305 | Elango Industries Limited -->
+<!-- Cauvery Pulse | v2.7 | Build: 20260417-0355 | Elango Industries Limited -->
 <title>Cauvery Pulse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
@@ -419,7 +419,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="app0">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Life Canvas · M0</div></div></div>
-  <div class="vtag">v2.6</div>
+  <div class="vtag">v2.7</div>
 </header>
 <div class="starfield" id="starfield"></div>
 <div class="aurora"></div>
@@ -885,7 +885,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="app">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Cauvery Pulse Score · M1</div></div></div>
-  <div class="vtag">v2.6</div>
+  <div class="vtag">v2.7</div>
 </header>
 <!-- WELCOME -->
 <div id="welcome" class="screen active">
@@ -1075,7 +1075,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="app2">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Investment School · M2</div></div></div>
-  <div class="vtag">v2.6</div>
+  <div class="vtag">v2.7</div>
 </header>
 
 <div style="padding:0 20px 80px">
@@ -2345,394 +2345,606 @@ function toast(msg){
 </script>
 
 
-<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT ══════ -->
+
+<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v2.7 ══════ -->
 <div id="mod3" class="mod">
 <style>
-.m3-wrap{padding:0 20px 100px;max-width:480px;margin:0 auto}
-.m3-title{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;line-height:1.3;margin-bottom:10px}
-.m3-title span{color:var(--gold)}
-.m3-quote{font-family:'Cormorant Garamond',serif;font-size:16px;font-style:italic;color:#f7d98a;line-height:1.7;padding:13px 15px;background:rgba(232,184,75,.07);border-left:2px solid var(--gold);border-radius:0 10px 10px 0;margin-bottom:14px}
-.m3-narrative{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin-bottom:14px}
-.m3-nar-hdr{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
-.m3-nar-body{font-size:13px;color:var(--text);line-height:1.9}
-.m3-nar-body strong{color:var(--gold)}
-.m3-nar-body em{color:var(--teal);font-style:italic}
-.m3-profile-badge{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-.m3-pbadge{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:11px;color:var(--muted)}
-.m3-pbadge strong{color:var(--text)}
-.m3-chart-wrap{display:flex;flex-direction:column;align-items:center;margin-bottom:14px}
+/* ── M3 LIGHT THEME ── */
+#mod3{background:#F5F6FA;min-height:100vh}
+#mod3 header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 20px}
+#mod3 .bname{color:#111827;font-size:17px}
+#mod3 .bsub{color:#6B7280}
+#mod3 .vtag{background:#F3F4F6;border:1px solid #E5E7EB;color:#6B7280}
+#mod3 .bnav{background:#fff;border-top:1px solid #E5E7EB}
+#mod3 .nb{color:#9CA3AF}
+#mod3 .nb.act{color:#D97706}
+#mod3 .blogo{background:linear-gradient(135deg,#D97706,#0D9488)}
+
+.m3w{padding:0 16px 100px;max-width:480px;margin:0 auto}
+
+/* Typography */
+.m3-h1{font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:#111827;line-height:1.3;margin-bottom:8px}
+.m3-h1 span{color:#D97706}
+.m3-h2{font-family:'Playfair Display',serif;font-size:19px;font-weight:700;color:#111827;margin-bottom:8px}
+.m3-body{font-size:15px;color:#374151;line-height:1.85}
+.m3-body strong{color:#111827;font-weight:600}
+.m3-body em{color:#0D9488;font-style:italic}
+.m3-muted{font-size:13px;color:#6B7280;line-height:1.7}
+
+/* Cards */
+.m3-card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:20px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.06)}
+.m3-card-title{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#9CA3AF;margin-bottom:10px}
+
+/* Quote */
+.m3-quote{font-family:'Cormorant Garamond',serif;font-size:17px;font-style:italic;color:#92400E;line-height:1.8;padding:14px 16px;background:#FFFBEB;border-left:3px solid #D97706;border-radius:0 10px 10px 0;margin-bottom:16px}
+
+/* Profile badges */
+.m3-badges{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.m3-badge{display:inline-flex;align-items:center;gap:5px;padding:5px 11px;background:#F3F4F6;border:1px solid #E5E7EB;border-radius:20px;font-size:12px;color:#6B7280;font-weight:500}
+.m3-badge strong{color:#111827}
+
+/* Donut */
+.m3-donut-wrap{display:flex;flex-direction:column;align-items:center;margin-bottom:14px}
 .m3-donut-ring{position:relative;width:210px;height:210px;margin-bottom:12px}
 .m3-donut-ring svg{width:100%;height:100%}
 .m3-donut-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
-.m3-donut-label{font-size:13px;color:var(--muted);text-align:center}
-.m3-donut-name{font-size:11px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.8px;margin-top:3px}
-.m3-legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:14px}
-.m3-leg-item{display:flex;align-items:center;gap:5px;font-size:12px;color:var(--muted)}
+.m3-donut-name-lbl{font-size:13px;color:#6B7280;text-align:center}
+.m3-donut-sub{font-size:10px;font-weight:700;color:#D97706;text-transform:uppercase;letter-spacing:.8px;margin-top:3px}
+.m3-legend{display:flex;flex-wrap:wrap;gap:8px;justify-content:center}
+.m3-leg{display:flex;align-items:center;gap:5px;font-size:12px;color:#6B7280}
 .m3-leg-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
-.m3-alloc-table{width:100%;border-collapse:collapse;margin-bottom:4px}
-.m3-alloc-table th{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);padding:8px 10px;text-align:left;border-bottom:1px solid var(--border)}
-.m3-alloc-table td{padding:10px;font-size:13px;color:var(--text);border-bottom:1px solid rgba(255,255,255,.04)}
-.m3-alloc-table tr:last-child td{border-bottom:none}
-.m3-alloc-bar-wrap{width:100%;background:rgba(255,255,255,.06);border-radius:4px;height:5px;margin-top:4px}
-.m3-alloc-bar{height:5px;border-radius:4px}
-.m3-pct-badge{font-family:'DM Mono',monospace;font-size:13px;font-weight:500}
-.m3-amt{font-size:11px;color:var(--muted);margin-top:2px}
 
-/* Instrument bucket card */
-.m3-bucket{background:var(--card);border:1px solid var(--border);border-radius:14px;margin-bottom:12px;overflow:hidden}
-.m3-bucket-hdr{display:flex;align-items:center;gap:10px;padding:14px 15px;cursor:pointer}
-.m3-bucket-icon{font-size:22px;width:34px;text-align:center;flex-shrink:0}
-.m3-bucket-info{flex:1}
-.m3-bucket-name{font-size:14px;font-weight:700;margin-bottom:2px}
-.m3-bucket-purpose{font-size:11px;letter-spacing:.8px;text-transform:uppercase;font-weight:700;padding:2px 8px;border-radius:10px;display:inline-block;margin-bottom:3px}
-.m3-bucket-why{font-size:12px;color:var(--muted);line-height:1.5}
-.m3-bucket-pct{font-family:'DM Mono',monospace;font-size:18px;font-weight:700;text-align:right;flex-shrink:0}
-.m3-bucket-body{display:none;padding:0 15px 15px}
-.m3-bucket-body.open{display:block}
+/* Alloc table */
+.m3-tbl{width:100%;border-collapse:collapse}
+.m3-tbl th{font-size:10px;letter-spacing:1.2px;text-transform:uppercase;color:#9CA3AF;padding:8px 12px;text-align:left;border-bottom:1px solid #F3F4F6}
+.m3-tbl td{padding:11px 12px;font-size:14px;color:#111827;border-bottom:1px solid #F9FAFB}
+.m3-tbl tr:last-child td{border-bottom:none}
+.m3-bar-wrap{width:100%;background:#F3F4F6;border-radius:4px;height:5px;margin-top:4px}
+.m3-bar{height:5px;border-radius:4px}
+.m3-pct{font-family:'DM Mono',monospace;font-size:14px;font-weight:600}
+.m3-amt-lbl{font-size:11px;color:#9CA3AF;margin-top:2px}
 
-/* Character card for each instrument */
-.m3-instr{background:var(--card2);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:10px}
-.m3-instr-name{font-size:13px;font-weight:700;margin-bottom:10px;color:var(--text)}
-.m3-chars{display:grid;grid-template-columns:1fr 1fr;gap:7px;margin-bottom:10px}
-.m3-char{background:rgba(255,255,255,.03);border-radius:8px;padding:8px 10px}
-.m3-char-lbl{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:3px}
-.m3-char-val{font-size:12px;font-weight:600;color:var(--text);line-height:1.4}
-.m3-char-val.green{color:var(--green)}
-.m3-char-val.amber{color:var(--amber)}
-.m3-char-val.red{color:var(--red)}
-.m3-char-val.teal{color:var(--teal)}
-.m3-char-val.gold{color:var(--gold)}
-.m3-truth{font-size:12px;color:var(--muted);line-height:1.7;padding:10px 12px;background:rgba(224,82,82,.06);border:1px solid rgba(224,82,82,.15);border-radius:8px;margin-top:6px}
-.m3-truth strong{color:var(--red,#e05252)}
+/* Bucket accordion */
+.m3-bucket{background:#fff;border:1px solid #E5E7EB;border-radius:16px;margin-bottom:12px;overflow:hidden;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.m3-bkt-hdr{display:flex;align-items:flex-start;gap:12px;padding:16px;cursor:pointer;transition:background .15s}
+.m3-bkt-hdr:hover{background:#F9FAFB}
+.m3-bkt-icon{font-size:26px;flex-shrink:0;margin-top:2px}
+.m3-bkt-main{flex:1}
+.m3-purpose-pill{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;padding:3px 9px;border-radius:20px;margin-bottom:5px}
+.m3-bkt-name{font-size:16px;font-weight:700;color:#111827;margin-bottom:3px}
+.m3-bkt-desc{font-size:13px;color:#6B7280;line-height:1.5}
+.m3-bkt-right{text-align:right;flex-shrink:0}
+.m3-bkt-pct{font-family:'DM Mono',monospace;font-size:22px;font-weight:700}
+.m3-bkt-amt{font-size:12px;color:#9CA3AF;margin-top:2px}
+.m3-bkt-toggle{font-size:11px;color:#9CA3AF;margin-top:4px}
+.m3-bkt-body{display:none;padding:0 16px 16px;border-top:1px solid #F3F4F6}
+.m3-bkt-body.open{display:block}
 
-/* FD rates panel */
-.m3-fd-rates{background:rgba(46,196,182,.06);border:1px solid rgba(46,196,182,.2);border-radius:10px;padding:12px;margin-top:8px}
-.m3-fd-rates-title{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:var(--teal);margin-bottom:8px;display:flex;align-items:center;justify-content:space-between}
-.m3-fd-rate-row{display:flex;justify-content:space-between;align-items:center;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.05);font-size:12px}
-.m3-fd-rate-row:last-child{border-bottom:none}
-.m3-fd-bank{color:var(--text);font-weight:500}
-.m3-fd-pct{color:var(--teal);font-family:'DM Mono',monospace;font-weight:700}
-.m3-fd-edit-btn{font-size:10px;color:var(--teal);background:transparent;border:1px solid rgba(46,196,182,.3);border-radius:8px;padding:3px 8px;cursor:pointer}
+/* Instrument card — LIGHT */
+.m3-instr{background:#F9FAFB;border:1px solid #E5E7EB;border-radius:14px;padding:16px;margin-top:12px}
+.m3-instr-name{font-size:15px;font-weight:700;color:#111827;margin-bottom:4px}
+.m3-instr-oneliner{font-size:13px;color:#6B7280;line-height:1.6;margin-bottom:12px}
 
-/* Settings panel */
-.m3-settings-overlay{display:none;position:fixed;inset:0;background:rgba(6,15,30,.95);z-index:500;overflow-y:auto;padding:20px}
-.m3-settings-overlay.open{display:block}
-.m3-settings-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:20px;max-width:440px;margin:0 auto}
-.m3-settings-title{font-family:'Playfair Display',serif;font-size:20px;font-weight:700;color:var(--gold);margin-bottom:16px;text-align:center}
-.m3-settings-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-.m3-settings-row label{font-size:12px;color:var(--muted);width:160px;flex-shrink:0}
-.m3-settings-row input{flex:1;background:var(--card2);border:1px solid var(--border);border-radius:8px;padding:8px 10px;font-size:13px;color:var(--text);font-family:'DM Mono',monospace}
-.m3-settings-row input:focus{outline:none;border-color:var(--teal)}
-.m3-pin-wrap{text-align:center;margin-bottom:20px}
-.m3-pin-title{font-size:14px;color:var(--muted);margin-bottom:12px}
-.m3-pin-input{background:var(--card2);border:1px solid var(--border);border-radius:10px;padding:10px 14px;font-size:20px;font-family:'DM Mono',monospace;color:var(--gold);text-align:center;letter-spacing:6px;width:140px}
+/* Character grid */
+.m3-chars{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px}
+.m3-char{background:#fff;border:1px solid #E5E7EB;border-radius:10px;padding:10px 12px}
+.m3-char-lbl{font-size:9px;letter-spacing:1px;text-transform:uppercase;color:#9CA3AF;margin-bottom:4px}
+.m3-char-val{font-size:13px;font-weight:600;line-height:1.4;color:#111827}
+.m3-char-val.green{color:#059669}
+.m3-char-val.amber{color:#D97706}
+.m3-char-val.red{color:#DC2626}
+.m3-char-val.teal{color:#0D9488}
+.m3-char-val.blue{color:#2563EB}
+.m3-char-val.purple{color:#7C3AED}
+
+/* Plain explanation */
+.m3-explain{font-size:14px;color:#374151;line-height:1.85;margin-bottom:12px}
+.m3-explain strong{color:#111827}
+.m3-explain em{color:#0D9488;font-style:normal;font-weight:600}
+
+/* Honest truth */
+.m3-truth{font-size:13px;color:#7C2D12;line-height:1.7;padding:12px 14px;background:#FEF3C7;border:1px solid #FCD34D;border-radius:10px;margin-bottom:10px}
+.m3-truth strong{color:#92400E}
+
+/* Best for */
+.m3-bestfor{font-size:12px;color:#065F46;background:#ECFDF5;border:1px solid #A7F3D0;border-radius:8px;padding:8px 12px}
+
+/* Liquidity bar */
+.m3-liq-wrap{margin:10px 0}
+.m3-liq-label{font-size:11px;color:#6B7280;margin-bottom:5px;text-transform:uppercase;letter-spacing:.8px}
+.m3-liq-track{display:flex;gap:4px}
+.m3-liq-seg{height:8px;flex:1;border-radius:4px}
+
+/* FD rates */
+.m3-fd-panel{background:#F0FDFA;border:1px solid #99F6E4;border-radius:10px;padding:12px;margin-top:10px}
+.m3-fd-panel-title{font-size:10px;letter-spacing:1px;text-transform:uppercase;color:#0D9488;margin-bottom:8px;display:flex;justify-content:space-between;align-items:center}
+.m3-fd-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid #CCFBF1;font-size:13px}
+.m3-fd-row:last-child{border-bottom:none}
+.m3-fd-bank{color:#111827;font-weight:500}
+.m3-fd-rate{color:#0D9488;font-family:'DM Mono',monospace;font-weight:700}
+.m3-fd-edit{font-size:10px;color:#0D9488;background:transparent;border:1px solid #99F6E4;border-radius:6px;padding:3px 8px;cursor:pointer}
+
+/* Tax tools */
+.m3-tax-tool{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:12px;padding:14px;margin-top:10px}
+.m3-tax-tool-title{font-size:11px;font-weight:700;color:#1D4ED8;letter-spacing:.5px;text-transform:uppercase;margin-bottom:10px}
+.m3-calc-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.m3-calc-row label{font-size:12px;color:#6B7280;flex:1}
+.m3-calc-input{background:#fff;border:1px solid #BFDBFE;border-radius:8px;padding:7px 10px;font-size:13px;color:#111827;font-family:'DM Mono',monospace;width:130px;text-align:right}
+.m3-calc-result{background:#DBEAFE;border-radius:8px;padding:10px 12px;font-size:13px;color:#1E40AF;line-height:1.7;margin-top:6px}
+
+/* Tax harvesting & gifting boxes */
+.m3-concept{background:#fff;border:1px solid #E5E7EB;border-radius:14px;padding:16px;margin-top:12px}
+.m3-concept-title{font-size:13px;font-weight:700;color:#111827;margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.m3-concept-body{font-size:13px;color:#374151;line-height:1.85}
+.m3-concept-body strong{color:#111827}
+.m3-example-box{background:#F0FDF4;border:1px solid #BBF7D0;border-radius:10px;padding:12px;margin:10px 0;font-size:13px;color:#065F46;line-height:1.8}
+.m3-example-box strong{color:#064E3B}
+.m3-warn-box{background:#FEF2F2;border:1px solid #FECACA;border-radius:10px;padding:12px;margin:8px 0;font-size:13px;color:#991B1B;line-height:1.7}
+
+/* Compounding visualizer */
+.m3-compound-vis{background:#F5F3FF;border:1px solid #DDD6FE;border-radius:12px;padding:14px;margin-top:10px}
+.m3-compound-title{font-size:11px;font-weight:700;color:#6D28D9;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px}
+.m3-compound-bars{display:flex;align-items:flex-end;gap:6px;height:80px;margin-bottom:6px}
+.m3-compound-bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px}
+.m3-compound-bar{width:100%;border-radius:4px 4px 0 0;transition:height .4s}
+.m3-compound-yr{font-size:10px;color:#7C3AED}
+.m3-compound-val{font-size:9px;color:#6B7280;text-align:center}
+
+/* NPS exit flowchart */
+.m3-flow{display:flex;flex-direction:column;gap:4px;margin:10px 0}
+.m3-flow-step{display:flex;align-items:flex-start;gap:10px;padding:10px 12px;background:#fff;border:1px solid #E5E7EB;border-radius:10px}
+.m3-flow-dot{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;flex-shrink:0;margin-top:1px}
+.m3-flow-body{flex:1}
+.m3-flow-title{font-size:13px;font-weight:600;color:#111827;margin-bottom:2px}
+.m3-flow-desc{font-size:12px;color:#6B7280;line-height:1.5}
+.m3-flow-arrow{text-align:center;color:#D1D5DB;font-size:12px}
 
 /* Rebalance */
-.m3-rebal{background:linear-gradient(135deg,rgba(46,196,182,.08),rgba(108,127,255,.05));border:1px solid rgba(46,196,182,.2);border-radius:14px;padding:15px;margin-bottom:14px}
-.m3-rebal-title{font-size:11px;font-weight:700;color:var(--teal);letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px}
-.m3-rebal-body{font-size:12px;color:var(--muted);line-height:1.8}
+.m3-rebal{background:#FFFBEB;border:1px solid #FCD34D;border-radius:14px;padding:16px;margin-bottom:14px}
+.m3-rebal-title{font-size:11px;font-weight:700;color:#D97706;letter-spacing:.5px;text-transform:uppercase;margin-bottom:8px}
+.m3-rebal-body{font-size:13px;color:#78350F;line-height:1.8}
+
+/* Settings overlay */
+.m3-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:500;overflow-y:auto;padding:20px}
+.m3-overlay.open{display:block}
+.m3-overlay-card{background:#fff;border-radius:16px;padding:20px;max-width:440px;margin:0 auto}
+.m3-overlay-title{font-size:18px;font-weight:700;color:#111827;margin-bottom:16px;text-align:center}
+.m3-pin-wrap{text-align:center;margin-bottom:16px}
+.m3-pin-hint{font-size:13px;color:#6B7280;margin-bottom:10px}
+.m3-pin-input{border:2px solid #E5E7EB;border-radius:10px;padding:10px 14px;font-size:22px;font-family:'DM Mono',monospace;color:#111827;text-align:center;letter-spacing:8px;width:150px}
+.m3-pin-input:focus{outline:none;border-color:#D97706}
+.m3-pin-err{font-size:12px;color:#DC2626;margin-top:6px}
+.m3-settings-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.m3-settings-row label{font-size:13px;color:#374151;flex:1}
+.m3-settings-row input{border:1px solid #E5E7EB;border-radius:8px;padding:8px 10px;font-size:13px;color:#111827;font-family:'DM Mono',monospace;width:110px;text-align:right}
+.m3-settings-row input:focus{outline:none;border-color:#0D9488}
+.m3-save-btn{width:100%;padding:13px;background:linear-gradient(135deg,#D97706,#B45309);color:#fff;font-weight:700;border:none;border-radius:12px;cursor:pointer;font-size:15px;margin-top:8px}
+.m3-close-btn{width:100%;padding:11px;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;color:#6B7280;cursor:pointer;font-size:13px;margin-top:8px}
 </style>
 
 <div id="app3">
-<header>
-  <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Portfolio Blueprint · M3</div></div></div>
+<header style="display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:#fff;border-bottom:1px solid #E5E7EB">
+  <div class="brand">
+    <div class="blogo">🌊</div>
+    <div><div class="bname" style="color:#111827;font-size:17px;font-weight:700">Cauvery Pulse</div><div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Portfolio Blueprint · M3</div></div>
+  </div>
   <div style="display:flex;align-items:center;gap:8px">
-    <button onclick="openM3Settings()" style="background:transparent;border:1px solid var(--border);border-radius:8px;padding:5px 9px;font-size:13px;color:var(--muted);cursor:pointer">⚙️</button>
-    <div class="vtag">v2.6</div>
+    <button onclick="openM3Settings()" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:6px 10px;font-size:13px;color:#6B7280;cursor:pointer">⚙️ Rates</button>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v2.7</div>
   </div>
 </header>
-<div class="m3-wrap" id="m3content">
-  <div style="text-align:center;padding:60px 20px;color:var(--muted);font-size:14px">Loading your blueprint…</div>
+
+<div class="m3w" id="m3content">
+  <div style="text-align:center;padding:60px 20px;color:#9CA3AF;font-size:14px">Loading your blueprint…</div>
 </div>
 </div>
 
-<!-- FD RATES SETTINGS OVERLAY -->
-<div class="m3-settings-overlay" id="m3settingsOverlay">
-  <div class="m3-settings-card">
-    <div class="m3-settings-title">⚙️ FD Rates Settings</div>
+<!-- SETTINGS OVERLAY -->
+<div class="m3-overlay" id="m3overlay">
+  <div class="m3-overlay-card">
+    <div class="m3-overlay-title">⚙️ Update FD Rates</div>
     <div class="m3-pin-wrap" id="m3pinWrap">
-      <div class="m3-pin-title">Enter Admin PIN to edit rates</div>
+      <div class="m3-pin-hint">Enter Admin PIN</div>
       <input class="m3-pin-input" type="password" id="m3pinInput" maxlength="4" placeholder="••••" oninput="m3CheckPin(this.value)">
-      <div id="m3pinErr" style="font-size:12px;color:var(--red);margin-top:8px;display:none">Incorrect PIN</div>
+      <div class="m3-pin-err" id="m3pinErr" style="display:none">Incorrect PIN</div>
     </div>
     <div id="m3ratesForm" style="display:none">
-      <div style="font-size:12px;color:var(--teal);margin-bottom:14px;text-align:center">Edit FD rates below — tap Save when done</div>
+      <div style="font-size:13px;color:#0D9488;margin-bottom:12px;text-align:center">Edit rates · tap Save</div>
       <div id="m3rateFields"></div>
-      <button onclick="saveM3Rates()" style="width:100%;padding:13px;background:linear-gradient(135deg,var(--gold),#bf8a1a);color:#07091a;font-weight:700;border:none;border-radius:12px;cursor:pointer;font-size:14px;margin-top:8px">💾 Save Rates</button>
+      <button class="m3-save-btn" onclick="saveM3Rates()">💾 Save Rates</button>
     </div>
-    <button onclick="closeM3Settings()" style="width:100%;padding:11px;background:transparent;border:1px solid var(--border);border-radius:12px;color:var(--muted);cursor:pointer;font-size:13px;margin-top:10px">Close</button>
+    <button class="m3-close-btn" onclick="closeM3Settings()">Close</button>
   </div>
 </div>
 
-<div class="bnav">
+<div class="bnav" style="background:#fff;border-top:1px solid #E5E7EB">
   <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>
   <button class="nb" onclick="switchToM1()"><span>🩺</span><span>Score</span></button>
   <button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button>
-  <button class="nb act"><span>🗺️</span><span>Blueprint</span></button>
+  <button class="nb act" style="color:#D97706"><span>🗺️</span><span>Blueprint</span></button>
 </div>
 <div class="toast" id="toast3"></div>
 </div><!-- #mod3 -->
 
 <script>
-// ══════════════════════════════════════════════════════════
-// M3 — PORTFOLIO BLUEPRINT ENGINE v2.6
-// ══════════════════════════════════════════════════════════
+// ══════════════════════════════════════════════════════
+// M3 PORTFOLIO BLUEPRINT ENGINE v2.7
+// ══════════════════════════════════════════════════════
 
-// ── DEFAULT FD RATES (admin-editable) ──
-var M3_DEFAULT_FD_RATES = {
-  'IDFC First Bank':   '7.75',
-  'YES Bank':          '7.75',
-  'IndusInd Bank':     '7.50',
-  'Bandhan Bank':      '8.05',
-  'AU Small Finance':  '8.00',
-  'Canara Bank':       '7.25',
-  'IOB':               '7.30',
-  'Indian Bank':       '7.25'
-};
+// ── COLOURS ──
+var BC={equity:'#059669',debt:'#2563EB',gold:'#D97706',realestate:'#EA580C',emergency:'#0D9488'};
+var BL={equity:'Equity',debt:'Debt',gold:'Gold',realestate:'Real Estate',emergency:'Emergency'};
+var BI={equity:'📈',debt:'🏛️',gold:'🪙',realestate:'🏢',emergency:'🛡️'};
 
-function getM3FDRates(){
-  try{
-    var stored=localStorage.getItem('cp_fd_rates');
-    return stored?JSON.parse(stored):M3_DEFAULT_FD_RATES;
-  }catch(e){return M3_DEFAULT_FD_RATES;}
+// ── FD RATES ──
+var FD_DEFAULTS={'IDFC First Bank':'7.75','YES Bank':'7.75','IndusInd Bank':'7.50','Bandhan Bank':'8.05','AU Small Finance':'8.00','Canara Bank':'7.25','IOB':'7.30','Indian Bank':'7.25'};
+function getFDRates(){try{var s=localStorage.getItem('cp_fd_rates');return s?JSON.parse(s):FD_DEFAULTS;}catch(e){return FD_DEFAULTS;}}
+
+// ── LIQUIDITY VISUALISER (5 segments, filled = liquid) ──
+function liqBar(score,color){
+  // score 1-5, 5=most liquid
+  var segs='';
+  for(var i=1;i<=5;i++){
+    segs+='<div class="m3-liq-seg" style="background:'+(i<=score?color:'#E5E7EB')+'"></div>';
+  }
+  var labels=['Very Illiquid','Low Liquidity','Medium','Good','Instant'];
+  return '<div class="m3-liq-wrap"><div class="m3-liq-label">Liquidity — '+labels[score-1]+'</div><div class="m3-liq-track">'+segs+'</div></div>';
+}
+
+// ── COMPOUNDING VISUALISER for EPF ──
+function epfCompoundVis(monthly){
+  var rate=0.0815/12;
+  var bars='';
+  var milestones=[5,10,15,20,25,30];
+  var maxVal=0;
+  var vals=milestones.map(function(yr){
+    var n=yr*12;
+    var fv=monthly*((Math.pow(1+rate,n)-1)/rate)*(1+rate);
+    if(fv>maxVal)maxVal=fv;
+    return {yr:yr,val:fv};
+  });
+  vals.forEach(function(v){
+    var h=Math.max(12,Math.round((v.val/maxVal)*72));
+    var lbl=v.val>=100000?'₹'+(v.val/100000).toFixed(1)+'L':'₹'+(v.val/1000).toFixed(0)+'K';
+    bars+='<div class="m3-compound-bar-wrap"><div class="m3-compound-bar" style="height:'+h+'px;background:#7C3AED"></div><div class="m3-compound-yr">'+v.yr+'yr</div><div class="m3-compound-val">'+lbl+'</div></div>';
+  });
+  return '<div class="m3-compound-vis"><div class="m3-compound-title">📈 EPF Compounding at ₹'+monthly.toLocaleString('en-IN')+'/mo (8.15% p.a.)</div><div class="m3-compound-bars">'+bars+'</div><div style="font-size:11px;color:#7C3AED;text-align:center">Employee contribution only · Add employer match to double this</div></div>';
+}
+
+// ── NPS TAX CALCULATOR ──
+function npsCalcHTML(){
+  return '<div class="m3-tax-tool"><div class="m3-tax-tool-title">🧮 80CCD(2) Tax Saving Calculator</div>'+
+    '<div class="m3-calc-row"><label>Your Basic Salary (₹/year)</label><input class="m3-calc-input" type="number" id="npsBasic" placeholder="1500000" oninput="calcNPS()"></div>'+
+    '<div class="m3-calc-row"><label>Employer NPS %</label><input class="m3-calc-input" type="number" id="npsEmpPct" placeholder="10" oninput="calcNPS()"></div>'+
+    '<div class="m3-calc-row"><label>Your Tax Slab</label><select id="npsSlab" onchange="calcNPS()" style="border:1px solid #BFDBFE;border-radius:8px;padding:7px 10px;font-size:13px;color:#111827;width:130px"><option value="0.30">30%</option><option value="0.20">20%</option><option value="0.15">15%</option></select></div>'+
+    '<div class="m3-calc-result" id="npsCalcResult">Enter your Basic salary above to see tax saving</div>'+
+  '</div>';
+}
+
+function calcNPS(){
+  var basic=parseFloat(document.getElementById('npsBasic').value)||0;
+  var pct=parseFloat(document.getElementById('npsEmpPct').value)||10;
+  var slab=parseFloat(document.getElementById('npsSlab').value)||0.30;
+  if(!basic){document.getElementById('npsCalcResult').innerHTML='Enter your Basic salary above to see tax saving';return;}
+  var empContrib=basic*pct/100;
+  var taxSaving=empContrib*slab*1.04; // 4% cess
+  var r=document.getElementById('npsCalcResult');
+  r.innerHTML='Employer NPS contribution: <strong>₹'+empContrib.toLocaleString('en-IN')+'</strong><br>'+
+    'Tax saved (80CCD(2)): <strong style="color:#1D4ED8">₹'+Math.round(taxSaving).toLocaleString('en-IN')+'/year</strong><br>'+
+    'This entire ₹'+empContrib.toLocaleString('en-IN')+' grows at ~10% inside NPS — tax saved now <em>and</em> compounded later.';
 }
 
 // ── INSTRUMENT DEFINITIONS ──
-// Each instrument has: name, purpose, expiry, returns, risk, liquidity, tax, truth, notes
-var M3_INSTRUMENTS = {
+function instrNifty(){
+  return '<div class="m3-instr">'+
+    '<div class="m3-instr-name">Nifty 50 / Sensex Index Fund</div>'+
+    '<div class="m3-instr-oneliner">The single best starting point for equity investing in India. Tracks the top 50 companies on NSE — when India grows, you grow with it.</div>'+
+    '<div class="m3-explain">An index fund simply copies the stock market index. It does not try to beat the market — it <strong>is</strong> the market. When you buy a Nifty 50 index fund, you own a tiny piece of the 50 largest Indian companies — Reliance, TCS, HDFC Bank, Infosys, and 46 others — in one single purchase.<br><br>The expense ratio is just <strong>0.1% per year</strong> — the cheapest form of professional fund management available. Over 25 years, this cost difference versus an active fund saves ₹8–15 lakhs on a modest ₹5,000 monthly SIP.</div>'+
+    '<div class="m3-chars">'+
+      '<div class="m3-char"><div class="m3-char-lbl">Purpose</div><div class="m3-char-val green">Wealth Creation</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Expiry</div><div class="m3-char-val green">No expiry — hold forever</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Returns</div><div class="m3-char-val green">12–14% CAGR (20yr avg)</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Risk</div><div class="m3-char-val amber">Market risk — volatile short term, stable long term</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Tax</div><div class="m3-char-val teal">LTCG 12.5% above ₹1.25L/yr — minimal if held long</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Min. Investment</div><div class="m3-char-val blue">₹100 SIP or ₹500 lump sum</div></div>'+
+    '</div>'+
+    liqBar(4,'#059669')+
+    '<div class="m3-truth"><strong>Honest Truth:</strong> Index funds beat 80% of active fund managers over 10 years in India. ₹1,000/month in Nifty 50 SIP at age 25 = ₹1.9 Crore at 60. The same invested at 35 = ₹62 lakhs. Start early, never stop.</div>'+
+    '<div class="m3-bestfor">✦ Best for: Every investor — the core equity holding regardless of age or profile.</div>'+
+  '</div>';
+}
 
-  // EQUITY BUCKET
-  nifty_index:{
-    name:'Nifty 50 / Sensex Index Fund',
-    purposeTag:'WEALTH CREATION', purposeColor:'rgba(62,207,142,.15)', purposeText:'#3ecf8e',
-    chars:[
-      {lbl:'Purpose',    val:'Wealth Creation', cls:'green'},
-      {lbl:'Expiry',     val:'No expiry — hold as long as you wish', cls:'green'},
-      {lbl:'Returns',    val:'12–14% CAGR (historical 20yr)', cls:'green'},
-      {lbl:'Risk',       val:'Market risk — short-term volatile, long-term stable', cls:'amber'},
-      {lbl:'Liquidity',  val:'Sell any day (T+1 credit)', cls:'green'},
-      {lbl:'Tax',        val:'LTCG 10% above ₹1.25L/yr — minimal if held long', cls:'teal'},
-    ],
-    truth:'Index funds beat 80% of active fund managers over 10 years in India. The cheapest, simplest option is the best starting equity investment. ₹1,000/month in Nifty 50 SIP for 25 years at 12% = ₹1.9 Crore.',
-    bestFor:'Everyone — the core equity holding for any investor profile.'
-  },
-  midcap_mf:{
-    name:'Mid Cap / Small Cap Mutual Fund',
-    purposeTag:'HIGH GROWTH', purposeColor:'rgba(62,207,142,.12)', purposeText:'#3ecf8e',
-    chars:[
-      {lbl:'Purpose',    val:'Aggressive Wealth Creation', cls:'green'},
-      {lbl:'Expiry',     val:'No expiry — long-term hold (10+ years)', cls:'green'},
-      {lbl:'Returns',    val:'14–18% CAGR (historical, high variance)', cls:'green'},
-      {lbl:'Risk',       val:'High — can fall 40–50% in a bear market', cls:'red'},
-      {lbl:'Liquidity',  val:'Sell any day (T+1 credit)', cls:'green'},
-      {lbl:'Tax',        val:'LTCG 10% above ₹1.25L/yr', cls:'teal'},
-    ],
-    truth:'Higher returns come with higher volatility. Never put money you need within 5 years into mid/small cap funds. These are for patient, long-term investors only.',
-    bestFor:'Young adults with 10+ year horizon — maximum 20–30% of equity allocation.'
-  },
-  direct_stocks:{
-    name:'Direct Stocks',
-    purposeTag:'WEALTH CREATION', purposeColor:'rgba(62,207,142,.12)', purposeText:'#3ecf8e',
-    chars:[
-      {lbl:'Purpose',    val:'Wealth Creation — active strategy', cls:'green'},
-      {lbl:'Expiry',     val:'No expiry — hold as long as you wish', cls:'green'},
-      {lbl:'Returns',    val:'Varies widely — can be 0% to 100%+', cls:'amber'},
-      {lbl:'Risk',       val:'Very High — individual company risk', cls:'red'},
-      {lbl:'Liquidity',  val:'Instant during market hours (T+1)', cls:'green'},
-      {lbl:'Tax',        val:'STCG 20% (under 1yr) / LTCG 10% (over 1yr)', cls:'amber'},
-    ],
-    truth:'Most retail investors underperform index funds when picking individual stocks. Direct stocks require time, research, and emotional discipline. Without all three, index funds are strictly better.',
-    bestFor:'Only for investors with genuine time to research and ability to handle losses calmly.'
-  },
-  reits:{
-    name:'REITs (Real Estate Investment Trust)',
-    purposeTag:'INCOME + GROWTH', purposeColor:'rgba(244,165,53,.15)', purposeText:'#f4a535',
-    chars:[
-      {lbl:'Purpose',    val:'Property income without buying property', cls:'amber'},
-      {lbl:'Expiry',     val:'No expiry — exchange traded like shares', cls:'green'},
-      {lbl:'Returns',    val:'8–12% total return + quarterly dividends', cls:'green'},
-      {lbl:'Risk',       val:'Medium — linked to commercial real estate market', cls:'amber'},
-      {lbl:'Liquidity',  val:'Buy/sell on stock exchange any day', cls:'green'},
-      {lbl:'Tax',        val:'Dividends taxable as income; capital gains as equity', cls:'amber'},
-    ],
-    truth:'REITs give you commercial property exposure — office parks, malls, warehouses — from as little as ₹300. No stamp duty, no registration, no maintenance headache.',
-    bestFor:'Thirties and above who want real estate exposure without large capital.'
-  },
+function instrMidcap(){
+  return '<div class="m3-instr">'+
+    '<div class="m3-instr-name">Mid Cap / Small Cap Mutual Fund</div>'+
+    '<div class="m3-instr-oneliner">Companies growing faster than the Nifty 50 — higher risk, significantly higher potential returns over a 10+ year horizon.</div>'+
+    '<div class="m3-explain">Mid cap funds invest in companies ranked 101–250 by market size. Small cap funds invest in companies beyond rank 250. These companies are growing faster than large caps — but they also fall harder in a bear market.<br><br>In the 2020 COVID crash, small cap index fell <strong>55%</strong>. By 2022, it had recovered and gone <strong>3x from the crash low</strong>. That is the trade-off — brutal falls, spectacular recoveries. Only for investors who can hold through the pain.</div>'+
+    '<div class="m3-chars">'+
+      '<div class="m3-char"><div class="m3-char-lbl">Purpose</div><div class="m3-char-val green">Aggressive Wealth Creation</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Expiry</div><div class="m3-char-val green">No expiry — minimum 10yr horizon</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Returns</div><div class="m3-char-val green">14–18% CAGR (historical, high variance)</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Risk</div><div class="m3-char-val red">High — can fall 40–55% in bear market</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Tax</div><div class="m3-char-val teal">LTCG 12.5% above ₹1.25L/yr</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Min. Investment</div><div class="m3-char-val blue">₹500 SIP</div></div>'+
+    '</div>'+
+    liqBar(4,'#059669')+
+    '<div class="m3-truth"><strong>Honest Truth:</strong> Never put money you need within 5 years into mid/small cap. This is purely for the patient, long-horizon investor. Keep to 20–30% of your equity allocation maximum.</div>'+
+    '<div class="m3-bestfor">✦ Best for: Young adults and first earners with 10+ year horizon only.</div>'+
+  '</div>';
+}
 
-  // DEBT BUCKET
-  ppf:{
-    name:'PPF — Public Provident Fund',
-    purposeTag:'SAFE GROWTH + TAX', purposeColor:'rgba(108,127,255,.15)', purposeText:'#6c7fff',
-    chars:[
-      {lbl:'Purpose',    val:'Safe Long-Term Growth + Tax Saving', cls:'teal'},
-      {lbl:'Expiry',     val:'15-year maturity — extendable in 5yr blocks', cls:'amber'},
-      {lbl:'Returns',    val:'7.1% p.a. — guaranteed by Government', cls:'green'},
-      {lbl:'Risk',       val:'Zero — sovereign guarantee', cls:'green'},
-      {lbl:'Liquidity',  val:'Partial withdrawal from Year 7 only', cls:'red'},
-      {lbl:'Tax',        val:'EEE — investment, interest, maturity all tax-free', cls:'green'},
-    ],
-    truth:'PPF is the best risk-free investment in India. EEE tax status means ₹1.5L invested every year grows completely tax-free. The 15-year lock-in is a feature — it forces long-term discipline.',
-    bestFor:'Everyone — especially self-employed and business owners without EPF access.'
-  },
-  epf:{
-    name:'EPF — Employee Provident Fund',
-    purposeTag:'RETIREMENT + TAX', purposeColor:'rgba(108,127,255,.15)', purposeText:'#6c7fff',
-    chars:[
-      {lbl:'Purpose',    val:'Retirement Corpus + Tax Saving', cls:'teal'},
-      {lbl:'Expiry',     val:'Retirement-locked — withdrawable at 58 or conditions', cls:'red'},
-      {lbl:'Returns',    val:'8.15% p.a. — declared annually by EPFO', cls:'green'},
-      {lbl:'Risk',       val:'Zero — government backed', cls:'green'},
-      {lbl:'Liquidity',  val:'On retirement / medical / housing conditions only', cls:'red'},
-      {lbl:'Tax',        val:'EEE — fully tax-free including employer contribution', cls:'green'},
-    ],
-    truth:'Employer matches your EPF contribution — that is free money. Never voluntarily reduce your EPF contribution. The 8.15% tax-free return is better than most fixed income instruments.',
-    bestFor:'All salaried employees — never opt out of EPF.'
-  },
-  nps:{
-    name:'NPS — National Pension System',
-    purposeTag:'RETIREMENT + TAX', purposeColor:'rgba(108,127,255,.15)', purposeText:'#6c7fff',
-    chars:[
-      {lbl:'Purpose',    val:'Retirement Income + Additional Tax Saving', cls:'teal'},
-      {lbl:'Expiry',     val:'Retirement-locked — exit at 60 years of age', cls:'red'},
-      {lbl:'Returns',    val:'9–11% CAGR — market-linked (equity + debt mix)', cls:'green'},
-      {lbl:'Risk',       val:'Low-Medium — depends on equity allocation chosen', cls:'amber'},
-      {lbl:'Liquidity',  val:'60% lump sum at 60 / 40% compulsory annuity', cls:'red'},
-      {lbl:'Tax',        val:'Extra ₹50K deduction under 80CCD(1B) — over and above 80C', cls:'green'},
-    ],
-    truth:'NPS gives you an additional ₹50,000 tax deduction beyond the standard ₹1.5L 80C limit. That is real tax saving. The compulsory 40% annuity is the only downside — choose wisely at exit.',
-    bestFor:'Anyone in 20–30% tax bracket wanting extra deduction beyond 80C.'
-  },
-  debt_mf:{
-    name:'Debt Mutual Fund',
-    purposeTag:'STABLE GROWTH', purposeColor:'rgba(108,127,255,.12)', purposeText:'#6c7fff',
-    chars:[
-      {lbl:'Purpose',    val:'Stable Returns — better than FD post-tax', cls:'teal'},
-      {lbl:'Expiry',     val:'No expiry — redeem any time', cls:'green'},
-      {lbl:'Returns',    val:'6–8% p.a. depending on category', cls:'amber'},
-      {lbl:'Risk',       val:'Low — interest rate risk only', cls:'green'},
-      {lbl:'Liquidity',  val:'Instant redemption (T+1)', cls:'green'},
-      {lbl:'Tax',        val:'Taxed as per income slab — no indexation post 2023', cls:'amber'},
-    ],
-    truth:'Post the 2023 tax change, debt MF indexation benefit is gone. However, for short-to-medium term parking (1–3 years), debt MFs still offer better pre-tax returns and more flexibility than FDs.',
-    bestFor:'Short to medium-term goals (1–3 years) where FD liquidity is a concern.'
-  },
-  govt_bonds:{
-    name:'Government Bonds / G-Sec',
-    purposeTag:'SAFEST DEBT', purposeColor:'rgba(108,127,255,.12)', purposeText:'#6c7fff',
-    chars:[
-      {lbl:'Purpose',    val:'Zero-risk stable income — sovereign guarantee', cls:'teal'},
-      {lbl:'Expiry',     val:'Fixed tenure — 5 to 40 years depending on issue', cls:'amber'},
-      {lbl:'Returns',    val:'6.5–7.5% p.a. — fixed coupon', cls:'amber'},
-      {lbl:'Risk',       val:'Zero credit risk — Government of India guarantee', cls:'green'},
-      {lbl:'Liquidity',  val:'Tradeable on exchange — price varies with interest rates', cls:'amber'},
-      {lbl:'Tax',        val:'Interest taxable as income; capital gains as debt', cls:'amber'},
-    ],
-    truth:'G-Secs are the safest fixed income in India — backed by the sovereign. The risk is not default — it is interest rate movement (price falls when rates rise). Best held to maturity.',
-    bestFor:'Pre-retirement and post-retirement profiles — capital safety is the priority.'
-  },
+function instrDirectStocks(){
+  return '<div class="m3-instr">'+
+    '<div class="m3-instr-name">Direct Stocks</div>'+
+    '<div class="m3-instr-oneliner">Owning shares of individual companies directly. The highest risk and highest potential return vehicle — requires serious research, time, and emotional discipline.</div>'+
+    '<div class="m3-explain">When you buy a share of TCS, you become a part-owner of Tata Consultancy Services. You receive dividends, voting rights, and capital appreciation if the company grows. The stock price reflects what the market believes the company is worth — not always what it actually is.<br><br>Direct stock investing done well builds extraordinary wealth. Done poorly, it destroys capital. The difference is <strong>research, patience, and the ability to hold through falls without panicking.</strong><br><br>We will build a complete Direct Stock module — with your library, Google Sheets integration, valuation formulas, and screening frameworks — as a dedicated feature.</div>'+
+    '<div class="m3-chars">'+
+      '<div class="m3-char"><div class="m3-char-lbl">Purpose</div><div class="m3-char-val green">Wealth Creation — active</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Expiry</div><div class="m3-char-val green">No expiry — your choice when to sell</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Returns</div><div class="m3-char-val amber">0% to 100%+ — entirely company dependent</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Risk</div><div class="m3-char-val red">Very High — company can go to zero</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Tax</div><div class="m3-char-val teal">STCG 20% under 1yr / LTCG 12.5% above ₹1.25L over 1yr</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Min. Investment</div><div class="m3-char-val blue">1 share — can be ₹10 or ₹10,000</div></div>'+
+    '</div>'+
+    liqBar(5,'#059669')+
+    '<div class="m3-truth"><strong>Honest Truth:</strong> Most retail investors underperform index funds when picking individual stocks. Direct stocks reward genuine research — not tips, not CNBC, not rumours. If you cannot explain why you own a stock in 2 sentences, you should not own it.</div>'+
+    '<div class="m3-bestfor">✦ Best for: Investors with time to research, emotional discipline to hold, and ability to absorb losses without panic.</div>'+
+    taxHarvestingCard()+giftingCard()+
+  '</div>';
+}
 
-  // GOLD BUCKET
-  gold_etf:{
-    name:'Gold ETF — Exchange Traded Fund',
-    purposeTag:'CRISIS HEDGE', purposeColor:'rgba(232,184,75,.15)', purposeText:'#e8b84b',
-    chars:[
-      {lbl:'Purpose',    val:'Portfolio Insurance — Crisis Hedge', cls:'gold'},
-      {lbl:'Expiry',     val:'No expiry — buy and hold as long as needed', cls:'green'},
-      {lbl:'Returns',    val:'Tracks gold price — 10–12% CAGR (10yr avg India)', cls:'gold'},
-      {lbl:'Risk',       val:'Low — price falls possible but historically recovers', cls:'amber'},
-      {lbl:'Liquidity',  val:'Buy/sell on exchange any trading day instantly', cls:'green'},
-      {lbl:'Tax',        val:'LTCG 20% with indexation after 2 years', cls:'amber'},
-    ],
-    truth:'Gold ETF is now the only rational way to hold gold for investment. Government has stopped issuing new SGB tranches. Gold ETF gives you pure gold price exposure with zero storage risk, zero purity risk, and instant liquidity. One unit = 1 gram of gold.',
-    bestFor:'10% of every portfolio — the crisis insurance layer regardless of age or stage.'
-  },
+function instrREITs(){
+  return '<div class="m3-instr">'+
+    '<div class="m3-instr-name">REITs — Real Estate Investment Trust</div>'+
+    '<div class="m3-instr-oneliner">Own commercial property — office parks, malls, warehouses — from as little as ₹300. Income via quarterly dividends, growth via property appreciation.</div>'+
+    '<div class="m3-explain">A REIT pools money from thousands of investors to buy and manage commercial properties. The rental income is distributed quarterly as dividends. You get the returns of real estate without buying property, without stamp duty, without maintenance, and without the massive capital requirement.<br><br>India currently has three listed REITs: Embassy Office Parks, Mindspace Business Parks, and Brookfield India REIT. All invest in Grade A commercial office space leased to IT, BFSI, and MNC tenants.</div>'+
+    '<div class="m3-chars">'+
+      '<div class="m3-char"><div class="m3-char-lbl">Purpose</div><div class="m3-char-val amber">Property Income + Growth</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Expiry</div><div class="m3-char-val green">No expiry — exchange traded</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Returns</div><div class="m3-char-val green">8–12% total + quarterly dividends</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Risk</div><div class="m3-char-val amber">Medium — commercial real estate market</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Tax</div><div class="m3-char-val teal">Dividends taxable as income; capital gains as equity</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Min. Investment</div><div class="m3-char-val blue">~₹300 per unit on exchange</div></div>'+
+    '</div>'+
+    liqBar(4,'#059669')+
+    '<div class="m3-truth"><strong>Honest Truth:</strong> REITs give you commercial property returns without the illiquidity trap. No registration, no stamp duty, no bank loan needed. One unit of Embassy REIT = fractional ownership of world-class office parks.</div>'+
+    '<div class="m3-bestfor">✦ Best for: Thirties and above wanting property exposure without large capital. Good dividend income for pre/post retirement profiles.</div>'+
+  '</div>';
+}
 
-  // EMERGENCY BUCKET
-  liquid_mf:{
-    name:'Liquid Mutual Fund',
-    purposeTag:'EMERGENCY / SAFETY', purposeColor:'rgba(46,196,182,.15)', purposeText:'#2ec4b6',
-    chars:[
-      {lbl:'Purpose',    val:'Emergency Fund — instant access, beats savings a/c', cls:'teal'},
-      {lbl:'Expiry',     val:'No expiry — withdraw any time without penalty', cls:'green'},
-      {lbl:'Returns',    val:'5–7% p.a. (better than savings account)', cls:'teal'},
-      {lbl:'Risk',       val:'Near zero — invests in overnight and short-term instruments', cls:'green'},
-      {lbl:'Liquidity',  val:'Instant redemption — money in account within hours', cls:'green'},
-      {lbl:'Tax',        val:'Gains taxed as per income slab', cls:'amber'},
-    ],
-    truth:'A savings account earns 2.5–3%. A liquid fund earns 5–7%. For your emergency corpus, this difference on ₹2–5 lakhs compounds significantly over years. Zero lock-in, zero exit load after 7 days.',
-    bestFor:'Primary vehicle for the emergency fund — every investor profile without exception.'
-  },
+function instrEPF(){
+  return '<div class="m3-instr">'+
+    '<div class="m3-instr-name">EPF — Employee Provident Fund</div>'+
+    '<div class="m3-instr-oneliner">The most underrated retirement tool in India. Your employer matches your contribution — that is free money. The 8.15% tax-free return beats most fixed income instruments.</div>'+
+    '<div class="m3-explain">EPF works like this: you contribute 12% of your Basic salary every month. Your employer also contributes 12% — of which 8.33% goes to EPS (pension) and 3.67% goes to your EPF account.<br><br>Every rupee you put in is matched by your employer. <strong>That is an instant 100% return on your contribution before any interest is earned.</strong> The 8.15% interest rate is declared annually by EPFO and has historically stayed between 8–9%.<br><br>The entire accumulation is EEE — tax-free at investment, tax-free on interest earned, and tax-free at withdrawal after 5 years of continuous service. No other instrument in India offers this combination.</div>'+
+    '<div class="m3-chars">'+
+      '<div class="m3-char"><div class="m3-char-lbl">Purpose</div><div class="m3-char-val purple">Retirement Corpus + Tax Saving</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Expiry</div><div class="m3-char-val red">Retirement-locked — age 58 or resignation</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Returns</div><div class="m3-char-val green">8.15% p.a. tax-free — declared by EPFO</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Risk</div><div class="m3-char-val green">Zero — Government backed</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Tax Status</div><div class="m3-char-val green">EEE — fully tax-free at all stages</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Employer Match</div><div class="m3-char-val green">Yes — 3.67% of Basic to your account</div></div>'+
+    '</div>'+
+    liqBar(1,'#7C3AED')+
+    '<div class="m3-explain" style="margin-top:12px"><strong>The Compounding Effect:</strong> EPF compounds annually. The interest is credited at year end to the entire accumulated balance — your contributions, your employer\'s contributions, and all previous years\' interest. This triple compounding over 25–30 years creates substantial wealth.</div>'+
+    epfCompoundVis(3000)+
+    '<div class="m3-truth" style="margin-top:12px"><strong>Honest Truth:</strong> Never voluntarily opt out of EPF. Never reduce your Basic salary to reduce EPF contribution. The employer match plus EEE tax status makes this the highest effective return instrument available to salaried employees — better than any FD or debt MF on a post-tax basis.</div>'+
+    '<div class="m3-bestfor">✦ Best for: Every salaried employee without exception. Never opt out.</div>'+
+  '</div>';
+}
 
-  // INSURANCE — separate treatment
-  term_insurance:{
-    name:'Term Life Insurance',
-    purposeTag:'PROTECTION ONLY', purposeColor:'rgba(224,82,82,.15)', purposeText:'#e05252',
-    chars:[
-      {lbl:'Purpose',    val:'PROTECTION only — NOT an investment', cls:'red'},
-      {lbl:'Premium',    val:'Paid regularly — non-recoverable — cost of protection', cls:'red'},
-      {lbl:'Claim',      val:'Emergency resort — paid to family on death only', cls:'red'},
-      {lbl:'Returns',    val:'ZERO — premium is the price of protection, not a deposit', cls:'red'},
-      {lbl:'Coverage',   val:'₹1 Crore cover at age 30 = ₹10,000–12,000/year', cls:'amber'},
-      {lbl:'Tax',        val:'Premium deductible under 80C — claim amount tax free', cls:'teal'},
-    ],
-    truth:'NEVER mix insurance with investment. Term insurance exists for one purpose — if you die, your family does not suffer financially. Buy the maximum coverage you can afford as early as possible. Premium is cheapest when you are young and healthy.',
-    bestFor:'Everyone with dependents — buy before investing anything else.'
-  },
-  health_insurance:{
-    name:'Health Insurance',
-    purposeTag:'MEDICAL PROTECTION', purposeColor:'rgba(224,82,82,.15)', purposeText:'#e05252',
-    chars:[
-      {lbl:'Purpose',    val:'Medical Emergency Protection — hospitalisation costs', cls:'red'},
-      {lbl:'Premium',    val:'Annual payment — non-recoverable — cost of coverage', cls:'red'},
-      {lbl:'Claim',      val:'Resort in medical emergency — hospitalisation, surgery', cls:'red'},
-      {lbl:'Returns',    val:'ZERO — premium goes when not claimed. That is a good thing.', cls:'amber'},
-      {lbl:'Coverage',   val:'Minimum ₹10L individual / ₹25L family floater recommended', cls:'amber'},
-      {lbl:'Tax',        val:'Premium deductible under 80D — up to ₹25K (₹50K for senior)', cls:'teal'},
-    ],
-    truth:'One hospitalisation without health insurance can wipe out years of savings. Premium paid and not claimed means you stayed healthy — not that money was wasted. A ₹15L cover at age 35 costs ₹12,000–18,000/year. That is less than one hospital day.',
-    bestFor:'Every single person — buy before you need it, not after.'
-  },
+function instrNPS(){
+  return '<div class="m3-instr">'+
+    '<div class="m3-instr-name">NPS — National Pension System</div>'+
+    '<div class="m3-instr-oneliner">A government-regulated retirement vehicle with market-linked returns and India\'s most powerful tax deduction — especially when employer pays it.</div>'+
+    '<div class="m3-explain">NPS is managed by nine professional pension fund managers — SBI Pension, LIC Pension, UTI Retirement Solutions, HDFC Pension, ICICI Prudential Pension, Kotak Mahindra Pension, Aditya Birla Sun Life Pension, Tata Pension, and Max Life Pension.<br><br>You choose your fund manager and asset mix. Your money is invested in a combination of Equity (E), Corporate Bonds (C), Government Securities (G), and Alternatives (A). The equity component has historically delivered 12–13% returns.</div>'+
+    '<div class="m3-explain" style="margin-top:8px"><strong>Two Tiers:</strong><br>• <strong>Tier I</strong> — Retirement account. Locked till age 60. Full tax benefits. Mandatory.<br>• <strong>Tier II</strong> — Voluntary savings. No lock-in. Withdraw anytime. No tax benefit for private sector.</div>'+
+    '<div class="m3-chars">'+
+      '<div class="m3-char"><div class="m3-char-lbl">Purpose</div><div class="m3-char-val purple">Retirement + Tax Saving</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Expiry</div><div class="m3-char-val red">Locked till age 60</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Returns</div><div class="m3-char-val green">9–11% CAGR — market-linked</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Risk</div><div class="m3-char-val amber">Low–Medium — depends on equity %</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Tax — Own contribution</div><div class="m3-char-val blue">80CCD(1B): Extra ₹50K deduction beyond 80C</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Tax — Employer pays</div><div class="m3-char-val green">80CCD(2): No upper rupee limit — most powerful</div></div>'+
+    '</div>'+
+    liqBar(1,'#7C3AED')+
+    '<div class="m3-explain" style="margin-top:12px"><strong>The ₹12 Lakh Exemption and NPS:</strong><br>Under the new tax regime (FY26 onwards), the basic exemption is ₹12 lakh. Most deductions are gone — but <em>employer NPS contribution under 80CCD(2) survives fully</em>.<br><br>If your employer restructures your CTC to include 10% of Basic as NPS contribution, that entire amount is deducted from your taxable income — no upper limit. For a CMD with Basic ₹25 lakh, that is ₹2.5 lakh deduction saving ₹75,000+ in tax annually.</div>'+
+    npsCalcHTML()+
+    '<div class="m3-explain" style="margin-top:12px"><strong>How to Open NPS:</strong><br>1. Go to <strong>enps.nsdl.com</strong><br>2. Register with PAN + Aadhaar — OTP KYC, no physical documents<br>3. Choose fund manager (HDFC Pension or UTI for good track record)<br>4. Choose Active or Auto choice allocation<br>5. Minimum first contribution ₹500<br>6. PRAN number issued instantly</div>'+
+    '<div class="m3-flow" style="margin-top:12px">'+
+      '<div style="font-size:11px;font-weight:700;color:#6B7280;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px">Exit Rules</div>'+
+      '<div class="m3-flow-step"><div class="m3-flow-dot" style="background:#DCFCE7;color:#166534">60</div><div class="m3-flow-body"><div class="m3-flow-title">At Age 60</div><div class="m3-flow-desc">60% lump sum — completely tax free. 40% compulsory annuity — taxed as income.</div></div></div>'+
+      '<div class="m3-flow-arrow">↓</div>'+
+      '<div class="m3-flow-step"><div class="m3-flow-dot" style="background:#FEF9C3;color:#713F12">Early</div><div class="m3-flow-body"><div class="m3-flow-title">Before Age 60</div><div class="m3-flow-desc">Only 20% lump sum. 80% compulsory annuity. Exit only for specified reasons.</div></div></div>'+
+      '<div class="m3-flow-arrow">↓</div>'+
+      '<div class="m3-flow-step"><div class="m3-flow-dot" style="background:#EDE9FE;color:#5B21B6">Part</div><div class="m3-flow-body"><div class="m3-flow-title">Partial Withdrawal</div><div class="m3-flow-desc">After 3 years. Up to 25% of own contributions only. Max 3 times. Only for: higher education, marriage, home, critical illness.</div></div></div>'+
+    '</div>'+
+    '<div class="m3-truth" style="margin-top:12px"><strong>Honest Truth:</strong> The compulsory 40% annuity at exit yields only 5.5–6.5% per year — below long-term inflation. The workaround: delay withdrawal beyond 60. NPS can be continued till 75 — longer you hold, larger the corpus and smaller the annuity burden feels. The 80CCD(2) employer route is the most underused tax tool for professionals in India.</div>'+
+    '<div class="m3-bestfor">✦ Best for: Anyone in 20%+ tax bracket. Essential for professionals who can restructure CTC to include employer NPS.</div>'+
+  '</div>';
+}
 
-  // FD — special with rates panel
-  fd:{
-    name:'Fixed Deposit — Private Banks',
-    purposeTag:'SAFETY', purposeColor:'rgba(108,127,255,.12)', purposeText:'#6c7fff',
-    chars:[
-      {lbl:'Purpose',    val:'Capital Safety + Fixed Returns', cls:'teal'},
-      {lbl:'Expiry',     val:'Fixed maturity date — principal + interest returned', cls:'amber'},
-      {lbl:'Returns',    val:'See live rates below', cls:'teal'},
-      {lbl:'Risk',       val:'Very Low — DICGC insured up to ₹5L per bank', cls:'green'},
-      {lbl:'Liquidity',  val:'Premature withdrawal allowed with 0.5–1% penalty', cls:'amber'},
-      {lbl:'Tax',        val:'Interest taxable as income — TDS deducted above ₹40K/yr', cls:'amber'},
-    ],
-    truth:'SBI and HDFC offer lower FD rates than smaller private banks. IDFC First, Bandhan, AU Small Finance consistently offer 7.5–8%+. DICGC insures up to ₹5 lakh per bank — spread across 2–3 banks for full safety.',
-    bestFor:'Short-term goals (1–3 years), senior citizens, ultra-conservative profiles.',
-    hasFDRates: true
-  }
-};
+function instrGoldETF(){
+  return '<div class="m3-instr">'+
+    '<div class="m3-instr-name">Gold ETF — Exchange Traded Fund</div>'+
+    '<div class="m3-instr-oneliner">Pure gold exposure. One unit = one gram of 24-carat gold. No storage risk. No purity risk. Buy and sell on the stock exchange like any share.</div>'+
+    '<div class="m3-explain">A Gold ETF holds physical gold in a vault and issues units that track the gold price exactly. When you buy 1 unit, you own the economic equivalent of 1 gram of gold — without touching physical gold at all.<br><br>The Government of India has stopped issuing new Sovereign Gold Bond (SGB) tranches. Gold ETF is now the primary and recommended gold investment vehicle.<br><br><strong>Why gold at all?</strong> Gold has a near-zero to negative correlation with equity markets. When the stock market crashes — 2008, 2020 — gold holds or rises. It is not about gold returns. It is about what gold does to your portfolio in a crisis. A 10% allocation to gold reduces portfolio crash damage significantly.</div>'+
+    '<div class="m3-chars">'+
+      '<div class="m3-char"><div class="m3-char-lbl">Purpose</div><div class="m3-char-val amber">Crisis Hedge + Inflation Protection</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Expiry</div><div class="m3-char-val green">No expiry — hold as long as needed</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Returns</div><div class="m3-char-val amber">Tracks gold price — 10–12% CAGR (10yr India avg)</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Risk</div><div class="m3-char-val amber">Low — price falls possible, historically recovers</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Tax</div><div class="m3-char-val teal">LTCG 12.5% after 2 years</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Min. Investment</div><div class="m3-char-val blue">1 unit (~₹700–800 at current gold price)</div></div>'+
+    '</div>'+
+    liqBar(5,'#D97706')+
+    '<div class="m3-truth"><strong>Honest Truth:</strong> SGB is no longer available for new investment. Gold ETF is the only rational gold vehicle now. Avoid physical gold for investment — making charges 8–25%, purity risk, storage risk. Zero of those problems with Gold ETF.</div>'+
+    '<div class="m3-bestfor">✦ Best for: 10% of every portfolio as crisis insurance — regardless of age, income, or stage.</div>'+
+  '</div>';
+}
+
+function instrFD(){
+  var rates=getFDRates();
+  var rateRows=Object.keys(rates).map(function(b){
+    return '<div class="m3-fd-row"><span class="m3-fd-bank">'+b+'</span><span class="m3-fd-rate">'+rates[b]+'% p.a.</span></div>';
+  }).join('');
+  return '<div class="m3-instr">'+
+    '<div class="m3-instr-name">Fixed Deposit — Private & PSU Banks</div>'+
+    '<div class="m3-instr-oneliner">The safest parking place for capital you cannot afford to lose. Fixed maturity, guaranteed return, DICGC insured up to ₹5 lakh per bank.</div>'+
+    '<div class="m3-explain">A Fixed Deposit locks your money for a chosen period — 7 days to 10 years — at a fixed interest rate agreed at the time of deposit. The bank pays you principal + interest at maturity. The rate does not change during the tenure regardless of market conditions.<br><br><strong>Why avoid SBI and HDFC?</strong> Large banks offer lower FD rates because they have abundant low-cost deposits. Smaller private banks and PSU banks compete aggressively for deposits and offer significantly higher rates — while being equally safe under DICGC insurance up to ₹5 lakh per bank.<br><br>Strategy: Spread ₹5 lakh each across 2–3 banks for full DICGC coverage on the entire amount.</div>'+
+    '<div class="m3-chars">'+
+      '<div class="m3-char"><div class="m3-char-lbl">Purpose</div><div class="m3-char-val teal">Capital Safety + Fixed Returns</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Expiry</div><div class="m3-char-val amber">Fixed maturity — principal + interest at end</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Returns</div><div class="m3-char-val amber">See live rates below</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Risk</div><div class="m3-char-val green">Very Low — DICGC insured up to ₹5L</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Tax</div><div class="m3-char-val amber">Interest taxable as income — TDS above ₹40K/yr</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Break penalty</div><div class="m3-char-val amber">0.5–1% interest forfeited on premature exit</div></div>'+
+    '</div>'+
+    liqBar(2,'#2563EB')+
+    '<div class="m3-fd-panel"><div class="m3-fd-panel-title"><span>Current FD Rates (1–2 year)</span><button class="m3-fd-edit" onclick="openM3Settings()">✏️ Update</button></div>'+rateRows+'</div>'+
+    '<div class="m3-truth" style="margin-top:10px"><strong>Honest Truth:</strong> FD post-tax at 30% slab = approximately 5.4% net. Inflation is 5–6%. Real return is near zero. FD is safety, not wealth creation. Use it for your emergency fund overflow and short-term goals only — never as your primary investment strategy.</div>'+
+    '<div class="m3-bestfor">✦ Best for: Emergency fund overflow, capital you need within 1–3 years, conservative profiles, senior citizens.</div>'+
+  '</div>';
+}
+
+function instrDebtMF(){
+  return '<div class="m3-instr">'+
+    '<div class="m3-instr-name">Debt Mutual Fund</div>'+
+    '<div class="m3-instr-oneliner">Better than FD in flexibility and pre-tax returns. Invests in government bonds, corporate bonds, and money market instruments. No lock-in.</div>'+
+    '<div class="m3-explain">A debt mutual fund pools money and invests it in fixed income instruments — government bonds, corporate bonds, treasury bills. Unlike FD, there is no lock-in — you can redeem any day. Returns depend on the interest rate environment and credit quality of the bonds held.<br><br>After the 2023 tax change, indexation benefit on debt MF is gone. Gains are now taxed at your income slab — same as FD. But debt MF still wins on flexibility, no TDS deduction, and professional management of credit risk.</div>'+
+    '<div class="m3-chars">'+
+      '<div class="m3-char"><div class="m3-char-lbl">Purpose</div><div class="m3-char-val teal">Stable Returns + Flexibility</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Expiry</div><div class="m3-char-val green">No expiry — redeem any time</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Returns</div><div class="m3-char-val amber">6–8% p.a. depending on category</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Risk</div><div class="m3-char-val green">Low — interest rate risk only</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Tax</div><div class="m3-char-val amber">Taxed at income slab — no indexation post 2023</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Min. Investment</div><div class="m3-char-val blue">₹500</div></div>'+
+    '</div>'+
+    liqBar(4,'#2563EB')+
+    '<div class="m3-truth"><strong>Honest Truth:</strong> Debt MF lost its key tax advantage in 2023. But it still offers better liquidity than FD and no TDS hassle. For short to medium-term money (1–3 years) where you may need access before maturity — debt MF beats FD.</div>'+
+    '<div class="m3-bestfor">✦ Best for: Short to medium-term goals where flexibility matters more than the last 0.5% return.</div>'+
+  '</div>';
+}
+
+function instrLiquidMF(){
+  return '<div class="m3-instr">'+
+    '<div class="m3-instr-name">Liquid Mutual Fund</div>'+
+    '<div class="m3-instr-oneliner">Your emergency fund vehicle. Better than a savings account. Money accessible within hours. No lock-in. No exit load after 7 days.</div>'+
+    '<div class="m3-explain">Liquid funds invest in overnight instruments and very short-term government securities. They are the closest thing to a savings account — but with meaningfully better returns.<br><br>A savings account earns 2.5–3%. A liquid fund earns 5–7%. On a ₹3 lakh emergency fund, that is ₹7,500–₹12,000 extra per year — for zero additional risk.<br><br>Instant redemption — most AMCs now offer T+0 redemption up to ₹50,000. Anything above comes the next working day.</div>'+
+    '<div class="m3-chars">'+
+      '<div class="m3-char"><div class="m3-char-lbl">Purpose</div><div class="m3-char-val teal">Emergency Fund + Safety</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Expiry</div><div class="m3-char-val green">No expiry — withdraw any time</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Returns</div><div class="m3-char-val teal">5–7% p.a. — better than savings account</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Risk</div><div class="m3-char-val green">Near Zero — overnight instruments only</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Tax</div><div class="m3-char-val amber">Taxed at income slab</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Access</div><div class="m3-char-val green">T+0 up to ₹50K / T+1 above that</div></div>'+
+    '</div>'+
+    liqBar(5,'#0D9488')+
+    '<div class="m3-truth"><strong>Honest Truth:</strong> Every rupee of your emergency fund sitting in a savings account at 2.5% is silently losing purchasing power. Liquid fund is the right home for emergency money — same safety, 2–3x the return.</div>'+
+    '<div class="m3-bestfor">✦ Best for: Primary emergency fund vehicle — every investor profile without exception.</div>'+
+  '</div>';
+}
+
+function instrTermInsurance(){
+  return '<div class="m3-instr" style="border-color:#FECACA">'+
+    '<div class="m3-instr-name" style="color:#DC2626">Term Life Insurance</div>'+
+    '<div class="m3-instr-oneliner">Pure protection. Not an investment. If you die, your family does not suffer financially. That is its only purpose — and it serves that purpose perfectly.</div>'+
+    '<div class="m3-explain">Term insurance pays a lump sum — the sum assured — to your nominee if you die during the policy term. That is all it does. There is no maturity benefit, no savings component, no returns. The premium you pay is entirely the cost of protection — like car insurance.<br><br><strong>The premium goes down the line — permanently.</strong> Every year you age, the premium for the same coverage increases. A 28-year-old pays ₹8,000/year for ₹1 Crore coverage. A 40-year-old pays ₹18,000/year for the same. Buy early, buy the maximum you can afford, and never cancel it.</div>'+
+    '<div class="m3-chars">'+
+      '<div class="m3-char"><div class="m3-char-lbl">Purpose</div><div class="m3-char-val red">PROTECTION ONLY — not investment</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Premium</div><div class="m3-char-val red">Non-recoverable — cost of protection</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Claim trigger</div><div class="m3-char-val red">Emergency resort — death only</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Returns</div><div class="m3-char-val red">ZERO — that is correct and expected</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Coverage</div><div class="m3-char-val amber">₹1 Cr at age 30 = ~₹10–12K/year</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Tax</div><div class="m3-char-val teal">Premium under 80C / claim tax-free</div></div>'+
+    '</div>'+
+    liqBar(1,'#DC2626')+
+    '<div class="m3-truth"><strong>Honest Truth:</strong> ULIP agents earn 25–35% commission in Year 1. That is why they push ULIP over term. A ₹1 Crore term plan costs ₹10,000/year. A ULIP for the same coverage might cost ₹1 lakh/year — with 4–5% returns. Never mix insurance with investment.</div>'+
+    '<div class="m3-bestfor">✦ Buy before investing anything else. If you have dependents and no term cover — this is your first financial task today.</div>'+
+  '</div>';
+}
+
+function instrHealthInsurance(){
+  return '<div class="m3-instr" style="border-color:#FECACA">'+
+    '<div class="m3-instr-name" style="color:#DC2626">Health Insurance</div>'+
+    '<div class="m3-instr-oneliner">One hospitalisation without insurance can wipe out years of savings. The premium you pay and never claim means you stayed healthy — not that money was wasted.</div>'+
+    '<div class="m3-explain">Health insurance covers hospitalisation costs — room rent, surgery, ICU, doctor fees, medicines during treatment. When you are admitted, the insurer pays the hospital directly (cashless) or reimburses you (reimbursement).<br><br>The premium is paid annually and is non-recoverable if not claimed. <strong>Not claiming is the best outcome</strong> — it means you stayed healthy. Think of it the same way as a fire extinguisher — you hope to never use it, but you keep it anyway.<br><br>Minimum recommended: ₹10 lakh individual cover / ₹25 lakh family floater. Add super top-up for catastrophic coverage at low additional cost.</div>'+
+    '<div class="m3-chars">'+
+      '<div class="m3-char"><div class="m3-char-lbl">Purpose</div><div class="m3-char-val red">Medical Emergency Protection</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Premium</div><div class="m3-char-val red">Annual — non-recoverable</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Claim trigger</div><div class="m3-char-val red">Resort — hospitalisation, surgery, illness</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Returns</div><div class="m3-char-val amber">ZERO — and that is perfectly fine</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Recommended</div><div class="m3-char-val amber">Min ₹10L individual / ₹25L family</div></div>'+
+      '<div class="m3-char"><div class="m3-char-lbl">Tax</div><div class="m3-char-val teal">80D — ₹25K deduction (₹50K senior citizens)</div></div>'+
+    '</div>'+
+    liqBar(1,'#DC2626')+
+    '<div class="m3-truth"><strong>Honest Truth:</strong> A 5-day ICU stay in a private hospital in Chennai costs ₹3–8 lakh. That wipes out an entire year of disciplined savings in one event. A ₹15 lakh health cover costs ₹12,000–18,000/year. That is the trade.</div>'+
+    '<div class="m3-bestfor">✦ Buy immediately if you do not have adequate coverage. Corporate health insurance from employer is not enough — it stops when you leave the company.</div>'+
+  '</div>';
+}
+
+// ── TAX HARVESTING CARD ──
+function taxHarvestingCard(){
+  return '<div class="m3-concept">'+
+    '<div class="m3-concept-title">🌾 Tax Harvesting — How to Pay Zero LTCG Legally</div>'+
+    '<div class="m3-concept-body">'+
+      'LTCG on equity is <strong>12.5% above ₹1.25 lakh per financial year</strong>. Tax harvesting is the strategy of selling equity MF or stocks before your gain crosses ₹1.25 lakh — and immediately buying back. You book the gain, reset your cost basis, and pay <strong>zero tax</strong>.<br><br>'+
+      '<div class="m3-example-box">'+
+        '<strong>Example:</strong><br>'+
+        'Invested ₹5,00,000 in Nifty 50 Index Fund<br>'+
+        'Current value: ₹6,40,000<br>'+
+        'Unrealised gain: ₹1,40,000<br><br>'+
+        'Without harvesting:<br>'+
+        'Tax = 12.5% × (₹1,40,000 − ₹1,25,000) = <strong>₹1,875</strong><br><br>'+
+        'With harvesting — sell ₹6,25,000 worth:<br>'+
+        'Gain booked = exactly ₹1,25,000 → <strong>ZERO tax</strong><br>'+
+        'Buy back immediately at ₹6,25,000<br>'+
+        'New cost basis reset to ₹6,25,000<br>'+
+        'Tax saved: ₹1,875 this year<br><br>'+
+        'Done every April: significant compounding of saved tax over 20 years.'+
+      '</div>'+
+      '<strong>Rules to follow:</strong> Do this in March or early April each year. Check your total LTCG across all funds/stocks before selling. The buy-back is immediate — no waiting period needed for equity MF (unlike US wash sale rules which do not apply in India).'+
+    '</div>'+
+  '</div>';
+}
+
+// ── GIFTING CARD ──
+function giftingCard(){
+  return '<div class="m3-concept" style="margin-top:10px">'+
+    '<div class="m3-concept-title">🎁 Gifting Shares & MF Units — Tax-Free Wealth Transfer</div>'+
+    '<div class="m3-concept-body">'+
+      'Gifts received from <strong>specified relatives are completely tax-free</strong> — no limit on amount. Specified relatives include: spouse, children, parents, siblings, spouse\'s siblings, grandparents, and their spouses.<br><br>'+
+      '<div class="m3-example-box">'+
+        '<strong>Example 1 — Parent gifts shares to adult child:</strong><br>'+
+        'Parent transfers shares worth ₹15 lakh to child\'s demat<br>'+
+        'Child receives it: ZERO tax — gift from specified relative<br>'+
+        'Child holds and sells later: capital gains taxed in child\'s hands<br>'+
+        'If child is in lower tax bracket — family saves tax overall<br><br>'+
+        '<strong>Example 2 — Husband gifts MF units to wife:</strong><br>'+
+        'Husband transfers ₹10 lakh of MF units to wife<br>'+
+        'Gift itself: ZERO tax<br>'+
+        '⚠️ Clubbing provision applies: income from gifted money is added back to husband\'s income<br>'+
+        'Effective when wife re-invests and earns on earnings — second generation income escapes clubbing<br><br>'+
+        '<strong>Example 3 — Non-relative gift above ₹50,000:</strong><br>'+
+        'Any gift from non-relative above ₹50,000 in a year<br>'+
+        'Fully taxable as income in receiver\'s hands — avoid this structure'+
+      '</div>'+
+      '<div class="m3-warn-box">'+
+        '⚠️ <strong>Cost basis on gifted shares:</strong> When you receive gifted shares, your cost of acquisition = the original price paid by the gifter. The holding period for LTCG starts from when the original owner bought — not from when you received the gift.'+
+      '</div>'+
+      '<strong>Best use:</strong> Gift appreciated shares or MF units to retired parents (zero or low tax bracket). They sell, pay minimal tax, and can gift the cash back — perfectly legal wealth transfer strategy.'+
+    '</div>'+
+  '</div>';
+}
 
 // ── ALLOCATION ENGINE ──
-function m3ComputeAllocation(p){
-  var bases={
-    school:         {equity:30,debt:10,gold:10,realestate:0,emergency:50},
-    college:        {equity:40,debt:10,gold:10,realestate:0,emergency:40},
-    young_adult:    {equity:60,debt:10,gold:10,realestate:0,emergency:20},
-    first_earner:   {equity:55,debt:10,gold:10,realestate:0,emergency:25},
-    professional:   {equity:55,debt:15,gold:10,realestate:5,emergency:15},
-    homemaker:      {equity:40,debt:20,gold:15,realestate:5,emergency:20},
-    differently_abled:{equity:35,debt:25,gold:15,realestate:5,emergency:20},
-    thirties:       {equity:55,debt:15,gold:10,realestate:10,emergency:10},
-    forties:        {equity:45,debt:20,gold:10,realestate:15,emergency:10},
-    pre_retire:     {equity:30,debt:35,gold:15,realestate:10,emergency:10},
-    post_retire:    {equity:20,debt:45,gold:15,realestate:10,emergency:10},
-    senior65:       {equity:10,debt:55,gold:15,realestate:10,emergency:10},
-    senior75:       {equity:5, debt:60,gold:15,realestate:10,emergency:10},
-  };
-  var a=Object.assign({},bases[p.lifeStage]||bases.thirties);
+function m3Alloc(p){
+  var b={school:{equity:30,debt:10,gold:10,realestate:0,emergency:50},college:{equity:40,debt:10,gold:10,realestate:0,emergency:40},young_adult:{equity:60,debt:10,gold:10,realestate:0,emergency:20},first_earner:{equity:55,debt:10,gold:10,realestate:0,emergency:25},professional:{equity:55,debt:15,gold:10,realestate:5,emergency:15},homemaker:{equity:40,debt:20,gold:15,realestate:5,emergency:20},differently_abled:{equity:35,debt:25,gold:15,realestate:5,emergency:20},thirties:{equity:55,debt:15,gold:10,realestate:10,emergency:10},forties:{equity:45,debt:20,gold:10,realestate:15,emergency:10},pre_retire:{equity:30,debt:35,gold:15,realestate:10,emergency:10},post_retire:{equity:20,debt:45,gold:15,realestate:10,emergency:10},senior65:{equity:10,debt:55,gold:15,realestate:10,emergency:10},senior75:{equity:5,debt:60,gold:15,realestate:10,emergency:10}};
+  var a=Object.assign({},b[p.lifeStage]||b.thirties);
   var pt=p.primaryType||'';
   if(pt==='gamble'||pt==='spend'){a.equity=Math.max(a.equity-10,5);a.emergency=Math.min(a.emergency+10,50);}
   if(pt==='anxious'){a.equity=Math.max(a.equity-5,5);a.debt=Math.min(a.debt+5,65);}
-  if(pt==='save'){a.equity=Math.min(a.equity+5,70);a.debt=Math.max(a.debt-5,5);}
+  if(pt==='save'){a.equity=Math.min(a.equity+5,70);}
   if(pt==='balanced'){a.equity=Math.min(a.equity+5,75);}
   if(pt==='status'){a.emergency=Math.min(a.emergency+5,40);a.equity=Math.max(a.equity-5,10);}
   var gen=p.gen||'';
@@ -2741,316 +2953,149 @@ function m3ComputeAllocation(p){
   var sc=p.m1score||50;
   if(sc<40){a.emergency=Math.min(a.emergency+10,50);a.equity=Math.max(a.equity-10,5);}
   if(sc>75){a.equity=Math.min(a.equity+5,75);}
-  // normalise
   var total=Object.values(a).reduce(function(x,y){return x+y;},0);
   Object.keys(a).forEach(function(k){a[k]=Math.round(a[k]/total*100);});
-  var sum=Object.values(a).reduce(function(x,y){return x+y;},0);
-  a.equity+=(100-sum);
+  var sum=Object.values(a).reduce(function(x,y){return x+y;},0);a.equity+=(100-sum);
   return a;
 }
 
-// ── WHICH INSTRUMENTS PER BUCKET PER PROFILE ──
-function m3GetInstruments(bucket, p){
-  var ls=p.lifeStage||'thirties';
-  var earlyStages=['school','college','young_adult','first_earner'];
-  var lateStages=['pre_retire','post_retire','senior65','senior75'];
-  if(bucket==='equity'){
-    var list=['nifty_index'];
-    if(!lateStages.includes(ls))list.push('midcap_mf');
-    if(['thirties','forties','professional'].includes(ls))list.push('direct_stocks');
-    list.push('reits');
-    return list;
-  }
-  if(bucket==='debt'){
-    var list=['ppf'];
-    if(ls!=='school'&&ls!=='college')list.push('epf');
-    list.push('nps');
-    list.push('fd');
-    if(!earlyStages.includes(ls))list.push('debt_mf');
-    if(lateStages.includes(ls)||ls==='forties')list.push('govt_bonds');
-    return list;
-  }
-  if(bucket==='gold') return ['gold_etf'];
-  if(bucket==='realestate') return ['reits'];
-  if(bucket==='emergency') return ['liquid_mf'];
+function m3Amt(invCap,pct){var mid={lt2k:1000,'2k_10k':6000,'10k_50k':30000,gt50k:75000};return Math.round((mid[invCap]||6000)*pct/100/100)*100;}
+function fmtInr(n){if(n>=100000)return '₹'+(n/100000).toFixed(1)+'L';if(n>=1000)return '₹'+(n/1000).toFixed(1)+'K';return '₹'+n;}
+
+function m3Donut(alloc){
+  var cx=105,cy=105,r=80,sw=24,circ=2*Math.PI*r,offset=0,paths='',gap=2;
+  Object.keys(alloc).forEach(function(k){var pct=alloc[k];if(!pct)return;var dash=(pct/100)*circ-gap;var off=-offset/100*circ;paths+='<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="none" stroke="'+(BC[k]||'#888')+'" stroke-width="'+sw+'" stroke-dasharray="'+dash+' '+circ+'" stroke-dashoffset="'+off+'" stroke-linecap="round"/>';offset+=pct;});
+  return '<svg viewBox="0 0 210 210" style="transform:rotate(-90deg)">'+paths+'</svg>';
 }
 
-// ── NARRATIVE ENGINE ──
-function m3BuildNarrative(p,alloc){
-  var LS_NAMES={school:'School Student',college:'College Student',young_adult:'Young Adult',first_earner:'First Time Earner',professional:'Professional',homemaker:'Homemaker',differently_abled:'Differently Abled',thirties:'Person in their Thirties',forties:'Person in their Forties',pre_retire:'Pre-Retirement',post_retire:'Post-Retirement',senior65:'65 Plus',senior75:'75 Plus'};
-  var PT_NAMES={avoid:'The Avoiding Type',spend:'The Spending Type',status:'The Status Seeker',save:'The Saving Type',anxious:'The Financially Anxious',gamble:'The Gambling Type',balanced:'The Balanced Investor',first_gen_earner:'The First Generation Builder',second_gen_builder:'The Second Generation Guardian'};
-  var openings={
-    school:'You are at the most powerful starting point in personal finance — <strong>early</strong>. The rupee you invest today carries a multiplier that no amount of income can buy later. Time is your only irreplaceable asset.',
-    college:'Most students ignore money. The few who do not — retire early. You have a head start that cannot be purchased at any price. Use it.',
-    young_adult:'This is the golden decade. The habits formed now will define your financial life at 50. Invest before life gets complicated.',
-    first_earner:'The most important salary is the first one. Not for what it buys — for the habits it builds. This blueprint is designed to give you the strongest possible foundation for the next 30 years.',
-    thirties:'The thirties are the wealth-building decade. Income is growing, responsibilities are real, and <strong>the compounding clock is still running strongly</strong>. This is the time to invest aggressively within discipline.',
-    forties:'In your forties, the window for aggressive wealth creation is still open — but narrowing. Every year of inaction now costs significantly more than it did at 30.',
-    pre_retire:'You are approaching the finish line of accumulation. <strong>Preservation now matters as much as growth.</strong> The blueprint shifts accordingly — protecting what has been built while beating inflation for 25+ more years.',
-    post_retire:'Your wealth is now your income. The goal is steady growth, fierce protection, and certainty of income. Every decision here prioritises your peace of mind.',
-    senior65:'At this stage, protecting what you built is the priority. Inflation and healthcare costs are the two real financial risks remaining.',
-    senior75:'Legacy, liquidity, and love — these are the only three financial priorities that matter now. The blueprint reflects exactly that.',
-    homemaker:'Managing a household is an act of immense economic value. Your financial independence matters deeply — this blueprint is built for someone who deserves real security in their own name.',
-    differently_abled:'Financial independence is not a privilege — <strong>it is your right</strong>. This blueprint is built with extra emphasis on liquidity and security that gives you unconditional control over your own life.',
-    professional:'High income is not wealth. Many high earners retire with less than expected — because income was spent faster than invested. <strong>This blueprint converts professional income into permanent capital.</strong>'
-  };
-  var ptNotes={
-    save:'As <strong>The Saving Type</strong> — your discipline is your greatest asset. But idle savings lose 5–6% purchasing power every year to inflation. This blueprint converts disciplined saving into disciplined investing.',
-    anxious:'As <strong>The Financially Anxious</strong> — a well-funded emergency buffer is the foundation that makes investing feel safe, not reckless. The blueprint deliberately holds more in the safety net.',
-    gamble:'As <strong>The Gambling Type</strong> — the growth allocation you prefer must be earned by building the base first. Emergency fund and insurance come before any growth play.',
-    balanced:'As <strong>The Balanced Investor</strong> — your maturity allows a slightly higher equity tilt. You will not panic when markets fall. That discipline is worth a premium.',
-    spend:'As <strong>The Spending Type</strong> — automate investments before spending begins. The only system that works is: invest first, live on what remains.',
-    status:'As <strong>The Status Seeker</strong> — the most powerful status signal is not what you spend. It is what you own. A well-built portfolio is the most silent, most powerful status symbol.',
-    first_gen_earner:'As <strong>The First Generation Builder</strong> — you are creating a template your children may follow. Invest with that gravity in mind.'
-  };
+function m3Narrative(p,alloc){
+  var openings={school:'You are at the most powerful starting point in personal finance — <strong>early</strong>. The rupee you invest today carries a multiplier that no income can buy later.',college:'Most students ignore money. The few who do not retire early. You have a head start that cannot be purchased at any price.',young_adult:'This is the golden decade. The habits formed now will define your financial life at 50.',first_earner:'The most important salary is the first one — not for what it buys, but for the habits it builds.',thirties:'The thirties are the wealth-building decade. Income is growing, responsibilities are real, and <strong>the compounding clock is running strongly</strong>.',forties:'In your forties the window for aggressive wealth creation is narrowing. Every year of inaction costs significantly more than it did at 30.',pre_retire:'<strong>Preservation now matters as much as growth.</strong> The blueprint shifts to protect what has been built while beating inflation for 25+ more years.',post_retire:'Your wealth is now your income. Steady growth, fierce protection, and certainty — this is the only financial objective now.',senior65:'Protecting what you built is the priority. Inflation and healthcare are the two real financial risks remaining.',senior75:'Legacy, liquidity, and love — these are the only three financial priorities that matter now.',homemaker:'Your financial independence matters deeply — this blueprint is built for someone who manages real resources and deserves real security in their own name.',differently_abled:'Financial independence is your right, not a privilege. This blueprint is built with extra emphasis on liquidity and security.',professional:'High income is not wealth. This blueprint converts professional income into permanent, compounding capital.'};
+  var ptNotes={save:'As <strong>The Saving Type</strong> — your discipline is your greatest asset. But idle savings lose 5–6% purchasing power every year to inflation. This blueprint converts disciplined saving into disciplined investing.',anxious:'As <strong>The Financially Anxious</strong> — a larger emergency buffer is built in. A well-funded safety net makes investing feel safe, not reckless.',gamble:'As <strong>The Gambling Type</strong> — the growth you prefer must be earned by building the base first. Emergency and insurance come before any growth play.',balanced:'As <strong>The Balanced Investor</strong> — your maturity earns a slightly higher equity tilt. You will not panic when markets fall.',spend:'As <strong>The Spending Type</strong> — automate investments before spending begins. Invest first, live on what remains.',status:'As <strong>The Status Seeker</strong> — the most powerful status symbol is not what you spend but what you own silently.',first_gen_earner:'As <strong>The First Generation Builder</strong> — you are creating a template your children may follow. Invest with that gravity.'};
   var sc=p.m1score||0;
-  var scoreNote=sc>0?(sc<40?'Your Cauvery Pulse Score of <strong>'+sc+'/100</strong> signals that the foundation needs strengthening first. The blueprint is calibrated conservatively — build the base before accelerating growth.':sc>=75?'Your Cauvery Pulse Score of <strong>'+sc+'/100</strong> reflects a strong financial foundation. The blueprint leverages this with a growth-oriented tilt — you have earned the right to take considered risk.':'Your Cauvery Pulse Score of <strong>'+sc+'/100</strong> shows a developing structure. The blueprint balances growth and protection accordingly.'):'';
-  return {
-    opening: openings[p.lifeStage]||'This blueprint has been built specifically for your profile — not a generic template.',
-    ptNote: ptNotes[p.primaryType]||'',
-    scoreNote: scoreNote
-  };
+  var sn=sc>0?(sc<40?'Your Cauvery Pulse Score of <strong>'+sc+'/100</strong> signals the foundation needs strengthening first — the blueprint is calibrated conservatively.':sc>=75?'Your Cauvery Pulse Score of <strong>'+sc+'/100</strong> reflects a strong foundation — the blueprint leverages this with a growth-oriented tilt.':'Your Cauvery Pulse Score of <strong>'+sc+'/100</strong> shows a developing structure — the blueprint balances growth and protection.'):'';
+  return (openings[p.lifeStage]||'This blueprint has been built specifically for your profile.')+(ptNotes[p.primaryType]?'<br><br>'+ptNotes[p.primaryType]:'')+(sn?'<br><br>'+sn:'');
 }
 
-// ── MONTHLY AMOUNT ──
-function m3GetAmt(invCap,pct){
-  var mid={lt2k:1000,'2k_10k':6000,'10k_50k':30000,gt50k:75000};
-  var base=mid[invCap]||6000;
-  return Math.round(base*pct/100/100)*100;
-}
-function fmtInr(n){
-  if(n>=100000)return '₹'+(n/100000).toFixed(1)+'L';
-  if(n>=1000)return '₹'+(n/1000).toFixed(1)+'K';
-  return '₹'+n;
-}
-
-// ── DONUT ──
-var BCOLORS={equity:'#3ecf8e',debt:'#6c7fff',gold:'#e8b84b',realestate:'#f4a535',emergency:'#2ec4b6'};
-var BLABELS={equity:'Equity',debt:'Debt',gold:'Gold',realestate:'Real Estate',emergency:'Emergency'};
-
-function m3DrawDonut(alloc){
-  var cx=105,cy=105,r=80,sw=26,circ=2*Math.PI*r,offset=0,paths='',gap=2;
-  Object.keys(alloc).forEach(function(k){
-    var pct=alloc[k];if(!pct)return;
-    var dash=(pct/100)*circ-gap;
-    var off=-offset/100*circ;
-    paths+='<circle cx="'+cx+'" cy="'+cy+'" r="'+r+'" fill="none" stroke="'+(BCOLORS[k]||'#888')+'" stroke-width="'+sw+'" stroke-dasharray="'+dash+' '+circ+'" stroke-dashoffset="'+off+'" stroke-linecap="round"/>';
-    offset+=pct;
-  });
-  return '<svg viewBox="0 0 210 210" style="transform:rotate(-90deg);overflow:visible">'+paths+'</svg>';
+function m3GetInstrs(bucket,p){
+  var ls=p.lifeStage||'thirties';
+  var early=['school','college','young_adult','first_earner'];
+  var late=['pre_retire','post_retire','senior65','senior75'];
+  if(bucket==='equity'){var l=['nifty'];if(!late.includes(ls))l.push('midcap');if(['thirties','forties','professional'].includes(ls))l.push('stocks');l.push('reits');return l;}
+  if(bucket==='debt'){var l=['epf','nps','fd'];if(!early.includes(ls))l.push('debtmf');return l;}
+  if(bucket==='gold')return ['goldetf'];
+  if(bucket==='realestate')return ['reits_re'];
+  if(bucket==='emergency')return ['liquidmf'];
 }
 
-// ── RENDER INSTRUMENT CARD ──
-function m3RenderInstr(key){
-  var ins=M3_INSTRUMENTS[key];
-  if(!ins)return '';
-  var charsHTML=ins.chars.map(function(c){
-    return '<div class="m3-char"><div class="m3-char-lbl">'+c.lbl+'</div><div class="m3-char-val '+(c.cls||'')+'">'+c.val+'</div></div>';
-  }).join('');
-  var fdRatesHTML='';
-  if(ins.hasFDRates){
-    var rates=getM3FDRates();
-    var rows=Object.keys(rates).map(function(bank){
-      return '<div class="m3-fd-rate-row"><span class="m3-fd-bank">'+bank+'</span><span class="m3-fd-pct">'+rates[bank]+'%</span></div>';
-    }).join('');
-    fdRatesHTML='<div class="m3-fd-rates"><div class="m3-fd-rates-title"><span>Current FD Rates</span><button class="m3-fd-edit-btn" onclick="openM3Settings()">✏️ Update</button></div>'+rows+'</div>';
-  }
-  return '<div class="m3-instr">'+
-    '<div class="m3-instr-name">'+ins.name+'</div>'+
-    '<div class="m3-chars">'+charsHTML+'</div>'+
-    (ins.hasFDRates?fdRatesHTML:'')+
-    '<div class="m3-truth"><strong>Honest Truth:</strong> '+ins.truth+'</div>'+
-    '<div style="font-size:11px;color:var(--teal);margin-top:8px">✦ Best for: '+ins.bestFor+'</div>'+
+var INSTR_RENDER={'nifty':instrNifty,'midcap':instrMidcap,'stocks':instrDirectStocks,'reits':instrREITs,'epf':instrEPF,'nps':instrNPS,'fd':instrFD,'debtmf':instrDebtMF,'goldetf':instrGoldETF,'liquidmf':instrLiquidMF,'reits_re':instrREITs};
+
+function renderBucket(key,alloc,p){
+  var pct=alloc[key],color=BC[key],label=BL[key],icon=BI[key];
+  var amt=m3Amt(p.invCap,pct);
+  var purposes={equity:'WEALTH CREATION',debt:'STABILITY + RETIREMENT',gold:'CRISIS HEDGE',realestate:'INFLATION HEDGE',emergency:'SAFETY + EMERGENCY'};
+  var descs={equity:'Grow wealth aggressively over time. Accept short-term volatility for superior long-term compounding.',debt:'Stable, predictable returns. Capital protection. Retirement corpus and tax efficiency.',gold:'Portfolio insurance. Rises when everything else falls. Not for returns — for crisis protection.',realestate:'Inflation hedge and property income without buying property directly.',emergency:'Instant access when crisis hits. Fund this before investing anything else.'};
+  var instrs=m3GetInstrs(key,p)||[];
+  var instrHTML=instrs.map(function(k){return (INSTR_RENDER[k]&&INSTR_RENDER[k]())||'';}).join('');
+  // Protection note in emergency bucket
+  var protHTML='';
+  if(key==='emergency'){protHTML='<div style="margin-top:16px;padding-top:14px;border-top:1px solid #F3F4F6"><div style="font-size:11px;font-weight:700;color:#DC2626;text-transform:uppercase;letter-spacing:.8px;margin-bottom:8px">🛡️ Protection — Separate From Investment</div>'+instrTermInsurance()+instrHealthInsurance()+'</div>';}
+  return '<div class="m3-bucket" id="m3bk-'+key+'">'+
+    '<div class="m3-bkt-hdr" onclick="m3TogBucket(\''+key+'\')">'+
+      '<div class="m3-bkt-icon">'+icon+'</div>'+
+      '<div class="m3-bkt-main">'+
+        '<div class="m3-purpose-pill" style="background:'+colorBg(color)+';color:'+color+'">'+purposes[key]+'</div>'+
+        '<div class="m3-bkt-name">'+label+'</div>'+
+        '<div class="m3-bkt-desc">'+descs[key]+'</div>'+
+      '</div>'+
+      '<div class="m3-bkt-right">'+
+        '<div class="m3-bkt-pct" style="color:'+color+'">'+pct+'%</div>'+
+        '<div class="m3-bkt-amt">'+(amt>0?'~'+fmtInr(amt)+'/mo':'—')+'</div>'+
+        '<div class="m3-bkt-toggle" id="m3tog-'+key+'">▼ tap to expand</div>'+
+      '</div>'+
+    '</div>'+
+    '<div class="m3-bkt-body" id="m3bd-'+key+'">'+instrHTML+protHTML+'</div>'+
   '</div>';
 }
 
-// ── RENDER BUCKET ──
-function m3RenderBucket(key,alloc,p){
-  var pct=alloc[key];
-  var color=BCOLORS[key]||'#888';
-  var label=BLABELS[key]||key;
-  var amt=m3GetAmt(p.invCap,pct);
-  var purposeTags={equity:'WEALTH CREATION',debt:'STABILITY + RETIREMENT',gold:'CRISIS HEDGE',realestate:'INFLATION HEDGE',emergency:'SAFETY + EMERGENCY'};
-  var purposeDesc={
-    equity:'Grow wealth aggressively over time. Accept short-term volatility for superior long-term compounding.',
-    debt:'Stable, predictable returns. Capital protection. Retirement and tax efficiency.',
-    gold:'Portfolio insurance. Rises when everything else falls. Not for returns — for crisis protection.',
-    realestate:'Inflation hedge and income generation. Property exposure without illiquidity.',
-    emergency:'Instant access when crisis hits. 4–6 months of expenses. Fund this BEFORE investing anything else.'
-  };
-  var icons={equity:'📈',debt:'🏛️',gold:'🪙',realestate:'🏢',emergency:'🛡️'};
-  var instrs=m3GetInstruments(key,p)||[];
-  var instrCards=instrs.map(function(k){return m3RenderInstr(k);}).join('');
+function colorBg(hex){var r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);return 'rgba('+r+','+g+','+b+',.12)';}
 
-  // Insurance note inside emergency bucket
-  var insuranceNote='';
-  if(key==='emergency'){
-    insuranceNote='<div style="margin-top:12px"><div style="font-size:11px;letter-spacing:.8px;text-transform:uppercase;color:var(--muted);margin-bottom:8px">🛡️ Protection (separate from investment)</div>'+
-    m3RenderInstr('term_insurance')+m3RenderInstr('health_insurance')+'</div>';
-  }
-
-  return '<div class="m3-bucket" id="m3b-'+key+'">'+
-    '<div class="m3-bucket-hdr" onclick="m3ToggleBucket(\''+key+'\')">'+
-      '<div class="m3-bucket-icon">'+icons[key]+'</div>'+
-      '<div class="m3-bucket-info">'+
-        '<span class="m3-bucket-purpose" style="background:rgba('+hexToRgb(color)+',.15);color:'+color+'">'+purposeTags[key]+'</span>'+
-        '<div class="m3-bucket-name" style="color:'+color+'">'+label+'</div>'+
-        '<div class="m3-bucket-why">'+purposeDesc[key]+'</div>'+
-      '</div>'+
-      '<div>'+
-        '<div class="m3-bucket-pct" style="color:'+color+'">'+pct+'%</div>'+
-        '<div class="m3-amt" style="text-align:right">'+(amt>0?'~'+fmtInr(amt)+'/mo':'—')+'</div>'+
-        '<div style="font-size:11px;color:var(--muted);text-align:right;margin-top:3px">▼</div>'+
-      '</div>'+
-    '</div>'+
-    '<div class="m3-bucket-body" id="m3bd-'+key+'">'+
-      instrCards+insuranceNote+
-    '</div>'+
-  '</div>';
-}
-
-function hexToRgb(hex){
-  var r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);
-  return r+','+g+','+b;
-}
-
-function m3ToggleBucket(key){
-  var bd=document.getElementById('m3bd-'+key);
+function m3TogBucket(k){
+  var bd=document.getElementById('m3bd-'+k),tg=document.getElementById('m3tog-'+k);
   if(!bd)return;
   bd.classList.toggle('open');
+  tg.textContent=bd.classList.contains('open')?'▲ tap to close':'▼ tap to expand';
 }
 
 // ── MAIN RENDER ──
 function renderM3(){
-  var canvas=JSON.parse(localStorage.getItem('cp_canvas')||'{}');
-  var m1sc=parseInt(localStorage.getItem('cp_tot')||'0');
-  var p={
-    lifeStage:   canvas.lifeStage   ||'thirties',
-    primaryType: canvas.primaryType ||'balanced',
-    gen:         canvas.gen         ||'first_gen',
-    invCap:      canvas.invCap      ||'2k_10k',
-    name:        canvas.name        ||'Friend',
-    m1score:     m1sc
-  };
-  var alloc=m3ComputeAllocation(p);
-  var narr=m3BuildNarrative(p,alloc);
-
-  var LS_NAMES={school:'School Student',college:'College Student',young_adult:'Young Adult',first_earner:'First Time Earner',professional:'Professional',homemaker:'Homemaker',differently_abled:'Differently Abled',thirties:'Thirties',forties:'Forties',pre_retire:'Pre-Retirement',post_retire:'Post-Retirement',senior65:'65 Plus',senior75:'75 Plus'};
-  var PT_NAMES={avoid:'Avoiding Type',spend:'Spending Type',status:'Status Seeker',save:'Saving Type',anxious:'Financially Anxious',gamble:'Gambling Type',balanced:'Balanced Investor',first_gen_earner:'First Gen Builder',second_gen_builder:'Second Gen Guardian'};
-  var CAP_LABELS={lt2k:'Below ₹2K/mo','2k_10k':'₹2K–₹10K/mo','10k_50k':'₹10K–₹50K/mo',gt50k:'Above ₹50K/mo'};
-  var GEN_LABELS={first_gen:'First Generation',transition_gen:'Transition Gen',second_gen:'Business Family',third_gen:'Multi-Generational',restart:'Rebuilding'};
-
-  var badges='';
-  badges+='<div class="m3-pbadge"><strong>'+(LS_NAMES[p.lifeStage]||p.lifeStage)+'</strong></div>';
-  if(PT_NAMES[p.primaryType])badges+='<div class="m3-pbadge">🧠 <strong>'+PT_NAMES[p.primaryType]+'</strong></div>';
-  if(CAP_LABELS[p.invCap])badges+='<div class="m3-pbadge">💰 <strong>'+CAP_LABELS[p.invCap]+'</strong></div>';
-  if(GEN_LABELS[p.gen])badges+='<div class="m3-pbadge">🌿 <strong>'+GEN_LABELS[p.gen]+'</strong></div>';
-  if(m1sc>0)badges+='<div class="m3-pbadge">📊 Score <strong>'+m1sc+'/100</strong></div>';
-
-  var legend=Object.keys(alloc).filter(function(k){return alloc[k]>0;}).map(function(k){
-    return '<div class="m3-leg-item"><div class="m3-leg-dot" style="background:'+BCOLORS[k]+'"></div>'+BLABELS[k]+': <strong style="color:var(--text);margin-left:3px">'+alloc[k]+'%</strong></div>';
-  }).join('');
-
-  var tableRows=Object.keys(alloc).map(function(k){
-    var amt=m3GetAmt(p.invCap,alloc[k]);
-    return '<tr><td><div style="display:flex;align-items:center;gap:8px"><span style="font-size:18px">{icon}</span><div><div style="font-weight:600">{label}</div></div></div></td><td style="text-align:right;white-space:nowrap"><div class="m3-pct-badge" style="color:{color}">{pct}%</div><div class="m3-alloc-bar-wrap"><div class="m3-alloc-bar" style="background:{color};width:{pct}%"></div></div><div class="m3-amt">{amt}</div></td></tr>'
-      .replace(/{icon}/g,{equity:'📈',debt:'🏛️',gold:'🪙',realestate:'🏢',emergency:'🛡️'}[k])
-      .replace(/{label}/g,BLABELS[k]).replace(/{color}/g,BCOLORS[k])
-      .replace(/{pct}/g,alloc[k]).replace(/{amt}/g,amt>0?'~'+fmtInr(amt)+'/mo':'—');
-  }).join('');
-
-  var bucketCards=Object.keys(alloc).map(function(k){return m3RenderBucket(k,alloc,p);}).join('');
-
-  var html=
-    '<div class="m3-hero" style="text-align:center;padding:20px 0 16px">'+
+  var cv=JSON.parse(localStorage.getItem('cp_canvas')||'{}');
+  var sc=parseInt(localStorage.getItem('cp_tot')||'0');
+  var p={lifeStage:cv.lifeStage||'thirties',primaryType:cv.primaryType||'balanced',gen:cv.gen||'first_gen',invCap:cv.invCap||'2k_10k',name:cv.name||'Friend',m1score:sc};
+  var alloc=m3Alloc(p);
+  var narr=m3Narrative(p,alloc);
+  var LS={school:'School Student',college:'College Student',young_adult:'Young Adult',first_earner:'First Time Earner',professional:'Professional',homemaker:'Homemaker',differently_abled:'Differently Abled',thirties:'Thirties',forties:'Forties',pre_retire:'Pre-Retirement',post_retire:'Post-Retirement',senior65:'65 Plus',senior75:'75 Plus'};
+  var PT={avoid:'Avoiding Type',spend:'Spending Type',status:'Status Seeker',save:'Saving Type',anxious:'Financially Anxious',gamble:'Gambling Type',balanced:'Balanced Investor',first_gen_earner:'First Gen Builder',second_gen_builder:'Second Gen Guardian'};
+  var CAP={lt2k:'Below ₹2K/mo','2k_10k':'₹2K–₹10K/mo','10k_50k':'₹10K–₹50K/mo',gt50k:'Above ₹50K/mo'};
+  var GEN={first_gen:'First Generation',transition_gen:'Transition Gen',second_gen:'Business Family',third_gen:'Multi-Generational',restart:'Rebuilding'};
+  var badges='<div class="m3-badge"><strong>'+(LS[p.lifeStage]||p.lifeStage)+'</strong></div>';
+  if(PT[p.primaryType])badges+='<div class="m3-badge">🧠 <strong>'+PT[p.primaryType]+'</strong></div>';
+  if(CAP[p.invCap])badges+='<div class="m3-badge">💰 <strong>'+CAP[p.invCap]+'</strong></div>';
+  if(GEN[p.gen])badges+='<div class="m3-badge">🌿 <strong>'+GEN[p.gen]+'</strong></div>';
+  if(sc>0)badges+='<div class="m3-badge">📊 Score <strong>'+sc+'/100</strong></div>';
+  var legend=Object.keys(alloc).filter(function(k){return alloc[k]>0;}).map(function(k){return '<div class="m3-leg"><div class="m3-leg-dot" style="background:'+BC[k]+'"></div><span>'+BL[k]+' <strong style="color:#111827">'+alloc[k]+'%</strong></span></div>';}).join('');
+  var trows=Object.keys(alloc).map(function(k){var amt=m3Amt(p.invCap,alloc[k]);return '<tr><td><div style="display:flex;align-items:center;gap:8px"><span style="font-size:18px">'+BI[k]+'</span><div><div style="font-weight:600;font-size:14px;color:#111827">'+BL[k]+'</div></div></div></td><td style="text-align:right"><div class="m3-pct" style="color:'+BC[k]+'">'+alloc[k]+'%</div><div class="m3-bar-wrap"><div class="m3-bar" style="background:'+BC[k]+';width:'+alloc[k]+'%"></div></div><div class="m3-amt-lbl">'+(amt>0?'~'+fmtInr(amt)+'/mo':'—')+'</div></td></tr>';}).join('');
+  var buckets=Object.keys(alloc).map(function(k){return renderBucket(k,alloc,p);}).join('');
+  document.getElementById('m3content').innerHTML=
+    '<div style="text-align:center;padding:24px 0 18px">'+
       '<span style="font-size:48px;display:block;margin-bottom:8px">🗺️</span>'+
-      '<div class="m3-title">Your Portfolio <span>Blueprint</span></div>'+
+      '<div class="m3-h1">Your Portfolio <span>Blueprint</span></div>'+
     '</div>'+
     '<div class="m3-quote">"A portfolio is not a collection of assets. It is a reflection of who you are, where you stand, and where you are going."</div>'+
-    '<div class="m3-profile-badge">'+badges+'</div>'+
-    '<div class="m3-narrative"><div class="m3-nar-hdr">📖 Your Financial Narrative</div><div class="m3-nar-body">'+narr.opening+(narr.ptNote?'<br><br>'+narr.ptNote:'')+(narr.scoreNote?'<br><br>'+narr.scoreNote:'')+'</div></div>'+
-    '<div class="m3-chart-wrap"><div class="m3-donut-ring">'+m3DrawDonut(alloc)+'<div class="m3-donut-center"><div class="m3-donut-label">'+p.name+'</div><div class="m3-donut-name">Blueprint</div></div></div><div class="m3-legend">'+legend+'</div></div>'+
-    '<div class="m3-narrative" style="padding:0"><table class="m3-alloc-table"><thead><tr><th>Asset Class</th><th style="text-align:right">Allocation · Amount</th></tr></thead><tbody>'+tableRows+'</tbody></table></div>'+
-    '<div style="height:14px"></div>'+
-    '<div class="m3-nar-hdr" style="padding:0 4px;margin-bottom:10px">🔍 Tap any bucket to see instruments inside</div>'+
-    bucketCards+
-    '<div class="m3-rebal"><div class="m3-rebal-title">🔄 Rebalancing Rule</div><div class="m3-rebal-body">Review once a year. If any bucket drifts more than <strong>5%</strong> from target — rebalance. Do not try to time the market. <em>The plan is the discipline.</em></div></div>'+
-    '<div class="cp-mark">© Elango Industries Limited · Cauvery Pulse · M3</div>';
-
-  document.getElementById('m3content').innerHTML=html;
+    '<div class="m3-badges">'+badges+'</div>'+
+    '<div class="m3-card"><div class="m3-card-title">📖 Your Financial Narrative</div><div class="m3-body">'+narr+'</div></div>'+
+    '<div class="m3-card">'+
+      '<div class="m3-donut-wrap">'+
+        '<div class="m3-donut-ring">'+m3Donut(alloc)+'<div class="m3-donut-center"><div class="m3-donut-name-lbl">'+p.name+'</div><div class="m3-donut-sub">Blueprint</div></div></div>'+
+        '<div class="m3-legend">'+legend+'</div>'+
+      '</div>'+
+      '<table class="m3-tbl"><thead><tr><th>Asset Class</th><th style="text-align:right">Allocation · Monthly</th></tr></thead><tbody>'+trows+'</tbody></table>'+
+    '</div>'+
+    '<div style="font-size:11px;font-weight:700;color:#6B7280;text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px;padding:0 4px">🔍 Tap any bucket — see instruments, character, and honest truth</div>'+
+    buckets+
+    '<div class="m3-rebal"><div class="m3-rebal-title">🔄 Rebalancing Rule</div><div class="m3-rebal-body">Review once a year. If any bucket drifts more than <strong>5%</strong> from target — rebalance by adding to the underweight class first. <em>Do not try to time the market. The plan is the discipline.</em></div></div>'+
+    '<div style="text-align:center;padding:14px;font-size:11px;color:#9CA3AF;letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse · M3</div>';
 }
 
-// ── SETTINGS PANEL ──
-function openM3Settings(){
-  document.getElementById('m3settingsOverlay').classList.add('open');
-  document.getElementById('m3pinInput').value='';
-  document.getElementById('m3pinErr').style.display='none';
-  document.getElementById('m3ratesForm').style.display='none';
-  document.getElementById('m3pinWrap').style.display='block';
-}
-function closeM3Settings(){
-  document.getElementById('m3settingsOverlay').classList.remove('open');
-}
-function m3CheckPin(val){
-  if(val.length===4){
-    if(val==='1255'){
-      document.getElementById('m3pinErr').style.display='none';
-      document.getElementById('m3pinWrap').style.display='none';
-      var rates=getM3FDRates();
-      var fields=Object.keys(rates).map(function(bank){
-        return '<div class="m3-settings-row"><label>'+bank+'</label><input type="text" id="fdrate_'+bank.replace(/\s/g,'_')+'" value="'+rates[bank]+'" placeholder="e.g. 7.75"></div>';
-      }).join('');
-      document.getElementById('m3rateFields').innerHTML=fields;
+// ── SETTINGS ──
+function openM3Settings(){document.getElementById('m3overlay').classList.add('open');document.getElementById('m3pinInput').value='';document.getElementById('m3pinErr').style.display='none';document.getElementById('m3ratesForm').style.display='none';document.getElementById('m3pinWrap').style.display='block';}
+function closeM3Settings(){document.getElementById('m3overlay').classList.remove('open');}
+function m3CheckPin(v){
+  if(v.length===4){
+    if(v==='1255'){
+      document.getElementById('m3pinErr').style.display='none';document.getElementById('m3pinWrap').style.display='none';
+      var rates=getFDRates();
+      document.getElementById('m3rateFields').innerHTML=Object.keys(rates).map(function(b){return '<div class="m3-settings-row"><label>'+b+'</label><input type="text" id="fdr_'+b.replace(/\s/g,'_')+'" value="'+rates[b]+'"></div>';}).join('');
       document.getElementById('m3ratesForm').style.display='block';
-    } else {
-      document.getElementById('m3pinErr').style.display='block';
-    }
+    }else{document.getElementById('m3pinErr').style.display='block';}
   }
 }
 function saveM3Rates(){
-  var rates=getM3FDRates();
-  Object.keys(rates).forEach(function(bank){
-    var id='fdrate_'+bank.replace(/\s/g,'_');
-    var el=document.getElementById(id);
-    if(el&&el.value)rates[bank]=el.value.trim();
-  });
+  var rates=getFDRates();
+  Object.keys(rates).forEach(function(b){var el=document.getElementById('fdr_'+b.replace(/\s/g,'_'));if(el&&el.value)rates[b]=el.value.trim();});
   localStorage.setItem('cp_fd_rates',JSON.stringify(rates));
-  closeM3Settings();
-  renderM3();
-  setTimeout(function(){
-    var t=document.getElementById('toast3');
-    if(t){t.textContent='FD rates updated ✓';t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2400);}
-  },200);
+  closeM3Settings();renderM3();
+  setTimeout(function(){var t=document.getElementById('toast3');if(t){t.textContent='FD rates updated ✓';t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2400);}},200);
 }
 
-// ── MODULE SWITCHER ──
-function switchToM3(){
-  ['mod0','mod1','mod2','mod3'].forEach(function(id){
-    var el=document.getElementById(id);if(el)el.classList.remove('act');
-  });
-  document.getElementById('mod3').classList.add('act');
-  window.scrollTo(0,0);
-  renderM3();
-}
-
-// Update all navbars
+// ── SWITCHERS ──
+function switchToM3(){['mod0','mod1','mod2','mod3'].forEach(function(id){var el=document.getElementById(id);if(el)el.classList.remove('act');});document.getElementById('mod3').classList.add('act');window.scrollTo(0,0);renderM3();}
 document.addEventListener('DOMContentLoaded',function(){
-  var navHTML=
-    '<button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>'+
-    '<button class="nb" onclick="switchToM1()"><span>🩺</span><span>Score</span></button>'+
-    '<button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button>'+
-    '<button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>';
-  ['#mod0 .bnav','#mod1 .bnav','#mod2 .bnav'].forEach(function(sel){
-    var el=document.querySelector(sel);if(el)el.innerHTML=navHTML;
-  });
+  var nh='<button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM1()"><span>🩺</span><span>Score</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>';
+  ['#mod0 .bnav','#mod1 .bnav','#mod2 .bnav'].forEach(function(s){var el=document.querySelector(s);if(el)el.innerHTML=nh;});
 });
-
-var _origSM0=switchToM0;
-switchToM0=function(){var m3=document.getElementById('mod3');if(m3)m3.classList.remove('act');_origSM0();};
-var _origSM1=switchToM1;
-switchToM1=function(){var m3=document.getElementById('mod3');if(m3)m3.classList.remove('act');_origSM1();};
-var _origSM2=switchToM2;
-switchToM2=function(){var m3=document.getElementById('mod3');if(m3)m3.classList.remove('act');_origSM2();};
+var _sm0=switchToM0;switchToM0=function(){var m=document.getElementById('mod3');if(m)m.classList.remove('act');_sm0();};
+var _sm1=switchToM1;switchToM1=function(){var m=document.getElementById('mod3');if(m)m.classList.remove('act');_sm1();};
+var _sm2=switchToM2;switchToM2=function(){var m=document.getElementById('mod3');if(m)m.classList.remove('act');_sm2();};
 </script>
 </body>
 </html>
