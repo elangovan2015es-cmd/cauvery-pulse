@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Cauvery Pulse | v2.8 | Build: 20260417-0500 | Elango Industries Limited -->
+<!-- Cauvery Pulse | v2.9 | Build: 20260418-0000 | Elango Industries Limited -->
 <title>Cauvery Pulse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
@@ -419,7 +419,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="app0">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Life Canvas · M0</div></div></div>
-  <div class="vtag">v2.8</div>
+  <div class="vtag">v2.9</div>
 </header>
 <div class="starfield" id="starfield"></div>
 <div class="aurora"></div>
@@ -886,7 +886,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="app">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Cauvery Pulse Score · M1</div></div></div>
-  <div class="vtag">v2.8</div>
+  <div class="vtag">v2.9</div>
 </header>
 <!-- WELCOME -->
 <div id="welcome" class="screen active">
@@ -1077,7 +1077,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="app2">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Investment School · M2</div></div></div>
-  <div class="vtag">v2.8</div>
+  <div class="vtag">v2.9</div>
 </header>
 
 <div style="padding:0 20px 80px">
@@ -1523,7 +1523,7 @@ function toast(msg){
   if(typeof _baseToast==='function')_baseToast(msg);
 }
 
-// M1 nav handled by master nav initialiser
+// Nav handled by master init
 // ══ M0 CODE ══
 
 // ── IPHONE CACHE FIX — unregister any old SW ──
@@ -2413,7 +2413,7 @@ function toast(msg){
 
 
 
-<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v2.8 ══════ -->
+<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v2.9 ══════ -->
 <div id="mod3" class="mod">
 <style>
 /* ── M3 LIGHT THEME ── */
@@ -2597,7 +2597,7 @@ function toast(msg){
   </div>
   <div style="display:flex;align-items:center;gap:8px">
     <button onclick="openM3Settings()" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:6px 10px;font-size:13px;color:#6B7280;cursor:pointer">⚙️ Rates</button>
-    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v2.8</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v2.9</div>
   </div>
 </header>
 
@@ -2635,7 +2635,7 @@ function toast(msg){
 
 <script>
 // ══════════════════════════════════════════════════════
-// M3 PORTFOLIO BLUEPRINT ENGINE v2.8
+// M3 PORTFOLIO BLUEPRINT ENGINE v2.9
 // ══════════════════════════════════════════════════════
 
 // ── COLOURS ──
@@ -3161,9 +3161,469 @@ function switchToM3(){
   window.scrollTo(0,0);
   renderM3();
 }
-
-// M3 nav handled by master nav initialiser
+// Nav handled by master init
 </script>
+
+
+
+<!-- ══════ MODULE 4: DEBT ANALYSER ══════ -->
+<div id="mod4" class="mod">
+<style>
+#mod4{background:#F5F6FA;min-height:100vh}
+#mod4 header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+#mod4 .bnav{background:#fff;border-top:1px solid #E5E7EB}
+#mod4 .nb{color:#9CA3AF}
+#mod4 .nb.act{color:#DC2626}
+#mod4 .blogo{background:linear-gradient(135deg,#DC2626,#D97706)}
+
+.m4w{padding:0 16px 100px;max-width:480px;margin:0 auto}
+.m4-h1{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:#111827;margin-bottom:6px}
+.m4-h1 span{color:#DC2626}
+.m4-card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.m4-card-title{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#9CA3AF;margin-bottom:12px;display:flex;align-items:center;gap:6px}
+.m4-label{font-size:13px;color:#374151;margin-bottom:5px;font-weight:500}
+.m4-input{width:100%;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:15px;color:#111827;font-family:'DM Mono',monospace;margin-bottom:12px}
+.m4-input:focus{outline:none;border-color:#DC2626;background:#fff}
+.m4-select{width:100%;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:14px;color:#111827;margin-bottom:12px;appearance:none}
+.m4-btn{width:100%;padding:13px;background:linear-gradient(135deg,#DC2626,#B91C1C);color:#fff;font-weight:700;border:none;border-radius:12px;cursor:pointer;font-size:15px;margin-top:4px}
+.m4-btn-s{width:100%;padding:11px;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;color:#374151;font-weight:500;cursor:pointer;font-size:14px;margin-top:8px}
+.m4-result{background:linear-gradient(135deg,#FEF2F2,#FFF7F7);border:1px solid #FECACA;border-radius:14px;padding:16px;margin-top:12px}
+.m4-result-title{font-size:11px;font-weight:700;color:#991B1B;text-transform:uppercase;letter-spacing:.8px;margin-bottom:12px}
+.m4-result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.m4-result-box{background:#fff;border:1px solid #FECACA;border-radius:10px;padding:12px;text-align:center}
+.m4-result-val{font-family:'DM Mono',monospace;font-size:18px;font-weight:700;color:#DC2626;margin-bottom:3px}
+.m4-result-lbl{font-size:10px;color:#9CA3AF;text-transform:uppercase;letter-spacing:.6px}
+.m4-result-full{grid-column:1/-1}
+.m4-insight{font-size:13px;color:#374151;line-height:1.8;margin-top:10px;padding:10px 12px;background:#FEF2F2;border-radius:10px;border-left:3px solid #DC2626}
+
+/* Interest breakdown bar */
+.m4-breakdown{margin-top:12px}
+.m4-breakdown-row{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.m4-breakdown-label{font-size:12px;color:#6B7280;width:100px;flex-shrink:0}
+.m4-breakdown-bar-wrap{flex:1;background:#F3F4F6;border-radius:4px;height:8px}
+.m4-breakdown-bar{height:8px;border-radius:4px;transition:width .5s}
+.m4-breakdown-val{font-size:12px;font-weight:600;color:#111827;width:70px;text-align:right}
+
+/* DTI meter */
+.m4-dti-meter{margin:12px 0}
+.m4-dti-track{width:100%;height:16px;background:#F3F4F6;border-radius:8px;overflow:hidden;margin:8px 0}
+.m4-dti-fill{height:100%;border-radius:8px;transition:width .5s}
+.m4-dti-labels{display:flex;justify-content:space-between;font-size:10px;color:#9CA3AF}
+.m4-status-pill{display:inline-block;padding:4px 12px;border-radius:20px;font-size:12px;font-weight:700;margin-top:6px}
+
+/* Debt type cards */
+.m4-debt-type{border:1px solid #E5E7EB;border-radius:12px;padding:14px;margin-bottom:10px;cursor:pointer;transition:all .2s}
+.m4-debt-type:hover{border-color:#D1D5DB;background:#F9FAFB}
+.m4-debt-type-hdr{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.m4-debt-icon{font-size:22px;width:34px;text-align:center}
+.m4-debt-name{font-size:14px;font-weight:700;color:#111827}
+.m4-debt-rate{font-size:12px;font-weight:700;padding:2px 8px;border-radius:10px}
+.m4-debt-desc{font-size:12px;color:#6B7280;line-height:1.6}
+.m4-verdict{font-size:12px;font-weight:600;padding:3px 10px;border-radius:10px;margin-top:6px;display:inline-block}
+
+/* Payoff strategy toggle */
+.m4-strategy-tabs{display:flex;gap:8px;margin-bottom:14px}
+.m4-stab{flex:1;padding:10px;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;text-align:center;cursor:pointer;font-size:13px;font-weight:600;color:#6B7280;transition:all .2s}
+.m4-stab.act{background:#FEF2F2;border-color:#FECACA;color:#DC2626}
+
+/* Loan entry rows */
+.m4-loan-row{display:flex;align-items:center;gap:8px;padding:10px 12px;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;margin-bottom:8px}
+.m4-loan-row-name{font-size:13px;font-weight:600;color:#111827;flex:1}
+.m4-loan-row-bal{font-size:12px;color:#DC2626;font-family:'DM Mono',monospace}
+.m4-loan-row-rate{font-size:11px;color:#6B7280}
+.m4-remove-btn{background:none;border:none;color:#9CA3AF;cursor:pointer;font-size:16px;padding:2px}
+
+/* Credit card trap visualiser */
+.m4-cc-vis{background:#FFF7ED;border:1px solid #FED7AA;border-radius:12px;padding:14px;margin-top:10px}
+.m4-cc-vis-title{font-size:11px;font-weight:700;color:#C2410C;text-transform:uppercase;letter-spacing:.6px;margin-bottom:10px}
+.m4-cc-timeline{display:flex;flex-direction:column;gap:6px}
+.m4-cc-yr-row{display:flex;align-items:center;gap:8px}
+.m4-cc-yr-lbl{font-size:11px;color:#6B7280;width:40px;flex-shrink:0}
+.m4-cc-yr-bar-wrap{flex:1;background:#FEE2E2;border-radius:4px;height:10px;overflow:hidden}
+.m4-cc-yr-bar{height:10px;border-radius:4px;background:#DC2626}
+.m4-cc-yr-val{font-size:11px;color:#DC2626;font-family:'DM Mono',monospace;width:55px;text-align:right}
+
+/* SEBI tools section */
+.m4-sebi{background:#EFF6FF;border:1px solid #BFDBFE;border-radius:14px;padding:16px;margin-bottom:14px}
+.m4-sebi-title{font-size:11px;font-weight:700;color:#1D4ED8;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px}
+.m4-sebi-sub{font-size:12px;color:#3B82F6;margin-bottom:12px}
+.m4-sebi-tool{background:#fff;border:1px solid #BFDBFE;border-radius:10px;padding:12px;margin-bottom:8px;cursor:pointer;transition:all .2s}
+.m4-sebi-tool:hover{background:#EFF6FF}
+.m4-sebi-tool-name{font-size:13px;font-weight:600;color:#1E40AF;margin-bottom:2px}
+.m4-sebi-tool-desc{font-size:12px;color:#6B7280}
+
+/* Prepayment */
+.m4-prepay-result{background:#ECFDF5;border:1px solid #A7F3D0;border-radius:12px;padding:14px;margin-top:10px}
+.m4-prepay-stat{text-align:center;padding:8px}
+.m4-prepay-val{font-family:'DM Mono',monospace;font-size:20px;font-weight:700;color:#059669}
+.m4-prepay-lbl{font-size:11px;color:#6B7280;margin-top:2px}
+
+/* Tab navigation inside M4 */
+.m4-tabs{display:flex;overflow-x:auto;gap:6px;padding-bottom:4px;margin-bottom:16px;scrollbar-width:none}
+.m4-tab{flex-shrink:0;padding:7px 14px;background:#fff;border:1px solid #E5E7EB;border-radius:20px;font-size:12px;font-weight:600;color:#6B7280;cursor:pointer;transition:all .2s;white-space:nowrap}
+.m4-tab.act{background:#FEF2F2;border-color:#FECACA;color:#DC2626}
+
+/* Profile banner */
+.m4-profile-banner{background:#FFFBEB;border:1px solid #FCD34D;border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:12px;color:#78350F;display:flex;align-items:center;gap:8px}
+</style>
+
+<div id="app4">
+<header>
+  <div class="brand">
+    <div class="blogo">🌊</div>
+    <div>
+      <div class="bname" style="color:#111827;font-size:17px;font-weight:700">Cauvery Pulse</div>
+      <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Debt Analyser · M4</div>
+    </div>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v2.8</div>
+</header>
+
+<div class="m4w">
+
+  <!-- Profile banner -->
+  <div class="m4-profile-banner" id="m4ProfileBanner" style="display:none">
+    <span style="font-size:18px">👤</span>
+    <div id="m4ProfileText"></div>
+  </div>
+
+  <!-- Hero -->
+  <div style="padding:20px 0 16px;text-align:center">
+    <span style="font-size:48px;display:block;margin-bottom:8px">💳</span>
+    <div class="m4-h1">Debt <span>Analyser</span></div>
+    <div style="font-size:14px;color:#6B7280;line-height:1.7">Understand your debt. Control it. Eliminate it intelligently.</div>
+  </div>
+
+  <!-- Tab navigation -->
+  <div class="m4-tabs" id="m4Tabs">
+    <div class="m4-tab act" onclick="m4ShowTab('emi',this)">📐 EMI Calc</div>
+    <div class="m4-tab" onclick="m4ShowTab('dti',this)">📊 DTI Health</div>
+    <div class="m4-tab" onclick="m4ShowTab('goodbad',this)">⚖️ Good vs Bad</div>
+    <div class="m4-tab" onclick="m4ShowTab('payoff',this)">🎯 Payoff Strategy</div>
+    <div class="m4-tab" onclick="m4ShowTab('cc',this)">💳 Credit Card Trap</div>
+    <div class="m4-tab" onclick="m4ShowTab('prepay',this)">⚡ Prepayment</div>
+    <div class="m4-tab" onclick="m4ShowTab('sebi',this)">🏛️ SEBI Tools</div>
+  </div>
+
+  <!-- ── TAB 1: EMI CALCULATOR ── -->
+  <div id="m4tab-emi" class="m4-tab-content">
+    <div class="m4-card">
+      <div class="m4-card-title">📐 EMI Calculator</div>
+      <div class="m4-label">Loan Amount (₹)</div>
+      <input class="m4-input" type="number" id="emiAmount" placeholder="e.g. 3000000" oninput="calcEMI()">
+      <div class="m4-label">Annual Interest Rate (%)</div>
+      <input class="m4-input" type="number" id="emiRate" placeholder="e.g. 8.5" step="0.1" oninput="calcEMI()">
+      <div class="m4-label">Loan Tenure (Years)</div>
+      <input class="m4-input" type="number" id="emiTenure" placeholder="e.g. 20" oninput="calcEMI()">
+      <div class="m4-label">Loan Type</div>
+      <select class="m4-select" id="emiType" onchange="calcEMI()">
+        <option value="home">Home Loan (~8.5–9.5%)</option>
+        <option value="car">Car Loan (~8.5–10%)</option>
+        <option value="personal">Personal Loan (~11–18%)</option>
+        <option value="education">Education Loan (~8–11%)</option>
+        <option value="business">Business Loan (~12–18%)</option>
+        <option value="other">Other / Custom</option>
+      </select>
+      <div id="emiResult" style="display:none" class="m4-result">
+        <div class="m4-result-title">📊 Loan Breakdown</div>
+        <div class="m4-result-grid">
+          <div class="m4-result-box">
+            <div class="m4-result-val" id="emiMonthly">—</div>
+            <div class="m4-result-lbl">Monthly EMI</div>
+          </div>
+          <div class="m4-result-box">
+            <div class="m4-result-val" id="emiTotal">—</div>
+            <div class="m4-result-lbl">Total Paid</div>
+          </div>
+          <div class="m4-result-box">
+            <div class="m4-result-val" id="emiInterest">—</div>
+            <div class="m4-result-lbl">Total Interest</div>
+          </div>
+          <div class="m4-result-box">
+            <div class="m4-result-val" id="emiInterestPct" style="color:#D97706">—</div>
+            <div class="m4-result-lbl">Interest as % of Loan</div>
+          </div>
+        </div>
+        <div class="m4-breakdown">
+          <div class="m4-breakdown-row">
+            <div class="m4-breakdown-label">Principal</div>
+            <div class="m4-breakdown-bar-wrap"><div class="m4-breakdown-bar" id="emiPrincipalBar" style="background:#059669"></div></div>
+            <div class="m4-breakdown-val" id="emiPrincipalVal">—</div>
+          </div>
+          <div class="m4-breakdown-row">
+            <div class="m4-breakdown-label">Interest</div>
+            <div class="m4-breakdown-bar-wrap"><div class="m4-breakdown-bar" id="emiInterestBar" style="background:#DC2626"></div></div>
+            <div class="m4-breakdown-val" id="emiInterestVal">—</div>
+          </div>
+        </div>
+        <div class="m4-insight" id="emiInsight"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TAB 2: DTI HEALTH ── -->
+  <div id="m4tab-dti" class="m4-tab-content" style="display:none">
+    <div class="m4-card">
+      <div class="m4-card-title">📊 Debt-to-Income Ratio</div>
+      <div style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:14px">Your DTI ratio tells you — and your bank — how much of your income is already committed to debt repayment. Below 30% is healthy. Above 50% is a warning sign.</div>
+      <div class="m4-label">Monthly Take-Home Income (₹)</div>
+      <input class="m4-input" type="number" id="dtiIncome" placeholder="e.g. 80000" oninput="calcDTI()">
+      <div class="m4-label">Total Monthly EMI Outflow (₹)</div>
+      <input class="m4-input" type="number" id="dtiEMI" placeholder="e.g. 25000" oninput="calcDTI()">
+      <div id="dtiResult" style="display:none">
+        <div class="m4-dti-meter">
+          <div style="display:flex;justify-content:space-between;margin-bottom:4px">
+            <span style="font-size:13px;font-weight:600;color:#111827">Your DTI Ratio</span>
+            <span style="font-family:'DM Mono',monospace;font-size:18px;font-weight:700;color:#DC2626" id="dtiPct">—</span>
+          </div>
+          <div class="m4-dti-track">
+            <div class="m4-dti-fill" id="dtiFill"></div>
+          </div>
+          <div class="m4-dti-labels">
+            <span>0%</span><span>30% Healthy</span><span>50% Danger</span><span>70%+</span>
+          </div>
+        </div>
+        <div id="dtiStatus"></div>
+        <div class="m4-insight" id="dtiInsight" style="margin-top:10px"></div>
+        <div style="margin-top:14px">
+          <div style="font-size:12px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px">What Your Bank Sees</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px" id="dtiZones">
+            <div style="background:#ECFDF5;border:1px solid #A7F3D0;border-radius:10px;padding:10px;text-align:center">
+              <div style="font-size:16px;font-weight:700;color:#059669">Below 30%</div>
+              <div style="font-size:11px;color:#065F46;margin-top:3px">Excellent — loan approved easily</div>
+            </div>
+            <div style="background:#FFFBEB;border:1px solid #FCD34D;border-radius:10px;padding:10px;text-align:center">
+              <div style="font-size:16px;font-weight:700;color:#D97706">30–50%</div>
+              <div style="font-size:11px;color:#92400E;margin-top:3px">Caution — loan possible, higher rate</div>
+            </div>
+            <div style="background:#FEF2F2;border:1px solid #FECACA;border-radius:10px;padding:10px;text-align:center">
+              <div style="font-size:16px;font-weight:700;color:#DC2626">Above 50%</div>
+              <div style="font-size:11px;color:#991B1B;margin-top:3px">Danger — loan likely rejected</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TAB 3: GOOD VS BAD DEBT ── -->
+  <div id="m4tab-goodbad" class="m4-tab-content" style="display:none">
+    <div class="m4-card">
+      <div class="m4-card-title">⚖️ Good Debt vs Bad Debt</div>
+      <div style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:14px">Not all debt is the enemy. Good debt builds assets or income. Bad debt funds consumption. The difference determines your financial trajectory.</div>
+    </div>
+    <div id="m4DebtTypes"></div>
+  </div>
+
+  <!-- ── TAB 4: PAYOFF STRATEGY ── -->
+  <div id="m4tab-payoff" class="m4-tab-content" style="display:none">
+    <div class="m4-card">
+      <div class="m4-card-title">🎯 Debt Payoff Strategy</div>
+      <div style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:12px">Two proven strategies to get out of debt faster. Add your loans below and choose your approach.</div>
+
+      <div class="m4-strategy-tabs">
+        <div class="m4-stab act" id="avalancheTab" onclick="m4SetStrategy('avalanche')">
+          <div style="font-size:15px;margin-bottom:2px">🏔️ Avalanche</div>
+          <div style="font-size:10px;color:#6B7280">Highest rate first — saves most interest</div>
+        </div>
+        <div class="m4-stab" id="snowballTab" onclick="m4SetStrategy('snowball')">
+          <div style="font-size:15px;margin-bottom:2px">⛄ Snowball</div>
+          <div style="font-size:10px;color:#6B7280">Smallest balance first — quick wins</div>
+        </div>
+      </div>
+
+      <div id="strategyExplain" style="font-size:12px;color:#374151;background:#F9FAFB;border-radius:10px;padding:10px 12px;margin-bottom:12px;line-height:1.7"></div>
+
+      <div class="m4-label">Add Your Loans</div>
+      <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:6px;margin-bottom:8px">
+        <input class="m4-input" type="text" id="loanName" placeholder="Name" style="margin:0;font-size:13px">
+        <input class="m4-input" type="number" id="loanBal" placeholder="Balance ₹" style="margin:0;font-size:13px">
+        <input class="m4-input" type="number" id="loanRate" placeholder="Rate %" style="margin:0;font-size:13px">
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:6px;margin-bottom:10px">
+        <input class="m4-input" type="number" id="loanEMI" placeholder="Min EMI ₹" style="margin:0;font-size:13px">
+        <button onclick="m4AddLoan()" style="background:#DC2626;color:#fff;border:none;border-radius:10px;font-size:13px;font-weight:700;cursor:pointer">+ Add Loan</button>
+      </div>
+
+      <div id="m4LoanList" style="margin-bottom:12px"></div>
+
+      <div class="m4-label">Extra Monthly Payment (₹)</div>
+      <input class="m4-input" type="number" id="extraPayment" placeholder="e.g. 5000" oninput="m4CalcPayoff()">
+
+      <div id="m4PayoffResult" style="display:none" class="m4-result">
+        <div class="m4-result-title">📋 Payoff Plan</div>
+        <div id="m4PayoffContent"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TAB 5: CREDIT CARD TRAP ── -->
+  <div id="m4tab-cc" class="m4-tab-content" style="display:none">
+    <div class="m4-card">
+      <div class="m4-card-title">💳 Credit Card Minimum Payment Trap</div>
+      <div style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:14px">Credit card interest is 36–42% per year in India. Paying only the minimum is a trap that can keep you in debt for decades. See the true cost below.</div>
+      <div class="m4-label">Credit Card Outstanding Balance (₹)</div>
+      <input class="m4-input" type="number" id="ccBalance" placeholder="e.g. 100000" oninput="calcCC()">
+      <div class="m4-label">Monthly Interest Rate (%)</div>
+      <input class="m4-input" type="number" id="ccRate" placeholder="e.g. 3.5" step="0.1" value="3.5" oninput="calcCC()">
+      <div class="m4-label">Minimum Payment (% of balance)</div>
+      <input class="m4-input" type="number" id="ccMinPct" placeholder="e.g. 5" value="5" oninput="calcCC()">
+      <div id="ccResult" style="display:none">
+        <div class="m4-result">
+          <div class="m4-result-title">💀 The Minimum Payment Trap</div>
+          <div class="m4-result-grid">
+            <div class="m4-result-box">
+              <div class="m4-result-val" id="ccMonths">—</div>
+              <div class="m4-result-lbl">Months to Clear</div>
+            </div>
+            <div class="m4-result-box">
+              <div class="m4-result-val" id="ccYears">—</div>
+              <div class="m4-result-lbl">Years to Clear</div>
+            </div>
+            <div class="m4-result-box">
+              <div class="m4-result-val" id="ccTotalPaid">—</div>
+              <div class="m4-result-lbl">Total Paid</div>
+            </div>
+            <div class="m4-result-box">
+              <div class="m4-result-val" id="ccInterestPaid" style="color:#DC2626">—</div>
+              <div class="m4-result-lbl">Total Interest</div>
+            </div>
+          </div>
+          <div class="m4-insight" id="ccInsight" style="margin-top:10px"></div>
+        </div>
+        <div class="m4-cc-vis" id="ccVis"></div>
+        <div class="m4-result" style="margin-top:10px;background:#ECFDF5;border-color:#A7F3D0">
+          <div class="m4-result-title" style="color:#065F46">✅ If You Pay Fixed ₹ Instead</div>
+          <div id="ccFixed"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TAB 6: PREPAYMENT ── -->
+  <div id="m4tab-prepay" class="m4-tab-content" style="display:none">
+    <div class="m4-card">
+      <div class="m4-card-title">⚡ Loan Prepayment Analyser</div>
+      <div style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:14px">Every extra rupee you pay towards your loan principal saves multiple rupees in future interest. See exactly how much you save by prepaying.</div>
+      <div class="m4-label">Original Loan Amount (₹)</div>
+      <input class="m4-input" type="number" id="ppLoan" placeholder="e.g. 3000000" oninput="calcPrepay()">
+      <div class="m4-label">Annual Interest Rate (%)</div>
+      <input class="m4-input" type="number" id="ppRate" placeholder="e.g. 8.75" step="0.1" oninput="calcPrepay()">
+      <div class="m4-label">Original Tenure (Years)</div>
+      <input class="m4-input" type="number" id="ppTenure" placeholder="e.g. 20" oninput="calcPrepay()">
+      <div class="m4-label">Extra Monthly Payment (₹)</div>
+      <input class="m4-input" type="number" id="ppExtra" placeholder="e.g. 5000" oninput="calcPrepay()">
+      <div class="m4-label">One-Time Lump Sum Prepayment (₹)</div>
+      <input class="m4-input" type="number" id="ppLump" placeholder="e.g. 200000" oninput="calcPrepay()">
+      <div id="ppResult" style="display:none">
+        <div class="m4-prepay-result">
+          <div style="font-size:11px;font-weight:700;color:#065F46;text-transform:uppercase;letter-spacing:.6px;margin-bottom:12px">💚 Your Savings from Prepayment</div>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px">
+            <div class="m4-prepay-stat">
+              <div class="m4-prepay-val" id="ppYearsSaved">—</div>
+              <div class="m4-prepay-lbl">Years Saved</div>
+            </div>
+            <div class="m4-prepay-stat">
+              <div class="m4-prepay-val" id="ppInterestSaved">—</div>
+              <div class="m4-prepay-lbl">Interest Saved</div>
+            </div>
+            <div class="m4-prepay-stat">
+              <div class="m4-prepay-val" id="ppNewTenure" style="color:#D97706">—</div>
+              <div class="m4-prepay-lbl">New Tenure</div>
+            </div>
+            <div class="m4-prepay-stat">
+              <div class="m4-prepay-val" id="ppOrigInterest" style="color:#DC2626">—</div>
+              <div class="m4-prepay-lbl">Original Interest</div>
+            </div>
+          </div>
+          <div class="m4-insight" id="ppInsight" style="background:#ECFDF5;border-color:#A7F3D0;color:#065F46;margin-top:12px"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TAB 7: SEBI TOOLS ── -->
+  <div id="m4tab-sebi" class="m4-tab-content" style="display:none">
+    <div class="m4-sebi">
+      <div class="m4-sebi-title">🏛️ SEBI Investor Tools</div>
+      <div class="m4-sebi-sub">SEBI provides free financial calculators for Indian investors. These are built on the same mathematical principles used by registered financial advisors.</div>
+    </div>
+    <div id="m4SebiTools"></div>
+    <div class="m4-card" style="margin-top:4px">
+      <div class="m4-card-title">📐 Compound Interest Analyser</div>
+      <div style="font-size:13px;color:#6B7280;margin-bottom:12px">SEBI's compound interest formula — the foundation of all investment and debt calculations.</div>
+      <div class="m4-label">Principal Amount (₹)</div>
+      <input class="m4-input" type="number" id="ciPrincipal" placeholder="e.g. 100000" oninput="calcCI()">
+      <div class="m4-label">Annual Rate (%)</div>
+      <input class="m4-input" type="number" id="ciRate" placeholder="e.g. 12" oninput="calcCI()">
+      <div class="m4-label">Years</div>
+      <input class="m4-input" type="number" id="ciYears" placeholder="e.g. 10" oninput="calcCI()">
+      <div class="m4-label">Compounding Frequency</div>
+      <select class="m4-select" id="ciFreq" onchange="calcCI()">
+        <option value="1">Annual</option>
+        <option value="2">Half-Yearly</option>
+        <option value="4">Quarterly</option>
+        <option value="12" selected>Monthly</option>
+        <option value="365">Daily</option>
+      </select>
+      <div id="ciResult" style="display:none" class="m4-result">
+        <div class="m4-result-title">📈 Compound Interest Result</div>
+        <div class="m4-result-grid">
+          <div class="m4-result-box"><div class="m4-result-val" id="ciMaturity" style="color:#059669">—</div><div class="m4-result-lbl">Maturity Value</div></div>
+          <div class="m4-result-box"><div class="m4-result-val" id="ciGain" style="color:#059669">—</div><div class="m4-result-lbl">Total Gain</div></div>
+          <div class="m4-result-box"><div class="m4-result-val" id="ciMultiple" style="color:#D97706">—</div><div class="m4-result-lbl">Money Multiplied</div></div>
+          <div class="m4-result-box"><div class="m4-result-val" id="ciXIRR" style="color:#D97706">—</div><div class="m4-result-lbl">Effective Annual Rate</div></div>
+        </div>
+        <div class="m4-insight" id="ciInsight" style="background:#ECFDF5;border-color:#A7F3D0;color:#065F46"></div>
+      </div>
+    </div>
+
+    <div class="m4-card">
+      <div class="m4-card-title">📊 Rule of 72 — Doubling Time</div>
+      <div style="font-size:13px;color:#6B7280;margin-bottom:12px">SEBI's simplest mental math tool. Divide 72 by the interest rate to get years to double your money. Applies equally to debt compounding against you.</div>
+      <div class="m4-label">Annual Rate (%)</div>
+      <input class="m4-input" type="number" id="r72Rate" placeholder="e.g. 8" oninput="calcR72()">
+      <div id="r72Result" style="display:none" class="m4-result">
+        <div class="m4-result-grid">
+          <div class="m4-result-box"><div class="m4-result-val" id="r72Years" style="color:#D97706">—</div><div class="m4-result-lbl">Years to Double</div></div>
+          <div class="m4-result-box"><div class="m4-result-val" id="r72Rate4x" style="color:#DC2626">—</div><div class="m4-result-lbl">Years to 4x</div></div>
+        </div>
+        <div class="m4-insight" id="r72Insight"></div>
+      </div>
+    </div>
+
+    <div class="m4-card">
+      <div class="m4-card-title">📉 Inflation Real Value Calculator</div>
+      <div style="font-size:13px;color:#6B7280;margin-bottom:12px">SEBI uses this to educate investors on purchasing power erosion. What is ₹1 lakh today worth in future — or what was it worth in the past?</div>
+      <div class="m4-label">Amount Today (₹)</div>
+      <input class="m4-input" type="number" id="inflAmount" placeholder="e.g. 100000" oninput="calcInflation()">
+      <div class="m4-label">Annual Inflation Rate (%)</div>
+      <input class="m4-input" type="number" id="inflRate" placeholder="e.g. 6" value="6" oninput="calcInflation()">
+      <div class="m4-label">Years into Future</div>
+      <input class="m4-input" type="number" id="inflYears" placeholder="e.g. 20" oninput="calcInflation()">
+      <div id="inflResult" style="display:none" class="m4-result">
+        <div class="m4-result-grid">
+          <div class="m4-result-box"><div class="m4-result-val" id="inflFutureVal" style="color:#DC2626">—</div><div class="m4-result-lbl">Future Buying Power</div></div>
+          <div class="m4-result-box"><div class="m4-result-val" id="inflLoss">—</div><div class="m4-result-lbl">Real Value Lost</div></div>
+        </div>
+        <div class="m4-insight" id="inflInsight"></div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:14px;font-size:11px;color:#9CA3AF;letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse · M4</div>
+</div>
+</div><!-- #app4 -->
+
+<div class="bnav" style="background:#fff;border-top:1px solid #E5E7EB">
+  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>
+  <button class="nb" onclick="switchToM1()"><span>🩺</span><span>Score</span></button>
+  <button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>
+  <button class="nb act" style="color:#DC2626" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>
+</div>
+<div class="toast" id="toast4"></div>
+</div><!-- #mod4 -->
+
 
 <script>
 // ══════════════════════════════════════════════════
@@ -3176,6 +3636,25 @@ function m4Toast(msg){var t=document.getElementById('toast4');if(t){t.textConten
 
 // ── TAB SWITCHER ──
 var m4ActiveTab='emi';
+
+var M4_TABS=['emi','dti','goodbad','payoff','cc','prepay','sebi'];
+var M4_TAB_NAMES={emi:'EMI Calc',dti:'DTI Health',goodbad:'Good vs Bad',payoff:'Payoff Strategy',cc:'Credit Card Trap',prepay:'Prepayment',sebi:'SEBI Tools'};
+var M4_TAB_ICONS={emi:'📐',dti:'📊',goodbad:'⚖️',payoff:'🎯',cc:'💳',prepay:'⚡',sebi:'🏛️'};
+function m4UpdateArrows(){
+  var idx=M4_TABS.indexOf(m4ActiveTab);
+  var prev=idx>0?M4_TABS[idx-1]:null;
+  var next=idx<M4_TABS.length-1?M4_TABS[idx+1]:null;
+  document.querySelectorAll('.m4-arrow-nav').forEach(function(n){n.remove();});
+  var cur=document.getElementById('m4tab-'+m4ActiveTab);
+  if(!cur)return;
+  var dots=M4_TABS.map(function(t){return '<div class="m4-dot'+(t===m4ActiveTab?' act':'')+'"></div>';}).join('');
+  var prevBtn=prev?'<button class="m4-arrow-btn" onclick="m4ShowTab('+"'"+prev+"'"+')"><span>←</span><div><div style="font-size:10px;opacity:.6">Back</div><div>'+M4_TAB_ICONS[prev]+' '+M4_TAB_NAMES[prev]+'</div></div></button>':'<div style="min-width:110px"></div>';
+  var nextBtn=next?'<button class="m4-arrow-btn next" onclick="m4ShowTab('+"'"+next+"'"+')"><div style="text-align:right"><div style="font-size:10px;opacity:.8">Next</div><div>'+M4_TAB_ICONS[next]+' '+M4_TAB_NAMES[next]+'</div></div><span>→</span></button>':'<button class="m4-arrow-btn next" style="background:#059669" onclick="m4Toast('+"'"+'✅ All done!'+"'"+')"><div><div style="font-size:10px">Done</div><div>All ✓</div></div><span>🎉</span></button>';
+  var nav=document.createElement('div');nav.className='m4-arrow-nav';
+  nav.innerHTML=prevBtn+'<div class="m4-step-dots">'+dots+'</div>'+nextBtn;
+  cur.appendChild(nav);
+}
+
 function m4ShowTab(tab,el){
   document.querySelectorAll('.m4-tab-content').forEach(function(t){t.style.display='none';});
   document.querySelectorAll('.m4-tab').forEach(function(t){t.classList.remove('act');});
@@ -3235,7 +3714,7 @@ function calcDTI(){
   if(!inc||!emi)return;
   var dti=emi/inc*100;
   var color=dti<30?'#059669':dti<50?'#D97706':'#DC2626';
-  var status=dti<30?'🟢 Healthy':'⚠️ Caution — getting stretched':'🔴 Danger zone';
+  var status=dti<50?(dti<30?'🟢 Healthy':'⚠️ Caution — getting stretched'):'🔴 Danger zone';
   if(dti>=50)status='🔴 Danger zone';
   else if(dti>=30)status='⚠️ Caution — getting stretched';
   document.getElementById('dtiPct').textContent=dti.toFixed(1)+'%';
@@ -3587,26 +4066,6 @@ function switchToM4(){
   m4LoadProfile();
   m4SetStrategy('avalanche');
 }
-var M4_TABS=['emi','dti','goodbad','payoff','cc','prepay','sebi'];
-var M4_TAB_NAMES={emi:'EMI Calc',dti:'DTI Health',goodbad:'Good vs Bad',payoff:'Payoff Strategy',cc:'Credit Card Trap',prepay:'Prepayment',sebi:'SEBI Tools'};
-var M4_TAB_ICONS={emi:'📐',dti:'📊',goodbad:'⚖️',payoff:'🎯',cc:'💳',prepay:'⚡',sebi:'🏛️'};
-
-function m4UpdateArrows(){
-  var idx=M4_TABS.indexOf(m4ActiveTab);
-  var prevTab=idx>0?M4_TABS[idx-1]:null;
-  var nextTab=idx<M4_TABS.length-1?M4_TABS[idx+1]:null;
-  document.querySelectorAll('.m4-arrow-nav').forEach(function(n){n.remove();});
-  var cur=document.getElementById('m4tab-'+m4ActiveTab);
-  if(!cur)return;
-  var dots=M4_TABS.map(function(t){return '<div class="m4-dot'+(t===m4ActiveTab?' act':'')+'"></div>';}).join('');
-  var prev=prevTab?'<button class="m4-arrow-btn" onclick="m4ShowTab(''+prevTab+'')"><span style="font-size:16px">←</span><div><div style="font-size:10px;opacity:.6;text-transform:uppercase">Back</div><div>'+M4_TAB_ICONS[prevTab]+' '+M4_TAB_NAMES[prevTab]+'</div></div></button>':'<div style="min-width:110px"></div>';
-  var next=nextTab?'<button class="m4-arrow-btn next" onclick="m4ShowTab(''+nextTab+'')"><div style="text-align:right"><div style="font-size:10px;opacity:.8;text-transform:uppercase">Next</div><div>'+M4_TAB_ICONS[nextTab]+' '+M4_TAB_NAMES[nextTab]+'</div></div><span style="font-size:16px">→</span></button>':'<button class="m4-arrow-btn next" style="background:linear-gradient(135deg,#059669,#047857)" onclick="m4Toast('✅ All sections complete!')"><div style="text-align:right"><div style="font-size:10px;opacity:.8">Done</div><div>All Covered ✓</div></div><span>🎉</span></button>';
-  var nav=document.createElement('div');
-  nav.className='m4-arrow-nav';
-  nav.innerHTML=prev+'<div class="m4-step-dots">'+dots+'</div>'+next;
-  cur.appendChild(nav);
-}
-
 
 // Update all navbars to include M4
 document.addEventListener('DOMContentLoaded',function(){
@@ -3628,10 +4087,13 @@ switchToM3=function(){var m=document.getElementById('mod4');if(m)m.classList.rem
 var _sm0_4=switchToM0;
 switchToM0=function(){var m=document.getElementById('mod4');if(m)m.classList.remove('act');_sm0_4();};
 </script>
-
-<script>
-
+var _sm3_orig = typeof switchToM3 !== 'undefined' ? switchToM3 : function(){};
+switchToM3 = function(){
+  var m = document.getElementById('mod4'); if(m) m.classList.remove('act');
+  _sm3_orig();
+};
 </script>
+
 
 <script>
 // ══════════════════════════════════════════════════════
@@ -4363,54 +4825,27 @@ function calcCompound(){
     '</div>'+
     sebiInsight('In year '+Math.ceil(y/2)+', gains from compounding <em>exceed</em> your total contributions. This is the magic inflection point — the later years produce more wealth than all the early years combined.');
 }
+
 </script>
 
 <script>
-// ══ MASTER NAV INITIALISER — runs once, sets all navbars consistently ══
-(function initAllNavs(){
-  function doInit(){
-    // Full 5-module nav for M0, M2, M3, M4
-    var moduleNav =
-      '<button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>'+
-      '<button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button>'+
-      '<button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>'+
-      '<button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>';
-
-    // M1 keeps its internal screen nav + module jump
-    var m1Nav =
-      '<button class="nb" onclick="navTo('welcome')"><span>🏠</span><span>Home</span></button>'+
-      '<button class="nb" onclick="navTo('profile')"><span>🩺</span><span>Check</span></button>'+
-      '<button class="nb" onclick="navTo('results')"><span>📊</span><span>Results</span></button>'+
-      '<button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>';
-
-    var m0nav = document.querySelector('#mod0 .bnav');
-    var m1nav = document.querySelector('#mod1 .bnav');
-    var m2nav = document.querySelector('#mod2 .bnav');
-    var m3nav = document.querySelector('#mod3 .bnav');
-    var m4nav = document.querySelector('#mod4 .bnav');
-
-    if(m0nav) m0nav.innerHTML = moduleNav;
-    if(m1nav) m1nav.innerHTML = m1Nav;
-    if(m2nav) m2nav.innerHTML = moduleNav;
-    if(m3nav) m3nav.innerHTML = moduleNav;
-    if(m4nav) m4nav.innerHTML =
-      '<button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>'+
-      '<button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button>'+
-      '<button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>'+
-      '<button class="nb act" style="color:#DC2626" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>';
-
-    // Init M4 strategy
-    if(typeof m4SetStrategy === 'function') m4SetStrategy('avalanche');
-    if(typeof m4UpdateArrows === 'function') m4UpdateArrows();
+// ══ MASTER NAV INIT ══
+(function(){
+  function init(){
+    var nav5 = '<button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>'+
+               '<button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button>'+
+               '<button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>'+
+               '<button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>';
+    ['#mod0 .bnav','#mod2 .bnav','#mod3 .bnav'].forEach(function(s){
+      var el=document.querySelector(s); if(el) el.innerHTML=nav5;
+    });
+    var m4nav=document.querySelector('#mod4 .bnav');
+    if(m4nav) m4nav.innerHTML=nav5.replace('onclick="switchToM4()"','onclick="switchToM4()" class="nb act" style="color:#DC2626"').replace('class="nb" onclick="switchToM4()"','');
+    if(typeof m4SetStrategy==='function') m4SetStrategy('avalanche');
   }
-
-  if(document.readyState === 'loading'){
-    document.addEventListener('DOMContentLoaded', doInit);
-  } else {
-    doInit();
-  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init);
+  else init();
 })();
 </script>
-
 </body>
 </html>
