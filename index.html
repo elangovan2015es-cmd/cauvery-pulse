@@ -5401,5 +5401,624 @@ function switchToM5(){
 // Nav handled by master init
 // Patch all existing switchers to clear mod5
 </script>
+
+<!-- ══════ MODULE 6: MONTHLY P&L ══════ -->
+<div id="mod6" class="mod">
+<style>
+#mod6{background:#F5F6FA;min-height:100vh}
+#mod6 header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+#mod6 .bnav{background:#fff;border-top:1px solid #E5E7EB}
+#mod6 .nb{color:#9CA3AF}
+#mod6 .nb.act{color:#059669}
+
+.m6w{padding:0 16px 100px;max-width:480px;margin:0 auto}
+.m6-card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.m6-card-title{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#9CA3AF;margin-bottom:12px}
+.m6-label{font-size:13px;color:#374151;margin-bottom:5px;font-weight:500}
+.m6-input{width:100%;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:15px;color:#111827;font-family:'DM Mono',monospace;margin-bottom:10px;box-sizing:border-box}
+.m6-input:focus{outline:none;border-color:#059669;background:#fff}
+
+/* Income / Expense rows */
+.m6-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.m6-row-label{font-size:13px;color:#374151;flex:1}
+.m6-row-input{background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:9px 12px;font-size:14px;color:#111827;font-family:'DM Mono',monospace;width:130px;text-align:right;box-sizing:border-box}
+.m6-row-input:focus{outline:none;border-color:#059669}
+.m6-section-total{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-top:1px solid #F3F4F6;margin-top:6px}
+.m6-section-total-label{font-size:13px;font-weight:700;color:#111827}
+.m6-section-total-val{font-family:'DM Mono',monospace;font-size:16px;font-weight:700}
+
+/* Summary dashboard */
+.m6-dashboard{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.m6-dash-box{background:#fff;border:1px solid #E5E7EB;border-radius:14px;padding:14px;text-align:center}
+.m6-dash-val{font-family:'DM Mono',monospace;font-size:20px;font-weight:700;margin-bottom:4px}
+.m6-dash-lbl{font-size:10px;color:#9CA3AF;text-transform:uppercase;letter-spacing:.6px}
+
+/* Health meter */
+.m6-health-bar{width:100%;background:#F3F4F6;border-radius:8px;height:16px;overflow:hidden;margin:8px 0}
+.m6-health-fill{height:16px;border-radius:8px;transition:width .5s ease}
+.m6-health-labels{display:flex;justify-content:space-between;font-size:10px;color:#9CA3AF}
+
+/* Pie chart */
+.m6-pie-wrap{display:flex;align-items:center;gap:16px;margin:14px 0}
+.m6-pie-svg{flex-shrink:0}
+.m6-pie-legend{flex:1;display:flex;flex-direction:column;gap:6px}
+.m6-pie-leg-row{display:flex;align-items:center;gap:6px;font-size:12px;color:#374151}
+.m6-pie-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+
+/* Insight box */
+.m6-insight{font-size:13px;color:#374151;line-height:1.85;padding:12px 14px;background:#ECFDF5;border-radius:10px;border-left:3px solid #059669;margin-top:10px}
+.m6-insight strong{color:#065F46}
+.m6-warn{background:#FEF9C3;border-left-color:#D97706;color:#78350F}
+.m6-warn strong{color:#92400E}
+.m6-danger{background:#FEF2F2;border-left-color:#DC2626;color:#991B1B}
+.m6-danger strong{color:#7F1D1D}
+
+/* Tabs */
+.m6-tabs{display:flex;gap:6px;margin-bottom:16px;overflow-x:auto;scrollbar-width:none}
+.m6-tab{flex-shrink:0;padding:8px 14px;background:#fff;border:1px solid #E5E7EB;border-radius:20px;font-size:12px;font-weight:600;color:#6B7280;cursor:pointer;transition:all .2s;white-space:nowrap}
+.m6-tab.act{background:#ECFDF5;border-color:#A7F3D0;color:#059669}
+
+/* Month selector */
+.m6-month-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.m6-month-btn{background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:6px 12px;font-size:13px;cursor:pointer;color:#374151}
+.m6-month-label{font-size:15px;font-weight:700;color:#111827}
+
+/* Savings rate ring */
+.m6-ring-wrap{position:relative;width:120px;height:120px;margin:0 auto 12px}
+.m6-ring-wrap svg{width:100%;height:100%}
+.m6-ring-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.m6-ring-pct{font-family:'DM Mono',monospace;font-size:22px;font-weight:700;color:#059669}
+.m6-ring-lbl{font-size:9px;color:#9CA3AF;text-transform:uppercase;letter-spacing:.6px}
+
+/* Category bars */
+.m6-cat-bar-row{margin-bottom:10px}
+.m6-cat-bar-header{display:flex;justify-content:space-between;font-size:12px;margin-bottom:4px}
+.m6-cat-bar-name{color:#374151;font-weight:500}
+.m6-cat-bar-val{color:#6B7280;font-family:'DM Mono',monospace}
+.m6-cat-bar-track{background:#F3F4F6;border-radius:4px;height:8px;overflow:hidden}
+.m6-cat-bar-fill{height:8px;border-radius:4px;transition:width .4s}
+
+/* History list */
+.m6-hist-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #F3F4F6}
+.m6-hist-row:last-child{border-bottom:none}
+.m6-hist-month{font-size:13px;font-weight:600;color:#111827;width:80px}
+.m6-hist-bars{flex:1}
+.m6-hist-surplus{font-family:'DM Mono',monospace;font-size:13px;font-weight:700;text-align:right}
+
+/* 50-30-20 rule */
+.m6-rule-box{border-radius:12px;padding:12px 14px;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.m6-rule-pct{font-family:'DM Mono',monospace;font-size:24px;font-weight:700;width:56px;flex-shrink:0}
+.m6-rule-info{flex:1}
+.m6-rule-title{font-size:13px;font-weight:600;color:#111827;margin-bottom:2px}
+.m6-rule-desc{font-size:12px;color:#6B7280;line-height:1.5}
+.m6-rule-actual{font-family:'DM Mono',monospace;font-size:13px;font-weight:700;text-align:right}
+</style>
+
+<div id="app6">
+<header>
+  <div class="brand">
+    <div class="blogo" style="background:linear-gradient(135deg,#059669,#0D9488)">🌊</div>
+    <div>
+      <div class="bname" style="color:#111827;font-size:17px;font-weight:700">Cauvery Pulse</div>
+      <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Monthly P&L · M6</div>
+    </div>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.0</div>
+</header>
+
+<div class="m6w">
+  <!-- Hero -->
+  <div style="padding:18px 0 14px;text-align:center">
+    <span style="font-size:44px;display:block;margin-bottom:8px">📊</span>
+    <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:900;color:#111827;margin-bottom:6px">Monthly <span style="color:#059669">P&L</span></div>
+    <div style="font-size:13px;color:#6B7280;line-height:1.7">Track every rupee. Know where you stand. Build wealth with intention.</div>
+  </div>
+
+  <!-- Month navigation -->
+  <div class="m6-month-nav">
+    <button class="m6-month-btn" onclick="m6ChangeMonth(-1)">← Prev</button>
+    <div class="m6-month-label" id="m6MonthLabel">April 2026</div>
+    <button class="m6-month-btn" onclick="m6ChangeMonth(1)">Next →</button>
+  </div>
+
+  <!-- Tabs -->
+  <div class="m6-tabs">
+    <div class="m6-tab act" onclick="m6ShowTab('entry',this)">✏️ Entry</div>
+    <div class="m6-tab" onclick="m6ShowTab('summary',this)">📊 Summary</div>
+    <div class="m6-tab" onclick="m6ShowTab('rule',this)">⚖️ 50-30-20</div>
+    <div class="m6-tab" onclick="m6ShowTab('history',this)">📅 History</div>
+  </div>
+
+  <!-- ── TAB 1: ENTRY ── -->
+  <div id="m6tab-entry">
+
+    <!-- INCOME -->
+    <div class="m6-card">
+      <div class="m6-card-title" style="color:#059669">💰 Income This Month</div>
+      <div class="m6-row"><div class="m6-row-label">Salary / Business Income</div><input class="m6-row-input" type="number" id="inc_salary" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-row"><div class="m6-row-label">Freelance / Side Income</div><input class="m6-row-input" type="number" id="inc_freelance" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-row"><div class="m6-row-label">Rental Income</div><input class="m6-row-input" type="number" id="inc_rental" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-row"><div class="m6-row-label">Dividends / Interest</div><input class="m6-row-input" type="number" id="inc_dividends" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-row"><div class="m6-row-label">Other Income</div><input class="m6-row-input" type="number" id="inc_other" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-section-total">
+        <div class="m6-section-total-label">Total Income</div>
+        <div class="m6-section-total-val" id="totalIncome" style="color:#059669">₹0</div>
+      </div>
+    </div>
+
+    <!-- INVESTMENTS FIRST -->
+    <div class="m6-card">
+      <div class="m6-card-title" style="color:#7C3AED">📈 Investments (Pay Yourself First)</div>
+      <div style="font-size:12px;color:#7C3AED;background:#F5F3FF;border-radius:8px;padding:8px 10px;margin-bottom:12px;font-style:italic">Invest before you spend — not after. This is the most important financial discipline.</div>
+      <div class="m6-row"><div class="m6-row-label">SIP — Equity MF</div><input class="m6-row-input" type="number" id="inv_sip" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-row"><div class="m6-row-label">EPF / VPF</div><input class="m6-row-input" type="number" id="inv_epf" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-row"><div class="m6-row-label">NPS</div><input class="m6-row-input" type="number" id="inv_nps" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-row"><div class="m6-row-label">Gold ETF</div><input class="m6-row-input" type="number" id="inv_gold" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-row"><div class="m6-row-label">Other Investments</div><input class="m6-row-input" type="number" id="inv_other" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-section-total">
+        <div class="m6-section-total-label">Total Invested</div>
+        <div class="m6-section-total-val" id="totalInvested" style="color:#7C3AED">₹0</div>
+      </div>
+    </div>
+
+    <!-- FIXED EXPENSES -->
+    <div class="m6-card">
+      <div class="m6-card-title" style="color:#DC2626">🏠 Fixed Expenses</div>
+      <div class="m6-row"><div class="m6-row-label">Rent / Home Loan EMI</div><input class="m6-row-input" type="number" id="exp_rent" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-row"><div class="m6-row-label">Car Loan / Other EMI</div><input class="m6-row-input" type="number" id="exp_emi" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-row"><div class="m6-row-label">Insurance Premiums</div><input class="m6-row-input" type="number" id="exp_insurance" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-row"><div class="m6-row-label">School / College Fees</div><input class="m6-row-input" type="number" id="exp_school" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-section-total">
+        <div class="m6-section-total-label">Total Fixed</div>
+        <div class="m6-section-total-val" id="totalFixed" style="color:#DC2626">₹0</div>
+      </div>
+    </div>
+
+    <!-- VARIABLE EXPENSES -->
+    <div class="m6-card">
+      <div class="m6-card-title" style="color:#D97706">🛒 Variable Expenses</div>
+      <div class="m6-row"><div class="m6-row-label">Groceries & Food</div><input class="m6-row-input" type="number" id="exp_food" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-row"><div class="m6-row-label">Dining Out</div><input class="m6-row-input" type="number" id="exp_dining" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-row"><div class="m6-row-label">Transport & Fuel</div><input class="m6-row-input" type="number" id="exp_transport" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-row"><div class="m6-row-label">Utilities & Bills</div><input class="m6-row-input" type="number" id="exp_utilities" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-row"><div class="m6-row-label">Shopping & Clothing</div><input class="m6-row-input" type="number" id="exp_shopping" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-row"><div class="m6-row-label">Entertainment & OTT</div><input class="m6-row-input" type="number" id="exp_entertainment" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-row"><div class="m6-row-label">Health & Medical</div><input class="m6-row-input" type="number" id="exp_medical" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-row"><div class="m6-row-label">Other Expenses</div><input class="m6-row-input" type="number" id="exp_other" placeholder="0" oninput="m6Calc()"></div>
+      <div class="m6-section-total">
+        <div class="m6-section-total-label">Total Variable</div>
+        <div class="m6-section-total-val" id="totalVariable" style="color:#D97706">₹0</div>
+      </div>
+    </div>
+
+    <button style="width:100%;padding:14px;background:linear-gradient(135deg,#059669,#047857);color:#fff;font-weight:700;border:none;border-radius:12px;cursor:pointer;font-size:15px;margin-bottom:14px" onclick="m6SaveMonth()">💾 Save This Month's P&L</button>
+
+    <!-- Quick result -->
+    <div id="m6QuickResult" style="display:none"></div>
+
+  </div>
+
+  <!-- ── TAB 2: SUMMARY ── -->
+  <div id="m6tab-summary" style="display:none">
+    <div id="m6SummaryContent">
+      <div style="text-align:center;padding:40px;color:#9CA3AF;font-size:13px">Enter your income and expenses in the Entry tab first.</div>
+    </div>
+  </div>
+
+  <!-- ── TAB 3: 50-30-20 RULE ── -->
+  <div id="m6tab-rule" style="display:none">
+    <div class="m6-card">
+      <div class="m6-card-title">⚖️ The 50-30-20 Rule</div>
+      <div style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:14px">A globally proven framework. 50% of take-home income for needs, 30% for wants, 20% for savings and investments. How does your spending compare?</div>
+      <div id="m6RuleContent">
+        <div style="text-align:center;padding:30px;color:#9CA3AF;font-size:13px">Enter your income in the Entry tab to see your 50-30-20 breakdown.</div>
+      </div>
+    </div>
+    <div class="m6-card">
+      <div class="m6-card-title">📖 Why 50-30-20 Works</div>
+      <div style="font-size:13px;color:#374151;line-height:1.9">
+        <div style="margin-bottom:10px"><strong style="color:#059669">50% — Needs:</strong> Rent, food, utilities, EMIs, insurance. Non-negotiable expenses. If this exceeds 50%, your lifestyle is misaligned with your income.</div>
+        <div style="margin-bottom:10px"><strong style="color:#D97706">30% — Wants:</strong> Dining out, entertainment, shopping, vacations. Life must be lived. But wants above 30% consistently means you are funding today at the cost of tomorrow.</div>
+        <div><strong style="color:#7C3AED">20% — Savings:</strong> SIP, EPF, NPS, emergency fund. This is the number that determines your wealth trajectory. Every 1% more here compounds into significant wealth over 20 years.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TAB 4: HISTORY ── -->
+  <div id="m6tab-history" style="display:none">
+    <div class="m6-card">
+      <div class="m6-card-title">📅 Month-by-Month History</div>
+      <div id="m6HistoryContent">
+        <div style="text-align:center;padding:30px;color:#9CA3AF;font-size:13px">No history yet. Save a few months to see your trend.</div>
+      </div>
+    </div>
+    <div class="m6-card" id="m6TrendCard" style="display:none">
+      <div class="m6-card-title">📈 Your Financial Trend</div>
+      <div id="m6TrendContent"></div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:14px;font-size:11px;color:#9CA3AF;letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse · M6</div>
+</div>
+</div><!-- #app6 -->
+
+<div class="bnav" style="background:#fff;border-top:1px solid #E5E7EB">
+  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>
+  <button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>
+  <button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button>
+  <button class="nb act" style="color:#059669" onclick="switchToM6()"><span>📊</span><span>P&L</span></button>
+</div>
+<div class="toast" id="toast6"></div>
+</div><!-- #mod6 -->
+
+<script>
+// ══════════════════════════════════════════
+// M6 — MONTHLY P&L ENGINE v3.0
+// ══════════════════════════════════════════
+
+function fmtM6(n){
+  if(n>=10000000) return '₹'+(n/10000000).toFixed(2)+'Cr';
+  if(n>=100000)   return '₹'+(n/100000).toFixed(1)+'L';
+  if(n>=1000)     return '₹'+(n/1000).toFixed(1)+'K';
+  return '₹'+Math.round(n);
+}
+function m6Toast(msg){
+  var t=document.getElementById('toast6');
+  if(t){t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2400);}
+}
+
+// ── MONTH STATE ──
+var M6_MONTHS=['January','February','March','April','May','June','July','August','September','October','November','December'];
+var m6CurrentYear=2026;
+var m6CurrentMonth=3; // 0-indexed, April=3
+
+function m6MonthKey(){return m6CurrentYear+'-'+String(m6CurrentMonth+1).padStart(2,'0');}
+function m6MonthLabel(){return M6_MONTHS[m6CurrentMonth]+' '+m6CurrentYear;}
+
+function m6ChangeMonth(dir){
+  m6CurrentMonth+=dir;
+  if(m6CurrentMonth>11){m6CurrentMonth=0;m6CurrentYear++;}
+  if(m6CurrentMonth<0){m6CurrentMonth=11;m6CurrentYear--;}
+  document.getElementById('m6MonthLabel').textContent=m6MonthLabel();
+  m6LoadMonth();
+}
+
+// ── FIELD IDS ──
+var M6_INCOME_IDS=['inc_salary','inc_freelance','inc_rental','inc_dividends','inc_other'];
+var M6_INV_IDS   =['inv_sip','inv_epf','inv_nps','inv_gold','inv_other'];
+var M6_FIXED_IDS =['exp_rent','exp_emi','exp_insurance','exp_school'];
+var M6_VAR_IDS   =['exp_food','exp_dining','exp_transport','exp_utilities','exp_shopping','exp_entertainment','exp_medical','exp_other'];
+
+function m6GetVal(id){return parseFloat(document.getElementById(id)&&document.getElementById(id).value)||0;}
+function m6GetSection(ids){return ids.reduce(function(s,id){return s+m6GetVal(id);},0);}
+
+// ── CALCULATE ──
+function m6Calc(){
+  var income   = m6GetSection(M6_INCOME_IDS);
+  var invested = m6GetSection(M6_INV_IDS);
+  var fixed    = m6GetSection(M6_FIXED_IDS);
+  var variable = m6GetSection(M6_VAR_IDS);
+  var totalExp = fixed + variable;
+  var surplus  = income - invested - totalExp;
+  var savingsRate = income>0 ? Math.round(invested/income*100) : 0;
+
+  // Update section totals
+  document.getElementById('totalIncome').textContent   = fmtM6(income);
+  document.getElementById('totalInvested').textContent = fmtM6(invested);
+  document.getElementById('totalFixed').textContent    = fmtM6(fixed);
+  document.getElementById('totalVariable').textContent = fmtM6(variable);
+
+  // Quick result
+  var qr = document.getElementById('m6QuickResult');
+  if(income>0){
+    var color = surplus>=0 ? '#059669' : '#DC2626';
+    var icon  = surplus>=0 ? '✅' : '⚠️';
+    qr.style.display='block';
+    qr.innerHTML='<div style="background:#fff;border:1px solid #E5E7EB;border-radius:14px;padding:14px;display:grid;grid-template-columns:1fr 1fr;gap:10px">'+
+      '<div style="text-align:center"><div style="font-family:\'DM Mono\',monospace;font-size:18px;font-weight:700;color:'+color+'">'+fmtM6(surplus)+'</div><div style="font-size:10px;color:#9CA3AF;text-transform:uppercase;margin-top:3px">'+icon+' Surplus</div></div>'+
+      '<div style="text-align:center"><div style="font-family:\'DM Mono\',monospace;font-size:18px;font-weight:700;color:#7C3AED">'+savingsRate+'%</div><div style="font-size:10px;color:#9CA3AF;text-transform:uppercase;margin-top:3px">Savings Rate</div></div>'+
+    '</div>';
+  } else {
+    qr.style.display='none';
+  }
+
+  // Update summary if visible
+  if(!document.getElementById('m6tab-summary').style.display||document.getElementById('m6tab-summary').style.display!='none'){
+    m6RenderSummary();
+  }
+  if(!document.getElementById('m6tab-rule').style.display||document.getElementById('m6tab-rule').style.display!='none'){
+    m6RenderRule();
+  }
+}
+
+// ── SUMMARY TAB ──
+function m6RenderSummary(){
+  var income   = m6GetSection(M6_INCOME_IDS);
+  var invested = m6GetSection(M6_INV_IDS);
+  var fixed    = m6GetSection(M6_FIXED_IDS);
+  var variable = m6GetSection(M6_VAR_IDS);
+  var totalExp = fixed+variable;
+  var surplus  = income-invested-totalExp;
+  var savingsRate = income>0?Math.round(invested/income*100):0;
+  var expRate  = income>0?Math.round(totalExp/income*100):0;
+
+  if(!income){
+    document.getElementById('m6SummaryContent').innerHTML='<div style="text-align:center;padding:40px;color:#9CA3AF;font-size:13px">Enter your income and expenses in the Entry tab first.</div>';
+    return;
+  }
+
+  // Savings rate ring SVG
+  var r=52,circ=2*Math.PI*r,filled=(savingsRate/100)*circ;
+  var ringColor=savingsRate>=20?'#059669':savingsRate>=10?'#D97706':'#DC2626';
+  var ringSVG='<svg viewBox="0 0 120 120" style="transform:rotate(-90deg)">'+
+    '<circle cx="60" cy="60" r="52" fill="none" stroke="#F3F4F6" stroke-width="12"/>'+
+    '<circle cx="60" cy="60" r="52" fill="none" stroke="'+ringColor+'" stroke-width="12" stroke-dasharray="'+filled+' '+circ+'" stroke-linecap="round"/>'+
+  '</svg>';
+
+  // Pie chart SVG
+  var total=invested+fixed+variable||1;
+  var sections=[
+    {val:invested,color:'#7C3AED',label:'Invested'},
+    {val:fixed,color:'#DC2626',label:'Fixed Exp'},
+    {val:variable,color:'#D97706',label:'Variable Exp'},
+    {val:Math.max(0,surplus),color:'#059669',label:'Surplus'},
+  ];
+  var cx=60,cy=60,rad=52,startAngle=0;
+  var piePaths='';
+  sections.forEach(function(s){
+    if(!s.val)return;
+    var angle=(s.val/Math.max(income,1))*2*Math.PI;
+    var x1=cx+rad*Math.cos(startAngle),y1=cy+rad*Math.sin(startAngle);
+    var x2=cx+rad*Math.cos(startAngle+angle),y2=cy+rad*Math.sin(startAngle+angle);
+    var large=angle>Math.PI?1:0;
+    piePaths+='<path d="M'+cx+','+cy+' L'+x1.toFixed(1)+','+y1.toFixed(1)+' A'+rad+','+rad+' 0 '+large+',1 '+x2.toFixed(1)+','+y2.toFixed(1)+' Z" fill="'+s.color+'" opacity=".85"/>';
+    startAngle+=angle;
+  });
+  var pieSVG='<svg viewBox="0 0 120 120">'+piePaths+'</svg>';
+
+  // Insight
+  var insight='';
+  var insightClass='m6-insight';
+  if(savingsRate>=20){
+    insight='<strong>Excellent financial discipline.</strong> You are investing '+savingsRate+'% of your income. At this rate, wealth creation is happening automatically. Keep this discipline — never let lifestyle inflate faster than income.';
+  } else if(savingsRate>=10){
+    insight='<strong>Good start — room to grow.</strong> You are investing '+savingsRate+'% of income. Increase by 1% every 3 months — you will not feel the reduction but the long-term impact is significant.';
+    insightClass='m6-insight m6-warn';
+  } else {
+    insight='<strong>Investment rate is critically low.</strong> Investing only '+savingsRate+'% of income means lifestyle is consuming what should build your future. Review every expense category and find 5–10% to redirect to investments immediately.';
+    insightClass='m6-insight m6-danger';
+  }
+
+  // Category breakdown bars
+  var cats=[
+    {name:'Investments',val:invested,total:income,color:'#7C3AED'},
+    {name:'Rent / EMI',val:m6GetVal('exp_rent')+m6GetVal('exp_emi'),total:income,color:'#DC2626'},
+    {name:'Food & Dining',val:m6GetVal('exp_food')+m6GetVal('exp_dining'),total:income,color:'#D97706'},
+    {name:'Transport',val:m6GetVal('exp_transport'),total:income,color:'#F59E0B'},
+    {name:'Shopping',val:m6GetVal('exp_shopping'),total:income,color:'#EC4899'},
+    {name:'Entertainment',val:m6GetVal('exp_entertainment'),total:income,color:'#8B5CF6'},
+    {name:'Medical',val:m6GetVal('exp_medical'),total:income,color:'#06B6D4'},
+    {name:'Utilities & Bills',val:m6GetVal('exp_utilities'),total:income,color:'#6366F1'},
+  ].filter(function(c){return c.val>0;});
+
+  var catsHTML=cats.map(function(cat){
+    var pct=income>0?Math.round(cat.val/income*100):0;
+    return '<div class="m6-cat-bar-row">'+
+      '<div class="m6-cat-bar-header"><span class="m6-cat-bar-name">'+cat.name+'</span><span class="m6-cat-bar-val">'+fmtM6(cat.val)+' ('+pct+'%)</span></div>'+
+      '<div class="m6-cat-bar-track"><div class="m6-cat-bar-fill" style="width:'+Math.min(pct,100)+'%;background:'+cat.color+'"></div></div>'+
+    '</div>';
+  }).join('');
+
+  document.getElementById('m6SummaryContent').innerHTML=
+    '<div class="m6-dashboard">'+
+      '<div class="m6-dash-box"><div class="m6-dash-val" style="color:#059669">'+fmtM6(income)+'</div><div class="m6-dash-lbl">Total Income</div></div>'+
+      '<div class="m6-dash-box"><div class="m6-dash-val" style="color:#DC2626">'+fmtM6(totalExp)+'</div><div class="m6-dash-lbl">Total Expenses</div></div>'+
+      '<div class="m6-dash-box"><div class="m6-dash-val" style="color:#7C3AED">'+fmtM6(invested)+'</div><div class="m6-dash-lbl">Invested</div></div>'+
+      '<div class="m6-dash-box"><div class="m6-dash-val" style="color:'+(surplus>=0?'#059669':'#DC2626')+'">'+fmtM6(surplus)+'</div><div class="m6-dash-lbl">'+(surplus>=0?'Surplus':'Deficit')+'</div></div>'+
+    '</div>'+
+    '<div class="m6-card" style="text-align:center">'+
+      '<div class="m6-card-title">Savings Rate</div>'+
+      '<div class="m6-ring-wrap">'+ringSVG+
+        '<div class="m6-ring-center"><div class="m6-ring-pct" style="color:'+ringColor+'">'+savingsRate+'%</div><div class="m6-ring-lbl">Saved</div></div>'+
+      '</div>'+
+      '<div style="font-size:13px;color:#6B7280">Target: <strong style="color:#7C3AED">20%+</strong> · Your rate: <strong style="color:'+ringColor+'">'+savingsRate+'%</strong></div>'+
+    '</div>'+
+    '<div class="m6-card">'+
+      '<div class="m6-card-title">Where Your Money Goes</div>'+
+      '<div class="m6-pie-wrap">'+
+        '<div class="m6-pie-svg" style="width:100px;height:100px">'+pieSVG+'</div>'+
+        '<div class="m6-pie-legend">'+
+          sections.filter(function(s){return s.val>0;}).map(function(s){
+            var pct=income>0?Math.round(s.val/income*100):0;
+            return '<div class="m6-pie-leg-row"><div class="m6-pie-dot" style="background:'+s.color+'"></div>'+s.label+' <strong style="margin-left:auto">'+pct+'%</strong></div>';
+          }).join('')+
+        '</div>'+
+      '</div>'+
+    '</div>'+
+    '<div class="m6-card">'+
+      '<div class="m6-card-title">Spending Breakdown</div>'+
+      catsHTML+
+    '</div>'+
+    '<div class="'+insightClass+'">'+insight+'</div>';
+}
+
+// ── 50-30-20 RULE ──
+function m6RenderRule(){
+  var income=m6GetSection(M6_INCOME_IDS);
+  if(!income){
+    document.getElementById('m6RuleContent').innerHTML='<div style="text-align:center;padding:30px;color:#9CA3AF;font-size:13px">Enter your income in the Entry tab to see your 50-30-20 breakdown.</div>';
+    return;
+  }
+  var invested=m6GetSection(M6_INV_IDS);
+  var needs=m6GetVal('exp_rent')+m6GetVal('exp_emi')+m6GetVal('exp_insurance')+m6GetVal('exp_school')+m6GetVal('exp_food')+m6GetVal('exp_utilities')+m6GetVal('exp_medical');
+  var wants=m6GetVal('exp_dining')+m6GetVal('exp_transport')+m6GetVal('exp_shopping')+m6GetVal('exp_entertainment')+m6GetVal('exp_other');
+  var savings=invested;
+
+  var rules=[
+    {label:'Needs',ideal:50,actual:Math.round(needs/income*100),amt:needs,idealAmt:income*0.5,color:'#DC2626',desc:'Rent, EMI, food, utilities, insurance, medical'},
+    {label:'Wants',ideal:30,actual:Math.round(wants/income*100),amt:wants,idealAmt:income*0.3,color:'#D97706',desc:'Dining out, shopping, entertainment, transport'},
+    {label:'Savings',ideal:20,actual:Math.round(savings/income*100),amt:savings,idealAmt:income*0.2,color:'#059669',desc:'SIP, EPF, NPS, emergency fund — invest first'},
+  ];
+
+  document.getElementById('m6RuleContent').innerHTML=rules.map(function(r){
+    var over=r.actual>r.ideal;
+    var under=r.actual<r.ideal&&r.label==='Savings';
+    var status=over&&r.label!=='Savings'?'⚠️ Over':under?'⬇️ Below':'✅ On track';
+    var bg=over&&r.label!=='Savings'?'#FEF9C3':under?'#FEF2F2':'#ECFDF5';
+    return '<div class="m6-rule-box" style="background:'+bg+';border:1px solid '+r.color+'33">'+
+      '<div class="m6-rule-pct" style="color:'+r.color+'">'+r.ideal+'%</div>'+
+      '<div class="m6-rule-info">'+
+        '<div class="m6-rule-title">'+r.label+' <span style="font-size:11px;color:#6B7280">'+status+'</span></div>'+
+        '<div class="m6-rule-desc">'+r.desc+'</div>'+
+        '<div style="margin-top:4px;font-size:11px;color:'+r.color+'">Ideal: '+fmtM6(r.idealAmt)+' · Your: '+fmtM6(r.amt)+'</div>'+
+      '</div>'+
+      '<div class="m6-rule-actual" style="color:'+r.color+'">'+r.actual+'%</div>'+
+    '</div>';
+  }).join('');
+}
+
+// ── SAVE & LOAD ──
+function m6GetAllData(){
+  return {
+    income:{salary:m6GetVal('inc_salary'),freelance:m6GetVal('inc_freelance'),rental:m6GetVal('inc_rental'),dividends:m6GetVal('inc_dividends'),other:m6GetVal('inc_other')},
+    investments:{sip:m6GetVal('inv_sip'),epf:m6GetVal('inv_epf'),nps:m6GetVal('inv_nps'),gold:m6GetVal('inv_gold'),other:m6GetVal('inv_other')},
+    fixed:{rent:m6GetVal('exp_rent'),emi:m6GetVal('exp_emi'),insurance:m6GetVal('exp_insurance'),school:m6GetVal('exp_school')},
+    variable:{food:m6GetVal('exp_food'),dining:m6GetVal('exp_dining'),transport:m6GetVal('exp_transport'),utilities:m6GetVal('exp_utilities'),shopping:m6GetVal('exp_shopping'),entertainment:m6GetVal('exp_entertainment'),medical:m6GetVal('exp_medical'),other:m6GetVal('exp_other')},
+    totals:{income:m6GetSection(M6_INCOME_IDS),invested:m6GetSection(M6_INV_IDS),fixed:m6GetSection(M6_FIXED_IDS),variable:m6GetSection(M6_VAR_IDS)},
+    savedAt:Date.now()
+  };
+}
+
+function m6SaveMonth(){
+  var data=m6GetAllData();
+  if(!data.totals.income){m6Toast('Enter at least your income ☝️');return;}
+  var all=m6GetHistory();
+  all[m6MonthKey()]=data;
+  localStorage.setItem('cp_pl',JSON.stringify(all));
+  m6Toast(m6MonthLabel()+' saved ✓');
+}
+
+function m6GetHistory(){
+  try{return JSON.parse(localStorage.getItem('cp_pl')||'{}');}
+  catch(e){return {};}
+}
+
+function m6LoadMonth(){
+  var all=m6GetHistory();
+  var data=all[m6MonthKey()];
+  var fields={
+    'inc_salary':['income','salary'],'inc_freelance':['income','freelance'],'inc_rental':['income','rental'],
+    'inc_dividends':['income','dividends'],'inc_other':['income','other'],
+    'inv_sip':['investments','sip'],'inv_epf':['investments','epf'],'inv_nps':['investments','nps'],
+    'inv_gold':['investments','gold'],'inv_other':['investments','other'],
+    'exp_rent':['fixed','rent'],'exp_emi':['fixed','emi'],'exp_insurance':['fixed','insurance'],'exp_school':['fixed','school'],
+    'exp_food':['variable','food'],'exp_dining':['variable','dining'],'exp_transport':['variable','transport'],
+    'exp_utilities':['variable','utilities'],'exp_shopping':['variable','shopping'],
+    'exp_entertainment':['variable','entertainment'],'exp_medical':['variable','medical'],'exp_other':['variable','other']
+  };
+  Object.keys(fields).forEach(function(id){
+    var el=document.getElementById(id);
+    if(!el)return;
+    var path=fields[id];
+    el.value=data?((data[path[0]]&&data[path[0]][path[1]])||''):'';
+  });
+  m6Calc();
+}
+
+// ── HISTORY TAB ──
+function m6RenderHistory(){
+  var all=m6GetHistory();
+  var keys=Object.keys(all).sort().reverse();
+  var hc=document.getElementById('m6HistoryContent');
+  var tc=document.getElementById('m6TrendCard');
+  if(!keys.length){
+    hc.innerHTML='<div style="text-align:center;padding:30px;color:#9CA3AF;font-size:13px">No history yet. Save a few months to see your trend.</div>';
+    if(tc)tc.style.display='none';
+    return;
+  }
+  var rows=keys.map(function(k){
+    var d=all[k];var t=d.totals;
+    var surplus=t.income-t.invested-t.fixed-t.variable;
+    var savingsRate=t.income>0?Math.round(t.invested/t.income*100):0;
+    var parts=k.split('-');
+    var label=M6_MONTHS[parseInt(parts[1])-1]+' '+parts[0];
+    var surplusColor=surplus>=0?'#059669':'#DC2626';
+    return '<div class="m6-hist-row">'+
+      '<div class="m6-hist-month">'+label+'</div>'+
+      '<div class="m6-hist-bars">'+
+        '<div style="display:flex;gap:4px;margin-bottom:4px">'+
+          '<div style="height:6px;border-radius:3px;background:#059669;width:'+Math.round(t.income/Math.max(t.income,1)*60)+'px;flex-shrink:0"></div>'+
+          '<div style="font-size:10px;color:#6B7280">'+fmtM6(t.income)+'</div>'+
+        '</div>'+
+        '<div style="display:flex;gap:4px">'+
+          '<div style="height:6px;border-radius:3px;background:#DC2626;width:'+Math.round((t.fixed+t.variable)/Math.max(t.income,1)*60)+'px;flex-shrink:0"></div>'+
+          '<div style="font-size:10px;color:#6B7280">'+fmtM6(t.fixed+t.variable)+' spent</div>'+
+        '</div>'+
+      '</div>'+
+      '<div>'+
+        '<div class="m6-hist-surplus" style="color:'+surplusColor+'">'+fmtM6(surplus)+'</div>'+
+        '<div style="font-size:10px;color:#7C3AED;text-align:right">'+savingsRate+'% saved</div>'+
+      '</div>'+
+    '</div>';
+  }).join('');
+
+  hc.innerHTML=rows;
+
+  // Trend insight
+  if(keys.length>=2&&tc){
+    tc.style.display='block';
+    var latest=all[keys[0]].totals;
+    var prev=all[keys[1]].totals;
+    var savLatest=latest.income>0?Math.round(latest.invested/latest.income*100):0;
+    var savPrev=prev.income>0?Math.round(prev.invested/prev.income*100):0;
+    var trend=savLatest-savPrev;
+    var trendText=trend>0?'📈 Savings rate improved by '+trend+'%':trend<0?'📉 Savings rate dropped by '+Math.abs(trend)+'%':'➡️ Savings rate unchanged';
+    document.getElementById('m6TrendContent').innerHTML=
+      '<div style="font-size:13px;color:#374151;line-height:1.85">'+trendText+' compared to last month. '+
+      (trend>0?'Keep going — consistency is everything.':trend<0?'Review your variable expenses — dining, shopping, and entertainment are usually the culprits.':'Stable performance. Consider increasing your SIP by 10%.') +
+      '</div>';
+  }
+}
+
+// ── TABS ──
+function m6ShowTab(tab,el){
+  ['entry','summary','rule','history'].forEach(function(t){
+    var e=document.getElementById('m6tab-'+t);if(e)e.style.display='none';
+  });
+  document.querySelectorAll('.m6-tab').forEach(function(t){t.classList.remove('act');});
+  document.getElementById('m6tab-'+tab).style.display='block';
+  if(el)el.classList.add('act');
+  if(tab==='summary')m6RenderSummary();
+  if(tab==='rule')m6RenderRule();
+  if(tab==='history')m6RenderHistory();
+}
+
+// ── MODULE SWITCHER ──
+function switchToM6(){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.classList.remove('act');
+  });
+  document.getElementById('mod6').classList.add('act');
+  window.scrollTo(0,0);
+  // Set current month to today
+  var now=new Date();
+  m6CurrentMonth=now.getMonth();
+  m6CurrentYear=now.getFullYear();
+  document.getElementById('m6MonthLabel').textContent=m6MonthLabel();
+  m6LoadMonth();
+}
+
+// Update all navbars to include M6
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=
+    '<button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>'+
+    '<button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>'+
+    '<button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button>'+
+    '<button class="nb" onclick="switchToM6()"><span>📊</span><span>P&L</span></button>';
+  ['#mod0 .bnav','#mod1 .bnav','#mod2 .bnav','#mod3 .bnav','#mod4 .bnav','#mod5 .bnav'].forEach(function(s){
+    var el=document.querySelector(s);if(el)el.innerHTML=nav;
+  });
+});
+</script>
 </body>
 </html>
