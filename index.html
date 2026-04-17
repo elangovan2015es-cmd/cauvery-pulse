@@ -1217,12 +1217,22 @@ const M2_INSTRUMENTS = [
     oneliner:'Extra ₹50,000 tax deduction over and above 80C. Market-linked equity returns with government regulation. Best retirement tool for high income earners.',
     whoSuits:['High income earners in 30% tax bracket','Those who have exhausted 80C limit','Long-term retirement planners','Self-employed wanting pension-like structure'],
     pros:['Extra ₹50,000 deduction under 80CCD(1B) — saves ₹15,000/year in 30% bracket','Equity component gives 10–12% long-term returns','Government regulated — PFRDA oversight','Low fund management charges — 0.01%','Choice of fund managers — SBI, HDFC, ICICI, Kotak'],
-    cons:['60% lump sum + 40% mandatory annuity at retirement','Annuity income is taxable','Cannot withdraw freely before 60','Partial withdrawal only for specific reasons','Returns depend on market performance'],
-    taxNote:'Section 80CCD(1): Up to 10% of salary (within ₹1.5L 80C limit). Section 80CCD(1B): Additional ₹50,000 — this is the unique benefit. Employer contribution: 80CCD(2) — no upper limit, not counted in 80C.',
-    truth:'NPS is a retirement tool, not a savings tool. The ₹50,000 extra deduction saves ₹15,600/year in tax (30% bracket). Over 20 years that is ₹3.12L in tax saved — plus market returns on the corpus.',
+    cons:[
+  'Non-govt: 80% lump sum + 20% mandatory annuity (corpus above ₹12L) — PFRDA Dec 2025 rule',
+  'Corpus ₹8L–₹12L: up to ₹6L lump sum, balance via SUR (min 6 years) or annuity',
+  'Corpus below ₹8L: 100% withdrawal — no annuity required',
+  'Govt employees: still 60% lump sum + 40% annuity rule applies',
+  'Tax reality: only 60% of withdrawal is tax-free (Sec 10(12A)) — extra 20% taxable at slab',
+  'Annuity income received monthly is taxable as income every year',
+  'Cannot withdraw freely before completing 15 years or age 60 (whichever first)',
+  'Partial withdrawal: max 4 times lifetime, once every 4 years, up to 25% of own contribution',
+  'Early exit (before 15 yrs): 80% must go to annuity — severe penalty for premature exit',
+],
+    taxNote:'80CCD(1): Own contribution up to 10% of salary within ₹1.5L 80C limit. 80CCD(1B): Extra ₹50,000 deduction — unique to NPS, over and above 80C. 80CCD(2): Employer NPS contribution — no upper rupee limit, deductible in full. Exit taxation (Dec 2025 rules): 60% lump sum is tax-free under Sec 10(12A). Additional 20% lump sum (now allowed by PFRDA) is taxable at your income slab — Income Tax Act not yet amended to match PFRDA rule. 20% annuity: no tax at purchase but monthly pension received is taxable every year.',
+    truth:'PFRDA December 2025 overhaul: Non-govt subscribers can now take 80% as lump sum (only 20% annuity) if corpus exceeds ₹12L. Below ₹8L — withdraw 100% with zero annuity. Tax reality: only 60% is tax-free under Sec 10(12A) — the extra 20% lump sum is taxable at your slab until Income Tax Act is amended. The ₹50,000 extra deduction under 80CCD(1B) saves ₹15,600/year at 30% bracket. Exit age extended to 85 years. Partial withdrawals increased to 4 times. NPS is now far more liquid than ever — but understand the tax gap before planning.',
     truthColor:'rgba(155,114,207,.08)', truthBorder:'rgba(155,114,207,.25)',
     products:['Open online: enps.nsdl.com — Aadhaar + PAN, instant PRAN','Fund Managers: SBI Pension, LIC Pension, UTI Retirement Solutions, HDFC Pension, ICICI Prudential Pension, Kotak Pension, Aditya Birla Pension, Tata Pension, Max Life Pension','Tier I: Retirement-locked, full tax benefits. Tier II: No lock-in, no extra tax benefit for private sector','Employer NPS 80CCD(2): No upper rupee limit — most powerful tax tool for professionals','Auto Choice (LC75): Age-based rebalancing — equity reduces as you age'],
-    lifeStageNote:{student:'Not yet — focus on EPF when employed.',young:'Start NPS Tier I with ₹500/month from Day 1. Habit building.',married:'If income above ₹10L — NPS is essential for the ₹50K extra deduction.',mid:'Maximum NPS contribution for tax benefit. Auto choice if unsure.',senior:'Approaching 60 — plan annuity purchase. Compare LIC, SBI annuity rates.',small_biz:'NPS for self-employed: 20% of gross income deductible under 80CCD(1).',large_biz:'Corporate NPS: employer contribution under 80CCD(2) — no cap, full deduction.'}
+    lifeStageNote:{student:'Not yet — focus on EPF when employed.',young:'Start NPS Tier I with ₹500/month from Day 1. Habit building.',married:'If income above ₹10L — NPS is essential for the ₹50K extra deduction.',mid:'Maximum NPS contribution for tax benefit. Auto choice if unsure.',senior:'Approaching 60 — plan exit carefully. If corpus above ₹12L, take 80% lump sum + 20% annuity. Below ₹8L — take 100%. Only 60% is tax-free currently — plan withdrawal to minimise slab impact. Compare annuity rates: LIC Jeevan Akshay, HDFC Life, SBI Life.',small_biz:'NPS for self-employed: 20% of gross income deductible under 80CCD(1).',large_biz:'Corporate NPS: employer contribution under 80CCD(2) — no cap, full deduction.'}
   },
   {
     id:'mf', tag:'growth', tagLabel:'Growth', tagColor:'#3ecf8e',
