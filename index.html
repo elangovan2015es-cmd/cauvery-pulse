@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Cauvery Pulse | v3.0 | Build: 20260418-0045 | Elango Industries Limited -->
+<!-- Cauvery Pulse | v3.1 | Build: 20260418-0125 | Elango Industries Limited -->
 <title>Cauvery Pulse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
@@ -229,7 +229,7 @@ header{padding:22px 20px 14px;display:flex;align-items:center;justify-content:sp
 .p-m1-step .sl{font-size:10px;color:var(--muted);margin-top:2px}
 
 /* BOTTOM NAV */
-.bnav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:rgba(7,9,26,.96);backdrop-filter:blur(20px);border-top:1px solid var(--border);padding:9px 20px 14px;display:flex;justify-content:space-around;z-index:100}
+.bnav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:rgba(7,9,26,.96);backdrop-filter:blur(20px);border-top:1px solid var(--border);padding:9px 8px 14px;display:flex;justify-content:flex-start;gap:2px;z-index:100;overflow-x:auto;scrollbar-width:none}
 .nb{display:flex;flex-direction:column;align-items:center;gap:3px;background:none;border:none;color:var(--muted);cursor:pointer;padding:4px 10px;border-radius:9px;transition:all .2s;font-family:var(--ff-b)}
 .nb.act{color:var(--gold)}
 .nb span:first-child{font-size:19px}
@@ -419,7 +419,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="app0">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Life Canvas · M0</div></div></div>
-  <div class="vtag">v3.0</div>
+  <div class="vtag">v3.1</div>
 </header>
 <div class="starfield" id="starfield"></div>
 <div class="aurora"></div>
@@ -873,7 +873,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 
 </div><!-- #app0 -->
 <div class="bnav">
-  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button><button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button>
+  <button class="nb act" style="color:#E8B84B" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button><button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM6()"><span>📊</span><span>P&L</span></button>
 </div>
 <div class="toast" id="toast0"></div>
 </div>
@@ -883,7 +883,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="app">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Cauvery Pulse Score · M1</div></div></div>
-  <div class="vtag">v3.0</div>
+  <div class="vtag">v3.1</div>
 </header>
 <!-- WELCOME -->
 <div id="welcome" class="screen active">
@@ -1061,7 +1061,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 
 </div><!-- #app -->
 <div class="bnav">
-  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button><button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button>
+  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button><button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM6()"><span>📊</span><span>P&L</span></button>
 </div>
 <div class="toast" id="toast"></div>
 </div>
@@ -1071,7 +1071,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="app2">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Investment School · M2</div></div></div>
-  <div class="vtag">v3.0</div>
+  <div class="vtag">v3.1</div>
 </header>
 
 <div style="padding:0 20px 80px">
@@ -1108,7 +1108,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 </div>
 </div><!-- #app2 -->
 <div class="bnav">
-  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button><button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button>
+  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button><button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb act" style="color:#2ec4b6" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM6()"><span>📊</span><span>P&L</span></button>
 </div>
 <div class="toast" id="toast2"></div>
 </div>
@@ -1496,23 +1496,23 @@ function closeM2Detail(){
 
 // ══ UPDATED MODULE SWITCHER (now includes M2) ══
 function switchToM2(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5'].forEach(function(id){
-    var el=document.getElementById(id); if(el) el.classList.remove('act');
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod2').classList.add('act');
   window.scrollTo(0,0);
   renderM2();
 }
 function switchToM1(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5'].forEach(function(id){
-    var el=document.getElementById(id); if(el) el.classList.remove('act');
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod1').classList.add('act');
   window.scrollTo(0,0);
 }
 function switchToM0(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5'].forEach(function(id){
-    var el=document.getElementById(id); if(el) el.classList.remove('act');
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod0').classList.add('act');
   window.scrollTo(0,0);
@@ -2420,7 +2420,7 @@ function toast(msg){
 
 
 
-<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v3.0 ══════ -->
+<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v3.1 ══════ -->
 <div id="mod3" class="mod">
 <style>
 /* ── M3 LIGHT THEME ── */
@@ -2604,7 +2604,7 @@ function toast(msg){
   </div>
   <div style="display:flex;align-items:center;gap:8px">
     <button onclick="openM3Settings()" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:6px 10px;font-size:13px;color:#6B7280;cursor:pointer">⚙️ Rates</button>
-    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.0</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.1</div>
   </div>
 </header>
 
@@ -2632,14 +2632,14 @@ function toast(msg){
 </div>
 
 <div class="bnav" style="background:#fff;border-top:1px solid #E5E7EB">
-  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button><button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button>
+  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button><button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button><button class="nb act" style="color:#D97706" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM6()"><span>📊</span><span>P&L</span></button>
 </div>
 <div class="toast" id="toast3"></div>
 </div><!-- #mod3 -->
 
 <script>
 // ══════════════════════════════════════════════════════
-// M3 PORTFOLIO BLUEPRINT ENGINE v3.0
+// M3 PORTFOLIO BLUEPRINT ENGINE v3.1
 // ══════════════════════════════════════════════════════
 
 // ── COLOURS ──
@@ -3160,8 +3160,8 @@ function saveM3Rates(){
 
 // ── SWITCHERS ──
 function switchToM3(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5'].forEach(function(id){
-    var el=document.getElementById(id); if(el) el.classList.remove('act');
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod3').classList.add('act');
   window.scrollTo(0,0);
@@ -3282,7 +3282,7 @@ function switchToM3(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Debt Analyser · M4</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.0</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.1</div>
 </header>
 
 <div class="m4w">
@@ -3622,7 +3622,7 @@ function switchToM3(){
 </div><!-- #app4 -->
 
 <div class="bnav" style="background:#fff;border-top:1px solid #E5E7EB">
-  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button><button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button>
+  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button><button class="nb act" style="color:#DC2626" onclick="switchToM4()"><span>💳</span><span>Debt</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM6()"><span>📊</span><span>P&L</span></button>
 </div>
 <div class="toast" id="toast4"></div>
 </div><!-- #mod4 -->
@@ -3630,7 +3630,7 @@ function switchToM3(){
 
 <script>
 // ══════════════════════════════════════════════════
-// M4 — DEBT ANALYSER ENGINE v3.0
+// M4 — DEBT ANALYSER ENGINE v3.1
 // ══════════════════════════════════════════════════
 
 // ── HELPERS ──
@@ -4061,8 +4061,8 @@ function calcInflation(){
 
 // ── MODULE SWITCHER ──
 function switchToM4(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5'].forEach(function(id){
-    var el=document.getElementById(id); if(el) el.classList.remove('act');
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod4').classList.add('act');
   window.scrollTo(0,0);
@@ -4070,1075 +4070,7 @@ function switchToM4(){
   m4SetStrategy('avalanche');
 }
 
-// Update all navbars to include M4
-document.addEventListener('DOMContentLoaded',function(){
-  // re-init strategy explain
-  m4SetStrategy('avalanche');
-  // Update all navbars
-  var nh='<button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>'+
-    '<button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button>'+
-    '<button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>'+
-    '<button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>';
-  ['#mod0 .bnav','#mod1 .bnav','#mod2 .bnav','#mod3 .bnav'].forEach(function(s){
-    var el=document.querySelector(s);if(el)el.innerHTML=nh;
-  });
-});
-
-// Patch existing switchers to also clear mod4
-</script>
-</script>
-
-
-<script>
-// ══════════════════════════════════════════════════════
-// M4 SEBI-INSPIRED FINANCIAL TOOLS — ORIGINAL CODE
-// 20 calculators across 13 categories
-// Mathematical principles from SEBI investor education
-// Code, design, language: original — Cauvery Pulse
-// ══════════════════════════════════════════════════════
-
-var SEBI_CATS = [
-  {
-    id:'interest', title:'Interest Calculators', icon:'📐', color:'#1D4ED8',
-    tools:[
-      {id:'fv',    name:'Future Value',           desc:'What is your money worth in N years at a given rate?'},
-      {id:'rrr',   name:'Rate of Return',         desc:'What annual return did your investment actually earn?'},
-      {id:'bond',  name:'Bond Yield',             desc:'Calculate yield to maturity on a bond investment.'},
-    ]
-  },
-  {
-    id:'mf', title:'Mutual Fund Calculators', icon:'📈', color:'#059669',
-    tools:[
-      {id:'sip',      name:'SIP Calculator',       desc:'Monthly SIP → corpus at target date.'},
-      {id:'goalsip',  name:'Goal SIP',             desc:'Target corpus → how much SIP monthly?'},
-      {id:'lumpsum',  name:'Lump Sum Growth',      desc:'One-time investment growth over time.'},
-    ]
-  },
-  {
-    id:'tvm', title:'Time Value of Money', icon:'⏳', color:'#7C3AED',
-    tools:[
-      {id:'pv',       name:'Present Value',        desc:'What is a future amount worth today?'},
-      {id:'fci',      name:'Flexible Compounding', desc:'Compounding with variable contribution schedule.'},
-      {id:'incr',     name:'Increasing SIP',       desc:'SIP that grows by X% every year — realistic planning.'},
-    ]
-  },
-  {
-    id:'retire', title:'Retirement Planning', icon:'🧓', color:'#0D9488',
-    tools:[
-      {id:'retcorpus', name:'Retirement Corpus',   desc:'How much do you need to retire comfortably?'},
-      {id:'retincome', name:'Retirement Income',   desc:'Monthly income your corpus can generate for N years.'},
-    ]
-  },
-  {
-    id:'insurance', title:'Insurance Calculator', icon:'🛡️', color:'#DC2626',
-    tools:[
-      {id:'insyoung',  name:'Cover for Young Earner', desc:'How much life cover do you actually need?'},
-      {id:'insmarried',name:'Cover for Family',       desc:'Family protection — income replacement calculator.'},
-    ]
-  },
-  {
-    id:'goal', title:'Goal Planner', icon:'🎯', color:'#D97706',
-    tools:[
-      {id:'goalplanner',name:'Financial Goal',     desc:'Any goal → monthly investment needed from today.'},
-      {id:'assetalloc', name:'Asset Allocation',   desc:'Age-based equity/debt split recommendation.'},
-    ]
-  },
-  {
-    id:'special', title:'Special Calculators', icon:'✨', color:'#6D28D9',
-    tools:[
-      {id:'impact1',   name:'Impact of 1%',        desc:'How 1% extra return compounds to life-changing difference.'},
-      {id:'delay',     name:'Cost of Delay',        desc:'What does waiting 1 year to invest actually cost you?'},
-      {id:'networth',  name:'Net Worth',            desc:'Assets minus liabilities — your real financial picture.'},
-      {id:'annuity',   name:'Annuity Payout',       desc:'Corpus → fixed monthly income for a chosen period.'},
-      {id:'compound',  name:'Power of Compounding', desc:'Visual compounding growth — the 8th wonder of the world.'},
-    ]
-  },
-];
-
-// ── RENDER SEBI TOOL GRID ──
-function renderSebiTools(){
-  var c=document.getElementById('m4SebiTools');
-  if(!c)return;
-  c.innerHTML='';
-
-  // Grid of categories
-  var gridHTML='<div style="margin-bottom:14px">';
-  SEBI_CATS.forEach(function(cat){
-    gridHTML+='<div class="m4-card" style="margin-bottom:10px">'+
-      '<div class="m4-card-title" style="color:'+cat.color+'">'+cat.icon+' '+cat.title+'</div>'+
-      cat.tools.map(function(t){
-        return '<div onclick="showSebiTool(\''+t.id+'\')" style="display:flex;align-items:center;justify-content:space-between;padding:10px 12px;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;margin-bottom:7px;cursor:pointer;transition:all .15s" onmouseover="this.style.background=\''+cat.color+'18\';this.style.borderColor=\''+cat.color+'44\'" onmouseout="this.style.background=\'#F9FAFB\';this.style.borderColor=\'#E5E7EB\'">'+
-          '<div>'+
-            '<div style="font-size:13px;font-weight:600;color:#111827">'+t.name+'</div>'+
-            '<div style="font-size:11px;color:#9CA3AF;margin-top:2px">'+t.desc+'</div>'+
-          '</div>'+
-          '<span style="color:'+cat.color+';font-size:16px">›</span>'+
-        '</div>';
-      }).join('')+
-    '</div>';
-  });
-  gridHTML+='</div>';
-
-  // Tool workspace
-  gridHTML+='<div id="sebiToolWS" style="display:none"></div>';
-  c.innerHTML=gridHTML;
-}
-
-function showSebiTool(id){
-  var ws=document.getElementById('sebiToolWS');
-  if(!ws)return;
-  ws.style.display='block';
-  ws.scrollIntoView({behavior:'smooth',block:'start'});
-  var html=buildSebiTool(id);
-  ws.innerHTML='<div class="m4-card">'+
-    '<div style="display:flex;align-items:center;gap:8px;margin-bottom:14px">'+
-      '<button onclick="document.getElementById(\'sebiToolWS\').style.display=\'none\'" style="background:#F3F4F6;border:1px solid #E5E7EB;border-radius:8px;padding:5px 10px;font-size:13px;cursor:pointer">← Back</button>'+
-    '</div>'+
-    html+
-  '</div>';
-}
-
-function sebiInr(n){if(n>=10000000)return '₹'+(n/10000000).toFixed(2)+' Cr';if(n>=100000)return '₹'+(n/100000).toFixed(2)+' L';if(n>=1000)return '₹'+(n/1000).toFixed(1)+' K';return '₹'+Math.round(n);}
-
-function sebiResult(rows){
-  return '<div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:12px;padding:14px;margin-top:10px">'+
-    '<div style="font-size:10px;font-weight:700;color:#1D4ED8;text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px">Result</div>'+
-    '<div style="display:grid;grid-template-columns:repeat('+Math.min(rows.length,2)+',1fr);gap:8px">'+
-    rows.map(function(r){return '<div style="background:#fff;border:1px solid #BFDBFE;border-radius:10px;padding:10px;text-align:center"><div style="font-family:\'DM Mono\',monospace;font-size:17px;font-weight:700;color:'+( r.color||'#1D4ED8')+';margin-bottom:3px">'+r.val+'</div><div style="font-size:10px;color:#9CA3AF;text-transform:uppercase;letter-spacing:.5px">'+r.lbl+'</div></div>';}).join('')+
-    '</div>'+
-  '</div>';
-}
-
-function sebiInsight(text){
-  return '<div style="margin-top:10px;font-size:13px;color:#1E40AF;background:#EFF6FF;border-radius:10px;padding:10px 12px;line-height:1.8;border-left:3px solid #3B82F6">'+text+'</div>';
-}
-
-function buildSebiTool(id){
-  var tools={
-
-    // ─── FUTURE VALUE ───
-    fv:'<div class="m4-card-title">📐 Future Value Calculator</div>'+
-      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">What will your money be worth in N years? Accounts for regular contributions and compounding.</div>'+
-      sebiField('fvP','Present Value / Principal (₹)','e.g. 100000')+
-      sebiField('fvR','Annual Rate (%)','e.g. 12')+
-      sebiField('fvY','Years','e.g. 10')+
-      sebiField('fvC','Monthly Contribution (₹) — optional','e.g. 5000')+
-      '<button class="m4-btn" onclick="calcFV()">Calculate Future Value</button>'+
-      '<div id="fvResult"></div>',
-
-    // ─── RATE OF RETURN ───
-    rrr:'<div class="m4-card-title">📊 Rate of Return Calculator</div>'+
-      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">Find the actual annualised return your investment earned (CAGR).</div>'+
-      sebiField('rrrInv','Amount Invested (₹)','e.g. 500000')+
-      sebiField('rrrCurr','Current Value (₹)','e.g. 850000')+
-      sebiField('rrrY','Years Held','e.g. 5')+
-      '<button class="m4-btn" onclick="calcRRR()">Calculate CAGR</button>'+
-      '<div id="rrrResult"></div>',
-
-    // ─── BOND YIELD ───
-    bond:'<div class="m4-card-title">🏛️ Bond Yield Calculator</div>'+
-      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">Calculate yield to maturity (YTM) on a government bond or corporate bond.</div>'+
-      sebiField('bondFace','Face Value (₹)','e.g. 1000')+
-      sebiField('bondPrice','Market Price (₹)','e.g. 950')+
-      sebiField('bondCoupon','Annual Coupon Rate (%)','e.g. 7')+
-      sebiField('bondYears','Years to Maturity','e.g. 5')+
-      '<button class="m4-btn" onclick="calcBond()">Calculate YTM</button>'+
-      '<div id="bondResult"></div>',
-
-    // ─── SIP CALCULATOR ───
-    sip:'<div class="m4-card-title">📈 SIP Calculator</div>'+
-      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">How much will your monthly SIP grow to in N years?</div>'+
-      sebiField('sipAmt','Monthly SIP Amount (₹)','e.g. 5000')+
-      sebiField('sipR','Expected Annual Return (%)','e.g. 12')+
-      sebiField('sipY','Investment Period (Years)','e.g. 20')+
-      '<button class="m4-btn" onclick="calcSIP()">Calculate SIP Corpus</button>'+
-      '<div id="sipResult"></div>',
-
-    // ─── GOAL SIP ───
-    goalsip:'<div class="m4-card-title">🎯 Goal SIP Calculator</div>'+
-      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">You have a target. How much SIP monthly to reach it?</div>'+
-      sebiField('gsTarget','Target Amount (₹)','e.g. 5000000')+
-      sebiField('gsR','Expected Annual Return (%)','e.g. 12')+
-      sebiField('gsY','Years Available','e.g. 15')+
-      '<button class="m4-btn" onclick="calcGoalSIP()">Calculate Required SIP</button>'+
-      '<div id="gsResult"></div>',
-
-    // ─── LUMP SUM ───
-    lumpsum:'<div class="m4-card-title">💰 Lump Sum Growth</div>'+
-      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">One-time investment growth projection.</div>'+
-      sebiField('lsAmt','Investment Amount (₹)','e.g. 1000000')+
-      sebiField('lsR','Expected Annual Return (%)','e.g. 12')+
-      sebiField('lsY','Years','e.g. 10')+
-      '<button class="m4-btn" onclick="calcLS()">Calculate Growth</button>'+
-      '<div id="lsResult"></div>',
-
-    // ─── PRESENT VALUE ───
-    pv:'<div class="m4-card-title">⏳ Present Value Calculator</div>'+
-      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">What is a future amount worth in today\'s money? Used in bond pricing, pension valuation, and annuity planning.</div>'+
-      sebiField('pvFV','Future Value / Amount (₹)','e.g. 1000000')+
-      sebiField('pvR','Discount Rate / Return (%)','e.g. 8')+
-      sebiField('pvY','Years Away','e.g. 10')+
-      '<button class="m4-btn" onclick="calcPV()">Calculate Present Value</button>'+
-      '<div id="pvResult"></div>',
-
-    // ─── FLEXIBLE COMPOUNDING ───
-    fci:'<div class="m4-card-title">⚙️ Flexible Compound Interest</div>'+
-      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">Compound interest with your choice of compounding frequency — annual, quarterly, monthly, daily.</div>'+
-      sebiField('fciP','Principal (₹)','e.g. 200000')+
-      sebiField('fciR','Annual Rate (%)','e.g. 8.5')+
-      sebiField('fciY','Years','e.g. 5')+
-      '<div class="m4-label">Compounding Frequency</div>'+
-      '<select class="m4-select" id="fciFreq">'+
-        '<option value="1">Annual (1x/year)</option>'+
-        '<option value="2">Semi-annual (2x/year)</option>'+
-        '<option value="4" selected>Quarterly (4x/year)</option>'+
-        '<option value="12">Monthly (12x/year)</option>'+
-        '<option value="365">Daily (365x/year)</option>'+
-      '</select>'+
-      '<button class="m4-btn" onclick="calcFCI()">Calculate</button>'+
-      '<div id="fciResult"></div>',
-
-    // ─── INCREASING SIP ───
-    incr:'<div class="m4-card-title">📊 Increasing SIP Calculator</div>'+
-      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">Your SIP grows by X% every year as your salary grows. More realistic than fixed SIP assumption.</div>'+
-      sebiField('incrSIP','Starting Monthly SIP (₹)','e.g. 5000')+
-      sebiField('incrIncrease','Annual SIP Increase (%)','e.g. 10')+
-      sebiField('incrR','Expected Return (%)','e.g. 12')+
-      sebiField('incrY','Years','e.g. 20')+
-      '<button class="m4-btn" onclick="calcIncrSIP()">Calculate Corpus</button>'+
-      '<div id="incrResult"></div>',
-
-    // ─── RETIREMENT CORPUS ───
-    retcorpus:'<div class="m4-card-title">🧓 Retirement Corpus Calculator</div>'+
-      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">How much do you need to retire comfortably — accounting for inflation and life expectancy?</div>'+
-      sebiField('rcAge','Current Age','e.g. 35')+
-      sebiField('rcRetire','Retirement Age','e.g. 60')+
-      sebiField('rcMonthly','Monthly Expenses Today (₹)','e.g. 50000')+
-      sebiField('rcLife','Expected Life to (Age)','e.g. 85')+
-      sebiField('rcInfl','Inflation Rate (%)','e.g. 6')+
-      sebiField('rcReturn','Post-retirement Return (%)','e.g. 7')+
-      '<button class="m4-btn" onclick="calcRetCorpus()">Calculate Corpus Needed</button>'+
-      '<div id="rcResult"></div>',
-
-    // ─── RETIREMENT INCOME ───
-    retincome:'<div class="m4-card-title">💵 Retirement Income Calculator</div>'+
-      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">You have a corpus. How much monthly income can it generate for N years?</div>'+
-      sebiField('riCorpus','Retirement Corpus (₹)','e.g. 20000000')+
-      sebiField('riReturn','Annual Return on Corpus (%)','e.g. 7')+
-      sebiField('riYears','Years of Income Needed','e.g. 25')+
-      '<button class="m4-btn" onclick="calcRetIncome()">Calculate Monthly Income</button>'+
-      '<div id="riResult"></div>',
-
-    // ─── INSURANCE YOUNG EARNER ───
-    insyoung:'<div class="m4-card-title">🛡️ Life Cover — Young Earner</div>'+
-      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">Income replacement method: how much life cover do you need to protect your family?</div>'+
-      sebiField('iyIncome','Annual Income (₹)','e.g. 1200000')+
-      sebiField('iyAge','Current Age','e.g. 28')+
-      sebiField('iyRetire','Retirement Age','e.g. 60')+
-      sebiField('iyLoans','Total Outstanding Loans (₹)','e.g. 500000')+
-      sebiField('iyGoals','Future Financial Goals (₹)','e.g. 2000000')+
-      '<button class="m4-btn" onclick="calcInsYoung()">Calculate Cover Needed</button>'+
-      '<div id="iyResult"></div>',
-
-    // ─── INSURANCE FAMILY ───
-    insmarried:'<div class="m4-card-title">👨‍👩‍👧 Family Protection Calculator</div>'+
-      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">Married with dependents — DIME method (Debt + Income + Mortgage + Education) for life cover.</div>'+
-      sebiField('imDebt','Total Debts / Loans (₹)','e.g. 3000000')+
-      sebiField('imIncome','Annual Income (₹)','e.g. 1500000')+
-      sebiField('imYears','Income Replacement Years','e.g. 20')+
-      sebiField('imEducation','Children Education Fund (₹)','e.g. 2000000')+
-      '<button class="m4-btn" onclick="calcInsFamily()">Calculate DIME Cover</button>'+
-      '<div id="imResult"></div>',
-
-    // ─── GOAL PLANNER ───
-    goalplanner:'<div class="m4-card-title">🎯 Financial Goal Planner</div>'+
-      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">Any goal — home, car, child\'s education, world tour. How much to invest monthly from today?</div>'+
-      sebiField('gpGoal','Goal Amount (₹)','e.g. 5000000')+
-      sebiField('gpYears','Years to Goal','e.g. 10')+
-      sebiField('gpInfl','Inflation Adjustment (%)','e.g. 6')+
-      sebiField('gpReturn','Expected Return (%)','e.g. 12')+
-      sebiField('gpAlready','Already Saved (₹) — if any','e.g. 0')+
-      '<button class="m4-btn" onclick="calcGoalPlan()">Calculate Monthly Investment</button>'+
-      '<div id="gpResult"></div>',
-
-    // ─── ASSET ALLOCATION ───
-    assetalloc:'<div class="m4-card-title">📊 Age-Based Asset Allocation</div>'+
-      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">SEBI guideline: 100 minus your age = equity %. Adjust for risk tolerance. Enter your details for a personalised split.</div>'+
-      sebiField('aaAge','Current Age','e.g. 35')+
-      sebiField('aaRisk','Risk Tolerance (1=Low, 5=High)','e.g. 3')+
-      '<button class="m4-btn" onclick="calcAssetAlloc()">Get Allocation</button>'+
-      '<div id="aaResult"></div>',
-
-    // ─── IMPACT OF 1% ───
-    impact1:'<div class="m4-card-title">✨ Impact of 1% Extra Return</div>'+
-      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">This is SEBI\'s most powerful educational tool. One extra percent return sounds small — but compounded over 20 years, it changes your life.</div>'+
-      sebiField('i1Monthly','Monthly Investment (₹)','e.g. 10000')+
-      sebiField('i1Years','Investment Period (Years)','e.g. 20')+
-      sebiField('i1Base','Base Return (%)','e.g. 11')+
-      '<button class="m4-btn" onclick="calcImpact1()">Show Impact of 1%</button>'+
-      '<div id="i1Result"></div>',
-
-    // ─── COST OF DELAY ───
-    delay:'<div class="m4-card-title">⏰ Cost of Delay Calculator</div>'+
-      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">What does waiting just 1 year — or 5 years — to start investing actually cost you in final corpus?</div>'+
-      sebiField('cdMonthly','Monthly Investment (₹)','e.g. 5000')+
-      sebiField('cdReturn','Expected Return (%)','e.g. 12')+
-      sebiField('cdTarget','Target Retirement Age','e.g. 60')+
-      sebiField('cdCurrentAge','Your Current Age','e.g. 30')+
-      '<button class="m4-btn" onclick="calcDelay()">Calculate Cost of Delay</button>'+
-      '<div id="cdResult"></div>',
-
-    // ─── NET WORTH ───
-    networth:'<div class="m4-card-title">💎 Net Worth Calculator</div>'+
-      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">Assets minus liabilities = your true financial picture. Track this number every year. Wealth is built when this grows consistently.</div>'+
-      '<div style="font-size:12px;font-weight:700;color:#059669;margin-bottom:8px;text-transform:uppercase;letter-spacing:.6px">Your Assets</div>'+
-      sebiField('nwCash','Cash + Savings Account + FD (₹)','e.g. 200000')+
-      sebiField('nwMF','Mutual Funds + Stocks (₹)','e.g. 500000')+
-      sebiField('nwPF','PF + PPF + NPS (₹)','e.g. 300000')+
-      sebiField('nwProperty','Property Market Value (₹)','e.g. 5000000')+
-      sebiField('nwGold','Gold Value (₹)','e.g. 200000')+
-      sebiField('nwOther','Other Assets (₹)','e.g. 0')+
-      '<div style="font-size:12px;font-weight:700;color:#DC2626;margin-bottom:8px;margin-top:4px;text-transform:uppercase;letter-spacing:.6px">Your Liabilities</div>'+
-      sebiField('nwHomeLoan','Home Loan Outstanding (₹)','e.g. 2500000')+
-      sebiField('nwCarLoan','Car Loan Outstanding (₹)','e.g. 300000')+
-      sebiField('nwPersonal','Personal Loans + CC Dues (₹)','e.g. 0')+
-      '<button class="m4-btn" onclick="calcNetWorth()">Calculate Net Worth</button>'+
-      '<div id="nwResult"></div>',
-
-    // ─── ANNUITY PAYOUT ───
-    annuity:'<div class="m4-card-title">💵 Annuity Payout Calculator</div>'+
-      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">You have a retirement corpus. How much monthly income can it generate for a fixed period at a given rate?</div>'+
-      sebiField('anCorpus','Corpus / Present Value (₹)','e.g. 10000000')+
-      sebiField('anRate','Annual Rate of Return (%)','e.g. 6.5')+
-      sebiField('anYears','Payout Period (Years)','e.g. 20')+
-      '<button class="m4-btn" onclick="calcAnnuity()">Calculate Monthly Payout</button>'+
-      '<div id="anResult"></div>',
-
-    // ─── POWER OF COMPOUNDING ───
-    compound:'<div class="m4-card-title">🌊 Power of Compounding</div>'+
-      '<div style="font-size:13px;color:#6B7280;margin-bottom:12px">Einstein called it the 8th wonder of the world. See how compounding transforms small amounts into large wealth over time.</div>'+
-      sebiField('pcMonthly','Monthly Investment (₹)','e.g. 5000')+
-      sebiField('pcRate','Annual Return (%)','e.g. 12')+
-      sebiField('pcYears','Investment Period (Years)','e.g. 30')+
-      '<button class="m4-btn" onclick="calcCompound()">Show Compounding Power</button>'+
-      '<div id="pcResult"></div>',
-  };
-
-  return tools[id]||'<div style="color:#9CA3AF;font-size:14px;padding:20px;text-align:center">Tool not found</div>';
-}
-
-function sebiField(id,label,placeholder){
-  return '<div class="m4-label">'+label+'</div>'+
-    '<input class="m4-input" type="number" id="'+id+'" placeholder="'+placeholder+'">';
-}
-
-// ══ CALCULATION FUNCTIONS ══
-
-function calcFV(){
-  var P=+document.getElementById('fvP').value||0;
-  var r=+document.getElementById('fvR').value/100||0;
-  var y=+document.getElementById('fvY').value||0;
-  var c=+document.getElementById('fvC').value||0;
-  if(!y||!r)return;
-  var fvLump=P*Math.pow(1+r,y);
-  var fvSIP=c>0?c*12*((Math.pow(1+r,y)-1)/r):0;
-  var total=fvLump+fvSIP;
-  document.getElementById('fvResult').innerHTML=
-    sebiResult([
-      {val:sebiInr(fvLump),lbl:'Lump Sum Growth',color:'#059669'},
-      {val:sebiInr(fvSIP),lbl:'SIP Growth',color:'#2563EB'},
-      {val:sebiInr(total),lbl:'Total Future Value',color:'#D97706'},
-      {val:(total/(P+c*12*y)).toFixed(2)+'x',lbl:'Wealth Multiplier',color:'#7C3AED'},
-    ])+
-    sebiInsight('Investing '+sebiInr(P)+(c>0?' + '+sebiInr(c)+'/mo':'')+' at '+((+document.getElementById('fvR').value)||0)+'% for '+y+' years grows to <strong>'+sebiInr(total)+'</strong>.');
-}
-
-function calcRRR(){
-  var inv=+document.getElementById('rrrInv').value||0;
-  var curr=+document.getElementById('rrrCurr').value||0;
-  var y=+document.getElementById('rrrY').value||0;
-  if(!inv||!curr||!y)return;
-  var cagr=(Math.pow(curr/inv,1/y)-1)*100;
-  var abs=(curr-inv)/inv*100;
-  document.getElementById('rrrResult').innerHTML=
-    sebiResult([
-      {val:cagr.toFixed(2)+'%',lbl:'CAGR (Annualised)',color:'#059669'},
-      {val:abs.toFixed(1)+'%',lbl:'Absolute Return',color:'#D97706'},
-      {val:sebiInr(curr-inv),lbl:'Total Gain',color:'#2563EB'},
-    ])+
-    sebiInsight('Your investment grew at <strong>'+cagr.toFixed(2)+'% per year</strong>. Compare this to Nifty 50\'s ~12% CAGR to assess performance.');
-}
-
-function calcBond(){
-  var F=+document.getElementById('bondFace').value||1000;
-  var P=+document.getElementById('bondPrice').value||0;
-  var c=+document.getElementById('bondCoupon').value/100||0;
-  var y=+document.getElementById('bondYears').value||0;
-  if(!P||!y)return;
-  // Approximate YTM = (Annual Coupon + (Face-Price)/N) / ((Face+Price)/2)
-  var coupon=F*c;
-  var ytm=((coupon+(F-P)/y)/((F+P)/2))*100;
-  var currentYield=(coupon/P)*100;
-  document.getElementById('bondResult').innerHTML=
-    sebiResult([
-      {val:ytm.toFixed(2)+'%',lbl:'Yield to Maturity (YTM)',color:'#059669'},
-      {val:currentYield.toFixed(2)+'%',lbl:'Current Yield',color:'#D97706'},
-      {val:sebiInr(coupon),lbl:'Annual Coupon',color:'#2563EB'},
-    ])+
-    sebiInsight(P<F?'Bond is trading at a <strong>discount</strong> — YTM > coupon rate. Good time to buy if you hold to maturity.':'Bond is trading at a <strong>premium</strong> — YTM < coupon rate. Factor this into your return calculation.');
-}
-
-function calcSIP(){
-  var m=+document.getElementById('sipAmt').value||0;
-  var r=+document.getElementById('sipR').value/12/100||0;
-  var n=+document.getElementById('sipY').value*12||0;
-  if(!m||!r||!n)return;
-  var corpus=m*(Math.pow(1+r,n)-1)/r*(1+r);
-  var invested=m*n;
-  document.getElementById('sipResult').innerHTML=
-    sebiResult([
-      {val:sebiInr(corpus),lbl:'Final Corpus',color:'#059669'},
-      {val:sebiInr(invested),lbl:'Total Invested',color:'#2563EB'},
-      {val:sebiInr(corpus-invested),lbl:'Wealth Gain',color:'#D97706'},
-      {val:((corpus-invested)/invested*100).toFixed(0)+'%',lbl:'Return on Investment',color:'#7C3AED'},
-    ])+
-    sebiInsight('Monthly SIP of <strong>'+sebiInr(m)+'</strong> for <strong>'+document.getElementById('sipY').value+' years</strong> at '+document.getElementById('sipR').value+'% creates <strong>'+sebiInr(corpus)+'</strong>. You invested '+sebiInr(invested)+' and wealth gain is <strong>'+sebiInr(corpus-invested)+'</strong>.');
-}
-
-function calcGoalSIP(){
-  var T=+document.getElementById('gsTarget').value||0;
-  var r=+document.getElementById('gsR').value/12/100||0;
-  var n=+document.getElementById('gsY').value*12||0;
-  if(!T||!r||!n)return;
-  var sip=T*r/(Math.pow(1+r,n)-1)/(1+r);
-  document.getElementById('gsResult').innerHTML=
-    sebiResult([
-      {val:sebiInr(sip)+'/mo',lbl:'Required Monthly SIP',color:'#DC2626'},
-      {val:sebiInr(sip*n),lbl:'Total Investment',color:'#2563EB'},
-      {val:sebiInr(T-sip*n),lbl:'Market Will Generate',color:'#059669'},
-    ])+
-    sebiInsight('To reach <strong>'+sebiInr(T)+'</strong> in '+document.getElementById('gsY').value+' years, invest <strong>'+sebiInr(sip)+'</strong> every month. The market generates the rest.');
-}
-
-function calcLS(){
-  var P=+document.getElementById('lsAmt').value||0;
-  var r=+document.getElementById('lsR').value/100||0;
-  var y=+document.getElementById('lsY').value||0;
-  if(!P||!y)return;
-  var A=P*Math.pow(1+r,y);
-  document.getElementById('lsResult').innerHTML=
-    sebiResult([
-      {val:sebiInr(A),lbl:'Future Value',color:'#059669'},
-      {val:sebiInr(A-P),lbl:'Total Gain',color:'#D97706'},
-      {val:(A/P).toFixed(2)+'x',lbl:'Money Multiplied',color:'#7C3AED'},
-    ])+
-    sebiInsight(sebiInr(P)+' invested as lump sum at '+document.getElementById('lsR').value+'% grows to <strong>'+sebiInr(A)+'</strong> in '+y+' years.');
-}
-
-function calcPV(){
-  var FV=+document.getElementById('pvFV').value||0;
-  var r=+document.getElementById('pvR').value/100||0;
-  var y=+document.getElementById('pvY').value||0;
-  if(!FV||!y)return;
-  var pv=FV/Math.pow(1+r,y);
-  document.getElementById('pvResult').innerHTML=
-    sebiResult([
-      {val:sebiInr(pv),lbl:'Present Value Today',color:'#059669'},
-      {val:sebiInr(FV-pv),lbl:'Inflation / Discount Impact',color:'#DC2626'},
-    ])+
-    sebiInsight('<strong>'+sebiInr(FV)+'</strong> received in '+y+' years is worth only <strong>'+sebiInr(pv)+'</strong> in today\'s money at '+document.getElementById('pvR').value+'% discount rate.');
-}
-
-function calcFCI(){
-  var P=+document.getElementById('fciP').value||0;
-  var r=+document.getElementById('fciR').value/100||0;
-  var y=+document.getElementById('fciY').value||0;
-  var n=+document.getElementById('fciFreq').value||4;
-  if(!P||!y)return;
-  var A=P*Math.pow(1+r/n,n*y);
-  var ear=(Math.pow(1+r/n,n)-1)*100;
-  document.getElementById('fciResult').innerHTML=
-    sebiResult([
-      {val:sebiInr(A),lbl:'Maturity Value',color:'#059669'},
-      {val:sebiInr(A-P),lbl:'Interest Earned',color:'#D97706'},
-      {val:ear.toFixed(3)+'%',lbl:'Effective Annual Rate',color:'#7C3AED'},
-    ])+
-    sebiInsight('With '+['','Annual','Semi-annual','','Quarterly','','','','','','','','Monthly'][n]||n+'x compounding, effective annual rate = <strong>'+ear.toFixed(3)+'%</strong> vs stated '+document.getElementById('fciR').value+'%.');
-}
-
-function calcIncrSIP(){
-  var s=+document.getElementById('incrSIP').value||0;
-  var inc=+document.getElementById('incrIncrease').value/100||0;
-  var r=+document.getElementById('incrR').value/100||0;
-  var y=+document.getElementById('incrY').value||0;
-  if(!s||!y)return;
-  var corpus=0,invested=0,monthly=s;
-  for(var yr=0;yr<y;yr++){
-    for(var mo=0;mo<12;mo++){
-      corpus=(corpus+monthly)*(1+r/12);
-      invested+=monthly;
-    }
-    monthly*=(1+inc);
-  }
-  document.getElementById('incrResult').innerHTML=
-    sebiResult([
-      {val:sebiInr(corpus),lbl:'Final Corpus',color:'#059669'},
-      {val:sebiInr(invested),lbl:'Total Invested',color:'#2563EB'},
-      {val:sebiInr(corpus-invested),lbl:'Wealth Gain',color:'#D97706'},
-      {val:sebiInr(monthly/12),lbl:'SIP in Final Year',color:'#7C3AED'},
-    ])+
-    sebiInsight('Starting at '+sebiInr(s)+'/mo and increasing '+document.getElementById('incrIncrease').value+'% yearly, your corpus grows to <strong>'+sebiInr(corpus)+'</strong> — significantly more than a flat SIP.');
-}
-
-function calcRetCorpus(){
-  var age=+document.getElementById('rcAge').value||0;
-  var retAge=+document.getElementById('rcRetire').value||60;
-  var monthly=+document.getElementById('rcMonthly').value||0;
-  var life=+document.getElementById('rcLife').value||85;
-  var infl=+document.getElementById('rcInfl').value/100||0.06;
-  var retReturn=+document.getElementById('rcReturn').value/100||0.07;
-  if(!age||!monthly)return;
-  var yearsToRetire=retAge-age;
-  var retireYears=life-retAge;
-  var monthlyAtRetire=monthly*Math.pow(1+infl,yearsToRetire);
-  var r=retReturn/12;
-  var n=retireYears*12;
-  var corpus=monthlyAtRetire*(1-Math.pow(1+r,-n))/r;
-  document.getElementById('rcResult').innerHTML=
-    sebiResult([
-      {val:sebiInr(corpus),lbl:'Corpus Needed at Retirement',color:'#DC2626'},
-      {val:sebiInr(monthlyAtRetire),lbl:'Monthly Expense at Retirement',color:'#D97706'},
-      {val:yearsToRetire+' years',lbl:'Years to Build',color:'#2563EB'},
-      {val:sebiInr(corpus/12/yearsToRetire),lbl:'Approx Monthly Investment Needed',color:'#059669'},
-    ])+
-    sebiInsight('Your ₹'+monthly.toLocaleString('en-IN')+'/mo expense today inflates to <strong>'+sebiInr(monthlyAtRetire)+'/mo</strong> at retirement. To fund '+retireYears+' years of this, you need <strong>'+sebiInr(corpus)+'</strong>.');
-}
-
-function calcRetIncome(){
-  var C=+document.getElementById('riCorpus').value||0;
-  var r=+document.getElementById('riReturn').value/12/100||0;
-  var n=+document.getElementById('riYears').value*12||0;
-  if(!C||!n)return;
-  var income=C*r*(1+r)/(Math.pow(1+r,n)-1)/Math.pow(1+r,-1);
-  document.getElementById('riResult').innerHTML=
-    sebiResult([
-      {val:sebiInr(income)+'/mo',lbl:'Monthly Income',color:'#059669'},
-      {val:sebiInr(income*12),lbl:'Annual Income',color:'#D97706'},
-      {val:sebiInr(income*n/12),lbl:'Total Withdrawn',color:'#2563EB'},
-    ])+
-    sebiInsight('A corpus of <strong>'+sebiInr(C)+'</strong> at '+document.getElementById('riReturn').value+'% generates <strong>'+sebiInr(income)+'/month</strong> for '+document.getElementById('riYears').value+' years before depleting.');
-}
-
-function calcInsYoung(){
-  var inc=+document.getElementById('iyIncome').value||0;
-  var age=+document.getElementById('iyAge').value||0;
-  var retire=+document.getElementById('iyRetire').value||60;
-  var loans=+document.getElementById('iyLoans').value||0;
-  var goals=+document.getElementById('iyGoals').value||0;
-  if(!inc||!age)return;
-  var incomeReplacement=inc*(retire-age);
-  var total=incomeReplacement+loans+goals;
-  document.getElementById('iyResult').innerHTML=
-    sebiResult([
-      {val:sebiInr(total),lbl:'Cover Needed',color:'#DC2626'},
-      {val:sebiInr(incomeReplacement),lbl:'Income Replacement',color:'#D97706'},
-      {val:sebiInr(Math.round(total/100000)*100000/1000)+'K/yr',lbl:'Approx Annual Premium at '+age,color:'#059669'},
-    ])+
-    sebiInsight('Income replacement method: '+sebiInr(inc)+' × '+(retire-age)+' years = '+sebiInr(incomeReplacement)+'. Add loans and goals. Total cover needed: <strong>'+sebiInr(total)+'</strong>. Buy term, not ULIP.');
-}
-
-function calcInsFamily(){
-  var debt=+document.getElementById('imDebt').value||0;
-  var inc=+document.getElementById('imIncome').value||0;
-  var y=+document.getElementById('imYears').value||20;
-  var edu=+document.getElementById('imEducation').value||0;
-  if(!inc)return;
-  var total=debt+inc*y+edu;
-  document.getElementById('imResult').innerHTML=
-    sebiResult([
-      {val:sebiInr(total),lbl:'DIME Cover Needed',color:'#DC2626'},
-      {val:sebiInr(debt),lbl:'Debt Component',color:'#D97706'},
-      {val:sebiInr(inc*y),lbl:'Income Replacement',color:'#2563EB'},
-      {val:sebiInr(edu),lbl:'Education Fund',color:'#7C3AED'},
-    ])+
-    sebiInsight('DIME method: Debt + Income×Years + Education = <strong>'+sebiInr(total)+'</strong>. This is your family\'s protection floor. Pure term insurance, not ULIP.');
-}
-
-function calcGoalPlan(){
-  var G=+document.getElementById('gpGoal').value||0;
-  var y=+document.getElementById('gpYears').value||0;
-  var infl=+document.getElementById('gpInfl').value/100||0;
-  var ret=+document.getElementById('gpReturn').value/100||0;
-  var saved=+document.getElementById('gpAlready').value||0;
-  if(!G||!y)return;
-  var inflatedGoal=G*Math.pow(1+infl,y);
-  var fvSaved=saved*Math.pow(1+ret,y);
-  var remaining=Math.max(0,inflatedGoal-fvSaved);
-  var r=ret/12; var n=y*12;
-  var sip=remaining*r/(Math.pow(1+r,n)-1)/(1+r);
-  document.getElementById('gpResult').innerHTML=
-    sebiResult([
-      {val:sebiInr(inflatedGoal),lbl:'Inflation-Adjusted Goal',color:'#DC2626'},
-      {val:sebiInr(sip)+'/mo',lbl:'Monthly SIP Needed',color:'#059669'},
-      {val:sebiInr(fvSaved),lbl:'Your Savings Will Grow To',color:'#D97706'},
-      {val:sebiInr(remaining),lbl:'Remaining to Fund',color:'#2563EB'},
-    ])+
-    sebiInsight('Your goal of '+sebiInr(G)+' inflates to <strong>'+sebiInr(inflatedGoal)+'</strong> in '+y+' years. Start a monthly SIP of <strong>'+sebiInr(sip)+'</strong> from today.');
-}
-
-function calcAssetAlloc(){
-  var age=+document.getElementById('aaAge').value||30;
-  var risk=+document.getElementById('aaRisk').value||3;
-  var baseEq=Math.max(0,Math.min(100,(100-age)+(risk-3)*5));
-  var debt=100-baseEq-10; var gold=10;
-  document.getElementById('aaResult').innerHTML=
-    sebiResult([
-      {val:baseEq+'%',lbl:'Equity',color:'#059669'},
-      {val:debt+'%',lbl:'Debt',color:'#2563EB'},
-      {val:gold+'%',lbl:'Gold',color:'#D97706'},
-    ])+
-    '<div style="background:#F9FAFB;border-radius:10px;padding:12px;margin-top:10px">'+
-    ['Equity: Nifty 50 Index Fund + Mid Cap MF','Debt: EPF + NPS + FD','Gold: Gold ETF (10% always)'].map(function(t){return '<div style="font-size:12px;color:#374151;padding:4px 0;border-bottom:1px solid #F3F4F6">'+t+'</div>';}).join('')+
-    '</div>'+
-    sebiInsight('At age '+age+' with risk level '+risk+': <strong>'+baseEq+'% equity</strong>. As you age, shift 1–2% from equity to debt every year. Review annually.');
-}
-
-function calcImpact1(){
-  var m=+document.getElementById('i1Monthly').value||0;
-  var y=+document.getElementById('i1Years').value||0;
-  var r1=+document.getElementById('i1Base').value/12/100||0;
-  var r2=r1+1/12/100;
-  if(!m||!y)return;
-  var n=y*12;
-  var c1=m*(Math.pow(1+r1,n)-1)/r1*(1+r1);
-  var c2=m*(Math.pow(1+r2,n)-1)/r2*(1+r2);
-  document.getElementById('i1Result').innerHTML=
-    sebiResult([
-      {val:sebiInr(c1),lbl:'At '+document.getElementById('i1Base').value+'%',color:'#2563EB'},
-      {val:sebiInr(c2),lbl:'At '+(+document.getElementById('i1Base').value+1)+'%',color:'#059669'},
-      {val:sebiInr(c2-c1),lbl:'Extra Wealth from 1% More',color:'#D97706'},
-      {val:((c2-c1)/c1*100).toFixed(1)+'%',lbl:'Improvement',color:'#DC2626'},
-    ])+
-    sebiInsight('One percent extra return generates <strong>'+sebiInr(c2-c1)+' extra wealth</strong> over '+y+' years. This is why low-cost index funds beat high-fee active funds so dramatically.');
-}
-
-function calcDelay(){
-  var m=+document.getElementById('cdMonthly').value||0;
-  var r=+document.getElementById('cdReturn').value/12/100||0;
-  var retire=+document.getElementById('cdTarget').value||60;
-  var age=+document.getElementById('cdCurrentAge').value||30;
-  if(!m||!age)return;
-  function sipCorpus(yrs){var n=yrs*12;return m*(Math.pow(1+r,n)-1)/r*(1+r);}
-  var c0=sipCorpus(retire-age);
-  var c1=sipCorpus(retire-age-1);
-  var c5=sipCorpus(retire-age-5);
-  document.getElementById('cdResult').innerHTML=
-    sebiResult([
-      {val:sebiInr(c0),lbl:'Start Today',color:'#059669'},
-      {val:sebiInr(c1),lbl:'Delay 1 Year',color:'#D97706'},
-      {val:sebiInr(c5),lbl:'Delay 5 Years',color:'#DC2626'},
-      {val:sebiInr(c0-c1),lbl:'Cost of 1 Year Delay',color:'#7C3AED'},
-    ])+
-    sebiInsight('Waiting just <strong>1 year</strong> costs you <strong>'+sebiInr(c0-c1)+'</strong> in final corpus. Waiting 5 years costs <strong>'+sebiInr(c0-c5)+'</strong>. Every month of delay is permanently lost compounding.');
-}
-
-function calcNetWorth(){
-  var assets=['nwCash','nwMF','nwPF','nwProperty','nwGold','nwOther'].reduce(function(s,id){return s+(+document.getElementById(id).value||0);},0);
-  var liab=['nwHomeLoan','nwCarLoan','nwPersonal'].reduce(function(s,id){return s+(+document.getElementById(id).value||0);},0);
-  var nw=assets-liab;
-  document.getElementById('nwResult').innerHTML=
-    sebiResult([
-      {val:sebiInr(assets),lbl:'Total Assets',color:'#059669'},
-      {val:sebiInr(liab),lbl:'Total Liabilities',color:'#DC2626'},
-      {val:sebiInr(nw),lbl:'Net Worth',color:nw>=0?'#059669':'#DC2626'},
-      {val:(liab/assets*100).toFixed(1)+'%',lbl:'Debt to Asset Ratio',color:liab/assets<0.5?'#D97706':'#DC2626'},
-    ])+
-    sebiInsight(nw>=0?'Your net worth is <strong>'+sebiInr(nw)+'</strong>. Track this annually — consistent growth means you are building real wealth.':'Net worth is <strong>negative</strong> — liabilities exceed assets. Priority: stop new debt, accelerate asset building.');
-}
-
-function calcAnnuity(){
-  var P=+document.getElementById('anCorpus').value||0;
-  var r=+document.getElementById('anRate').value/12/100||0;
-  var n=+document.getElementById('anYears').value*12||0;
-  if(!P||!n)return;
-  var pmt=P*r*(1+r)/(Math.pow(1+r,n)-1)/(1+r);
-  document.getElementById('anResult').innerHTML=
-    sebiResult([
-      {val:sebiInr(pmt)+'/mo',lbl:'Monthly Payout',color:'#059669'},
-      {val:sebiInr(pmt*12),lbl:'Annual Payout',color:'#D97706'},
-      {val:sebiInr(pmt*n/12),lbl:'Total Received',color:'#2563EB'},
-    ])+
-    sebiInsight('A corpus of <strong>'+sebiInr(P)+'</strong> at '+document.getElementById('anRate').value+'% generates <strong>'+sebiInr(pmt)+'</strong> monthly for '+document.getElementById('anYears').value+' years. This is the NPS annuity logic.');
-}
-
-function calcCompound(){
-  var m=+document.getElementById('pcMonthly').value||0;
-  var r=+document.getElementById('pcRate').value/12/100||0;
-  var y=+document.getElementById('pcYears').value||0;
-  if(!m||!y)return;
-  var bars='';
-  var maxC=0;
-  var milestones=[];
-  for(var yr=1;yr<=y;yr++){
-    var n=yr*12;
-    var c=m*(Math.pow(1+r,n)-1)/r*(1+r);
-    var inv=m*n;
-    if(yr===5||yr===10||yr===15||yr===20||yr===25||yr===30||yr===y)milestones.push({yr:yr,c:c,inv:inv});
-    if(c>maxC)maxC=c;
-  }
-  milestones.forEach(function(ms){
-    var barW=Math.round(ms.c/maxC*100);
-    var invW=Math.round(ms.inv/maxC*100);
-    bars+='<div style="margin-bottom:10px">'+
-      '<div style="display:flex;justify-content:space-between;font-size:12px;margin-bottom:3px">'+
-        '<span style="color:#6B7280">Year '+ms.yr+'</span>'+
-        '<span style="color:#059669;font-weight:700">'+sebiInr(ms.c)+'</span>'+
-      '</div>'+
-      '<div style="background:#F3F4F6;border-radius:4px;height:10px;overflow:hidden;margin-bottom:2px">'+
-        '<div style="height:10px;border-radius:4px;background:linear-gradient(90deg,#2563EB,#059669);width:'+barW+'%"></div>'+
-      '</div>'+
-      '<div style="background:#F3F4F6;border-radius:4px;height:6px;overflow:hidden">'+
-        '<div style="height:6px;border-radius:4px;background:#E5E7EB;width:'+invW+'%"></div>'+
-      '</div>'+
-      '<div style="font-size:10px;color:#9CA3AF;margin-top:1px">Invested: '+sebiInr(ms.inv)+' · Gain: '+sebiInr(ms.c-ms.inv)+'</div>'+
-    '</div>';
-  });
-  var n=y*12;
-  var final=m*(Math.pow(1+r,n)-1)/r*(1+r);
-  var invested=m*n;
-  document.getElementById('pcResult').innerHTML=
-    sebiResult([
-      {val:sebiInr(final),lbl:'Final Corpus',color:'#059669'},
-      {val:sebiInr(invested),lbl:'Total Invested',color:'#2563EB'},
-      {val:sebiInr(final-invested),lbl:'Wealth Gain',color:'#D97706'},
-      {val:(final/invested).toFixed(1)+'x',lbl:'Money Multiplied',color:'#7C3AED'},
-    ])+
-    '<div style="margin-top:12px">'+
-      '<div style="font-size:11px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px">Growth Timeline — Blue bar=corpus, Grey=invested</div>'+
-      bars+
-    '</div>'+
-    sebiInsight('In year '+Math.ceil(y/2)+', gains from compounding <em>exceed</em> your total contributions. This is the magic inflection point — the later years produce more wealth than all the early years combined.');
-}
-
-</script>
-
-<script>
-// ══ MASTER NAV INIT ══
-(function(){
-  function init(){
-    var nav5 = '<button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button><button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button>';
-    ['#mod0 .bnav','#mod1 .bnav','#mod2 .bnav','#mod3 .bnav','#mod4 .bnav'].forEach(function(s){
-      var el=document.querySelector(s); if(el) el.innerHTML=nav5;
-    });
-    var m5nav=document.querySelector('#mod5 .bnav');
-    if(m5nav) m5nav.innerHTML=nav5.replace('onclick="switchToM5()"','onclick="switchToM5()" class="nb act" style="color:#7C3AED"').replace('class="nb" onclick="switchToM5()"','onclick="switchToM5()"');
-    if(typeof m4SetStrategy==='function') m4SetStrategy('avalanche');
-  }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init);
-  else init();
-})();
-</script>
-
-<!-- ══════ MODULE 5: GOAL PLANNER ══════ -->
-<div id="mod5" class="mod">
-<style>
-#mod5{background:#F5F6FA;min-height:100vh}
-#mod5 header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
-#mod5 .bnav{background:#fff;border-top:1px solid #E5E7EB}
-#mod5 .nb{color:#9CA3AF}
-#mod5 .nb.act{color:#7C3AED}
-
-.m5w{padding:0 16px 100px;max-width:480px;margin:0 auto}
-.m5-card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
-.m5-card-title{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#9CA3AF;margin-bottom:12px}
-.m5-label{font-size:13px;color:#374151;margin-bottom:5px;font-weight:500}
-.m5-input{width:100%;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:15px;color:#111827;font-family:'DM Mono',monospace;margin-bottom:12px;box-sizing:border-box}
-.m5-input:focus{outline:none;border-color:#7C3AED;background:#fff}
-.m5-select{width:100%;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:14px;color:#111827;margin-bottom:12px;appearance:none}
-.m5-btn{width:100%;padding:13px;background:linear-gradient(135deg,#7C3AED,#5B21B6);color:#fff;font-weight:700;border:none;border-radius:12px;cursor:pointer;font-size:15px;margin-top:4px}
-.m5-btn:active{opacity:.9}
-
-/* Goal tiles */
-.m5-goal-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
-.m5-goal-tile{background:#fff;border:2px solid #E5E7EB;border-radius:14px;padding:14px 10px;text-align:center;cursor:pointer;transition:all .2s}
-.m5-goal-tile.sel{background:#F5F3FF;border-color:#7C3AED}
-.m5-goal-tile-icon{font-size:28px;margin-bottom:6px}
-.m5-goal-tile-name{font-size:13px;font-weight:600;color:#111827}
-.m5-goal-tile-desc{font-size:11px;color:#9CA3AF;margin-top:2px}
-
-/* Result card */
-.m5-result{background:linear-gradient(135deg,#F5F3FF,#FAF8FF);border:1px solid #DDD6FE;border-radius:16px;padding:18px;margin-top:14px}
-.m5-result-title{font-size:11px;font-weight:700;color:#5B21B6;text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px}
-.m5-result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
-.m5-result-box{background:#fff;border:1px solid #DDD6FE;border-radius:12px;padding:12px;text-align:center}
-.m5-result-val{font-family:'DM Mono',monospace;font-size:18px;font-weight:700;color:#7C3AED;margin-bottom:3px}
-.m5-result-lbl{font-size:10px;color:#9CA3AF;text-transform:uppercase;letter-spacing:.5px}
-
-/* Timeline bar */
-.m5-timeline{margin:14px 0}
-.m5-timeline-title{font-size:11px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px}
-.m5-tl-bar-wrap{width:100%;background:#EDE9FE;border-radius:6px;height:12px;margin-bottom:6px;overflow:hidden}
-.m5-tl-bar{height:12px;border-radius:6px;background:linear-gradient(90deg,#7C3AED,#A78BFA);transition:width .6s ease}
-.m5-tl-labels{display:flex;justify-content:space-between;font-size:11px;color:#6B7280}
-
-/* Milestone markers */
-.m5-milestones{display:flex;flex-direction:column;gap:8px;margin-top:12px}
-.m5-milestone{display:flex;align-items:center;gap:10px;padding:10px 12px;background:#F9FAFB;border-radius:10px;border-left:3px solid #7C3AED}
-.m5-milestone-yr{font-size:12px;font-weight:700;color:#7C3AED;width:50px;flex-shrink:0}
-.m5-milestone-desc{font-size:12px;color:#374151;flex:1}
-.m5-milestone-val{font-size:13px;font-weight:700;color:#111827;font-family:'DM Mono',monospace}
-
-/* Insight */
-.m5-insight{font-size:13px;color:#374151;line-height:1.85;padding:12px 14px;background:#F5F3FF;border-radius:10px;border-left:3px solid #7C3AED;margin-top:10px}
-.m5-insight strong{color:#5B21B6}
-
-/* My goals list */
-.m5-saved-goal{background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:14px;margin-bottom:8px;display:flex;align-items:center;gap:12px}
-.m5-sg-icon{font-size:24px;flex-shrink:0}
-.m5-sg-info{flex:1}
-.m5-sg-name{font-size:14px;font-weight:600;color:#111827}
-.m5-sg-meta{font-size:12px;color:#6B7280;margin-top:2px}
-.m5-sg-sip{font-size:14px;font-weight:700;color:#7C3AED;font-family:'DM Mono',monospace}
-.m5-sg-del{background:none;border:none;color:#D1D5DB;cursor:pointer;font-size:18px;padding:4px}
-.m5-sg-del:hover{color:#DC2626}
-
-/* Tabs */
-.m5-tabs{display:flex;gap:6px;margin-bottom:16px}
-.m5-tab{flex:1;padding:9px 6px;background:#fff;border:1px solid #E5E7EB;border-radius:20px;font-size:12px;font-weight:600;color:#6B7280;cursor:pointer;text-align:center;transition:all .2s}
-.m5-tab.act{background:#F5F3FF;border-color:#DDD6FE;color:#7C3AED}
-
-/* Profile banner */
-.m5-profile-banner{background:#F5F3FF;border:1px solid #DDD6FE;border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:12px;color:#5B21B6;display:flex;align-items:center;gap:8px}
-
-/* Priority meter */
-.m5-priority{display:flex;gap:6px;margin-bottom:12px}
-.m5-prio-btn{flex:1;padding:8px;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;font-size:11px;font-weight:600;color:#6B7280;cursor:pointer;text-align:center;transition:all .2s}
-.m5-prio-btn.sel{background:#F5F3FF;border-color:#7C3AED;color:#7C3AED}
-</style>
-
-<div id="app5">
-<header>
-  <div class="brand">
-    <div class="blogo" style="background:linear-gradient(135deg,#7C3AED,#A78BFA)">🌊</div>
-    <div>
-      <div class="bname" style="color:#111827;font-size:17px;font-weight:700">Cauvery Pulse</div>
-      <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Goal Planner · M5</div>
-    </div>
-  </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.0</div>
-</header>
-
-<div class="m5w">
-
-  <!-- Profile banner -->
-  <div class="m5-profile-banner" id="m5ProfileBanner" style="display:none">
-    <span style="font-size:18px">🎯</span>
-    <div id="m5ProfileText"></div>
-  </div>
-
-  <!-- Hero -->
-  <div style="padding:20px 0 16px;text-align:center">
-    <span style="font-size:48px;display:block;margin-bottom:8px">🎯</span>
-    <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:#111827;margin-bottom:6px">Goal <span style="color:#7C3AED">Planner</span></div>
-    <div style="font-size:14px;color:#6B7280;line-height:1.7">Every goal has a price. Every price has a monthly SIP. Start today.</div>
-  </div>
-
-  <!-- Tabs -->
-  <div class="m5-tabs">
-    <div class="m5-tab act" onclick="m5ShowTab('plan',this)">📋 Plan a Goal</div>
-    <div class="m5-tab" onclick="m5ShowTab('goals',this)">📂 My Goals</div>
-    <div class="m5-tab" onclick="m5ShowTab('priority',this)">⚡ Priority View</div>
-  </div>
-
-  <!-- ── TAB 1: PLAN A GOAL ── -->
-  <div id="m5tab-plan">
-
-    <div class="m5-card">
-      <div class="m5-card-title">🎯 Choose Your Goal</div>
-      <div class="m5-goal-grid" id="m5GoalGrid">
-        <div class="m5-goal-tile sel" data-goal="home" onclick="m5SelGoal(this)">
-          <div class="m5-goal-tile-icon">🏠</div>
-          <div class="m5-goal-tile-name">Home</div>
-          <div class="m5-goal-tile-desc">Buy a house</div>
-        </div>
-        <div class="m5-goal-tile" data-goal="education" onclick="m5SelGoal(this)">
-          <div class="m5-goal-tile-icon">🎓</div>
-          <div class="m5-goal-tile-name">Education</div>
-          <div class="m5-goal-tile-desc">Child / Self</div>
-        </div>
-        <div class="m5-goal-tile" data-goal="retirement" onclick="m5SelGoal(this)">
-          <div class="m5-goal-tile-icon">🧓</div>
-          <div class="m5-goal-tile-name">Retirement</div>
-          <div class="m5-goal-tile-desc">Retire comfortably</div>
-        </div>
-        <div class="m5-goal-tile" data-goal="car" onclick="m5SelGoal(this)">
-          <div class="m5-goal-tile-icon">🚗</div>
-          <div class="m5-goal-tile-name">Car</div>
-          <div class="m5-goal-tile-desc">Dream vehicle</div>
-        </div>
-        <div class="m5-goal-tile" data-goal="travel" onclick="m5SelGoal(this)">
-          <div class="m5-goal-tile-icon">✈️</div>
-          <div class="m5-goal-tile-name">World Tour</div>
-          <div class="m5-goal-tile-desc">International travel</div>
-        </div>
-        <div class="m5-goal-tile" data-goal="wedding" onclick="m5SelGoal(this)">
-          <div class="m5-goal-tile-icon">💍</div>
-          <div class="m5-goal-tile-name">Wedding</div>
-          <div class="m5-goal-tile-desc">Family celebration</div>
-        </div>
-        <div class="m5-goal-tile" data-goal="business" onclick="m5SelGoal(this)">
-          <div class="m5-goal-tile-icon">🏢</div>
-          <div class="m5-goal-tile-name">Business</div>
-          <div class="m5-goal-tile-desc">Start / expand</div>
-        </div>
-        <div class="m5-goal-tile" data-goal="emergency" onclick="m5SelGoal(this)">
-          <div class="m5-goal-tile-icon">🛡️</div>
-          <div class="m5-goal-tile-name">Emergency Fund</div>
-          <div class="m5-goal-tile-desc">6 months expenses</div>
-        </div>
-        <div class="m5-goal-tile" data-goal="custom" onclick="m5SelGoal(this)">
-          <div class="m5-goal-tile-icon">⭐</div>
-          <div class="m5-goal-tile-name">Custom Goal</div>
-          <div class="m5-goal-tile-desc">Your own target</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="m5-card">
-      <div class="m5-card-title">📝 Goal Details</div>
-
-      <div class="m5-label">Goal Name</div>
-      <input class="m5-input" type="text" id="m5GoalName" placeholder="e.g. Daughter's IIT education">
-
-      <div class="m5-label">Target Amount (₹) <span style="font-size:11px;color:#9CA3AF" id="m5AmtHint">— today's value</span></div>
-      <input class="m5-input" type="number" id="m5TargetAmt" placeholder="e.g. 5000000">
-
-      <div class="m5-label">Years to Achieve</div>
-      <input class="m5-input" type="number" id="m5Years" placeholder="e.g. 10" oninput="m5CalcGoal()">
-
-      <div class="m5-label">Expected Annual Return (%)</div>
-      <select class="m5-select" id="m5Return" onchange="m5CalcGoal()">
-        <option value="7">7% — Debt / FD / Safe</option>
-        <option value="10">10% — Balanced (MF mix)</option>
-        <option value="12" selected>12% — Equity (Nifty 50 Index)</option>
-        <option value="14">14% — Equity (Mid Cap MF)</option>
-        <option value="15">15% — Aggressive Equity</option>
-      </select>
-
-      <div class="m5-label">Inflation Adjustment (%)</div>
-      <select class="m5-select" id="m5Infl" onchange="m5CalcGoal()">
-        <option value="0">0% — No inflation adjustment</option>
-        <option value="5">5% — Conservative inflation</option>
-        <option value="6" selected>6% — Standard India inflation</option>
-        <option value="7">7% — Education / Medical inflation</option>
-        <option value="8">8% — Real estate / High inflation</option>
-      </select>
-
-      <div class="m5-label">Already Saved Towards This Goal (₹)</div>
-      <input class="m5-input" type="number" id="m5Saved" placeholder="0 — if starting fresh" oninput="m5CalcGoal()">
-
-      <div class="m5-label">Priority</div>
-      <div class="m5-priority">
-        <div class="m5-prio-btn sel" data-p="high" onclick="m5SelPrio(this)">🔴 Must Have</div>
-        <div class="m5-prio-btn" data-p="medium" onclick="m5SelPrio(this)">🟡 Important</div>
-        <div class="m5-prio-btn" data-p="low" onclick="m5SelPrio(this)">🟢 Nice to Have</div>
-      </div>
-
-      <button class="m5-btn" onclick="m5CalcGoal()">Calculate My Plan →</button>
-
-      <div id="m5Result" style="display:none"></div>
-
-      <button id="m5SaveBtn" style="display:none;width:100%;padding:11px;background:#F5F3FF;border:1px solid #DDD6FE;border-radius:12px;color:#7C3AED;font-weight:700;cursor:pointer;font-size:14px;margin-top:10px" onclick="m5SaveGoal()">💾 Save This Goal</button>
-    </div>
-
-  </div>
-
-  <!-- ── TAB 2: MY GOALS ── -->
-  <div id="m5tab-goals" style="display:none">
-    <div class="m5-card">
-      <div class="m5-card-title">📂 My Saved Goals</div>
-      <div id="m5GoalList">
-        <div style="text-align:center;padding:30px;color:#9CA3AF;font-size:13px">No goals saved yet. Plan a goal and save it.</div>
-      </div>
-    </div>
-    <div class="m5-card" id="m5TotalSIPCard" style="display:none">
-      <div class="m5-card-title">💰 Total Monthly SIP Required</div>
-      <div style="text-align:center;padding:10px 0">
-        <div style="font-family:'DM Mono',monospace;font-size:32px;font-weight:700;color:#7C3AED" id="m5TotalSIP">₹0</div>
-        <div style="font-size:13px;color:#6B7280;margin-top:4px">across all your goals</div>
-      </div>
-      <div class="m5-insight" id="m5TotalInsight"></div>
-    </div>
-  </div>
-
-  <!-- ── TAB 3: PRIORITY VIEW ── -->
-  <div id="m5tab-priority" style="display:none">
-    <div class="m5-card">
-      <div class="m5-card-title">⚡ Goals by Priority</div>
-      <div style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:14px">
-        Financial goals compete for the same monthly surplus. Prioritise ruthlessly — fund <strong>Must Have</strong> goals fully before touching Nice to Have.
-      </div>
-      <div id="m5PriorityView">
-        <div style="text-align:center;padding:30px;color:#9CA3AF;font-size:13px">Save some goals first to see priority breakdown.</div>
-      </div>
-    </div>
-
-    <div class="m5-card">
-      <div class="m5-card-title">📖 The Goal Planning Philosophy</div>
-      <div style="font-size:13px;color:#374151;line-height:1.9">
-        <div style="margin-bottom:10px"><strong style="color:#7C3AED">Rule 1 — Name the goal specifically.</strong> "Retirement" is not a goal. "₹3 Crore retirement corpus by age 60" is a goal. Vague goals never get funded.</div>
-        <div style="margin-bottom:10px"><strong style="color:#7C3AED">Rule 2 — Inflation is the hidden enemy.</strong> ₹50 lakh today for a home becomes ₹89 lakh in 10 years at 6% inflation. Always adjust for inflation.</div>
-        <div style="margin-bottom:10px"><strong style="color:#7C3AED">Rule 3 — Start immediately.</strong> Waiting 1 year to start a 15-year goal increases the required monthly SIP by 8–12%. Every month of delay compounds against you.</div>
-        <div style="margin-bottom:10px"><strong style="color:#7C3AED">Rule 4 — Separate goals, separate SIPs.</strong> Never mix goals in one investment. One SIP = One goal. Clarity prevents raid-and-spend behaviour.</div>
-        <div><strong style="color:#7C3AED">Rule 5 — Review annually.</strong> Income grows. Priorities shift. Goals change. Recalculate every April. Adjust SIPs accordingly.</div>
-      </div>
-    </div>
-  </div>
-
-  <div style="text-align:center;padding:14px;font-size:11px;color:#9CA3AF;letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse · M5</div>
-</div>
-</div><!-- #app5 -->
-
-<div class="bnav" style="background:#fff;border-top:1px solid #E5E7EB">
-  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button><button class="nb act" style="color:#7C3AED" onclick="switchToM5()"><span style="color:#7C3AED">🎯</span><span>Goals</span></button>
-</div>
-<div class="toast" id="toast5"></div>
-</div><!-- #mod5 -->
-
-<script>
-// ══════════════════════════════════════════
-// M5 — GOAL PLANNER ENGINE v3.0
-// ══════════════════════════════════════════
-
-function fmtM5(n){
-  if(n>=10000000) return '₹'+(n/10000000).toFixed(2)+' Cr';
-  if(n>=100000)   return '₹'+(n/100000).toFixed(2)+' L';
-  if(n>=1000)     return '₹'+(n/1000).toFixed(1)+' K';
-  return '₹'+Math.round(n);
-}
-function m5Toast(msg){
-  var t=document.getElementById('toast5');
-  if(t){t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2400);}
-}
-
-// ── STATE ──
-var m5SelectedGoal = 'home';
-var m5SelectedPrio = 'high';
-var m5LastResult   = null;
-
-// ── GOAL DEFAULTS ──
-var M5_GOAL_DEFAULTS = {
-  home:       {name:'Home Purchase',       amt:5000000,  yrs:10, infl:8,  ret:12, hint:'Property price + registration costs'},
-  education:  {name:'Child\'s Education',  amt:2500000,  yrs:12, infl:7,  ret:12, hint:'Tuition + hostel for 4 years'},
-  retirement: {name:'Retirement Corpus',   amt:30000000, yrs:20, infl:6,  ret:12, hint:'30x annual expenses at retirement'},
-  car:        {name:'Car Purchase',        amt:1500000,  yrs:5,  infl:5,  ret:10, hint:'On-road price including insurance'},
-  travel:     {name:'World Tour',          amt:800000,   yrs:3,  infl:5,  ret:10, hint:'International trip for family'},
-  wedding:    {name:'Wedding Fund',        amt:2000000,  yrs:4,  infl:6,  ret:10, hint:'All-inclusive celebration cost'},
-  business:   {name:'Business Capital',    amt:5000000,  yrs:7,  infl:0,  ret:12, hint:'Seed capital for venture'},
-  emergency:  {name:'Emergency Fund',      amt:300000,   yrs:1,  infl:0,  ret:7,  hint:'6 months of monthly expenses'},
-  custom:     {name:'My Goal',             amt:1000000,  yrs:5,  infl:6,  ret:12, hint:'Enter your target amount'},
-};
-
+// Nav handled by master init
 function m5SelGoal(el){
   document.querySelectorAll('.m5-goal-tile').forEach(function(t){t.classList.remove('sel');});
   el.classList.add('sel');
@@ -5389,8 +4321,8 @@ function m5LoadProfile(){
 
 // ── MODULE SWITCHER ──
 function switchToM5(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5'].forEach(function(id){
-    var el=document.getElementById(id); if(el) el.classList.remove('act');
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod5').classList.add('act');
   window.scrollTo(0,0);
@@ -5399,8 +4331,12 @@ function switchToM5(){
 }
 
 // Nav handled by master init
+
+
 // Patch all existing switchers to clear mod5
 </script>
+
+
 
 <!-- ══════ MODULE 6: MONTHLY P&L ══════ -->
 <div id="mod6" class="mod">
@@ -5503,7 +4439,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Monthly P&L · M6</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.0</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.1</div>
 </header>
 
 <div class="m6w">
@@ -5653,7 +4589,7 @@ function switchToM5(){
 
 <script>
 // ══════════════════════════════════════════
-// M6 — MONTHLY P&L ENGINE v3.0
+// M6 — MONTHLY P&L ENGINE v3.1
 // ══════════════════════════════════════════
 
 function fmtM6(n){
@@ -6000,25 +4936,673 @@ function switchToM6(){
   });
   document.getElementById('mod6').classList.add('act');
   window.scrollTo(0,0);
-  // Set current month to today
-  var now=new Date();
-  m6CurrentMonth=now.getMonth();
-  m6CurrentYear=now.getFullYear();
-  document.getElementById('m6MonthLabel').textContent=m6MonthLabel();
+  var now=new Date();m6CurrentMonth=now.getMonth();m6CurrentYear=now.getFullYear();
+  if(document.getElementById('m6MonthLabel'))document.getElementById('m6MonthLabel').textContent=m6MonthLabel();
   m6LoadMonth();
 }
 
-// Update all navbars to include M6
-document.addEventListener('DOMContentLoaded',function(){
-  var nav=
+// Nav handled by master init
+</script>
+<script>
+// ══ MASTER NAV v3.1 — Journey Order ══
+(function(){
+  var NAV=[
+    ['switchToM0','🎨','Canvas'],
+    ['switchToM5','🎯','Goals'],
+    ['switchToM4','💳','Debt'],
+    ['switchToM3','🗺️','Blueprint'],
+    ['switchToM2','📚','School'],
+    ['switchToM6','📊','P&L']
+  ];
+  var COLORS={
+    switchToM0:'#E8B84B',switchToM1:'#9b72cf',switchToM2:'#2ec4b6',
+    switchToM3:'#D97706',switchToM4:'#DC2626',switchToM5:'#7C3AED',switchToM6:'#059669'
+  };
+  function makeNav(activeFn){
+    return NAV.map(function(b){
+      var act=b[0]===activeFn;
+      return '<button class="nb'+(act?' act':'')+'"'+(act?' style="color:'+COLORS[activeFn]+'"':'')+
+        ' onclick="'+b[0]+'()"><span>'+b[1]+'</span><span>'+b[2]+'</span></button>';
+    }).join('');
+  }
+  function initNavs(){
+    var map={
+      '#mod0 .bnav':'switchToM0','#mod1 .bnav':'switchToM1',
+      '#mod2 .bnav':'switchToM2','#mod3 .bnav':'switchToM3',
+      '#mod4 .bnav':'switchToM4','#mod5 .bnav':'switchToM5',
+      '#mod6 .bnav':'switchToM6'
+    };
+    Object.keys(map).forEach(function(sel){
+      var el=document.querySelector(sel);
+      if(el) el.innerHTML=makeNav(map[sel]);
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initNavs);
+  else initNavs();
+})();
+</script>
+
+
+
+<!-- ══════ MODULE 5: GOAL PLANNER ══════ -->
+<div id="mod5" class="mod">
+<style>
+#mod5{background:#F5F6FA;min-height:100vh}
+#mod5 header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+#mod5 .bnav{background:#fff;border-top:1px solid #E5E7EB}
+#mod5 .nb{color:#9CA3AF}
+#mod5 .nb.act{color:#7C3AED}
+
+.m5w{padding:0 16px 100px;max-width:480px;margin:0 auto}
+.m5-card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.m5-card-title{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#9CA3AF;margin-bottom:12px}
+.m5-label{font-size:13px;color:#374151;margin-bottom:5px;font-weight:500}
+.m5-input{width:100%;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:15px;color:#111827;font-family:'DM Mono',monospace;margin-bottom:12px;box-sizing:border-box}
+.m5-input:focus{outline:none;border-color:#7C3AED;background:#fff}
+.m5-select{width:100%;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:14px;color:#111827;margin-bottom:12px;appearance:none}
+.m5-btn{width:100%;padding:13px;background:linear-gradient(135deg,#7C3AED,#5B21B6);color:#fff;font-weight:700;border:none;border-radius:12px;cursor:pointer;font-size:15px;margin-top:4px}
+.m5-btn:active{opacity:.9}
+
+/* Goal tiles */
+.m5-goal-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px}
+.m5-goal-tile{background:#fff;border:2px solid #E5E7EB;border-radius:14px;padding:14px 10px;text-align:center;cursor:pointer;transition:all .2s}
+.m5-goal-tile.sel{background:#F5F3FF;border-color:#7C3AED}
+.m5-goal-tile-icon{font-size:28px;margin-bottom:6px}
+.m5-goal-tile-name{font-size:13px;font-weight:600;color:#111827}
+.m5-goal-tile-desc{font-size:11px;color:#9CA3AF;margin-top:2px}
+
+/* Result card */
+.m5-result{background:linear-gradient(135deg,#F5F3FF,#FAF8FF);border:1px solid #DDD6FE;border-radius:16px;padding:18px;margin-top:14px}
+.m5-result-title{font-size:11px;font-weight:700;color:#5B21B6;text-transform:uppercase;letter-spacing:.8px;margin-bottom:14px}
+.m5-result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.m5-result-box{background:#fff;border:1px solid #DDD6FE;border-radius:12px;padding:12px;text-align:center}
+.m5-result-val{font-family:'DM Mono',monospace;font-size:18px;font-weight:700;color:#7C3AED;margin-bottom:3px}
+.m5-result-lbl{font-size:10px;color:#9CA3AF;text-transform:uppercase;letter-spacing:.5px}
+
+/* Timeline bar */
+.m5-timeline{margin:14px 0}
+.m5-timeline-title{font-size:11px;font-weight:700;color:#374151;text-transform:uppercase;letter-spacing:.6px;margin-bottom:8px}
+.m5-tl-bar-wrap{width:100%;background:#EDE9FE;border-radius:6px;height:12px;margin-bottom:6px;overflow:hidden}
+.m5-tl-bar{height:12px;border-radius:6px;background:linear-gradient(90deg,#7C3AED,#A78BFA);transition:width .6s ease}
+.m5-tl-labels{display:flex;justify-content:space-between;font-size:11px;color:#6B7280}
+
+/* Milestone markers */
+.m5-milestones{display:flex;flex-direction:column;gap:8px;margin-top:12px}
+.m5-milestone{display:flex;align-items:center;gap:10px;padding:10px 12px;background:#F9FAFB;border-radius:10px;border-left:3px solid #7C3AED}
+.m5-milestone-yr{font-size:12px;font-weight:700;color:#7C3AED;width:50px;flex-shrink:0}
+.m5-milestone-desc{font-size:12px;color:#374151;flex:1}
+.m5-milestone-val{font-size:13px;font-weight:700;color:#111827;font-family:'DM Mono',monospace}
+
+/* Insight */
+.m5-insight{font-size:13px;color:#374151;line-height:1.85;padding:12px 14px;background:#F5F3FF;border-radius:10px;border-left:3px solid #7C3AED;margin-top:10px}
+.m5-insight strong{color:#5B21B6}
+
+/* My goals list */
+.m5-saved-goal{background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:14px;margin-bottom:8px;display:flex;align-items:center;gap:12px}
+.m5-sg-icon{font-size:24px;flex-shrink:0}
+.m5-sg-info{flex:1}
+.m5-sg-name{font-size:14px;font-weight:600;color:#111827}
+.m5-sg-meta{font-size:12px;color:#6B7280;margin-top:2px}
+.m5-sg-sip{font-size:14px;font-weight:700;color:#7C3AED;font-family:'DM Mono',monospace}
+.m5-sg-del{background:none;border:none;color:#D1D5DB;cursor:pointer;font-size:18px;padding:4px}
+.m5-sg-del:hover{color:#DC2626}
+
+/* Tabs */
+.m5-tabs{display:flex;gap:6px;margin-bottom:16px}
+.m5-tab{flex:1;padding:9px 6px;background:#fff;border:1px solid #E5E7EB;border-radius:20px;font-size:12px;font-weight:600;color:#6B7280;cursor:pointer;text-align:center;transition:all .2s}
+.m5-tab.act{background:#F5F3FF;border-color:#DDD6FE;color:#7C3AED}
+
+/* Profile banner */
+.m5-profile-banner{background:#F5F3FF;border:1px solid #DDD6FE;border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:12px;color:#5B21B6;display:flex;align-items:center;gap:8px}
+
+/* Priority meter */
+.m5-priority{display:flex;gap:6px;margin-bottom:12px}
+.m5-prio-btn{flex:1;padding:8px;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;font-size:11px;font-weight:600;color:#6B7280;cursor:pointer;text-align:center;transition:all .2s}
+.m5-prio-btn.sel{background:#F5F3FF;border-color:#7C3AED;color:#7C3AED}
+</style>
+
+<div id="app5">
+<header>
+  <div class="brand">
+    <div class="blogo" style="background:linear-gradient(135deg,#7C3AED,#A78BFA)">🌊</div>
+    <div>
+      <div class="bname" style="color:#111827;font-size:17px;font-weight:700">Cauvery Pulse</div>
+      <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Goal Planner · M5</div>
+    </div>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.1</div>
+</header>
+
+<div class="m5w">
+
+  <!-- Profile banner -->
+  <div class="m5-profile-banner" id="m5ProfileBanner" style="display:none">
+    <span style="font-size:18px">🎯</span>
+    <div id="m5ProfileText"></div>
+  </div>
+
+  <!-- Hero -->
+  <div style="padding:20px 0 16px;text-align:center">
+    <span style="font-size:48px;display:block;margin-bottom:8px">🎯</span>
+    <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:#111827;margin-bottom:6px">Goal <span style="color:#7C3AED">Planner</span></div>
+    <div style="font-size:14px;color:#6B7280;line-height:1.7">Every goal has a price. Every price has a monthly SIP. Start today.</div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="m5-tabs">
+    <div class="m5-tab act" onclick="m5ShowTab('plan',this)">📋 Plan a Goal</div>
+    <div class="m5-tab" onclick="m5ShowTab('goals',this)">📂 My Goals</div>
+    <div class="m5-tab" onclick="m5ShowTab('priority',this)">⚡ Priority View</div>
+  </div>
+
+  <!-- ── TAB 1: PLAN A GOAL ── -->
+  <div id="m5tab-plan">
+
+    <div class="m5-card">
+      <div class="m5-card-title">🎯 Choose Your Goal</div>
+      <div class="m5-goal-grid" id="m5GoalGrid">
+        <div class="m5-goal-tile sel" data-goal="home" onclick="m5SelGoal(this)">
+          <div class="m5-goal-tile-icon">🏠</div>
+          <div class="m5-goal-tile-name">Home</div>
+          <div class="m5-goal-tile-desc">Buy a house</div>
+        </div>
+        <div class="m5-goal-tile" data-goal="education" onclick="m5SelGoal(this)">
+          <div class="m5-goal-tile-icon">🎓</div>
+          <div class="m5-goal-tile-name">Education</div>
+          <div class="m5-goal-tile-desc">Child / Self</div>
+        </div>
+        <div class="m5-goal-tile" data-goal="retirement" onclick="m5SelGoal(this)">
+          <div class="m5-goal-tile-icon">🧓</div>
+          <div class="m5-goal-tile-name">Retirement</div>
+          <div class="m5-goal-tile-desc">Retire comfortably</div>
+        </div>
+        <div class="m5-goal-tile" data-goal="car" onclick="m5SelGoal(this)">
+          <div class="m5-goal-tile-icon">🚗</div>
+          <div class="m5-goal-tile-name">Car</div>
+          <div class="m5-goal-tile-desc">Dream vehicle</div>
+        </div>
+        <div class="m5-goal-tile" data-goal="travel" onclick="m5SelGoal(this)">
+          <div class="m5-goal-tile-icon">✈️</div>
+          <div class="m5-goal-tile-name">World Tour</div>
+          <div class="m5-goal-tile-desc">International travel</div>
+        </div>
+        <div class="m5-goal-tile" data-goal="wedding" onclick="m5SelGoal(this)">
+          <div class="m5-goal-tile-icon">💍</div>
+          <div class="m5-goal-tile-name">Wedding</div>
+          <div class="m5-goal-tile-desc">Family celebration</div>
+        </div>
+        <div class="m5-goal-tile" data-goal="business" onclick="m5SelGoal(this)">
+          <div class="m5-goal-tile-icon">🏢</div>
+          <div class="m5-goal-tile-name">Business</div>
+          <div class="m5-goal-tile-desc">Start / expand</div>
+        </div>
+        <div class="m5-goal-tile" data-goal="emergency" onclick="m5SelGoal(this)">
+          <div class="m5-goal-tile-icon">🛡️</div>
+          <div class="m5-goal-tile-name">Emergency Fund</div>
+          <div class="m5-goal-tile-desc">6 months expenses</div>
+        </div>
+        <div class="m5-goal-tile" data-goal="custom" onclick="m5SelGoal(this)">
+          <div class="m5-goal-tile-icon">⭐</div>
+          <div class="m5-goal-tile-name">Custom Goal</div>
+          <div class="m5-goal-tile-desc">Your own target</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="m5-card">
+      <div class="m5-card-title">📝 Goal Details</div>
+
+      <div class="m5-label">Goal Name</div>
+      <input class="m5-input" type="text" id="m5GoalName" placeholder="e.g. Daughter's IIT education">
+
+      <div class="m5-label">Target Amount (₹) <span style="font-size:11px;color:#9CA3AF" id="m5AmtHint">— today's value</span></div>
+      <input class="m5-input" type="number" id="m5TargetAmt" placeholder="e.g. 5000000">
+
+      <div class="m5-label">Years to Achieve</div>
+      <input class="m5-input" type="number" id="m5Years" placeholder="e.g. 10" oninput="m5CalcGoal()">
+
+      <div class="m5-label">Expected Annual Return (%)</div>
+      <select class="m5-select" id="m5Return" onchange="m5CalcGoal()">
+        <option value="7">7% — Debt / FD / Safe</option>
+        <option value="10">10% — Balanced (MF mix)</option>
+        <option value="12" selected>12% — Equity (Nifty 50 Index)</option>
+        <option value="14">14% — Equity (Mid Cap MF)</option>
+        <option value="15">15% — Aggressive Equity</option>
+      </select>
+
+      <div class="m5-label">Inflation Adjustment (%)</div>
+      <select class="m5-select" id="m5Infl" onchange="m5CalcGoal()">
+        <option value="0">0% — No inflation adjustment</option>
+        <option value="5">5% — Conservative inflation</option>
+        <option value="6" selected>6% — Standard India inflation</option>
+        <option value="7">7% — Education / Medical inflation</option>
+        <option value="8">8% — Real estate / High inflation</option>
+      </select>
+
+      <div class="m5-label">Already Saved Towards This Goal (₹)</div>
+      <input class="m5-input" type="number" id="m5Saved" placeholder="0 — if starting fresh" oninput="m5CalcGoal()">
+
+      <div class="m5-label">Priority</div>
+      <div class="m5-priority">
+        <div class="m5-prio-btn sel" data-p="high" onclick="m5SelPrio(this)">🔴 Must Have</div>
+        <div class="m5-prio-btn" data-p="medium" onclick="m5SelPrio(this)">🟡 Important</div>
+        <div class="m5-prio-btn" data-p="low" onclick="m5SelPrio(this)">🟢 Nice to Have</div>
+      </div>
+
+      <button class="m5-btn" onclick="m5CalcGoal()">Calculate My Plan →</button>
+
+      <div id="m5Result" style="display:none"></div>
+
+      <button id="m5SaveBtn" style="display:none;width:100%;padding:11px;background:#F5F3FF;border:1px solid #DDD6FE;border-radius:12px;color:#7C3AED;font-weight:700;cursor:pointer;font-size:14px;margin-top:10px" onclick="m5SaveGoal()">💾 Save This Goal</button>
+    </div>
+
+  </div>
+
+  <!-- ── TAB 2: MY GOALS ── -->
+  <div id="m5tab-goals" style="display:none">
+    <div class="m5-card">
+      <div class="m5-card-title">📂 My Saved Goals</div>
+      <div id="m5GoalList">
+        <div style="text-align:center;padding:30px;color:#9CA3AF;font-size:13px">No goals saved yet. Plan a goal and save it.</div>
+      </div>
+    </div>
+    <div class="m5-card" id="m5TotalSIPCard" style="display:none">
+      <div class="m5-card-title">💰 Total Monthly SIP Required</div>
+      <div style="text-align:center;padding:10px 0">
+        <div style="font-family:'DM Mono',monospace;font-size:32px;font-weight:700;color:#7C3AED" id="m5TotalSIP">₹0</div>
+        <div style="font-size:13px;color:#6B7280;margin-top:4px">across all your goals</div>
+      </div>
+      <div class="m5-insight" id="m5TotalInsight"></div>
+    </div>
+  </div>
+
+  <!-- ── TAB 3: PRIORITY VIEW ── -->
+  <div id="m5tab-priority" style="display:none">
+    <div class="m5-card">
+      <div class="m5-card-title">⚡ Goals by Priority</div>
+      <div style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:14px">
+        Financial goals compete for the same monthly surplus. Prioritise ruthlessly — fund <strong>Must Have</strong> goals fully before touching Nice to Have.
+      </div>
+      <div id="m5PriorityView">
+        <div style="text-align:center;padding:30px;color:#9CA3AF;font-size:13px">Save some goals first to see priority breakdown.</div>
+      </div>
+    </div>
+
+    <div class="m5-card">
+      <div class="m5-card-title">📖 The Goal Planning Philosophy</div>
+      <div style="font-size:13px;color:#374151;line-height:1.9">
+        <div style="margin-bottom:10px"><strong style="color:#7C3AED">Rule 1 — Name the goal specifically.</strong> "Retirement" is not a goal. "₹3 Crore retirement corpus by age 60" is a goal. Vague goals never get funded.</div>
+        <div style="margin-bottom:10px"><strong style="color:#7C3AED">Rule 2 — Inflation is the hidden enemy.</strong> ₹50 lakh today for a home becomes ₹89 lakh in 10 years at 6% inflation. Always adjust for inflation.</div>
+        <div style="margin-bottom:10px"><strong style="color:#7C3AED">Rule 3 — Start immediately.</strong> Waiting 1 year to start a 15-year goal increases the required monthly SIP by 8–12%. Every month of delay compounds against you.</div>
+        <div style="margin-bottom:10px"><strong style="color:#7C3AED">Rule 4 — Separate goals, separate SIPs.</strong> Never mix goals in one investment. One SIP = One goal. Clarity prevents raid-and-spend behaviour.</div>
+        <div><strong style="color:#7C3AED">Rule 5 — Review annually.</strong> Income grows. Priorities shift. Goals change. Recalculate every April. Adjust SIPs accordingly.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:14px;font-size:11px;color:#9CA3AF;letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse · M5</div>
+</div>
+</div><!-- #app5 -->
+
+<div class="bnav" style="background:#fff;border-top:1px solid #E5E7EB">
+  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>
+  <button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>
+  <button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>
+  <button class="nb act" style="color:#7C3AED" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button>
+</div>
+<div class="toast" id="toast5"></div>
+</div><!-- #mod5 -->
+
+<script>
+// ══════════════════════════════════════════
+// M5 — GOAL PLANNER ENGINE v3.1
+// ══════════════════════════════════════════
+
+function fmtM5(n){
+  if(n>=10000000) return '₹'+(n/10000000).toFixed(2)+' Cr';
+  if(n>=100000)   return '₹'+(n/100000).toFixed(2)+' L';
+  if(n>=1000)     return '₹'+(n/1000).toFixed(1)+' K';
+  return '₹'+Math.round(n);
+}
+function m5Toast(msg){
+  var t=document.getElementById('toast5');
+  if(t){t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2400);}
+}
+
+// ── STATE ──
+var m5SelectedGoal = 'home';
+var m5SelectedPrio = 'high';
+var m5LastResult   = null;
+
+// ── GOAL DEFAULTS ──
+var M5_GOAL_DEFAULTS = {
+  home:       {name:'Home Purchase',       amt:5000000,  yrs:10, infl:8,  ret:12, hint:'Property price + registration costs'},
+  education:  {name:'Child\'s Education',  amt:2500000,  yrs:12, infl:7,  ret:12, hint:'Tuition + hostel for 4 years'},
+  retirement: {name:'Retirement Corpus',   amt:30000000, yrs:20, infl:6,  ret:12, hint:'30x annual expenses at retirement'},
+  car:        {name:'Car Purchase',        amt:1500000,  yrs:5,  infl:5,  ret:10, hint:'On-road price including insurance'},
+  travel:     {name:'World Tour',          amt:800000,   yrs:3,  infl:5,  ret:10, hint:'International trip for family'},
+  wedding:    {name:'Wedding Fund',        amt:2000000,  yrs:4,  infl:6,  ret:10, hint:'All-inclusive celebration cost'},
+  business:   {name:'Business Capital',    amt:5000000,  yrs:7,  infl:0,  ret:12, hint:'Seed capital for venture'},
+  emergency:  {name:'Emergency Fund',      amt:300000,   yrs:1,  infl:0,  ret:7,  hint:'6 months of monthly expenses'},
+  custom:     {name:'My Goal',             amt:1000000,  yrs:5,  infl:6,  ret:12, hint:'Enter your target amount'},
+};
+
+function m5SelGoal(el){
+  document.querySelectorAll('.m5-goal-tile').forEach(function(t){t.classList.remove('sel');});
+  el.classList.add('sel');
+  m5SelectedGoal = el.dataset.goal;
+  var def = M5_GOAL_DEFAULTS[m5SelectedGoal];
+  document.getElementById('m5GoalName').value    = def.name;
+  document.getElementById('m5TargetAmt').value   = def.amt;
+  document.getElementById('m5Years').value       = def.yrs;
+  document.getElementById('m5AmtHint').textContent = '— ' + def.hint;
+  document.getElementById('m5Infl').value        = def.infl;
+  document.getElementById('m5Return').value      = def.ret;
+  document.getElementById('m5Saved').value       = '';
+  document.getElementById('m5Result').style.display = 'none';
+  document.getElementById('m5SaveBtn').style.display = 'none';
+}
+
+function m5SelPrio(el){
+  document.querySelectorAll('.m5-prio-btn').forEach(function(b){b.classList.remove('sel');});
+  el.classList.add('sel');
+  m5SelectedPrio = el.dataset.p;
+}
+
+// ── MAIN CALCULATOR ──
+function m5CalcGoal(){
+  var name   = document.getElementById('m5GoalName').value || 'My Goal';
+  var target = parseFloat(document.getElementById('m5TargetAmt').value) || 0;
+  var years  = parseFloat(document.getElementById('m5Years').value) || 0;
+  var ret    = parseFloat(document.getElementById('m5Return').value) || 12;
+  var infl   = parseFloat(document.getElementById('m5Infl').value) || 6;
+  var saved  = parseFloat(document.getElementById('m5Saved').value) || 0;
+
+  if(!target || !years) return;
+
+  var r      = ret/12/100;
+  var n      = years*12;
+  var inflTarget = target * Math.pow(1+infl/100, years);
+  var fvSaved    = saved * Math.pow(1+ret/100, years);
+  var remaining  = Math.max(0, inflTarget - fvSaved);
+  var sipNeeded  = remaining > 0 ? remaining*r/(Math.pow(1+r,n)-1)/(1+r) : 0;
+
+  // Milestones — 25%, 50%, 75%, 100%
+  var milestones = [
+    {pct:25, yr:Math.ceil(years*0.25)},
+    {pct:50, yr:Math.ceil(years*0.5)},
+    {pct:75, yr:Math.ceil(years*0.75)},
+    {pct:100, yr:years}
+  ];
+
+  var msHTML = milestones.map(function(ms){
+    var n2 = ms.yr*12;
+    var corpus = sipNeeded*(Math.pow(1+r,n2)-1)/r*(1+r) + saved*Math.pow(1+ret/100,ms.yr);
+    return '<div class="m5-milestone">'+
+      '<div class="m5-milestone-yr">Yr '+ms.yr+'</div>'+
+      '<div class="m5-milestone-desc">'+ms.pct+'% milestone — corpus at this point</div>'+
+      '<div class="m5-milestone-val">'+fmtM5(corpus)+'</div>'+
+    '</div>';
+  }).join('');
+
+  // Insight text
+  var icon = {home:'🏠',education:'🎓',retirement:'🧓',car:'🚗',travel:'✈️',wedding:'💍',business:'🏢',emergency:'🛡️',custom:'⭐'}[m5SelectedGoal]||'🎯';
+  var insight = '';
+  if(infl>0){
+    insight += 'At <strong>'+infl+'% inflation</strong>, your goal of '+fmtM5(target)+' becomes <strong>'+fmtM5(inflTarget)+'</strong> in '+years+' years. ';
+  }
+  if(saved>0){
+    insight += 'Your current savings of '+fmtM5(saved)+' will grow to <strong>'+fmtM5(fvSaved)+'</strong> — reducing the SIP needed. ';
+  }
+  if(sipNeeded < 1000){
+    insight += '🎉 Your savings alone may cover this goal — just stay invested!';
+  } else {
+    insight += 'Start a <strong>'+fmtM5(sipNeeded)+'/month SIP</strong> today in a '+
+      (ret>=12?'Nifty 50 Index Fund':'balanced mutual fund')+
+      '. Automate on your salary date. Never skip. Never stop.';
+  }
+
+  var html =
+    '<div class="m5-result">'+
+      '<div class="m5-result-title">'+icon+' '+name+' — Your Plan</div>'+
+      '<div class="m5-result-grid">'+
+        '<div class="m5-result-box"><div class="m5-result-val">'+fmtM5(sipNeeded)+'/mo</div><div class="m5-result-lbl">Monthly SIP Needed</div></div>'+
+        '<div class="m5-result-box"><div class="m5-result-val">'+fmtM5(inflTarget)+'</div><div class="m5-result-lbl">Inflation-Adjusted Goal</div></div>'+
+        '<div class="m5-result-box"><div class="m5-result-val">'+fmtM5(sipNeeded*n)+'</div><div class="m5-result-lbl">Total You Invest</div></div>'+
+        '<div class="m5-result-box"><div class="m5-result-val" style="color:#059669">'+fmtM5(inflTarget-sipNeeded*n)+'</div><div class="m5-result-lbl">Market Generates</div></div>'+
+      '</div>'+
+      '<div class="m5-timeline">'+
+        '<div class="m5-timeline-title">Progress Timeline</div>'+
+        '<div class="m5-tl-bar-wrap"><div class="m5-tl-bar" style="width:100%"></div></div>'+
+        '<div class="m5-tl-labels"><span>Today</span><span>'+Math.ceil(years/2)+' yrs</span><span>'+years+' yrs — Goal ✓</span></div>'+
+      '</div>'+
+      '<div class="m5-milestones">'+msHTML+'</div>'+
+      '<div class="m5-insight">'+insight+'</div>'+
+    '</div>';
+
+  document.getElementById('m5Result').innerHTML = html;
+  document.getElementById('m5Result').style.display = 'block';
+  document.getElementById('m5SaveBtn').style.display = 'block';
+
+  m5LastResult = {
+    goal:m5SelectedGoal, name:name, icon:icon,
+    target:target, inflTarget:inflTarget, years:years,
+    sipNeeded:sipNeeded, ret:ret, infl:infl,
+    saved:saved, priority:m5SelectedPrio,
+    ts:Date.now()
+  };
+}
+
+// ── SAVE GOAL ──
+function m5SaveGoal(){
+  if(!m5LastResult){ m5Toast('Calculate a goal first ☝️'); return; }
+  var goals = m5GetGoals();
+  goals.push(m5LastResult);
+  localStorage.setItem('cp_goals', JSON.stringify(goals));
+  m5Toast('Goal saved ✓');
+  document.getElementById('m5SaveBtn').style.display = 'none';
+  m5RenderGoalList();
+}
+
+function m5GetGoals(){
+  try{ return JSON.parse(localStorage.getItem('cp_goals')||'[]'); }
+  catch(e){ return []; }
+}
+
+function m5DeleteGoal(ts){
+  var goals = m5GetGoals().filter(function(g){return g.ts!==ts;});
+  localStorage.setItem('cp_goals', JSON.stringify(goals));
+  m5RenderGoalList();
+  m5RenderPriority();
+}
+
+// ── RENDER GOAL LIST ──
+function m5RenderGoalList(){
+  var goals = m5GetGoals();
+  var list  = document.getElementById('m5GoalList');
+  var totalCard = document.getElementById('m5TotalSIPCard');
+  if(!list) return;
+
+  if(!goals.length){
+    list.innerHTML='<div style="text-align:center;padding:30px;color:#9CA3AF;font-size:13px">No goals saved yet. Plan a goal and save it.</div>';
+    if(totalCard) totalCard.style.display='none';
+    return;
+  }
+
+  var totalSIP = goals.reduce(function(s,g){return s+g.sipNeeded;},0);
+  list.innerHTML = goals.map(function(g){
+    return '<div class="m5-saved-goal">'+
+      '<div class="m5-sg-icon">'+g.icon+'</div>'+
+      '<div class="m5-sg-info">'+
+        '<div class="m5-sg-name">'+g.name+'</div>'+
+        '<div class="m5-sg-meta">'+fmtM5(g.inflTarget)+' · '+g.years+' years · '+g.ret+'% return</div>'+
+      '</div>'+
+      '<div class="m5-sg-sip">'+fmtM5(g.sipNeeded)+'/mo</div>'+
+      '<button class="m5-sg-del" onclick="m5DeleteGoal('+g.ts+')">✕</button>'+
+    '</div>';
+  }).join('');
+
+  if(totalCard){
+    totalCard.style.display = 'block';
+    document.getElementById('m5TotalSIP').textContent = fmtM5(totalSIP)+'/mo';
+    // Load investment capacity from M0 profile
+    var cv = JSON.parse(localStorage.getItem('cp_canvas')||'{}');
+    var mid={lt2k:1000,'2k_10k':6000,'10k_50k':30000,gt50k:75000};
+    var capacity = mid[cv.invCap]||0;
+    var insightEl = document.getElementById('m5TotalInsight');
+    if(insightEl){
+      if(capacity>0){
+        var pct = Math.round(totalSIP/capacity*100);
+        insightEl.innerHTML = 'Your goals require <strong>'+fmtM5(totalSIP)+'/month</strong> — that is <strong>'+pct+'%</strong> of your investment capacity of '+fmtM5(capacity)+'/month.'+(pct>80?' Consider extending timelines or prioritising top goals.':' You are on track — well within capacity.');
+      } else {
+        insightEl.innerHTML = 'Total monthly SIP needed across all goals: <strong>'+fmtM5(totalSIP)+'</strong>. Compare this to your monthly surplus to check feasibility.';
+      }
+    }
+  }
+}
+
+// ── RENDER PRIORITY VIEW ──
+function m5RenderPriority(){
+  var goals = m5GetGoals();
+  var pv = document.getElementById('m5PriorityView');
+  if(!pv) return;
+
+  if(!goals.length){
+    pv.innerHTML='<div style="text-align:center;padding:30px;color:#9CA3AF;font-size:13px">Save some goals first to see priority breakdown.</div>';
+    return;
+  }
+
+  var order  = {high:0, medium:1, low:2};
+  var labels = {high:'🔴 Must Have', medium:'🟡 Important', low:'🟢 Nice to Have'};
+  var colors = {high:'#DC2626', medium:'#D97706', low:'#059669'};
+  var sorted = goals.slice().sort(function(a,b){return order[a.priority]-order[b.priority];});
+
+  pv.innerHTML = sorted.map(function(g){
+    return '<div style="display:flex;align-items:center;gap:10px;padding:12px;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;margin-bottom:8px">'+
+      '<div style="font-size:22px">'+g.icon+'</div>'+
+      '<div style="flex:1">'+
+        '<div style="font-size:13px;font-weight:600;color:#111827">'+g.name+'</div>'+
+        '<div style="font-size:11px;color:#6B7280;margin-top:2px">'+g.years+' years · '+fmtM5(g.inflTarget)+'</div>'+
+        '<div style="display:inline-block;font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;margin-top:4px;background:'+colors[g.priority]+'22;color:'+colors[g.priority]+'">'+labels[g.priority]+'</div>'+
+      '</div>'+
+      '<div style="font-family:\'DM Mono\',monospace;font-size:14px;font-weight:700;color:#7C3AED">'+fmtM5(g.sipNeeded)+'/mo</div>'+
+    '</div>';
+  }).join('');
+}
+
+// ── TAB SWITCHER ──
+function m5ShowTab(tab, el){
+  ['plan','goals','priority'].forEach(function(t){
+    var el2=document.getElementById('m5tab-'+t);
+    if(el2) el2.style.display='none';
+  });
+  document.querySelectorAll('.m5-tab').forEach(function(t){t.classList.remove('act');});
+  document.getElementById('m5tab-'+tab).style.display='block';
+  if(el) el.classList.add('act');
+  if(tab==='goals')    m5RenderGoalList();
+  if(tab==='priority') m5RenderPriority();
+}
+
+// ── PROFILE LOAD ──
+function m5LoadProfile(){
+  var cv=JSON.parse(localStorage.getItem('cp_canvas')||'{}');
+  if(!cv.lifeStage) return;
+  var LS={school:'School Student',college:'College Student',young_adult:'Young Adult',
+    first_earner:'First Time Earner',professional:'Professional',homemaker:'Homemaker',
+    thirties:'Thirties',forties:'Forties',pre_retire:'Pre-Retirement',
+    post_retire:'Post-Retirement',senior65:'65 Plus',senior75:'75 Plus'};
+  var advice={
+    school:'Focus on building your emergency fund first. Education fund is your key goal.',
+    college:'Emergency fund first. Career investment (courses, certifications) is a valid goal.',
+    young_adult:'Home, retirement corpus, and emergency fund — in that priority order.',
+    first_earner:'Emergency fund (6 months) is Goal #1. Then retirement SIP. Then everything else.',
+    thirties:'Home, children\'s education, and retirement must all run simultaneously.',
+    forties:'Retirement is now the most urgent goal. Education corpus for children is #2.',
+    pre_retire:'Retirement corpus is the only goal now. Everything else waits.',
+    homemaker:'Build a corpus in your own name. Financial independence is non-negotiable.',
+    professional:'Retirement + real estate + children\'s education — all fundable on professional income.',
+  };
+  var banner=document.getElementById('m5ProfileBanner');
+  var text=document.getElementById('m5ProfileText');
+  if(banner&&text){
+    banner.style.display='flex';
+    text.innerHTML='<strong>'+(LS[cv.lifeStage]||cv.lifeStage)+':</strong> '+(advice[cv.lifeStage]||'Plan your goals in order of priority.');
+  }
+  // Pre-fill retirement goal for pre_retire/forties/senior
+  if(cv.lifeStage==='pre_retire'||cv.lifeStage==='forties'){
+    var tile=document.querySelector('[data-goal="retirement"]');
+    if(tile) m5SelGoal(tile);
+  }
+}
+
+// ── MODULE SWITCHER ──
+function switchToM5(){
+  ['mod0','mod1','mod2','mod3','mod4','mod5'].forEach(function(id){
+    var el=document.getElementById(id); if(el) el.classList.remove('act');
+  });
+  document.getElementById('mod5').classList.add('act');
+  window.scrollTo(0,0);
+  m5LoadProfile();
+  m5RenderGoalList();
+}
+
+// Update all navbars to include M5
+document.addEventListener('DOMContentLoaded', function(){
+  var nav =
     '<button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>'+
     '<button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>'+
-    '<button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button>'+
-    '<button class="nb" onclick="switchToM6()"><span>📊</span><span>P&L</span></button>';
-  ['#mod0 .bnav','#mod1 .bnav','#mod2 .bnav','#mod3 .bnav','#mod4 .bnav','#mod5 .bnav'].forEach(function(s){
-    var el=document.querySelector(s);if(el)el.innerHTML=nav;
+    '<button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>'+
+    '<button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button>';
+  ['#mod0 .bnav','#mod1 .bnav','#mod2 .bnav','#mod3 .bnav','#mod4 .bnav'].forEach(function(s){
+    var el=document.querySelector(s); if(el) el.innerHTML=nav;
   });
+  // Update M5's own nav to show active
+  var m5nav=document.querySelector('#mod5 .bnav');
+  if(m5nav) m5nav.innerHTML=nav.replace(
+    'onclick="switchToM5()"',
+    'onclick="switchToM5()" class="nb act" style="color:#7C3AED"'
+  ).replace('class="nb" onclick="switchToM5()"','onclick="switchToM5()"');
 });
+
+// Patch all existing switchers to clear mod5
+</script>
+<script>
+// ══ MASTER NAV v3.1 — Journey Order ══
+(function(){
+  var NAV=[
+    ['switchToM0','🎨','Canvas'],
+    ['switchToM5','🎯','Goals'],
+    ['switchToM4','💳','Debt'],
+    ['switchToM3','🗺️','Blueprint'],
+    ['switchToM2','📚','School'],
+    ['switchToM6','📊','P&L']
+  ];
+  var COLORS={
+    switchToM0:'#E8B84B',switchToM1:'#9b72cf',switchToM2:'#2ec4b6',
+    switchToM3:'#D97706',switchToM4:'#DC2626',switchToM5:'#7C3AED',switchToM6:'#059669'
+  };
+  function makeNav(activeFn){
+    return NAV.map(function(b){
+      var act=b[0]===activeFn;
+      return '<button class="nb'+(act?' act':'')+'"'+(act?' style="color:'+COLORS[activeFn]+'"':'')+
+        ' onclick="'+b[0]+'()"><span>'+b[1]+'</span><span>'+b[2]+'</span></button>';
+    }).join('');
+  }
+  function initNavs(){
+    var map={
+      '#mod0 .bnav':'switchToM0','#mod1 .bnav':'switchToM1',
+      '#mod2 .bnav':'switchToM2','#mod3 .bnav':'switchToM3',
+      '#mod4 .bnav':'switchToM4','#mod5 .bnav':'switchToM5',
+      '#mod6 .bnav':'switchToM6'
+    };
+    Object.keys(map).forEach(function(sel){
+      var el=document.querySelector(sel);
+      if(el) el.innerHTML=makeNav(map[sel]);
+    });
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initNavs);
+  else initNavs();
+})();
 </script>
 </body>
 </html>
