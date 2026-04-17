@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Cauvery Pulse | v3.2 | Build: 20260418-0140 | Elango Industries Limited -->
+<!-- Cauvery Pulse | v3.2 | Build: 20260418-0200 | Elango Industries Limited -->
 <title>Cauvery Pulse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
@@ -1496,7 +1496,7 @@ function closeM2Detail(){
 
 // ══ UPDATED MODULE SWITCHER (now includes M2) ══
 function switchToM2(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod2').classList.add('act');
@@ -1504,14 +1504,14 @@ function switchToM2(){
   renderM2();
 }
 function switchToM1(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod1').classList.add('act');
   window.scrollTo(0,0);
 }
 function switchToM0(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod0').classList.add('act');
@@ -3160,7 +3160,7 @@ function saveM3Rates(){
 
 // ── SWITCHERS ──
 function switchToM3(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod3').classList.add('act');
@@ -4061,7 +4061,7 @@ function calcInflation(){
 
 // ── MODULE SWITCHER ──
 function switchToM4(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod4').classList.add('act');
@@ -4321,7 +4321,7 @@ function m5LoadProfile(){
 
 // ── MODULE SWITCHER ──
 function switchToM5(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod5').classList.add('act');
@@ -4931,7 +4931,7 @@ function m6ShowTab(tab,el){
 
 // ── MODULE SWITCHER ──
 function switchToM6(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod6').classList.add('act');
@@ -4943,44 +4943,7 @@ function switchToM6(){
 
 // Nav handled by master init
 </script>
-<script>
-// ══ MASTER NAV v3.2 — Journey Order ══
-(function(){
-  var NAV=[
-    ['switchToM0','🎨','Canvas'],
-    ['switchToM5','🎯','Goals'],
-    ['switchToM4','💳','Debt'],
-    ['switchToM3','🗺️','Blueprint'],
-    ['switchToM2','📚','School'],
-    ['switchToM6','📊','P&L']
-  ];
-  var COLORS={
-    switchToM0:'#E8B84B',switchToM1:'#9b72cf',switchToM2:'#2ec4b6',
-    switchToM3:'#D97706',switchToM4:'#DC2626',switchToM5:'#7C3AED',switchToM6:'#059669'
-  };
-  function makeNav(activeFn){
-    return NAV.map(function(b){
-      var act=b[0]===activeFn;
-      return '<button class="nb'+(act?' act':'')+'"'+(act?' style="color:'+COLORS[activeFn]+'"':'')+
-        ' onclick="'+b[0]+'()"><span>'+b[1]+'</span><span>'+b[2]+'</span></button>';
-    }).join('');
-  }
-  function initNavs(){
-    var map={
-      '#mod0 .bnav':'switchToM0','#mod1 .bnav':'switchToM1',
-      '#mod2 .bnav':'switchToM2','#mod3 .bnav':'switchToM3',
-      '#mod4 .bnav':'switchToM4','#mod5 .bnav':'switchToM5',
-      '#mod6 .bnav':'switchToM6'
-    };
-    Object.keys(map).forEach(function(sel){
-      var el=document.querySelector(sel);
-      if(el) el.innerHTML=makeNav(map[sel]);
-    });
-  }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initNavs);
-  else initNavs();
-})();
-</script>
+
 
 
 
@@ -5546,64 +5509,11 @@ function switchToM5(){
   m5RenderGoalList();
 }
 
-// Update all navbars to include M5
-document.addEventListener('DOMContentLoaded', function(){
-  var nav =
-    '<button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>'+
-    '<button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>'+
-    '<button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>'+
-    '<button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button>';
-  ['#mod0 .bnav','#mod1 .bnav','#mod2 .bnav','#mod3 .bnav','#mod4 .bnav'].forEach(function(s){
-    var el=document.querySelector(s); if(el) el.innerHTML=nav;
-  });
-  // Update M5's own nav to show active
-  var m5nav=document.querySelector('#mod5 .bnav');
-  if(m5nav) m5nav.innerHTML=nav.replace(
-    'onclick="switchToM5()"',
-    'onclick="switchToM5()" class="nb act" style="color:#7C3AED"'
-  ).replace('class="nb" onclick="switchToM5()"','onclick="switchToM5()"');
-});
+// Nav handled by single master init below
 
 // Patch all existing switchers to clear mod5
 </script>
-<script>
-// ══ MASTER NAV v3.2 — Journey Order ══
-(function(){
-  var NAV=[
-    ['switchToM0','🎨','Canvas'],
-    ['switchToM5','🎯','Goals'],
-    ['switchToM4','💳','Debt'],
-    ['switchToM3','🗺️','Blueprint'],
-    ['switchToM2','📚','School'],
-    ['switchToM6','📊','P&L']
-  ];
-  var COLORS={
-    switchToM0:'#E8B84B',switchToM1:'#9b72cf',switchToM2:'#2ec4b6',
-    switchToM3:'#D97706',switchToM4:'#DC2626',switchToM5:'#7C3AED',switchToM6:'#059669'
-  };
-  function makeNav(activeFn){
-    return NAV.map(function(b){
-      var act=b[0]===activeFn;
-      return '<button class="nb'+(act?' act':'')+'"'+(act?' style="color:'+COLORS[activeFn]+'"':'')+
-        ' onclick="'+b[0]+'()"><span>'+b[1]+'</span><span>'+b[2]+'</span></button>';
-    }).join('');
-  }
-  function initNavs(){
-    var map={
-      '#mod0 .bnav':'switchToM0','#mod1 .bnav':'switchToM1',
-      '#mod2 .bnav':'switchToM2','#mod3 .bnav':'switchToM3',
-      '#mod4 .bnav':'switchToM4','#mod5 .bnav':'switchToM5',
-      '#mod6 .bnav':'switchToM6'
-    };
-    Object.keys(map).forEach(function(sel){
-      var el=document.querySelector(sel);
-      if(el) el.innerHTML=makeNav(map[sel]);
-    });
-  }
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',initNavs);
-  else initNavs();
-})();
-</script>
+
 
 
 
@@ -6157,43 +6067,564 @@ function m7ShowTab(tab, el){
 
 // ── MODULE SWITCHER ──
 function switchToM7(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7'].forEach(function(id){
-    var el=document.getElementById(id); if(el) el.classList.remove('act');
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod7').classList.add('act');
   window.scrollTo(0,0);
 }
 
-// Update master nav to include M7
-document.addEventListener('DOMContentLoaded', function(){
-  var NAV=[
-    ['switchToM0','🎨','Canvas'],
-    ['switchToM5','🎯','Goals'],
-    ['switchToM4','💳','Debt'],
-    ['switchToM3','🗺️','Blueprint'],
-    ['switchToM2','📚','School'],
-    ['switchToM6','📊','P&L'],
-    ['switchToM7','🛡️','Protect'],
+// Nav handled by single master init below
+</script>
+
+
+
+<!-- ══════ MODULE 8: SCORE REPORT + DON'T DO LIST ══════ -->
+<div id="mod8" class="mod">
+<style>
+#mod8{background:#0B0F1A;min-height:100vh;color:#fff}
+#mod8 header{background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.08);padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+
+.m8w{padding:0 16px 120px;max-width:480px;margin:0 auto}
+
+/* Report card */
+.m8-section{margin-bottom:20px}
+.m8-section-title{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);margin-bottom:12px;font-weight:700}
+
+.m8-hero-score{text-align:center;padding:24px 0 20px}
+.m8-hero-ring{position:relative;width:140px;height:140px;margin:0 auto 12px}
+.m8-hero-ring svg{width:100%;height:100%}
+.m8-hero-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.m8-hero-num{font-family:'DM Mono',monospace;font-size:38px;font-weight:700;line-height:1}
+.m8-hero-lbl{font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;margin-top:4px}
+
+/* Score pillars */
+.m8-pillars{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:16px}
+.m8-pillar{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px;text-align:center}
+.m8-pillar-icon{font-size:22px;margin-bottom:6px}
+.m8-pillar-val{font-family:'DM Mono',monospace;font-size:20px;font-weight:700;margin-bottom:3px}
+.m8-pillar-lbl{font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:.6px}
+.m8-pillar-bar{width:100%;background:rgba(255,255,255,.1);border-radius:4px;height:4px;margin-top:8px}
+.m8-pillar-fill{height:4px;border-radius:4px}
+
+/* Profile summary */
+.m8-profile-row{display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06)}
+.m8-profile-row:last-child{border-bottom:none}
+.m8-profile-icon{font-size:18px;width:28px;text-align:center;flex-shrink:0}
+.m8-profile-label{font-size:12px;color:rgba(255,255,255,.4);flex:1}
+.m8-profile-val{font-size:13px;font-weight:600;color:#fff;text-align:right}
+
+/* Module status */
+.m8-mod-row{display:flex;align-items:center;gap:10px;padding:10px 12px;background:rgba(255,255,255,.04);border-radius:10px;margin-bottom:6px}
+.m8-mod-icon{font-size:18px;flex-shrink:0}
+.m8-mod-name{font-size:13px;font-weight:600;color:#fff;flex:1}
+.m8-mod-status{font-size:11px;font-weight:700;padding:3px 8px;border-radius:10px}
+.m8-mod-done{background:rgba(5,150,105,.2);color:#34D399}
+.m8-mod-pending{background:rgba(156,163,175,.1);color:#9CA3AF}
+
+/* Don't Do cards */
+.m8-dont-card{background:rgba(220,38,38,.08);border:1px solid rgba(220,38,38,.2);border-radius:14px;padding:16px;margin-bottom:10px}
+.m8-dont-header{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.m8-dont-num{font-family:'DM Mono',monospace;font-size:24px;font-weight:700;color:#DC2626;width:32px;flex-shrink:0}
+.m8-dont-title{font-size:14px;font-weight:700;color:#fff}
+.m8-dont-why{font-size:12px;color:rgba(255,255,255,.55);line-height:1.75;margin-bottom:8px}
+.m8-dont-instead{font-size:12px;color:#34D399;background:rgba(5,150,105,.1);border-radius:8px;padding:8px 10px;border-left:2px solid #059669}
+
+/* Wisdom cards */
+.m8-wisdom{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px;margin-bottom:10px}
+.m8-wisdom-quote{font-size:14px;color:#fff;line-height:1.75;font-style:italic;margin-bottom:6px}
+.m8-wisdom-attr{font-size:11px;color:rgba(255,255,255,.35);text-align:right}
+
+/* Tabs */
+.m8-tabs{display:flex;gap:6px;margin-bottom:16px;overflow-x:auto;scrollbar-width:none}
+.m8-tab{flex-shrink:0;padding:8px 12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;font-size:12px;font-weight:700;color:rgba(255,255,255,.5);cursor:pointer;white-space:nowrap}
+.m8-tab.act{background:rgba(232,184,75,.15);border-color:rgba(232,184,75,.4);color:#E8B84B}
+
+/* Share card */
+.m8-share-card{background:linear-gradient(135deg,rgba(232,184,75,.15),rgba(232,184,75,.05));border:1px solid rgba(232,184,75,.3);border-radius:16px;padding:18px;text-align:center;margin-bottom:14px}
+.m8-share-title{font-size:16px;font-weight:700;color:#E8B84B;margin-bottom:6px}
+.m8-share-sub{font-size:12px;color:rgba(255,255,255,.4);margin-bottom:14px;line-height:1.6}
+.m8-share-btn{background:linear-gradient(135deg,#E8B84B,#D97706);color:#fff;border:none;border-radius:10px;padding:11px 20px;font-size:14px;font-weight:700;cursor:pointer;width:100%}
+
+/* Action plan */
+.m8-action{background:rgba(255,255,255,.04);border-left:3px solid #E8B84B;border-radius:0 10px 10px 0;padding:12px 14px;margin-bottom:8px}
+.m8-action-title{font-size:13px;font-weight:700;color:#E8B84B;margin-bottom:4px}
+.m8-action-desc{font-size:12px;color:rgba(255,255,255,.55);line-height:1.7}
+</style>
+
+<div id="app8">
+<header>
+  <div class="brand">
+    <div class="blogo" style="background:linear-gradient(135deg,#E8B84B,#D97706)">🌊</div>
+    <div>
+      <div class="bname" style="color:#fff;font-size:17px;font-weight:700">Cauvery Pulse</div>
+      <div class="bsub" style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px">Score Report · M8</div>
+    </div>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v3.2</div>
+</header>
+
+<div class="m8w">
+
+  <!-- Tabs -->
+  <div style="padding-top:16px">
+    <div class="m8-tabs">
+      <div class="m8-tab act" onclick="m8ShowTab('report',this)">📊 My Report</div>
+      <div class="m8-tab" onclick="m8ShowTab('dont',this)">🚫 Don't Do List</div>
+      <div class="m8-tab" onclick="m8ShowTab('action',this)">⚡ Action Plan</div>
+      <div class="m8-tab" onclick="m8ShowTab('wisdom',this)">💡 Wisdom</div>
+    </div>
+  </div>
+
+  <!-- ── TAB 1: MY REPORT ── -->
+  <div id="m8tab-report">
+
+    <!-- Overall Score Ring -->
+    <div class="m8-hero-score">
+      <div class="m8-hero-ring" id="m8HeroRing">
+        <svg viewBox="0 0 140 140">
+          <circle cx="70" cy="70" r="58" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="12"/>
+          <circle id="m8RingFill" cx="70" cy="70" r="58" fill="none" stroke="#E8B84B" stroke-width="12" stroke-dasharray="0 364" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+        </svg>
+        <div class="m8-hero-center">
+          <div class="m8-hero-num" id="m8ScoreNum" style="color:#E8B84B">—</div>
+          <div class="m8-hero-lbl">Pulse Score</div>
+        </div>
+      </div>
+      <div id="m8ScoreLabel" style="font-size:16px;font-weight:700;color:#E8B84B;margin-bottom:4px">—</div>
+      <div id="m8ScoreSub" style="font-size:12px;color:rgba(255,255,255,.4)">Complete modules to see your full picture</div>
+    </div>
+
+    <!-- Profile Summary -->
+    <div class="m8-section">
+      <div class="m8-section-title">Your Profile</div>
+      <div id="m8ProfileSummary" style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:14px">
+        <div style="text-align:center;color:rgba(255,255,255,.3);font-size:13px;padding:10px">Complete M0 Life Canvas to see your profile here.</div>
+      </div>
+    </div>
+
+    <!-- Module completion -->
+    <div class="m8-section">
+      <div class="m8-section-title">Module Status</div>
+      <div id="m8ModuleStatus"></div>
+    </div>
+
+    <!-- Score Pillars -->
+    <div class="m8-section">
+      <div class="m8-section-title">Score Pillars</div>
+      <div class="m8-pillars" id="m8Pillars">
+        <div class="m8-pillar"><div class="m8-pillar-icon">🎯</div><div class="m8-pillar-val" id="p_goals">—</div><div class="m8-pillar-lbl">Goals Set</div></div>
+        <div class="m8-pillar"><div class="m8-pillar-icon">💳</div><div class="m8-pillar-val" id="p_debt">—</div><div class="m8-pillar-lbl">Debt Health</div></div>
+        <div class="m8-pillar"><div class="m8-pillar-icon">🛡️</div><div class="m8-pillar-val" id="p_protect">—</div><div class="m8-pillar-lbl">Protection</div></div>
+        <div class="m8-pillar"><div class="m8-pillar-icon">📊</div><div class="m8-pillar-val" id="p_savings">—</div><div class="m8-pillar-lbl">Savings Rate</div></div>
+      </div>
+    </div>
+
+    <!-- Share -->
+    <div class="m8-share-card">
+      <div class="m8-share-title">🌊 Your Financial Health Report</div>
+      <div class="m8-share-sub">Cauvery Pulse has analysed your complete financial picture — goals, debt, protection, cash flow, and investment readiness. This is your personal financial health card.</div>
+      <button class="m8-share-btn" onclick="m8CopyReport()">📋 Copy My Report Summary</button>
+    </div>
+
+  </div>
+
+  <!-- ── TAB 2: DON'T DO LIST ── -->
+  <div id="m8tab-dont" style="display:none">
+
+    <div style="text-align:center;padding:16px 0 20px">
+      <div style="font-size:36px;margin-bottom:8px">🚫</div>
+      <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:#fff;margin-bottom:6px">The <span style="color:#DC2626">Don't Do</span> List</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.4);line-height:1.7">Wealth is built as much by what you avoid as what you do. These are the 15 most common financial mistakes that destroy Indian household wealth.</div>
+    </div>
+
+    <!-- DONT DO ITEMS -->
+    <div id="m8DontList"></div>
+
+  </div>
+
+  <!-- ── TAB 3: ACTION PLAN ── -->
+  <div id="m8tab-action" style="display:none">
+    <div style="padding:14px 0 18px">
+      <div style="font-size:22px;font-weight:900;color:#fff;font-family:'Playfair Display',serif;margin-bottom:6px">Your <span style="color:#E8B84B">30-Day</span> Action Plan</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.4);line-height:1.7">Based on your profile and scores. Do these in order — sequence matters.</div>
+    </div>
+    <div id="m8ActionPlan"></div>
+  </div>
+
+  <!-- ── TAB 4: WISDOM ── -->
+  <div id="m8tab-wisdom" style="display:none">
+    <div style="padding:14px 0 18px">
+      <div style="font-size:22px;font-weight:900;color:#fff;font-family:'Playfair Display',serif;margin-bottom:6px">💡 Financial <span style="color:#E8B84B">Wisdom</span></div>
+      <div style="font-size:13px;color:rgba(255,255,255,.4);line-height:1.7">Timeless principles from the world's greatest investors and thinkers on money.</div>
+    </div>
+    <div id="m8WisdomList"></div>
+  </div>
+
+  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v3.2<br>Your financial data stays on your device only.</div>
+</div>
+</div><!-- #app8 -->
+
+<div class="bnav" style="background:#0B0F1A;border-top:1px solid rgba(255,255,255,.1)">
+  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>
+  <button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button>
+  <button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>
+  <button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>
+  <button class="nb" onclick="switchToM7()"><span>🛡️</span><span>Protect</span></button>
+  <button class="nb act" style="color:#E8B84B" onclick="switchToM8()"><span>📋</span><span>Report</span></button>
+</div>
+<div class="toast" id="toast8"></div>
+</div><!-- #mod8 -->
+
+<script>
+// ══════════════════════════════════════════
+// M8 — SCORE REPORT + DON'T DO LIST v3.2
+// ══════════════════════════════════════════
+
+var M8_DONT_LIST = [
+  {
+    title: 'Investing without an emergency fund first',
+    why: 'If you SIP into equity without 6 months of expenses saved, one job loss or medical emergency will force you to redeem at the worst time — usually a market low. You lock in losses permanently.',
+    instead: 'Build 6 months of expenses in a liquid mutual fund or high-yield savings account FIRST. Only then start equity SIPs.'
+  },
+  {
+    title: 'Buying ULIP or endowment insurance plans',
+    why: 'In a ULIP, 20–35% of your first year premium goes in charges. The insurance cover is 5–8× income — a fraction of what term gives. The investment underperforms mutual funds consistently after costs.',
+    instead: 'Buy pure term insurance (15–20× income) + separate SIP in index fund. You get more cover AND more wealth — always.'
+  },
+  {
+    title: 'Timing the market — waiting for the right time to invest',
+    why: 'Since 1979, if you had missed just the 10 best days of the Indian market each decade, your returns would have halved. The best days usually come right after the worst days — and nobody can predict either.',
+    instead: 'Start a SIP today. Time IN the market beats TIMING the market. Automate on salary date and never think about it again.'
+  },
+  {
+    title: 'Investing in chit funds or informal schemes',
+    why: 'Chit funds promise guaranteed high returns. The mathematical reality: in a 20-person chit, you subsidise early bidders. Late subscribers earn the least. Unregistered chits have zero legal protection.',
+    instead: 'Use RBI-regulated instruments only: FD, mutual funds, government bonds, NPS, EPF. If it sounds too good, it is fraud.'
+  },
+  {
+    title: 'Putting all savings in Fixed Deposits',
+    why: 'After TDS at 30% slab and 6% inflation, a 7% FD gives you a real return of -0.9% per year. Your money is shrinking in purchasing power while sitting in the "safe" FD.',
+    instead: 'FD only for emergency fund (3–6 months) and short-term goals (under 1 year). Use index funds for 3+ year goals.'
+  },
+  {
+    title: 'Trading stocks or F&O for income',
+    why: 'SEBI data 2024: 93% of F&O traders lose money. The average loss is ₹1.1 lakh per person per year. The 7% who profit are institutional traders with algorithms and risk desks — not retail investors.',
+    instead: 'Use the stock market to own businesses through index funds — not to trade prices. Investing and trading are fundamentally different activities.'
+  },
+  {
+    title: 'Ignoring tax planning until March',
+    why: 'Last-minute March tax planning forces you into sub-optimal products — often ULIPs and endowment plans pushed by agents. You pay more tax and earn less return simultaneously.',
+    instead: 'Plan in April. Choose 80C instruments based on merit: ELSS for equity upside, EPF VPF for safe guaranteed returns. 80CCD(1B) NPS for extra ₹50K.'
+  },
+  {
+    title: 'Taking personal loans or credit card debt for consumption',
+    why: 'Personal loan at 15% interest means you need to earn 15% just to break even. Credit card at 42% is financial quicksand. Every ₹1L borrowed costs ₹42,000/year in interest — invisibly.',
+    instead: 'Build a consumption fund for planned large purchases. If you cannot save for it, you cannot afford it. Never borrow for lifestyle.'
+  },
+  {
+    title: 'Depending on one income source',
+    why: 'One income stream means one point of failure. Job loss, health crisis, or business downturn can eliminate income instantly. Indians with single income have less than 3 months of savings on average.',
+    instead: 'Build a secondary income: freelancing, rental income, dividend income from equity, royalties. Even ₹10,000/month second income changes everything.'
+  },
+  {
+    title: 'Mixing family and money — lending to relatives without documentation',
+    why: 'Informal family lending destroys both the money and the relationship. "I will pay you back" with no timeline, no interest, and no documentation means the money is already spent — emotionally and financially.',
+    instead: 'If you can afford to gift it, gift it. If it is a loan, document it with amount, timeline, and interest — even at 0%. Written clarity preserves relationships.'
+  },
+  {
+    title: 'Real estate as the only investment',
+    why: 'Residential real estate in India has returned 5–7% annually over 20 years — barely above inflation. It is illiquid, undiversified, requires massive EMI commitment, and carries 8–10% transaction costs.',
+    instead: 'Real estate is fine as a home purchase (consumption). For wealth creation: Nifty 50 index funds have compounded at 12%+ for 30 years with full liquidity.'
+  },
+  {
+    title: 'Over-insuring with multiple low-cover policies',
+    why: 'Many Indians pay premiums on 5–6 small LIC endowment policies totalling ₹5–10L cover — when they need ₹1.5–2Cr. They pay more in premiums for inadequate cover AND poor returns.',
+    instead: 'One comprehensive term plan (₹1.5–2Cr) costs less than the sum of multiple small policies. Surrender old endowment plans after careful calculation.'
+  },
+  {
+    title: 'Following stock tips from social media or WhatsApp groups',
+    why: 'Pump-and-dump schemes operate exclusively through social media. The promoters buy the stock, push tips to retail investors, stock rises, promoters dump — retail is left holding losses.',
+    instead: 'Research businesses, not tips. Buy index funds if you do not have time to research. Never buy something you do not understand.'
+  },
+  {
+    title: 'Withdrawing PF every time you change jobs',
+    why: 'EPF at 8.15% tax-free, compounded over 30 years on ₹5L = ₹55L. The same ₹5L withdrawn and spent at 30 loses ₹50L in retirement wealth. EPF withdrawal is the most expensive financial mistake salaried Indians make.',
+    instead: 'Transfer PF via UAN when changing jobs. Never withdraw unless facing genuine emergency with no other option.'
+  },
+  {
+    title: 'No nomination, no will, no estate planning',
+    why: 'Unclaimed financial assets in India: ₹75,000 Cr in 2024. Families fight for years over assets because nominations were not updated. Banks freeze accounts. Insurance gets denied. Legal heirs wait decades.',
+    instead: 'Today: update nominations on every account, SIP, insurance, PF. After 35 with any significant assets: write a simple will. It costs ₹1,000–₹3,000 and saves years of family grief.'
+  },
+];
+
+var M8_WISDOM = [
+  {quote: 'The stock market is a device for transferring money from the impatient to the patient.', attr: '— Warren Buffett'},
+  {quote: "The investor's chief problem — and even his worst enemy — is likely to be himself.", attr: "— Benjamin Graham, The Intelligent Investor"},
+  {quote: "It's not about how much money you make, but how much you keep, how hard it works for you, and how many generations you keep it for.", attr: "— Robert Kiyosaki"},
+  {quote: 'Do not save what is left after spending. Instead, spend what is left after saving.', attr: '— Warren Buffett'},
+  {quote: 'The first rule of compounding: never interrupt it unnecessarily.', attr: '— Charlie Munger'},
+  {quote: 'Financial peace is not the acquisition of stuff. It is learning to live on less than you make.', attr: '— Dave Ramsey'},
+  {quote: 'Risk comes from not knowing what you are doing.', attr: '— Warren Buffett'},
+  {quote: 'In investing, what is comfortable is rarely profitable.', attr: '— Robert Arnott'},
+  {quote: "The individual investor should act consistently as an investor and not as a speculator.", attr: "— Benjamin Graham"},
+  {quote: 'Wide diversification is only required when investors do not understand what they are doing.', attr: '— Warren Buffett'},
+  {quote: 'The most important quality for an investor is temperament, not intellect.', attr: '— Warren Buffett'},
+  {quote: 'Compound interest is the eighth wonder of the world. He who understands it, earns it. He who does not, pays it.', attr: '— Attributed to Albert Einstein'},
+];
+
+// ── MODULE STATUS ──
+var M8_MODULES = [
+  {id:'mod0', icon:'🎨', name:'Life Canvas',        key:'cp_canvas'},
+  {id:'mod1', icon:'🩺', name:'Pulse Score',         key:'cp_score'},
+  {id:'mod2', icon:'📚', name:'Investment School',   key:null},
+  {id:'mod3', icon:'🗺️', name:'Portfolio Blueprint', key:'cp_canvas'},
+  {id:'mod4', icon:'💳', name:'Debt Analyser',       key:null},
+  {id:'mod5', icon:'🎯', name:'Goal Planner',        key:'cp_goals'},
+  {id:'mod6', icon:'📊', name:'Monthly P&L',         key:'cp_pl'},
+  {id:'mod7', icon:'🛡️', name:'Protection Check',    key:'cp_protection'},
+];
+
+function m8LoadReport(){
+  var cv    = JSON.parse(localStorage.getItem('cp_canvas')||'{}');
+  var score = JSON.parse(localStorage.getItem('cp_score')||'{}');
+  var goals = JSON.parse(localStorage.getItem('cp_goals')||'[]');
+  var pl    = JSON.parse(localStorage.getItem('cp_pl')||'{}');
+  var prot  = JSON.parse(localStorage.getItem('cp_protection')||'{}');
+
+  // ── Overall Pulse Score ──
+  var pulseScore = score.total || 0;
+  var circ = 2*Math.PI*58;
+  var filled = (pulseScore/100)*circ;
+  var scoreColor = pulseScore>=75?'#34D399':pulseScore>=50?'#FBBF24':'#F87171';
+  var ringEl = document.getElementById('m8RingFill');
+  if(ringEl){ ringEl.style.stroke=scoreColor; ringEl.setAttribute('stroke-dasharray',filled.toFixed(1)+' '+circ.toFixed(1)); }
+  var numEl = document.getElementById('m8ScoreNum');
+  if(numEl){ numEl.textContent=pulseScore||'—'; numEl.style.color=scoreColor; }
+  var lblEl = document.getElementById('m8ScoreLabel');
+  var subEl = document.getElementById('m8ScoreSub');
+  if(lblEl){ lblEl.textContent = pulseScore>=75?'Financially Healthy':pulseScore>=50?'Building Momentum':pulseScore>0?'Early Stage — Keep Going':'Complete Modules to Score'; lblEl.style.color=scoreColor; }
+  if(subEl){ subEl.textContent = pulseScore>0?'Based on your M1 Cauvery Pulse Score assessment.':'Complete M1 Score Check to see your overall rating.'; }
+
+  // ── Profile Summary ──
+  var ps = document.getElementById('m8ProfileSummary');
+  var LS={school:'School Student',college:'College Student',young_adult:'Young Adult',
+    first_earner:'First Time Earner',professional:'Professional',homemaker:'Homemaker',
+    thirties:'Thirties',forties:'Forties',pre_retire:'Pre-Retirement',
+    post_retire:'Post-Retirement',senior65:'65 Plus',senior75:'75 Plus'};
+  var INV={lt2k:'Below ₹2,000/mo','2k_10k':'₹2K–₹10K/mo','10k_50k':'₹10K–₹50K/mo',gt50k:'₹50K+/mo'};
+  if(ps && cv.lifeStage){
+    ps.innerHTML=[
+      {icon:'🪪', label:'Life Stage',         val: LS[cv.lifeStage]||cv.lifeStage},
+      {icon:'💼', label:'Profession',          val: cv.profession||'—'},
+      {icon:'🏙️', label:'Investment Capacity', val: INV[cv.invCap]||'—'},
+      {icon:'🎯', label:'Goals Saved',         val: goals.length+' goals'},
+      {icon:'📊', label:'Months Tracked',      val: Object.keys(pl).length+' months'},
+    ].map(function(r){
+      return '<div class="m8-profile-row">'+
+        '<div class="m8-profile-icon">'+r.icon+'</div>'+
+        '<div class="m8-profile-label">'+r.label+'</div>'+
+        '<div class="m8-profile-val">'+r.val+'</div>'+
+      '</div>';
+    }).join('');
+  }
+
+  // ── Module Status ──
+  var ms = document.getElementById('m8ModuleStatus');
+  if(ms){
+    ms.innerHTML = M8_MODULES.map(function(m){
+      var done = m.key ? localStorage.getItem(m.key) : true;
+      return '<div class="m8-mod-row">'+
+        '<div class="m8-mod-icon">'+m.icon+'</div>'+
+        '<div class="m8-mod-name">'+m.name+'</div>'+
+        '<span class="m8-mod-status '+(done?'m8-mod-done':'m8-mod-pending')+'">'+
+          (done?'✓ Active':'Pending')+
+        '</span>'+
+      '</div>';
+    }).join('');
+  }
+
+  // ── Score Pillars ──
+  var goalsEl=document.getElementById('p_goals');
+  var debtEl=document.getElementById('p_debt');
+  var protEl=document.getElementById('p_protect');
+  var savEl=document.getElementById('p_savings');
+
+  if(goalsEl) goalsEl.textContent = goals.length>0 ? goals.length+' set' : 'None';
+  if(debtEl){
+    var dti = parseFloat(localStorage.getItem('cp_dti')||'0');
+    debtEl.textContent = dti>0?(dti+'% DTI'):'—';
+    debtEl.style.color = dti>50?'#F87171':dti>30?'#FBBF24':'#34D399';
+  }
+  if(protEl){
+    var protScore = prot.score?Math.round(prot.score.pct)+'%':'—';
+    protEl.textContent = protScore;
+    if(prot.score) protEl.style.color = prot.score.pct>=75?'#34D399':prot.score.pct>=50?'#FBBF24':'#F87171';
+  }
+  if(savEl){
+    var plKeys=Object.keys(pl);
+    if(plKeys.length>0){
+      var latest=pl[plKeys.sort().reverse()[0]];
+      var sr=latest.totals.income>0?Math.round(latest.totals.invested/latest.totals.income*100):0;
+      savEl.textContent=sr+'%';
+      savEl.style.color=sr>=20?'#34D399':sr>=10?'#FBBF24':'#F87171';
+    } else {
+      savEl.textContent='—';
+    }
+  }
+}
+
+// ── DON'T DO LIST ──
+function m8BuildDontList(){
+  var el=document.getElementById('m8DontList');
+  if(!el||el.innerHTML) return;
+  el.innerHTML=M8_DONT_LIST.map(function(item,i){
+    return '<div class="m8-dont-card">'+
+      '<div class="m8-dont-header">'+
+        '<div class="m8-dont-num">'+(i+1<10?'0'+(i+1):i+1)+'</div>'+
+        '<div class="m8-dont-title">'+item.title+'</div>'+
+      '</div>'+
+      '<div class="m8-dont-why">'+item.why+'</div>'+
+      '<div class="m8-dont-instead"><strong style="color:#059669">✅ Do this instead:</strong> '+item.instead+'</div>'+
+    '</div>';
+  }).join('');
+}
+
+// ── ACTION PLAN ──
+function m8BuildActionPlan(){
+  var el=document.getElementById('m8ActionPlan');
+  if(!el||el.innerHTML) return;
+  var cv=JSON.parse(localStorage.getItem('cp_canvas')||'{}');
+  var goals=JSON.parse(localStorage.getItem('cp_goals')||'[]');
+  var prot=JSON.parse(localStorage.getItem('cp_protection')||'{}');
+  var pl=JSON.parse(localStorage.getItem('cp_pl')||'{}');
+
+  var actions=[
+    {title:'Week 1: Emergency Fund Check', desc:'Open a liquid mutual fund (Parag Parikh Liquid, HDFC Liquid). Calculate 6 months of expenses. Set up auto-transfer of surplus until funded. This is your financial immune system.'},
+    {title:'Week 1: Nominations Audit', desc:'Log into every bank account, MF folio, insurance policy, EPF, NPS. Verify nominee name and relationship. Update where blank or outdated. Takes 30 minutes — saves years of family grief.'},
+    {title:'Week 2: Term Insurance Review', desc:(prot.life&&prot.life.gap>0)?'Your life cover gap is significant. Get quotes from HDFC Life, Max Life, ICICI Pru. Buy online — no agent, no commission, lower premium. Target cover: '+(prot.life?Math.round(prot.life.need/100000)+'L':'15–20× your income')+'.'
+      :'Review your term plan annually. As income grows, increase cover proportionally. Set a calendar reminder for April every year.'},
+    {title:'Week 2: Health Insurance Upgrade', desc:(prot.health&&prot.health.gap>0)?'Health gap identified. Add a super top-up plan of ₹'+(prot.health?Math.round(prot.health.gap/100000)+'L':'20L+')+' over your base plan. HDFC ERGO Optima Super, Niva Bupa ReAssure, Star Comprehensive. Annual premium is fraction of a single hospitalization.'
+      :'Review sum insured annually for medical inflation. ₹10L cover today = ₹3L in purchasing power in 10 years at 12% medical inflation.'},
+    {title:'Week 3: SIP Automation', desc: goals.length>0 ? 'You have '+goals.length+' financial goals. Create separate SIP mandates for each goal — same amount as calculated, in Nifty 50 or relevant fund. Auto-debit on salary date. Label each folio with the goal name.' : 'Go to M5 Goal Planner, set at least 3 goals, calculate the SIP for each. Then create separate SIP mandates — one per goal. Automate on salary date. Review annually.'},
+    {title:'Week 3: Debt Audit', desc:'List every loan — home, car, personal, credit card. Calculate your DTI ratio in M4. If above 40%, pause new investments and accelerate high-rate debt repayment using the Avalanche method. Credit card balance must be zero every month.'},
+    {title:'Week 4: Tax Optimisation', desc:'Check 80C utilisation — EPF + ELSS + other instruments. If any gap, add ELSS SIP immediately. Add ₹50,000 NPS contribution for 80CCD(1B). If employed, ask HR to restructure CTC with employer NPS under 80CCD(2) — no upper limit.'},
+    {title:'Month 2+: Annual Review Habit', desc:'Every April: recalculate all goals, increase SIPs by 10%, review insurance cover, check DTI, update M6 with previous year P&L. The annual review takes 2 hours and compounds your financial results over a lifetime.'},
   ];
-  var COLORS={switchToM0:'#E8B84B',switchToM2:'#2ec4b6',switchToM3:'#D97706',
-    switchToM4:'#DC2626',switchToM5:'#7C3AED',switchToM6:'#059669',switchToM7:'#DC2626'};
+
+  el.innerHTML=actions.map(function(a,i){
+    return '<div class="m8-action">'+
+      '<div class="m8-action-title">'+(i+1)+'. '+a.title+'</div>'+
+      '<div class="m8-action-desc">'+a.desc+'</div>'+
+    '</div>';
+  }).join('');
+}
+
+// ── WISDOM ──
+function m8BuildWisdom(){
+  var el=document.getElementById('m8WisdomList');
+  if(!el||el.innerHTML) return;
+  el.innerHTML=M8_WISDOM.map(function(w){
+    return '<div class="m8-wisdom">'+
+      '<div class="m8-wisdom-quote">"'+w.quote+'"</div>'+
+      '<div class="m8-wisdom-attr">'+w.attr+'</div>'+
+    '</div>';
+  }).join('');
+}
+
+// ── COPY REPORT ──
+function m8CopyReport(){
+  var cv=JSON.parse(localStorage.getItem('cp_canvas')||'{}');
+  var score=JSON.parse(localStorage.getItem('cp_score')||'{}');
+  var goals=JSON.parse(localStorage.getItem('cp_goals')||'[]');
+  var LS={school:'School Student',college:'College Student',young_adult:'Young Adult',
+    first_earner:'First Time Earner',professional:'Professional',homemaker:'Homemaker',
+    thirties:'Thirties',forties:'Forties',pre_retire:'Pre-Retirement'};
+  var txt='🌊 CAUVERY PULSE — MY FINANCIAL HEALTH REPORT\n';
+  txt+='Generated: '+new Date().toLocaleDateString('en-IN')+'\n\n';
+  if(cv.lifeStage) txt+='Life Stage: '+(LS[cv.lifeStage]||cv.lifeStage)+'\n';
+  if(score.total)  txt+='Pulse Score: '+score.total+'/100\n';
+  txt+='Goals Set: '+goals.length+'\n';
+  txt+='\nPowered by Cauvery Pulse · Elango Industries Limited\n';
+  txt+='cauvery-pulse.github.io';
+  navigator.clipboard&&navigator.clipboard.writeText(txt).then(function(){
+    var t=document.getElementById('toast8');
+    if(t){t.textContent='Report copied ✓';t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2200);}
+  });
+}
+
+// ── TABS ──
+function m8ShowTab(tab, el){
+  ['report','dont','action','wisdom'].forEach(function(t){
+    var e=document.getElementById('m8tab-'+t); if(e) e.style.display='none';
+  });
+  document.querySelectorAll('.m8-tab').forEach(function(t){t.classList.remove('act');});
+  document.getElementById('m8tab-'+tab).style.display='block';
+  if(el) el.classList.add('act');
+  if(tab==='report')  m8LoadReport();
+  if(tab==='dont')    m8BuildDontList();
+  if(tab==='action')  m8BuildActionPlan();
+  if(tab==='wisdom')  m8BuildWisdom();
+}
+
+// ── MODULE SWITCHER ──
+function switchToM8(){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8'].forEach(function(id){
+    var el=document.getElementById(id); if(el) el.classList.remove('act');
+  });
+  document.getElementById('mod8').classList.add('act');
+  window.scrollTo(0,0);
+  m8LoadReport();
+}
+
+// Nav handled by single master init below
+</script>
+<script>
+// ══ CAUVERY PULSE — MASTER NAV v3.2 — ALL MODULES ══
+(function(){
+  var NAV = [
+    ['switchToM0', '🎨', 'Canvas'],
+    ['switchToM5', '🎯', 'Goals'],
+    ['switchToM4', '💳', 'Debt'],
+    ['switchToM3', '🗺️', 'Blueprint'],
+    ['switchToM2', '📚', 'School'],
+    ['switchToM6', '📊', 'P&L'],
+    ['switchToM7', '🛡️', 'Protect'],
+    ['switchToM8', '📋', 'Report'],
+  ];
+  var COLORS = {
+    switchToM0:'#E8B84B', switchToM1:'#9b72cf', switchToM2:'#2ec4b6',
+    switchToM3:'#D97706', switchToM4:'#DC2626', switchToM5:'#7C3AED',
+    switchToM6:'#059669', switchToM7:'#DC2626', switchToM8:'#E8B84B'
+  };
   function makeNav(activeFn){
     return NAV.map(function(b){
-      var act=b[0]===activeFn;
-      return '<button class="nb'+(act?' act':'')+'"'+(act?' style="color:'+COLORS[activeFn]+'"':'')+
+      var act = b[0] === activeFn;
+      return '<button class="nb'+(act?' act':'')+'"'+
+        (act?' style="color:'+COLORS[activeFn]+'"':'')+
         ' onclick="'+b[0]+'()"><span>'+b[1]+'</span><span>'+b[2]+'</span></button>';
     }).join('');
   }
-  var map={
-    '#mod0 .bnav':'switchToM0','#mod1 .bnav':'switchToM1',
-    '#mod2 .bnav':'switchToM2','#mod3 .bnav':'switchToM3',
-    '#mod4 .bnav':'switchToM4','#mod5 .bnav':'switchToM5',
-    '#mod6 .bnav':'switchToM6','#mod7 .bnav':'switchToM7'
-  };
-  Object.keys(map).forEach(function(sel){
-    var el=document.querySelector(sel); if(el) el.innerHTML=makeNav(map[sel]);
-  });
-});
+  function initNavs(){
+    var modNavMap = {
+      '#mod0 .bnav':'switchToM0', '#mod1 .bnav':'switchToM1',
+      '#mod2 .bnav':'switchToM2', '#mod3 .bnav':'switchToM3',
+      '#mod4 .bnav':'switchToM4', '#mod5 .bnav':'switchToM5',
+      '#mod6 .bnav':'switchToM6', '#mod7 .bnav':'switchToM7',
+      '#mod8 .bnav':'switchToM8'
+    };
+    Object.keys(modNavMap).forEach(function(sel){
+      var el = document.querySelector(sel);
+      if(el) el.innerHTML = makeNav(modNavMap[sel]);
+    });
+  }
+  if(document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', initNavs);
+  } else {
+    initNavs();
+  }
+})();
 </script>
 </body>
 </html>
