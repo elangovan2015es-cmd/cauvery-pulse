@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Cauvery Pulse | v3.2 | Build: 20260418-0200 | Elango Industries Limited -->
+<!-- Cauvery Pulse | v3.6 | Build: 20260418-0315 | Elango Industries Limited -->
 <title>Cauvery Pulse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
@@ -22,36 +22,36 @@
 <style>
 
 :root {
-  --ink:    #07091a;
-  --deep:   #0d1130;
-  --card:   #111535;
-  --card2:  #181c42;
-  --border: rgba(255,255,255,0.07);
-  --gold:   #e8b84b;
-  --gold2:  #f7d98a;
-  --teal:   #2ec4b6;
-  --rose:   #e06b7a;
-  --indigo: #6c7fff;
-  --green:  #3ecf8e;
-  --purple: #9b72cf;
-  --amber:  #f4a535;
-  --text:   #dde6f5;
-  --muted:  #5d6e8a;
+  --ink:    #ffffff;
+  --deep:   #F0F4FF;
+  --card:   #ffffff;
+  --card2:  #F8F9FF;
+  --border: rgba(0,0,0,0.08);
+  --gold:   #059669;
+  --gold2:  #34D399;
+  --teal:   #0891B2;
+  --rose:   #DC2626;
+  --indigo: #2563EB;
+  --green:  #059669;
+  --purple: #7C3AED;
+  --amber:  #059669;
+  --text:   #111827;
+  --muted:  #6B7280;
   --ff-h:   'Cormorant Garamond', serif;
   --ff-b:   'DM Sans', sans-serif;
   --ff-m:   'DM Mono', monospace;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{font-family:var(--ff-b);background:var(--ink);color:var(--text);min-height:100vh;overflow-x:hidden}
+body{font-family:var(--ff-b);background:#fff;color:#111827;min-height:100vh;overflow-x:hidden}
 
 /* STAR FIELD */
-.starfield{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none}
+.starfield{position:fixed;inset:0;z-index:0;overflow:hidden;pointer-events:none;display:none}
 .star{position:absolute;border-radius:50%;background:#fff;animation:twinkle var(--dur,3s) ease-in-out infinite}
 @keyframes twinkle{0%,100%{opacity:var(--lo,.1);transform:scale(1)}50%{opacity:var(--hi,.8);transform:scale(1.3)}}
 
 /* AURORA */
-.aurora{position:fixed;inset:0;z-index:0;pointer-events:none}
+.aurora{position:fixed;inset:0;z-index:0;pointer-events:none;display:none}
 .aurora::before{content:'';position:absolute;top:-30%;left:-20%;width:80%;height:80%;background:radial-gradient(ellipse,rgba(108,127,255,.08) 0%,transparent 70%);animation:drift 18s ease-in-out infinite}
 .aurora::after{content:'';position:absolute;bottom:-20%;right:-10%;width:70%;height:70%;background:radial-gradient(ellipse,rgba(46,196,182,.06) 0%,transparent 70%);animation:drift 24s ease-in-out infinite reverse}
 @keyframes drift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(3%,3%) scale(1.05)}}
@@ -61,10 +61,10 @@ body{font-family:var(--ff-b);background:var(--ink);color:var(--text);min-height:
 /* HEADER */
 header{padding:22px 20px 14px;display:flex;align-items:center;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:10px}
-.blogo{width:38px;height:38px;background:linear-gradient(135deg,var(--gold),var(--teal));border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.blogo{width:38px;height:38px;background:linear-gradient(135deg,#059669,#0891B2);border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:20px}
 .bname{font-family:var(--ff-h);font-size:19px;font-weight:700;line-height:1;letter-spacing:.3px}
-.bsub{font-size:10px;color:var(--muted);letter-spacing:1.2px;text-transform:uppercase;margin-top:2px}
-.vtag{font-family:var(--ff-m);font-size:11px;color:var(--muted);background:var(--card);border:1px solid var(--border);padding:4px 8px;border-radius:20px}
+.bsub{font-size:10px;color:#6B7280;letter-spacing:1.2px;text-transform:uppercase;margin-top:2px}
+.vtag{font-family:var(--ff-m);font-size:11px;color:#6B7280;background:#fff;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px}
 
 /* SCREEN SYSTEM */
 .screen{display:none;animation:fu .45s ease}
@@ -73,22 +73,22 @@ header{padding:22px 20px 14px;display:flex;align-items:center;justify-content:sp
 
 /* COMMON */
 .px{padding:0 20px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin-bottom:14px}
-.card-lbl{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
-.btn-p{width:100%;padding:15px;background:linear-gradient(135deg,var(--gold),#bf8a1a);color:#07091a;font-family:var(--ff-b);font-size:15px;font-weight:700;border:none;border-radius:13px;cursor:pointer;transition:all .2s;margin-bottom:10px}
+.card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:18px;margin-bottom:14px}
+.card-lbl{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#6B7280;margin-bottom:12px}
+.btn-p{width:100%;padding:16px;background:linear-gradient(135deg,#059669,#047857);color:#fff;font-weight:700;border:none;border-radius:14px;cursor:pointer;font-size:16px;font-family:inherit;letter-spacing:.3px}
 .btn-p:active{transform:scale(.98)}
-.btn-s{width:100%;padding:13px;background:transparent;color:var(--text);font-family:var(--ff-b);font-size:14px;font-weight:500;border:1px solid var(--border);border-radius:13px;cursor:pointer;transition:all .2s;margin-bottom:10px}
-.btn-s:hover{background:var(--card)}
-.chip{padding:7px 13px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:13px;color:var(--muted);cursor:pointer;transition:all .2s;user-select:none;display:inline-block;margin:4px}
+.btn-s{width:100%;padding:13px;background:transparent;color:#111827;font-family:var(--ff-b);font-size:14px;font-weight:500;border:1px solid #E5E7EB;border-radius:13px;cursor:pointer;transition:all .2s;margin-bottom:10px}
+.btn-s:hover{background:#fff}
+.chip{padding:7px 13px;background:#fff;border:1px solid #E5E7EB;border-radius:20px;font-size:13px;color:#6B7280;cursor:pointer;transition:all .2s;user-select:none;display:inline-block;margin:4px}
 .chip.sel{background:rgba(232,184,75,.15);border-color:var(--gold);color:var(--gold)}
 
 /* PROGRESS BAR */
 .prog-wrap{padding:0 20px 16px}
 .prog-steps{display:flex;gap:6px;margin-bottom:8px}
-.prog-step{flex:1;height:3px;border-radius:2px;background:var(--card2);transition:background .4s}
-.prog-step.done{background:var(--gold)}
+.prog-step{flex:1;height:3px;border-radius:2px;background:#F8F9FF;transition:background .4s}
+.prog-step.done{background:#059669}
 .prog-step.active{background:linear-gradient(90deg,var(--gold),var(--teal))}
-.prog-label{font-size:11px;color:var(--muted);text-align:center;letter-spacing:.5px}
+.prog-label{font-size:11px;color:#6B7280;text-align:center;letter-spacing:.5px}
 
 /* ══════════ SCREEN 0: OPENING ══════════ */
 #s0{padding:0 20px 20px;text-align:center}
@@ -97,11 +97,11 @@ header{padding:22px 20px 14px;display:flex;align-items:center;justify-content:sp
 .verse-line:nth-child(1){animation-delay:.3s}
 .verse-line:nth-child(2){animation-delay:.8s}
 .verse-line:nth-child(3){animation-delay:1.3s}
-.verse-attr{font-size:12px;color:var(--muted);margin-top:8px;opacity:0;animation:fadeIn .8s ease forwards;animation-delay:1.8s}
+.verse-attr{font-size:12px;color:#6B7280;margin-top:8px;opacity:0;animation:fadeIn .8s ease forwards;animation-delay:1.8s}
 @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
-.opening-desc{font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:28px;text-align:left}
-.opening-desc strong{color:var(--text)}
-.module-badge{display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:20px;padding:8px 16px;font-size:12px;color:var(--muted);margin-bottom:24px}
+.opening-desc{font-size:14px;color:#6B7280;line-height:1.8;margin-bottom:28px;text-align:left}
+.opening-desc strong{color:#111827}
+.module-badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid #E5E7EB;border-radius:20px;padding:8px 16px;font-size:12px;color:#6B7280;margin-bottom:24px}
 .module-badge span{font-size:16px}
 
 /* ══════════ SCREEN 1: OVARIAN LOTTERY ══════════ */
@@ -111,13 +111,13 @@ header{padding:22px 20px 14px;display:flex;align-items:center;justify-content:sp
 @keyframes spin-slow{from{transform:rotateY(0)}to{transform:rotateY(360deg)}}
 .ol-title{font-family:var(--ff-h);font-size:28px;font-weight:700;line-height:1.2;margin-bottom:10px}
 .ol-title span{color:var(--gold);font-style:italic}
-.ol-desc{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:6px}
+.ol-desc{font-size:13px;color:#6B7280;line-height:1.8;margin-bottom:6px}
 
 .lottery-factors{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}
-.lf-card{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:14px;text-align:center}
+.lf-card{background:#fff;border:1px solid #E5E7EB;border-radius:13px;padding:14px;text-align:center}
 .lf-icon{font-size:26px;margin-bottom:7px}
 .lf-name{font-size:12px;font-weight:600;margin-bottom:4px}
-.lf-desc{font-size:11px;color:var(--muted);line-height:1.5}
+.lf-desc{font-size:11px;color:#6B7280;line-height:1.5}
 .lf-tag{font-size:10px;padding:2px 8px;border-radius:10px;margin-top:6px;display:inline-block;font-weight:600;letter-spacing:.5px}
 .tag-no{background:rgba(224,107,122,.15);color:var(--rose)}
 .tag-yes{background:rgba(62,207,142,.15);color:var(--green)}
@@ -129,16 +129,16 @@ header{padding:22px 20px 14px;display:flex;align-items:center;justify-content:sp
 #s2{padding:0 20px 20px}
 .sp-title{font-family:var(--ff-h);font-size:26px;font-weight:700;line-height:1.3;margin-bottom:10px;text-align:center}
 .sp-title span{color:var(--teal);font-style:italic}
-.sp-desc{font-size:13px;color:var(--muted);line-height:1.8;text-align:center;margin-bottom:24px}
+.sp-desc{font-size:13px;color:#6B7280;line-height:1.8;text-align:center;margin-bottom:24px}
 .sp-grid{display:flex;flex-direction:column;gap:10px;margin-bottom:20px}
-.sp-opt{display:flex;align-items:flex-start;gap:13px;padding:15px 16px;background:var(--card);border:1px solid var(--border);border-radius:13px;cursor:pointer;transition:all .2s}
+.sp-opt{display:flex;align-items:flex-start;gap:13px;padding:15px 16px;background:#fff;border:1px solid #E5E7EB;border-radius:13px;cursor:pointer;transition:all .2s}
 .sp-opt.sel{background:rgba(108,127,255,.1);border-color:var(--indigo)}
 .sp-opt-ic{font-size:24px;flex-shrink:0;width:36px;text-align:center;margin-top:2px}
 .sp-opt-body{flex:1}
 .sp-opt-title{font-size:14px;font-weight:600;margin-bottom:3px}
-.sp-opt-desc{font-size:12px;color:var(--muted);line-height:1.5}
+.sp-opt-desc{font-size:12px;color:#6B7280;line-height:1.5}
 .sp-opt-tag{font-size:10px;padding:2px 8px;border-radius:10px;margin-top:5px;display:inline-block;font-weight:600;background:rgba(108,127,255,.15);color:var(--indigo)}
-.sp-note{font-size:12px;color:var(--muted);text-align:center;line-height:1.7;font-style:italic;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:14px;margin-bottom:20px}
+.sp-note{font-size:12px;color:#6B7280;text-align:center;line-height:1.7;font-style:italic;background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:14px;margin-bottom:20px}
 
 /* ══════════ SCREEN 3: MIRROR MOMENT ══════════ */
 #s3{padding:0 20px 20px}
@@ -148,7 +148,7 @@ header{padding:22px 20px 14px;display:flex;align-items:center;justify-content:sp
 .mirror-reflection{position:absolute;inset:20px 15px;border-radius:50% 50% 40% 40%;background:linear-gradient(160deg,rgba(108,127,255,.12),rgba(46,196,182,.08));display:flex;align-items:center;justify-content:center;font-size:52px;animation:breathe 4s ease-in-out infinite}
 @keyframes breathe{0%,100%{transform:scale(1);filter:brightness(1)}50%{transform:scale(1.05);filter:brightness(1.15)}}
 .mirror-quote{font-family:var(--ff-h);font-size:21px;font-style:italic;font-weight:600;color:var(--gold2);line-height:1.5;margin-bottom:8px}
-.mirror-sub{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:20px}
+.mirror-sub{font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:20px}
 
 .declaration-box{background:linear-gradient(135deg,rgba(108,127,255,.1),rgba(46,196,182,.06));border:1px solid rgba(108,127,255,.25);border-radius:16px;padding:20px;margin-bottom:20px}
 .decl-title{font-family:var(--ff-h);font-size:16px;font-weight:600;color:var(--indigo);margin-bottom:14px;text-align:center;letter-spacing:.3px}
@@ -157,11 +157,11 @@ header{padding:22px 20px 14px;display:flex;align-items:center;justify-content:sp
 .decl-check{width:22px;height:22px;border-radius:6px;background:rgba(108,127,255,.2);border:1.5px solid var(--indigo);display:flex;align-items:center;justify-content:center;flex-shrink:0;cursor:pointer;transition:all .2s;margin-top:1px}
 .decl-check.checked{background:var(--indigo);border-color:var(--indigo)}
 .decl-check.checked::after{content:'✓';font-size:12px;color:#fff;font-weight:700}
-.decl-text{font-size:13px;line-height:1.6;color:var(--text)}
+.decl-text{font-size:13px;line-height:1.6;color:#111827}
 .decl-text em{color:var(--gold2);font-style:italic}
 
 /* ══════════ INVESTOR PROFILER TILES ══════════ */
-.ls-tile{display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 12px;background:var(--card);border:1px solid var(--border);border-radius:12px;cursor:pointer;transition:all .2s;min-width:72px;font-size:12px;font-weight:500;color:var(--muted);text-align:center}
+.ls-tile{display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 12px;background:#fff;border:1px solid #E5E7EB;border-radius:12px;cursor:pointer;transition:all .2s;min-width:72px;font-size:12px;font-weight:500;color:#6B7280;text-align:center}
 .ls-tile span:first-child{font-size:20px}
 .ls-tile.sm{min-width:60px;padding:8px 10px;font-size:11px}
 .ls-tile.sm span:first-child{font-size:17px}
@@ -172,21 +172,21 @@ header{padding:22px 20px 14px;display:flex;align-items:center;justify-content:sp
 .pt-intro{text-align:center;padding:16px 0 20px}
 .pt-title{font-family:var(--ff-h);font-size:26px;font-weight:700;line-height:1.3;margin-bottom:10px}
 .pt-title span{color:var(--purple);font-style:italic}
-.pt-desc{font-size:13px;color:var(--muted);line-height:1.8;margin-bottom:8px}
+.pt-desc{font-size:13px;color:#6B7280;line-height:1.8;margin-bottom:8px}
 .pt-multi-note{display:inline-block;padding:6px 14px;background:rgba(155,114,207,.12);border:1px solid rgba(155,114,207,.25);border-radius:20px;font-size:12px;color:var(--purple);margin-bottom:20px}
 
-.pt-question{font-family:var(--ff-h);font-size:17px;font-weight:600;font-style:italic;color:var(--gold2);line-height:1.5;margin-bottom:14px;padding:14px 16px;background:var(--card);border-left:3px solid var(--gold);border-radius:0 10px 10px 0}
+.pt-question{font-family:var(--ff-h);font-size:17px;font-weight:600;font-style:italic;color:var(--gold2);line-height:1.5;margin-bottom:14px;padding:14px 16px;background:#fff;border-left:3px solid var(--gold);border-radius:0 10px 10px 0}
 .pt-opts{display:flex;flex-direction:column;gap:9px;margin-bottom:18px}
-.pt-opt{display:flex;align-items:center;gap:12px;padding:13px 14px;background:var(--card);border:1px solid var(--border);border-radius:12px;cursor:pointer;transition:all .2s;position:relative}
+.pt-opt{display:flex;align-items:center;gap:12px;padding:13px 14px;background:#fff;border:1px solid #E5E7EB;border-radius:12px;cursor:pointer;transition:all .2s;position:relative}
 .pt-opt.sel{background:rgba(155,114,207,.1);border-color:var(--purple)}
-.pt-opt-ic{width:34px;height:34px;border-radius:9px;background:var(--card2);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;transition:background .2s}
+.pt-opt-ic{width:34px;height:34px;border-radius:9px;background:#F8F9FF;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0;transition:background .2s}
 .pt-opt.sel .pt-opt-ic{background:rgba(155,114,207,.2)}
 .pt-opt-txt{flex:1}
 .pt-opt-lbl{font-size:13px;font-weight:500}
-.pt-opt-sub{font-size:11px;color:var(--muted);margin-top:2px}
+.pt-opt-sub{font-size:11px;color:#6B7280;margin-top:2px}
 .pt-sel-badge{font-size:10px;font-weight:700;color:var(--purple);background:rgba(155,114,207,.15);padding:2px 7px;border-radius:10px;display:none}
 .pt-opt.sel .pt-sel-badge{display:inline-block}
-.pt-limit-note{font-size:12px;color:var(--muted);text-align:center;margin-bottom:14px}
+.pt-limit-note{font-size:12px;color:#6B7280;text-align:center;margin-bottom:14px}
 
 /* ══════════ SCREEN 5: PERSONALITY — PART 2 (Context) ══════════ */
 #s5{padding:0 20px 20px}
@@ -197,44 +197,44 @@ header{padding:22px 20px 14px;display:flex;align-items:center;justify-content:sp
 .lc-pers-icon{font-size:64px;margin-bottom:12px;display:block;animation:bounceIn .6s ease}
 @keyframes bounceIn{0%{transform:scale(0.5);opacity:0}70%{transform:scale(1.15)}100%{transform:scale(1);opacity:1}}
 .lc-pers-type{font-family:var(--ff-h);font-size:28px;font-weight:700;color:var(--gold);margin-bottom:6px}
-.lc-pers-tl{font-size:14px;color:var(--muted);line-height:1.7;max-width:320px;margin:0 auto 8px}
+.lc-pers-tl{font-size:14px;color:#6B7280;line-height:1.7;max-width:320px;margin:0 auto 8px}
 .lc-pers-fix{font-size:13px;color:var(--teal);font-weight:500;line-height:1.6;max-width:320px;margin:0 auto}
 
-.context-card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin-bottom:12px}
+.context-card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:18px;margin-bottom:12px}
 .cc-header{display:flex;align-items:center;gap:10px;margin-bottom:12px}
 .cc-icon{font-size:22px}
 .cc-title{font-family:var(--ff-h);font-size:17px;font-weight:600}
-.cc-body{font-size:13px;color:var(--muted);line-height:1.8}
-.cc-body strong{color:var(--text)}
+.cc-body{font-size:13px;color:#6B7280;line-height:1.8}
+.cc-body strong{color:#111827}
 .cc-body .highlight{color:var(--gold);font-weight:600}
 
 .starting-badge{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,rgba(108,127,255,.12),rgba(46,196,182,.06));border:1px solid rgba(108,127,255,.2);border-radius:13px;padding:14px 16px;margin-bottom:12px}
 .sb-icon{font-size:28px;flex-shrink:0}
 .sb-text{flex:1}
 .sb-title{font-size:13px;font-weight:600;color:var(--indigo);margin-bottom:3px}
-.sb-desc{font-size:12px;color:var(--muted);line-height:1.5}
+.sb-desc{font-size:12px;color:#6B7280;line-height:1.5}
 
 .declaration-confirm{background:linear-gradient(135deg,rgba(62,207,142,.08),rgba(46,196,182,.05));border:1px solid rgba(62,207,142,.2);border-radius:13px;padding:14px 16px;margin-bottom:14px;display:flex;gap:12px;align-items:center}
 .dc-icon{font-size:24px;flex-shrink:0}
-.dc-text{font-size:13px;line-height:1.6;color:var(--text)}
+.dc-text{font-size:13px;line-height:1.6;color:#111827}
 .dc-text strong{color:var(--green)}
 
 .proceed-to-m1{background:linear-gradient(135deg,rgba(232,184,75,.15),rgba(46,196,182,.08));border:1px solid rgba(232,184,75,.25);border-radius:16px;padding:18px;margin-bottom:14px;text-align:center}
 .p-m1-title{font-family:var(--ff-h);font-size:18px;font-weight:600;color:var(--gold2);margin-bottom:8px}
-.p-m1-desc{font-size:13px;color:var(--muted);line-height:1.6;margin-bottom:14px}
+.p-m1-desc{font-size:13px;color:#6B7280;line-height:1.6;margin-bottom:14px}
 .p-m1-steps{display:flex;justify-content:center;gap:16px;margin-bottom:14px}
 .p-m1-step{text-align:center}
 .p-m1-step .si{font-size:20px;margin-bottom:3px}
 .p-m1-step .sn{font-family:var(--ff-m);font-size:16px;font-weight:500;color:var(--gold);line-height:1}
-.p-m1-step .sl{font-size:10px;color:var(--muted);margin-top:2px}
+.p-m1-step .sl{font-size:10px;color:#6B7280;margin-top:2px}
 
 /* BOTTOM NAV */
-.bnav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:#fff;border-top:2px solid #E5E7EB;padding:4px 6px 8px;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:auto auto;gap:2px 0;z-index:100}
-.nb{display:flex;flex-direction:column;align-items:center;gap:2px;background:none;border:none;color:#6B7280;cursor:pointer;padding:5px 4px;border-radius:8px;transition:all .2s;font-family:inherit;width:100%;box-sizing:border-box}
-.nb.act{background:#F3F4F6;border-radius:8px}
+.bnav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:#fff;border-top:1.5px solid #E5E7EB;padding:4px 0 env(safe-area-inset-bottom,6px);display:flex;justify-content:space-around;align-items:center;z-index:100;box-shadow:0 -2px 12px rgba(0,0,0,.06)}
+.nb{display:flex;flex-direction:column;align-items:center;gap:1px;background:none;border:none;color:#9CA3AF;cursor:pointer;padding:4px 2px 2px;transition:all .15s;font-family:inherit;flex:1;min-width:0}
+.nb.act{color:#059669}
 .nb span:first-child{font-size:19px}
-.nb span:last-child{font-size:10px;font-weight:700;letter-spacing:.2px;color:inherit}
-.toast{position:fixed;bottom:78px;left:50%;transform:translateX(-50%);background:var(--card2);border:1px solid var(--border);border-radius:20px;padding:9px 18px;font-size:13px;color:var(--text);z-index:200;white-space:nowrap;opacity:0;transition:opacity .3s;pointer-events:none}
+.nb span:last-child{font-size:9px;font-weight:600;color:inherit;white-space:nowrap}
+.toast{position:fixed;bottom:78px;left:50%;transform:translateX(-50%);background:#F8F9FF;border:1px solid #E5E7EB;border-radius:20px;padding:9px 18px;font-size:13px;color:#111827;z-index:200;white-space:nowrap;opacity:0;transition:opacity .3s;pointer-events:none}
 .toast.show{opacity:1}
 .cp-mark{text-align:center;padding:14px;font-size:11px;color:rgba(93,110,138,.3);letter-spacing:.8px}
 
@@ -242,38 +242,38 @@ header{padding:22px 20px 14px;display:flex;align-items:center;justify-content:sp
 
 :root {
   --ink:#060f1e;--deep:#0c1a30;--card:#112040;--card2:#172848;--border:rgba(255,255,255,0.07);
-  --gold:#e8b84b;--teal:#2ec4b6;--red:#e05252;--amber:#f4a535;--green:#3ecf8e;--purple:#9b72cf;
+  --gold:#059669;--teal:#2ec4b6;--red:#e05252;--amber:#f4a535;--green:#3ecf8e;--purple:#9b72cf;
   --text:#dde6f0;--muted:#5d7a96;
   --ff-h:'Playfair Display',serif;--ff-b:'DM Sans',sans-serif;--ff-m:'DM Mono',monospace;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-body{font-family:var(--ff-b);background:var(--ink);color:var(--text);min-height:100vh;overflow-x:hidden}
+body{font-family:var(--ff-b);background:#fff;color:#111827;min-height:100vh;overflow-x:hidden}
 body::after{content:'';position:fixed;inset:0;background:radial-gradient(ellipse 80% 50% at 50% 0%,rgba(46,196,182,.06),transparent 70%),radial-gradient(ellipse 60% 40% at 80% 80%,rgba(232,184,75,.05),transparent 60%);pointer-events:none;z-index:0}
 #app{position:relative;z-index:1;max-width:480px;margin:0 auto;padding-bottom:82px}
 header{padding:22px 20px 14px;display:flex;align-items:center;justify-content:space-between}
 .brand{display:flex;align-items:center;gap:10px}
-.blogo{width:38px;height:38px;background:linear-gradient(135deg,var(--gold),var(--teal));border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:20px}
+.blogo{width:38px;height:38px;background:linear-gradient(135deg,#059669,#0891B2);border-radius:11px;display:flex;align-items:center;justify-content:center;font-size:20px}
 .bname{font-family:var(--ff-h);font-size:17px;font-weight:700;line-height:1}
-.bsub{font-size:10px;color:var(--muted);letter-spacing:1.2px;text-transform:uppercase;margin-top:2px}
-.vtag{font-family:var(--ff-m);font-size:11px;color:var(--muted);background:var(--card);border:1px solid var(--border);padding:4px 8px;border-radius:20px}
+.bsub{font-size:10px;color:#6B7280;letter-spacing:1.2px;text-transform:uppercase;margin-top:2px}
+.vtag{font-family:var(--ff-m);font-size:11px;color:#6B7280;background:#fff;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px}
 .screen{display:none;animation:fu .35s ease}.screen.active{display:block}
 @keyframes fu{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 .px{padding:0 20px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:18px;margin-bottom:12px}
-.card-lbl{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:18px;margin-bottom:12px}
+.card-lbl{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#6B7280;margin-bottom:12px}
 .stitle{font-family:var(--ff-h);font-size:22px;font-weight:700;margin-bottom:6px;padding:0 20px}
-.ssub{font-size:13px;color:var(--muted);margin-bottom:22px;padding:0 20px;line-height:1.7}
-.btn-p{width:100%;padding:15px;background:linear-gradient(135deg,var(--gold),#c9951e);color:#060f1e;font-family:var(--ff-b);font-size:15px;font-weight:700;border:none;border-radius:13px;cursor:pointer;transition:all .2s;margin-bottom:10px}
+.ssub{font-size:13px;color:#6B7280;margin-bottom:22px;padding:0 20px;line-height:1.7}
+.btn-p{width:100%;padding:16px;background:linear-gradient(135deg,#059669,#047857);color:#fff;font-weight:700;border:none;border-radius:14px;cursor:pointer;font-size:16px;font-family:inherit;letter-spacing:.3px}
 .btn-p:active{transform:scale(.98)}
-.btn-s{width:100%;padding:13px;background:transparent;color:var(--text);font-family:var(--ff-b);font-size:14px;font-weight:500;border:1px solid var(--border);border-radius:13px;cursor:pointer;transition:all .2s;margin-bottom:10px}
-.btn-s:hover{background:var(--card)}
+.btn-s{width:100%;padding:13px;background:transparent;color:#111827;font-family:var(--ff-b);font-size:14px;font-weight:500;border:1px solid #E5E7EB;border-radius:13px;cursor:pointer;transition:all .2s;margin-bottom:10px}
+.btn-s:hover{background:#fff}
 .field{margin-bottom:16px;padding:0 20px}
-.field label{display:block;font-size:11px;color:var(--muted);letter-spacing:.8px;text-transform:uppercase;margin-bottom:7px}
-.field input,.field select{width:100%;padding:12px 15px;background:var(--card);border:1px solid var(--border);border-radius:11px;color:var(--text);font-family:var(--ff-b);font-size:14px;outline:none;transition:border-color .2s;-webkit-appearance:none}
+.field label{display:block;font-size:11px;color:#6B7280;letter-spacing:.8px;text-transform:uppercase;margin-bottom:7px}
+.field input,.field select{width:100%;padding:12px 15px;background:#fff;border:1px solid #E5E7EB;border-radius:11px;color:#111827;font-family:var(--ff-b);font-size:14px;outline:none;transition:border-color .2s;-webkit-appearance:none}
 .field input:focus,.field select:focus{border-color:var(--gold)}
-.field select option{background:var(--card)}
+.field select option{background:#fff}
 .chips{display:flex;flex-wrap:wrap;gap:7px}
-.chip{padding:7px 13px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:13px;color:var(--muted);cursor:pointer;transition:all .2s;user-select:none}
+.chip{padding:7px 13px;background:#fff;border:1px solid #E5E7EB;border-radius:20px;font-size:13px;color:#6B7280;cursor:pointer;transition:all .2s;user-select:none}
 .chip.sel{background:rgba(232,184,75,.15);border-color:var(--gold);color:var(--gold)}
 
 /* WELCOME */
@@ -284,54 +284,54 @@ header{padding:22px 20px 14px;display:flex;align-items:center;justify-content:sp
 .rt{fill:none;stroke:var(--card2);stroke-width:10}
 .rf{fill:none;stroke:url(#rg);stroke-width:10;stroke-linecap:round;stroke-dasharray:502;stroke-dashoffset:502;transition:stroke-dashoffset 1.4s cubic-bezier(.4,0,.2,1)}
 .hnum{font-family:var(--ff-h);font-size:54px;font-weight:900;color:var(--gold);line-height:1;position:relative;z-index:2}
-.hlbl{font-size:10px;color:var(--muted);letter-spacing:1px;text-transform:uppercase;position:relative;z-index:2}
+.hlbl{font-size:10px;color:#6B7280;letter-spacing:1px;text-transform:uppercase;position:relative;z-index:2}
 .htitle{font-family:var(--ff-h);font-size:26px;font-weight:900;text-align:center;line-height:1.25;margin-bottom:10px}
 .htitle span{color:var(--gold)}
-.hdesc{font-size:13px;color:var(--muted);text-align:center;line-height:1.7;margin-bottom:22px}
+.hdesc{font-size:13px;color:#6B7280;text-align:center;line-height:1.7;margin-bottom:22px}
 .steps-row{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:20px}
-.step-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px 8px;text-align:center}
+.step-box{background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:12px 8px;text-align:center}
 .step-box .si{font-size:20px;margin-bottom:4px}
 .step-box .sn{font-family:var(--ff-m);font-size:18px;font-weight:500;color:var(--gold);line-height:1}
-.step-box .sl{font-size:10px;color:var(--muted);margin-top:3px;line-height:1.4}
+.step-box .sl{font-size:10px;color:#6B7280;margin-top:3px;line-height:1.4}
 
 /* QUIZ / ASSESS HEADER */
-.q-header{padding:20px 20px 14px;background:var(--deep);border-bottom:1px solid var(--border)}
+.q-header{padding:20px 20px 14px;background:#EEF2FF;border-bottom:1px solid var(--border)}
 .prog-row{display:flex;align-items:center;gap:10px;margin-bottom:10px}
-.prog-track{flex:1;height:4px;background:var(--card2);border-radius:2px;overflow:hidden}
+.prog-track{flex:1;height:4px;background:#F8F9FF;border-radius:2px;overflow:hidden}
 .prog-fill{height:100%;border-radius:2px;transition:width .4s ease}
-.prog-txt{font-family:var(--ff-m);font-size:11px;color:var(--muted);white-space:nowrap}
+.prog-txt{font-family:var(--ff-m);font-size:11px;color:#6B7280;white-space:nowrap}
 .qbadge{display:inline-block;padding:3px 10px;border-radius:20px;font-size:11px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;margin-bottom:7px}
 .bpurple{background:rgba(155,114,207,.15);color:var(--purple)}
 .bscan{background:rgba(232,184,75,.15);color:var(--gold)}
 .bpulse{background:rgba(46,196,182,.15);color:var(--teal)}
 .qtitle{font-family:var(--ff-h);font-size:19px;font-weight:700;line-height:1.3}
 .q-block{padding:16px 20px 20px}
-.qdesc{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:16px}
+.qdesc{font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:16px}
 .gopts{display:flex;flex-direction:column;gap:9px;margin-bottom:16px}
-.gopt{display:flex;align-items:center;gap:12px;padding:13px 14px;background:var(--card);border:1px solid var(--border);border-radius:12px;cursor:pointer;transition:all .2s}
+.gopt{display:flex;align-items:center;gap:12px;padding:13px 14px;background:#fff;border:1px solid #E5E7EB;border-radius:12px;cursor:pointer;transition:all .2s}
 .gopt.sel{background:rgba(232,184,75,.1);border-color:var(--gold)}
 .gopt.psel{background:rgba(155,114,207,.1);border-color:var(--purple)}
-.gic{width:34px;height:34px;border-radius:9px;background:var(--card2);display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
+.gic{width:34px;height:34px;border-radius:9px;background:#F8F9FF;display:flex;align-items:center;justify-content:center;font-size:17px;flex-shrink:0}
 .gopt.sel .gic,.gopt.psel .gic{background:rgba(232,184,75,.15)}
 .glbl{font-size:13px;font-weight:500}
-.gsub{font-size:11px;color:var(--muted);margin-top:2px}
-.gsc{font-family:var(--ff-m);font-size:12px;color:var(--muted);flex-shrink:0}
+.gsub{font-size:11px;color:#6B7280;margin-top:2px}
+.gsc{font-family:var(--ff-m);font-size:12px;color:#6B7280;flex-shrink:0}
 
 /* OVERRIDE */
-.ov-tog{display:flex;align-items:center;justify-content:space-between;padding:11px 14px;background:var(--card);border:1px dashed var(--border);border-radius:11px;cursor:pointer;margin-bottom:14px}
-.ov-lbl{font-size:12px;color:var(--muted)}
-.tpill{width:34px;height:19px;background:var(--card2);border-radius:10px;position:relative;transition:background .2s}
-.tpill.on{background:var(--gold)}
+.ov-tog{display:flex;align-items:center;justify-content:space-between;padding:11px 14px;background:#fff;border:1px dashed var(--border);border-radius:11px;cursor:pointer;margin-bottom:14px}
+.ov-lbl{font-size:12px;color:#6B7280}
+.tpill{width:34px;height:19px;background:#F8F9FF;border-radius:10px;position:relative;transition:background .2s}
+.tpill.on{background:#059669}
 .tdot{position:absolute;top:3px;left:3px;width:13px;height:13px;border-radius:50%;background:var(--muted);transition:all .2s}
-.tpill.on .tdot{left:18px;background:var(--ink)}
+.tpill.on .tdot{left:18px;background:#fff}
 .ov-wrap{display:none;animation:fu .3s ease}.ov-wrap.show{display:block}
 .sld{display:flex;align-items:baseline;gap:5px;margin-bottom:10px}
 .slnum{font-family:var(--ff-h);font-size:44px;font-weight:900;color:var(--gold);line-height:1}
-.slmax{font-size:16px;color:var(--muted)}
-input[type=range]{-webkit-appearance:none;width:100%;height:6px;border-radius:3px;background:var(--card2);outline:none;cursor:pointer}
-input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--gold);border:3px solid var(--ink);box-shadow:0 0 0 2px var(--gold);cursor:pointer}
+.slmax{font-size:16px;color:#6B7280}
+input[type=range]{-webkit-appearance:none;width:100%;height:6px;border-radius:3px;background:#F8F9FF;outline:none;cursor:pointer}
+input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:#059669;border:3px solid var(--ink);box-shadow:0 0 0 2px var(--gold);cursor:pointer}
 .sllbls{display:flex;justify-content:space-between;margin-top:5px}
-.sllbls span{font-size:11px;color:var(--muted)}
+.sllbls span{font-size:11px;color:#6B7280}
 
 /* RESULTS */
 #results{padding:0 20px 20px}
@@ -340,30 +340,30 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 .res-ring svg{position:absolute;inset:0;transform:rotate(-90deg)}
 .resnum{font-family:var(--ff-h);font-size:52px;font-weight:900;line-height:1;position:relative;z-index:2}
 .resgrade{font-size:13px;font-weight:600;letter-spacing:.8px;text-transform:uppercase;margin-top:4px}
-.restag{font-size:13px;color:var(--muted);text-align:center;line-height:1.65;max-width:300px;margin-top:6px}
+.restag{font-size:13px;color:#6B7280;text-align:center;line-height:1.65;max-width:300px;margin-top:6px}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
-.sec-card{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:14px;text-align:center}
+.sec-card{background:#fff;border:1px solid #E5E7EB;border-radius:13px;padding:14px;text-align:center}
 .sc-ic{font-size:20px;margin-bottom:5px}
-.sc-nm{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.8px;margin-bottom:7px}
+.sc-nm{font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:.8px;margin-bottom:7px}
 .sc-sc{font-family:var(--ff-h);font-size:26px;font-weight:700;line-height:1}
-.sc-mx{font-size:11px;color:var(--muted)}
-.sc-bar{height:3px;border-radius:2px;margin-top:9px;background:var(--card2);overflow:hidden}
+.sc-mx{font-size:11px;color:#6B7280}
+.sc-bar{height:3px;border-radius:2px;margin-top:9px;background:#F8F9FF;overflow:hidden}
 .sc-fill{height:100%;border-radius:2px;transition:width 1s ease}
 
 /* PERSONALITY CARD */
 .pers-card{background:linear-gradient(135deg,rgba(155,114,207,.15),rgba(46,196,182,.08));border:1px solid rgba(155,114,207,.3);border-radius:16px;padding:18px;margin-bottom:12px;display:flex;gap:14px;align-items:flex-start}
 .pers-big{font-size:36px;flex-shrink:0}
 .pers-name{font-family:var(--ff-h);font-size:18px;font-weight:700;color:var(--purple);margin-bottom:4px}
-.pers-tl{font-size:13px;color:var(--muted);line-height:1.6}
+.pers-tl{font-size:13px;color:#6B7280;line-height:1.6}
 .pers-fix{font-size:12px;color:var(--teal);margin-top:7px;font-weight:500;line-height:1.5}
 
 /* FORMULA */
 .formula-row{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid var(--border)}
 .formula-row:last-child{border-bottom:none}
 .fpct{font-family:var(--ff-h);font-size:20px;font-weight:700;width:48px;flex-shrink:0}
-.fbar{flex:1;height:8px;background:var(--card2);border-radius:4px;overflow:hidden}
+.fbar{flex:1;height:8px;background:#F8F9FF;border-radius:4px;overflow:hidden}
 .ffill{height:100%;border-radius:4px}
-.fdesc{font-size:12px;color:var(--muted);text-align:right;flex-shrink:0;max-width:140px;line-height:1.4}
+.fdesc{font-size:12px;color:#6B7280;text-align:right;flex-shrink:0;max-width:140px;line-height:1.4}
 
 /* PARAM ROWS */
 .param-row{display:flex;align-items:flex-start;padding:12px 0;border-bottom:1px solid var(--border);gap:10px;cursor:pointer}
@@ -373,43 +373,185 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 .pname{font-size:13px;font-weight:500}
 .phint{font-size:11px;margin-top:2px;font-weight:500}
 .pright{display:flex;align-items:center;gap:8px;flex-shrink:0}
-.pbar{width:50px;height:4px;background:var(--card2);border-radius:2px;overflow:hidden}
+.pbar{width:50px;height:4px;background:#F8F9FF;border-radius:2px;overflow:hidden}
 .pfill{height:100%;border-radius:2px}
 .psc{font-family:var(--ff-m);font-size:12px;font-weight:600}
-.eico{font-size:11px;color:var(--muted);transition:transform .2s;margin-top:2px}
+.eico{font-size:11px;color:#6B7280;transition:transform .2s;margin-top:2px}
 .eico.open{transform:rotate(180deg)}
 
 /* ADVICE PANEL */
 .adv-panel{display:none;margin-top:10px;animation:fu .3s ease}
 .adv-panel.open{display:block}
-.adv-tip{background:var(--card2);border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:10px 12px;margin-bottom:9px;font-size:12px;line-height:1.7;color:var(--text)}
+.adv-tip{background:#F8F9FF;border-left:3px solid var(--gold);border-radius:0 8px 8px 0;padding:10px 12px;margin-bottom:9px;font-size:12px;line-height:1.7;color:#111827}
 .adv-tip strong{color:var(--gold)}
 .stage-chips{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:9px}
 .sc-chip{padding:4px 9px;border-radius:12px;font-size:11px;font-weight:500;background:rgba(46,196,182,.1);color:var(--teal);border:1px solid rgba(46,196,182,.2);cursor:pointer;transition:all .2s;flex-shrink:0}
 .sc-chip.sel{background:rgba(46,196,182,.25);border-color:var(--teal)}
-.adv-detail{background:rgba(46,196,182,.07);border:1px solid rgba(46,196,182,.15);border-radius:10px;padding:12px;font-size:12px;line-height:1.8;color:var(--text);display:none}
+.adv-detail{background:rgba(46,196,182,.07);border:1px solid rgba(46,196,182,.15);border-radius:10px;padding:12px;font-size:12px;line-height:1.8;color:#111827;display:none}
 .adv-detail.show{display:block;animation:fu .3s ease}
 .adv-detail strong{color:var(--teal)}
 
 /* INSIGHTS */
-.ins-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:13px;margin-bottom:9px;display:flex;gap:10px;align-items:flex-start}
+.ins-card{background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:13px;margin-bottom:9px;display:flex;gap:10px;align-items:flex-start}
 .ins-dot{width:7px;height:7px;border-radius:50%;margin-top:5px;flex-shrink:0}
 .ins-txt{font-size:13px;line-height:1.7}
 .ins-txt strong{font-weight:600}
 
 /* BOTTOM NAV */
-.bnav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:#fff;border-top:2px solid #E5E7EB;padding:4px 6px 8px;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:auto auto;gap:2px 0;z-index:100}
-.nb{display:flex;flex-direction:column;align-items:center;gap:2px;background:none;border:none;color:#6B7280;cursor:pointer;padding:5px 4px;border-radius:8px;transition:all .2s;font-family:inherit;width:100%;box-sizing:border-box}
-.nb.act{background:#F3F4F6;border-radius:8px}
+.bnav{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:#fff;border-top:1.5px solid #E5E7EB;padding:4px 0 env(safe-area-inset-bottom,6px);display:flex;justify-content:space-around;align-items:center;z-index:100;box-shadow:0 -2px 12px rgba(0,0,0,.06)}
+.nb{display:flex;flex-direction:column;align-items:center;gap:1px;background:none;border:none;color:#9CA3AF;cursor:pointer;padding:4px 2px 2px;transition:all .15s;font-family:inherit;flex:1;min-width:0}
+.nb.act{color:#059669}
 .nb span:first-child{font-size:19px}
-.nb span:last-child{font-size:10px;font-weight:700;letter-spacing:.2px;color:inherit}
-.toast{position:fixed;bottom:78px;left:50%;transform:translateX(-50%);background:var(--card2);border:1px solid var(--border);border-radius:20px;padding:9px 18px;font-size:13px;color:var(--text);z-index:200;white-space:nowrap;opacity:0;transition:opacity .3s;pointer-events:none}
+.nb span:last-child{font-size:9px;font-weight:600;color:inherit;white-space:nowrap}
+.toast{position:fixed;bottom:78px;left:50%;transform:translateX(-50%);background:#F8F9FF;border:1px solid #E5E7EB;border-radius:20px;padding:9px 18px;font-size:13px;color:#111827;z-index:200;white-space:nowrap;opacity:0;transition:opacity .3s;pointer-events:none}
 .toast.show{opacity:1}
 .cp-mark{text-align:center;padding:14px;font-size:11px;color:rgba(93,122,150,.35);letter-spacing:.8px}
 @keyframes pr{0%{box-shadow:0 0 0 0 rgba(232,184,75,.3)}70%{box-shadow:0 0 0 14px rgba(232,184,75,0)}100%{box-shadow:0 0 0 0 rgba(232,184,75,0)}}
 
 /* ── MODULE WRAPPER ── */
 .mod{display:none}.mod.act{display:block}
+
+/* ── WHITE BACKGROUND ALL LIGHT MODULES ── */
+#mod2, #mod3, #mod4, #mod5, #mod6, #mod7 {
+  background:#F5F6FA !important;
+}
+#mod2 *, #mod3 *, #mod4 *, #mod5 *, #mod6 *, #mod7 * {
+  box-sizing:border-box;
+}
+
+/* ── GLOBAL INPUT STYLES v3.6 ── */
+input[type=number], input[type=text], input[type=email], select, textarea {
+  background:#fff !important;
+  border:1.5px solid #E5E7EB !important;
+  border-radius:10px !important;
+  padding:11px 14px !important;
+  font-size:15px !important;
+  font-weight:600 !important;
+  color:#111827 !important;
+  font-family:'DM Mono','DM Sans',sans-serif !important;
+  width:100% !important;
+  box-sizing:border-box !important;
+  margin-bottom:10px !important;
+  transition:border-color .2s !important;
+}
+input[type=number]:focus, input[type=text]:focus, select:focus, textarea:focus {
+  outline:none !important;
+  border-color:#059669 !important;
+  box-shadow:0 0 0 3px rgba(5,150,105,.1) !important;
+  background:#FAFFFE !important;
+}
+select { appearance:none; cursor:pointer; }
+
+/* ── GLOBAL FONT STYLES v3.6 ── */
+.m3-card, .m4-card, .m5-card, .m6-card, .m7-card {
+  font-size:14px;
+  font-weight:500;
+  color:#111827;
+}
+.m3-label,.m4-label,.m5-label,.m6-label,.m7-label {
+  font-size:14px !important;
+  font-weight:700 !important;
+  color:#111827 !important;
+  margin-bottom:6px !important;
+}
+.m3-card-title,.m4-card-title,.m5-card-title,.m6-card-title,.m7-card-title {
+  font-size:11px !important;
+  font-weight:800 !important;
+  letter-spacing:1.4px !important;
+  color:#6B7280 !important;
+}
+/* Row labels in M6 */
+.m6-row-label {
+  font-size:14px !important;
+  font-weight:600 !important;
+  color:#111827 !important;
+}
+/* Section totals */
+.m6-section-total-label {
+  font-size:14px !important;
+  font-weight:700 !important;
+}
+/* M4 select */
+.m4-select, .m5-select, .m6-select, .m7-select {
+  font-weight:600 !important;
+  color:#111827 !important;
+}
+/* Result labels */
+.m4-result-lbl,.m5-result-lbl,.m7-result-lbl {
+  font-size:11px !important;
+  font-weight:700 !important;
+  letter-spacing:.5px !important;
+}
+/* Insight text */
+.m4-insight,.m5-insight,.m6-insight,.m7-insight {
+  font-size:13px !important;
+  font-weight:500 !important;
+  line-height:1.9 !important;
+}
+/* Section headers */
+h1,h2,h3 { font-weight:700; }
+
+/* ── NAV v3.6 ── */
+.nb.act { color:#059669 !important; }
+.nb span:last-child { font-weight:700 !important; font-size:9px !important; }
+.nb span:first-child { font-size:21px !important; }
+
+/* ── M0 WHITE THEME OVERRIDE ── */
+#mod0, #mod0 #app {background:#fff !important}
+#mod0 .screen {background:#fff !important; color:#111827 !important}
+#mod0 header {background:#fff !important; border-bottom:1px solid #E5E7EB !important}
+#mod0 .bname {color:#111827 !important}
+#mod0 .bsub {color:#6B7280 !important}
+
+/* ── M1 WHITE THEME OVERRIDE ── */
+#mod1, #mod1 #app1 {background:#fff !important}
+#mod1 .screen {background:#fff !important}
+#mod1 header {background:#fff !important; border-bottom:1px solid #E5E7EB !important}
+#mod1 .bname {color:#111827 !important}
+
+/* M0 text overrides */
+#mod0 h1,#mod0 h2,#mod0 h3 {color:#1E3A8A !important}
+#mod0 .step-title {color:#1E3A8A !important}
+#mod0 p, #mod0 li, #mod0 label {color:#374151 !important}
+#mod0 .highlight {color:#D97706 !important}
+
+/* M1 score screen */
+#mod1 .score-big {color:#1E3A8A !important}
+#mod1 .section-title {color:#1E3A8A !important}
+
+/* ── HEADING COLOURS ── */
+.m3-h1, .m4-h1 { color:#1E3A8A !important }
+.m3-h1 span, .m4-h1 span { color:#D97706 !important }
+.m5-tab.act { color:#1E3A8A !important; border-color:#BFDBFE !important; background:#EFF6FF !important }
+.m6-tab.act { color:#059669 !important }
+.m7-tab.act { color:#1E3A8A !important; border-color:#BFDBFE !important; background:#EFF6FF !important }
+
+/* Card titles — blue */
+.m3-section-title, .m3-card-title { color:#1E3A8A !important }
+.m4-card-title { color:#1E3A8A !important }
+.m5-card-title { color:#1E3A8A !important }
+.m6-card-title { color:#1E3A8A !important }
+.m7-card-title { color:#1E3A8A !important }
+
+/* Result values — blue */
+.m4-result-val { color:#1E3A8A !important }
+.m5-result-val { color:#1E3A8A !important }
+
+/* Accent colours — amber/yellow for key highlights */
+.m3-alloc-pct { color:#D97706 !important }
+strong { color:#111827 }
+
+/* ── NAV WHITE BG ── */
+.bnav { background:#fff !important; border-top:2px solid #E5E7EB !important }
+.nb { color:#9CA3AF !important }
+.nb.act { color:#059669 !important }
+
+/* ── M8 REPORT KEEPS DARK ── */
+#mod8 { background:#0B0F1A !important; color:#fff !important }
+#mod8 * { box-sizing:border-box }
+#mod8 .bnav { background:#0B0F1A !important; border-top:1px solid rgba(255,255,255,.1) !important }
+#mod8 .nb { color:rgba(255,255,255,.4) !important }
+#mod8 .nb.act { color:#34D399 !important }
 </style>
 </head>
 <body>
@@ -419,7 +561,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="app0">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Life Canvas · M0</div></div></div>
-  <div class="vtag">v3.2</div>
+  <div class="vtag">v3.6</div>
 </header>
 <div class="starfield" id="starfield"></div>
 <div class="aurora"></div>
@@ -488,7 +630,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   <div class="card" style="border-color:rgba(62,207,142,.2);background:rgba(62,207,142,.05)">
     <div style="display:flex;gap:10px;align-items:flex-start">
       <span style="font-size:20px;flex-shrink:0">💚</span>
-      <div style="font-size:13px;color:var(--text);line-height:1.75">
+      <div style="font-size:13px;color:#111827;line-height:1.75">
         <strong>This is not an excuse. It is context.</strong><br>
         Understanding your starting point helps calibrate what "good financial progress" means for you — not compared to someone else, but compared to where you began.
       </div>
@@ -600,11 +742,11 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 
   <div class="card" style="margin-bottom:14px">
     <div class="card-lbl">The Mirror Truth</div>
-    <div style="font-size:13px;color:var(--muted);line-height:1.85">
+    <div style="font-size:13px;color:#6B7280;line-height:1.85">
       It does not matter if you started with ₹0 or ₹1 crore.<br>
       It does not matter what your parents did or did not do.<br>
       It does not matter what mistakes you made in the past.<br><br>
-      <strong style="color:var(--text)">From this moment:</strong><br>
+      <strong style="color:#111827">From this moment:</strong><br>
       Every financial decision is yours. Every habit is yours to build or break. Every goal is yours to set and chase. The path forward belongs entirely to the person in the mirror.
     </div>
   </div>
@@ -726,7 +868,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
     <div style="font-family:var(--ff-h);font-size:26px;font-weight:700;line-height:1.3;margin-bottom:10px">
       Every rupee you invest<br><span style="color:var(--gold);font-style:italic">carries your story</span>
     </div>
-    <div style="font-size:13px;color:var(--muted);line-height:1.8;max-width:320px;margin:0 auto 6px">
+    <div style="font-size:13px;color:#6B7280;line-height:1.8;max-width:320px;margin:0 auto 6px">
       A school child's first ₹100, a homemaker's careful savings, a doctor's first SIP — each is precious. Cauvery Pulse respects every rupee equally.
     </div>
   </div>
@@ -770,7 +912,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   <div class="card" id="bizCard" style="display:none;margin-bottom:12px">
     <div class="card-lbl">🏢 Your Business — Size &amp; Structure</div>
     <div style="margin-bottom:10px">
-      <div style="font-size:11px;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.8px">Business Size</div>
+      <div style="font-size:11px;color:#6B7280;margin-bottom:6px;text-transform:uppercase;letter-spacing:.8px">Business Size</div>
       <div style="display:flex;gap:7px;flex-wrap:wrap" id="bizSizeGrid">
         <div class="ls-tile sm" data-v="small_biz" onclick="selBizSize(this)"><span>🌱</span><span>Small</span></div>
         <div class="ls-tile sm" data-v="medium_biz" onclick="selBizSize(this)"><span>🌳</span><span>Medium</span></div>
@@ -778,7 +920,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
       </div>
     </div>
     <div>
-      <div style="font-size:11px;color:var(--muted);margin-bottom:6px;text-transform:uppercase;letter-spacing:.8px">Business Structure</div>
+      <div style="font-size:11px;color:#6B7280;margin-bottom:6px;text-transform:uppercase;letter-spacing:.8px">Business Structure</div>
       <div style="display:flex;gap:7px;flex-wrap:wrap" id="bizStructGrid">
         <div class="ls-tile sm" data-v="proprietor" onclick="selBizStruct(this)"><span>👤</span><span>Proprietor</span></div>
         <div class="ls-tile sm" data-v="partnership" onclick="selBizStruct(this)"><span>🤝</span><span>Partnership</span></div>
@@ -793,7 +935,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   <!-- Monthly Investment Capacity -->
   <div class="card" style="margin-bottom:12px">
     <div class="card-lbl">💰 Monthly Investment Capacity</div>
-    <div style="font-size:12px;color:var(--muted);line-height:1.7;margin-bottom:10px;font-style:italic">
+    <div style="font-size:12px;color:#6B7280;line-height:1.7;margin-bottom:10px;font-style:italic">
       "Every rupee invested with intention grows — even ₹500 started early beats ₹50,000 started late."
     </div>
     <div style="display:flex;flex-wrap:wrap;gap:7px" id="invCapGrid">
@@ -873,7 +1015,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 
 </div><!-- #app0 -->
 <div class="bnav">
-  <button class="nb act" style="color:#E8B84B" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button><button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM6()"><span>📊</span><span>P&L</span></button>
+  <button class="nb act" style="color:#059669" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button><button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM6()"><span>📊</span><span>P&L</span></button>
 </div>
 <div class="toast" id="toast0"></div>
 </div>
@@ -883,13 +1025,13 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="app">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Cauvery Pulse Score · M1</div></div></div>
-  <div class="vtag">v3.2</div>
+  <div class="vtag">v3.6</div>
 </header>
 <!-- WELCOME -->
 <div id="welcome" class="screen active">
   <div class="hero-wrap">
     <div class="ring-outer">
-      <svg viewBox="0 0 190 190"><defs><linearGradient id="rg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#e8b84b"/><stop offset="100%" stop-color="#2ec4b6"/></linearGradient></defs>
+      <svg viewBox="0 0 190 190"><defs><linearGradient id="rg" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#059669"/><stop offset="100%" stop-color="#2ec4b6"/></linearGradient></defs>
         <circle class="rt" cx="95" cy="95" r="80"/><circle class="rf" id="heroRing" cx="95" cy="95" r="80"/>
       </svg>
       <div style="text-align:center;position:relative;z-index:2">
@@ -904,7 +1046,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
     <div class="step-box"><div class="si">🏛️</div><div class="sn">10</div><div class="sl">Cauvery<br>Parameters</div></div>
     <div class="step-box"><div class="si">📊</div><div class="sn">100</div><div class="sl">Point<br>Score</div></div>
   </div>
-  <div id="canvasBadge" style="display:none;background:linear-gradient(135deg,rgba(108,127,255,.12),rgba(46,196,182,.06));border:1px solid rgba(108,127,255,.25);border-radius:14px;padding:14px 16px;margin-bottom:16px;font-size:13px;line-height:1.8;color:var(--text)"></div>
+  <div id="canvasBadge" style="display:none;background:linear-gradient(135deg,rgba(108,127,255,.12),rgba(46,196,182,.06));border:1px solid rgba(108,127,255,.25);border-radius:14px;padding:14px 16px;margin-bottom:16px;font-size:13px;line-height:1.8;color:#111827"></div>
   <button class="btn-p" id="mainStartBtn" style="animation:pr 2s ease infinite" onclick="goStart()">🩺 &nbsp;Start My Health Check</button>
   <button class="btn-s" id="viewBtn" style="display:none" onclick="showScreen('results')">📊 &nbsp;View My Last Results</button>
   <div class="cp-mark">© Elango Industries Limited · Cauvery Pulse</div>
@@ -1006,7 +1148,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="results" class="screen">
   <div class="res-hero">
     <div class="res-ring">
-      <svg viewBox="0 0 180 180"><defs><linearGradient id="rg2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#e8b84b"/><stop offset="100%" stop-color="#2ec4b6"/></linearGradient></defs>
+      <svg viewBox="0 0 180 180"><defs><linearGradient id="rg2" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#059669"/><stop offset="100%" stop-color="#2ec4b6"/></linearGradient></defs>
         <circle class="rt" cx="90" cy="90" r="80"/><circle class="rf" id="resRing" cx="90" cy="90" r="80" style="stroke:url(#rg2)"/>
       </svg>
       <div class="resnum" id="resNum" style="color:var(--gold)">–</div>
@@ -1027,7 +1169,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 
   <!-- Section scores -->
   <div class="two-col">
-    <div class="sec-card"><div class="sc-ic">🏛️</div><div class="sc-nm">Financial Scan</div><div class="sc-sc" id="scanNum">–</div><div class="sc-mx">/ 50</div><div class="sc-bar"><div class="sc-fill" id="scanBar" style="background:var(--gold);width:0%"></div></div></div>
+    <div class="sec-card"><div class="sc-ic">🏛️</div><div class="sc-nm">Financial Scan</div><div class="sc-sc" id="scanNum">–</div><div class="sc-mx">/ 50</div><div class="sc-bar"><div class="sc-fill" id="scanBar" style="background:#059669;width:0%"></div></div></div>
     <div class="sec-card"><div class="sc-ic">🧠</div><div class="sc-nm">Behavioural Pulse</div><div class="sc-sc" id="pulseNum">–</div><div class="sc-mx">/ 50</div><div class="sc-bar"><div class="sc-fill" id="pulseBar" style="background:var(--teal);width:0%"></div></div></div>
   </div>
 
@@ -1035,7 +1177,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   <div class="card">
     <div class="card-lbl">🌊 The Cauvery Formula — for your profile</div>
     <div class="formula-row"><div class="fpct" style="color:var(--teal)">33%</div><div class="fbar"><div class="ffill" style="background:var(--teal);width:33%"></div></div><div class="fdesc">Savings &amp; Investment<br><span style="color:var(--teal);font-size:11px" id="f1t">SIP + PPF + NPS</span></div></div>
-    <div class="formula-row"><div class="fpct" style="color:var(--gold)">33%</div><div class="fbar"><div class="ffill" style="background:var(--gold);width:33%"></div></div><div class="fdesc">Living Expenses<br><span style="color:var(--gold);font-size:11px" id="f2t">Rent, food, EMI</span></div></div>
+    <div class="formula-row"><div class="fpct" style="color:var(--gold)">33%</div><div class="fbar"><div class="ffill" style="background:#059669;width:33%"></div></div><div class="fdesc">Living Expenses<br><span style="color:var(--gold);font-size:11px" id="f2t">Rent, food, EMI</span></div></div>
     <div class="formula-row"><div class="fpct" style="color:var(--purple)">33%</div><div class="fbar"><div class="ffill" style="background:var(--purple);width:33%"></div></div><div class="fdesc">Expansion / Growth<br><span style="color:var(--purple);font-size:11px" id="f3t">Business + skills</span></div></div>
     <div class="formula-row"><div class="fpct" style="color:var(--amber)">10%</div><div class="fbar"><div class="ffill" style="background:var(--amber);width:10%"></div></div><div class="fdesc" style="color:var(--amber)">Flex — directed to<br><span id="fxt" style="font-size:11px">weakest area</span></div></div>
   </div>
@@ -1071,7 +1213,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div id="app2">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Investment School · M2</div></div></div>
-  <div class="vtag">v3.2</div>
+  <div class="vtag">v3.6</div>
 </header>
 
 <div style="padding:0 20px 80px">
@@ -1080,7 +1222,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <div style="text-align:center;padding:20px 0 24px">
   <div style="font-size:48px;margin-bottom:10px">📚</div>
   <div style="font-family:'Playfair Display',serif;font-size:26px;font-weight:900;line-height:1.25;margin-bottom:10px">Investment <span style="color:var(--gold)">School</span></div>
-  <div style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:6px">10 instruments. Every Indian needs to understand these before investing a single rupee.</div>
+  <div style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:6px">10 instruments. Every Indian needs to understand these before investing a single rupee.</div>
   <div style="display:inline-block;padding:5px 14px;background:rgba(232,184,75,.12);border:1px solid rgba(232,184,75,.25);border-radius:20px;font-size:12px;color:var(--gold)">Tap any card to learn fully</div>
 </div>
 
@@ -1099,8 +1241,8 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 <!-- Detail Panel -->
 <div id="m2detail" style="display:none;animation:fu .35s ease">
   <div style="display:flex;align-items:center;gap:10px;margin-bottom:16px;cursor:pointer" onclick="closeM2Detail()">
-    <div style="width:32px;height:32px;background:var(--card);border:1px solid var(--border);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px">←</div>
-    <div style="font-size:13px;color:var(--muted)">Back to all instruments</div>
+    <div style="width:32px;height:32px;background:#fff;border:1px solid #E5E7EB;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:16px">←</div>
+    <div style="font-size:13px;color:#6B7280">Back to all instruments</div>
   </div>
   <div id="m2detailContent"></div>
 </div>
@@ -1108,45 +1250,45 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
 </div>
 </div><!-- #app2 -->
 <div class="bnav">
-  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button><button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb act" style="color:#2ec4b6" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM6()"><span>📊</span><span>P&L</span></button>
+  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button><button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb act" style="color:#059669" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM6()"><span>📊</span><span>P&L</span></button>
 </div>
 <div class="toast" id="toast2"></div>
 </div>
 
 <style>
 /* ── M2 STYLES ── */
-.m2tab{padding:7px 14px;background:var(--card);border:1px solid var(--border);border-radius:20px;font-size:12px;color:var(--muted);cursor:pointer;white-space:nowrap;flex-shrink:0;transition:all .2s}
+.m2tab{padding:7px 14px;background:#fff;border:1px solid #E5E7EB;border-radius:20px;font-size:12px;color:#6B7280;cursor:pointer;white-space:nowrap;flex-shrink:0;transition:all .2s}
 .m2tab.act{background:rgba(232,184,75,.15);border-color:var(--gold);color:var(--gold)}
-.m2card{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;margin-bottom:12px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
+.m2card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:16px;margin-bottom:12px;cursor:pointer;transition:all .2s;position:relative;overflow:hidden}
 .m2card:active{transform:scale(.99)}
 .m2card-top{display:flex;align-items:center;gap:12px;margin-bottom:10px}
 .m2card-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0}
 .m2card-name{font-family:'Playfair Display',serif;font-size:17px;font-weight:700;line-height:1.2}
 .m2card-tag{font-size:10px;padding:2px 8px;border-radius:10px;margin-top:3px;display:inline-block;font-weight:600;letter-spacing:.5px}
-.m2card-desc{font-size:12px;color:var(--muted);line-height:1.6;margin-bottom:12px}
+.m2card-desc{font-size:12px;color:#6B7280;line-height:1.6;margin-bottom:12px}
 .m2metrics{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
-.m2metric{background:var(--card2);border-radius:8px;padding:8px;text-align:center}
+.m2metric{background:#F8F9FF;border-radius:8px;padding:8px;text-align:center}
 .m2metric-val{font-family:'DM Mono',monospace;font-size:13px;font-weight:600;line-height:1}
-.m2metric-lbl{font-size:10px;color:var(--muted);margin-top:3px}
-.m2card-arrow{position:absolute;top:16px;right:16px;font-size:16px;color:var(--muted)}
+.m2metric-lbl{font-size:10px;color:#6B7280;margin-top:3px}
+.m2card-arrow{position:absolute;top:16px;right:16px;font-size:16px;color:#6B7280}
 
 /* Detail view */
-.det-hero{background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid var(--border);border-radius:16px;padding:20px;margin-bottom:14px;text-align:center}
+.det-hero{background:linear-gradient(135deg,var(--card),var(--card2));border:1px solid #E5E7EB;border-radius:16px;padding:20px;margin-bottom:14px;text-align:center}
 .det-icon{font-size:48px;margin-bottom:8px}
 .det-name{font-family:'Playfair Display',serif;font-size:24px;font-weight:900;margin-bottom:6px}
-.det-oneliner{font-size:13px;color:var(--muted);line-height:1.6}
+.det-oneliner{font-size:13px;color:#6B7280;line-height:1.6}
 .det-metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin-bottom:14px}
-.det-metric{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:12px;text-align:center}
+.det-metric{background:#fff;border:1px solid #E5E7EB;border-radius:12px;padding:12px;text-align:center}
 .det-metric-val{font-family:'DM Mono',monospace;font-size:16px;font-weight:600;margin-bottom:3px}
-.det-metric-lbl{font-size:11px;color:var(--muted)}
-.det-section{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:16px;margin-bottom:12px}
-.det-section-title{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:var(--muted);margin-bottom:10px}
+.det-metric-lbl{font-size:11px;color:#6B7280}
+.det-section{background:#fff;border:1px solid #E5E7EB;border-radius:14px;padding:16px;margin-bottom:12px}
+.det-section-title{font-size:11px;letter-spacing:1.2px;text-transform:uppercase;color:#6B7280;margin-bottom:10px}
 .det-row{display:flex;align-items:flex-start;gap:10px;padding:8px 0;border-bottom:1px solid var(--border);font-size:13px;line-height:1.6}
 .det-row:last-child{border-bottom:none}
 .det-dot{width:6px;height:6px;border-radius:50%;margin-top:6px;flex-shrink:0}
 .truth-box{border-radius:12px;padding:14px 16px;margin-bottom:12px;font-size:13px;line-height:1.75}
 .truth-box strong{font-weight:600}
-.prod-chip{display:inline-block;padding:5px 12px;background:var(--card2);border:1px solid var(--border);border-radius:20px;font-size:12px;color:var(--teal);margin:3px}
+.prod-chip{display:inline-block;padding:5px 12px;background:#F8F9FF;border:1px solid #E5E7EB;border-radius:20px;font-size:12px;color:var(--teal);margin:3px}
 </style>
 
 <script>
@@ -1171,7 +1313,7 @@ const M2_INSTRUMENTS = [
     lifeStageNote:{student:'Keep 2 months pocket money in FD. Learn the habit.',young:'6-month emergency fund in sweep-in FD. Not for primary investing.',married:'Family emergency buffer only. Joint FD for joint access.',mid:'FD ladder for predictable income alongside equity.',senior:'Senior citizen FD for guaranteed monthly/quarterly income.',small_biz:'Business contingency fund — 3 months operating cost.',large_biz:'Director personal buffer only. Corporate FD for business surplus.'}
   },
   {
-    id:'epf', tag:'safe', tagLabel:'Tax Saving', tagColor:'#e8b84b',
+    id:'epf', tag:'safe', tagLabel:'Tax Saving', tagColor:'#059669',
     icon:'\uD83C\uDFDB️', iconBg:'rgba(232,184,75,.15)',
     name:'EPF — Employee Provident Fund',
     purpose:'Retirement + Tax',
@@ -1189,7 +1331,7 @@ const M2_INSTRUMENTS = [
     lifeStageNote:{student:'Not applicable — joins when employed.',young:'Start from Day 1 of first job. Activate UAN immediately. Never withdraw early.',married:'Add VPF for extra tax-free savings. Nominate spouse.',mid:'Check EPF balance annually. Do not withdraw on job change — transfer via UAN.',senior:'Withdraw after 58 for full tax-free corpus. Or continue if employed.',small_biz:'Mandatory if 20+ employees. Register with EPFO.',large_biz:'Ensure compliance. Can set up Exempted PF Trust for better returns.'}
   },
   {
-    id:'ppf', tag:'tax', tagLabel:'Tax Saving', tagColor:'#e8b84b',
+    id:'ppf', tag:'tax', tagLabel:'Tax Saving', tagColor:'#059669',
     icon:'\uD83D\uDCEE', iconBg:'rgba(232,184,75,.15)',
     name:'PPF — Public Provident Fund',
     purpose:'Safe Growth + Tax',
@@ -1207,7 +1349,7 @@ const M2_INSTRUMENTS = [
     lifeStageNote:{student:'Open PPF account as soon as you have income. 15 years starts now.',young:'₹1.5L per year = ₹12,500/month. Automate on 5th of each month for maximum interest.',married:'One PPF each for husband and wife. That is ₹3L/year tax-free.',mid:'Check maturity date. Extend in 5-year blocks if corpus not needed.',senior:'If already running, continue for tax-free returns. Withdraw at maturity.',small_biz:'Essential — your substitute for EPF. Max ₹1.5L per year.',large_biz:'Personal PPF for CMD. Separate from business investments.'}
   },
   {
-    id:'nps', tag:'tax', tagLabel:'Tax Saving', tagColor:'#e8b84b',
+    id:'nps', tag:'tax', tagLabel:'Tax Saving', tagColor:'#059669',
     icon:'\uD83C\uDFAF', iconBg:'rgba(155,114,207,.15)',
     name:'NPS — National Pension System',
     purpose:'Retirement + Tax',
@@ -1366,11 +1508,11 @@ function renderM2(){
       '<div style="display:flex;align-items:center;gap:8px;margin:8px 0 6px">'+
         '<div style="display:flex;align-items:center;gap:4px;background:rgba(46,196,182,.1);border:1px solid rgba(46,196,182,.25);border-radius:20px;padding:3px 10px">'+
           '<span style="font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--teal)">PURPOSE</span>'+
-          '<span style="font-size:12px;font-weight:600;color:var(--text);margin-left:4px">'+(ins.purpose||'—')+'</span>'+
+          '<span style="font-size:12px;font-weight:600;color:#111827;margin-left:4px">'+(ins.purpose||'—')+'</span>'+
         '</div>'+
         '<div style="display:flex;align-items:center;gap:4px;background:rgba(108,127,255,.1);border:1px solid rgba(108,127,255,.25);border-radius:20px;padding:3px 10px">'+
           '<span style="font-size:10px;font-weight:700;letter-spacing:.6px;text-transform:uppercase;color:var(--indigo,#6c7fff)">LIQUIDITY</span>'+
-          '<span style="font-size:12px;font-weight:600;color:var(--text);margin-left:4px">'+ins.liquidity+'</span>'+
+          '<span style="font-size:12px;font-weight:600;color:#111827;margin-left:4px">'+ins.liquidity+'</span>'+
         '</div>'+
       '</div>'+
       '<div class="m2card-desc">'+ins.desc+'</div>'+
@@ -1411,7 +1553,7 @@ function openM2Detail(ins){
     taxHarvestHTML =
       '<div class="det-section" style="background:rgba(62,207,142,.06);border-color:rgba(62,207,142,.2)">'+
         '<div class="det-section-title" style="color:var(--green)">🌾 Tax Harvesting — Pay Zero LTCG Legally</div>'+
-        '<div style="font-size:13px;line-height:1.85;color:var(--text)">'+
+        '<div style="font-size:13px;line-height:1.85;color:#111827">'+
           'LTCG on equity is <strong>12.5% above ₹1.25 lakh per year</strong>. Harvest before crossing the limit.<br><br>'+
           '<strong>How it works:</strong><br>'+
           '1. Before 31 March — check your total unrealised LTCG across all MF/stocks<br>'+
@@ -1434,7 +1576,7 @@ function openM2Detail(ins){
     giftHTML =
       '<div class="det-section" style="background:rgba(155,114,207,.06);border-color:rgba(155,114,207,.2)">'+
         '<div class="det-section-title" style="color:var(--purple,#9b72cf)">🎁 Gifting Shares — Tax-Free Wealth Transfer</div>'+
-        '<div style="font-size:13px;line-height:1.85;color:var(--text)">'+
+        '<div style="font-size:13px;line-height:1.85;color:#111827">'+
           'Gifts to <strong>specified relatives are completely tax-free</strong> — no rupee limit.<br>'+
           'Specified relatives: spouse, children, parents, siblings, spouse\'s siblings, grandparents.<br><br>'+
           '<div style="background:rgba(155,114,207,.1);border-radius:10px;padding:12px;font-size:12px;color:var(--purple,#9b72cf);margin-bottom:8px">'+
@@ -1461,7 +1603,7 @@ function openM2Detail(ins){
       // PURPOSE prominently at top
       (ins.purpose?'<div style="display:inline-flex;align-items:center;gap:6px;background:rgba(46,196,182,.12);border:1px solid rgba(46,196,182,.3);border-radius:20px;padding:4px 12px;margin:6px 0 4px">'+
         '<span style="font-size:10px;font-weight:700;letter-spacing:.8px;text-transform:uppercase;color:var(--teal)">PURPOSE</span>'+
-        '<span style="font-size:13px;font-weight:600;color:var(--text)">'+ins.purpose+'</span>'+
+        '<span style="font-size:13px;font-weight:600;color:#111827">'+ins.purpose+'</span>'+
       '</div>':'')+
       '<div class="det-oneliner">'+ins.oneliner+'</div>'+
     '</div>'+
@@ -1474,14 +1616,14 @@ function openM2Detail(ins){
     '<div class="det-section"><div class="det-section-title">Who Should Use This</div>'+suitHTML+'</div>'+
     '<div class="det-section"><div class="det-section-title">✅ Advantages</div>'+prosHTML+'</div>'+
     '<div class="det-section"><div class="det-section-title">⚠️ Disadvantages</div>'+consHTML+'</div>'+
-    '<div class="det-section"><div class="det-section-title">\uD83D\uDCB0 Tax Treatment</div><div style="font-size:13px;line-height:1.8;color:var(--muted)">'+ins.taxNote+'</div></div>'+
+    '<div class="det-section"><div class="det-section-title">\uD83D\uDCB0 Tax Treatment</div><div style="font-size:13px;line-height:1.8;color:#6B7280">'+ins.taxNote+'</div></div>'+
     taxHarvestHTML+
     giftHTML+
     '<div class="truth-box" style="background:'+ins.truthColor+';border:1px solid '+ins.truthBorder+'">'+
-      '<div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);margin-bottom:8px">\uD83D\uDCE2 The Honest Truth</div>'+
+      '<div style="font-size:11px;letter-spacing:1px;text-transform:uppercase;color:#6B7280;margin-bottom:8px">\uD83D\uDCE2 The Honest Truth</div>'+
       '<div style="font-size:13px;line-height:1.8">'+ins.truth+'</div>'+
     '</div>'+
-    (stageNote?'<div class="det-section" style="border-color:rgba(46,196,182,.2);background:rgba(46,196,182,.05)"><div class="det-section-title" style="color:var(--teal)">\uD83C\uDFAF For Your Life Stage</div><div style="font-size:13px;line-height:1.8;color:var(--text)">'+stageNote+'</div></div>':'')+
+    (stageNote?'<div class="det-section" style="border-color:rgba(46,196,182,.2);background:rgba(46,196,182,.05)"><div class="det-section-title" style="color:var(--teal)">\uD83C\uDFAF For Your Life Stage</div><div style="font-size:13px;line-height:1.8;color:#111827">'+stageNote+'</div></div>':'')+
     '<div class="det-section"><div class="det-section-title">\uD83D\uDED2 Products & Platforms</div><div style="padding-top:4px">'+prodsHTML+'</div></div>'+
     '<div style="height:20px"></div>';
   window.scrollTo(0,0);
@@ -2379,7 +2521,7 @@ function doShare(){
       badge.innerHTML=`✅ <strong>Life Canvas loaded</strong><br>
         \uD83D\uDC64 ${d.name||'Friend'} &nbsp;·&nbsp; \uD83C\uDF3F ${gname}<br>
         \uD83E\uDDE0 <strong>${pname}</strong><br>
-        <span style="font-size:11px;color:var(--muted)">Personality quiz is pre-filled from your Life Canvas. You will go straight to the Cauvery Pulse assessment.</span>`;
+        <span style="font-size:11px;color:#6B7280">Personality quiz is pre-filled from your Life Canvas. You will go straight to the Cauvery Pulse assessment.</span>`;
     }
 
     // Update start button label
@@ -2420,7 +2562,7 @@ function toast(msg){
 
 
 
-<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v3.2 ══════ -->
+<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v3.6 ══════ -->
 <div id="mod3" class="mod">
 <style>
 /* ── M3 LIGHT THEME ── */
@@ -2431,10 +2573,10 @@ function toast(msg){
 #mod3 .vtag{background:#F3F4F6;border:1px solid #E5E7EB;color:#6B7280}
 #mod3 .bnav{}
 #mod3 .nb{color:#6B7280}
-#mod3 .nb.act{background:#F3F4F6;border-radius:8px}
+#mod3 .nb.act{color:#059669}
 #mod3 .blogo{background:linear-gradient(135deg,#D97706,#0D9488)}
 
-.m3w{padding:0 16px 120px;max-width:480px;margin:0 auto}
+.m3w{padding:0 16px 72px;max-width:480px;margin:0 auto}
 
 /* Typography */
 .m3-h1{font-family:'Playfair Display',serif;font-size:28px;font-weight:900;color:#111827;line-height:1.3;margin-bottom:8px}
@@ -2592,7 +2734,7 @@ function toast(msg){
 .m3-settings-row label{font-size:13px;color:#374151;flex:1}
 .m3-settings-row input{border:1px solid #E5E7EB;border-radius:8px;padding:8px 10px;font-size:13px;color:#111827;font-family:'DM Mono',monospace;width:110px;text-align:right}
 .m3-settings-row input:focus{outline:none;border-color:#0D9488}
-.m3-save-btn{width:100%;padding:13px;background:linear-gradient(135deg,#D97706,#B45309);color:#fff;font-weight:700;border:none;border-radius:12px;cursor:pointer;font-size:15px;margin-top:8px}
+.m3-save-btn{width:100%;padding:13px;background:linear-gradient(135deg,#059669,#047857);color:#fff;font-weight:700;border:none;border-radius:12px;cursor:pointer;font-size:15px;margin-top:8px}
 .m3-close-btn{width:100%;padding:11px;background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;color:#6B7280;cursor:pointer;font-size:13px;margin-top:8px}
 </style>
 
@@ -2604,7 +2746,7 @@ function toast(msg){
   </div>
   <div style="display:flex;align-items:center;gap:8px">
     <button onclick="openM3Settings()" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:6px 10px;font-size:13px;color:#6B7280;cursor:pointer">⚙️ Rates</button>
-    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.2</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.6</div>
   </div>
 </header>
 
@@ -2632,14 +2774,14 @@ function toast(msg){
 </div>
 
 <div class="bnav" style="background:#fff;border-top:1px solid #E5E7EB">
-  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button><button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button><button class="nb act" style="color:#D97706" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM6()"><span>📊</span><span>P&L</span></button>
+  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button><button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button><button class="nb act" style="color:#059669" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM6()"><span>📊</span><span>P&L</span></button>
 </div>
 <div class="toast" id="toast3"></div>
 </div><!-- #mod3 -->
 
 <script>
 // ══════════════════════════════════════════════════════
-// M3 PORTFOLIO BLUEPRINT ENGINE v3.2
+// M3 PORTFOLIO BLUEPRINT ENGINE v3.6
 // ══════════════════════════════════════════════════════
 
 // ── COLOURS ──
@@ -3179,10 +3321,10 @@ function switchToM3(){
 #mod4 header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
 #mod4 .bnav{}
 #mod4 .nb{color:#6B7280}
-#mod4 .nb.act{background:#F3F4F6;border-radius:8px}
+#mod4 .nb.act{color:#059669}
 #mod4 .blogo{background:linear-gradient(135deg,#DC2626,#D97706)}
 
-.m4w{padding:0 16px 120px;max-width:480px;margin:0 auto}
+.m4w{padding:0 16px 72px;max-width:480px;margin:0 auto}
 .m4-h1{font-family:'Playfair Display',serif;font-size:26px;font-weight:900;color:#111827;margin-bottom:6px}
 .m4-h1 span{color:#DC2626}
 .m4-card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
@@ -3282,7 +3424,7 @@ function switchToM3(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Debt Analyser · M4</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.2</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.6</div>
 </header>
 
 <div class="m4w">
@@ -3622,7 +3764,7 @@ function switchToM3(){
 </div><!-- #app4 -->
 
 <div class="bnav" style="background:#fff;border-top:1px solid #E5E7EB">
-  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button><button class="nb act" style="color:#DC2626" onclick="switchToM4()"><span>💳</span><span>Debt</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM6()"><span>📊</span><span>P&L</span></button>
+  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button><button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button><button class="nb act" style="color:#059669" onclick="switchToM4()"><span>💳</span><span>Debt</span></button><button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button><button class="nb" onclick="switchToM2()"><span>📚</span><span>School</span></button><button class="nb" onclick="switchToM6()"><span>📊</span><span>P&L</span></button>
 </div>
 <div class="toast" id="toast4"></div>
 </div><!-- #mod4 -->
@@ -3630,7 +3772,7 @@ function switchToM3(){
 
 <script>
 // ══════════════════════════════════════════════════
-// M4 — DEBT ANALYSER ENGINE v3.2
+// M4 — DEBT ANALYSER ENGINE v3.6
 // ══════════════════════════════════════════════════
 
 // ── HELPERS ──
@@ -4345,9 +4487,9 @@ function switchToM5(){
 #mod6 header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
 #mod6 .bnav{}
 #mod6 .nb{color:#6B7280}
-#mod6 .nb.act{background:#F3F4F6;border-radius:8px}
+#mod6 .nb.act{color:#059669}
 
-.m6w{padding:0 16px 120px;max-width:480px;margin:0 auto}
+.m6w{padding:0 16px 72px;max-width:480px;margin:0 auto}
 .m6-card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
 .m6-card-title{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#9CA3AF;margin-bottom:12px}
 .m6-label{font-size:13px;color:#374151;margin-bottom:5px;font-weight:500}
@@ -4439,7 +4581,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Monthly P&L · M6</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.2</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.6</div>
 </header>
 
 <div class="m6w">
@@ -4589,7 +4731,7 @@ function switchToM5(){
 
 <script>
 // ══════════════════════════════════════════
-// M6 — MONTHLY P&L ENGINE v3.2
+// M6 — MONTHLY P&L ENGINE v3.6
 // ══════════════════════════════════════════
 
 function fmtM6(n){
@@ -4954,9 +5096,9 @@ function switchToM6(){
 #mod5 header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
 #mod5 .bnav{}
 #mod5 .nb{color:#6B7280}
-#mod5 .nb.act{background:#F3F4F6;border-radius:8px}
+#mod5 .nb.act{color:#059669}
 
-.m5w{padding:0 16px 120px;max-width:480px;margin:0 auto}
+.m5w{padding:0 16px 72px;max-width:480px;margin:0 auto}
 .m5-card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
 .m5-card-title{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#9CA3AF;margin-bottom:12px}
 .m5-label{font-size:13px;color:#374151;margin-bottom:5px;font-weight:500}
@@ -5033,7 +5175,7 @@ function switchToM6(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Goal Planner · M5</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.2</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.6</div>
 </header>
 
 <div class="m5w">
@@ -5211,14 +5353,14 @@ function switchToM6(){
   <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>
   <button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>
   <button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>
-  <button class="nb act" style="color:#7C3AED" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button>
+  <button class="nb act" style="color:#059669" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button>
 </div>
 <div class="toast" id="toast5"></div>
 </div><!-- #mod5 -->
 
 <script>
 // ══════════════════════════════════════════
-// M5 — GOAL PLANNER ENGINE v3.2
+// M5 — GOAL PLANNER ENGINE v3.6
 // ══════════════════════════════════════════
 
 function fmtM5(n){
@@ -5523,7 +5665,7 @@ function switchToM5(){
 #mod7{background:#F5F6FA;min-height:100vh}
 #mod7 header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
 
-.m7w{padding:0 16px 120px;max-width:480px;margin:0 auto}
+.m7w{padding:0 16px 72px;max-width:480px;margin:0 auto}
 .m7-card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
 .m7-card-title{font-size:10px;letter-spacing:1.4px;text-transform:uppercase;color:#9CA3AF;margin-bottom:12px;font-weight:700}
 .m7-label{font-size:13px;color:#374151;margin-bottom:5px;font-weight:600}
@@ -5589,7 +5731,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Protection Check · M7</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.2</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.6</div>
 </header>
 
 <div class="m7w">
@@ -5828,7 +5970,7 @@ function switchToM5(){
 
 <script>
 // ══════════════════════════════════════════
-// M7 — PROTECTION CHECK ENGINE v3.2
+// M7 — PROTECTION CHECK ENGINE v3.6
 // ══════════════════════════════════════════
 
 function fmtM7(n){
@@ -6085,7 +6227,7 @@ function switchToM7(){
 #mod8{background:#0B0F1A;min-height:100vh;color:#fff}
 #mod8 header{background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.08);padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
 
-.m8w{padding:0 16px 120px;max-width:480px;margin:0 auto}
+.m8w{padding:0 16px 72px;max-width:480px;margin:0 auto}
 
 /* Report card */
 .m8-section{margin-bottom:20px}
@@ -6138,30 +6280,30 @@ function switchToM7(){
 /* Tabs */
 .m8-tabs{display:flex;gap:6px;margin-bottom:16px;overflow-x:auto;scrollbar-width:none}
 .m8-tab{flex-shrink:0;padding:8px 12px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;font-size:12px;font-weight:700;color:rgba(255,255,255,.5);cursor:pointer;white-space:nowrap}
-.m8-tab.act{background:rgba(232,184,75,.15);border-color:rgba(232,184,75,.4);color:#E8B84B}
+.m8-tab.act{background:rgba(232,184,75,.15);border-color:rgba(232,184,75,.4);color:#059669}
 
 /* Share card */
 .m8-share-card{background:linear-gradient(135deg,rgba(232,184,75,.15),rgba(232,184,75,.05));border:1px solid rgba(232,184,75,.3);border-radius:16px;padding:18px;text-align:center;margin-bottom:14px}
-.m8-share-title{font-size:16px;font-weight:700;color:#E8B84B;margin-bottom:6px}
+.m8-share-title{font-size:16px;font-weight:700;color:#059669;margin-bottom:6px}
 .m8-share-sub{font-size:12px;color:rgba(255,255,255,.4);margin-bottom:14px;line-height:1.6}
-.m8-share-btn{background:linear-gradient(135deg,#E8B84B,#D97706);color:#fff;border:none;border-radius:10px;padding:11px 20px;font-size:14px;font-weight:700;cursor:pointer;width:100%}
+.m8-share-btn{background:linear-gradient(135deg,#059669,#047857);color:#fff;border:none;border-radius:10px;padding:11px 20px;font-size:14px;font-weight:700;cursor:pointer;width:100%}
 
 /* Action plan */
-.m8-action{background:rgba(255,255,255,.04);border-left:3px solid #E8B84B;border-radius:0 10px 10px 0;padding:12px 14px;margin-bottom:8px}
-.m8-action-title{font-size:13px;font-weight:700;color:#E8B84B;margin-bottom:4px}
+.m8-action{background:rgba(255,255,255,.04);border-left:3px solid #059669;border-radius:0 10px 10px 0;padding:12px 14px;margin-bottom:8px}
+.m8-action-title{font-size:13px;font-weight:700;color:#059669;margin-bottom:4px}
 .m8-action-desc{font-size:12px;color:rgba(255,255,255,.55);line-height:1.7}
 </style>
 
 <div id="app8">
 <header>
   <div class="brand">
-    <div class="blogo" style="background:linear-gradient(135deg,#E8B84B,#D97706)">🌊</div>
+    <div class="blogo" style="background:linear-gradient(135deg,#059669,#047857)">🌊</div>
     <div>
       <div class="bname" style="color:#fff;font-size:17px;font-weight:700">Cauvery Pulse</div>
       <div class="bsub" style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px">Score Report · M8</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v3.2</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v3.6</div>
 </header>
 
 <div class="m8w">
@@ -6184,14 +6326,14 @@ function switchToM7(){
       <div class="m8-hero-ring" id="m8HeroRing">
         <svg viewBox="0 0 140 140">
           <circle cx="70" cy="70" r="58" fill="none" stroke="rgba(255,255,255,.08)" stroke-width="12"/>
-          <circle id="m8RingFill" cx="70" cy="70" r="58" fill="none" stroke="#E8B84B" stroke-width="12" stroke-dasharray="0 364" stroke-linecap="round" transform="rotate(-90 70 70)"/>
+          <circle id="m8RingFill" cx="70" cy="70" r="58" fill="none" stroke="#059669" stroke-width="12" stroke-dasharray="0 364" stroke-linecap="round" transform="rotate(-90 70 70)"/>
         </svg>
         <div class="m8-hero-center">
-          <div class="m8-hero-num" id="m8ScoreNum" style="color:#E8B84B">—</div>
+          <div class="m8-hero-num" id="m8ScoreNum" style="color:#059669">—</div>
           <div class="m8-hero-lbl">Pulse Score</div>
         </div>
       </div>
-      <div id="m8ScoreLabel" style="font-size:16px;font-weight:700;color:#E8B84B;margin-bottom:4px">—</div>
+      <div id="m8ScoreLabel" style="font-size:16px;font-weight:700;color:#059669;margin-bottom:4px">—</div>
       <div id="m8ScoreSub" style="font-size:12px;color:rgba(255,255,255,.4)">Complete modules to see your full picture</div>
     </div>
 
@@ -6246,7 +6388,7 @@ function switchToM7(){
   <!-- ── TAB 3: ACTION PLAN ── -->
   <div id="m8tab-action" style="display:none">
     <div style="padding:14px 0 18px">
-      <div style="font-size:22px;font-weight:900;color:#fff;font-family:'Playfair Display',serif;margin-bottom:6px">Your <span style="color:#E8B84B">30-Day</span> Action Plan</div>
+      <div style="font-size:22px;font-weight:900;color:#fff;font-family:'Playfair Display',serif;margin-bottom:6px">Your <span style="color:#059669">30-Day</span> Action Plan</div>
       <div style="font-size:13px;color:rgba(255,255,255,.4);line-height:1.7">Based on your profile and scores. Do these in order — sequence matters.</div>
     </div>
     <div id="m8ActionPlan"></div>
@@ -6255,30 +6397,30 @@ function switchToM7(){
   <!-- ── TAB 4: WISDOM ── -->
   <div id="m8tab-wisdom" style="display:none">
     <div style="padding:14px 0 18px">
-      <div style="font-size:22px;font-weight:900;color:#fff;font-family:'Playfair Display',serif;margin-bottom:6px">💡 Financial <span style="color:#E8B84B">Wisdom</span></div>
+      <div style="font-size:22px;font-weight:900;color:#fff;font-family:'Playfair Display',serif;margin-bottom:6px">💡 Financial <span style="color:#059669">Wisdom</span></div>
       <div style="font-size:13px;color:rgba(255,255,255,.4);line-height:1.7">Timeless principles from the world's greatest investors and thinkers on money.</div>
     </div>
     <div id="m8WisdomList"></div>
   </div>
 
-  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v3.2<br>Your financial data stays on your device only.</div>
+  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v3.6<br>Your financial data stays on your device only.</div>
 </div>
 </div><!-- #app8 -->
 
-<div class="bnav" style="background:#0B0F1A;border-top:1px solid rgba(255,255,255,.1);padding:4px 6px 8px">
+<div class="bnav" style="background:#0B0F1A;border-top:1px solid rgba(255,255,255,.08)">
   <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>
   <button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button>
   <button class="nb" onclick="switchToM4()"><span>💳</span><span>Debt</span></button>
   <button class="nb" onclick="switchToM3()"><span>🗺️</span><span>Blueprint</span></button>
   <button class="nb" onclick="switchToM7()"><span>🛡️</span><span>Protect</span></button>
-  <button class="nb act" style="color:#E8B84B" onclick="switchToM8()"><span>📋</span><span>Report</span></button>
+  <button class="nb act" style="color:#059669" onclick="switchToM8()"><span>📋</span><span>Report</span></button>
 </div>
 <div class="toast" id="toast8"></div>
 </div><!-- #mod8 -->
 
 <script>
 // ══════════════════════════════════════════
-// M8 — SCORE REPORT + DON'T DO LIST v3.2
+// M8 — SCORE REPORT + DON'T DO LIST v3.6
 // ══════════════════════════════════════════
 
 var M8_DONT_LIST = [
@@ -6581,7 +6723,7 @@ function switchToM8(){
 // Nav handled by single master init below
 </script>
 <script>
-// ══ CAUVERY PULSE — MASTER NAV v3.2 — ALL MODULES ══
+// ══ CAUVERY PULSE — MASTER NAV v3.6 — ALL MODULES ══
 (function(){
   var NAV = [
     ['switchToM0', '🎨', 'Canvas'],
@@ -6594,9 +6736,9 @@ function switchToM8(){
     ['switchToM8', '📋', 'Report'],
   ];
   var COLORS = {
-    switchToM0:'#E8B84B', switchToM1:'#9b72cf', switchToM2:'#2ec4b6',
+    switchToM0:'#059669', switchToM1:'#9b72cf', switchToM2:'#2ec4b6',
     switchToM3:'#D97706', switchToM4:'#DC2626', switchToM5:'#7C3AED',
-    switchToM6:'#059669', switchToM7:'#DC2626', switchToM8:'#E8B84B'
+    switchToM6:'#059669', switchToM7:'#DC2626', switchToM8:'#059669'
   };
   function makeNav(activeFn){
     return NAV.map(function(b){
