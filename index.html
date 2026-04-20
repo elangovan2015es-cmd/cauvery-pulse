@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Cauvery Pulse | v4.3 | Build: 20260418-0420 | Elango Industries Limited -->
+<!-- Cauvery Pulse | v4.4 | Build: 20260418-0445 | Elango Industries Limited -->
 <title>Cauvery Pulse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
@@ -419,7 +419,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   box-sizing:border-box;
 }
 
-/* ── GLOBAL INPUT STYLES v4.3 ── */
+/* ── GLOBAL INPUT STYLES v4.4 ── */
 input[type=number], input[type=text], input[type=email], select, textarea {
   background:#fff !important;
   border:1.5px solid #E5E7EB !important;
@@ -442,7 +442,7 @@ input[type=number]:focus, input[type=text]:focus, select:focus, textarea:focus {
 }
 select { appearance:none; cursor:pointer; }
 
-/* ── GLOBAL FONT STYLES v4.3 ── */
+/* ── GLOBAL FONT STYLES v4.4 ── */
 .m3-card, .m4-card, .m5-card, .m6-card, .m7-card {
   font-size:14px;
   font-weight:500;
@@ -491,7 +491,7 @@ select { appearance:none; cursor:pointer; }
 /* Section headers */
 h1,h2,h3 { font-weight:700; }
 
-/* ── NAV v4.3 ── */
+/* ── NAV v4.4 ── */
 .nb.act { color:#059669 !important; }
 .nb span:last-child { font-weight:700 !important; font-size:9px !important; }
 .nb span:first-child { font-size:21px !important; }
@@ -553,7 +553,7 @@ strong { color:#111827 }
 #mod8 .nb { color:rgba(255,255,255,.4) !important }
 #mod8 .nb.act { color:#34D399 !important }
 
-/* ══ HAMBURGER NAV DRAWER v4.3 ══ */
+/* ══ HAMBURGER NAV DRAWER v4.4 ══ */
 .bnav { display:none !important; }
 
 /* Hamburger button — top right of every header */
@@ -642,7 +642,7 @@ strong { color:#111827 }
   padding-bottom:24px !important;
 }
 
-/* ══ GLOBAL BOLD READABLE FONTS v4.3 ══ */
+/* ══ GLOBAL BOLD READABLE FONTS v4.4 ══ */
 
 /* Body text — heavier weight throughout */
 body { font-weight:500; font-size:15px; line-height:1.7; }
@@ -763,7 +763,7 @@ strong { font-weight:700 !important; }
 <div id="app0">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Life Canvas · M0</div></div></div>
-  <div class="vtag">v4.3</div>
+  <div class="vtag">v4.4</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 <div class="starfield" id="starfield"></div>
 <div class="aurora"></div>
@@ -1227,7 +1227,7 @@ strong { font-weight:700 !important; }
 <div id="app">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Cauvery Pulse Score · M1</div></div></div>
-  <div class="vtag">v4.3</div>
+  <div class="vtag">v4.4</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 <!-- WELCOME -->
 <div id="welcome" class="screen active">
@@ -1415,7 +1415,7 @@ strong { font-weight:700 !important; }
 <div id="app2">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Investment School · M2</div></div></div>
-  <div class="vtag">v4.3</div>
+  <div class="vtag">v4.4</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div style="padding:0 20px 80px">
@@ -1840,7 +1840,7 @@ function closeM2Detail(){
 
 // ══ UPDATED MODULE SWITCHER (now includes M2) ══
 function switchToM2(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod2').classList.add('act');
@@ -1848,14 +1848,14 @@ function switchToM2(){
   renderM2();
 }
 function switchToM1(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod1').classList.add('act');
   window.scrollTo(0,0);
 }
 function switchToM0(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod0').classList.add('act');
@@ -2764,7 +2764,7 @@ function toast(msg){
 
 
 
-<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v4.3 ══════ -->
+<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v4.4 ══════ -->
 <div id="mod3" class="mod">
 <style>
 /* ── M3 LIGHT THEME ── */
@@ -2948,7 +2948,7 @@ function toast(msg){
   </div>
   <div style="display:flex;align-items:center;gap:8px">
     <button onclick="openM3Settings()" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:6px 10px;font-size:13px;color:#6B7280;cursor:pointer">⚙️ Rates</button>
-    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.3</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.4</div>
   </div>
 </header>
 
@@ -2983,7 +2983,7 @@ function toast(msg){
 
 <script>
 // ══════════════════════════════════════════════════════
-// M3 PORTFOLIO BLUEPRINT ENGINE v4.3
+// M3 PORTFOLIO BLUEPRINT ENGINE v4.4
 // ══════════════════════════════════════════════════════
 
 // ── COLOURS ──
@@ -3504,7 +3504,7 @@ function saveM3Rates(){
 
 // ── SWITCHERS ──
 function switchToM3(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod3').classList.add('act');
@@ -3626,7 +3626,7 @@ function switchToM3(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Debt Analyser · M4</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.3</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.4</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button><button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m4w">
@@ -3974,7 +3974,7 @@ function switchToM3(){
 
 <script>
 // ══════════════════════════════════════════════════
-// M4 — DEBT ANALYSER ENGINE v4.3
+// M4 — DEBT ANALYSER ENGINE v4.4
 // ══════════════════════════════════════════════════
 
 // ── HELPERS ──
@@ -4405,7 +4405,7 @@ function calcInflation(){
 
 // ── MODULE SWITCHER ──
 function switchToM4(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod4').classList.add('act');
@@ -4665,7 +4665,7 @@ function m5LoadProfile(){
 
 // ── MODULE SWITCHER ──
 function switchToM5(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod5').classList.add('act');
@@ -4783,7 +4783,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Monthly P&L · M6</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.3</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.4</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m6w">
@@ -4933,7 +4933,7 @@ function switchToM5(){
 
 <script>
 // ══════════════════════════════════════════
-// M6 — MONTHLY P&L ENGINE v4.3
+// M6 — MONTHLY P&L ENGINE v4.4
 // ══════════════════════════════════════════
 
 function fmtM6(n){
@@ -5275,7 +5275,7 @@ function m6ShowTab(tab,el){
 
 // ── MODULE SWITCHER ──
 function switchToM6(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod6').classList.add('act');
@@ -5377,7 +5377,7 @@ function switchToM6(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Goal Planner · M5</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.3</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.4</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m5w">
@@ -5562,7 +5562,7 @@ function switchToM6(){
 
 <script>
 // ══════════════════════════════════════════
-// M5 — GOAL PLANNER ENGINE v4.3
+// M5 — GOAL PLANNER ENGINE v4.4
 // ══════════════════════════════════════════
 
 function fmtM5(n){
@@ -5933,7 +5933,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Protection Check · M7</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.3</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.4</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m7w">
@@ -6172,7 +6172,7 @@ function switchToM5(){
 
 <script>
 // ══════════════════════════════════════════
-// M7 — PROTECTION CHECK ENGINE v4.3
+// M7 — PROTECTION CHECK ENGINE v4.4
 // ══════════════════════════════════════════
 
 function fmtM7(n){
@@ -6411,7 +6411,7 @@ function m7ShowTab(tab, el){
 
 // ── MODULE SWITCHER ──
 function switchToM7(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod7').classList.add('act');
@@ -6505,7 +6505,7 @@ function switchToM7(){
       <div class="bsub" style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px">Score Report · M8</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v4.3</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v4.4</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m8w">
@@ -6605,7 +6605,7 @@ function switchToM7(){
     <div id="m8WisdomList"></div>
   </div>
 
-  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v4.3<br>Your financial data stays on your device only.</div>
+  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v4.4<br>Your financial data stays on your device only.</div>
 </div>
 </div><!-- #app8 -->
 
@@ -6622,7 +6622,7 @@ function switchToM7(){
 
 <script>
 // ══════════════════════════════════════════
-// M8 — SCORE REPORT + DON'T DO LIST v4.3
+// M8 — SCORE REPORT + DON'T DO LIST v4.4
 // ══════════════════════════════════════════
 
 var M8_DONT_LIST = [
@@ -6914,7 +6914,7 @@ function m8ShowTab(tab, el){
 
 // ── MODULE SWITCHER ──
 function switchToM8(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod8').classList.add('act');
@@ -6925,7 +6925,7 @@ function switchToM8(){
 // Nav handled by single master init below
 </script>
 <script>
-// ══ CAUVERY PULSE — MASTER NAV v4.3 — ALL MODULES ══
+// ══ CAUVERY PULSE — MASTER NAV v4.4 — ALL MODULES ══
 (function(){
   var NAV = [
     ['switchToM0', '🎨', 'Canvas'],
@@ -7050,7 +7050,7 @@ function switchToM8(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Net Worth · M9</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.3</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.4</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m9w">
@@ -7182,7 +7182,7 @@ function switchToM8(){
 
 <script>
 // ══════════════════════════════════════════
-// M9 — NET WORTH TRACKER v4.3
+// M9 — NET WORTH TRACKER v4.4
 // ══════════════════════════════════════════
 
 var MONTHS9=['January','February','March','April','May','June','July','August','September','October','November','December'];
@@ -7456,7 +7456,7 @@ function m9ShowTab(tab,el){
 
 // ── MODULE SWITCHER ──
 function switchToM9(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod9').classList.add('act');
@@ -7541,8 +7541,21 @@ function switchToM9(){
     <div class="nav-item-icon" style="background:#EFF6FF">🧾</div>
     <div class="nav-item-text"><span class="nav-item-name">Tax Optimiser</span><span class="nav-item-desc">80C, HRA, LTCG, regime comparison</span></div>
   </button>
+  <div class="nav-drawer-section">Manage</div>
+  <button class="nav-item" onclick="navTo_M('switchToM12')">
+    <div class="nav-item-icon" style="background:#FEF2F2">📅</div>
+    <div class="nav-item-text"><span class="nav-item-name">EMI Calendar</span><span class="nav-item-desc">All loans, due dates, payoff plan</span></div>
+  </button>
+  <button class="nav-item" onclick="navTo_M('switchToM13')">
+    <div class="nav-item-icon" style="background:#ECFEFF">🛫</div>
+    <div class="nav-item-text"><span class="nav-item-name">Retirement Runway</span><span class="nav-item-desc">How long your corpus lasts</span></div>
+  </button>
+  <button class="nav-item" onclick="navTo_M('switchToM14')">
+    <div class="nav-item-icon" style="background:#EFF6FF">💼</div>
+    <div class="nav-item-text"><span class="nav-item-name">Salary Optimiser</span><span class="nav-item-desc">CTC restructuring, more take-home</span></div>
+  </button>
   <div class="nav-drawer-footer">
-    Cauvery Pulse v4.3 · Elango Industries Limited<br>
+    Cauvery Pulse v4.4 · Elango Industries Limited<br>
     Your data stays on your device only.
   </div>
 </div>
@@ -7554,8 +7567,8 @@ function openNavDrawer(){
   document.getElementById('navOverlay').classList.add('open');
   document.body.style.overflow='hidden';
   // Highlight active module
-  var mods=['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'];
-  var fns=['switchToM0','switchToM1','switchToM2','switchToM3','switchToM4','switchToM5','switchToM6','switchToM7','switchToM8','switchToM9','switchToM10','switchToM11'];
+  var mods=['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'];
+  var fns=['switchToM0','switchToM1','switchToM2','switchToM3','switchToM4','switchToM5','switchToM6','switchToM7','switchToM8','switchToM9','switchToM10','switchToM11','switchToM12','switchToM13','switchToM14'];
   var activeMod='';
   mods.forEach(function(id,i){
     var el=document.getElementById(id);
@@ -7800,7 +7813,7 @@ function navTo_M(fnName){
 
 <script>
 // ══════════════════════════════════════════
-// M10 — SIP TRACKER ENGINE v4.3
+// M10 — SIP TRACKER ENGINE v4.4
 // ══════════════════════════════════════════
 
 var SIP_TYPES={
@@ -8141,7 +8154,7 @@ function m10ShowTab(tab,el){
 
 // ── MODULE SWITCHER ──
 function switchToM10(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod10').classList.add('act');
@@ -8423,7 +8436,7 @@ function switchToM10(){
 
 <script>
 // ══════════════════════════════════════════
-// M11 — TAX OPTIMISER ENGINE v4.3
+// M11 — TAX OPTIMISER ENGINE v4.4
 // ══════════════════════════════════════════
 
 function fmtM11(n){
@@ -8724,10 +8737,655 @@ function m11ShowTab(tab,el){
 
 // ── MODULE SWITCHER ──
 function switchToM11(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod11').classList.add('act');
+  window.scrollTo(0,0);
+}
+</script>
+
+
+
+<!-- ══════ MODULE 12: EMI CALENDAR ══════ -->
+<div id="mod12" class="mod">
+<style>
+#mod12{background:#F5F6FA;min-height:100vh}
+#mod12 header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+.m12w{padding:0 16px 28px;max-width:480px;margin:0 auto}
+.m12-card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.m12-card-title{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:#1E3A8A;margin-bottom:12px;font-weight:800}
+.m12-label{font-size:14px;color:#111827;margin-bottom:6px;font-weight:700}
+.m12-input{width:100%;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:15px;font-weight:600;color:#111827;font-family:'DM Mono','DM Sans',sans-serif;margin-bottom:10px;box-sizing:border-box;transition:border-color .2s}
+.m12-input:focus{outline:none;border-color:#059669;box-shadow:0 0 0 3px rgba(5,150,105,.1)}
+.m12-select{width:100%;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:14px;font-weight:600;color:#111827;margin-bottom:10px;appearance:none}
+.m12-btn{width:100%;padding:13px;background:linear-gradient(135deg,#059669,#047857);color:#fff;font-weight:700;border:none;border-radius:12px;cursor:pointer;font-size:15px}
+.m12-tabs{display:flex;gap:6px;margin-bottom:16px}
+.m12-tab{flex:1;padding:9px 4px;background:#fff;border:1.5px solid #E5E7EB;border-radius:20px;font-size:12px;font-weight:700;color:#6B7280;cursor:pointer;text-align:center;transition:all .2s}
+.m12-tab.act{background:#ECFDF5;border-color:#A7F3D0;color:#059669}
+
+/* Loan card */
+.m12-loan-item{background:#fff;border:1px solid #E5E7EB;border-radius:14px;padding:14px;margin-bottom:10px}
+.m12-loan-header{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.m12-loan-icon{width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.m12-loan-name{font-size:15px;font-weight:700;color:#111827}
+.m12-loan-type{font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px}
+.m12-loan-del{background:none;border:none;color:#D1D5DB;cursor:pointer;font-size:18px;margin-left:auto}
+.m12-loan-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.m12-loan-cell{text-align:center}
+.m12-loan-val{font-family:'DM Mono',monospace;font-size:15px;font-weight:700;color:#111827}
+.m12-loan-lbl{font-size:10px;color:#9CA3AF;font-weight:700;text-transform:uppercase;letter-spacing:.4px;margin-top:2px}
+
+/* Payoff progress */
+.m12-payoff-bar{margin-top:10px}
+.m12-payoff-track{width:100%;background:#F3F4F6;border-radius:5px;height:8px;overflow:hidden}
+.m12-payoff-fill{height:8px;border-radius:5px;transition:width .5s}
+.m12-payoff-labels{display:flex;justify-content:space-between;font-size:11px;font-weight:600;margin-top:4px}
+
+/* Calendar grid */
+.m12-cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:2px;margin-bottom:6px}
+.m12-cal-day-hdr{font-size:10px;font-weight:700;color:#9CA3AF;text-align:center;padding:4px 0}
+.m12-cal-day{min-height:32px;border-radius:6px;display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:11px;font-weight:600;cursor:default;position:relative}
+.m12-cal-day.today{background:#ECFDF5;border:1.5px solid #059669;color:#059669}
+.m12-cal-day.emi-due{background:#FEF2F2;border:1.5px solid #FECACA;color:#DC2626}
+.m12-cal-day.other-month{color:#D1D5DB}
+.m12-cal-emi-dot{width:5px;height:5px;border-radius:50%;background:#DC2626;margin-top:2px}
+
+/* Summary */
+.m12-summary-box{background:#fff;border:1px solid #E5E7EB;border-radius:14px;padding:14px;text-align:center}
+.m12-summary-val{font-family:'DM Mono',monospace;font-size:20px;font-weight:700;margin-bottom:3px}
+.m12-summary-lbl{font-size:11px;color:#9CA3AF;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+.m12-insight{font-size:13px;font-weight:600;color:#374151;line-height:1.85;padding:12px 14px;background:#ECFDF5;border-radius:10px;border-left:3px solid #059669;margin-top:10px}
+</style>
+
+<div id="app12">
+<header>
+  <div class="brand">
+    <div class="blogo" style="background:linear-gradient(135deg,#DC2626,#D97706)">🌊</div>
+    <div>
+      <div class="bname" style="color:#111827;font-size:17px;font-weight:800">Cauvery Pulse</div>
+      <div class="bsub" style="font-size:10px;color:#6B7280;font-weight:700;text-transform:uppercase;letter-spacing:1px">EMI Calendar · M12</div>
+    </div>
+  </div>
+  <button class="nav-burger" onclick="openNavDrawer()"><span></span><span></span><span></span></button>
+</header>
+
+<div class="m12w">
+  <div style="padding:14px 0 12px;text-align:center">
+    <span style="font-size:40px;display:block;margin-bottom:6px">📅</span>
+    <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:#111827;margin-bottom:4px">EMI <span style="color:#DC2626">Calendar</span></div>
+    <div style="font-size:13px;color:#6B7280;font-weight:600">All your EMIs. Every due date. Never miss a payment.</div>
+  </div>
+
+  <div class="m12-tabs">
+    <div class="m12-tab act" onclick="m12ShowTab('loans',this)">🏦 My Loans</div>
+    <div class="m12-tab" onclick="m12ShowTab('add',this)">➕ Add Loan</div>
+    <div class="m12-tab" onclick="m12ShowTab('calendar',this)">📅 Calendar</div>
+    <div class="m12-tab" onclick="m12ShowTab('payoff',this)">⚡ Payoff</div>
+  </div>
+
+  <!-- TAB 1: MY LOANS -->
+  <div id="m12tab-loans">
+    <div id="m12LoanList"><div style="text-align:center;padding:40px;color:#9CA3AF;font-size:14px;font-weight:600">No loans added yet. Tap <strong>Add Loan</strong>.</div></div>
+    <div id="m12TotalEMI" style="display:none" class="m12-card" style="text-align:center">
+      <div style="font-size:12px;font-weight:700;color:#6B7280;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px">Total Monthly EMI</div>
+      <div style="font-family:'DM Mono',monospace;font-size:28px;font-weight:700;color:#DC2626" id="m12TotalEMIVal">₹0</div>
+    </div>
+  </div>
+
+  <!-- TAB 2: ADD LOAN -->
+  <div id="m12tab-add" style="display:none">
+    <div class="m12-card">
+      <div class="m12-card-title">➕ Add a Loan</div>
+      <div class="m12-label">Loan Name</div>
+      <input class="m12-input" type="text" id="l12Name" placeholder="e.g. HDFC Home Loan">
+      <div class="m12-label">Loan Type</div>
+      <select class="m12-select" id="l12Type">
+        <option value="home">🏠 Home Loan</option>
+        <option value="car">🚗 Car Loan</option>
+        <option value="personal">💼 Personal Loan</option>
+        <option value="education">🎓 Education Loan</option>
+        <option value="business">🏢 Business Loan</option>
+        <option value="cc">💳 Credit Card</option>
+      </select>
+      <div class="m12-label">Outstanding Balance (₹)</div>
+      <input class="m12-input" type="number" id="l12Balance" placeholder="e.g. 3500000">
+      <div class="m12-label">Monthly EMI (₹)</div>
+      <input class="m12-input" type="number" id="l12EMI" placeholder="e.g. 32000">
+      <div class="m12-label">Interest Rate (% p.a.)</div>
+      <input class="m12-input" type="number" id="l12Rate" placeholder="e.g. 8.75" step="0.1">
+      <div class="m12-label">EMI Due Date (day of month)</div>
+      <select class="m12-select" id="l12Date">
+        <option value="1">1st</option><option value="5">5th</option><option value="7">7th</option>
+        <option value="10" selected>10th</option><option value="15">15th</option>
+        <option value="20">20th</option><option value="25">25th</option><option value="28">28th</option>
+      </select>
+      <div class="m12-label">Remaining Tenure (months)</div>
+      <input class="m12-input" type="number" id="l12Tenure" placeholder="e.g. 240">
+      <button class="m12-btn" onclick="m12AddLoan()">Add Loan →</button>
+    </div>
+  </div>
+
+  <!-- TAB 3: CALENDAR -->
+  <div id="m12tab-calendar" style="display:none">
+    <div class="m12-card">
+      <div id="m12CalHeader" style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px">
+        <button onclick="m12CalNav(-1)" style="background:#F3F4F6;border:1px solid #E5E7EB;border-radius:8px;padding:6px 12px;font-size:13px;font-weight:700;cursor:pointer">← Prev</button>
+        <div id="m12CalTitle" style="font-size:15px;font-weight:800;color:#111827"></div>
+        <button onclick="m12CalNav(1)" style="background:#F3F4F6;border:1px solid #E5E7EB;border-radius:8px;padding:6px 12px;font-size:13px;font-weight:700;cursor:pointer">Next →</button>
+      </div>
+      <div id="m12CalGrid"></div>
+      <div id="m12CalLegend" style="display:flex;gap:12px;margin-top:8px;font-size:12px;font-weight:600">
+        <div style="display:flex;align-items:center;gap:4px"><div style="width:12px;height:12px;background:#ECFDF5;border:1.5px solid #059669;border-radius:3px"></div>Today</div>
+        <div style="display:flex;align-items:center;gap:4px"><div style="width:12px;height:12px;background:#FEF2F2;border:1.5px solid #FECACA;border-radius:3px"></div>EMI Due</div>
+      </div>
+    </div>
+    <div id="m12CalDues"></div>
+  </div>
+
+  <!-- TAB 4: PAYOFF -->
+  <div id="m12tab-payoff" style="display:none">
+    <div id="m12PayoffContent"><div style="text-align:center;padding:40px;color:#9CA3AF;font-size:14px;font-weight:600">Add loans to see payoff analysis.</div></div>
+  </div>
+
+  <div style="text-align:center;padding:14px;font-size:11px;color:#9CA3AF;font-weight:600">© Elango Industries Limited · Cauvery Pulse · M12</div>
+</div>
+</div><!-- #app12 -->
+<div class="bnav"></div>
+<div class="toast" id="toast12"></div>
+</div><!-- #mod12 -->
+
+<script>
+// ── M12 EMI CALENDAR ──
+var LOAN_TYPES12={home:{icon:'🏠',color:'#2563EB',bg:'#EFF6FF',label:'Home Loan'},car:{icon:'🚗',color:'#D97706',bg:'#FFFBEB',label:'Car Loan'},personal:{icon:'💼',color:'#DC2626',bg:'#FEF2F2',label:'Personal Loan'},education:{icon:'🎓',color:'#059669',bg:'#ECFDF5',label:'Education Loan'},business:{icon:'🏢',color:'#7C3AED',bg:'#F5F3FF',label:'Business Loan'},cc:{icon:'💳',color:'#DC2626',bg:'#FEF2F2',label:'Credit Card'}};
+var MONTHS12=['January','February','March','April','May','June','July','August','September','October','November','December'];
+var m12CalYear=new Date().getFullYear(), m12CalMonth=new Date().getMonth();
+
+function fmt12(n){if(Math.abs(n)>=10000000)return '₹'+(n/10000000).toFixed(2)+' Cr';if(Math.abs(n)>=100000)return '₹'+(n/100000).toFixed(1)+' L';if(Math.abs(n)>=1000)return '₹'+(n/1000).toFixed(1)+' K';return '₹'+Math.round(n);}
+function m12GetLoans(){try{return JSON.parse(localStorage.getItem('cp_emis')||'[]');}catch(e){return [];}}
+function m12SaveLoans(l){localStorage.setItem('cp_emis',JSON.stringify(l));}
+function m12Toast(msg){var t=document.getElementById('toast12');if(t){t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2400);}}
+
+function m12AddLoan(){
+  var name=document.getElementById('l12Name').value.trim();
+  var type=document.getElementById('l12Type').value;
+  var bal=parseFloat(document.getElementById('l12Balance').value)||0;
+  var emi=parseFloat(document.getElementById('l12EMI').value)||0;
+  var rate=parseFloat(document.getElementById('l12Rate').value)||0;
+  var date=parseInt(document.getElementById('l12Date').value)||10;
+  var tenure=parseInt(document.getElementById('l12Tenure').value)||0;
+  if(!name||!emi){m12Toast('Enter loan name and EMI ☝️');return;}
+  var loans=m12GetLoans();
+  loans.push({id:Date.now(),name:name,type:type,balance:bal,emi:emi,rate:rate,date:date,tenure:tenure,addedAt:Date.now()});
+  m12SaveLoans(loans);
+  m12Toast(name+' added ✓');
+  ['l12Name','l12Balance','l12EMI','l12Rate','l12Tenure'].forEach(function(id){document.getElementById(id).value='';});
+  m12ShowTab('loans',document.querySelector('.m12-tab'));
+}
+
+function m12DeleteLoan(id){m12SaveLoans(m12GetLoans().filter(function(l){return l.id!==id;}));m12RenderLoans();}
+
+function m12RenderLoans(){
+  var loans=m12GetLoans();
+  var el=document.getElementById('m12LoanList');
+  var totEl=document.getElementById('m12TotalEMI');
+  if(!loans.length){el.innerHTML='<div style="text-align:center;padding:40px;color:#9CA3AF;font-size:14px;font-weight:600">No loans added yet. Tap <strong>Add Loan</strong>.</div>';if(totEl)totEl.style.display='none';return;}
+  var totalEMI=loans.reduce(function(s,l){return s+l.emi;},0);
+  el.innerHTML=loans.map(function(loan){
+    var t=LOAN_TYPES12[loan.type]||LOAN_TYPES12.personal;
+    var paid=loan.balance&&loan.emi&&loan.tenure?(1-(loan.balance/(loan.emi*loan.tenure)))*100:0;
+    paid=Math.max(0,Math.min(100,paid));
+    return '<div class="m12-loan-item">'+
+      '<div class="m12-loan-header">'+
+        '<div class="m12-loan-icon" style="background:'+t.bg+'">'+t.icon+'</div>'+
+        '<div style="flex:1"><div class="m12-loan-name">'+loan.name+'</div>'+
+          '<span class="m12-loan-type" style="background:'+t.bg+';color:'+t.color+'">'+t.label+'</span></div>'+
+        '<button class="m12-loan-del" onclick="m12DeleteLoan('+loan.id+')">✕</button>'+
+      '</div>'+
+      '<div class="m12-loan-grid">'+
+        '<div class="m12-loan-cell"><div class="m12-loan-val">'+fmt12(loan.emi)+'/mo</div><div class="m12-loan-lbl">EMI</div></div>'+
+        '<div class="m12-loan-cell"><div class="m12-loan-val">'+fmt12(loan.balance)+'</div><div class="m12-loan-lbl">Balance</div></div>'+
+        '<div class="m12-loan-cell"><div class="m12-loan-val" style="color:#DC2626">'+loan.date+'th</div><div class="m12-loan-lbl">Due Date</div></div>'+
+      '</div>'+
+      (loan.tenure>0?'<div class="m12-payoff-bar"><div style="display:flex;justify-content:space-between;font-size:11px;font-weight:700;margin-bottom:3px"><span style="color:#6B7280">Paid off</span><span style="color:#059669">'+Math.round(paid)+'%</span></div><div class="m12-payoff-track"><div class="m12-payoff-fill" style="width:'+paid+'%;background:#059669"></div></div><div class="m12-payoff-labels"><span style="color:#6B7280">'+loan.tenure+' mo remaining</span><span style="color:#DC2626">'+loan.rate+'% p.a.</span></div></div>':'')+
+    '</div>';
+  }).join('');
+  if(totEl){totEl.style.display='block';document.getElementById('m12TotalEMIVal').textContent=fmt12(totalEMI)+'/mo';}
+}
+
+function m12RenderCalendar(){
+  var loans=m12GetLoans();
+  var title=document.getElementById('m12CalTitle');
+  var grid=document.getElementById('m12CalGrid');
+  var dues=document.getElementById('m12CalDues');
+  if(title)title.textContent=MONTHS12[m12CalMonth]+' '+m12CalYear;
+
+  var today=new Date();
+  var firstDay=new Date(m12CalYear,m12CalMonth,1).getDay();
+  var daysInMonth=new Date(m12CalYear,m12CalMonth+1,0).getDate();
+  var emiDates=loans.map(function(l){return l.date;});
+
+  var html='<div class="m12-cal-grid">';
+  ['Su','Mo','Tu','We','Th','Fr','Sa'].forEach(function(d){html+='<div class="m12-cal-day-hdr">'+d+'</div>';});
+  for(var i=0;i<firstDay;i++)html+='<div class="m12-cal-day other-month"></div>';
+  for(var d=1;d<=daysInMonth;d++){
+    var isToday=today.getDate()===d&&today.getMonth()===m12CalMonth&&today.getFullYear()===m12CalYear;
+    var isEMI=emiDates.indexOf(d)>-1;
+    var cls='m12-cal-day'+(isToday?' today':'')+(isEMI?' emi-due':'');
+    html+='<div class="'+cls+'">'+d+(isEMI?'<div class="m12-cal-emi-dot"></div>':'')+'</div>';
+  }
+  html+='</div>';
+  if(grid)grid.innerHTML=html;
+
+  // Show EMIs due this month
+  if(dues){
+    var dueLoans=loans.filter(function(l){return l.date>=1&&l.date<=daysInMonth;}).sort(function(a,b){return a.date-b.date;});
+    dues.innerHTML=dueLoans.length?
+      '<div class="m12-card"><div class="m12-card-title">EMIs This Month</div>'+
+      dueLoans.map(function(l){
+        var t=LOAN_TYPES12[l.type]||LOAN_TYPES12.personal;
+        var isPast=today.getDate()>l.date&&today.getMonth()===m12CalMonth&&today.getFullYear()===m12CalYear;
+        return '<div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #F3F4F6">'+
+          '<div style="font-size:20px">'+t.icon+'</div>'+
+          '<div style="flex:1"><div style="font-size:13px;font-weight:700;color:#111827">'+l.name+'</div>'+
+          '<div style="font-size:11px;color:#9CA3AF;font-weight:600">Due: '+l.date+'th — '+(isPast?'<span style="color:#059669">Likely paid ✓</span>':'<span style="color:#DC2626">Upcoming</span>')+'</div></div>'+
+          '<div style="font-family:\'DM Mono\',monospace;font-size:14px;font-weight:700;color:#DC2626">'+fmt12(l.emi)+'</div>'+
+        '</div>';
+      }).join('')+'</div>':'';
+  }
+}
+
+function m12CalNav(dir){m12CalMonth+=dir;if(m12CalMonth>11){m12CalMonth=0;m12CalYear++;}if(m12CalMonth<0){m12CalMonth=11;m12CalYear--;}m12RenderCalendar();}
+
+function m12RenderPayoff(){
+  var loans=m12GetLoans();
+  var el=document.getElementById('m12PayoffContent');
+  if(!loans.length){el.innerHTML='<div style="text-align:center;padding:40px;color:#9CA3AF;font-size:14px;font-weight:600">Add loans to see payoff analysis.</div>';return;}
+  var totalBal=loans.reduce(function(s,l){return s+l.balance;},0);
+  var totalEMI=loans.reduce(function(s,l){return s+l.emi;},0);
+  el.innerHTML=
+    '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px">'+
+      '<div class="m12-summary-box"><div class="m12-summary-val" style="color:#DC2626">'+fmt12(totalBal)+'</div><div class="m12-summary-lbl">Total Debt</div></div>'+
+      '<div class="m12-summary-box"><div class="m12-summary-val" style="color:#D97706">'+fmt12(totalEMI)+'/mo</div><div class="m12-summary-lbl">Total EMI</div></div>'+
+    '</div>'+
+    '<div class="m12-card"><div class="m12-card-title">Payoff Order — Highest Rate First</div>'+
+    loans.slice().sort(function(a,b){return b.rate-a.rate;}).map(function(l,i){
+      var t=LOAN_TYPES12[l.type]||LOAN_TYPES12.personal;
+      var months=l.balance&&l.emi?Math.ceil(l.balance/l.emi):l.tenure||0;
+      return '<div style="display:flex;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid #F3F4F6">'+
+        '<div style="font-family:\'DM Mono\',monospace;font-size:16px;font-weight:700;color:#9CA3AF;width:24px">'+(i+1)+'</div>'+
+        '<div style="font-size:20px">'+t.icon+'</div>'+
+        '<div style="flex:1"><div style="font-size:13px;font-weight:700;color:#111827">'+l.name+'</div>'+
+          '<div style="font-size:11px;color:#9CA3AF;font-weight:600">~'+months+' months to clear</div></div>'+
+        '<div style="text-align:right"><div style="font-family:\'DM Mono\',monospace;font-size:13px;font-weight:700;color:#DC2626">'+l.rate+'%</div>'+
+          '<div style="font-size:10px;color:#9CA3AF;font-weight:600">p.a.</div></div>'+
+      '</div>';
+    }).join('')+
+    '</div>'+
+    '<div class="m12-insight">Prepay the highest-rate loan first — that is the Avalanche method. Every extra ₹1,000 thrown at your highest-rate loan saves the most interest.</div>';
+}
+
+function m12ShowTab(tab,el){
+  ['loans','add','calendar','payoff'].forEach(function(t){var e=document.getElementById('m12tab-'+t);if(e)e.style.display='none';});
+  document.querySelectorAll('.m12-tab').forEach(function(t){t.classList.remove('act');});
+  document.getElementById('m12tab-'+tab).style.display='block';
+  if(el)el.classList.add('act');
+  if(tab==='loans')m12RenderLoans();
+  if(tab==='calendar')m12RenderCalendar();
+  if(tab==='payoff')m12RenderPayoff();
+}
+
+function switchToM12(){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12'].forEach(function(id){var el=document.getElementById(id);if(el)el.classList.remove('act');});
+  document.getElementById('mod12').classList.add('act');
+  window.scrollTo(0,0);
+  m12RenderLoans();
+}
+</script>
+
+<!-- ══════ MODULE 13: RETIREMENT RUNWAY ══════ -->
+<div id="mod13" class="mod">
+<style>
+#mod13{background:#F5F6FA;min-height:100vh}
+#mod13 header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+.m13w{padding:0 16px 28px;max-width:480px;margin:0 auto}
+.m13-card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.m13-card-title{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:#1E3A8A;margin-bottom:12px;font-weight:800}
+.m13-label{font-size:14px;color:#111827;margin-bottom:6px;font-weight:700}
+.m13-input{width:100%;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:15px;font-weight:600;color:#111827;font-family:'DM Mono','DM Sans',sans-serif;margin-bottom:10px;box-sizing:border-box;transition:border-color .2s}
+.m13-input:focus{outline:none;border-color:#059669;box-shadow:0 0 0 3px rgba(5,150,105,.1)}
+.m13-select{width:100%;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:14px;font-weight:600;color:#111827;margin-bottom:10px;appearance:none}
+.m13-btn{width:100%;padding:13px;background:linear-gradient(135deg,#059669,#047857);color:#fff;font-weight:700;border:none;border-radius:12px;cursor:pointer;font-size:15px}
+
+/* Runway meter */
+.m13-runway-wrap{text-align:center;padding:20px 0}
+.m13-runway-ring{position:relative;width:160px;height:160px;margin:0 auto 12px}
+.m13-runway-ring svg{width:100%;height:100%}
+.m13-runway-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center}
+.m13-runway-years{font-family:'DM Mono',monospace;font-size:34px;font-weight:700;line-height:1}
+.m13-runway-lbl{font-size:11px;color:#6B7280;font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin-top:4px}
+
+/* Scenario cards */
+.m13-scenario{border-radius:12px;padding:12px 14px;margin-bottom:8px;border:1px solid transparent}
+.m13-result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.m13-result-box{background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;padding:12px;text-align:center}
+.m13-result-val{font-family:'DM Mono',monospace;font-size:17px;font-weight:700;margin-bottom:3px}
+.m13-result-lbl{font-size:10px;color:#9CA3AF;font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+.m13-insight{font-size:13px;font-weight:600;color:#374151;line-height:1.85;padding:12px 14px;background:#ECFDF5;border-radius:10px;border-left:3px solid #059669;margin-top:10px}
+</style>
+
+<div id="app13">
+<header>
+  <div class="brand">
+    <div class="blogo" style="background:linear-gradient(135deg,#0891B2,#059669)">🌊</div>
+    <div>
+      <div class="bname" style="color:#111827;font-size:17px;font-weight:800">Cauvery Pulse</div>
+      <div class="bsub" style="font-size:10px;color:#6B7280;font-weight:700;text-transform:uppercase;letter-spacing:1px">Retirement Runway · M13</div>
+    </div>
+  </div>
+  <button class="nav-burger" onclick="openNavDrawer()"><span></span><span></span><span></span></button>
+</header>
+
+<div class="m13w">
+  <div style="padding:14px 0 12px;text-align:center">
+    <span style="font-size:40px;display:block;margin-bottom:6px">🛫</span>
+    <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:#111827;margin-bottom:4px">Retirement <span style="color:#0891B2">Runway</span></div>
+    <div style="font-size:13px;color:#6B7280;font-weight:600;line-height:1.7">How many years can your current corpus sustain you if income stops today?</div>
+  </div>
+
+  <div class="m13-card">
+    <div class="m13-card-title">📊 Your Situation</div>
+    <div class="m13-label">Current Age</div>
+    <input class="m13-input" type="number" id="r13Age" placeholder="e.g. 40" oninput="m13Calc()">
+    <div class="m13-label">Monthly Expenses (₹)</div>
+    <input class="m13-input" type="number" id="r13Expenses" placeholder="e.g. 80000" oninput="m13Calc()">
+    <div class="m13-label">Total Current Corpus (₹)</div>
+    <input class="m13-input" type="number" id="r13Corpus" placeholder="e.g. 5000000" oninput="m13Calc()">
+    <div class="m13-label">Annual Return on Corpus (%)</div>
+    <select class="m13-select" id="r13Return" onchange="m13Calc()">
+      <option value="6">6% — Conservative (FD / Debt)</option>
+      <option value="7" selected>7% — Moderate (Balanced MF)</option>
+      <option value="8">8% — Growth (Equity-heavy)</option>
+      <option value="10">10% — Aggressive (All Equity)</option>
+    </select>
+    <div class="m13-label">Inflation Rate (%)</div>
+    <select class="m13-select" id="r13Infl" onchange="m13Calc()">
+      <option value="5">5% — Conservative</option>
+      <option value="6" selected>6% — Standard India</option>
+      <option value="7">7% — High inflation</option>
+    </select>
+    <div class="m13-label">Monthly Income (₹) — 0 if stopped</div>
+    <input class="m13-input" type="number" id="r13Income" placeholder="0 if income stopped" oninput="m13Calc()">
+  </div>
+
+  <div id="m13Result" style="display:none"></div>
+
+  <div class="m13-card">
+    <div class="m13-card-title">📖 The 4% Safe Withdrawal Rule</div>
+    <div style="font-size:13px;font-weight:600;color:#374151;line-height:1.9">
+      <div style="margin-bottom:10px">The global benchmark for retirement sustainability: withdraw no more than <strong style="color:#059669">4% of your corpus per year</strong>. At this rate, a well-invested portfolio historically lasts 30+ years.</div>
+      <div style="margin-bottom:10px"><strong style="color:#1E3A8A">Indian adaptation:</strong> Use 3–3.5% withdrawal rate due to higher inflation (6% vs 2-3% in the West). This means you need <strong>28–33× your annual expenses</strong> as retirement corpus.</div>
+      <div><strong style="color:#DC2626">Formula:</strong> Annual expenses × 33 = your target retirement corpus. At ₹80,000/month expenses → ₹96L/year → target corpus = ₹3.17 Cr.</div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:14px;font-size:11px;color:#9CA3AF;font-weight:600">© Elango Industries Limited · Cauvery Pulse · M13</div>
+</div>
+</div><!-- #app13 -->
+<div class="bnav"></div>
+<div class="toast" id="toast13"></div>
+</div><!-- #mod13 -->
+
+<script>
+// ── M13 RETIREMENT RUNWAY ──
+function fmt13(n){if(Math.abs(n)>=10000000)return '₹'+(n/10000000).toFixed(2)+' Cr';if(Math.abs(n)>=100000)return '₹'+(n/100000).toFixed(1)+' L';if(Math.abs(n)>=1000)return '₹'+(n/1000).toFixed(1)+' K';return '₹'+Math.round(n);}
+
+function m13Calc(){
+  var age=parseFloat(document.getElementById('r13Age').value)||0;
+  var exp=parseFloat(document.getElementById('r13Expenses').value)||0;
+  var corpus=parseFloat(document.getElementById('r13Corpus').value)||0;
+  var ret=parseFloat(document.getElementById('r13Return').value)||7;
+  var infl=parseFloat(document.getElementById('r13Infl').value)||6;
+  var income=parseFloat(document.getElementById('r13Income').value)||0;
+  if(!exp||!corpus)return;
+
+  var r=ret/12/100, i=infl/12/100;
+  var balance=corpus;
+  var months=0, maxMonths=600;
+  var annualExp=exp*12;
+
+  // Simulate month by month
+  while(balance>0&&months<maxMonths){
+    balance=balance*(1+r); // growth
+    var thisExp=exp*Math.pow(1+infl/100,months/12); // inflation-adjusted expenses
+    balance-=Math.max(0,thisExp-income); // net withdrawal
+    months++;
+  }
+
+  var years=months===maxMonths?'50+':Math.floor(months/12);
+  var runwayNum=months===maxMonths?50:Math.floor(months/12);
+  var color=runwayNum>=25?'#059669':runwayNum>=15?'#D97706':'#DC2626';
+
+  // Target corpus (33x rule)
+  var targetCorpus=annualExp*33;
+  var corpusGap=Math.max(0,targetCorpus-corpus);
+  var sipNeeded=corpusGap>0&&age<60?corpusGap*(ret/12/100)/(Math.pow(1+ret/12/100,(60-age)*12)-1)/(1+ret/12/100):0;
+
+  // Ring chart
+  var pct=Math.min(100,Math.round(runwayNum/30*100));
+  var circ=2*Math.PI*68, fill=(pct/100)*circ;
+  var svg='<svg viewBox="0 0 160 160"><circle cx="80" cy="80" r="68" fill="none" stroke="#F3F4F6" stroke-width="14"/><circle cx="80" cy="80" r="68" fill="none" stroke="'+color+'" stroke-width="14" stroke-dasharray="'+fill.toFixed(1)+' '+circ.toFixed(1)+'" stroke-linecap="round" transform="rotate(-90 80 80)"/></svg>';
+
+  var label=runwayNum>=25?'Financially Secure':runwayNum>=15?'Moderate Runway':runwayNum>=10?'Short Runway':'Critical — Act Now';
+  var insightText=runwayNum>=25?
+    'Your corpus can sustain your lifestyle for <strong>'+years+' years</strong>. If you retire today, you are set. Keep growing the corpus and review the 4% withdrawal rate annually.':
+    runwayNum>=15?
+    'Runway of <strong>'+years+' years</strong> is reasonable but not comfortable. Target 30+ years. You need approximately <strong>'+fmt13(targetCorpus)+'</strong> as retirement corpus (33× annual expenses).':
+    'Runway of only <strong>'+years+' years</strong> means you need significantly more corpus before retiring. '+(sipNeeded>0?'A monthly SIP of <strong>'+fmt13(sipNeeded)+'</strong> can bridge the gap by age 60.':'Focus on increasing savings rate and reducing expenses.');
+
+  var res=document.getElementById('m13Result');
+  res.style.display='block';
+  res.innerHTML=
+    '<div class="m13-runway-wrap">'+
+      '<div class="m13-runway-ring">'+svg+
+        '<div class="m13-runway-center"><div class="m13-runway-years" style="color:'+color+'">'+years+'</div><div class="m13-runway-lbl">Years</div></div>'+
+      '</div>'+
+      '<div style="font-size:15px;font-weight:800;color:'+color+'">'+label+'</div>'+
+      '<div style="font-size:13px;color:#6B7280;font-weight:600;margin-top:4px">Retirement runway from today</div>'+
+    '</div>'+
+    '<div class="m13-result-grid">'+
+      '<div class="m13-result-box"><div class="m13-result-val" style="color:#1E3A8A">'+fmt13(corpus)+'</div><div class="m13-result-lbl">Current Corpus</div></div>'+
+      '<div class="m13-result-box"><div class="m13-result-val" style="color:#DC2626">'+fmt13(annualExp)+'/yr</div><div class="m13-result-lbl">Annual Expenses</div></div>'+
+      '<div class="m13-result-box"><div class="m13-result-val" style="color:#D97706">'+fmt13(targetCorpus)+'</div><div class="m13-result-lbl">Target Corpus (33×)</div></div>'+
+      '<div class="m13-result-box"><div class="m13-result-val" style="color:'+(corpusGap>0?'#DC2626':'#059669')+'">'+fmt13(corpusGap>0?-corpusGap:corpus-targetCorpus)+'</div><div class="m13-result-lbl">'+(corpusGap>0?'Corpus Gap':'Corpus Surplus')+'</div></div>'+
+    '</div>'+
+    (sipNeeded>0?'<div style="background:#FFFBEB;border:1px solid #FCD34D;border-radius:12px;padding:12px 14px;margin-bottom:12px"><div style="font-size:13px;font-weight:700;color:#92400E">To bridge the gap by age 60</div><div style="font-family:\'DM Mono\',monospace;font-size:22px;font-weight:700;color:#D97706;margin-top:4px">'+fmt13(sipNeeded)+'/month SIP</div></div>':'')+
+    '<div class="m13-insight">'+insightText+'</div>';
+}
+
+function switchToM13(){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13'].forEach(function(id){var el=document.getElementById(id);if(el)el.classList.remove('act');});
+  document.getElementById('mod13').classList.add('act');
+  window.scrollTo(0,0);
+}
+</script>
+
+<!-- ══════ MODULE 14: SALARY OPTIMISER ══════ -->
+<div id="mod14" class="mod">
+<style>
+#mod14{background:#F5F6FA;min-height:100vh}
+#mod14 header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+.m14w{padding:0 16px 28px;max-width:480px;margin:0 auto}
+.m14-card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.m14-card-title{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:#1E3A8A;margin-bottom:12px;font-weight:800}
+.m14-label{font-size:14px;color:#111827;margin-bottom:6px;font-weight:700}
+.m14-input{width:100%;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:15px;font-weight:600;color:#111827;font-family:'DM Mono','DM Sans',sans-serif;margin-bottom:10px;box-sizing:border-box;transition:border-color .2s}
+.m14-input:focus{outline:none;border-color:#059669;box-shadow:0 0 0 3px rgba(5,150,105,.1)}
+.m14-select{width:100%;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:14px;font-weight:600;color:#111827;margin-bottom:10px;appearance:none}
+.m14-btn{width:100%;padding:13px;background:linear-gradient(135deg,#1E3A8A,#2563EB);color:#fff;font-weight:700;border:none;border-radius:12px;cursor:pointer;font-size:15px}
+
+/* CTC breakdown rows */
+.m14-comp-row{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid #F3F4F6}
+.m14-comp-row:last-child{border:none}
+.m14-comp-name{font-size:13px;font-weight:700;color:#374151;flex:1}
+.m14-comp-before{font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:#DC2626;width:80px;text-align:right}
+.m14-comp-after{font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:#059669;width:80px;text-align:right}
+
+/* Saving highlight */
+.m14-saving-banner{background:linear-gradient(135deg,#ECFDF5,#F0FDF4);border:2px solid #A7F3D0;border-radius:14px;padding:16px;text-align:center;margin-bottom:14px}
+.m14-saving-val{font-family:'DM Mono',monospace;font-size:28px;font-weight:700;color:#059669}
+.m14-saving-lbl{font-size:13px;font-weight:700;color:#065F46;margin-top:4px}
+
+.m14-insight{font-size:13px;font-weight:600;color:#374151;line-height:1.85;padding:12px 14px;background:#EFF6FF;border-radius:10px;border-left:3px solid #2563EB;margin-top:10px}
+.m14-result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.m14-result-box{background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;padding:12px;text-align:center}
+.m14-result-val{font-family:'DM Mono',monospace;font-size:17px;font-weight:700;margin-bottom:3px}
+.m14-result-lbl{font-size:10px;color:#9CA3AF;font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+</style>
+
+<div id="app14">
+<header>
+  <div class="brand">
+    <div class="blogo" style="background:linear-gradient(135deg,#1E3A8A,#7C3AED)">🌊</div>
+    <div>
+      <div class="bname" style="color:#111827;font-size:17px;font-weight:800">Cauvery Pulse</div>
+      <div class="bsub" style="font-size:10px;color:#6B7280;font-weight:700;text-transform:uppercase;letter-spacing:1px">Salary Optimiser · M14</div>
+    </div>
+  </div>
+  <button class="nav-burger" onclick="openNavDrawer()"><span></span><span></span><span></span></button>
+</header>
+
+<div class="m14w">
+  <div style="padding:14px 0 12px;text-align:center">
+    <span style="font-size:40px;display:block;margin-bottom:6px">💼</span>
+    <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:#111827;margin-bottom:4px">Salary <span style="color:#1E3A8A">Optimiser</span></div>
+    <div style="font-size:13px;color:#6B7280;font-weight:600;line-height:1.7">Restructure your CTC legally. Same gross salary — significantly less tax. Valid for salaried employees in India.</div>
+  </div>
+
+  <div class="m14-card">
+    <div class="m14-card-title">💼 Your Current CTC</div>
+    <div class="m14-label">Annual CTC / Gross Salary (₹)</div>
+    <input class="m14-input" type="number" id="s14CTC" placeholder="e.g. 1800000" oninput="m14Calc()">
+    <div class="m14-label">Basic Salary (% of CTC)</div>
+    <select class="m14-select" id="s14BasicPct" onchange="m14Calc()">
+      <option value="40">40% of CTC (common)</option>
+      <option value="50" selected>50% of CTC (recommended)</option>
+      <option value="60">60% of CTC</option>
+    </select>
+    <div class="m14-label">City Type (for HRA)</div>
+    <select class="m14-select" id="s14City" onchange="m14Calc()">
+      <option value="metro">Metro — Chennai, Mumbai, Delhi, Bengaluru</option>
+      <option value="non_metro">Non-Metro</option>
+    </select>
+    <div class="m14-label">Do you pay rent?</div>
+    <select class="m14-select" id="s14Rent" onchange="m14Calc()">
+      <option value="yes" selected>Yes — I pay rent</option>
+      <option value="no">No — I own / live with family</option>
+    </select>
+    <div class="m14-label">Employer NPS offered? (80CCD2)</div>
+    <select class="m14-select" id="s14NPS" onchange="m14Calc()">
+      <option value="yes" selected>Yes — employer offers NPS</option>
+      <option value="no">No</option>
+    </select>
+  </div>
+
+  <div id="m14Result" style="display:none"></div>
+
+  <div class="m14-card">
+    <div class="m14-card-title">📋 Key Optimisation Levers</div>
+    <div style="font-size:13px;font-weight:600;color:#374151;line-height:1.9">
+      <div style="margin-bottom:10px"><strong style="color:#1E3A8A">Employer NPS 80CCD(2):</strong> Ask HR to put 10% of Basic into NPS as employer contribution. No upper limit. Fully deductible. This alone can save ₹30,000–₹60,000/year in tax for a ₹15–20L CTC.</div>
+      <div style="margin-bottom:10px"><strong style="color:#1E3A8A">HRA structuring:</strong> Ensure HRA is at least 40–50% of Basic. If you pay rent, this is the single largest exemption available.</div>
+      <div style="margin-bottom:10px"><strong style="color:#1E3A8A">LTA (Leave Travel Allowance):</strong> ₹30,000–₹50,000 tax free if you travel domestically twice in a 4-year block.</div>
+      <div><strong style="color:#1E3A8A">Flexi benefits:</strong> Telephone/internet allowance, food coupons (Sodexo), medical reimbursement — small amounts that add up to ₹20,000–₹40,000 tax free annually.</div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:14px;font-size:11px;color:#9CA3AF;font-weight:600">© Elango Industries Limited · Cauvery Pulse · M14<br>Consult your CA or HR before restructuring CTC.</div>
+</div>
+</div><!-- #app14 -->
+<div class="bnav"></div>
+<div class="toast" id="toast14"></div>
+</div><!-- #mod14 -->
+
+<script>
+// ── M14 SALARY OPTIMISER ──
+function fmt14(n){if(Math.abs(n)>=10000000)return '₹'+(n/10000000).toFixed(2)+' Cr';if(Math.abs(n)>=100000)return '₹'+(n/100000).toFixed(1)+' L';if(Math.abs(n)>=1000)return '₹'+(n/1000).toFixed(1)+' K';return '₹'+Math.round(n);}
+
+function m14CalcTax(taxableIncome){
+  // New regime FY 2025-26
+  var taxable=Math.max(0,taxableIncome-75000);
+  if(taxable<=1200000)return 0;
+  var tax=0;
+  var slabs=[{upto:400000,r:0},{upto:800000,r:0.05},{upto:1200000,r:0.10},{upto:1600000,r:0.15},{upto:2000000,r:0.20},{upto:2400000,r:0.25},{upto:Infinity,r:0.30}];
+  var prev=0;
+  for(var i=0;i<slabs.length;i++){
+    if(taxable<=prev)break;
+    tax+=( Math.min(taxable,slabs[i].upto)-prev)*slabs[i].r;
+    prev=slabs[i].upto;
+  }
+  return Math.round(tax*1.04);
+}
+
+function m14Calc(){
+  var ctc=parseFloat(document.getElementById('s14CTC').value)||0;
+  if(!ctc)return;
+  var basicPct=parseFloat(document.getElementById('s14BasicPct').value)||50;
+  var city=document.getElementById('s14City').value;
+  var payRent=document.getElementById('s14Rent').value==='yes';
+  var hasNPS=document.getElementById('s14NPS').value==='yes';
+
+  var basic=ctc*basicPct/100;
+  var hra=basic*(city==='metro'?0.5:0.4);
+  var lta=Math.min(50000,ctc*0.02);
+  var food=26400; // Sodexo max
+  var telecom=24000; // phone+internet
+  var npsEmployer=hasNPS?basic*0.1:0;
+  var stdDed=75000;
+
+  // Before optimisation — assume standard structure
+  var beforeTax=m14CalcTax(ctc);
+
+  // After optimisation
+  var hraExempt=payRent?Math.min(hra,basic*(city==='metro'?0.5:0.4)):0;
+  var totalExemptions=hraExempt+lta+food+telecom+npsEmployer+stdDed;
+  var afterTaxable=Math.max(0,ctc-totalExemptions);
+  var afterTax=m14CalcTax(afterTaxable);
+  var saving=beforeTax-afterTax;
+  var monthlySaving=Math.round(saving/12);
+
+  var res=document.getElementById('m14Result');
+  res.style.display='block';
+
+  res.innerHTML=
+    (saving>0?'<div class="m14-saving-banner"><div class="m14-saving-val">'+fmt14(saving)+'/yr</div><div class="m14-saving-lbl">Estimated Annual Tax Saving</div><div style="font-size:13px;font-weight:700;color:#059669;margin-top:6px">= '+fmt14(monthlySaving)+'/ month extra in hand</div></div>':'')+
+    '<div class="m14-result-grid">'+
+      '<div class="m14-result-box"><div class="m14-result-val" style="color:#DC2626">'+fmt14(beforeTax)+'</div><div class="m14-result-lbl">Before (Base)</div></div>'+
+      '<div class="m14-result-box"><div class="m14-result-val" style="color:#059669">'+fmt14(afterTax)+'</div><div class="m14-result-lbl">After Optimise</div></div>'+
+    '</div>'+
+    '<div class="m14-card" style="padding:14px">'+
+      '<div class="m14-card-title">Optimisation Levers</div>'+
+      [
+        {name:'Standard Deduction',amt:stdDed,note:'Auto for salaried'},
+        {name:'HRA Exemption',amt:hraExempt,note:payRent?'Based on '+Math.round(basicPct)+'% basic':'Not applicable (no rent)'},
+        {name:'Employer NPS 80CCD(2)',amt:npsEmployer,note:hasNPS?'10% of basic, no upper limit':'Not offered by employer'},
+        {name:'LTA Allowance',amt:lta,note:'Travel twice in 4-year block'},
+        {name:'Food Coupons / Sodexo',amt:food,note:'₹2,200/month tax free'},
+        {name:'Telephone + Internet',amt:telecom,note:'₹2,000/month allowance'},
+      ].map(function(row){
+        return '<div class="m14-comp-row">'+
+          '<div class="m14-comp-name">'+row.name+'<div style="font-size:11px;color:#9CA3AF;font-weight:600">'+row.note+'</div></div>'+
+          '<div class="m14-comp-after">'+fmt14(row.amt)+'</div>'+
+        '</div>';
+      }).join('')+
+      '<div style="display:flex;justify-content:space-between;padding:10px 0 0;font-size:14px;font-weight:700"><span style="color:#111827">Total Exemptions</span><span style="color:#059669">'+fmt14(totalExemptions)+'</span></div>'+
+    '</div>'+
+    '<div class="m14-insight"><strong>How to implement:</strong> Email your HR team to restructure your CTC with these components before April 1st. The employer NPS contribution (80CCD2) is the biggest lever — it reduces your taxable income by '+fmt14(npsEmployer)+' with no upper limit and is available even in the new tax regime.</div>';
+}
+
+function switchToM14(){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){var el=document.getElementById(id);if(el)el.classList.remove('act');});
+  document.getElementById('mod14').classList.add('act');
   window.scrollTo(0,0);
 }
 </script>
