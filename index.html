@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Cauvery Pulse | v4.1 | Build: 20260418-0350 | Elango Industries Limited -->
+<!-- Cauvery Pulse | v4.2 | Build: 20260418-0405 | Elango Industries Limited -->
 <title>Cauvery Pulse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
@@ -419,7 +419,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   box-sizing:border-box;
 }
 
-/* ── GLOBAL INPUT STYLES v4.1 ── */
+/* ── GLOBAL INPUT STYLES v4.2 ── */
 input[type=number], input[type=text], input[type=email], select, textarea {
   background:#fff !important;
   border:1.5px solid #E5E7EB !important;
@@ -442,7 +442,7 @@ input[type=number]:focus, input[type=text]:focus, select:focus, textarea:focus {
 }
 select { appearance:none; cursor:pointer; }
 
-/* ── GLOBAL FONT STYLES v4.1 ── */
+/* ── GLOBAL FONT STYLES v4.2 ── */
 .m3-card, .m4-card, .m5-card, .m6-card, .m7-card {
   font-size:14px;
   font-weight:500;
@@ -491,7 +491,7 @@ select { appearance:none; cursor:pointer; }
 /* Section headers */
 h1,h2,h3 { font-weight:700; }
 
-/* ── NAV v4.1 ── */
+/* ── NAV v4.2 ── */
 .nb.act { color:#059669 !important; }
 .nb span:last-child { font-weight:700 !important; font-size:9px !important; }
 .nb span:first-child { font-size:21px !important; }
@@ -553,7 +553,7 @@ strong { color:#111827 }
 #mod8 .nb { color:rgba(255,255,255,.4) !important }
 #mod8 .nb.act { color:#34D399 !important }
 
-/* ══ HAMBURGER NAV DRAWER v4.1 ══ */
+/* ══ HAMBURGER NAV DRAWER v4.2 ══ */
 .bnav { display:none !important; }
 
 /* Hamburger button — top right of every header */
@@ -642,7 +642,7 @@ strong { color:#111827 }
   padding-bottom:24px !important;
 }
 
-/* ══ GLOBAL BOLD READABLE FONTS v4.1 ══ */
+/* ══ GLOBAL BOLD READABLE FONTS v4.2 ══ */
 
 /* Body text — heavier weight throughout */
 body { font-weight:500; font-size:15px; line-height:1.7; }
@@ -763,7 +763,7 @@ strong { font-weight:700 !important; }
 <div id="app0">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Life Canvas · M0</div></div></div>
-  <div class="vtag">v4.1</div>
+  <div class="vtag">v4.2</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 <div class="starfield" id="starfield"></div>
 <div class="aurora"></div>
@@ -1227,7 +1227,7 @@ strong { font-weight:700 !important; }
 <div id="app">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Cauvery Pulse Score · M1</div></div></div>
-  <div class="vtag">v4.1</div>
+  <div class="vtag">v4.2</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 <!-- WELCOME -->
 <div id="welcome" class="screen active">
@@ -1415,7 +1415,7 @@ strong { font-weight:700 !important; }
 <div id="app2">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Investment School · M2</div></div></div>
-  <div class="vtag">v4.1</div>
+  <div class="vtag">v4.2</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div style="padding:0 20px 80px">
@@ -1840,7 +1840,7 @@ function closeM2Detail(){
 
 // ══ UPDATED MODULE SWITCHER (now includes M2) ══
 function switchToM2(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod2').classList.add('act');
@@ -1848,14 +1848,14 @@ function switchToM2(){
   renderM2();
 }
 function switchToM1(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod1').classList.add('act');
   window.scrollTo(0,0);
 }
 function switchToM0(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod0').classList.add('act');
@@ -2764,7 +2764,7 @@ function toast(msg){
 
 
 
-<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v4.1 ══════ -->
+<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v4.2 ══════ -->
 <div id="mod3" class="mod">
 <style>
 /* ── M3 LIGHT THEME ── */
@@ -2948,7 +2948,7 @@ function toast(msg){
   </div>
   <div style="display:flex;align-items:center;gap:8px">
     <button onclick="openM3Settings()" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:6px 10px;font-size:13px;color:#6B7280;cursor:pointer">⚙️ Rates</button>
-    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.1</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.2</div>
   </div>
 </header>
 
@@ -2983,7 +2983,7 @@ function toast(msg){
 
 <script>
 // ══════════════════════════════════════════════════════
-// M3 PORTFOLIO BLUEPRINT ENGINE v4.1
+// M3 PORTFOLIO BLUEPRINT ENGINE v4.2
 // ══════════════════════════════════════════════════════
 
 // ── COLOURS ──
@@ -3504,7 +3504,7 @@ function saveM3Rates(){
 
 // ── SWITCHERS ──
 function switchToM3(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod3').classList.add('act');
@@ -3626,7 +3626,7 @@ function switchToM3(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Debt Analyser · M4</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.1</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.2</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button><button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m4w">
@@ -3974,7 +3974,7 @@ function switchToM3(){
 
 <script>
 // ══════════════════════════════════════════════════
-// M4 — DEBT ANALYSER ENGINE v4.1
+// M4 — DEBT ANALYSER ENGINE v4.2
 // ══════════════════════════════════════════════════
 
 // ── HELPERS ──
@@ -4405,7 +4405,7 @@ function calcInflation(){
 
 // ── MODULE SWITCHER ──
 function switchToM4(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod4').classList.add('act');
@@ -4665,7 +4665,7 @@ function m5LoadProfile(){
 
 // ── MODULE SWITCHER ──
 function switchToM5(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod5').classList.add('act');
@@ -4783,7 +4783,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Monthly P&L · M6</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.1</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.2</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m6w">
@@ -4933,7 +4933,7 @@ function switchToM5(){
 
 <script>
 // ══════════════════════════════════════════
-// M6 — MONTHLY P&L ENGINE v4.1
+// M6 — MONTHLY P&L ENGINE v4.2
 // ══════════════════════════════════════════
 
 function fmtM6(n){
@@ -5275,7 +5275,7 @@ function m6ShowTab(tab,el){
 
 // ── MODULE SWITCHER ──
 function switchToM6(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod6').classList.add('act');
@@ -5377,7 +5377,7 @@ function switchToM6(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Goal Planner · M5</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.1</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.2</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m5w">
@@ -5562,7 +5562,7 @@ function switchToM6(){
 
 <script>
 // ══════════════════════════════════════════
-// M5 — GOAL PLANNER ENGINE v4.1
+// M5 — GOAL PLANNER ENGINE v4.2
 // ══════════════════════════════════════════
 
 function fmtM5(n){
@@ -5933,7 +5933,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Protection Check · M7</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.1</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.2</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m7w">
@@ -6172,7 +6172,7 @@ function switchToM5(){
 
 <script>
 // ══════════════════════════════════════════
-// M7 — PROTECTION CHECK ENGINE v4.1
+// M7 — PROTECTION CHECK ENGINE v4.2
 // ══════════════════════════════════════════
 
 function fmtM7(n){
@@ -6411,7 +6411,7 @@ function m7ShowTab(tab, el){
 
 // ── MODULE SWITCHER ──
 function switchToM7(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod7').classList.add('act');
@@ -6505,7 +6505,7 @@ function switchToM7(){
       <div class="bsub" style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px">Score Report · M8</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v4.1</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v4.2</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m8w">
@@ -6605,7 +6605,7 @@ function switchToM7(){
     <div id="m8WisdomList"></div>
   </div>
 
-  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v4.1<br>Your financial data stays on your device only.</div>
+  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v4.2<br>Your financial data stays on your device only.</div>
 </div>
 </div><!-- #app8 -->
 
@@ -6622,7 +6622,7 @@ function switchToM7(){
 
 <script>
 // ══════════════════════════════════════════
-// M8 — SCORE REPORT + DON'T DO LIST v4.1
+// M8 — SCORE REPORT + DON'T DO LIST v4.2
 // ══════════════════════════════════════════
 
 var M8_DONT_LIST = [
@@ -6914,7 +6914,7 @@ function m8ShowTab(tab, el){
 
 // ── MODULE SWITCHER ──
 function switchToM8(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod8').classList.add('act');
@@ -6925,7 +6925,7 @@ function switchToM8(){
 // Nav handled by single master init below
 </script>
 <script>
-// ══ CAUVERY PULSE — MASTER NAV v4.1 — ALL MODULES ══
+// ══ CAUVERY PULSE — MASTER NAV v4.2 — ALL MODULES ══
 (function(){
   var NAV = [
     ['switchToM0', '🎨', 'Canvas'],
@@ -7050,7 +7050,7 @@ function switchToM8(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Net Worth · M9</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.1</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.2</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m9w">
@@ -7182,7 +7182,7 @@ function switchToM8(){
 
 <script>
 // ══════════════════════════════════════════
-// M9 — NET WORTH TRACKER v4.1
+// M9 — NET WORTH TRACKER v4.2
 // ══════════════════════════════════════════
 
 var MONTHS9=['January','February','March','April','May','June','July','August','September','October','November','December'];
@@ -7456,12 +7456,13 @@ function m9ShowTab(tab,el){
 
 // ── MODULE SWITCHER ──
 function switchToM9(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'].forEach(function(id){
-    var el=document.getElementById(id); if(el)el.classList.remove('act');
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod9').classList.add('act');
   window.scrollTo(0,0);
-  document.getElementById('m9MonthLabel').textContent=m9MonthLabel();
+  var now=new Date();m9Year=now.getFullYear();m9Month=now.getMonth();
+  if(document.getElementById('m9MonthLabel'))document.getElementById('m9MonthLabel').textContent=m9MonthLabel();
   m9Calc();
 }
 </script>
@@ -7522,8 +7523,13 @@ function switchToM9(){
     <div class="nav-item-text"><span class="nav-item-name" style="color:#fff">Score Report</span><span class="nav-item-desc" style="color:#6B7280">Full picture + Don't Do List</span></div>
   </button>
 
+  <div class="nav-drawer-section">Track</div>
+  <button class="nav-item" onclick="navTo_M('switchToM10')">
+    <div class="nav-item-icon" style="background:#ECFDF5">📈</div>
+    <div class="nav-item-text"><span class="nav-item-name">SIP Tracker</span><span class="nav-item-desc">All SIPs, XIRR, portfolio summary</span></div>
+  </button>
   <div class="nav-drawer-footer">
-    Cauvery Pulse v4.1 · Elango Industries Limited<br>
+    Cauvery Pulse v4.2 · Elango Industries Limited<br>
     Your data stays on your device only.
   </div>
 </div>
@@ -7535,8 +7541,8 @@ function openNavDrawer(){
   document.getElementById('navOverlay').classList.add('open');
   document.body.style.overflow='hidden';
   // Highlight active module
-  var mods=['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'];
-  var fns=['switchToM0','switchToM1','switchToM2','switchToM3','switchToM4','switchToM5','switchToM6','switchToM7','switchToM8','switchToM9'];
+  var mods=['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'];
+  var fns=['switchToM0','switchToM1','switchToM2','switchToM3','switchToM4','switchToM5','switchToM6','switchToM7','switchToM8','switchToM9','switchToM10'];
   var activeMod='';
   mods.forEach(function(id,i){
     var el=document.getElementById(id);
@@ -7559,6 +7565,575 @@ function navTo_M(fnName){
   setTimeout(function(){
     if(typeof window[fnName]==='function') window[fnName]();
   },200);
+}
+</script>
+
+
+
+<!-- ══════ MODULE 10: SIP TRACKER ══════ -->
+<div id="mod10" class="mod">
+<style>
+#mod10{background:#F5F6FA;min-height:100vh}
+#mod10 header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+.m10w{padding:0 16px 28px;max-width:480px;margin:0 auto}
+.m10-card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.m10-card-title{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:#1E3A8A;margin-bottom:12px;font-weight:800}
+.m10-label{font-size:14px;color:#111827;margin-bottom:6px;font-weight:700}
+.m10-input{width:100%;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:15px;font-weight:600;color:#111827;font-family:'DM Mono','DM Sans',sans-serif;margin-bottom:10px;box-sizing:border-box;transition:border-color .2s}
+.m10-input:focus{outline:none;border-color:#059669;box-shadow:0 0 0 3px rgba(5,150,105,.1);background:#FAFFFE}
+.m10-select{width:100%;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:14px;font-weight:600;color:#111827;margin-bottom:10px;appearance:none}
+.m10-select:focus{outline:none;border-color:#059669}
+.m10-btn{width:100%;padding:13px;background:linear-gradient(135deg,#059669,#047857);color:#fff;font-weight:700;border:none;border-radius:12px;cursor:pointer;font-size:15px;margin-top:4px}
+
+/* SIP card in list */
+.m10-sip-card{background:#fff;border:1px solid #E5E7EB;border-radius:14px;padding:14px;margin-bottom:10px;position:relative}
+.m10-sip-header{display:flex;align-items:flex-start;gap:10px;margin-bottom:10px}
+.m10-sip-icon{width:40px;height:40px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0}
+.m10-sip-name{font-size:15px;font-weight:700;color:#111827}
+.m10-sip-type{font-size:11px;font-weight:700;padding:2px 8px;border-radius:10px;margin-top:3px;display:inline-block}
+.m10-sip-del{position:absolute;top:12px;right:12px;background:none;border:none;color:#D1D5DB;cursor:pointer;font-size:18px;padding:2px}
+.m10-sip-del:hover{color:#DC2626}
+.m10-sip-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px}
+.m10-sip-cell{text-align:center}
+.m10-sip-val{font-family:'DM Mono',monospace;font-size:15px;font-weight:700;color:#111827}
+.m10-sip-lbl{font-size:10px;color:#9CA3AF;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-top:2px}
+
+/* Returns bar */
+.m10-return-bar{margin-top:10px}
+.m10-return-track{width:100%;background:#F3F4F6;border-radius:4px;height:8px;overflow:hidden}
+.m10-return-fill{height:8px;border-radius:4px;transition:width .5s}
+.m10-return-labels{display:flex;justify-content:space-between;font-size:11px;font-weight:600;margin-top:4px}
+
+/* Summary dashboard */
+.m10-summary-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.m10-summary-box{background:#fff;border:1px solid #E5E7EB;border-radius:14px;padding:14px;text-align:center}
+.m10-summary-val{font-family:'DM Mono',monospace;font-size:20px;font-weight:700;margin-bottom:3px}
+.m10-summary-lbl{font-size:11px;color:#9CA3AF;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+
+/* XIRR result */
+.m10-xirr-box{background:#ECFDF5;border:1px solid #A7F3D0;border-radius:12px;padding:14px;margin-top:10px}
+.m10-xirr-val{font-family:'DM Mono',monospace;font-size:28px;font-weight:700;color:#059669;text-align:center}
+.m10-xirr-lbl{font-size:12px;color:#065F46;font-weight:700;text-align:center;margin-top:4px}
+
+/* Tabs */
+.m10-tabs{display:flex;gap:6px;margin-bottom:16px}
+.m10-tab{flex:1;padding:9px 4px;background:#fff;border:1.5px solid #E5E7EB;border-radius:20px;font-size:12px;font-weight:700;color:#6B7280;cursor:pointer;text-align:center;transition:all .2s}
+.m10-tab.act{background:#ECFDF5;border-color:#A7F3D0;color:#059669}
+
+/* Insight */
+.m10-insight{font-size:13px;font-weight:600;color:#374151;line-height:1.85;padding:12px 14px;background:#ECFDF5;border-radius:10px;border-left:3px solid #059669;margin-top:10px}
+
+/* Due alert */
+.m10-due{background:#FEF9C3;border:1px solid #FCD34D;border-radius:12px;padding:12px 14px;margin-bottom:8px;display:flex;align-items:center;gap:10px}
+.m10-due-icon{font-size:20px}
+.m10-due-text{font-size:13px;font-weight:700;color:#78350F;flex:1}
+.m10-due-amt{font-family:'DM Mono',monospace;font-size:14px;font-weight:700;color:#D97706}
+
+/* Donut chart wrapper */
+.m10-donut-wrap{display:flex;align-items:center;gap:16px;margin:14px 0}
+.m10-donut-legend{flex:1;display:flex;flex-direction:column;gap:6px}
+.m10-leg-row{display:flex;align-items:center;gap:8px;font-size:12px;font-weight:600;color:#374151}
+.m10-leg-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+</style>
+
+<div id="app10">
+<header>
+  <div class="brand">
+    <div class="blogo" style="background:linear-gradient(135deg,#059669,#2563EB)">🌊</div>
+    <div>
+      <div class="bname" style="color:#111827;font-size:17px;font-weight:800">Cauvery Pulse</div>
+      <div class="bsub" style="font-size:10px;color:#6B7280;font-weight:700;text-transform:uppercase;letter-spacing:1px">SIP Tracker · M10</div>
+    </div>
+  </div>
+  <button class="nav-burger" onclick="openNavDrawer()">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="m10w">
+  <div style="padding:16px 0 14px;text-align:center">
+    <span style="font-size:44px;display:block;margin-bottom:8px">📈</span>
+    <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:900;color:#111827;margin-bottom:6px">SIP <span style="color:#059669">Tracker</span></div>
+    <div style="font-size:14px;color:#6B7280;font-weight:600;line-height:1.7">All your SIPs in one place. Know exactly what you are building.</div>
+  </div>
+
+  <div class="m10-tabs">
+    <div class="m10-tab act" onclick="m10ShowTab('sips',this)">📋 My SIPs</div>
+    <div class="m10-tab" onclick="m10ShowTab('add',this)">➕ Add SIP</div>
+    <div class="m10-tab" onclick="m10ShowTab('summary',this)">📊 Summary</div>
+    <div class="m10-tab" onclick="m10ShowTab('xirr',this)">📐 XIRR</div>
+  </div>
+
+  <!-- ── TAB 1: MY SIPs ── -->
+  <div id="m10tab-sips">
+    <!-- Due this month -->
+    <div id="m10DueSection" style="display:none">
+      <div class="m10-card-title" style="color:#D97706;margin-bottom:8px">⏰ Due This Month</div>
+      <div id="m10DueList"></div>
+    </div>
+    <!-- SIP list -->
+    <div id="m10SipList">
+      <div style="text-align:center;padding:40px;color:#9CA3AF;font-size:14px;font-weight:600">
+        No SIPs added yet.<br>Tap <strong>Add SIP</strong> to get started.
+      </div>
+    </div>
+    <!-- Total -->
+    <div id="m10TotalBar" style="display:none;background:#fff;border:1px solid #E5E7EB;border-radius:14px;padding:14px;text-align:center;margin-top:4px">
+      <div style="font-size:12px;font-weight:700;color:#6B7280;text-transform:uppercase;letter-spacing:.8px;margin-bottom:4px">Total Monthly SIP Commitment</div>
+      <div style="font-family:'DM Mono',monospace;font-size:28px;font-weight:700;color:#059669" id="m10TotalMonthly">₹0</div>
+    </div>
+  </div>
+
+  <!-- ── TAB 2: ADD SIP ── -->
+  <div id="m10tab-add" style="display:none">
+    <div class="m10-card">
+      <div class="m10-card-title">➕ Add a New SIP</div>
+
+      <div class="m10-label">Fund / Scheme Name</div>
+      <input class="m10-input" type="text" id="sipFundName" placeholder="e.g. Parag Parikh Flexi Cap Fund">
+
+      <div class="m10-label">Fund Type</div>
+      <select class="m10-select" id="sipType">
+        <option value="equity_largecap">Equity — Large Cap</option>
+        <option value="equity_flexicap" selected>Equity — Flexi Cap</option>
+        <option value="equity_midcap">Equity — Mid Cap</option>
+        <option value="equity_smallcap">Equity — Small Cap</option>
+        <option value="equity_elss">Equity — ELSS (Tax Saving)</option>
+        <option value="index">Index Fund (Nifty 50 / Sensex)</option>
+        <option value="hybrid">Hybrid / Balanced</option>
+        <option value="debt">Debt Fund</option>
+        <option value="liquid">Liquid Fund</option>
+        <option value="international">International Fund</option>
+        <option value="gold">Gold ETF / Fund</option>
+        <option value="other">Other</option>
+      </select>
+
+      <div class="m10-label">Monthly SIP Amount (₹)</div>
+      <input class="m10-input" type="number" id="sipAmount" placeholder="e.g. 5000">
+
+      <div class="m10-label">SIP Start Date</div>
+      <input class="m10-input" type="month" id="sipStart" placeholder="YYYY-MM">
+
+      <div class="m10-label">SIP Date (Day of month)</div>
+      <select class="m10-select" id="sipDate">
+        <option value="1">1st</option>
+        <option value="5">5th</option>
+        <option value="7" selected>7th</option>
+        <option value="10">10th</option>
+        <option value="15">15th</option>
+        <option value="20">20th</option>
+        <option value="25">25th</option>
+        <option value="28">28th</option>
+      </select>
+
+      <div class="m10-label">Total Invested So Far (₹)</div>
+      <input class="m10-input" type="number" id="sipInvested" placeholder="e.g. 120000">
+
+      <div class="m10-label">Current Value (₹)</div>
+      <input class="m10-input" type="number" id="sipCurrentVal" placeholder="e.g. 145000">
+
+      <div class="m10-label">Linked Goal (optional)</div>
+      <select class="m10-select" id="sipGoalLink">
+        <option value="">— No goal linked —</option>
+      </select>
+
+      <button class="m10-btn" onclick="m10AddSIP()">Add SIP →</button>
+    </div>
+  </div>
+
+  <!-- ── TAB 3: SUMMARY ── -->
+  <div id="m10tab-summary" style="display:none">
+    <div id="m10SummaryContent">
+      <div style="text-align:center;padding:40px;color:#9CA3AF;font-size:14px;font-weight:600">Add some SIPs to see your portfolio summary.</div>
+    </div>
+  </div>
+
+  <!-- ── TAB 4: XIRR CALCULATOR ── -->
+  <div id="m10tab-xirr" style="display:none">
+    <div class="m10-card">
+      <div class="m10-card-title">📐 XIRR Calculator</div>
+      <div style="font-size:13px;color:#374151;font-weight:600;line-height:1.8;margin-bottom:14px">XIRR (Extended Internal Rate of Return) is the true annualised return on your SIP — accounting for the timing of each instalment. It is the only honest way to measure SIP performance.</div>
+
+      <div class="m10-label">Total Amount Invested (₹)</div>
+      <input class="m10-input" type="number" id="xirrInvested" placeholder="e.g. 600000">
+
+      <div class="m10-label">Current Portfolio Value (₹)</div>
+      <input class="m10-input" type="number" id="xirrCurrent" placeholder="e.g. 820000">
+
+      <div class="m10-label">SIP Start Month</div>
+      <input class="m10-input" type="month" id="xirrStart" placeholder="YYYY-MM">
+
+      <div class="m10-label">Monthly SIP Amount (₹)</div>
+      <input class="m10-input" type="number" id="xirrMonthly" placeholder="e.g. 10000">
+
+      <button class="m10-btn" onclick="m10CalcXIRR()">Calculate My XIRR →</button>
+      <div id="m10XIRRResult" style="display:none"></div>
+    </div>
+
+    <div class="m10-card">
+      <div class="m10-card-title">📊 XIRR Benchmarks</div>
+      <div style="font-size:13px;color:#6B7280;font-weight:600;margin-bottom:10px">Compare your XIRR against these benchmarks</div>
+      <div id="m10Benchmarks"></div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:14px;font-size:11px;color:#9CA3AF;font-weight:600;letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse · M10</div>
+</div>
+</div><!-- #app10 -->
+
+<div class="bnav"><!-- controlled by master nav --></div>
+<div class="toast" id="toast10"></div>
+</div><!-- #mod10 -->
+
+<script>
+// ══════════════════════════════════════════
+// M10 — SIP TRACKER ENGINE v4.2
+// ══════════════════════════════════════════
+
+var SIP_TYPES={
+  equity_largecap:{label:'Large Cap',color:'#2563EB',bg:'#EFF6FF',icon:'📊'},
+  equity_flexicap:{label:'Flexi Cap',color:'#7C3AED',bg:'#F5F3FF',icon:'🔄'},
+  equity_midcap:  {label:'Mid Cap',color:'#D97706',bg:'#FFFBEB',icon:'📈'},
+  equity_smallcap:{label:'Small Cap',color:'#DC2626',bg:'#FEF2F2',icon:'🚀'},
+  equity_elss:    {label:'ELSS',color:'#059669',bg:'#ECFDF5',icon:'🌱'},
+  index:          {label:'Index',color:'#0891B2',bg:'#ECFEFF',icon:'📉'},
+  hybrid:         {label:'Hybrid',color:'#6B7280',bg:'#F9FAFB',icon:'⚖️'},
+  debt:           {label:'Debt',color:'#374151',bg:'#F9FAFB',icon:'🏛️'},
+  liquid:         {label:'Liquid',color:'#059669',bg:'#ECFDF5',icon:'💧'},
+  international:  {label:'International',color:'#2563EB',bg:'#EFF6FF',icon:'🌍'},
+  gold:           {label:'Gold',color:'#D97706',bg:'#FFFBEB',icon:'🥇'},
+  other:          {label:'Other',color:'#6B7280',bg:'#F9FAFB',icon:'📦'},
+};
+
+function fmtM10(n){
+  if(n>=10000000)return '₹'+(n/10000000).toFixed(2)+' Cr';
+  if(n>=100000)return '₹'+(n/100000).toFixed(2)+' L';
+  if(n>=1000)return '₹'+(n/1000).toFixed(1)+' K';
+  return '₹'+Math.round(n);
+}
+function m10Toast(msg){
+  var t=document.getElementById('toast10');
+  if(t){t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2400);}
+}
+
+// ── DATA ──
+function m10GetSIPs(){try{return JSON.parse(localStorage.getItem('cp_sips')||'[]');}catch(e){return [];}}
+function m10SaveSIPs(sips){localStorage.setItem('cp_sips',JSON.stringify(sips));}
+
+// ── ADD SIP ──
+function m10AddSIP(){
+  var name=document.getElementById('sipFundName').value.trim();
+  var type=document.getElementById('sipType').value;
+  var amount=parseFloat(document.getElementById('sipAmount').value)||0;
+  var start=document.getElementById('sipStart').value;
+  var date=document.getElementById('sipDate').value;
+  var invested=parseFloat(document.getElementById('sipInvested').value)||0;
+  var current=parseFloat(document.getElementById('sipCurrentVal').value)||0;
+  var goalLink=document.getElementById('sipGoalLink').value;
+
+  if(!name||!amount){m10Toast('Enter fund name and amount ☝️');return;}
+
+  var sips=m10GetSIPs();
+  sips.push({
+    id:Date.now(), name:name, type:type, amount:amount,
+    start:start, date:parseInt(date), invested:invested,
+    current:current, goalLink:goalLink, active:true,
+    addedAt:Date.now()
+  });
+  m10SaveSIPs(sips);
+  m10Toast(name+' added ✓');
+
+  // Clear form
+  ['sipFundName','sipAmount','sipStart','sipInvested','sipCurrentVal'].forEach(function(id){
+    document.getElementById(id).value='';
+  });
+
+  // Switch to My SIPs tab
+  m10ShowTab('sips', document.querySelector('.m10-tab'));
+}
+
+// ── RENDER SIP LIST ──
+function m10RenderSIPs(){
+  var sips=m10GetSIPs();
+  var list=document.getElementById('m10SipList');
+  var totalBar=document.getElementById('m10TotalBar');
+  var dueSection=document.getElementById('m10DueSection');
+  var dueList=document.getElementById('m10DueList');
+
+  if(!sips.length){
+    list.innerHTML='<div style="text-align:center;padding:40px;color:#9CA3AF;font-size:14px;font-weight:600">No SIPs added yet.<br>Tap <strong>Add SIP</strong> to get started.</div>';
+    if(totalBar)totalBar.style.display='none';
+    if(dueSection)dueSection.style.display='none';
+    return;
+  }
+
+  var totalMonthly=sips.reduce(function(s,sip){return s+(sip.active?sip.amount:0);},0);
+
+  // Due this month
+  var today=new Date();
+  var dueItems=sips.filter(function(sip){return sip.active&&sip.date&&sip.date>=today.getDate()&&sip.date<=today.getDate()+7;});
+  if(dueSection&&dueList){
+    if(dueItems.length>0){
+      dueSection.style.display='block';
+      dueList.innerHTML=dueItems.map(function(sip){
+        return '<div class="m10-due">'+
+          '<div class="m10-due-icon">⏰</div>'+
+          '<div class="m10-due-text">'+sip.name+'<br><span style="font-size:11px;font-weight:600;color:#92400E">Due on '+sip.date+'th this month</span></div>'+
+          '<div class="m10-due-amt">'+fmtM10(sip.amount)+'/mo</div>'+
+        '</div>';
+      }).join('');
+    } else {
+      dueSection.style.display='none';
+    }
+  }
+
+  list.innerHTML=sips.map(function(sip){
+    var t=SIP_TYPES[sip.type]||SIP_TYPES.other;
+    var gain=sip.current>0&&sip.invested>0?sip.current-sip.invested:0;
+    var gainPct=sip.invested>0?Math.round(gain/sip.invested*100):0;
+    var gainColor=gain>=0?'#059669':'#DC2626';
+
+    // Calculate months invested
+    var months=0;
+    if(sip.start){
+      var startDate=new Date(sip.start+'-01');
+      months=Math.round((new Date()-startDate)/(1000*60*60*24*30));
+    }
+
+    return '<div class="m10-sip-card">'+
+      '<div class="m10-sip-header">'+
+        '<div class="m10-sip-icon" style="background:'+t.bg+'">'+t.icon+'</div>'+
+        '<div style="flex:1">'+
+          '<div class="m10-sip-name">'+sip.name+'</div>'+
+          '<span class="m10-sip-type" style="background:'+t.bg+';color:'+t.color+'">'+t.label+'</span>'+
+          (months>0?'<span style="font-size:11px;color:#9CA3AF;font-weight:600;margin-left:6px">'+months+' months</span>':'')+
+        '</div>'+
+        '<button class="m10-sip-del" onclick="m10DeleteSIP('+sip.id+')">✕</button>'+
+      '</div>'+
+      '<div class="m10-sip-grid">'+
+        '<div class="m10-sip-cell">'+
+          '<div class="m10-sip-val">'+fmtM10(sip.amount)+'</div>'+
+          '<div class="m10-sip-lbl">Monthly</div>'+
+        '</div>'+
+        (sip.invested>0?
+          '<div class="m10-sip-cell">'+
+            '<div class="m10-sip-val">'+fmtM10(sip.invested)+'</div>'+
+            '<div class="m10-sip-lbl">Invested</div>'+
+          '</div>':
+          '<div class="m10-sip-cell"><div class="m10-sip-val" style="color:#9CA3AF">—</div><div class="m10-sip-lbl">Invested</div></div>'
+        )+
+        (sip.current>0?
+          '<div class="m10-sip-cell">'+
+            '<div class="m10-sip-val" style="color:'+gainColor+'">'+fmtM10(sip.current)+'</div>'+
+            '<div class="m10-sip-lbl">Current Value</div>'+
+          '</div>':
+          '<div class="m10-sip-cell"><div class="m10-sip-val" style="color:#9CA3AF">—</div><div class="m10-sip-lbl">Current</div></div>'
+        )+
+      '</div>'+
+      (gain!==0?
+        '<div class="m10-return-bar">'+
+          '<div style="display:flex;justify-content:space-between;margin-bottom:4px">'+
+            '<span style="font-size:12px;font-weight:700;color:#6B7280">Gain / Loss</span>'+
+            '<span style="font-size:13px;font-weight:700;color:'+gainColor+'">'+(gain>=0?'+':'')+fmtM10(gain)+' ('+gainPct+'%)</span>'+
+          '</div>'+
+          '<div class="m10-return-track">'+
+            '<div class="m10-return-fill" style="width:'+Math.min(100,Math.abs(gainPct))+'%;background:'+(gain>=0?'#059669':'#DC2626')+'"></div>'+
+          '</div>'+
+        '</div>':'') +
+      (sip.date?'<div style="margin-top:8px;font-size:12px;font-weight:600;color:#9CA3AF">📅 SIP date: '+sip.date+'th every month</div>':'')+
+    '</div>';
+  }).join('');
+
+  if(totalBar){
+    totalBar.style.display='block';
+    document.getElementById('m10TotalMonthly').textContent=fmtM10(totalMonthly)+'/mo';
+  }
+}
+
+function m10DeleteSIP(id){
+  var sips=m10GetSIPs().filter(function(s){return s.id!==id;});
+  m10SaveSIPs(sips);
+  m10RenderSIPs();
+  m10Toast('SIP removed');
+}
+
+// ── SUMMARY TAB ──
+function m10RenderSummary(){
+  var sips=m10GetSIPs().filter(function(s){return s.active;});
+  var el=document.getElementById('m10SummaryContent');
+  if(!sips.length){
+    el.innerHTML='<div style="text-align:center;padding:40px;color:#9CA3AF;font-size:14px;font-weight:600">Add some SIPs to see your portfolio summary.</div>';
+    return;
+  }
+
+  var totalMonthly=sips.reduce(function(s,sip){return s+sip.amount;},0);
+  var totalInvested=sips.reduce(function(s,sip){return s+(sip.invested||0);},0);
+  var totalCurrent=sips.reduce(function(s,sip){return s+(sip.current||0);},0);
+  var totalGain=totalCurrent-totalInvested;
+  var gainPct=totalInvested>0?Math.round(totalGain/totalInvested*100):0;
+
+  // Type breakdown
+  var typeMap={};
+  sips.forEach(function(sip){
+    typeMap[sip.type]=(typeMap[sip.type]||0)+sip.amount;
+  });
+
+  var typeBreakdown=Object.keys(typeMap).map(function(type){
+    var t=SIP_TYPES[type]||SIP_TYPES.other;
+    var pct=Math.round(typeMap[type]/totalMonthly*100);
+    return '<div class="m10-leg-row">'+
+      '<div class="m10-leg-dot" style="background:'+t.color+'"></div>'+
+      '<span style="flex:1">'+t.label+'</span>'+
+      '<span style="font-family:\'DM Mono\',monospace;font-weight:700">'+fmtM10(typeMap[type])+'</span>'+
+      '<span style="color:#9CA3AF;width:35px;text-align:right;font-weight:700">'+pct+'%</span>'+
+    '</div>';
+  }).join('');
+
+  // Annualised goal
+  var annualSIP=totalMonthly*12;
+  var fiveYrCorpus=totalMonthly*(Math.pow(1+12/12/100,60)-1)/(12/12/100)*(1+12/12/100);
+
+  el.innerHTML=
+    '<div class="m10-summary-grid">'+
+      '<div class="m10-summary-box"><div class="m10-summary-val" style="color:#059669">'+fmtM10(totalMonthly)+'/mo</div><div class="m10-summary-lbl">Monthly Commitment</div></div>'+
+      '<div class="m10-summary-box"><div class="m10-summary-val" style="color:#2563EB">'+sips.length+'</div><div class="m10-summary-lbl">Active SIPs</div></div>'+
+      (totalInvested>0?
+        '<div class="m10-summary-box"><div class="m10-summary-val" style="color:#374151">'+fmtM10(totalInvested)+'</div><div class="m10-summary-lbl">Total Invested</div></div>'+
+        '<div class="m10-summary-box"><div class="m10-summary-val" style="color:'+(totalGain>=0?'#059669':'#DC2626')+'">'+fmtM10(totalCurrent)+'</div><div class="m10-summary-lbl">Current Value</div></div>':
+        '<div class="m10-summary-box"><div class="m10-summary-val" style="color:#374151">'+fmtM10(annualSIP)+'/yr</div><div class="m10-summary-lbl">Annual SIP</div></div>'+
+        '<div class="m10-summary-box"><div class="m10-summary-val" style="color:#7C3AED">'+fmtM10(fiveYrCorpus)+'</div><div class="m10-summary-lbl">5-yr Corpus @12%</div></div>'
+      )+
+    '</div>'+
+    (totalInvested>0&&totalGain!==0?
+      '<div class="m10-card" style="padding:12px;margin-bottom:14px">'+
+        '<div style="display:flex;justify-content:space-between;align-items:center">'+
+          '<span style="font-size:13px;font-weight:700;color:#6B7280">Total Gain/Loss</span>'+
+          '<span style="font-family:\'DM Mono\',monospace;font-size:18px;font-weight:700;color:'+(totalGain>=0?'#059669':'#DC2626')+'">'+(totalGain>=0?'+':'')+fmtM10(totalGain)+' ('+gainPct+'%)</span>'+
+        '</div>'+
+      '</div>':'') +
+    '<div class="m10-card">'+
+      '<div class="m10-card-title">SIP Allocation by Type</div>'+
+      '<div class="m10-donut-legend">'+typeBreakdown+'</div>'+
+    '</div>'+
+    '<div class="m10-insight">'+
+      (totalMonthly>=20000?'<strong>Strong SIP discipline.</strong> ₹'+Math.round(totalMonthly/1000)+'K/month in SIPs. At 12% returns, this builds ₹'+fmtM10(Math.round(totalMonthly*(Math.pow(1.01,240)-1)/0.01*1.01))+' in 20 years.':
+       totalMonthly>=5000?'<strong>Good foundation.</strong> Increase SIP by 10% every year — step-up SIPs accelerate corpus dramatically.':
+       '<strong>Just starting.</strong> Even ₹1,000/month SIP started today builds the habit. Increase as income grows.')+
+    '</div>';
+}
+
+// ── XIRR CALCULATOR ──
+function m10CalcXIRR(){
+  var invested=parseFloat(document.getElementById('xirrInvested').value)||0;
+  var current=parseFloat(document.getElementById('xirrCurrent').value)||0;
+  var startMonth=document.getElementById('xirrStart').value;
+  var monthly=parseFloat(document.getElementById('xirrMonthly').value)||0;
+
+  if(!invested||!current||!startMonth||!monthly){
+    m10Toast('Fill all fields ☝️');return;
+  }
+
+  // Approximate XIRR using Newton-Raphson on SIP cashflows
+  var start=new Date(startMonth+'-01');
+  var now=new Date();
+  var months=Math.round((now-start)/(1000*60*60*24*30));
+  if(months<1){m10Toast('Start date must be in the past');return;}
+
+  // Create cashflows array: -monthly each month, +current at end
+  var cashflows=[];
+  for(var i=0;i<months;i++){
+    var d=new Date(start);
+    d.setMonth(d.getMonth()+i);
+    cashflows.push({amount:-monthly, date:d});
+  }
+  cashflows.push({amount:current, date:now});
+
+  // Newton-Raphson XIRR approximation
+  function npv(rate, cfs){
+    var t0=cfs[0].date;
+    return cfs.reduce(function(sum,cf){
+      var years=(cf.date-t0)/(365.25*24*3600*1000);
+      return sum+cf.amount/Math.pow(1+rate,years);
+    },0);
+  }
+
+  var rate=0.1;
+  for(var iter=0;iter<100;iter++){
+    var n=npv(rate,cashflows);
+    var n2=npv(rate+0.0001,cashflows);
+    var dn=(n2-n)/0.0001;
+    if(Math.abs(dn)<1e-10)break;
+    rate=rate-n/dn;
+    if(rate<-0.99)rate=-0.99;
+  }
+  var xirr=Math.round(rate*1000)/10;
+
+  var color=xirr>=12?'#059669':xirr>=8?'#D97706':'#DC2626';
+  var label=xirr>=15?'Excellent — beating the market':xirr>=12?'Good — at par with Nifty long-term':xirr>=8?'Moderate — review fund selection':xirr>=0?'Below par — consider switching fund':'Negative — immediate review needed';
+
+  document.getElementById('m10XIRRResult').innerHTML=
+    '<div class="m10-xirr-box" style="border-color:'+color+'33;background:'+color+'11">'+
+      '<div class="m10-xirr-val" style="color:'+color+'">'+xirr+'%</div>'+
+      '<div class="m10-xirr-lbl" style="color:'+color+'">XIRR — Your Annualised Return</div>'+
+    '</div>'+
+    '<div class="m10-insight" style="background:'+color+'11;border-color:'+color+';margin-top:10px">'+
+      '<strong>'+label+'.</strong> You invested '+fmtM10(invested)+' over '+months+' months. Current value: '+fmtM10(current)+'. Net gain: '+fmtM10(current-invested)+' ('+Math.round((current-invested)/invested*100)+'% absolute).'+
+    '</div>';
+  document.getElementById('m10XIRRResult').style.display='block';
+}
+
+// ── BENCHMARKS ──
+function m10BuildBenchmarks(){
+  var el=document.getElementById('m10Benchmarks');
+  if(!el||el.innerHTML)return;
+  var benchmarks=[
+    {name:'Nifty 50 Index (10-yr SIP)',xirr:'12-14%',color:'#2563EB'},
+    {name:'Nifty Midcap 150 (10-yr SIP)',xirr:'15-18%',color:'#7C3AED'},
+    {name:'Large Cap Active MF (10-yr)',xirr:'11-13%',color:'#059669'},
+    {name:'Balanced Advantage Fund',xirr:'9-11%',color:'#D97706'},
+    {name:'Debt Fund (5-yr)',xirr:'6-8%',color:'#6B7280'},
+    {name:'FD (5-yr)',xirr:'6.5-7.5%',color:'#9CA3AF'},
+    {name:'Savings Account',xirr:'2.5-3.5%',color:'#DC2626'},
+  ];
+  el.innerHTML=benchmarks.map(function(b){
+    return '<div style="display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid #F3F4F6;font-size:13px">'+
+      '<span style="font-weight:700;color:#111827;flex:1">'+b.name+'</span>'+
+      '<span style="font-family:\'DM Mono\',monospace;font-weight:700;color:'+b.color+'">'+b.xirr+'</span>'+
+    '</div>';
+  }).join('');
+}
+
+// ── GOAL LINK DROPDOWN ──
+function m10LoadGoals(){
+  var goals=JSON.parse(localStorage.getItem('cp_goals')||'[]');
+  var sel=document.getElementById('sipGoalLink');
+  if(!sel)return;
+  sel.innerHTML='<option value="">— No goal linked —</option>'+
+    goals.map(function(g){return '<option value="'+g.ts+'">'+g.icon+' '+g.name+'</option>';}).join('');
+}
+
+// ── TABS ──
+function m10ShowTab(tab,el){
+  ['sips','add','summary','xirr'].forEach(function(t){
+    var e=document.getElementById('m10tab-'+t);if(e)e.style.display='none';
+  });
+  document.querySelectorAll('.m10-tab').forEach(function(t){t.classList.remove('act');});
+  document.getElementById('m10tab-'+tab).style.display='block';
+  if(el)el.classList.add('act');
+  if(tab==='sips')    m10RenderSIPs();
+  if(tab==='summary') m10RenderSummary();
+  if(tab==='xirr')    m10BuildBenchmarks();
+  if(tab==='add')     m10LoadGoals();
+}
+
+// ── MODULE SWITCHER ──
+function switchToM10(){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.classList.remove('act');
+  });
+  document.getElementById('mod10').classList.add('act');
+  window.scrollTo(0,0);
+  m10RenderSIPs();
 }
 </script>
 </body>
