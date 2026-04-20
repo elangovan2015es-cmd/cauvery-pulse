@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Cauvery Pulse | v4.4 | Build: 20260418-0445 | Elango Industries Limited -->
+<!-- Cauvery Pulse | v4.5 | Build: 20260418-0510 | Elango Industries Limited -->
 <title>Cauvery Pulse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
@@ -419,7 +419,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   box-sizing:border-box;
 }
 
-/* ── GLOBAL INPUT STYLES v4.4 ── */
+/* ── GLOBAL INPUT STYLES v4.5 ── */
 input[type=number], input[type=text], input[type=email], select, textarea {
   background:#fff !important;
   border:1.5px solid #E5E7EB !important;
@@ -442,7 +442,7 @@ input[type=number]:focus, input[type=text]:focus, select:focus, textarea:focus {
 }
 select { appearance:none; cursor:pointer; }
 
-/* ── GLOBAL FONT STYLES v4.4 ── */
+/* ── GLOBAL FONT STYLES v4.5 ── */
 .m3-card, .m4-card, .m5-card, .m6-card, .m7-card {
   font-size:14px;
   font-weight:500;
@@ -491,7 +491,7 @@ select { appearance:none; cursor:pointer; }
 /* Section headers */
 h1,h2,h3 { font-weight:700; }
 
-/* ── NAV v4.4 ── */
+/* ── NAV v4.5 ── */
 .nb.act { color:#059669 !important; }
 .nb span:last-child { font-weight:700 !important; font-size:9px !important; }
 .nb span:first-child { font-size:21px !important; }
@@ -553,7 +553,7 @@ strong { color:#111827 }
 #mod8 .nb { color:rgba(255,255,255,.4) !important }
 #mod8 .nb.act { color:#34D399 !important }
 
-/* ══ HAMBURGER NAV DRAWER v4.4 ══ */
+/* ══ HAMBURGER NAV DRAWER v4.5 ══ */
 .bnav { display:none !important; }
 
 /* Hamburger button — top right of every header */
@@ -642,7 +642,7 @@ strong { color:#111827 }
   padding-bottom:24px !important;
 }
 
-/* ══ GLOBAL BOLD READABLE FONTS v4.4 ══ */
+/* ══ GLOBAL BOLD READABLE FONTS v4.5 ══ */
 
 /* Body text — heavier weight throughout */
 body { font-weight:500; font-size:15px; line-height:1.7; }
@@ -763,7 +763,7 @@ strong { font-weight:700 !important; }
 <div id="app0">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Life Canvas · M0</div></div></div>
-  <div class="vtag">v4.4</div>
+  <div class="vtag">v4.5</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 <div class="starfield" id="starfield"></div>
 <div class="aurora"></div>
@@ -1227,7 +1227,7 @@ strong { font-weight:700 !important; }
 <div id="app">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Cauvery Pulse Score · M1</div></div></div>
-  <div class="vtag">v4.4</div>
+  <div class="vtag">v4.5</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 <!-- WELCOME -->
 <div id="welcome" class="screen active">
@@ -1415,7 +1415,7 @@ strong { font-weight:700 !important; }
 <div id="app2">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Investment School · M2</div></div></div>
-  <div class="vtag">v4.4</div>
+  <div class="vtag">v4.5</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div style="padding:0 20px 80px">
@@ -1840,7 +1840,7 @@ function closeM2Detail(){
 
 // ══ UPDATED MODULE SWITCHER (now includes M2) ══
 function switchToM2(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod2').classList.add('act');
@@ -1848,14 +1848,14 @@ function switchToM2(){
   renderM2();
 }
 function switchToM1(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod1').classList.add('act');
   window.scrollTo(0,0);
 }
 function switchToM0(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod0').classList.add('act');
@@ -2764,7 +2764,7 @@ function toast(msg){
 
 
 
-<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v4.4 ══════ -->
+<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v4.5 ══════ -->
 <div id="mod3" class="mod">
 <style>
 /* ── M3 LIGHT THEME ── */
@@ -2948,7 +2948,7 @@ function toast(msg){
   </div>
   <div style="display:flex;align-items:center;gap:8px">
     <button onclick="openM3Settings()" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:6px 10px;font-size:13px;color:#6B7280;cursor:pointer">⚙️ Rates</button>
-    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.4</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.5</div>
   </div>
 </header>
 
@@ -2983,7 +2983,7 @@ function toast(msg){
 
 <script>
 // ══════════════════════════════════════════════════════
-// M3 PORTFOLIO BLUEPRINT ENGINE v4.4
+// M3 PORTFOLIO BLUEPRINT ENGINE v4.5
 // ══════════════════════════════════════════════════════
 
 // ── COLOURS ──
@@ -3504,7 +3504,7 @@ function saveM3Rates(){
 
 // ── SWITCHERS ──
 function switchToM3(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod3').classList.add('act');
@@ -3626,7 +3626,7 @@ function switchToM3(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Debt Analyser · M4</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.4</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.5</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button><button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m4w">
@@ -3974,7 +3974,7 @@ function switchToM3(){
 
 <script>
 // ══════════════════════════════════════════════════
-// M4 — DEBT ANALYSER ENGINE v4.4
+// M4 — DEBT ANALYSER ENGINE v4.5
 // ══════════════════════════════════════════════════
 
 // ── HELPERS ──
@@ -4405,7 +4405,7 @@ function calcInflation(){
 
 // ── MODULE SWITCHER ──
 function switchToM4(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod4').classList.add('act');
@@ -4665,7 +4665,7 @@ function m5LoadProfile(){
 
 // ── MODULE SWITCHER ──
 function switchToM5(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod5').classList.add('act');
@@ -4783,7 +4783,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Monthly P&L · M6</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.4</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.5</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m6w">
@@ -4933,7 +4933,7 @@ function switchToM5(){
 
 <script>
 // ══════════════════════════════════════════
-// M6 — MONTHLY P&L ENGINE v4.4
+// M6 — MONTHLY P&L ENGINE v4.5
 // ══════════════════════════════════════════
 
 function fmtM6(n){
@@ -5275,7 +5275,7 @@ function m6ShowTab(tab,el){
 
 // ── MODULE SWITCHER ──
 function switchToM6(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod6').classList.add('act');
@@ -5377,7 +5377,7 @@ function switchToM6(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Goal Planner · M5</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.4</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.5</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m5w">
@@ -5562,7 +5562,7 @@ function switchToM6(){
 
 <script>
 // ══════════════════════════════════════════
-// M5 — GOAL PLANNER ENGINE v4.4
+// M5 — GOAL PLANNER ENGINE v4.5
 // ══════════════════════════════════════════
 
 function fmtM5(n){
@@ -5933,7 +5933,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Protection Check · M7</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.4</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.5</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m7w">
@@ -6172,7 +6172,7 @@ function switchToM5(){
 
 <script>
 // ══════════════════════════════════════════
-// M7 — PROTECTION CHECK ENGINE v4.4
+// M7 — PROTECTION CHECK ENGINE v4.5
 // ══════════════════════════════════════════
 
 function fmtM7(n){
@@ -6411,7 +6411,7 @@ function m7ShowTab(tab, el){
 
 // ── MODULE SWITCHER ──
 function switchToM7(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod7').classList.add('act');
@@ -6505,7 +6505,7 @@ function switchToM7(){
       <div class="bsub" style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px">Score Report · M8</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v4.4</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v4.5</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m8w">
@@ -6605,7 +6605,7 @@ function switchToM7(){
     <div id="m8WisdomList"></div>
   </div>
 
-  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v4.4<br>Your financial data stays on your device only.</div>
+  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v4.5<br>Your financial data stays on your device only.</div>
 </div>
 </div><!-- #app8 -->
 
@@ -6622,7 +6622,7 @@ function switchToM7(){
 
 <script>
 // ══════════════════════════════════════════
-// M8 — SCORE REPORT + DON'T DO LIST v4.4
+// M8 — SCORE REPORT + DON'T DO LIST v4.5
 // ══════════════════════════════════════════
 
 var M8_DONT_LIST = [
@@ -6914,7 +6914,7 @@ function m8ShowTab(tab, el){
 
 // ── MODULE SWITCHER ──
 function switchToM8(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod8').classList.add('act');
@@ -6925,7 +6925,7 @@ function switchToM8(){
 // Nav handled by single master init below
 </script>
 <script>
-// ══ CAUVERY PULSE — MASTER NAV v4.4 — ALL MODULES ══
+// ══ CAUVERY PULSE — MASTER NAV v4.5 — ALL MODULES ══
 (function(){
   var NAV = [
     ['switchToM0', '🎨', 'Canvas'],
@@ -7050,7 +7050,7 @@ function switchToM8(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Net Worth · M9</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.4</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.5</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m9w">
@@ -7182,7 +7182,7 @@ function switchToM8(){
 
 <script>
 // ══════════════════════════════════════════
-// M9 — NET WORTH TRACKER v4.4
+// M9 — NET WORTH TRACKER v4.5
 // ══════════════════════════════════════════
 
 var MONTHS9=['January','February','March','April','May','June','July','August','September','October','November','December'];
@@ -7456,7 +7456,7 @@ function m9ShowTab(tab,el){
 
 // ── MODULE SWITCHER ──
 function switchToM9(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod9').classList.add('act');
@@ -7554,8 +7554,13 @@ function switchToM9(){
     <div class="nav-item-icon" style="background:#EFF6FF">💼</div>
     <div class="nav-item-text"><span class="nav-item-name">Salary Optimiser</span><span class="nav-item-desc">CTC restructuring, more take-home</span></div>
   </button>
+  <div class="nav-drawer-section" style="color:#059669">✨ Phase 3</div>
+  <button class="nav-item" onclick="navTo_M('switchToM15')" style="background:rgba(5,150,105,.05);border-bottom:1px solid #F3F4F6">
+    <div class="nav-item-icon" style="background:#ECFDF5">🤖</div>
+    <div class="nav-item-text"><span class="nav-item-name" style="color:#059669">AI Financial Advisor</span><span class="nav-item-desc">Claude AI reads your data, gives personalised advice</span></div>
+  </button>
   <div class="nav-drawer-footer">
-    Cauvery Pulse v4.4 · Elango Industries Limited<br>
+    Cauvery Pulse v4.5 · Elango Industries Limited<br>
     Your data stays on your device only.
   </div>
 </div>
@@ -7567,8 +7572,8 @@ function openNavDrawer(){
   document.getElementById('navOverlay').classList.add('open');
   document.body.style.overflow='hidden';
   // Highlight active module
-  var mods=['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'];
-  var fns=['switchToM0','switchToM1','switchToM2','switchToM3','switchToM4','switchToM5','switchToM6','switchToM7','switchToM8','switchToM9','switchToM10','switchToM11','switchToM12','switchToM13','switchToM14'];
+  var mods=['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'];
+  var fns=['switchToM0','switchToM1','switchToM2','switchToM3','switchToM4','switchToM5','switchToM6','switchToM7','switchToM8','switchToM9','switchToM10','switchToM11','switchToM12','switchToM13','switchToM14','switchToM15'];
   var activeMod='';
   mods.forEach(function(id,i){
     var el=document.getElementById(id);
@@ -7813,7 +7818,7 @@ function navTo_M(fnName){
 
 <script>
 // ══════════════════════════════════════════
-// M10 — SIP TRACKER ENGINE v4.4
+// M10 — SIP TRACKER ENGINE v4.5
 // ══════════════════════════════════════════
 
 var SIP_TYPES={
@@ -8154,7 +8159,7 @@ function m10ShowTab(tab,el){
 
 // ── MODULE SWITCHER ──
 function switchToM10(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod10').classList.add('act');
@@ -8436,7 +8441,7 @@ function switchToM10(){
 
 <script>
 // ══════════════════════════════════════════
-// M11 — TAX OPTIMISER ENGINE v4.4
+// M11 — TAX OPTIMISER ENGINE v4.5
 // ══════════════════════════════════════════
 
 function fmtM11(n){
@@ -8737,7 +8742,7 @@ function m11ShowTab(tab,el){
 
 // ── MODULE SWITCHER ──
 function switchToM11(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod11').classList.add('act');
@@ -9036,10 +9041,13 @@ function m12ShowTab(tab,el){
 }
 
 function switchToM12(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12'].forEach(function(id){var el=document.getElementById(id);if(el)el.classList.remove('act');});
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.classList.remove('act');
+  });
   document.getElementById('mod12').classList.add('act');
   window.scrollTo(0,0);
   m12RenderLoans();
+  var wrap=document.getElementById('m15InputWrap');if(wrap)wrap.style.display='none';
 }
 </script>
 
@@ -9204,9 +9212,12 @@ function m13Calc(){
 }
 
 function switchToM13(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13'].forEach(function(id){var el=document.getElementById(id);if(el)el.classList.remove('act');});
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.classList.remove('act');
+  });
   document.getElementById('mod13').classList.add('act');
   window.scrollTo(0,0);
+  var wrap=document.getElementById('m15InputWrap');if(wrap)wrap.style.display='none';
 }
 </script>
 
@@ -9384,9 +9395,394 @@ function m14Calc(){
 }
 
 function switchToM14(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14'].forEach(function(id){var el=document.getElementById(id);if(el)el.classList.remove('act');});
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.classList.remove('act');
+  });
   document.getElementById('mod14').classList.add('act');
   window.scrollTo(0,0);
+  var wrap=document.getElementById('m15InputWrap');if(wrap)wrap.style.display='none';
+}
+</script>
+
+
+
+<!-- ══════ MODULE 15: AI FINANCIAL ADVISOR ══════ -->
+<div id="mod15" class="mod">
+<style>
+#mod15{background:#0B0F1A;min-height:100vh;color:#fff}
+#mod15 header{background:rgba(255,255,255,.04);border-bottom:1px solid rgba(255,255,255,.08);padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+
+.m15w{padding:0 16px 120px;max-width:480px;margin:0 auto}
+
+/* Chat messages */
+.m15-messages{padding:16px 0;min-height:200px}
+.m15-msg{margin-bottom:16px;display:flex;flex-direction:column}
+.m15-msg.user{align-items:flex-end}
+.m15-msg.assistant{align-items:flex-start}
+.m15-bubble{max-width:85%;padding:12px 15px;border-radius:16px;font-size:14px;font-weight:500;line-height:1.75}
+.m15-bubble.user{background:linear-gradient(135deg,#059669,#047857);color:#fff;border-radius:16px 16px 4px 16px}
+.m15-bubble.assistant{background:rgba(255,255,255,.07);color:rgba(255,255,255,.9);border-radius:16px 16px 16px 4px;border:1px solid rgba(255,255,255,.1)}
+.m15-bubble strong{color:#E8B84B}
+.m15-time{font-size:10px;color:rgba(255,255,255,.3);margin-top:4px;font-weight:600}
+
+/* Typing indicator */
+.m15-typing{display:flex;align-items:center;gap:4px;padding:12px 15px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.1);border-radius:16px 16px 16px 4px;width:fit-content}
+.m15-dot{width:7px;height:7px;border-radius:50%;background:#059669;animation:m15pulse .8s ease-in-out infinite}
+.m15-dot:nth-child(2){animation-delay:.15s}
+.m15-dot:nth-child(3){animation-delay:.3s}
+@keyframes m15pulse{0%,100%{opacity:.3;transform:scale(.8)}50%{opacity:1;transform:scale(1.1)}}
+
+/* Input area */
+.m15-input-wrap{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:#0B0F1A;border-top:1px solid rgba(255,255,255,.08);padding:12px 16px 20px;z-index:100}
+.m15-input-row{display:flex;gap:8px;align-items:flex-end}
+.m15-textarea{flex:1;background:rgba(255,255,255,.07);border:1.5px solid rgba(255,255,255,.12);border-radius:14px;padding:12px 14px;font-size:14px;font-weight:500;color:#fff;font-family:'DM Sans',sans-serif;resize:none;min-height:48px;max-height:120px;line-height:1.5;transition:border-color .2s}
+.m15-textarea:focus{outline:none;border-color:#059669}
+.m15-textarea::placeholder{color:rgba(255,255,255,.3)}
+.m15-send-btn{width:48px;height:48px;background:linear-gradient(135deg,#059669,#047857);border:none;border-radius:12px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:20px;flex-shrink:0;transition:opacity .2s}
+.m15-send-btn:disabled{opacity:.4;cursor:not-allowed}
+
+/* Quick prompts */
+.m15-quick-wrap{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:12px}
+.m15-quick{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:20px;padding:7px 12px;font-size:12px;font-weight:600;color:rgba(255,255,255,.7);cursor:pointer;transition:all .2s;white-space:nowrap}
+.m15-quick:hover{background:rgba(5,150,105,.2);border-color:#059669;color:#fff}
+
+/* Context banner */
+.m15-context-banner{background:rgba(5,150,105,.1);border:1px solid rgba(5,150,105,.3);border-radius:12px;padding:10px 14px;margin-bottom:14px;font-size:12px;color:rgba(255,255,255,.6);font-weight:600}
+.m15-context-banner strong{color:#34D399}
+
+/* Welcome card */
+.m15-welcome{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:20px;margin-bottom:16px;text-align:center}
+.m15-welcome-icon{font-size:48px;margin-bottom:12px}
+.m15-welcome-title{font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:#fff;margin-bottom:8px}
+.m15-welcome-title span{color:#059669}
+.m15-welcome-desc{font-size:13px;color:rgba(255,255,255,.5);font-weight:500;line-height:1.8}
+
+/* Clear button */
+.m15-clear-btn{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:5px 10px;font-size:11px;font-weight:700;color:rgba(255,255,255,.4);cursor:pointer}
+</style>
+
+<div id="app15">
+<header>
+  <div class="brand">
+    <div class="blogo" style="background:linear-gradient(135deg,#059669,#0891B2)">🌊</div>
+    <div>
+      <div class="bname" style="color:#fff;font-size:17px;font-weight:800">Cauvery Pulse</div>
+      <div class="bsub" style="font-size:10px;color:rgba(255,255,255,.4);font-weight:700;text-transform:uppercase;letter-spacing:1px">AI Advisor · M15</div>
+    </div>
+  </div>
+  <div style="display:flex;gap:8px;align-items:center">
+    <button class="m15-clear-btn" onclick="m15ClearChat()">Clear</button>
+    <button class="nav-burger" style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12)" onclick="openNavDrawer()"><span style="background:rgba(255,255,255,.6)"></span><span style="background:rgba(255,255,255,.6)"></span><span style="background:rgba(255,255,255,.6)"></span></button>
+  </div>
+</header>
+
+<div class="m15w">
+
+  <!-- Context banner -->
+  <div class="m15-context-banner" id="m15ContextBanner" style="display:none">
+    <strong>✓ Your data is loaded</strong> — The advisor has access to your profile, goals, debt, P&L, net worth, and protection data.
+  </div>
+
+  <!-- Messages container -->
+  <div class="m15-messages" id="m15Messages">
+
+    <!-- Welcome card -->
+    <div class="m15-welcome">
+      <div class="m15-welcome-icon">🤖</div>
+      <div class="m15-welcome-title">Your <span>AI Advisor</span></div>
+      <div class="m15-welcome-desc">Powered by Claude AI. Ask me anything about your finances — I read your actual data from all 14 modules and give you personalised advice, not generic tips.</div>
+    </div>
+
+    <!-- Quick prompts -->
+    <div style="margin-bottom:16px">
+      <div style="font-size:11px;font-weight:700;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Quick Questions</div>
+      <div class="m15-quick-wrap" id="m15QuickPrompts">
+        <div class="m15-quick" onclick="m15SendQuick(this)">Am I saving enough?</div>
+        <div class="m15-quick" onclick="m15SendQuick(this)">Should I prepay my loan or invest?</div>
+        <div class="m15-quick" onclick="m15SendQuick(this)">Which tax regime is better for me?</div>
+        <div class="m15-quick" onclick="m15SendQuick(this)">How do I reach my retirement goal?</div>
+        <div class="m15-quick" onclick="m15SendQuick(this)">Review my overall financial health</div>
+        <div class="m15-quick" onclick="m15SendQuick(this)">What should I do first this month?</div>
+        <div class="m15-quick" onclick="m15SendQuick(this)">Is my insurance adequate?</div>
+        <div class="m15-quick" onclick="m15SendQuick(this)">How to increase my net worth faster?</div>
+      </div>
+    </div>
+
+  </div>
+</div>
+</div><!-- #app15 -->
+
+<!-- Fixed input at bottom -->
+<div class="m15-input-wrap" id="m15InputWrap" style="display:none">
+  <div style="font-size:11px;font-weight:600;color:rgba(255,255,255,.25);margin-bottom:6px;text-align:center">Powered by Claude AI · Your data stays on your device</div>
+  <div class="m15-input-row">
+    <textarea class="m15-textarea" id="m15Input" placeholder="Ask about your finances..." rows="1"
+      onkeydown="if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();m15Send();}"
+      oninput="this.style.height='auto';this.style.height=this.scrollHeight+'px'"></textarea>
+    <button class="m15-send-btn" id="m15SendBtn" onclick="m15Send()">➤</button>
+  </div>
+</div>
+
+<div class="toast" id="toast15"></div>
+</div><!-- #mod15 -->
+
+<script>
+// ══════════════════════════════════════════
+// M15 — AI FINANCIAL ADVISOR v4.5
+// ══════════════════════════════════════════
+
+var m15History = [];
+var m15IsTyping = false;
+
+function m15Toast(msg){
+  var t=document.getElementById('toast15');
+  if(t){t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2400);}
+}
+
+// ── BUILD CONTEXT FROM ALL USER DATA ──
+function m15BuildContext(){
+  var ctx = '';
+
+  // M0 Canvas
+  try{
+    var cv=JSON.parse(localStorage.getItem('cp_canvas')||'{}');
+    if(cv.lifeStage){
+      var LS={school:'School Student',college:'College Student',young_adult:'Young Adult',first_earner:'First Time Earner',professional:'Professional',homemaker:'Homemaker',thirties:'Thirties',forties:'Forties',pre_retire:'Pre-Retirement',post_retire:'Post-Retirement'};
+      ctx+='LIFE STAGE: '+(LS[cv.lifeStage]||cv.lifeStage)+'\n';
+      if(cv.profession) ctx+='PROFESSION: '+cv.profession+'\n';
+      var invCap={lt2k:'Below ₹2K/mo','2k_10k':'₹2K-10K/mo','10k_50k':'₹10K-50K/mo',gt50k:'₹50K+/mo'};
+      if(cv.invCap) ctx+='INVESTMENT CAPACITY: '+(invCap[cv.invCap]||cv.invCap)+'\n';
+    }
+  }catch(e){}
+
+  // M1 Score
+  try{
+    var score=JSON.parse(localStorage.getItem('cp_score')||'{}');
+    if(score.total) ctx+='CAUVERY PULSE SCORE: '+score.total+'/100\n';
+  }catch(e){}
+
+  // M5 Goals
+  try{
+    var goals=JSON.parse(localStorage.getItem('cp_goals')||'[]');
+    if(goals.length){
+      ctx+='\nFINANCIAL GOALS ('+goals.length+' goals):\n';
+      goals.forEach(function(g){
+        ctx+='- '+g.name+': target '+formatCtx(g.inflTarget)+' in '+g.years+' years, SIP needed: '+formatCtx(g.sipNeeded)+'/mo\n';
+      });
+    }
+  }catch(e){}
+
+  // M6 P&L
+  try{
+    var pl=JSON.parse(localStorage.getItem('cp_pl')||'{}');
+    var plKeys=Object.keys(pl).sort().reverse();
+    if(plKeys.length>0){
+      var latest=pl[plKeys[0]];
+      ctx+='\nLATEST MONTHLY P&L ('+plKeys[0]+'):\n';
+      ctx+='Income: '+formatCtx(latest.totals.income)+', Invested: '+formatCtx(latest.totals.invested)+', Expenses: '+formatCtx(latest.totals.fixed+latest.totals.variable)+'\n';
+      var sr=latest.totals.income>0?Math.round(latest.totals.invested/latest.totals.income*100):0;
+      ctx+='Savings Rate: '+sr+'%, Surplus: '+formatCtx(latest.totals.income-latest.totals.invested-latest.totals.fixed-latest.totals.variable)+'\n';
+    }
+  }catch(e){}
+
+  // M9 Net Worth
+  try{
+    var nw=JSON.parse(localStorage.getItem('cp_networth')||'{}');
+    var nwKeys=Object.keys(nw).sort().reverse();
+    if(nwKeys.length>0){
+      var lnw=nw[nwKeys[0]];
+      ctx+='\nNET WORTH ('+nwKeys[0]+'):\n';
+      ctx+='Assets: '+formatCtx(lnw.assets)+', Liabilities: '+formatCtx(lnw.liabs)+', Net Worth: '+formatCtx(lnw.nw)+'\n';
+    }
+  }catch(e){}
+
+  // M10 SIPs
+  try{
+    var sips=JSON.parse(localStorage.getItem('cp_sips')||'[]');
+    if(sips.length){
+      var totalSIP=sips.reduce(function(s,sip){return s+sip.amount;},0);
+      ctx+='\nSIP PORTFOLIO: '+sips.length+' SIPs, total '+formatCtx(totalSIP)+'/month\n';
+      sips.forEach(function(sip){ctx+='- '+sip.name+' ('+sip.type+'): '+formatCtx(sip.amount)+'/mo\n';});
+    }
+  }catch(e){}
+
+  // M12 Loans / EMI
+  try{
+    var loans=JSON.parse(localStorage.getItem('cp_emis')||'[]');
+    if(loans.length){
+      var totalEMI=loans.reduce(function(s,l){return s+l.emi;},0);
+      var totalDebt=loans.reduce(function(s,l){return s+l.balance;},0);
+      ctx+='\nLOANS: '+loans.length+' loans, total debt '+formatCtx(totalDebt)+', total EMI '+formatCtx(totalEMI)+'/mo\n';
+      loans.forEach(function(l){ctx+='- '+l.name+' ('+l.type+'): balance '+formatCtx(l.balance)+', EMI '+formatCtx(l.emi)+'/mo at '+l.rate+'%\n';});
+    }
+  }catch(e){}
+
+  // M7 Protection
+  try{
+    var prot=JSON.parse(localStorage.getItem('cp_protection')||'{}');
+    if(prot.life) ctx+='\nLIFE COVER: need '+formatCtx(prot.life.need)+', existing '+formatCtx(prot.life.existing)+', gap '+formatCtx(prot.life.gap)+'\n';
+    if(prot.health) ctx+='\nHEALTH COVER: need '+formatCtx(prot.health.need)+', existing '+formatCtx(prot.health.existing)+', gap '+formatCtx(prot.health.gap)+'\n';
+    if(prot.score) ctx+='\nPROTECTION SCORE: '+prot.score.pct+'/100\n';
+  }catch(e){}
+
+  return ctx;
+}
+
+function formatCtx(n){
+  if(!n||isNaN(n))return '₹0';
+  if(Math.abs(n)>=10000000)return '₹'+(n/10000000).toFixed(2)+' Cr';
+  if(Math.abs(n)>=100000)return '₹'+(n/100000).toFixed(1)+' L';
+  if(Math.abs(n)>=1000)return '₹'+(n/1000).toFixed(0)+' K';
+  return '₹'+Math.round(n);
+}
+
+// ── SEND MESSAGE ──
+function m15Send(){
+  var input=document.getElementById('m15Input');
+  var msg=input.value.trim();
+  if(!msg||m15IsTyping)return;
+  input.value='';
+  input.style.height='auto';
+  m15SendMessage(msg);
+}
+
+function m15SendQuick(el){
+  var msg=el.textContent;
+  m15SendMessage(msg);
+}
+
+function m15SendMessage(msg){
+  if(m15IsTyping)return;
+
+  // Add user message
+  m15AppendMessage('user', msg);
+  m15History.push({role:'user', content:msg});
+
+  // Show typing
+  m15IsTyping=true;
+  document.getElementById('m15SendBtn').disabled=true;
+  m15AppendTyping();
+
+  // Build system prompt with user context
+  var userContext=m15BuildContext();
+  var systemPrompt='You are a personal financial advisor for an Indian user. You have access to their complete financial data from the Cauvery Pulse app.\n\n'+
+    'USER FINANCIAL DATA:\n'+userContext+'\n\n'+
+    'INSTRUCTIONS:\n'+
+    '- Give specific, actionable, personalised advice based on their actual data above\n'+
+    '- Use Indian context: ₹, Indian tax laws, SEBI rules, Indian investment products\n'+
+    '- Be direct and honest — not diplomatic. Point out problems clearly\n'+
+    '- Format responses clearly with line breaks. Use bullet points for lists\n'+
+    '- Keep responses concise — under 300 words unless they ask for detail\n'+
+    '- Mention specific numbers from their data when relevant\n'+
+    '- If data is missing for a question, say so and ask them to fill that module\n'+
+    '- Do not give legal or CA advice — say "consult your CA" for tax filing specifics\n'+
+    '- Tone: like a trusted, frank financial friend — not a formal advisor';
+
+  // Call Claude API
+  fetch('https://api.anthropic.com/v1/messages', {
+    method:'POST',
+    headers:{'Content-Type':'application/json'},
+    body:JSON.stringify({
+      model:'claude-sonnet-4-20250514',
+      max_tokens:1000,
+      system:systemPrompt,
+      messages:m15History.slice(-10) // last 10 messages for context
+    })
+  })
+  .then(function(res){return res.json();})
+  .then(function(data){
+    m15RemoveTyping();
+    m15IsTyping=false;
+    document.getElementById('m15SendBtn').disabled=false;
+    var reply='';
+    if(data.content&&data.content[0]&&data.content[0].text){
+      reply=data.content[0].text;
+    } else if(data.error){
+      reply='Sorry, I could not connect right now. Please check your internet connection and try again.\n\nError: '+data.error.message;
+    } else {
+      reply='Sorry, something went wrong. Please try again.';
+    }
+    m15History.push({role:'assistant', content:reply});
+    m15AppendMessage('assistant', reply);
+  })
+  .catch(function(err){
+    m15RemoveTyping();
+    m15IsTyping=false;
+    document.getElementById('m15SendBtn').disabled=false;
+    m15AppendMessage('assistant','Unable to connect to AI. Please check your internet connection and try again.');
+  });
+}
+
+// ── RENDER ──
+function m15AppendMessage(role, text){
+  var container=document.getElementById('m15Messages');
+  var now=new Date();
+  var time=now.getHours()+':'+String(now.getMinutes()).padStart(2,'0');
+
+  // Format text — convert markdown-ish to HTML
+  var html=text
+    .replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>')
+    .replace(/\*(.*?)\*/g,'<em>$1</em>')
+    .replace(/\n- /g,'<br>• ')
+    .replace(/\n\n/g,'<br><br>')
+    .replace(/\n/g,'<br>');
+
+  var div=document.createElement('div');
+  div.className='m15-msg '+role;
+  div.innerHTML=
+    '<div class="m15-bubble '+role+'">'+html+'</div>'+
+    '<div class="m15-time">'+time+'</div>';
+  container.appendChild(div);
+  div.scrollIntoView({behavior:'smooth',block:'end'});
+}
+
+function m15AppendTyping(){
+  var container=document.getElementById('m15Messages');
+  var div=document.createElement('div');
+  div.className='m15-msg assistant';
+  div.id='m15TypingMsg';
+  div.innerHTML='<div class="m15-typing"><div class="m15-dot"></div><div class="m15-dot"></div><div class="m15-dot"></div></div>';
+  container.appendChild(div);
+  div.scrollIntoView({behavior:'smooth',block:'end'});
+}
+
+function m15RemoveTyping(){
+  var t=document.getElementById('m15TypingMsg');
+  if(t)t.remove();
+}
+
+function m15ClearChat(){
+  m15History=[];
+  var container=document.getElementById('m15Messages');
+  container.innerHTML='<div class="m15-welcome"><div class="m15-welcome-icon">🤖</div><div class="m15-welcome-title">Your <span>AI Advisor</span></div><div class="m15-welcome-desc">Chat cleared. Ask me anything about your finances.</div></div>'+
+    '<div style="margin-bottom:16px"><div style="font-size:11px;font-weight:700;color:rgba(255,255,255,.3);text-transform:uppercase;letter-spacing:1px;margin-bottom:8px">Quick Questions</div><div class="m15-quick-wrap">'+
+    ['Am I saving enough?','Should I prepay my loan or invest?','Which tax regime is better for me?','How do I reach my retirement goal?','Review my overall financial health','What should I do first this month?'].map(function(q){
+      return '<div class="m15-quick" onclick="m15SendQuick(this)">'+q+'</div>';
+    }).join('')+'</div></div>';
+}
+
+// ── MODULE SWITCHER ──
+function switchToM15(){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.classList.remove('act');
+  });
+  document.getElementById('mod15').classList.add('act');
+  window.scrollTo(0,0);
+
+  // Show input
+  var inputWrap=document.getElementById('m15InputWrap');
+  if(inputWrap)inputWrap.style.display='block';
+
+  // Show context banner if user has data
+  var ctx=m15BuildContext();
+  var banner=document.getElementById('m15ContextBanner');
+  if(banner)banner.style.display=ctx.length>20?'block':'none';
+
+  // Focus input
+  setTimeout(function(){
+    var inp=document.getElementById('m15Input');
+    if(inp)inp.focus();
+  },300);
 }
 </script>
 </body>
