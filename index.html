@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Cauvery Pulse | v4.0 | Build: 20260418-0330 | Elango Industries Limited -->
+<!-- Cauvery Pulse | v4.1 | Build: 20260418-0350 | Elango Industries Limited -->
 <title>Cauvery Pulse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
@@ -419,7 +419,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   box-sizing:border-box;
 }
 
-/* ── GLOBAL INPUT STYLES v4.0 ── */
+/* ── GLOBAL INPUT STYLES v4.1 ── */
 input[type=number], input[type=text], input[type=email], select, textarea {
   background:#fff !important;
   border:1.5px solid #E5E7EB !important;
@@ -442,7 +442,7 @@ input[type=number]:focus, input[type=text]:focus, select:focus, textarea:focus {
 }
 select { appearance:none; cursor:pointer; }
 
-/* ── GLOBAL FONT STYLES v4.0 ── */
+/* ── GLOBAL FONT STYLES v4.1 ── */
 .m3-card, .m4-card, .m5-card, .m6-card, .m7-card {
   font-size:14px;
   font-weight:500;
@@ -491,7 +491,7 @@ select { appearance:none; cursor:pointer; }
 /* Section headers */
 h1,h2,h3 { font-weight:700; }
 
-/* ── NAV v4.0 ── */
+/* ── NAV v4.1 ── */
 .nb.act { color:#059669 !important; }
 .nb span:last-child { font-weight:700 !important; font-size:9px !important; }
 .nb span:first-child { font-size:21px !important; }
@@ -552,6 +552,208 @@ strong { color:#111827 }
 #mod8 .bnav { background:#0B0F1A !important; border-top:1px solid rgba(255,255,255,.1) !important }
 #mod8 .nb { color:rgba(255,255,255,.4) !important }
 #mod8 .nb.act { color:#34D399 !important }
+
+/* ══ HAMBURGER NAV DRAWER v4.1 ══ */
+.bnav { display:none !important; }
+
+/* Hamburger button — top right of every header */
+.nav-burger {
+  width:40px; height:40px;
+  background:#F3F4F6; border:1.5px solid #E5E7EB;
+  border-radius:10px; display:flex; flex-direction:column;
+  align-items:center; justify-content:center; gap:5px;
+  cursor:pointer; flex-shrink:0; transition:all .2s;
+}
+.nav-burger:hover { background:#ECFDF5; border-color:#A7F3D0; }
+.nav-burger span {
+  display:block; width:18px; height:2px;
+  background:#374151; border-radius:2px; transition:all .2s;
+}
+
+/* Overlay */
+.nav-overlay {
+  position:fixed; inset:0; background:rgba(0,0,0,.4);
+  z-index:9998; opacity:0; pointer-events:none;
+  transition:opacity .25s;
+}
+.nav-overlay.open { opacity:1; pointer-events:all; }
+
+/* Drawer */
+.nav-drawer {
+  position:fixed; top:0; right:-300px; width:280px; height:100vh;
+  background:#fff; z-index:9999; overflow-y:auto;
+  transition:right .28s cubic-bezier(.4,0,.2,1);
+  box-shadow:-4px 0 24px rgba(0,0,0,.12);
+  display:flex; flex-direction:column;
+}
+.nav-drawer.open { right:0; }
+
+.nav-drawer-header {
+  padding:20px 18px 14px;
+  border-bottom:1px solid #F3F4F6;
+  display:flex; align-items:center; justify-content:space-between;
+}
+.nav-drawer-title {
+  font-family:"Playfair Display",serif;
+  font-size:18px; font-weight:900; color:#111827;
+}
+.nav-drawer-close {
+  width:32px; height:32px; background:#F3F4F6; border:none;
+  border-radius:8px; cursor:pointer; font-size:16px;
+  display:flex; align-items:center; justify-content:center;
+}
+
+.nav-drawer-section {
+  font-size:10px; font-weight:800; letter-spacing:1.6px;
+  text-transform:uppercase; color:#9CA3AF;
+  padding:14px 18px 6px;
+}
+
+.nav-item {
+  display:flex; align-items:center; gap:12px;
+  padding:12px 18px; cursor:pointer;
+  transition:background .15s; border:none; background:none;
+  width:100%; text-align:left;
+}
+.nav-item:hover { background:#F9FAFB; }
+.nav-item.active { background:#ECFDF5; }
+.nav-item-icon {
+  width:36px; height:36px; border-radius:10px;
+  display:flex; align-items:center; justify-content:center;
+  font-size:18px; flex-shrink:0;
+}
+.nav-item-text { flex:1; }
+.nav-item-name {
+  font-size:14px; font-weight:700; color:#111827; display:block;
+}
+.nav-item-desc {
+  font-size:11px; color:#9CA3AF; display:block; margin-top:1px;
+}
+.nav-item.active .nav-item-name { color:#059669; }
+
+.nav-drawer-footer {
+  margin-top:auto; padding:16px 18px;
+  border-top:1px solid #F3F4F6;
+  font-size:11px; color:#9CA3AF; text-align:center;
+}
+
+/* Remove bottom padding — no more fixed bottom nav */
+#app, .m3w, .m4w, .m5w, .m6w, .m7w, .m8w, .m9w {
+  padding-bottom:24px !important;
+}
+
+/* ══ GLOBAL BOLD READABLE FONTS v4.1 ══ */
+
+/* Body text — heavier weight throughout */
+body { font-weight:500; font-size:15px; line-height:1.7; }
+
+/* All paragraph text in light modules */
+#mod2 p, #mod3 p, #mod4 p, #mod5 p, #mod6 p, #mod7 p, #mod9 p,
+#mod2 div, #mod3 div, #mod4 div, #mod5 div, #mod6 div, #mod7 div, #mod9 div {
+  font-weight:500;
+}
+
+/* Labels — very bold */
+.m3-label, .m4-label, .m5-label, .m6-label, .m7-label, .m9-label,
+label { font-size:14px !important; font-weight:700 !important; color:#111827 !important; }
+
+/* Row labels */
+.m6-row-label { font-size:14px !important; font-weight:700 !important; color:#111827 !important; }
+.m9-row-label { font-size:14px !important; font-weight:700 !important; color:#111827 !important; }
+
+/* Card titles — strong and uppercase */
+.m3-card-title, .m4-card-title, .m5-card-title,
+.m6-card-title, .m7-card-title, .m9-card-title {
+  font-size:11px !important; font-weight:800 !important;
+  letter-spacing:1.6px !important; color:#1E3A8A !important;
+  text-transform:uppercase !important;
+}
+
+/* Section titles */
+.m3-section-title { font-size:12px !important; font-weight:800 !important; color:#1E3A8A !important; }
+
+/* Description / hint text — readable grey */
+.m4-card div, .m5-card div, .m6-card div, .m7-card div, .m9-card div {
+  font-weight:500;
+}
+
+/* Input placeholders — visible */
+input::placeholder, textarea::placeholder { color:#9CA3AF !important; font-weight:500 !important; }
+
+/* Select options */
+select option { font-weight:600; color:#111827; }
+
+/* Tab labels */
+.m4-tab, .m5-tab, .m6-tab, .m7-tab, .m9-tab {
+  font-size:12px !important; font-weight:700 !important;
+}
+
+/* Result values */
+.m4-result-val, .m5-result-val, .m6-dash-val, .m7-result-val, .m9-nw-val {
+  font-weight:700 !important;
+}
+.m4-result-lbl, .m5-result-lbl, .m6-dash-lbl, .m7-result-lbl {
+  font-size:11px !important; font-weight:700 !important;
+  text-transform:uppercase !important; letter-spacing:.5px !important;
+}
+
+/* Section total labels */
+.m6-section-total-label, .m9-section-total-label {
+  font-size:14px !important; font-weight:700 !important; color:#111827 !important;
+}
+
+/* Insight text */
+.m4-insight, .m5-insight, .m6-insight, .m7-insight, .m9-insight {
+  font-size:13px !important; font-weight:600 !important; line-height:1.9 !important;
+}
+
+/* Score check items in M7 */
+.m7-check-title { font-size:14px !important; font-weight:700 !important; color:#111827 !important; }
+.m7-check-desc  { font-size:13px !important; font-weight:500 !important; color:#374151 !important; }
+
+/* Don't Do list in M8 */
+.m8-dont-title { font-size:14px !important; font-weight:700 !important; }
+.m8-dont-why   { font-size:13px !important; font-weight:500 !important; line-height:1.8 !important; }
+.m8-dont-instead { font-size:13px !important; font-weight:600 !important; }
+
+/* Nav drawer items */
+.nav-item-name { font-size:15px !important; font-weight:700 !important; }
+.nav-item-desc { font-size:12px !important; font-weight:500 !important; color:#6B7280 !important; }
+.nav-drawer-section { font-size:10px !important; font-weight:800 !important; }
+
+/* M9 milestone labels */
+.m9-milestone-label { font-size:14px !important; font-weight:700 !important; color:#111827 !important; }
+.m9-cat-label { font-size:14px !important; font-weight:600 !important; color:#374151 !important; }
+.m9-cat-val   { font-size:14px !important; font-weight:700 !important; }
+
+/* M6 P&L category bars */
+.m6-cat-bar-name { font-size:13px !important; font-weight:700 !important; color:#111827 !important; }
+.m6-cat-bar-val  { font-size:12px !important; font-weight:700 !important; }
+
+/* History rows */
+.m6-hist-month { font-size:14px !important; font-weight:700 !important; }
+.m9-bar-val    { font-size:10px !important; font-weight:700 !important; }
+.m9-bar-lbl    { font-size:10px !important; font-weight:600 !important; }
+
+/* Protection score form */
+#m7ScoreForm label { font-size:13px !important; font-weight:600 !important; color:#374151 !important; }
+#m7ScoreForm div[style*="font-size:13px"] { font-weight:700 !important; }
+#m7ScoreForm div[style*="font-size:12px"] { font-weight:500 !important; }
+
+/* M5 goal tiles */
+.m5-goal-tile-name { font-size:13px !important; font-weight:700 !important; color:#111827 !important; }
+.m5-goal-tile-desc { font-size:11px !important; font-weight:600 !important; }
+
+/* M4 debt type names */
+.m4-debt-name { font-size:14px !important; font-weight:700 !important; }
+.m4-debt-desc { font-size:13px !important; font-weight:500 !important; line-height:1.7 !important; }
+
+/* General strong tags */
+strong { font-weight:700 !important; }
+
+/* Header brand text */
+.bname { font-size:17px !important; font-weight:800 !important; color:#111827 !important; }
+.bsub  { font-size:10px !important;  font-weight:700 !important; color:#6B7280 !important; }
 </style>
 </head>
 <body>
@@ -561,8 +763,8 @@ strong { color:#111827 }
 <div id="app0">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Life Canvas · M0</div></div></div>
-  <div class="vtag">v4.0</div>
-</header>
+  <div class="vtag">v4.1</div>
+<button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 <div class="starfield" id="starfield"></div>
 <div class="aurora"></div>
 
@@ -1025,8 +1227,8 @@ strong { color:#111827 }
 <div id="app">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Cauvery Pulse Score · M1</div></div></div>
-  <div class="vtag">v4.0</div>
-</header>
+  <div class="vtag">v4.1</div>
+<button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 <!-- WELCOME -->
 <div id="welcome" class="screen active">
   <div class="hero-wrap">
@@ -1213,8 +1415,8 @@ strong { color:#111827 }
 <div id="app2">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Investment School · M2</div></div></div>
-  <div class="vtag">v4.0</div>
-</header>
+  <div class="vtag">v4.1</div>
+<button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div style="padding:0 20px 80px">
 
@@ -2562,7 +2764,7 @@ function toast(msg){
 
 
 
-<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v4.0 ══════ -->
+<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v4.1 ══════ -->
 <div id="mod3" class="mod">
 <style>
 /* ── M3 LIGHT THEME ── */
@@ -2746,7 +2948,7 @@ function toast(msg){
   </div>
   <div style="display:flex;align-items:center;gap:8px">
     <button onclick="openM3Settings()" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:6px 10px;font-size:13px;color:#6B7280;cursor:pointer">⚙️ Rates</button>
-    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.0</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.1</div>
   </div>
 </header>
 
@@ -2781,7 +2983,7 @@ function toast(msg){
 
 <script>
 // ══════════════════════════════════════════════════════
-// M3 PORTFOLIO BLUEPRINT ENGINE v4.0
+// M3 PORTFOLIO BLUEPRINT ENGINE v4.1
 // ══════════════════════════════════════════════════════
 
 // ── COLOURS ──
@@ -3424,8 +3626,8 @@ function switchToM3(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Debt Analyser · M4</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.0</div>
-</header>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.1</div>
+<button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button><button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m4w">
 
@@ -3772,7 +3974,7 @@ function switchToM3(){
 
 <script>
 // ══════════════════════════════════════════════════
-// M4 — DEBT ANALYSER ENGINE v4.0
+// M4 — DEBT ANALYSER ENGINE v4.1
 // ══════════════════════════════════════════════════
 
 // ── HELPERS ──
@@ -4581,8 +4783,8 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Monthly P&L · M6</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.0</div>
-</header>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.1</div>
+<button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m6w">
   <!-- Hero -->
@@ -4731,7 +4933,7 @@ function switchToM5(){
 
 <script>
 // ══════════════════════════════════════════
-// M6 — MONTHLY P&L ENGINE v4.0
+// M6 — MONTHLY P&L ENGINE v4.1
 // ══════════════════════════════════════════
 
 function fmtM6(n){
@@ -5175,8 +5377,8 @@ function switchToM6(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Goal Planner · M5</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.0</div>
-</header>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.1</div>
+<button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m5w">
 
@@ -5360,7 +5562,7 @@ function switchToM6(){
 
 <script>
 // ══════════════════════════════════════════
-// M5 — GOAL PLANNER ENGINE v4.0
+// M5 — GOAL PLANNER ENGINE v4.1
 // ══════════════════════════════════════════
 
 function fmtM5(n){
@@ -5731,8 +5933,8 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Protection Check · M7</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.0</div>
-</header>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.1</div>
+<button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m7w">
   <div style="padding:16px 0 14px;text-align:center">
@@ -5970,7 +6172,7 @@ function switchToM5(){
 
 <script>
 // ══════════════════════════════════════════
-// M7 — PROTECTION CHECK ENGINE v4.0
+// M7 — PROTECTION CHECK ENGINE v4.1
 // ══════════════════════════════════════════
 
 function fmtM7(n){
@@ -6303,8 +6505,8 @@ function switchToM7(){
       <div class="bsub" style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px">Score Report · M8</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v4.0</div>
-</header>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v4.1</div>
+<button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m8w">
 
@@ -6403,7 +6605,7 @@ function switchToM7(){
     <div id="m8WisdomList"></div>
   </div>
 
-  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v4.0<br>Your financial data stays on your device only.</div>
+  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v4.1<br>Your financial data stays on your device only.</div>
 </div>
 </div><!-- #app8 -->
 
@@ -6420,7 +6622,7 @@ function switchToM7(){
 
 <script>
 // ══════════════════════════════════════════
-// M8 — SCORE REPORT + DON'T DO LIST v4.0
+// M8 — SCORE REPORT + DON'T DO LIST v4.1
 // ══════════════════════════════════════════
 
 var M8_DONT_LIST = [
@@ -6723,7 +6925,7 @@ function switchToM8(){
 // Nav handled by single master init below
 </script>
 <script>
-// ══ CAUVERY PULSE — MASTER NAV v4.0 — ALL MODULES ══
+// ══ CAUVERY PULSE — MASTER NAV v4.1 — ALL MODULES ══
 (function(){
   var NAV = [
     ['switchToM0', '🎨', 'Canvas'],
@@ -6848,8 +7050,8 @@ function switchToM8(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Net Worth · M9</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.0</div>
-</header>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.1</div>
+<button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m9w">
 
@@ -6980,7 +7182,7 @@ function switchToM8(){
 
 <script>
 // ══════════════════════════════════════════
-// M9 — NET WORTH TRACKER v4.0
+// M9 — NET WORTH TRACKER v4.1
 // ══════════════════════════════════════════
 
 var MONTHS9=['January','February','March','April','May','June','July','August','September','October','November','December'];
@@ -7261,6 +7463,102 @@ function switchToM9(){
   window.scrollTo(0,0);
   document.getElementById('m9MonthLabel').textContent=m9MonthLabel();
   m9Calc();
+}
+</script>
+
+<!-- ══ NAV DRAWER ══ -->
+<div class="nav-overlay" id="navOverlay" onclick="closeNavDrawer()"></div>
+<div class="nav-drawer" id="navDrawer">
+  <div class="nav-drawer-header">
+    <div class="nav-drawer-title">🌊 Cauvery Pulse</div>
+    <button class="nav-drawer-close" onclick="closeNavDrawer()">✕</button>
+  </div>
+
+  <div class="nav-drawer-section">Foundation</div>
+  <button class="nav-item" onclick="navTo_M('switchToM0')">
+    <div class="nav-item-icon" style="background:#FFF7ED">🎨</div>
+    <div class="nav-item-text"><span class="nav-item-name">Life Canvas</span><span class="nav-item-desc">Your profile, life stage, personality</span></div>
+  </button>
+  <button class="nav-item" onclick="navTo_M('switchToM1')">
+    <div class="nav-item-icon" style="background:#F5F3FF">🩺</div>
+    <div class="nav-item-text"><span class="nav-item-name">Pulse Score</span><span class="nav-item-desc">Financial health score out of 100</span></div>
+  </button>
+
+  <div class="nav-drawer-section">Planning</div>
+  <button class="nav-item" onclick="navTo_M('switchToM5')">
+    <div class="nav-item-icon" style="background:#F5F3FF">🎯</div>
+    <div class="nav-item-text"><span class="nav-item-name">Goal Planner</span><span class="nav-item-desc">Set and track financial goals</span></div>
+  </button>
+  <button class="nav-item" onclick="navTo_M('switchToM4')">
+    <div class="nav-item-icon" style="background:#FEF2F2">💳</div>
+    <div class="nav-item-text"><span class="nav-item-name">Debt Analyser</span><span class="nav-item-desc">EMI, DTI, payoff strategy</span></div>
+  </button>
+  <button class="nav-item" onclick="navTo_M('switchToM6')">
+    <div class="nav-item-icon" style="background:#ECFDF5">📊</div>
+    <div class="nav-item-text"><span class="nav-item-name">Monthly P&amp;L</span><span class="nav-item-desc">Income, expenses, savings rate</span></div>
+  </button>
+  <button class="nav-item" onclick="navTo_M('switchToM9')">
+    <div class="nav-item-icon" style="background:#ECFDF5">💎</div>
+    <div class="nav-item-text"><span class="nav-item-name">Net Worth</span><span class="nav-item-desc">Track assets, liabilities, milestones</span></div>
+  </button>
+
+  <div class="nav-drawer-section">Learning</div>
+  <button class="nav-item" onclick="navTo_M('switchToM3')">
+    <div class="nav-item-icon" style="background:#FFFBEB">🗺️</div>
+    <div class="nav-item-text"><span class="nav-item-name">Portfolio Blueprint</span><span class="nav-item-desc">Your personalised allocation</span></div>
+  </button>
+  <button class="nav-item" onclick="navTo_M('switchToM2')">
+    <div class="nav-item-icon" style="background:#EFF6FF">📚</div>
+    <div class="nav-item-text"><span class="nav-item-name">Investment School</span><span class="nav-item-desc">10 instruments explained</span></div>
+  </button>
+  <button class="nav-item" onclick="navTo_M('switchToM7')">
+    <div class="nav-item-icon" style="background:#FEF2F2">🛡️</div>
+    <div class="nav-item-text"><span class="nav-item-name">Protection Check</span><span class="nav-item-desc">Life cover, health cover, score</span></div>
+  </button>
+
+  <div class="nav-drawer-section">Report</div>
+  <button class="nav-item" onclick="navTo_M('switchToM8')">
+    <div class="nav-item-icon" style="background:#0B0F1A">📋</div>
+    <div class="nav-item-text"><span class="nav-item-name" style="color:#fff">Score Report</span><span class="nav-item-desc" style="color:#6B7280">Full picture + Don't Do List</span></div>
+  </button>
+
+  <div class="nav-drawer-footer">
+    Cauvery Pulse v4.1 · Elango Industries Limited<br>
+    Your data stays on your device only.
+  </div>
+</div>
+
+<script>
+// ══ NAV DRAWER ENGINE ══
+function openNavDrawer(){
+  document.getElementById('navDrawer').classList.add('open');
+  document.getElementById('navOverlay').classList.add('open');
+  document.body.style.overflow='hidden';
+  // Highlight active module
+  var mods=['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'];
+  var fns=['switchToM0','switchToM1','switchToM2','switchToM3','switchToM4','switchToM5','switchToM6','switchToM7','switchToM8','switchToM9'];
+  var activeMod='';
+  mods.forEach(function(id,i){
+    var el=document.getElementById(id);
+    if(el&&el.classList.contains('act')) activeMod=fns[i];
+  });
+  document.querySelectorAll('.nav-item').forEach(function(item){
+    var fn=item.getAttribute('onclick')||'';
+    item.classList.toggle('active', fn.indexOf(activeMod)>-1);
+  });
+}
+
+function closeNavDrawer(){
+  document.getElementById('navDrawer').classList.remove('open');
+  document.getElementById('navOverlay').classList.remove('open');
+  document.body.style.overflow='';
+}
+
+function navTo_M(fnName){
+  closeNavDrawer();
+  setTimeout(function(){
+    if(typeof window[fnName]==='function') window[fnName]();
+  },200);
 }
 </script>
 </body>
