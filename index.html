@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Cauvery Pulse | v4.2 | Build: 20260418-0405 | Elango Industries Limited -->
+<!-- Cauvery Pulse | v4.3 | Build: 20260418-0420 | Elango Industries Limited -->
 <title>Cauvery Pulse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
@@ -419,7 +419,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   box-sizing:border-box;
 }
 
-/* ── GLOBAL INPUT STYLES v4.2 ── */
+/* ── GLOBAL INPUT STYLES v4.3 ── */
 input[type=number], input[type=text], input[type=email], select, textarea {
   background:#fff !important;
   border:1.5px solid #E5E7EB !important;
@@ -442,7 +442,7 @@ input[type=number]:focus, input[type=text]:focus, select:focus, textarea:focus {
 }
 select { appearance:none; cursor:pointer; }
 
-/* ── GLOBAL FONT STYLES v4.2 ── */
+/* ── GLOBAL FONT STYLES v4.3 ── */
 .m3-card, .m4-card, .m5-card, .m6-card, .m7-card {
   font-size:14px;
   font-weight:500;
@@ -491,7 +491,7 @@ select { appearance:none; cursor:pointer; }
 /* Section headers */
 h1,h2,h3 { font-weight:700; }
 
-/* ── NAV v4.2 ── */
+/* ── NAV v4.3 ── */
 .nb.act { color:#059669 !important; }
 .nb span:last-child { font-weight:700 !important; font-size:9px !important; }
 .nb span:first-child { font-size:21px !important; }
@@ -553,7 +553,7 @@ strong { color:#111827 }
 #mod8 .nb { color:rgba(255,255,255,.4) !important }
 #mod8 .nb.act { color:#34D399 !important }
 
-/* ══ HAMBURGER NAV DRAWER v4.2 ══ */
+/* ══ HAMBURGER NAV DRAWER v4.3 ══ */
 .bnav { display:none !important; }
 
 /* Hamburger button — top right of every header */
@@ -642,7 +642,7 @@ strong { color:#111827 }
   padding-bottom:24px !important;
 }
 
-/* ══ GLOBAL BOLD READABLE FONTS v4.2 ══ */
+/* ══ GLOBAL BOLD READABLE FONTS v4.3 ══ */
 
 /* Body text — heavier weight throughout */
 body { font-weight:500; font-size:15px; line-height:1.7; }
@@ -763,7 +763,7 @@ strong { font-weight:700 !important; }
 <div id="app0">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Life Canvas · M0</div></div></div>
-  <div class="vtag">v4.2</div>
+  <div class="vtag">v4.3</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 <div class="starfield" id="starfield"></div>
 <div class="aurora"></div>
@@ -1227,7 +1227,7 @@ strong { font-weight:700 !important; }
 <div id="app">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Cauvery Pulse Score · M1</div></div></div>
-  <div class="vtag">v4.2</div>
+  <div class="vtag">v4.3</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 <!-- WELCOME -->
 <div id="welcome" class="screen active">
@@ -1415,7 +1415,7 @@ strong { font-weight:700 !important; }
 <div id="app2">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Investment School · M2</div></div></div>
-  <div class="vtag">v4.2</div>
+  <div class="vtag">v4.3</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div style="padding:0 20px 80px">
@@ -1840,7 +1840,7 @@ function closeM2Detail(){
 
 // ══ UPDATED MODULE SWITCHER (now includes M2) ══
 function switchToM2(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod2').classList.add('act');
@@ -1848,14 +1848,14 @@ function switchToM2(){
   renderM2();
 }
 function switchToM1(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod1').classList.add('act');
   window.scrollTo(0,0);
 }
 function switchToM0(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod0').classList.add('act');
@@ -2764,7 +2764,7 @@ function toast(msg){
 
 
 
-<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v4.2 ══════ -->
+<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v4.3 ══════ -->
 <div id="mod3" class="mod">
 <style>
 /* ── M3 LIGHT THEME ── */
@@ -2948,7 +2948,7 @@ function toast(msg){
   </div>
   <div style="display:flex;align-items:center;gap:8px">
     <button onclick="openM3Settings()" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:6px 10px;font-size:13px;color:#6B7280;cursor:pointer">⚙️ Rates</button>
-    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.2</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.3</div>
   </div>
 </header>
 
@@ -2983,7 +2983,7 @@ function toast(msg){
 
 <script>
 // ══════════════════════════════════════════════════════
-// M3 PORTFOLIO BLUEPRINT ENGINE v4.2
+// M3 PORTFOLIO BLUEPRINT ENGINE v4.3
 // ══════════════════════════════════════════════════════
 
 // ── COLOURS ──
@@ -3504,7 +3504,7 @@ function saveM3Rates(){
 
 // ── SWITCHERS ──
 function switchToM3(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod3').classList.add('act');
@@ -3626,7 +3626,7 @@ function switchToM3(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Debt Analyser · M4</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.2</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.3</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button><button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m4w">
@@ -3974,7 +3974,7 @@ function switchToM3(){
 
 <script>
 // ══════════════════════════════════════════════════
-// M4 — DEBT ANALYSER ENGINE v4.2
+// M4 — DEBT ANALYSER ENGINE v4.3
 // ══════════════════════════════════════════════════
 
 // ── HELPERS ──
@@ -4405,7 +4405,7 @@ function calcInflation(){
 
 // ── MODULE SWITCHER ──
 function switchToM4(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod4').classList.add('act');
@@ -4665,7 +4665,7 @@ function m5LoadProfile(){
 
 // ── MODULE SWITCHER ──
 function switchToM5(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod5').classList.add('act');
@@ -4783,7 +4783,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Monthly P&L · M6</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.2</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.3</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m6w">
@@ -4933,7 +4933,7 @@ function switchToM5(){
 
 <script>
 // ══════════════════════════════════════════
-// M6 — MONTHLY P&L ENGINE v4.2
+// M6 — MONTHLY P&L ENGINE v4.3
 // ══════════════════════════════════════════
 
 function fmtM6(n){
@@ -5275,7 +5275,7 @@ function m6ShowTab(tab,el){
 
 // ── MODULE SWITCHER ──
 function switchToM6(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod6').classList.add('act');
@@ -5377,7 +5377,7 @@ function switchToM6(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Goal Planner · M5</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.2</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.3</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m5w">
@@ -5562,7 +5562,7 @@ function switchToM6(){
 
 <script>
 // ══════════════════════════════════════════
-// M5 — GOAL PLANNER ENGINE v4.2
+// M5 — GOAL PLANNER ENGINE v4.3
 // ══════════════════════════════════════════
 
 function fmtM5(n){
@@ -5933,7 +5933,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Protection Check · M7</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.2</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.3</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m7w">
@@ -6172,7 +6172,7 @@ function switchToM5(){
 
 <script>
 // ══════════════════════════════════════════
-// M7 — PROTECTION CHECK ENGINE v4.2
+// M7 — PROTECTION CHECK ENGINE v4.3
 // ══════════════════════════════════════════
 
 function fmtM7(n){
@@ -6411,7 +6411,7 @@ function m7ShowTab(tab, el){
 
 // ── MODULE SWITCHER ──
 function switchToM7(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod7').classList.add('act');
@@ -6505,7 +6505,7 @@ function switchToM7(){
       <div class="bsub" style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px">Score Report · M8</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v4.2</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v4.3</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m8w">
@@ -6605,7 +6605,7 @@ function switchToM7(){
     <div id="m8WisdomList"></div>
   </div>
 
-  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v4.2<br>Your financial data stays on your device only.</div>
+  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v4.3<br>Your financial data stays on your device only.</div>
 </div>
 </div><!-- #app8 -->
 
@@ -6622,7 +6622,7 @@ function switchToM7(){
 
 <script>
 // ══════════════════════════════════════════
-// M8 — SCORE REPORT + DON'T DO LIST v4.2
+// M8 — SCORE REPORT + DON'T DO LIST v4.3
 // ══════════════════════════════════════════
 
 var M8_DONT_LIST = [
@@ -6914,7 +6914,7 @@ function m8ShowTab(tab, el){
 
 // ── MODULE SWITCHER ──
 function switchToM8(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod8').classList.add('act');
@@ -6925,7 +6925,7 @@ function switchToM8(){
 // Nav handled by single master init below
 </script>
 <script>
-// ══ CAUVERY PULSE — MASTER NAV v4.2 — ALL MODULES ══
+// ══ CAUVERY PULSE — MASTER NAV v4.3 — ALL MODULES ══
 (function(){
   var NAV = [
     ['switchToM0', '🎨', 'Canvas'],
@@ -7050,7 +7050,7 @@ function switchToM8(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Net Worth · M9</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.2</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.3</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m9w">
@@ -7182,7 +7182,7 @@ function switchToM8(){
 
 <script>
 // ══════════════════════════════════════════
-// M9 — NET WORTH TRACKER v4.2
+// M9 — NET WORTH TRACKER v4.3
 // ══════════════════════════════════════════
 
 var MONTHS9=['January','February','March','April','May','June','July','August','September','October','November','December'];
@@ -7456,7 +7456,7 @@ function m9ShowTab(tab,el){
 
 // ── MODULE SWITCHER ──
 function switchToM9(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod9').classList.add('act');
@@ -7528,8 +7528,21 @@ function switchToM9(){
     <div class="nav-item-icon" style="background:#ECFDF5">📈</div>
     <div class="nav-item-text"><span class="nav-item-name">SIP Tracker</span><span class="nav-item-desc">All SIPs, XIRR, portfolio summary</span></div>
   </button>
+  <button class="nav-item" onclick="navTo_M('switchToM11')">
+    <div class="nav-item-icon" style="background:#EFF6FF">🧾</div>
+    <div class="nav-item-text"><span class="nav-item-name">Tax Optimiser</span><span class="nav-item-desc">80C, HRA, LTCG, regime comparison</span></div>
+  </button>
+  <div class="nav-drawer-section">Track</div>
+  <button class="nav-item" onclick="navTo_M('switchToM10')">
+    <div class="nav-item-icon" style="background:#ECFDF5">📈</div>
+    <div class="nav-item-text"><span class="nav-item-name">SIP Tracker</span><span class="nav-item-desc">All SIPs, XIRR, portfolio summary</span></div>
+  </button>
+  <button class="nav-item" onclick="navTo_M('switchToM11')">
+    <div class="nav-item-icon" style="background:#EFF6FF">🧾</div>
+    <div class="nav-item-text"><span class="nav-item-name">Tax Optimiser</span><span class="nav-item-desc">80C, HRA, LTCG, regime comparison</span></div>
+  </button>
   <div class="nav-drawer-footer">
-    Cauvery Pulse v4.2 · Elango Industries Limited<br>
+    Cauvery Pulse v4.3 · Elango Industries Limited<br>
     Your data stays on your device only.
   </div>
 </div>
@@ -7541,8 +7554,8 @@ function openNavDrawer(){
   document.getElementById('navOverlay').classList.add('open');
   document.body.style.overflow='hidden';
   // Highlight active module
-  var mods=['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'];
-  var fns=['switchToM0','switchToM1','switchToM2','switchToM3','switchToM4','switchToM5','switchToM6','switchToM7','switchToM8','switchToM9','switchToM10'];
+  var mods=['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'];
+  var fns=['switchToM0','switchToM1','switchToM2','switchToM3','switchToM4','switchToM5','switchToM6','switchToM7','switchToM8','switchToM9','switchToM10','switchToM11'];
   var activeMod='';
   mods.forEach(function(id,i){
     var el=document.getElementById(id);
@@ -7787,7 +7800,7 @@ function navTo_M(fnName){
 
 <script>
 // ══════════════════════════════════════════
-// M10 — SIP TRACKER ENGINE v4.2
+// M10 — SIP TRACKER ENGINE v4.3
 // ══════════════════════════════════════════
 
 var SIP_TYPES={
@@ -8128,12 +8141,594 @@ function m10ShowTab(tab,el){
 
 // ── MODULE SWITCHER ──
 function switchToM10(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod10').classList.add('act');
   window.scrollTo(0,0);
   m10RenderSIPs();
+}
+</script>
+
+
+
+<!-- ══════ MODULE 11: TAX OPTIMISER ══════ -->
+<div id="mod11" class="mod">
+<style>
+#mod11{background:#F5F6FA;min-height:100vh}
+#mod11 header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+.m11w{padding:0 16px 28px;max-width:480px;margin:0 auto}
+.m11-card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.m11-card-title{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:#1E3A8A;margin-bottom:12px;font-weight:800}
+.m11-label{font-size:14px;color:#111827;margin-bottom:6px;font-weight:700}
+.m11-input{width:100%;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:15px;font-weight:600;color:#111827;font-family:'DM Mono','DM Sans',sans-serif;margin-bottom:10px;box-sizing:border-box;transition:border-color .2s}
+.m11-input:focus{outline:none;border-color:#059669;box-shadow:0 0 0 3px rgba(5,150,105,.1);background:#FAFFFE}
+.m11-select{width:100%;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:14px;font-weight:600;color:#111827;margin-bottom:10px;appearance:none}
+.m11-select:focus{outline:none;border-color:#059669}
+.m11-btn{width:100%;padding:13px;background:linear-gradient(135deg,#059669,#047857);color:#fff;font-weight:700;border:none;border-radius:12px;cursor:pointer;font-size:15px;margin-top:4px}
+
+/* Tabs */
+.m11-tabs{display:flex;gap:5px;margin-bottom:16px;overflow-x:auto;scrollbar-width:none}
+.m11-tab{flex-shrink:0;padding:8px 12px;background:#fff;border:1.5px solid #E5E7EB;border-radius:20px;font-size:12px;font-weight:700;color:#6B7280;cursor:pointer;white-space:nowrap;transition:all .2s}
+.m11-tab.act{background:#ECFDF5;border-color:#A7F3D0;color:#059669}
+
+/* Tax saving bar */
+.m11-section-row{display:flex;align-items:center;gap:8px;padding:10px 0;border-bottom:1px solid #F3F4F6}
+.m11-section-row:last-child{border:none}
+.m11-section-icon{font-size:20px;width:28px;text-align:center;flex-shrink:0}
+.m11-section-label{flex:1;font-size:13px;font-weight:700;color:#374151}
+.m11-section-input{background:#F9FAFB;border:1.5px solid #E5E7EB;border-radius:10px;padding:8px 10px;font-size:13px;font-weight:700;color:#111827;font-family:'DM Mono',monospace;width:110px;text-align:right;box-sizing:border-box}
+.m11-section-input:focus{outline:none;border-color:#059669}
+
+/* Progress bars */
+.m11-prog-wrap{margin:10px 0}
+.m11-prog-label{display:flex;justify-content:space-between;font-size:12px;font-weight:700;margin-bottom:4px}
+.m11-prog-track{width:100%;background:#F3F4F6;border-radius:6px;height:10px;overflow:hidden}
+.m11-prog-fill{height:10px;border-radius:6px;transition:width .5s}
+
+/* Result boxes */
+.m11-result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.m11-result-box{background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;padding:12px;text-align:center}
+.m11-result-val{font-family:'DM Mono',monospace;font-size:18px;font-weight:700;margin-bottom:3px}
+.m11-result-lbl{font-size:10px;color:#9CA3AF;font-weight:700;text-transform:uppercase;letter-spacing:.5px}
+
+/* Alert banners */
+.m11-alert{border-radius:12px;padding:12px 14px;margin-bottom:10px;display:flex;align-items:flex-start;gap:10px}
+.m11-alert-icon{font-size:20px;flex-shrink:0}
+.m11-alert-text{flex:1;font-size:13px;font-weight:600;line-height:1.7}
+.m11-alert-green{background:#ECFDF5;border:1px solid #A7F3D0}
+.m11-alert-amber{background:#FFFBEB;border:1px solid #FCD34D}
+.m11-alert-red{background:#FEF2F2;border:1px solid #FECACA}
+.m11-alert-blue{background:#EFF6FF;border:1px solid #BFDBFE}
+
+/* Tax slab table */
+.m11-slab-row{display:flex;align-items:center;gap:8px;padding:9px 0;border-bottom:1px solid #F3F4F6;font-size:13px}
+.m11-slab-row:last-child{border:none}
+.m11-slab-range{font-weight:700;color:#111827;flex:1}
+.m11-slab-rate{font-family:'DM Mono',monospace;font-weight:700;width:50px;text-align:right}
+.m11-slab-highlight{background:#ECFDF5;border-radius:6px;padding:2px 6px}
+
+/* LTCG harvest calendar */
+.m11-harvest-card{background:#F0FDF4;border:1px solid #A7F3D0;border-radius:12px;padding:14px;margin-bottom:10px}
+.m11-harvest-title{font-size:13px;font-weight:800;color:#065F46;margin-bottom:8px}
+.m11-harvest-row{display:flex;justify-content:space-between;font-size:13px;font-weight:600;padding:5px 0;border-bottom:1px solid #D1FAE5}
+.m11-harvest-row:last-child{border:none}
+
+/* Insight */
+.m11-insight{font-size:13px;font-weight:600;color:#374151;line-height:1.85;padding:12px 14px;background:#ECFDF5;border-radius:10px;border-left:3px solid #059669;margin-top:10px}
+.m11-insight-blue{background:#EFF6FF;border-left-color:#2563EB;color:#1E3A8A}
+.m11-insight-amber{background:#FFFBEB;border-left-color:#D97706}
+</style>
+
+<div id="app11">
+<header>
+  <div class="brand">
+    <div class="blogo" style="background:linear-gradient(135deg,#1E3A8A,#2563EB)">🌊</div>
+    <div>
+      <div class="bname" style="color:#111827;font-size:17px;font-weight:800">Cauvery Pulse</div>
+      <div class="bsub" style="font-size:10px;color:#6B7280;font-weight:700;text-transform:uppercase;letter-spacing:1px">Tax Optimiser · M11</div>
+    </div>
+  </div>
+  <button class="nav-burger" onclick="openNavDrawer()">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+
+<div class="m11w">
+  <div style="padding:16px 0 14px;text-align:center">
+    <span style="font-size:44px;display:block;margin-bottom:8px">🧾</span>
+    <div style="font-family:'Playfair Display',serif;font-size:24px;font-weight:900;color:#111827;margin-bottom:6px">Tax <span style="color:#1E3A8A">Optimiser</span></div>
+    <div style="font-size:14px;color:#6B7280;font-weight:600;line-height:1.7">Every rupee saved in tax is a rupee compounding for your future. Maximise every deduction legally.</div>
+  </div>
+
+  <div class="m11-tabs">
+    <div class="m11-tab act" onclick="m11ShowTab('deductions',this)">🎯 Deductions</div>
+    <div class="m11-tab" onclick="m11ShowTab('slab',this)">📊 Tax Slab</div>
+    <div class="m11-tab" onclick="m11ShowTab('ltcg',this)">📈 LTCG Harvest</div>
+    <div class="m11-tab" onclick="m11ShowTab('hra',this)">🏠 HRA</div>
+    <div class="m11-tab" onclick="m11ShowTab('regime',this)">⚖️ Old vs New</div>
+  </div>
+
+  <!-- ── TAB 1: DEDUCTIONS ── -->
+  <div id="m11tab-deductions">
+
+    <div class="m11-card">
+      <div class="m11-card-title">💼 Your Income</div>
+      <div class="m11-label">Annual Gross Salary / Income (₹)</div>
+      <input class="m11-input" type="number" id="t11Income" placeholder="e.g. 1500000" oninput="m11Calc()">
+      <div class="m11-label">Tax Regime</div>
+      <select class="m11-select" id="t11Regime" onchange="m11Calc()">
+        <option value="new">New Tax Regime (Default FY 2024-25)</option>
+        <option value="old">Old Tax Regime (with deductions)</option>
+      </select>
+    </div>
+
+    <div class="m11-card" id="m11DeductionCard">
+      <div class="m11-card-title">📋 Section 80C — Limit ₹1.5 Lakh</div>
+      <div class="m11-section-row"><div class="m11-section-icon">🏛️</div><div class="m11-section-label">EPF / VPF Contribution</div><input class="m11-section-input" type="number" id="d_epf" placeholder="0" oninput="m11Calc()"></div>
+      <div class="m11-section-row"><div class="m11-section-icon">🌱</div><div class="m11-section-label">ELSS (Mutual Fund)</div><input class="m11-section-input" type="number" id="d_elss" placeholder="0" oninput="m11Calc()"></div>
+      <div class="m11-section-row"><div class="m11-section-icon">📦</div><div class="m11-section-label">PPF Deposit</div><input class="m11-section-input" type="number" id="d_ppf" placeholder="0" oninput="m11Calc()"></div>
+      <div class="m11-section-row"><div class="m11-section-icon">🏠</div><div class="m11-section-label">Home Loan Principal</div><input class="m11-section-input" type="number" id="d_homeloan_p" placeholder="0" oninput="m11Calc()"></div>
+      <div class="m11-section-row"><div class="m11-section-icon">🎓</div><div class="m11-section-label">Children Tuition Fees</div><input class="m11-section-input" type="number" id="d_tuition" placeholder="0" oninput="m11Calc()"></div>
+      <div class="m11-section-row"><div class="m11-section-icon">📋</div><div class="m11-section-label">Life Insurance Premium</div><input class="m11-section-input" type="number" id="d_lic" placeholder="0" oninput="m11Calc()"></div>
+      <div class="m11-section-row"><div class="m11-section-icon">🏢</div><div class="m11-section-label">NSC / SSY / SCSS / ULIP</div><input class="m11-section-input" type="number" id="d_other80c" placeholder="0" oninput="m11Calc()"></div>
+
+      <!-- 80C progress bar -->
+      <div class="m11-prog-wrap" style="margin-top:14px">
+        <div class="m11-prog-label">
+          <span style="color:#1E3A8A">80C Utilisation</span>
+          <span id="m11_80c_used" style="color:#059669">₹0 / ₹1.5L</span>
+        </div>
+        <div class="m11-prog-track"><div class="m11-prog-fill" id="m11_80c_bar" style="background:#059669;width:0%"></div></div>
+      </div>
+      <div id="m11_80c_alert" style="margin-top:8px"></div>
+    </div>
+
+    <div class="m11-card">
+      <div class="m11-card-title">🎯 Additional Deductions</div>
+      <div class="m11-section-row"><div class="m11-section-icon">🎯</div><div class="m11-section-label">NPS 80CCD(1B) — Extra ₹50K</div><input class="m11-section-input" type="number" id="d_nps_1b" placeholder="0" oninput="m11Calc()"></div>
+      <div class="m11-section-row"><div class="m11-section-icon">🏢</div><div class="m11-section-label">Employer NPS 80CCD(2)</div><input class="m11-section-input" type="number" id="d_nps_2" placeholder="0" oninput="m11Calc()"></div>
+      <div class="m11-section-row"><div class="m11-section-icon">🏥</div><div class="m11-section-label">Health Insurance 80D (Self)</div><input class="m11-section-input" type="number" id="d_health_self" placeholder="0" oninput="m11Calc()"></div>
+      <div class="m11-section-row"><div class="m11-section-icon">👴</div><div class="m11-section-label">Health Insurance 80D (Parents)</div><input class="m11-section-input" type="number" id="d_health_parents" placeholder="0" oninput="m11Calc()"></div>
+      <div class="m11-section-row"><div class="m11-section-icon">🏠</div><div class="m11-section-label">Home Loan Interest Sec 24(b)</div><input class="m11-section-input" type="number" id="d_homeloan_i" placeholder="0" oninput="m11Calc()"></div>
+      <div class="m11-section-row"><div class="m11-section-icon">🎓</div><div class="m11-section-label">Education Loan Interest 80E</div><input class="m11-section-input" type="number" id="d_edu_loan" placeholder="0" oninput="m11Calc()"></div>
+    </div>
+
+    <button class="m11-btn" onclick="m11Calc()">Calculate My Tax Savings →</button>
+    <div id="m11TaxResult" style="display:none;margin-top:14px"></div>
+
+  </div>
+
+  <!-- ── TAB 2: TAX SLAB ── -->
+  <div id="m11tab-slab" style="display:none">
+    <div class="m11-card">
+      <div class="m11-card-title">📊 New Tax Regime — FY 2025-26</div>
+      <div style="font-size:13px;font-weight:600;color:#6B7280;margin-bottom:12px">Default regime. No deductions except 80CCD(2). Rebate u/s 87A: zero tax up to ₹12L income (₹12.75L for salaried with ₹75K standard deduction).</div>
+      <div id="m11NewSlabs"></div>
+      <div class="m11-insight m11-insight-blue" style="margin-top:12px">
+        <strong>New regime benefit:</strong> If your total deductions under old regime are below ₹3.75L, new regime saves more tax. The break-even deduction amount is approximately ₹3.5–4L for most income levels.
+      </div>
+    </div>
+    <div class="m11-card">
+      <div class="m11-card-title">📊 Old Tax Regime — FY 2025-26</div>
+      <div style="font-size:13px;font-weight:600;color:#6B7280;margin-bottom:12px">Allows all deductions. Beneficial only if total deductions exceed ₹3.5–4L. Rebate u/s 87A: zero tax up to ₹5L taxable income.</div>
+      <div id="m11OldSlabs"></div>
+    </div>
+  </div>
+
+  <!-- ── TAB 3: LTCG HARVEST ── -->
+  <div id="m11tab-ltcg" style="display:none">
+    <div class="m11-card">
+      <div class="m11-card-title">📈 LTCG Tax Harvesting Calculator</div>
+      <div style="font-size:13px;font-weight:600;color:#374151;line-height:1.8;margin-bottom:14px">Book ₹1.25 lakh in Long Term Capital Gains every year before 31 March — completely tax free. Sell and immediately rebuy to reset your cost basis. This is legal, SEBI-compliant, and most investors ignore it.</div>
+
+      <div class="m11-label">Current Value of Equity MF / Stocks (₹)</div>
+      <input class="m11-input" type="number" id="ltcgCurrent" placeholder="e.g. 800000" oninput="m11CalcLTCG()">
+
+      <div class="m11-label">Total Cost / Purchase Price (₹)</div>
+      <input class="m11-input" type="number" id="ltcgCost" placeholder="e.g. 600000" oninput="m11CalcLTCG()">
+
+      <div class="m11-label">LTCG Already Booked This Year (₹)</div>
+      <input class="m11-input" type="number" id="ltcgBooked" placeholder="0" oninput="m11CalcLTCG()">
+
+      <div id="m11LTCGResult" style="display:none;margin-top:10px"></div>
+    </div>
+
+    <div class="m11-card">
+      <div class="m11-card-title">📅 Tax Harvesting — How It Works</div>
+      <div style="font-size:13px;font-weight:600;color:#374151;line-height:1.9">
+        <div style="margin-bottom:10px"><strong style="color:#059669">Step 1 — Check your unrealised LTCG</strong><br>Log in to your MF platform (Zerodha, Groww, Kuvera). Go to P&L report. See total LTCG unrealised.</div>
+        <div style="margin-bottom:10px"><strong style="color:#059669">Step 2 — Book up to ₹1.25L every March</strong><br>Sell units with highest unrealised LTCG first. Stop at ₹1.25L gain. This is completely tax free under Sec 112A.</div>
+        <div style="margin-bottom:10px"><strong style="color:#059669">Step 3 — Immediately rebuy the same fund</strong><br>Rebuy the same units within 1–2 days. Your cost basis resets to today's NAV. Future gains start from a higher base.</div>
+        <div><strong style="color:#059669">Step 4 — Repeat every year</strong><br>₹1.25L harvested per year × 20 years = ₹25L in tax-free gains. At 30% slab, this saves approximately ₹7.5L in total tax over 20 years.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TAB 4: HRA ── -->
+  <div id="m11tab-hra" style="display:none">
+    <div class="m11-card">
+      <div class="m11-card-title">🏠 HRA Exemption Calculator</div>
+      <div style="font-size:13px;font-weight:600;color:#6B7280;margin-bottom:14px">HRA exemption is the minimum of three values. Calculate your exact exempt amount.</div>
+
+      <div class="m11-label">Basic Salary (Annual ₹)</div>
+      <input class="m11-input" type="number" id="hraBasic" placeholder="e.g. 600000" oninput="m11CalcHRA()">
+
+      <div class="m11-label">HRA Received from Employer (Annual ₹)</div>
+      <input class="m11-input" type="number" id="hraReceived" placeholder="e.g. 240000" oninput="m11CalcHRA()">
+
+      <div class="m11-label">Actual Rent Paid (Annual ₹)</div>
+      <input class="m11-input" type="number" id="hraRent" placeholder="e.g. 300000" oninput="m11CalcHRA()">
+
+      <div class="m11-label">City Type</div>
+      <select class="m11-select" id="hraCity" onchange="m11CalcHRA()">
+        <option value="metro">Metro — Delhi, Mumbai, Chennai, Kolkata (50% Basic)</option>
+        <option value="non_metro">Non-Metro (40% Basic)</option>
+      </select>
+
+      <div id="m11HRAResult" style="display:none;margin-top:10px"></div>
+    </div>
+
+    <div class="m11-card">
+      <div class="m11-card-title">📋 HRA Key Rules</div>
+      <div style="font-size:13px;font-weight:600;color:#374151;line-height:1.9">
+        <div style="margin-bottom:8px"><strong style="color:#1E3A8A">Exemption = Minimum of:</strong><br>1. Actual HRA received · 2. Rent paid minus 10% of Basic · 3. 50% of Basic (metro) or 40% (non-metro)</div>
+        <div style="margin-bottom:8px"><strong style="color:#1E3A8A">PAN of landlord required</strong> if annual rent exceeds ₹1 lakh (₹8,333/month).</div>
+        <div style="margin-bottom:8px"><strong style="color:#1E3A8A">Not available under new regime.</strong> HRA exemption is only valid if you choose the old tax regime.</div>
+        <div><strong style="color:#1E3A8A">Self-employed / no HRA?</strong> Claim deduction under Sec 80GG — up to ₹5,000/month or 25% of income, whichever is lower.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ── TAB 5: OLD vs NEW REGIME ── -->
+  <div id="m11tab-regime" style="display:none">
+    <div class="m11-card">
+      <div class="m11-card-title">⚖️ Old vs New Regime Comparison</div>
+      <div style="font-size:13px;font-weight:600;color:#6B7280;margin-bottom:14px">Enter your income and deductions in the Deductions tab first. This shows which regime saves you more.</div>
+      <div id="m11RegimeCompare">
+        <div style="text-align:center;padding:30px;color:#9CA3AF;font-size:14px;font-weight:600">Enter income in Deductions tab to see comparison.</div>
+      </div>
+    </div>
+
+    <div class="m11-card">
+      <div class="m11-card-title">📋 When to Choose Old Regime</div>
+      <div style="font-size:13px;font-weight:600;color:#374151;line-height:1.9">
+        <div style="margin-bottom:8px">✅ You pay rent and claim HRA exemption above ₹1L/year</div>
+        <div style="margin-bottom:8px">✅ Home loan interest above ₹1.5L/year (Sec 24b)</div>
+        <div style="margin-bottom:8px">✅ Total 80C + 80D + HRA + 80CCD(1B) deductions exceed ₹3.75L</div>
+        <div style="margin-bottom:8px">✅ Education loan interest being claimed under 80E</div>
+        <div style="margin-bottom:4px">❌ Otherwise — new regime is almost always better</div>
+      </div>
+    </div>
+
+    <div class="m11-card">
+      <div class="m11-card-title">📋 What New Regime Allows</div>
+      <div style="font-size:13px;font-weight:600;color:#374151;line-height:1.9">
+        <div style="margin-bottom:8px">✅ Standard deduction ₹75,000 (salaried)</div>
+        <div style="margin-bottom:8px">✅ Employer NPS contribution 80CCD(2) — no upper limit</div>
+        <div style="margin-bottom:8px">✅ Rebate u/s 87A — zero tax up to ₹12L income</div>
+        <div style="margin-bottom:8px">✅ Leave encashment, gratuity exemptions</div>
+        <div>❌ No 80C, 80D, HRA, 80CCD(1B), Sec 24b deductions</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:14px;font-size:11px;color:#9CA3AF;font-weight:600;letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse · M11<br>This is educational guidance. Consult your CA for filing.</div>
+</div>
+</div><!-- #app11 -->
+
+<div class="bnav"><!-- controlled by master nav --></div>
+<div class="toast" id="toast11"></div>
+</div><!-- #mod11 -->
+
+<script>
+// ══════════════════════════════════════════
+// M11 — TAX OPTIMISER ENGINE v4.3
+// ══════════════════════════════════════════
+
+function fmtM11(n){
+  if(Math.abs(n)>=10000000)return '₹'+(n/10000000).toFixed(2)+' Cr';
+  if(Math.abs(n)>=100000)return '₹'+(n/100000).toFixed(2)+' L';
+  if(Math.abs(n)>=1000)return '₹'+(n/1000).toFixed(1)+' K';
+  return '₹'+Math.round(n);
+}
+function m11Toast(msg){
+  var t=document.getElementById('toast11');
+  if(t){t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2400);}
+}
+function m11GetVal(id){return parseFloat(document.getElementById(id)&&document.getElementById(id).value)||0;}
+
+// ── TAX CALCULATION ENGINE ──
+function m11CalcTaxNew(income){
+  // New regime FY 2025-26 (after Budget 2025)
+  // Standard deduction ₹75,000 for salaried
+  var taxable = Math.max(0, income - 75000);
+  // Rebate 87A: if income <= 12L, tax = 0
+  if(taxable <= 1200000) return 0;
+  var tax = 0;
+  var slabs = [
+    {upto:400000,  rate:0},
+    {upto:800000,  rate:0.05},
+    {upto:1200000, rate:0.10},
+    {upto:1600000, rate:0.15},
+    {upto:2000000, rate:0.20},
+    {upto:2400000, rate:0.25},
+    {upto:Infinity,rate:0.30},
+  ];
+  var prev = 0;
+  for(var i=0;i<slabs.length;i++){
+    var slab = slabs[i];
+    if(taxable <= prev) break;
+    var chunk = Math.min(taxable, slab.upto) - prev;
+    tax += chunk * slab.rate;
+    prev = slab.upto;
+    if(slab.upto === Infinity) break;
+  }
+  // Surcharge + cess 4%
+  var cess = tax * 0.04;
+  return Math.round(tax + cess);
+}
+
+function m11CalcTaxOld(taxableIncome){
+  // Old regime FY 2025-26
+  // Rebate 87A: if taxable income <= 5L, tax = 0
+  var tax = 0;
+  if(taxableIncome <= 250000) return 0;
+  var slabs = [
+    {upto:250000,  rate:0},
+    {upto:500000,  rate:0.05},
+    {upto:1000000, rate:0.20},
+    {upto:Infinity,rate:0.30},
+  ];
+  var prev = 0;
+  for(var i=0;i<slabs.length;i++){
+    var slab=slabs[i];
+    if(taxableIncome<=prev)break;
+    var chunk=Math.min(taxableIncome,slab.upto)-prev;
+    tax+=chunk*slab.rate;
+    prev=slab.upto;
+    if(slab.upto===Infinity)break;
+  }
+  // Rebate 87A
+  if(taxableIncome<=500000) tax=0;
+  return Math.round(tax*1.04);
+}
+
+// ── MAIN DEDUCTION CALC ──
+function m11Calc(){
+  var income = m11GetVal('t11Income');
+  var regime = document.getElementById('t11Regime').value;
+  if(!income) return;
+
+  // 80C bucket
+  var c80 = Math.min(150000,
+    m11GetVal('d_epf') + m11GetVal('d_elss') + m11GetVal('d_ppf') +
+    m11GetVal('d_homeloan_p') + m11GetVal('d_tuition') + m11GetVal('d_lic') + m11GetVal('d_other80c')
+  );
+  var c80_raw = m11GetVal('d_epf')+m11GetVal('d_elss')+m11GetVal('d_ppf')+m11GetVal('d_homeloan_p')+m11GetVal('d_tuition')+m11GetVal('d_lic')+m11GetVal('d_other80c');
+  var c80_pct = Math.min(100, Math.round(c80_raw/150000*100));
+
+  // Update 80C bar
+  var bar = document.getElementById('m11_80c_bar');
+  var used = document.getElementById('m11_80c_used');
+  var alert = document.getElementById('m11_80c_alert');
+  if(bar) bar.style.width = c80_pct+'%';
+  if(bar) bar.style.background = c80_pct>=100?'#059669':c80_pct>=70?'#D97706':'#DC2626';
+  if(used) used.textContent = fmtM11(c80_raw)+' / ₹1.5L';
+  if(alert){
+    var headroom = 150000 - c80_raw;
+    if(headroom > 0){
+      alert.innerHTML='<div class="m11-alert m11-alert-amber"><div class="m11-alert-icon">⚠️</div><div class="m11-alert-text">80C headroom: <strong>'+fmtM11(headroom)+' remaining.</strong> Add ELSS SIP or VPF to maximise before 31 March.</div></div>';
+    } else {
+      alert.innerHTML='<div class="m11-alert m11-alert-green"><div class="m11-alert-icon">✅</div><div class="m11-alert-text"><strong>80C fully utilised.</strong> You are claiming the maximum ₹1.5L deduction.</div></div>';
+    }
+  }
+
+  // Additional deductions
+  var nps1b  = Math.min(50000, m11GetVal('d_nps_1b'));
+  var nps2   = m11GetVal('d_nps_2');
+  var health_self    = Math.min(25000, m11GetVal('d_health_self'));
+  var health_parents = Math.min(50000, m11GetVal('d_health_parents'));
+  var home_interest  = Math.min(200000, m11GetVal('d_homeloan_i'));
+  var edu_loan       = m11GetVal('d_edu_loan');
+
+  var totalDeductions = c80 + nps1b + nps2 + health_self + health_parents + home_interest + edu_loan + 75000; // 75K standard ded
+
+  // Calculate both regime taxes
+  var taxNew = m11CalcTaxNew(income);
+  var taxableOld = Math.max(0, income - totalDeductions);
+  var taxOld = m11CalcTaxOld(taxableOld);
+  var currentTax = regime === 'new' ? taxNew : taxOld;
+  var savings = taxOld - taxNew; // positive = new is better
+
+  // Show result
+  var res = document.getElementById('m11TaxResult');
+  res.style.display = 'block';
+  res.innerHTML =
+    '<div class="m11-result-grid">'+
+      '<div class="m11-result-box">'+
+        '<div class="m11-result-val" style="color:#1E3A8A">'+fmtM11(income)+'</div>'+
+        '<div class="m11-result-lbl">Gross Income</div>'+
+      '</div>'+
+      '<div class="m11-result-box">'+
+        '<div class="m11-result-val" style="color:#DC2626">'+fmtM11(currentTax)+'</div>'+
+        '<div class="m11-result-lbl">Tax Payable</div>'+
+      '</div>'+
+      '<div class="m11-result-box">'+
+        '<div class="m11-result-val" style="color:#059669">'+fmtM11(income-currentTax)+'</div>'+
+        '<div class="m11-result-lbl">Take Home</div>'+
+      '</div>'+
+      '<div class="m11-result-box">'+
+        '<div class="m11-result-val" style="color:#7C3AED">'+Math.round(currentTax/income*100)+'%</div>'+
+        '<div class="m11-result-lbl">Effective Rate</div>'+
+      '</div>'+
+    '</div>'+
+    (regime==='old'?
+      '<div class="m11-result-grid">'+
+        '<div class="m11-result-box">'+
+          '<div class="m11-result-val" style="color:#059669">'+fmtM11(totalDeductions)+'</div>'+
+          '<div class="m11-result-lbl">Total Deductions</div>'+
+        '</div>'+
+        '<div class="m11-result-box">'+
+          '<div class="m11-result-val" style="color:#374151">'+fmtM11(taxableOld)+'</div>'+
+          '<div class="m11-result-lbl">Taxable Income</div>'+
+        '</div>'+
+      '</div>':'')+
+    '<div class="m11-insight'+(savings>0?' m11-insight-amber':'')+'">'+
+      (regime==='new'?
+        '<strong>New Regime selected.</strong> Your tax is '+fmtM11(taxNew)+'. Switch to Deductions tab and fill in your deductions to check if old regime saves more.':
+        '<strong>Old Regime with deductions.</strong> Tax reduced from '+fmtM11(taxNew)+' (new) to '+fmtM11(taxOld)+' (old). '+(taxOld<taxNew?'Old regime saves you <strong>'+fmtM11(taxNew-taxOld)+'</strong>.':'New regime is better by <strong>'+fmtM11(taxOld-taxNew)+'</strong>. Consider switching.'))+
+      '</div>';
+
+  // Update regime comparison tab
+  m11UpdateRegimeCompare(income, taxNew, taxOld, totalDeductions);
+}
+
+function m11UpdateRegimeCompare(income, taxNew, taxOld, deductions){
+  var el = document.getElementById('m11RegimeCompare');
+  if(!el||!income)return;
+  var winner = taxNew<=taxOld?'new':'old';
+  var saving = Math.abs(taxNew-taxOld);
+
+  el.innerHTML=
+    '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px">'+
+      '<div style="background:'+(winner==='new'?'#ECFDF5':'#F9FAFB')+';border:2px solid '+(winner==='new'?'#A7F3D0':'#E5E7EB')+';border-radius:14px;padding:14px;text-align:center">'+
+        '<div style="font-size:12px;font-weight:800;color:#6B7280;text-transform:uppercase;margin-bottom:6px">New Regime</div>'+
+        '<div style="font-family:\'DM Mono\',monospace;font-size:22px;font-weight:700;color:'+(winner==='new'?'#059669':'#374151')+'">'+fmtM11(taxNew)+'</div>'+
+        (winner==='new'?'<div style="font-size:11px;font-weight:700;color:#059669;margin-top:4px">✅ Better</div>':'<div style="font-size:11px;color:#9CA3AF;margin-top:4px">Higher</div>')+
+      '</div>'+
+      '<div style="background:'+(winner==='old'?'#ECFDF5':'#F9FAFB')+';border:2px solid '+(winner==='old'?'#A7F3D0':'#E5E7EB')+';border-radius:14px;padding:14px;text-align:center">'+
+        '<div style="font-size:12px;font-weight:800;color:#6B7280;text-transform:uppercase;margin-bottom:6px">Old Regime</div>'+
+        '<div style="font-family:\'DM Mono\',monospace;font-size:22px;font-weight:700;color:'+(winner==='old'?'#059669':'#374151')+'">'+fmtM11(taxOld)+'</div>'+
+        (winner==='old'?'<div style="font-size:11px;font-weight:700;color:#059669;margin-top:4px">✅ Better</div>':'<div style="font-size:11px;color:#9CA3AF;margin-top:4px">Higher</div>')+
+      '</div>'+
+    '</div>'+
+    '<div class="m11-alert '+(winner==='new'?'m11-alert-green':'m11-alert-blue')+'">'+
+      '<div class="m11-alert-icon">'+(winner==='new'?'💚':'🏛️')+'</div>'+
+      '<div class="m11-alert-text"><strong>'+(winner==='new'?'New regime saves ':'Old regime saves ')+fmtM11(saving)+' this year.</strong> '+(winner==='new'?'Your deductions are insufficient to justify old regime.':'Your deductions of '+fmtM11(deductions)+' make old regime worthwhile.')+' Always recalculate in April when income changes.</div>'+
+    '</div>';
+}
+
+// ── TAX SLABS RENDER ──
+function m11RenderSlabs(){
+  var newEl = document.getElementById('m11NewSlabs');
+  var oldEl = document.getElementById('m11OldSlabs');
+  if(!newEl||!oldEl||newEl.innerHTML)return;
+
+  var newSlabs=[
+    {range:'Up to ₹4 Lakh', rate:'Nil', highlight:true},
+    {range:'₹4L – ₹8L',     rate:'5%'},
+    {range:'₹8L – ₹12L',    rate:'10%'},
+    {range:'₹12L – ₹16L',   rate:'15%'},
+    {range:'₹16L – ₹20L',   rate:'20%'},
+    {range:'₹20L – ₹24L',   rate:'25%'},
+    {range:'Above ₹24L',    rate:'30%'},
+  ];
+  var oldSlabs=[
+    {range:'Up to ₹2.5 Lakh', rate:'Nil', highlight:true},
+    {range:'₹2.5L – ₹5L',    rate:'5%'},
+    {range:'₹5L – ₹10L',     rate:'20%'},
+    {range:'Above ₹10L',     rate:'30%'},
+  ];
+
+  function renderSlabs(slabs){
+    return slabs.map(function(s){
+      return '<div class="m11-slab-row">'+
+        '<div class="m11-slab-range">'+s.range+'</div>'+
+        '<div class="m11-slab-rate '+(s.highlight?'m11-slab-highlight':'')+'" style="color:'+(s.highlight?'#059669':s.rate==='30%'?'#DC2626':s.rate==='20%'?'#D97706':'#374151')+'">'+s.rate+'</div>'+
+      '</div>';
+    }).join('');
+  }
+  newEl.innerHTML=renderSlabs(newSlabs);
+  oldEl.innerHTML=renderSlabs(oldSlabs);
+}
+
+// ── LTCG HARVEST ──
+function m11CalcLTCG(){
+  var current = m11GetVal('ltcgCurrent');
+  var cost    = m11GetVal('ltcgCost');
+  var booked  = m11GetVal('ltcgBooked');
+  if(!current||!cost)return;
+
+  var totalGain    = Math.max(0, current - cost);
+  var gainPct      = cost>0?Math.round((current-cost)/cost*100):0;
+  var remaining    = Math.max(0, 125000 - booked);
+  var canHarvest   = Math.min(remaining, totalGain);
+  var taxSaved     = Math.round(canHarvest * 0.125); // 12.5% LTCG rate
+
+  var res = document.getElementById('m11LTCGResult');
+  res.style.display='block';
+  res.innerHTML=
+    '<div class="m11-result-grid">'+
+      '<div class="m11-result-box"><div class="m11-result-val" style="color:#059669">'+fmtM11(totalGain)+'</div><div class="m11-result-lbl">Unrealised LTCG</div></div>'+
+      '<div class="m11-result-box"><div class="m11-result-val" style="color:#D97706">'+gainPct+'%</div><div class="m11-result-lbl">Gain Percentage</div></div>'+
+      '<div class="m11-result-box"><div class="m11-result-val" style="color:#1E3A8A">'+fmtM11(canHarvest)+'</div><div class="m11-result-lbl">Harvestable Now</div></div>'+
+      '<div class="m11-result-box"><div class="m11-result-val" style="color:#059669">'+fmtM11(taxSaved)+'</div><div class="m11-result-lbl">Tax Saved (12.5%)</div></div>'+
+    '</div>'+
+    (canHarvest>0?
+      '<div class="m11-harvest-card">'+
+        '<div class="m11-harvest-title">📋 Your Harvesting Plan</div>'+
+        '<div class="m11-harvest-row"><span>Book LTCG before 31 March</span><span style="color:#059669;font-weight:700">'+fmtM11(canHarvest)+'</span></div>'+
+        '<div class="m11-harvest-row"><span>Exempt under Sec 112A</span><span style="color:#059669;font-weight:700">₹1.25L limit</span></div>'+
+        '<div class="m11-harvest-row"><span>Tax saved at 12.5%</span><span style="color:#059669;font-weight:700">'+fmtM11(taxSaved)+'</span></div>'+
+        '<div class="m11-harvest-row"><span>Rebuy same fund same day</span><span style="color:#374151;font-weight:700">Reset cost basis</span></div>'+
+      '</div>':
+      '<div class="m11-alert m11-alert-green"><div class="m11-alert-icon">✅</div><div class="m11-alert-text"><strong>No harvesting needed.</strong> '+(booked>=125000?'You have already harvested the full ₹1.25L limit this year.':'Your unrealised gains are below the ₹1.25L threshold — no tax due on these gains if sold.')+'</div></div>')+
+    '<div class="m11-insight">Keep equity investments for at least 12 months before harvesting. STCG (under 12 months) is taxed at 20% — not eligible for this strategy.</div>';
+}
+
+// ── HRA CALC ──
+function m11CalcHRA(){
+  var basic    = m11GetVal('hraBasic');
+  var received = m11GetVal('hraReceived');
+  var rent     = m11GetVal('hraRent');
+  var city     = document.getElementById('hraCity').value;
+  if(!basic||!received||!rent)return;
+
+  var cityPct  = city==='metro'?0.5:0.4;
+  var option1  = received;
+  var option2  = Math.max(0, rent - basic*0.1);
+  var option3  = basic * cityPct;
+  var exempt   = Math.min(option1, option2, option3);
+  var taxable  = received - exempt;
+
+  document.getElementById('m11HRAResult').style.display='block';
+  document.getElementById('m11HRAResult').innerHTML=
+    '<div class="m11-result-grid">'+
+      '<div class="m11-result-box"><div class="m11-result-val" style="color:#059669">'+fmtM11(exempt)+'</div><div class="m11-result-lbl">HRA Exempt</div></div>'+
+      '<div class="m11-result-box"><div class="m11-result-val" style="color:#DC2626">'+fmtM11(taxable)+'</div><div class="m11-result-lbl">HRA Taxable</div></div>'+
+    '</div>'+
+    '<div class="m11-card" style="background:#F9FAFB;padding:12px;margin-top:0">'+
+      '<div class="m11-harvest-row"><span>Option 1 — HRA received</span><span>'+fmtM11(option1)+'</span></div>'+
+      '<div class="m11-harvest-row"><span>Option 2 — Rent minus 10% Basic</span><span>'+fmtM11(option2)+'</span></div>'+
+      '<div class="m11-harvest-row"><span>Option 3 — '+Math.round(cityPct*100)+'% of Basic</span><span>'+fmtM11(option3)+'</span></div>'+
+      '<div class="m11-harvest-row" style="background:#ECFDF5;border-radius:6px;padding:6px 4px"><span style="color:#059669;font-weight:800">Exemption (minimum)</span><span style="color:#059669;font-weight:800">'+fmtM11(exempt)+'</span></div>'+
+    '</div>'+
+    '<div class="m11-insight">HRA exemption of '+fmtM11(exempt)+' reduces your taxable income. This is only valid under the old tax regime. Ensure you have rent receipts and landlord PAN if rent exceeds ₹1L/year.</div>';
+}
+
+// ── TABS ──
+function m11ShowTab(tab,el){
+  ['deductions','slab','ltcg','hra','regime'].forEach(function(t){
+    var e=document.getElementById('m11tab-'+t);if(e)e.style.display='none';
+  });
+  document.querySelectorAll('.m11-tab').forEach(function(t){t.classList.remove('act');});
+  document.getElementById('m11tab-'+tab).style.display='block';
+  if(el)el.classList.add('act');
+  if(tab==='slab')m11RenderSlabs();
+  if(tab==='regime'){
+    var inc=m11GetVal('t11Income');
+    if(inc)m11Calc();
+  }
+}
+
+// ── MODULE SWITCHER ──
+function switchToM11(){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.classList.remove('act');
+  });
+  document.getElementById('mod11').classList.add('act');
+  window.scrollTo(0,0);
 }
 </script>
 </body>
