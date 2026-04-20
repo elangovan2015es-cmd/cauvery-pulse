@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Cauvery Pulse | v3.6 | Build: 20260418-0315 | Elango Industries Limited -->
+<!-- Cauvery Pulse | v4.0 | Build: 20260418-0330 | Elango Industries Limited -->
 <title>Cauvery Pulse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
@@ -419,7 +419,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   box-sizing:border-box;
 }
 
-/* ── GLOBAL INPUT STYLES v3.6 ── */
+/* ── GLOBAL INPUT STYLES v4.0 ── */
 input[type=number], input[type=text], input[type=email], select, textarea {
   background:#fff !important;
   border:1.5px solid #E5E7EB !important;
@@ -442,7 +442,7 @@ input[type=number]:focus, input[type=text]:focus, select:focus, textarea:focus {
 }
 select { appearance:none; cursor:pointer; }
 
-/* ── GLOBAL FONT STYLES v3.6 ── */
+/* ── GLOBAL FONT STYLES v4.0 ── */
 .m3-card, .m4-card, .m5-card, .m6-card, .m7-card {
   font-size:14px;
   font-weight:500;
@@ -491,7 +491,7 @@ select { appearance:none; cursor:pointer; }
 /* Section headers */
 h1,h2,h3 { font-weight:700; }
 
-/* ── NAV v3.6 ── */
+/* ── NAV v4.0 ── */
 .nb.act { color:#059669 !important; }
 .nb span:last-child { font-weight:700 !important; font-size:9px !important; }
 .nb span:first-child { font-size:21px !important; }
@@ -561,7 +561,7 @@ strong { color:#111827 }
 <div id="app0">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Life Canvas · M0</div></div></div>
-  <div class="vtag">v3.6</div>
+  <div class="vtag">v4.0</div>
 </header>
 <div class="starfield" id="starfield"></div>
 <div class="aurora"></div>
@@ -1025,7 +1025,7 @@ strong { color:#111827 }
 <div id="app">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Cauvery Pulse Score · M1</div></div></div>
-  <div class="vtag">v3.6</div>
+  <div class="vtag">v4.0</div>
 </header>
 <!-- WELCOME -->
 <div id="welcome" class="screen active">
@@ -1213,7 +1213,7 @@ strong { color:#111827 }
 <div id="app2">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Investment School · M2</div></div></div>
-  <div class="vtag">v3.6</div>
+  <div class="vtag">v4.0</div>
 </header>
 
 <div style="padding:0 20px 80px">
@@ -1638,7 +1638,7 @@ function closeM2Detail(){
 
 // ══ UPDATED MODULE SWITCHER (now includes M2) ══
 function switchToM2(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod2').classList.add('act');
@@ -1646,14 +1646,14 @@ function switchToM2(){
   renderM2();
 }
 function switchToM1(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod1').classList.add('act');
   window.scrollTo(0,0);
 }
 function switchToM0(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod0').classList.add('act');
@@ -2562,7 +2562,7 @@ function toast(msg){
 
 
 
-<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v3.6 ══════ -->
+<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v4.0 ══════ -->
 <div id="mod3" class="mod">
 <style>
 /* ── M3 LIGHT THEME ── */
@@ -2746,7 +2746,7 @@ function toast(msg){
   </div>
   <div style="display:flex;align-items:center;gap:8px">
     <button onclick="openM3Settings()" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:6px 10px;font-size:13px;color:#6B7280;cursor:pointer">⚙️ Rates</button>
-    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.6</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.0</div>
   </div>
 </header>
 
@@ -2781,7 +2781,7 @@ function toast(msg){
 
 <script>
 // ══════════════════════════════════════════════════════
-// M3 PORTFOLIO BLUEPRINT ENGINE v3.6
+// M3 PORTFOLIO BLUEPRINT ENGINE v4.0
 // ══════════════════════════════════════════════════════
 
 // ── COLOURS ──
@@ -3302,7 +3302,7 @@ function saveM3Rates(){
 
 // ── SWITCHERS ──
 function switchToM3(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod3').classList.add('act');
@@ -3424,7 +3424,7 @@ function switchToM3(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Debt Analyser · M4</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.6</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.0</div>
 </header>
 
 <div class="m4w">
@@ -3772,7 +3772,7 @@ function switchToM3(){
 
 <script>
 // ══════════════════════════════════════════════════
-// M4 — DEBT ANALYSER ENGINE v3.6
+// M4 — DEBT ANALYSER ENGINE v4.0
 // ══════════════════════════════════════════════════
 
 // ── HELPERS ──
@@ -4203,7 +4203,7 @@ function calcInflation(){
 
 // ── MODULE SWITCHER ──
 function switchToM4(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod4').classList.add('act');
@@ -4463,7 +4463,7 @@ function m5LoadProfile(){
 
 // ── MODULE SWITCHER ──
 function switchToM5(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod5').classList.add('act');
@@ -4581,7 +4581,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Monthly P&L · M6</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.6</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.0</div>
 </header>
 
 <div class="m6w">
@@ -4731,7 +4731,7 @@ function switchToM5(){
 
 <script>
 // ══════════════════════════════════════════
-// M6 — MONTHLY P&L ENGINE v3.6
+// M6 — MONTHLY P&L ENGINE v4.0
 // ══════════════════════════════════════════
 
 function fmtM6(n){
@@ -5073,7 +5073,7 @@ function m6ShowTab(tab,el){
 
 // ── MODULE SWITCHER ──
 function switchToM6(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod6').classList.add('act');
@@ -5175,7 +5175,7 @@ function switchToM6(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Goal Planner · M5</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.6</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.0</div>
 </header>
 
 <div class="m5w">
@@ -5360,7 +5360,7 @@ function switchToM6(){
 
 <script>
 // ══════════════════════════════════════════
-// M5 — GOAL PLANNER ENGINE v3.6
+// M5 — GOAL PLANNER ENGINE v4.0
 // ══════════════════════════════════════════
 
 function fmtM5(n){
@@ -5731,7 +5731,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Protection Check · M7</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v3.6</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.0</div>
 </header>
 
 <div class="m7w">
@@ -5970,7 +5970,7 @@ function switchToM5(){
 
 <script>
 // ══════════════════════════════════════════
-// M7 — PROTECTION CHECK ENGINE v3.6
+// M7 — PROTECTION CHECK ENGINE v4.0
 // ══════════════════════════════════════════
 
 function fmtM7(n){
@@ -6209,7 +6209,7 @@ function m7ShowTab(tab, el){
 
 // ── MODULE SWITCHER ──
 function switchToM7(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod7').classList.add('act');
@@ -6303,7 +6303,7 @@ function switchToM7(){
       <div class="bsub" style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px">Score Report · M8</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v3.6</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v4.0</div>
 </header>
 
 <div class="m8w">
@@ -6403,7 +6403,7 @@ function switchToM7(){
     <div id="m8WisdomList"></div>
   </div>
 
-  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v3.6<br>Your financial data stays on your device only.</div>
+  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v4.0<br>Your financial data stays on your device only.</div>
 </div>
 </div><!-- #app8 -->
 
@@ -6420,7 +6420,7 @@ function switchToM7(){
 
 <script>
 // ══════════════════════════════════════════
-// M8 — SCORE REPORT + DON'T DO LIST v3.6
+// M8 — SCORE REPORT + DON'T DO LIST v4.0
 // ══════════════════════════════════════════
 
 var M8_DONT_LIST = [
@@ -6712,8 +6712,8 @@ function m8ShowTab(tab, el){
 
 // ── MODULE SWITCHER ──
 function switchToM8(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8'].forEach(function(id){
-    var el=document.getElementById(id); if(el) el.classList.remove('act');
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'].forEach(function(id){
+    var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod8').classList.add('act');
   window.scrollTo(0,0);
@@ -6723,7 +6723,7 @@ function switchToM8(){
 // Nav handled by single master init below
 </script>
 <script>
-// ══ CAUVERY PULSE — MASTER NAV v3.6 — ALL MODULES ══
+// ══ CAUVERY PULSE — MASTER NAV v4.0 — ALL MODULES ══
 (function(){
   var NAV = [
     ['switchToM0', '🎨', 'Canvas'],
@@ -6734,11 +6734,12 @@ function switchToM8(){
     ['switchToM6', '📊', 'P&L'],
     ['switchToM7', '🛡️', 'Protect'],
     ['switchToM8', '📋', 'Report'],
+    ['switchToM9', '💎', 'Worth'],
   ];
   var COLORS = {
     switchToM0:'#059669', switchToM1:'#9b72cf', switchToM2:'#2ec4b6',
     switchToM3:'#D97706', switchToM4:'#DC2626', switchToM5:'#7C3AED',
-    switchToM6:'#059669', switchToM7:'#DC2626', switchToM8:'#059669'
+    switchToM6:'#059669', switchToM7:'#DC2626', switchToM8:'#059669', switchToM9:'#059669'
   };
   function makeNav(activeFn){
     return NAV.map(function(b){
@@ -6754,7 +6755,7 @@ function switchToM8(){
       '#mod2 .bnav':'switchToM2', '#mod3 .bnav':'switchToM3',
       '#mod4 .bnav':'switchToM4', '#mod5 .bnav':'switchToM5',
       '#mod6 .bnav':'switchToM6', '#mod7 .bnav':'switchToM7',
-      '#mod8 .bnav':'switchToM8'
+      '#mod8 .bnav':'switchToM8', '#mod9 .bnav':'switchToM9'
     };
     Object.keys(modNavMap).forEach(function(sel){
       var el = document.querySelector(sel);
@@ -6767,6 +6768,500 @@ function switchToM8(){
     initNavs();
   }
 })();
+</script>
+
+
+
+<!-- ══════ MODULE 9: NET WORTH TRACKER ══════ -->
+<div id="mod9" class="mod">
+<style>
+#mod9{background:#F5F6FA;min-height:100vh}
+#mod9 header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+
+.m9w{padding:0 16px 80px;max-width:480px;margin:0 auto}
+.m9-card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.m9-card-title{font-size:11px;letter-spacing:1.4px;text-transform:uppercase;color:#6B7280;margin-bottom:12px;font-weight:800}
+.m9-label{font-size:14px;color:#111827;margin-bottom:6px;font-weight:700}
+.m9-input{width:100%;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;padding:11px 14px;font-size:15px;font-weight:600;color:#111827;font-family:'DM Mono','DM Sans',sans-serif;margin-bottom:10px;box-sizing:border-box;transition:border-color .2s}
+.m9-input:focus{outline:none;border-color:#059669;box-shadow:0 0 0 3px rgba(5,150,105,.1);background:#FAFFFE}
+
+/* Net worth hero */
+.m9-hero{text-align:center;padding:20px 0 16px}
+.m9-nw-val{font-family:'DM Mono',monospace;font-size:36px;font-weight:700;margin-bottom:4px}
+.m9-nw-lbl{font-size:12px;color:#6B7280;text-transform:uppercase;letter-spacing:.8px;font-weight:600}
+.m9-nw-change{font-size:14px;font-weight:700;margin-top:6px}
+
+/* Asset/Liability rows */
+.m9-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.m9-row-icon{font-size:20px;width:28px;text-align:center;flex-shrink:0}
+.m9-row-label{font-size:13px;font-weight:600;color:#374151;flex:1}
+.m9-row-input{background:#F9FAFB;border:1.5px solid #E5E7EB;border-radius:10px;padding:9px 12px;font-size:14px;font-weight:600;color:#111827;font-family:'DM Mono',monospace;width:130px;text-align:right;box-sizing:border-box;transition:border-color .2s}
+.m9-row-input:focus{outline:none;border-color:#059669;background:#FAFFFE}
+
+.m9-section-total{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-top:2px solid #F3F4F6;margin-top:6px}
+.m9-section-total-label{font-size:14px;font-weight:700;color:#111827}
+.m9-section-total-val{font-family:'DM Mono',monospace;font-size:18px;font-weight:700}
+
+/* Gauge bar */
+.m9-gauge{margin:14px 0}
+.m9-gauge-track{width:100%;background:#F3F4F6;border-radius:8px;height:14px;overflow:hidden;position:relative}
+.m9-gauge-assets{height:14px;border-radius:8px 0 0 8px;background:linear-gradient(90deg,#059669,#34D399);transition:width .6s}
+.m9-gauge-liab{height:14px;background:linear-gradient(90deg,#FCA5A5,#DC2626);transition:width .6s}
+.m9-gauge-labels{display:flex;justify-content:space-between;font-size:11px;font-weight:600;color:#6B7280;margin-top:6px}
+
+/* Tabs */
+.m9-tabs{display:flex;gap:6px;margin-bottom:16px}
+.m9-tab{flex:1;padding:9px 6px;background:#fff;border:1.5px solid #E5E7EB;border-radius:20px;font-size:12px;font-weight:700;color:#6B7280;cursor:pointer;text-align:center;transition:all .2s}
+.m9-tab.act{background:#ECFDF5;border-color:#A7F3D0;color:#059669}
+
+/* History chart bars */
+.m9-history-bar-row{display:flex;align-items:flex-end;gap:6px;height:100px;margin-bottom:8px}
+.m9-bar-group{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px}
+.m9-bar{border-radius:4px 4px 0 0;width:100%;transition:height .4s;min-height:4px}
+.m9-bar-lbl{font-size:9px;color:#6B7280;font-weight:600;white-space:nowrap}
+.m9-bar-val{font-size:9px;font-family:'DM Mono',monospace;font-weight:700;color:#059669}
+
+/* Insight */
+.m9-insight{font-size:13px;color:#374151;line-height:1.85;padding:12px 14px;background:#ECFDF5;border-radius:10px;border-left:3px solid #059669;margin-top:10px;font-weight:500}
+
+/* Category breakdown */
+.m9-cat-row{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid #F3F4F6}
+.m9-cat-row:last-child{border:none}
+.m9-cat-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+.m9-cat-label{font-size:13px;font-weight:600;color:#374151;flex:1}
+.m9-cat-val{font-family:'DM Mono',monospace;font-size:13px;font-weight:700;color:#111827}
+.m9-cat-pct{font-size:11px;color:#9CA3AF;width:35px;text-align:right}
+
+/* Milestones */
+.m9-milestone-row{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:12px;margin-bottom:6px}
+.m9-milestone-amt{font-family:'DM Mono',monospace;font-size:15px;font-weight:700;width:80px;flex-shrink:0}
+.m9-milestone-label{font-size:13px;font-weight:600;color:#374151;flex:1}
+.m9-milestone-status{font-size:12px;font-weight:700}
+</style>
+
+<div id="app9">
+<header>
+  <div class="brand">
+    <div class="blogo" style="background:linear-gradient(135deg,#059669,#0891B2)">🌊</div>
+    <div>
+      <div class="bname" style="color:#111827;font-size:17px;font-weight:700">Cauvery Pulse</div>
+      <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Net Worth · M9</div>
+    </div>
+  </div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.0</div>
+</header>
+
+<div class="m9w">
+
+  <!-- Hero -->
+  <div class="m9-hero">
+    <div style="font-size:11px;color:#6B7280;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px" id="m9MonthLabel">April 2026</div>
+    <div class="m9-nw-val" id="m9NetWorthVal" style="color:#059669">₹0</div>
+    <div class="m9-nw-lbl">Your Net Worth</div>
+    <div class="m9-nw-change" id="m9Change" style="display:none"></div>
+  </div>
+
+  <!-- Tabs -->
+  <div class="m9-tabs">
+    <div class="m9-tab act" onclick="m9ShowTab('entry',this)">✏️ Update</div>
+    <div class="m9-tab" onclick="m9ShowTab('snapshot',this)">📊 Snapshot</div>
+    <div class="m9-tab" onclick="m9ShowTab('history',this)">📈 History</div>
+    <div class="m9-tab" onclick="m9ShowTab('goals',this)">🏆 Milestones</div>
+  </div>
+
+  <!-- ── TAB 1: ENTRY ── -->
+  <div id="m9tab-entry">
+
+    <!-- ASSETS -->
+    <div class="m9-card">
+      <div class="m9-card-title" style="color:#059669">💚 Your Assets</div>
+
+      <div style="font-size:12px;color:#6B7280;font-weight:600;margin-bottom:10px;text-transform:uppercase;letter-spacing:.6px">Liquid Assets</div>
+      <div class="m9-row"><div class="m9-row-icon">🏦</div><div class="m9-row-label">Bank Savings + Current</div><input class="m9-row-input" type="number" id="a_bank" placeholder="0" oninput="m9Calc()"></div>
+      <div class="m9-row"><div class="m9-row-icon">💵</div><div class="m9-row-label">Cash in Hand</div><input class="m9-row-input" type="number" id="a_cash" placeholder="0" oninput="m9Calc()"></div>
+      <div class="m9-row"><div class="m9-row-icon">📋</div><div class="m9-row-label">Fixed Deposits</div><input class="m9-row-input" type="number" id="a_fd" placeholder="0" oninput="m9Calc()"></div>
+      <div class="m9-row"><div class="m9-row-icon">💧</div><div class="m9-row-label">Liquid / Debt MF</div><input class="m9-row-input" type="number" id="a_liquid" placeholder="0" oninput="m9Calc()"></div>
+
+      <div style="font-size:12px;color:#6B7280;font-weight:600;margin:12px 0 10px;text-transform:uppercase;letter-spacing:.6px">Investments</div>
+      <div class="m9-row"><div class="m9-row-icon">📈</div><div class="m9-row-label">Mutual Funds (Equity)</div><input class="m9-row-input" type="number" id="a_mf" placeholder="0" oninput="m9Calc()"></div>
+      <div class="m9-row"><div class="m9-row-icon">📊</div><div class="m9-row-label">Direct Stocks / Demat</div><input class="m9-row-input" type="number" id="a_stocks" placeholder="0" oninput="m9Calc()"></div>
+      <div class="m9-row"><div class="m9-row-icon">🏛️</div><div class="m9-row-label">EPF / VPF Balance</div><input class="m9-row-input" type="number" id="a_epf" placeholder="0" oninput="m9Calc()"></div>
+      <div class="m9-row"><div class="m9-row-icon">🎯</div><div class="m9-row-label">NPS Balance</div><input class="m9-row-input" type="number" id="a_nps" placeholder="0" oninput="m9Calc()"></div>
+      <div class="m9-row"><div class="m9-row-icon">📦</div><div class="m9-row-label">PPF Balance</div><input class="m9-row-input" type="number" id="a_ppf" placeholder="0" oninput="m9Calc()"></div>
+
+      <div style="font-size:12px;color:#6B7280;font-weight:600;margin:12px 0 10px;text-transform:uppercase;letter-spacing:.6px">Physical Assets</div>
+      <div class="m9-row"><div class="m9-row-icon">🏠</div><div class="m9-row-label">Property (Market Value)</div><input class="m9-row-input" type="number" id="a_property" placeholder="0" oninput="m9Calc()"></div>
+      <div class="m9-row"><div class="m9-row-icon">🚗</div><div class="m9-row-label">Vehicle (Current Value)</div><input class="m9-row-input" type="number" id="a_vehicle" placeholder="0" oninput="m9Calc()"></div>
+      <div class="m9-row"><div class="m9-row-icon">🥇</div><div class="m9-row-label">Gold / Jewellery</div><input class="m9-row-input" type="number" id="a_gold" placeholder="0" oninput="m9Calc()"></div>
+      <div class="m9-row"><div class="m9-row-icon">💎</div><div class="m9-row-label">Other Assets</div><input class="m9-row-input" type="number" id="a_other" placeholder="0" oninput="m9Calc()"></div>
+
+      <div class="m9-section-total">
+        <div class="m9-section-total-label">Total Assets</div>
+        <div class="m9-section-total-val" id="m9TotalAssets" style="color:#059669">₹0</div>
+      </div>
+    </div>
+
+    <!-- LIABILITIES -->
+    <div class="m9-card">
+      <div class="m9-card-title" style="color:#DC2626">❤️‍🔥 Your Liabilities</div>
+
+      <div class="m9-row"><div class="m9-row-icon">🏠</div><div class="m9-row-label">Home Loan Outstanding</div><input class="m9-row-input" type="number" id="l_homeloan" placeholder="0" oninput="m9Calc()"></div>
+      <div class="m9-row"><div class="m9-row-icon">🚗</div><div class="m9-row-label">Car Loan Outstanding</div><input class="m9-row-input" type="number" id="l_carloan" placeholder="0" oninput="m9Calc()"></div>
+      <div class="m9-row"><div class="m9-row-icon">💼</div><div class="m9-row-label">Personal Loan</div><input class="m9-row-input" type="number" id="l_personal" placeholder="0" oninput="m9Calc()"></div>
+      <div class="m9-row"><div class="m9-row-icon">💳</div><div class="m9-row-label">Credit Card Dues</div><input class="m9-row-input" type="number" id="l_cc" placeholder="0" oninput="m9Calc()"></div>
+      <div class="m9-row"><div class="m9-row-icon">🎓</div><div class="m9-row-label">Education Loan</div><input class="m9-row-input" type="number" id="l_edu" placeholder="0" oninput="m9Calc()"></div>
+      <div class="m9-row"><div class="m9-row-icon">📋</div><div class="m9-row-label">Other Loans</div><input class="m9-row-input" type="number" id="l_other" placeholder="0" oninput="m9Calc()"></div>
+
+      <div class="m9-section-total">
+        <div class="m9-section-total-label">Total Liabilities</div>
+        <div class="m9-section-total-val" id="m9TotalLiab" style="color:#DC2626">₹0</div>
+      </div>
+    </div>
+
+    <!-- Quick result -->
+    <div id="m9QuickResult" style="display:none"></div>
+
+    <button onclick="m9SaveSnapshot()" style="width:100%;padding:14px;background:linear-gradient(135deg,#059669,#047857);color:#fff;font-weight:700;border:none;border-radius:12px;cursor:pointer;font-size:15px;margin-bottom:14px">💾 Save This Month's Net Worth</button>
+
+  </div>
+
+  <!-- ── TAB 2: SNAPSHOT ── -->
+  <div id="m9tab-snapshot" style="display:none">
+    <div id="m9SnapshotContent">
+      <div style="text-align:center;padding:40px;color:#9CA3AF;font-size:13px">Enter your assets and liabilities in the Update tab first.</div>
+    </div>
+  </div>
+
+  <!-- ── TAB 3: HISTORY ── -->
+  <div id="m9tab-history" style="display:none">
+    <div class="m9-card">
+      <div class="m9-card-title">📈 Net Worth History</div>
+      <div id="m9HistoryContent">
+        <div style="text-align:center;padding:30px;color:#9CA3AF;font-size:13px">Save a few months to see your growth chart.</div>
+      </div>
+    </div>
+    <div class="m9-card" id="m9TrendCard" style="display:none">
+      <div class="m9-card-title">📊 Growth Analysis</div>
+      <div id="m9TrendContent"></div>
+    </div>
+  </div>
+
+  <!-- ── TAB 4: MILESTONES ── -->
+  <div id="m9tab-goals" style="display:none">
+    <div class="m9-card">
+      <div class="m9-card-title">🏆 Net Worth Milestones</div>
+      <div style="font-size:13px;color:#6B7280;line-height:1.7;margin-bottom:14px">Every milestone crossed is a compounding inflection point. Track your journey from ₹0 to ₹10 Crore.</div>
+      <div id="m9MilestoneList"></div>
+    </div>
+    <div class="m9-card">
+      <div class="m9-card-title">📖 The Net Worth Mindset</div>
+      <div style="font-size:13px;color:#374151;line-height:1.9">
+        <div style="margin-bottom:10px"><strong style="color:#059669">Track monthly, not daily.</strong> Net worth is a long game. Checking daily causes anxiety. Checking monthly builds discipline and reveals real trends.</div>
+        <div style="margin-bottom:10px"><strong style="color:#059669">Assets − Liabilities = Freedom.</strong> The only financial number that matters long term. Income is a flow. Net worth is the stock. Wealth is built when net worth grows faster than lifestyle.</div>
+        <div style="margin-bottom:10px"><strong style="color:#059669">Two ways to grow net worth:</strong> Increase assets (invest more) or decrease liabilities (repay debt). Both work. The fastest growth comes from doing both simultaneously.</div>
+        <div><strong style="color:#059669">Net worth doubles at predictable rates.</strong> At 12% annual growth, net worth doubles every 6 years. At 15%, every 5 years. The Rule of 72 applies to your entire balance sheet.</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:14px;font-size:11px;color:#9CA3AF;letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse · M9</div>
+</div>
+</div><!-- #app9 -->
+
+<div class="bnav" style="background:#fff;border-top:1.5px solid #E5E7EB">
+  <button class="nb" onclick="switchToM0()"><span>🎨</span><span>Canvas</span></button>
+  <button class="nb" onclick="switchToM5()"><span>🎯</span><span>Goals</span></button>
+  <button class="nb" onclick="switchToM6()"><span>📊</span><span>P&amp;L</span></button>
+  <button class="nb" onclick="switchToM9()"><span>💎</span><span>Worth</span></button>
+  <button class="nb" onclick="switchToM8()"><span>📋</span><span>Report</span></button>
+</div>
+<div class="toast" id="toast9"></div>
+</div><!-- #mod9 -->
+
+<script>
+// ══════════════════════════════════════════
+// M9 — NET WORTH TRACKER v4.0
+// ══════════════════════════════════════════
+
+var MONTHS9=['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+function fmtM9(n){
+  var neg=n<0; n=Math.abs(n);
+  var s=n>=10000000?'₹'+(n/10000000).toFixed(2)+' Cr':n>=100000?'₹'+(n/100000).toFixed(2)+' L':n>=1000?'₹'+(n/1000).toFixed(1)+' K':'₹'+Math.round(n);
+  return neg?('-'+s):s;
+}
+
+function m9Toast(msg){
+  var t=document.getElementById('toast9');
+  if(t){t.textContent=msg;t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2400);}
+}
+
+// Asset and liability field IDs
+var M9_ASSETS=['a_bank','a_cash','a_fd','a_liquid','a_mf','a_stocks','a_epf','a_nps','a_ppf','a_property','a_vehicle','a_gold','a_other'];
+var M9_LIABS=['l_homeloan','l_carloan','l_personal','l_cc','l_edu','l_other'];
+
+function m9GetVal(id){return parseFloat(document.getElementById(id)&&document.getElementById(id).value)||0;}
+function m9GetSection(ids){return ids.reduce(function(s,id){return s+m9GetVal(id);},0);}
+
+// Current month
+var m9Year=new Date().getFullYear();
+var m9Month=new Date().getMonth();
+function m9MonthKey(){return m9Year+'-'+String(m9Month+1).padStart(2,'0');}
+function m9MonthLabel(){return MONTHS9[m9Month]+' '+m9Year;}
+
+// ── CALCULATE ──
+function m9Calc(){
+  var assets=m9GetSection(M9_ASSETS);
+  var liabs=m9GetSection(M9_LIABS);
+  var nw=assets-liabs;
+  var nwColor=nw>=0?'#059669':'#DC2626';
+
+  document.getElementById('m9TotalAssets').textContent=fmtM9(assets);
+  document.getElementById('m9TotalLiab').textContent=fmtM9(liabs);
+  document.getElementById('m9NetWorthVal').textContent=fmtM9(nw);
+  document.getElementById('m9NetWorthVal').style.color=nwColor;
+
+  // Quick result
+  var qr=document.getElementById('m9QuickResult');
+  if(assets>0){
+    var daRatio=assets>0?Math.round(liabs/assets*100):0;
+    var daColor=daRatio<30?'#059669':daRatio<60?'#D97706':'#DC2626';
+    qr.style.display='block';
+    qr.innerHTML='<div class="m9-card" style="padding:14px">'+
+      '<div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;text-align:center">'+
+        '<div><div style="font-family:\'DM Mono\',monospace;font-size:16px;font-weight:700;color:#059669">'+fmtM9(assets)+'</div><div style="font-size:10px;color:#6B7280;font-weight:600;text-transform:uppercase">Assets</div></div>'+
+        '<div><div style="font-family:\'DM Mono\',monospace;font-size:16px;font-weight:700;color:#DC2626">'+fmtM9(liabs)+'</div><div style="font-size:10px;color:#6B7280;font-weight:600;text-transform:uppercase">Liabilities</div></div>'+
+        '<div><div style="font-family:\'DM Mono\',monospace;font-size:16px;font-weight:700;color:'+daColor+'">'+daRatio+'%</div><div style="font-size:10px;color:#6B7280;font-weight:600;text-transform:uppercase">Debt Ratio</div></div>'+
+      '</div>'+
+      '<div class="m9-gauge" style="margin-top:12px">'+
+        '<div class="m9-gauge-track">'+
+          '<div style="display:flex;height:14px;border-radius:8px;overflow:hidden">'+
+            '<div style="flex:'+assets+';background:linear-gradient(90deg,#059669,#34D399)"></div>'+
+            '<div style="flex:'+liabs+';background:linear-gradient(90deg,#FCA5A5,#DC2626)"></div>'+
+          '</div>'+
+        '</div>'+
+        '<div class="m9-gauge-labels"><span style="color:#059669">Assets '+fmtM9(assets)+'</span><span style="color:#DC2626">Liabilities '+fmtM9(liabs)+'</span></div>'+
+      '</div>'+
+    '</div>';
+  }
+}
+
+// ── SNAPSHOT TAB ──
+function m9RenderSnapshot(){
+  var assets=m9GetSection(M9_ASSETS);
+  var liabs=m9GetSection(M9_LIABS);
+  var nw=assets-liabs;
+  if(!assets){
+    document.getElementById('m9SnapshotContent').innerHTML='<div style="text-align:center;padding:40px;color:#9CA3AF;font-size:13px">Enter your assets and liabilities in the Update tab first.</div>';
+    return;
+  }
+
+  // Asset breakdown
+  var cats=[
+    {label:'Liquid (Bank+FD+Cash)',color:'#059669',val:m9GetVal('a_bank')+m9GetVal('a_cash')+m9GetVal('a_fd')+m9GetVal('a_liquid')},
+    {label:'Equity (MF+Stocks)',   color:'#2563EB',val:m9GetVal('a_mf')+m9GetVal('a_stocks')},
+    {label:'Retirement (EPF+NPS+PPF)',color:'#7C3AED',val:m9GetVal('a_epf')+m9GetVal('a_nps')+m9GetVal('a_ppf')},
+    {label:'Property',             color:'#D97706',val:m9GetVal('a_property')},
+    {label:'Gold & Others',        color:'#F59E0B',val:m9GetVal('a_gold')+m9GetVal('a_vehicle')+m9GetVal('a_other')},
+  ].filter(function(c){return c.val>0;});
+
+  var catsHTML=cats.map(function(cat){
+    var pct=assets>0?Math.round(cat.val/assets*100):0;
+    return '<div class="m9-cat-row">'+
+      '<div class="m9-cat-dot" style="background:'+cat.color+'"></div>'+
+      '<div class="m9-cat-label">'+cat.label+'</div>'+
+      '<div class="m9-cat-val">'+fmtM9(cat.val)+'</div>'+
+      '<div class="m9-cat-pct">'+pct+'%</div>'+
+    '</div>';
+  }).join('');
+
+  // Health insight
+  var daRatio=assets>0?liabs/assets*100:0;
+  var insightText,insightClass='m9-insight';
+  if(daRatio===0){
+    insightText='<strong>Debt-free!</strong> Your entire asset base is unencumbered. This is rare and powerful. Focus now on growing assets aggressively.';
+  } else if(daRatio<30){
+    insightText='<strong>Excellent balance sheet health.</strong> Your debt-to-asset ratio is '+Math.round(daRatio)+'% — well within the safe zone. Liabilities are under control.';
+  } else if(daRatio<60){
+    insightText='<strong>Manageable leverage.</strong> Debt-to-asset ratio is '+Math.round(daRatio)+'%. Primary goal: grow assets faster than liabilities. Avoid new consumer debt.';
+  } else {
+    insightText='<strong>High leverage — priority action needed.</strong> '+Math.round(daRatio)+'% of your assets are offset by liabilities. Aggressive debt repayment takes priority over new investments.';
+    insightClass='m9-insight" style="background:#FEF2F2;border-color:#DC2626;color:#991B1B';
+  }
+
+  document.getElementById('m9SnapshotContent').innerHTML=
+    '<div class="m9-card">'+
+      '<div class="m9-card-title">Balance Sheet — '+m9MonthLabel()+'</div>'+
+      '<div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px">'+
+        '<div style="background:#ECFDF5;border:1px solid #A7F3D0;border-radius:12px;padding:14px;text-align:center">'+
+          '<div style="font-family:\'DM Mono\',monospace;font-size:20px;font-weight:700;color:#059669">'+fmtM9(assets)+'</div>'+
+          '<div style="font-size:11px;color:#065F46;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-top:4px">Total Assets</div>'+
+        '</div>'+
+        '<div style="background:#FEF2F2;border:1px solid #FECACA;border-radius:12px;padding:14px;text-align:center">'+
+          '<div style="font-family:\'DM Mono\',monospace;font-size:20px;font-weight:700;color:#DC2626">'+fmtM9(liabs)+'</div>'+
+          '<div style="font-size:11px;color:#991B1B;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-top:4px">Total Liabilities</div>'+
+        '</div>'+
+      '</div>'+
+      '<div style="text-align:center;padding:12px;background:#F0FDF4;border:2px solid '+(nw>=0?'#A7F3D0':'#FECACA')+';border-radius:12px;margin-bottom:14px">'+
+        '<div style="font-size:12px;font-weight:700;color:#6B7280;text-transform:uppercase;letter-spacing:.6px;margin-bottom:4px">Net Worth</div>'+
+        '<div style="font-family:\'DM Mono\',monospace;font-size:28px;font-weight:700;color:'+(nw>=0?'#059669':'#DC2626')+'">'+fmtM9(nw)+'</div>'+
+      '</div>'+
+      '<div class="m9-card-title" style="margin-top:4px">Asset Breakdown</div>'+
+      catsHTML+
+      '<div class="'+insightClass+'">'+insightText+'</div>'+
+    '</div>';
+}
+
+// ── HISTORY TAB ──
+function m9GetHistory(){
+  try{return JSON.parse(localStorage.getItem('cp_networth')||'{}');}
+  catch(e){return {};}
+}
+
+function m9RenderHistory(){
+  var all=m9GetHistory();
+  var keys=Object.keys(all).sort();
+  var hc=document.getElementById('m9HistoryContent');
+  var tc=document.getElementById('m9TrendCard');
+  if(keys.length<2){
+    hc.innerHTML='<div style="text-align:center;padding:30px;color:#9CA3AF;font-size:13px">Save at least 2 months to see your growth chart.</div>';
+    if(tc)tc.style.display='none';
+    return;
+  }
+
+  // Bar chart
+  var maxNW=Math.max.apply(null,keys.map(function(k){return all[k].nw;}));
+  var minNW=Math.min(0,Math.min.apply(null,keys.map(function(k){return all[k].nw;})));
+  var range=maxNW-minNW||1;
+
+  var bars=keys.slice(-6).map(function(k){
+    var d=all[k];
+    var parts=k.split('-');
+    var lbl=MONTHS9[parseInt(parts[1])-1].substring(0,3)+' '+parts[0].substring(2);
+    var hPct=Math.round((d.nw-minNW)/range*80)+10;
+    var color=d.nw>=0?'#059669':'#DC2626';
+    return '<div class="m9-bar-group">'+
+      '<div class="m9-bar-val">'+fmtM9(d.nw)+'</div>'+
+      '<div class="m9-bar" style="height:'+hPct+'px;background:'+color+'"></div>'+
+      '<div class="m9-bar-lbl">'+lbl+'</div>'+
+    '</div>';
+  }).join('');
+
+  hc.innerHTML='<div class="m9-history-bar-row" style="align-items:flex-end;padding:0 4px">'+bars+'</div>'+
+    '<div style="margin-top:12px">'+
+    keys.slice(-6).reverse().map(function(k){
+      var d=all[k];
+      var parts=k.split('-');
+      var lbl=MONTHS9[parseInt(parts[1])-1]+' '+parts[0];
+      return '<div style="display:flex;justify-content:space-between;align-items:center;padding:8px 0;border-bottom:1px solid #F3F4F6;font-size:13px">'+
+        '<span style="font-weight:600;color:#374151">'+lbl+'</span>'+
+        '<div style="text-align:right">'+
+          '<div style="font-family:\'DM Mono\',monospace;font-weight:700;color:'+(d.nw>=0?'#059669':'#DC2626')+'">'+fmtM9(d.nw)+'</div>'+
+          '<div style="font-size:10px;color:#9CA3AF">Assets '+fmtM9(d.assets)+' · Liab '+fmtM9(d.liabs)+'</div>'+
+        '</div>'+
+      '</div>';
+    }).join('')+
+    '</div>';
+
+  if(tc&&keys.length>=2){
+    tc.style.display='block';
+    var latest=all[keys[keys.length-1]];
+    var prev=all[keys[keys.length-2]];
+    var growth=latest.nw-prev.nw;
+    var growthPct=prev.nw>0?Math.round(growth/prev.nw*100):0;
+    var annualised=Math.round(growthPct*12);
+    document.getElementById('m9TrendContent').innerHTML=
+      '<div style="font-size:13px;color:#374151;line-height:1.85;font-weight:500">'+
+        'Month-on-month change: <strong style="color:'+(growth>=0?'#059669':'#DC2626')+'">'+(growth>=0?'+':'')+fmtM9(growth)+'</strong> ('+growthPct+'%)<br>'+
+        'Annualised trajectory: <strong>'+annualised+'% per year</strong><br>'+
+        (annualised>=12?'<span style="color:#059669">📈 On track — wealth compounding at a healthy rate.</span>':
+         annualised>=0?'<span style="color:#D97706">➡️ Growing but slowly. Increase investment rate or reduce debt.</span>':
+         '<span style="color:#DC2626">📉 Net worth declining. Review liabilities and spending immediately.</span>')+
+      '</div>';
+  }
+}
+
+// ── MILESTONES TAB ──
+function m9RenderMilestones(){
+  var all=m9GetHistory();
+  var keys=Object.keys(all).sort();
+  var currentNW=keys.length>0?all[keys[keys.length-1]].nw:m9GetSection(M9_ASSETS)-m9GetSection(M9_LIABS);
+
+  var milestones=[
+    {amt:100000,    label:'₹1 Lakh — The First Step'},
+    {amt:500000,    label:'₹5 Lakh — Getting Serious'},
+    {amt:1000000,   label:'₹10 Lakh — First Major Milestone'},
+    {amt:2500000,   label:'₹25 Lakh — One Quarter Crore'},
+    {amt:5000000,   label:'₹50 Lakh — Half Crore Club'},
+    {amt:10000000,  label:'₹1 Crore — The Crore Club'},
+    {amt:25000000,  label:'₹2.5 Crore — Financial Independence Zone'},
+    {amt:50000000,  label:'₹5 Crore — Wealth Builder'},
+    {amt:100000000, label:'₹10 Crore — Financial Freedom'},
+  ];
+
+  var el=document.getElementById('m9MilestoneList');
+  el.innerHTML=milestones.map(function(m){
+    var done=currentNW>=m.amt;
+    var near=!done&&currentNW>=m.amt*0.8;
+    var bg=done?'#ECFDF5':near?'#FFFBEB':'#F9FAFB';
+    var border=done?'#A7F3D0':near?'#FCD34D':'#E5E7EB';
+    var icon=done?'✅':near?'🔥':'⭕';
+    var color=done?'#059669':near?'#D97706':'#9CA3AF';
+    return '<div class="m9-milestone-row" style="background:'+bg+';border:1px solid '+border+'">'+
+      '<div style="font-size:20px">'+icon+'</div>'+
+      '<div style="flex:1">'+
+        '<div style="font-size:13px;font-weight:700;color:#111827">'+m.label+'</div>'+
+        (near?'<div style="font-size:11px;color:#D97706;margin-top:2px">'+Math.round((m.amt-currentNW)/100000)+'L more to go 🔥</div>':'')+
+      '</div>'+
+      '<div style="font-family:\'DM Mono\',monospace;font-size:12px;font-weight:700;color:'+color+'">'+(done?'REACHED':'—')+'</div>'+
+    '</div>';
+  }).join('');
+}
+
+// ── SAVE ──
+function m9SaveSnapshot(){
+  var assets=m9GetSection(M9_ASSETS);
+  var liabs=m9GetSection(M9_LIABS);
+  if(!assets){m9Toast('Enter at least one asset ☝️');return;}
+  var all=m9GetHistory();
+  all[m9MonthKey()]={
+    assets:assets, liabs:liabs, nw:assets-liabs,
+    breakdown:{
+      liquid:m9GetVal('a_bank')+m9GetVal('a_cash')+m9GetVal('a_fd')+m9GetVal('a_liquid'),
+      equity:m9GetVal('a_mf')+m9GetVal('a_stocks'),
+      retirement:m9GetVal('a_epf')+m9GetVal('a_nps')+m9GetVal('a_ppf'),
+      property:m9GetVal('a_property'),
+      gold:m9GetVal('a_gold'),
+    },
+    savedAt:Date.now()
+  };
+  localStorage.setItem('cp_networth',JSON.stringify(all));
+  m9Toast(m9MonthLabel()+' net worth saved ✓');
+}
+
+// ── TABS ──
+function m9ShowTab(tab,el){
+  ['entry','snapshot','history','goals'].forEach(function(t){
+    var e=document.getElementById('m9tab-'+t); if(e)e.style.display='none';
+  });
+  document.querySelectorAll('.m9-tab').forEach(function(t){t.classList.remove('act');});
+  document.getElementById('m9tab-'+tab).style.display='block';
+  if(el)el.classList.add('act');
+  if(tab==='snapshot')m9RenderSnapshot();
+  if(tab==='history')m9RenderHistory();
+  if(tab==='goals')m9RenderMilestones();
+}
+
+// ── MODULE SWITCHER ──
+function switchToM9(){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9'].forEach(function(id){
+    var el=document.getElementById(id); if(el)el.classList.remove('act');
+  });
+  document.getElementById('mod9').classList.add('act');
+  window.scrollTo(0,0);
+  document.getElementById('m9MonthLabel').textContent=m9MonthLabel();
+  m9Calc();
+}
 </script>
 </body>
 </html>
