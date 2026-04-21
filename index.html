@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Cauvery Pulse | v4.6 | Build: 20260418-0515 | Elango Industries Limited -->
+<!-- Cauvery Pulse | v4.8 | Build: 20260418-0600 | Elango Industries Limited -->
 <title>Cauvery Pulse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
@@ -419,7 +419,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   box-sizing:border-box;
 }
 
-/* ── GLOBAL INPUT STYLES v4.6 ── */
+/* ── GLOBAL INPUT STYLES v4.8 ── */
 input[type=number], input[type=text], input[type=email], select, textarea {
   background:#fff !important;
   border:1.5px solid #E5E7EB !important;
@@ -442,7 +442,7 @@ input[type=number]:focus, input[type=text]:focus, select:focus, textarea:focus {
 }
 select { appearance:none; cursor:pointer; }
 
-/* ── GLOBAL FONT STYLES v4.6 ── */
+/* ── GLOBAL FONT STYLES v4.8 ── */
 .m3-card, .m4-card, .m5-card, .m6-card, .m7-card {
   font-size:14px;
   font-weight:500;
@@ -491,7 +491,7 @@ select { appearance:none; cursor:pointer; }
 /* Section headers */
 h1,h2,h3 { font-weight:700; }
 
-/* ── NAV v4.6 ── */
+/* ── NAV v4.8 ── */
 .nb.act { color:#059669 !important; }
 .nb span:last-child { font-weight:700 !important; font-size:9px !important; }
 .nb span:first-child { font-size:21px !important; }
@@ -553,7 +553,7 @@ strong { color:#111827 }
 #mod8 .nb { color:rgba(255,255,255,.4) !important }
 #mod8 .nb.act { color:#34D399 !important }
 
-/* ══ HAMBURGER NAV DRAWER v4.6 ══ */
+/* ══ HAMBURGER NAV DRAWER v4.8 ══ */
 .bnav { display:none !important; }
 
 /* Hamburger button — top right of every header */
@@ -642,7 +642,7 @@ strong { color:#111827 }
   padding-bottom:24px !important;
 }
 
-/* ══ GLOBAL BOLD READABLE FONTS v4.6 ══ */
+/* ══ GLOBAL BOLD READABLE FONTS v4.8 ══ */
 
 /* Body text — heavier weight throughout */
 body { font-weight:500; font-size:15px; line-height:1.7; }
@@ -763,7 +763,7 @@ strong { font-weight:700 !important; }
 <div id="app0">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Life Canvas · M0</div></div></div>
-  <div class="vtag">v4.6</div>
+  <div class="vtag">v4.8</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 <div class="starfield" id="starfield"></div>
 <div class="aurora"></div>
@@ -778,7 +778,7 @@ strong { font-weight:700 !important; }
       <div class="prog-step" id="ps3"></div>
       <div class="prog-step" id="ps4"></div>
     </div>
-    <div class="prog-label" id="prog-label">Step 1 of 5 — Introduction</div>
+    <div class="prog-label" id="prog-label">Step 1 of 7 — Introduction</div>
   </div>
 
   <div class="module-badge"><span>🎨</span> Module 0 · Life Canvas</div>
@@ -809,9 +809,9 @@ strong { font-weight:700 !important; }
   <div class="prog-wrap">
     <div class="prog-steps">
       <div class="prog-step done"></div><div class="prog-step active"></div>
-      <div class="prog-step"></div><div class="prog-step"></div><div class="prog-step"></div>
+      <div class="prog-step"></div><div class="prog-step"></div><div class="prog-step"></div><div class="prog-step"></div><div class="prog-step"></div>
     </div>
-    <div class="prog-label">Step 2 of 5 — The Ovarian Lottery</div>
+    <div class="prog-label">Step 2 of 7 — The Ovarian Lottery</div>
   </div>
 
   <div class="ol-hero">
@@ -861,7 +861,7 @@ strong { font-weight:700 !important; }
       <div class="prog-step done"></div><div class="prog-step done"></div>
       <div class="prog-step active"></div><div class="prog-step"></div><div class="prog-step"></div>
     </div>
-    <div class="prog-label">Step 3 of 5 — Your Generation</div>
+    <div class="prog-label">Step 3 of 7 — Your Generation</div>
   </div>
 
   <div class="sp-title">Which <span>generation</span> are you?</div>
@@ -925,7 +925,7 @@ strong { font-weight:700 !important; }
       <div class="prog-step done"></div><div class="prog-step done"></div>
       <div class="prog-step done"></div><div class="prog-step active"></div><div class="prog-step"></div>
     </div>
-    <div class="prog-label">Step 4 of 5 — The Mirror Moment</div>
+    <div class="prog-label">Step 4 of 7 — The Mirror Moment</div>
   </div>
 
   <div class="mirror-hero">
@@ -976,8 +976,94 @@ strong { font-weight:700 !important; }
   </div>
 
   <div class="px">
-    <button class="btn-p" id="s3next" onclick="goStep(4)">I Declare — Continue →</button>
+    <button class="btn-p" id="s3next" onclick="goStep('3b')">I Declare — Continue →</button>
     <button class="btn-s" onclick="goStep(2)">← Back</button>
+  </div>
+</div>
+
+<!-- ══════════ S3B: PEER INFLUENCE + LIFE FAILURES ══════════ -->
+<div id="s3b" class="screen">
+  <div class="prog-wrap">
+    <div class="prog-steps">
+      <div class="prog-step done"></div><div class="prog-step done"></div>
+      <div class="prog-step done"></div><div class="prog-step done"></div>
+      <div class="prog-step active"></div><div class="prog-step"></div>
+    </div>
+    <div class="prog-label">Step 5 of 6 — Your Life Influences</div>
+  </div>
+
+  <div class="px" style="padding-top:8px">
+    <div style="font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--gold);line-height:1.3;margin-bottom:8px">Who shaped your money story?</div>
+    <div style="font-size:14px;color:var(--muted);line-height:1.8;margin-bottom:20px">The people around you and the setbacks you have faced shape your financial instincts more than any textbook. Be honest — this makes your plan more accurate.</div>
+
+    <!-- PEER CIRCLE -->
+    <div style="font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">👥 Your Inner Circle — Who You Spend Time With</div>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px" id="peerOptions">
+      <label style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;cursor:pointer">
+        <input type="checkbox" name="peer" value="ambitious_builders" style="margin-top:3px;accent-color:var(--gold)">
+        <div><div style="font-size:13px;font-weight:700;color:var(--text)">🚀 Ambitious builders</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Friends who invest, start businesses, discuss wealth. They push you forward.</div></div>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;cursor:pointer">
+        <input type="checkbox" name="peer" value="comfortable_spenders" style="margin-top:3px;accent-color:var(--gold)">
+        <div><div style="font-size:13px;font-weight:700;color:var(--text)">💸 Comfortable spenders</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Peer group spends freely — restaurants, trips, gadgets. Social pressure to keep up.</div></div>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;cursor:pointer">
+        <input type="checkbox" name="peer" value="conservative_savers" style="margin-top:3px;accent-color:var(--gold)">
+        <div><div style="font-size:13px;font-weight:700;color:var(--text)">🏦 Conservative savers</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Circle prefers safety — FDs, gold, property. Low risk tolerance environment.</div></div>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;cursor:pointer">
+        <input type="checkbox" name="peer" value="risk_takers" style="margin-top:3px;accent-color:var(--gold)">
+        <div><div style="font-size:13px;font-weight:700;color:var(--text)">🎰 Risk takers</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Friends trade stocks, crypto, tips. High excitement, mixed outcomes.</div></div>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;cursor:pointer">
+        <input type="checkbox" name="peer" value="financially_unaware" style="margin-top:3px;accent-color:var(--gold)">
+        <div><div style="font-size:13px;font-weight:700;color:var(--text)">😶 Financially unaware</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Money is not a topic in your circle. No influence either way — you are on your own.</div></div>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;cursor:pointer">
+        <input type="checkbox" name="peer" value="mixed" style="margin-top:3px;accent-color:var(--gold)">
+        <div><div style="font-size:13px;font-weight:700;color:var(--text)">🌀 Mixed — different circles</div><div style="font-size:12px;color:var(--muted);margin-top:2px">You move between different groups — business, social, family. Each pulls differently.</div></div>
+      </label>
+    </div>
+
+    <!-- LIFE FAILURES -->
+    <div style="font-size:12px;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">🌊 Financial Setbacks — What Have You Been Through?</div>
+    <div style="font-size:13px;color:var(--muted);margin-bottom:12px;line-height:1.7">These experiences leave lasting marks on how you approach risk and money. Select what applies.</div>
+    <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:20px">
+      <label style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;cursor:pointer">
+        <input type="checkbox" name="failure" value="none" style="margin-top:3px;accent-color:var(--gold)">
+        <div><div style="font-size:13px;font-weight:700;color:var(--text)">✅ No major setbacks</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Smooth financial journey so far. Low financial trauma.</div></div>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;cursor:pointer">
+        <input type="checkbox" name="failure" value="business_loss" style="margin-top:3px;accent-color:var(--gold)">
+        <div><div style="font-size:13px;font-weight:700;color:var(--text)">🏢 Business failure or loss</div><div style="font-size:12px;color:var(--muted);margin-top:2px">A venture that did not work. Capital lost, lessons hard-earned.</div></div>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;cursor:pointer">
+        <input type="checkbox" name="failure" value="investment_loss" style="margin-top:3px;accent-color:var(--gold)">
+        <div><div style="font-size:13px;font-weight:700;color:var(--text)">📉 Heavy investment loss</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Stock market crash, bad MF, bad advice. Significant capital destroyed.</div></div>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;cursor:pointer">
+        <input type="checkbox" name="failure" value="debt_trap" style="margin-top:3px;accent-color:var(--gold)">
+        <div><div style="font-size:13px;font-weight:700;color:var(--text)">💳 Debt trap or loan crisis</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Borrowed more than manageable. Struggled to repay. Left a scar.</div></div>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;cursor:pointer">
+        <input type="checkbox" name="failure" value="job_loss" style="margin-top:3px;accent-color:var(--gold)">
+        <div><div style="font-size:13px;font-weight:700;color:var(--text)">💼 Job loss or income collapse</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Lost primary income suddenly. No safety net. Forced survival mode.</div></div>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;cursor:pointer">
+        <input type="checkbox" name="failure" value="family_crisis" style="margin-top:3px;accent-color:var(--gold)">
+        <div><div style="font-size:13px;font-weight:700;color:var(--text)">👨‍👩‍👧 Family financial crisis</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Medical emergency, family debt, ancestral loss. You carried others' burden.</div></div>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;cursor:pointer">
+        <input type="checkbox" name="failure" value="fraud_scam" style="margin-top:3px;accent-color:var(--gold)">
+        <div><div style="font-size:13px;font-weight:700;color:var(--text)">⚠️ Fraud or financial scam</div><div style="font-size:12px;color:var(--muted);margin-top:2px">Chit fund, ponzi scheme, bad agent. Trust broken. Money gone.</div></div>
+      </label>
+      <label style="display:flex;align-items:flex-start;gap:10px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:12px;cursor:pointer">
+        <input type="checkbox" name="failure" value="recovered" style="margin-top:3px;accent-color:var(--gold)">
+        <div><div style="font-size:13px;font-weight:700;color:var(--text)">💪 I have been through it and recovered</div><div style="font-size:12px;color:var(--muted);margin-top:2px">The setback happened but you rebuilt. Resilient. Hard-won wisdom.</div></div>
+      </label>
+    </div>
+
+    <button class="btn-p" onclick="saveS3b()">Continue →</button>
   </div>
 </div>
 
@@ -988,7 +1074,7 @@ strong { font-weight:700 !important; }
       <div class="prog-step done"></div><div class="prog-step done"></div>
       <div class="prog-step done"></div><div class="prog-step done"></div><div class="prog-step active"></div>
     </div>
-    <div class="prog-label">Step 4 of 5 — Your Money Personality</div>
+    <div class="prog-label">Step 5 of 7 — Your Money Personality</div>
   </div>
 
   <div class="pt-intro">
@@ -1062,7 +1148,7 @@ strong { font-weight:700 !important; }
       <div class="prog-step done"></div><div class="prog-step done"></div>
       <div class="prog-step active"></div>
     </div>
-    <div class="prog-label">Step 5 of 5 — Who You Are Today</div>
+    <div class="prog-label">Step 6 of 7 — Who You Are Today</div>
   </div>
 
   <div style="text-align:center;padding:16px 0 22px">
@@ -1149,13 +1235,137 @@ strong { font-weight:700 !important; }
   </div>
 
   <div class="px">
-    <button class="btn-p" onclick="buildLifeCanvas()">Complete My Life Canvas →</button>
+    <button class="btn-p" onclick="goStep(6)">Continue →</button>
     <button class="btn-s" onclick="goStep(4)">← Back</button>
   </div>
 </div>
 
-<!-- ══════════ S6: LIFE CANVAS RESULT ══════════ -->
+
+<!-- ══════════ S6: PEER CIRCLE ══════════ -->
 <div id="s6" class="screen">
+  <div class="prog-wrap">
+    <div class="prog-steps">
+      <div class="prog-step done"></div><div class="prog-step done"></div>
+      <div class="prog-step done"></div><div class="prog-step done"></div>
+      <div class="prog-step done"></div><div class="prog-step active"></div>
+      <div class="prog-step"></div>
+    </div>
+    <div class="prog-label">Step 6 of 7 — Your Peer Circle</div>
+  </div>
+
+  <div class="ol-hero">
+    <span class="ol-globe">👥</span>
+    <div class="ol-title">Your <span>Peer Circle</span></div>
+    <div class="ol-desc">Jim Rohn said: you are the average of the five people you spend the most time with. In personal finance, this is not philosophy — it is neuroscience. Your reference group sets your spending norms, your ambition ceiling, and your risk appetite.</div>
+  </div>
+
+  <div class="px">
+    <div style="font-size:14px;font-weight:700;color:#111827;margin-bottom:10px">Who do you mostly spend time with financially?</div>
+    <div style="display:flex;flex-direction:column;gap:8px" id="peerGroupGrid">
+      <div class="ls-tile" data-v="aspirational" onclick="selPeerGroup(this)" style="text-align:left;padding:12px 14px">
+        <span>🚀</span><span><strong>Aspirational peers</strong> — Friends who are building wealth, investing, talking money seriously. They pull you up.</span>
+      </div>
+      <div class="ls-tile" data-v="stable" onclick="selPeerGroup(this)" style="text-align:left;padding:12px 14px">
+        <span>⚖️</span><span><strong>Stable peers</strong> — Comfortable, steady people. Neither pushing you up nor pulling you down. Average is the norm.</span>
+      </div>
+      <div class="ls-tile" data-v="consumption" onclick="selPeerGroup(this)" style="text-align:left;padding:12px 14px">
+        <span>🛍️</span><span><strong>Consumption peers</strong> — Social circle where spending is the norm. Eating out, vacations, gadgets. Invisible pressure to keep up.</span>
+      </div>
+      <div class="ls-tile" data-v="scarcity" onclick="selPeerGroup(this)" style="text-align:left;padding:12px 14px">
+        <span>😰</span><span><strong>Scarcity-minded peers</strong> — Surrounded by financial stress, fear, or distrust of investing. Money is taboo or scary.</span>
+      </div>
+      <div class="ls-tile" data-v="mixed" onclick="selPeerGroup(this)" style="text-align:left;padding:12px 14px">
+        <span>🔀</span><span><strong>Mixed — no dominant peer group</strong> — I am the outlier in my circle regardless of direction.</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="px" style="margin-top:14px">
+    <div style="font-size:14px;font-weight:700;color:#111827;margin-bottom:10px">Has your financial behaviour been shaped by your peer group?</div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap" id="peerInfluenceGrid">
+      <div class="ls-tile sm" data-v="yes_up" onclick="selPeerInfluence(this)"><span>📈</span><span>Yes — positively</span></div>
+      <div class="ls-tile sm" data-v="yes_down" onclick="selPeerInfluence(this)"><span>📉</span><span>Yes — negatively</span></div>
+      <div class="ls-tile sm" data-v="neutral" onclick="selPeerInfluence(this)"><span>➡️</span><span>Not really</span></div>
+      <div class="ls-tile sm" data-v="conscious" onclick="selPeerInfluence(this)"><span>🧠</span><span>I am conscious of it</span></div>
+    </div>
+  </div>
+
+  <div class="px">
+    <button class="btn-p" onclick="goStep(7)" id="s6next">Continue →</button>
+    <button class="btn-s" onclick="goStep(5)">← Back</button>
+  </div>
+</div>
+
+<!-- ══════════ S7: LIFE FAILURES & RESILIENCE ══════════ -->
+<div id="s7" class="screen">
+  <div class="prog-wrap">
+    <div class="prog-steps">
+      <div class="prog-step done"></div><div class="prog-step done"></div>
+      <div class="prog-step done"></div><div class="prog-step done"></div>
+      <div class="prog-step done"></div><div class="prog-step done"></div>
+      <div class="prog-step active"></div>
+    </div>
+    <div class="prog-label">Step 7 of 7 — Your Resilience Story</div>
+  </div>
+
+  <div class="ol-hero">
+    <span class="ol-globe">🔥</span>
+    <div class="ol-title">Your <span>Resilience Story</span></div>
+    <div class="ol-desc">Financial advice that ignores your failures is shallow advice. Someone who has been through a business collapse, a job loss, or a devastating investment handles risk very differently from someone who has never faced one. Your scars are data.</div>
+  </div>
+
+  <div class="px">
+    <div style="font-size:14px;font-weight:700;color:#111827;margin-bottom:10px">Have you experienced significant financial or life setbacks?</div>
+    <div style="display:flex;flex-direction:column;gap:8px" id="failureGrid">
+      <div class="ls-tile" data-v="business_loss" onclick="selFailure(this)" style="text-align:left;padding:12px 14px">
+        <span>💼</span><span><strong>Business failure or major loss</strong> — A venture that failed, a significant financial hit from a business decision.</span>
+      </div>
+      <div class="ls-tile" data-v="job_loss" onclick="selFailure(this)" style="text-align:left;padding:12px 14px">
+        <span>🚪</span><span><strong>Job loss or income disruption</strong> — Period without steady income, forced reset of financial plans.</span>
+      </div>
+      <div class="ls-tile" data-v="investment_loss" onclick="selFailure(this)" style="text-align:left;padding:12px 14px">
+        <span>📉</span><span><strong>Major investment loss</strong> — Lost significant money in stocks, real estate, chit funds, or fraud.</span>
+      </div>
+      <div class="ls-tile" data-v="family_crisis" onclick="selFailure(this)" style="text-align:left;padding:12px 14px">
+        <span>🏠</span><span><strong>Family financial crisis</strong> — Medical emergency, family debt, ancestral property loss, or inherited financial burden.</span>
+      </div>
+      <div class="ls-tile" data-v="none" onclick="selFailure(this)" style="text-align:left;padding:12px 14px">
+        <span>✅</span><span><strong>No major setbacks</strong> — Relatively smooth financial journey so far.</span>
+      </div>
+    </div>
+    <div style="font-size:12px;color:#9CA3AF;font-weight:600;margin-top:6px;text-align:center">Select all that apply</div>
+  </div>
+
+  <div class="px" style="margin-top:10px">
+    <div style="font-size:14px;font-weight:700;color:#111827;margin-bottom:10px">What did those experiences teach you? (if any)</div>
+    <div style="display:flex;flex-direction:column;gap:8px" id="lessonGrid">
+      <div class="ls-tile" data-v="more_cautious" onclick="selLesson(this)" style="text-align:left;padding:10px 14px">
+        <span>🛡️</span><span>Made me more cautious — I protect before I grow</span>
+      </div>
+      <div class="ls-tile" data-v="more_resilient" onclick="selLesson(this)" style="text-align:left;padding:10px 14px">
+        <span>💪</span><span>Made me more resilient — I know I can rebuild</span>
+      </div>
+      <div class="ls-tile" data-v="fear_investing" onclick="selLesson(this)" style="text-align:left;padding:10px 14px">
+        <span>😨</span><span>Made me fear investing — I prefer keeping money safe</span>
+      </div>
+      <div class="ls-tile" data-v="learned_basics" onclick="selLesson(this)" style="text-align:left;padding:10px 14px">
+        <span>📚</span><span>Taught me the basics I never learned earlier</span>
+      </div>
+      <div class="ls-tile" data-v="no_lesson" onclick="selLesson(this)" style="text-align:left;padding:10px 14px">
+        <span>🔀</span><span>Still processing — no clear lesson yet</span>
+      </div>
+    </div>
+    <div style="font-size:12px;color:#9CA3AF;font-weight:600;margin-top:6px;text-align:center">Select all that apply</div>
+  </div>
+
+  <div class="px">
+    <button class="btn-p" onclick="buildLifeCanvas()" id="s7next">Complete My Life Canvas →</button>
+    <button class="btn-s" onclick="goStep(6)">← Back</button>
+  </div>
+</div>
+
+<!-- ══════════ S8: LIFE CANVAS RESULT ══════════ -->
+<div id="s8" class="screen">
   <div class="lc-result-hero">
     <span class="lc-pers-icon" id="lcIcon">🧘</span>
     <div class="lc-pers-type" id="lcType">—</div>
@@ -1190,6 +1400,16 @@ strong { font-weight:700 !important; }
     <div class="dc-text" id="declConfirm">—</div>
   </div>
 
+  <!-- Peer Circle & Resilience Context -->
+  <div class="context-card" id="peerCard" style="display:none">
+    <div class="cc-header"><span class="cc-icon">👥</span><div class="cc-title">Peer Circle Influence</div></div>
+    <div class="cc-body" id="peerBody">—</div>
+  </div>
+  <div class="context-card" id="resilienceCard" style="display:none">
+    <div class="cc-header"><span class="cc-icon">🔥</span><div class="cc-title">Your Resilience Story</div></div>
+    <div class="cc-body" id="resilienceBody">—</div>
+  </div>
+
   <!-- Investor Profiler Summary -->
   <div class="context-card" id="profilerCard">
     <div class="cc-header"><span class="cc-icon">🧭</span><div class="cc-title">Your Investor Profile</div></div>
@@ -1209,7 +1429,7 @@ strong { font-weight:700 !important; }
 
   <div class="px">
     <button class="btn-p" onclick="goToM1()">Proceed to Cauvery Pulse Score →</button>
-    <button class="btn-s" onclick="goStep(5)">← Revise</button>
+    <button class="btn-s" onclick="goStep(7)">← Revise</button>
   </div>
   <div class="cp-mark">© Elango Industries Limited · Cauvery Pulse</div>
 </div>
@@ -1227,7 +1447,7 @@ strong { font-weight:700 !important; }
 <div id="app">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Cauvery Pulse Score · M1</div></div></div>
-  <div class="vtag">v4.6</div>
+  <div class="vtag">v4.8</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 <!-- WELCOME -->
 <div id="welcome" class="screen active">
@@ -1415,7 +1635,7 @@ strong { font-weight:700 !important; }
 <div id="app2">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Investment School · M2</div></div></div>
-  <div class="vtag">v4.6</div>
+  <div class="vtag">v4.8</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div style="padding:0 20px 80px">
@@ -1951,12 +2171,25 @@ let state = {
 };
 
 // ══════════════════ SCREEN FLOW ══════════════════
-const STEPS = ['s0','s1','s2','s3','s4','s5','s6'];
+const STEPS = ['s0','s1','s2','s3','s4','s5','s6','s7','s8'];
 
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
   document.getElementById(id).classList.add('active');
   window.scrollTo(0, 0);
+}
+
+
+function saveS3b(){
+  var peers = Array.from(document.querySelectorAll('input[name="peer"]:checked')).map(function(el){return el.value;});
+  var failures = Array.from(document.querySelectorAll('input[name="failure"]:checked')).map(function(el){return el.value;});
+  state.peers = peers;
+  state.failures = failures;
+  // Generate peer influence insight for profile
+  state.peerInfluence = peers.length > 0 ? peers[0] : 'mixed';
+  state.financialResilience = failures.indexOf('recovered') > -1 ? 'resilient' : 
+    failures.indexOf('none') > -1 || failures.length === 0 ? 'untested' : 'scarred';
+  goStep(4);
 }
 
 function goStep(n) {
@@ -1966,6 +2199,7 @@ function goStep(n) {
     const checked = state.declChecked.filter(Boolean).length;
     if (checked < 2) { toast('Please confirm at least 2 declarations \uD83E\uDE9E'); return; }
   }
+  // No mandatory selection for steps 6 and 7 — peer and resilience are optional
   showScreen(STEPS[n]);
 }
 
@@ -2074,6 +2308,47 @@ function selInvCap(el) {
 }
 
 // ══════════════════ BUILD LIFE CANVAS RESULT ══════════════════
+
+// ── PEER CIRCLE ──
+var selectedPeerGroup = '';
+var selectedPeerInfluence = '';
+function selPeerGroup(el){
+  document.querySelectorAll('#peerGroupGrid .ls-tile').forEach(function(t){t.classList.remove('selected');});
+  el.classList.add('selected');
+  selectedPeerGroup = el.dataset.v;
+}
+function selPeerInfluence(el){
+  document.querySelectorAll('#peerInfluenceGrid .ls-tile').forEach(function(t){t.classList.remove('selected');});
+  el.classList.add('selected');
+  selectedPeerInfluence = el.dataset.v;
+}
+
+// ── FAILURES & RESILIENCE ──
+var selectedFailures = [];
+var selectedLessons = [];
+function selFailure(el){
+  var v = el.dataset.v;
+  if(v === 'none'){
+    selectedFailures = ['none'];
+    document.querySelectorAll('#failureGrid .ls-tile').forEach(function(t){t.classList.remove('selected');});
+    el.classList.add('selected');
+    return;
+  }
+  // Remove 'none' if other selected
+  selectedFailures = selectedFailures.filter(function(x){return x!=='none';});
+  document.querySelector('#failureGrid [data-v="none"]')&&document.querySelector('#failureGrid [data-v="none"]').classList.remove('selected');
+  
+  var idx = selectedFailures.indexOf(v);
+  if(idx>-1){selectedFailures.splice(idx,1);el.classList.remove('selected');}
+  else{selectedFailures.push(v);el.classList.add('selected');}
+}
+function selLesson(el){
+  var v = el.dataset.v;
+  var idx = selectedLessons.indexOf(v);
+  if(idx>-1){selectedLessons.splice(idx,1);el.classList.remove('selected');}
+  else{selectedLessons.push(v);el.classList.add('selected');}
+}
+
 function buildLifeCanvas() {
   if (state.ptSelected.length === 0) { toast('Please select at least one personality type ☝️'); return; }
   if (!state.lifeStage) { toast('Please select your life stage ☝️'); return; }
@@ -2083,7 +2358,7 @@ function buildLifeCanvas() {
   state.primaryType = state.ptSelected[0];
   const pt = PERS9[state.primaryType] || PERS9.balanced;
 
-  showScreen('s6');
+  showScreen('s8');
 
   // Personality hero
   document.getElementById('lcIcon').textContent = pt.icon;
@@ -2149,7 +2424,40 @@ function buildLifeCanvas() {
   profHtml += `<br><span style="color:var(--teal);font-style:italic">${INV_CAP_WISDOM[state.invCap]||''}</span>`;
   document.getElementById('profilerBody').innerHTML = profHtml;
 
+  // ── Peer Circle ──
+  var PEER_DESC = {
+    aspirational: 'Your circle pulls you upward — people who invest, discuss money, and build wealth. This is your biggest advantage.',
+    stable: 'Your peers are comfortable and steady. No strong financial influence either way — you must self-motivate.',
+    consumption: 'Your social circle normalises spending. This creates invisible pressure. Awareness is the first defence.',
+    scarcity: 'Surrounded by financial anxiety or avoidance. Money may feel taboo or scary. This shapes your relationship with investing.',
+    mixed: 'You are the outlier in your circle. This gives you independence — but also means you must find your own financial reference points.'
+  };
+  var peerCard = document.getElementById('peerCard');
+  var peerBody = document.getElementById('peerBody');
+  if(selectedPeerGroup && peerCard && peerBody){
+    peerCard.style.display = 'block';
+    var peerInfl = {yes_up:'Positively shaped', yes_down:'Negatively shaped', neutral:'Not significantly shaped', conscious:'Consciously aware of'};
+    peerBody.textContent = PEER_DESC[selectedPeerGroup] + (selectedPeerInfluence ? ' Peer influence: ' + (peerInfl[selectedPeerInfluence]||'') + '.' : '');
+  }
+
+  // ── Resilience Story ──
+  var FAILURE_LABELS = {business_loss:'business failure',job_loss:'job/income loss',investment_loss:'major investment loss',family_crisis:'family financial crisis'};
+  var LESSON_LABELS = {more_cautious:'protection before growth',more_resilient:'confident in rebuilding',fear_investing:'prefers capital safety',learned_basics:'learned through experience',no_lesson:'still processing'};
+  var resCard = document.getElementById('resilienceCard');
+  var resBody = document.getElementById('resilienceBody');
+  if(resCard && resBody && selectedFailures.length > 0 && selectedFailures[0] !== 'none'){
+    resCard.style.display = 'block';
+    var failText = 'You have experienced: ' + selectedFailures.map(function(f){return FAILURE_LABELS[f]||f;}).join(', ') + '.';
+    var lessonText = selectedLessons.length > 0 ? ' Key lessons: ' + selectedLessons.map(function(l){return LESSON_LABELS[l]||l;}).join(', ') + '.' : '';
+    resBody.textContent = failText + lessonText + ' This context shapes your risk profile and financial priorities meaningfully.';
+  } else if(resCard && selectedFailures[0] === 'none'){
+    resCard.style.display = 'block';
+    resBody.textContent = 'No major financial setbacks reported. You are building from a stable foundation — a genuine advantage when starting disciplined investing.';
+  }
+
   // Save to localStorage
+  state.peers = state.peers || [];
+  state.failures = state.failures || [];
   localStorage.setItem('cp_canvas', JSON.stringify({
     ol: state.olChoice,
     gen: state.genChoice,
@@ -2160,7 +2468,11 @@ function buildLifeCanvas() {
     profession: state.profession,
     bizSize: state.bizSize,
     bizStruct: state.bizStruct,
-    invCap: state.invCap
+    invCap: state.invCap,
+    peers: state.peers || [],
+    failures: state.failures || [],
+    peerInfluence: state.peerInfluence || '',
+    financialResilience: state.financialResilience || ''
   }));
 }
 
@@ -2764,7 +3076,7 @@ function toast(msg){
 
 
 
-<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v4.6 ══════ -->
+<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v4.8 ══════ -->
 <div id="mod3" class="mod">
 <style>
 /* ── M3 LIGHT THEME ── */
@@ -2948,7 +3260,7 @@ function toast(msg){
   </div>
   <div style="display:flex;align-items:center;gap:8px">
     <button onclick="openM3Settings()" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:6px 10px;font-size:13px;color:#6B7280;cursor:pointer">⚙️ Rates</button>
-    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.6</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.8</div>
   </div>
 </header>
 
@@ -2983,7 +3295,7 @@ function toast(msg){
 
 <script>
 // ══════════════════════════════════════════════════════
-// M3 PORTFOLIO BLUEPRINT ENGINE v4.6
+// M3 PORTFOLIO BLUEPRINT ENGINE v4.8
 // ══════════════════════════════════════════════════════
 
 // ── COLOURS ──
@@ -3626,7 +3938,7 @@ function switchToM3(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Debt Analyser · M4</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.6</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.8</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button><button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m4w">
@@ -3974,7 +4286,7 @@ function switchToM3(){
 
 <script>
 // ══════════════════════════════════════════════════
-// M4 — DEBT ANALYSER ENGINE v4.6
+// M4 — DEBT ANALYSER ENGINE v4.8
 // ══════════════════════════════════════════════════
 
 // ── HELPERS ──
@@ -4783,7 +5095,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Monthly P&L · M6</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.6</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.8</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m6w">
@@ -4933,7 +5245,7 @@ function switchToM5(){
 
 <script>
 // ══════════════════════════════════════════
-// M6 — MONTHLY P&L ENGINE v4.6
+// M6 — MONTHLY P&L ENGINE v4.8
 // ══════════════════════════════════════════
 
 function fmtM6(n){
@@ -5377,7 +5689,7 @@ function switchToM6(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Goal Planner · M5</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.6</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.8</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m5w">
@@ -5562,7 +5874,7 @@ function switchToM6(){
 
 <script>
 // ══════════════════════════════════════════
-// M5 — GOAL PLANNER ENGINE v4.6
+// M5 — GOAL PLANNER ENGINE v4.8
 // ══════════════════════════════════════════
 
 function fmtM5(n){
@@ -5933,7 +6245,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Protection Check · M7</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.6</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.8</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m7w">
@@ -6172,7 +6484,7 @@ function switchToM5(){
 
 <script>
 // ══════════════════════════════════════════
-// M7 — PROTECTION CHECK ENGINE v4.6
+// M7 — PROTECTION CHECK ENGINE v4.8
 // ══════════════════════════════════════════
 
 function fmtM7(n){
@@ -6505,7 +6817,7 @@ function switchToM7(){
       <div class="bsub" style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px">Score Report · M8</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v4.6</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v4.8</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m8w">
@@ -6515,8 +6827,9 @@ function switchToM7(){
     <div class="m8-tabs">
       <div class="m8-tab act" onclick="m8ShowTab('report',this)">📊 My Report</div>
       <div class="m8-tab" onclick="m8ShowTab('dont',this)">🚫 Don't Do List</div>
+      <div class="m8-tab" onclick="m8ShowTab('onepc',this)">💡 1% Club</div>
       <div class="m8-tab" onclick="m8ShowTab('action',this)">⚡ Action Plan</div>
-      <div class="m8-tab" onclick="m8ShowTab('wisdom',this)">💡 Wisdom</div>
+      <div class="m8-tab" onclick="m8ShowTab('wisdom',this)">🌟 Wisdom</div>
     </div>
   </div>
 
@@ -6587,6 +6900,20 @@ function switchToM7(){
 
   </div>
 
+  <!-- ── TAB 2B: 1% CLUB SMART DECISIONS ── -->
+  <div id="m8tab-onepc" style="display:none">
+    <div style="text-align:center;padding:16px 0 20px">
+      <div style="font-size:36px;margin-bottom:8px">💡</div>
+      <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:#fff;margin-bottom:6px">The <span style="color:#34D399">1% Club</span> Principles</div>
+      <div style="font-size:13px;color:rgba(255,255,255,.4);line-height:1.7">Smart financial decisions practised by India's top 1% — the ones who actually reach financial freedom. Inspired by Sharan Hegde's 1% Club framework.</div>
+    </div>
+    <div id="m8OnePCList"></div>
+    <div style="background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.08);border-radius:12px;padding:14px;margin-top:6px;font-size:12px;color:rgba(255,255,255,.3);text-align:center;line-height:1.7">
+      Inspired by 1% Club by Sharan Hegde · Finance With Sharan · Educational reference only<br>
+      ⚠️ Consult a SEBI-registered adviser before making investment decisions
+    </div>
+  </div>
+
   <!-- ── TAB 3: ACTION PLAN ── -->
   <div id="m8tab-action" style="display:none">
     <div style="padding:14px 0 18px">
@@ -6605,7 +6932,7 @@ function switchToM7(){
     <div id="m8WisdomList"></div>
   </div>
 
-  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v4.6<br>Your financial data stays on your device only.</div>
+  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v4.8<br>Your financial data stays on your device only.</div>
 </div>
 </div><!-- #app8 -->
 
@@ -6622,7 +6949,7 @@ function switchToM7(){
 
 <script>
 // ══════════════════════════════════════════
-// M8 — SCORE REPORT + DON'T DO LIST v4.6
+// M8 — SCORE REPORT + DON'T DO LIST v4.8
 // ══════════════════════════════════════════
 
 var M8_DONT_LIST = [
@@ -6898,9 +7225,122 @@ function m8CopyReport(){
   });
 }
 
+// ── 1% CLUB SMART DECISIONS ──
+var M8_ONEPC = [
+  {
+    icon:'🛡️',
+    title:'Insurance before investing — always',
+    principle:'The 1% Club rule: protect first, grow second. A term plan (15-20× income) and health insurance (minimum ₹10L) must exist before a single rupee goes into equity. One hospitalisation without insurance wipes out years of SIPs.',
+    action:'Buy a ₹1 Crore term plan online (₹8,000–12,000/year). Add a ₹10L health floater. Only then start equity SIPs.',
+    category:'Protection'
+  },
+  {
+    icon:'🚨',
+    title:'Emergency fund is not optional — it is foundational',
+    principle:'6 months of expenses in a liquid fund, always. Not an FD (penalty on early withdrawal), not stocks (can crash when you need it most). A liquid mutual fund that you can redeem in 24 hours.',
+    action:'Calculate your monthly expenses. Multiply by 6. Park that amount in Parag Parikh Liquid Fund or similar. Touch only in genuine emergencies.',
+    category:'Foundation'
+  },
+  {
+    icon:'📈',
+    title:'SIP is not a product — it is a behaviour',
+    principle:'The 1% Club insight: wealth is not built by finding the right fund. It is built by the unbroken habit of investing on the same day every month for 15–20 years. Fund selection matters 20%. Consistency matters 80%.',
+    action:'Set up SIP auto-debit on salary date. If you manually invest, you will skip months. Automate it and forget it.',
+    category:'Investing'
+  },
+  {
+    icon:'🎯',
+    title:'Each SIP must have a named goal',
+    principle:'Money without a purpose gets spent. The 1% Club framework: one SIP per goal. Retirement SIP. Child education SIP. House down payment SIP. When each rupee has a job, you stop redeeming prematurely.',
+    action:'Open separate SIP mandates — one per goal. Label each folio. Never merge goals into one fund.',
+    category:'Investing'
+  },
+  {
+    icon:'🚫',
+    title:'Never mix insurance and investment',
+    principle:'ULIPs and endowment plans are the single biggest wealth destroyer for the Indian middle class. You pay for expensive insurance and get poor investment returns simultaneously. The 1% Club is categorical: term + mutual fund always beats ULIP.',
+    action:'If you have a ULIP, calculate what you would have if you had bought term + index SIP instead. The gap will shock you. Surrender after careful calculation with your CA.',
+    category:'Avoid'
+  },
+  {
+    icon:'💳',
+    title:'Credit card balance to zero — every month, without exception',
+    principle:'A credit card is a convenience tool. At 36–42% annual interest, an unpaid balance is financial quicksand. The 1% Club members treat credit card outstanding balance as a personal failure — not just a financial one.',
+    action:'Set up auto-pay of full statement amount. If you cannot pay full balance, cut the card. No investment returns 40% per year — so clearing card debt is your highest-return action.',
+    category:'Debt'
+  },
+  {
+    icon:'📊',
+    title:'Index funds beat most active fund managers over 15+ years',
+    principle:'SEBI data and global research confirm: 80–90% of active large-cap funds underperform their benchmark index over a 15-year period. The 1% Club recommendation: Nifty 50 index + Nifty Next 50 index as the core portfolio. Simple, cheap, powerful.',
+    action:'Check your current mutual fund XIRR. Compare to Nifty 50 SIP returns for the same period. If the active fund is not beating the index consistently — switch.',
+    category:'Investing'
+  },
+  {
+    icon:'📅',
+    title:'Tax planning in April — not March',
+    principle:'March tax planning forces panic — you buy whatever product an agent pushes. April planning lets you choose rationally: ELSS for equity exposure, VPF for safe guaranteed returns, NPS 80CCD(1B) for extra ₹50K. The 1% Club starts tax planning on April 1st.',
+    action:'Open M11 Tax Optimiser in this app. Fill your 80C utilisation now. Set up a monthly ELSS SIP to automatically fill 80C across 12 months.',
+    category:'Tax'
+  },
+  {
+    icon:'📉',
+    title:'LTCG harvesting — the free ₹1.25L gift every year',
+    principle:'Every Indian equity investor gets ₹1.25L in long-term capital gains tax-free every year under Sec 112A. Most ignore this. The 1% Club harvests this every March — sell to book the gain, immediately rebuy. No tax. Higher cost basis. Over 20 years this saves lakhs.',
+    action:'Open M11 → LTCG Harvest tab. Do this every February-March. The 15-minute exercise saves significant tax compounded over a lifetime.',
+    category:'Tax'
+  },
+  {
+    icon:'🔢',
+    title:'The 50-30-20 rule — non-negotiable',
+    principle:'50% of take-home on needs (rent, food, EMI, utilities). 30% on wants (lifestyle, eating out, travel, subscriptions). 20% on savings and investments — minimum. The 1% Club insight: if you cannot live on 80% of income, you have a lifestyle problem, not an income problem.',
+    action:'Open M6 Monthly P&L. Check your savings rate right now. If below 20%, identify one expense to cut this month. Start there.',
+    category:'Budgeting'
+  },
+  {
+    icon:'⏳',
+    title:'Time in market always beats timing the market',
+    principle:'The 1% Club is emphatic: nobody can consistently predict market movements — not fund managers, not analysts, not AI. The best strategy is to be fully invested always, via SIP. Missing the 10 best market days in a decade halves your returns.',
+    action:'Stop watching the market daily. Check your portfolio quarterly. Increase SIP annually by 10%. That is the entire strategy.',
+    category:'Mindset'
+  },
+  {
+    icon:'🏠',
+    title:'Your home is not an investment — it is a lifestyle asset',
+    principle:'Indian residential real estate has returned 5-7% annually over 20 years — barely above inflation, illiquid, with 8-10% transaction costs. The 1% Club is clear: buy a home for lifestyle. Do not count it as your wealth creation strategy.',
+    action:'If you plan to buy a home, size the EMI at no more than 35-40% of take-home. Never stretch beyond this. Your financial plan needs liquid, growable assets — not just property.',
+    category:'Real Estate'
+  },
+];
+
+function m8BuildOnePCList(){
+  var el=document.getElementById('m8OnePCList');
+  if(!el||el.innerHTML)return;
+  var categories={Protection:'rgba(5,150,105,.15)',Foundation:'rgba(37,99,235,.15)',Investing:'rgba(124,58,237,.15)',Avoid:'rgba(220,38,38,.15)',Debt:'rgba(220,38,38,.15)',Tax:'rgba(217,119,6,.15)',Budgeting:'rgba(8,145,178,.15)',Mindset:'rgba(55,65,81,.2)','Real Estate':'rgba(217,119,6,.15)'};
+  var catColors={Protection:'#34D399',Foundation:'#60A5FA',Investing:'#A78BFA',Avoid:'#F87171',Debt:'#F87171',Tax:'#FCD34D',Budgeting:'#67E8F9',Mindset:'#9CA3AF','Real Estate':'#FCD34D'};
+  el.innerHTML=M8_ONEPC.map(function(item,i){
+    var bg=categories[item.category]||'rgba(255,255,255,.06)';
+    var col=catColors[item.category]||'#fff';
+    return '<div style="background:'+bg+';border:1px solid rgba(255,255,255,.08);border-radius:14px;padding:16px;margin-bottom:10px">'+
+      '<div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">'+
+        '<div style="font-size:24px">'+item.icon+'</div>'+
+        '<div style="flex:1">'+
+          '<div style="font-size:14px;font-weight:700;color:#fff">'+item.title+'</div>'+
+          '<span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;background:rgba(255,255,255,.1);color:'+col+'">'+item.category+'</span>'+
+        '</div>'+
+        '<div style="font-family:DM Mono,monospace;font-size:11px;color:rgba(255,255,255,.3)">'+(i+1<10?'0'+(i+1):i+1)+'</div>'+
+      '</div>'+
+      '<div style="font-size:13px;color:rgba(255,255,255,.6);line-height:1.8;margin-bottom:10px">'+item.principle+'</div>'+
+      '<div style="background:rgba(52,211,153,.1);border-left:2px solid #34D399;border-radius:0 8px 8px 0;padding:8px 10px;font-size:12px;font-weight:600;color:#34D399">'+
+        '✅ '+item.action+
+      '</div>'+
+    '</div>';
+  }).join('');
+}
+
 // ── TABS ──
 function m8ShowTab(tab, el){
-  ['report','dont','action','wisdom'].forEach(function(t){
+  ['report','dont','onepc','action','wisdom'].forEach(function(t){
     var e=document.getElementById('m8tab-'+t); if(e) e.style.display='none';
   });
   document.querySelectorAll('.m8-tab').forEach(function(t){t.classList.remove('act');});
@@ -6908,6 +7348,7 @@ function m8ShowTab(tab, el){
   if(el) el.classList.add('act');
   if(tab==='report')  m8LoadReport();
   if(tab==='dont')    m8BuildDontList();
+  if(tab==='onepc')   m8BuildOnePCList();
   if(tab==='action')  m8BuildActionPlan();
   if(tab==='wisdom')  m8BuildWisdom();
 }
@@ -6925,7 +7366,7 @@ function switchToM8(){
 // Nav handled by single master init below
 </script>
 <script>
-// ══ CAUVERY PULSE — MASTER NAV v4.6 — ALL MODULES ══
+// ══ CAUVERY PULSE — MASTER NAV v4.8 — ALL MODULES ══
 (function(){
   var NAV = [
     ['switchToM0', '🎨', 'Canvas'],
@@ -7050,7 +7491,7 @@ function switchToM8(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Net Worth · M9</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.6</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.8</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m9w">
@@ -7182,7 +7623,7 @@ function switchToM8(){
 
 <script>
 // ══════════════════════════════════════════
-// M9 — NET WORTH TRACKER v4.6
+// M9 — NET WORTH TRACKER v4.8
 // ══════════════════════════════════════════
 
 var MONTHS9=['January','February','March','April','May','June','July','August','September','October','November','December'];
@@ -7560,7 +8001,7 @@ function switchToM9(){
     <div class="nav-item-text"><span class="nav-item-name" style="color:#059669">Cauvery's View</span><span class="nav-item-desc">Personalised financial insights · Consult SEBI adviser before investing</span></div>
   </button>
   <div class="nav-drawer-footer">
-    Cauvery Pulse v4.6 · Elango Industries Limited<br>
+    Cauvery Pulse v4.8 · Elango Industries Limited<br>
     Your data stays on your device only.
   </div>
 </div>
@@ -7818,7 +8259,7 @@ function navTo_M(fnName){
 
 <script>
 // ══════════════════════════════════════════
-// M10 — SIP TRACKER ENGINE v4.6
+// M10 — SIP TRACKER ENGINE v4.8
 // ══════════════════════════════════════════
 
 var SIP_TYPES={
@@ -8441,7 +8882,7 @@ function switchToM10(){
 
 <script>
 // ══════════════════════════════════════════
-// M11 — TAX OPTIMISER ENGINE v4.6
+// M11 — TAX OPTIMISER ENGINE v4.8
 // ══════════════════════════════════════════
 
 function fmtM11(n){
@@ -9528,7 +9969,7 @@ function switchToM14(){
 
 <script>
 // ══════════════════════════════════════════
-// M15 — AI FINANCIAL ADVISOR v4.6
+// M15 — AI FINANCIAL ADVISOR v4.8
 // ══════════════════════════════════════════
 
 var m15History = [];
@@ -9625,6 +10066,20 @@ function m15BuildContext(){
     if(prot.score) ctx+='\nPROTECTION SCORE: '+prot.score.pct+'/100\n';
   }catch(e){}
 
+
+  // S3b — Peer Influence + Life Failures
+  try{
+    if(cv.peers&&cv.peers.length){
+      var peerMap={ambitious_builders:'Ambitious builder circle — pushes growth',comfortable_spenders:'Peer pressure to spend/lifestyle inflation risk',conservative_savers:'Conservative peer circle — low risk tolerance',risk_takers:'Risk-taking peer circle — excitement bias',financially_unaware:'Financially unaware circle — isolated journey',mixed:'Mixed circles — different pulls'};
+      ctx+='\nPEER CIRCLE: '+cv.peers.map(function(p){return peerMap[p]||p;}).join(', ')+'\n';
+    }
+    if(cv.failures&&cv.failures.length){
+      var failMap={none:'No major setbacks',business_loss:'Business failure experience',investment_loss:'Heavy investment loss experience',debt_trap:'Debt trap experience',job_loss:'Job loss / income collapse',family_crisis:'Family financial crisis',fraud_scam:'Fraud/scam victim',recovered:'Setback but recovered — resilient'};
+      ctx+='FINANCIAL RESILIENCE: '+cv.financialResilience+'\n';
+      ctx+='LIFE SETBACKS: '+cv.failures.map(function(f){return failMap[f]||f;}).join(', ')+'\n';
+    }
+  }catch(e){}
+
   return ctx;
 }
 
@@ -9675,6 +10130,7 @@ function m15SendMessage(msg){
     '- Keep responses concise — under 300 words unless they ask for detail\n'+
     '- Mention specific numbers from their data when relevant\n'+
     '- If data is missing for a question, say so and ask them to fill that module\n'+
+    '- Use their peer circle and life setback data to calibrate advice — someone who lost money in a scam needs different advice than someone who has never invested\n'+
     '- Do not give legal or CA advice — say "consult your CA" for tax filing specifics\n'+
     '- Tone: like a trusted, frank financial friend — not a formal advisor';
 
