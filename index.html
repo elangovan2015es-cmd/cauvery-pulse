@@ -2189,10 +2189,12 @@ function saveS3b(){
   state.peerInfluence = peers.length > 0 ? peers[0] : 'mixed';
   state.financialResilience = failures.indexOf('recovered') > -1 ? 'resilient' : 
     failures.indexOf('none') > -1 || failures.length === 0 ? 'untested' : 'scarred';
-  goStep(4);
+  showScreen('s4');
 }
 
 function goStep(n) {
+  // Handle 3b — new peer/failures screen between S3 and S4
+  if(n === '3b') { showScreen('s3b'); return; }
   if (n === 2 && !state.olChoice) { toast('Please select your starting point ☝️'); return; }
   if (n === 3 && !state.genChoice) { toast('Please select your generation ☝️'); return; }
   if (n === 4) {
