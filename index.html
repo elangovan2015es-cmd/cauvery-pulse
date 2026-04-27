@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Cauvery Pulse | v5.1 | Build: 20260427-1700 | Elango Industries Limited -->
+<!-- Cauvery Pulse | v5.2 | Build: 20260427-1930 | Elango Industries Limited -->
 <title>Cauvery Pulse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
@@ -765,7 +765,7 @@ strong { font-weight:700 !important; }
 <div id="app0">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Life Canvas · M0</div></div></div>
-  <div class="vtag">v5.1</div>
+  <div class="vtag">v5.2</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 <div class="starfield" id="starfield"></div>
 <div class="aurora"></div>
@@ -1199,51 +1199,110 @@ strong { font-weight:700 !important; }
   </div>
 
   <!-- Business Type — conditional on business stages -->
-  <div class="card" id="bizCard" style="display:none;margin-bottom:12px">
-    <div class="card-lbl">🏢 Your Business — Size &amp; Structure</div>
-    <div style="margin-bottom:10px">
-      <div style="font-size:11px;color:#6B7280;margin-bottom:6px;text-transform:uppercase;letter-spacing:.8px">Business Size</div>
-      <div style="display:flex;gap:7px;flex-wrap:wrap" id="bizSizeGrid">
-        <div class="ls-tile sm" data-v="small_biz" onclick="selBizSize(this)"><span>🌱</span><span>Small</span></div>
-        <div class="ls-tile sm" data-v="medium_biz" onclick="selBizSize(this)"><span>🌳</span><span>Medium</span></div>
-        <div class="ls-tile sm" data-v="large_biz" onclick="selBizSize(this)"><span>🏛️</span><span>Large</span></div>
-      </div>
-    </div>
-    <div>
-      <div style="font-size:11px;color:#6B7280;margin-bottom:6px;text-transform:uppercase;letter-spacing:.8px">Business Structure</div>
-      <div style="display:flex;gap:7px;flex-wrap:wrap" id="bizStructGrid">
-        <div class="ls-tile sm" data-v="proprietor" onclick="selBizStruct(this)"><span>👤</span><span>Proprietor</span></div>
-        <div class="ls-tile sm" data-v="partnership" onclick="selBizStruct(this)"><span>🤝</span><span>Partnership</span></div>
-        <div class="ls-tile sm" data-v="pvt_ltd" onclick="selBizStruct(this)"><span>🏢</span><span>Pvt Ltd</span></div>
-        <div class="ls-tile sm" data-v="pub_ltd" onclick="selBizStruct(this)"><span>📈</span><span>Public Ltd</span></div>
-        <div class="ls-tile sm" data-v="huf" onclick="selBizStruct(this)"><span>👨‍👩‍👧</span><span>HUF</span></div>
-        <div class="ls-tile sm" data-v="trust" onclick="selBizStruct(this)"><span>🏛️</span><span>Trust</span></div>
-      </div>
+    <!-- Monthly Income -->
+  <div class="card" style="margin-bottom:12px">
+    <div class="card-lbl">&#x1F4B0; Your Monthly Income &#x2014; All Sources Combined</div>
+    <div style="font-size:12px;color:#6B7280;line-height:1.7;margin-bottom:12px">Include salary, fees, business draw, rent, dividends &#x2014; everything that comes in each month on average.</div>
+    <div style="display:flex;flex-wrap:wrap;gap:7px" id="invCapGrid">
+      <div class="ls-tile sm" data-v="lt10k"   onclick="selInvCap(this)"><span>&#x1F331;</span><span>Below &#x20B9;10K</span></div>
+      <div class="ls-tile sm" data-v="10k_25k" onclick="selInvCap(this)"><span>&#x1F33F;</span><span>&#x20B9;10K&#x2013;25K</span></div>
+      <div class="ls-tile sm" data-v="25k_50k" onclick="selInvCap(this)"><span>&#x1F333;</span><span>&#x20B9;25K&#x2013;50K</span></div>
+      <div class="ls-tile sm" data-v="50k_1l"  onclick="selInvCap(this)"><span>&#x1F4BC;</span><span>&#x20B9;50K&#x2013;1L</span></div>
+      <div class="ls-tile sm" data-v="1l_3l"   onclick="selInvCap(this)"><span>&#x1F3E2;</span><span>&#x20B9;1L&#x2013;3L</span></div>
+      <div class="ls-tile sm" data-v="3l_10l"  onclick="selInvCap(this)"><span>&#x1F3DB;&#xFE0F;</span><span>&#x20B9;3L&#x2013;10L</span></div>
+      <div class="ls-tile sm" data-v="10l_25l" onclick="selInvCap(this)"><span>&#x1F48E;</span><span>&#x20B9;10L&#x2013;25L</span></div>
+      <div class="ls-tile sm" data-v="25l_1cr" onclick="selInvCap(this)"><span>&#x1F680;</span><span>&#x20B9;25L&#x2013;1Cr</span></div>
+      <div class="ls-tile sm" data-v="gt1cr"   onclick="selInvCap(this)"><span>&#x1F310;</span><span>Above &#x20B9;1Cr</span></div>
     </div>
   </div>
 
-  <!-- Monthly Investment Capacity -->
+  <!-- Income Mix -->
   <div class="card" style="margin-bottom:12px">
-    <div class="card-lbl">💰 Monthly Investment Capacity</div>
-    <div style="font-size:12px;color:#6B7280;line-height:1.7;margin-bottom:10px;font-style:italic">
-      "Every rupee invested with intention grows — even ₹500 started early beats ₹50,000 started late."
+    <div class="card-lbl">&#x1F500; Your Income Sources &#x2014; Select All That Apply</div>
+    <div style="font-size:12px;color:#6B7280;line-height:1.7;margin-bottom:12px">Many people have more than one. Tick everything relevant &#x2014; the app activates the right tools for your mix.</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px" id="incomeMixGrid">
+      <div class="ls-tile sm" data-v="salary"      onclick="selMix(this)"><span>&#x1F4BC;</span><span>Salary</span></div>
+      <div class="ls-tile sm" data-v="fees"         onclick="selMix(this)"><span>&#x1F3C5;</span><span>Prof. Fees</span></div>
+      <div class="ls-tile sm" data-v="business"     onclick="selMix(this)"><span>&#x1F3ED;</span><span>Business Draw</span></div>
+      <div class="ls-tile sm" data-v="dividend"     onclick="selMix(this)"><span>&#x1F4C8;</span><span>Dividends</span></div>
+      <div class="ls-tile sm" data-v="rental"       onclick="selMix(this)"><span>&#x1F3E0;</span><span>Rental</span></div>
+      <div class="ls-tile sm" data-v="capital_gain" onclick="selMix(this)"><span>&#x1F4CA;</span><span>Cap. Gains</span></div>
+      <div class="ls-tile sm" data-v="freelance"    onclick="selMix(this)"><span>&#x1F4BB;</span><span>Freelance</span></div>
+      <div class="ls-tile sm" data-v="pension"      onclick="selMix(this)"><span>&#x1F3DB;&#xFE0F;</span><span>Pension</span></div>
+      <div class="ls-tile sm" data-v="agri"         onclick="selMix(this)"><span>&#x1F33E;</span><span>Agriculture</span></div>
+      <div class="ls-tile sm" data-v="interest"     onclick="selMix(this)"><span>&#x1F3E6;</span><span>FD / Interest</span></div>
+      <div class="ls-tile sm" data-v="multiple_co"  onclick="selMix(this)"><span>&#x1F517;</span><span>Multiple Cos</span></div>
+      <div class="ls-tile sm" data-v="foreign"      onclick="selMix(this)"><span>&#x1F30D;</span><span>Foreign Inc.</span></div>
     </div>
-    <div style="display:flex;flex-wrap:wrap;gap:7px" id="invCapGrid">
-      <div class="ls-tile sm" data-v="lt2k" onclick="selInvCap(this)"><span>🌱</span><span>Below ₹2K</span></div>
-      <div class="ls-tile sm" data-v="2k_10k" onclick="selInvCap(this)"><span>🌿</span><span>₹2K–₹10K</span></div>
-      <div class="ls-tile sm" data-v="10k_50k" onclick="selInvCap(this)"><span>🌳</span><span>₹10K–₹50K</span></div>
-      <div class="ls-tile sm" data-v="gt50k" onclick="selInvCap(this)"><span>🏛️</span><span>Above ₹50K</span></div>
-    </div>
+    <div id="mixWisdom" style="display:none;margin-top:12px;font-size:12px;color:var(--teal);font-style:italic;line-height:1.7;padding:10px 12px;background:rgba(46,196,182,.07);border-radius:10px;border-left:2px solid var(--teal)"></div>
   </div>
 
   <div class="px">
-    <button class="btn-p" onclick="goStep(6)">Continue →</button>
-    <button class="btn-s" onclick="goStep(4)">← Back</button>
+    <button class="btn-p" onclick="goStep(6)">Continue &#x2192;</button>
+    <button class="btn-s" onclick="goStep(4)">&#x2190; Back</button>
   </div>
 </div>
 
 
-<!-- ══════════ S6: PEER CIRCLE ══════════ -->
+<!-- ══════════ S6: INTENT SCREEN ══════════ -->
+<div id="s6" class="screen">
+  <div class="prog-wrap">
+    <div class="prog-steps">
+      <div class="prog-step done"></div><div class="prog-step done"></div>
+      <div class="prog-step done"></div><div class="prog-step done"></div>
+      <div class="prog-step done"></div><div class="prog-step active"></div>
+    </div>
+    <div class="prog-label">Step 6 of 7 &#x2014; What brings you here?</div>
+  </div>
+  <div style="text-align:center;padding:16px 0 20px">
+    <div style="font-size:48px;margin-bottom:10px">&#x1F3AF;</div>
+    <div style="font-family:var(--ff-h);font-size:24px;font-weight:700;line-height:1.3;margin-bottom:8px">
+      What do you want<br><span style="color:var(--gold);font-style:italic">Cauvery Pulse to help with?</span>
+    </div>
+    <div style="font-size:13px;color:#6B7280;line-height:1.7">Pick one to start. You can explore everything later.</div>
+  </div>
+  <div id="intentGrid" style="display:flex;flex-direction:column;gap:8px;margin-bottom:16px"></div>
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-lbl">&#x1F4AC; Or ask anything</div>
+    <input type="text" id="intentFreeText" placeholder="e.g. How much should I invest per month?" style="width:100%;border:1.5px solid #E5E7EB;border-radius:10px;padding:12px 14px;font-size:14px;color:#111827;font-family:inherit;box-sizing:border-box;background:#fff">
+  </div>
+  <div class="px">
+    <button class="btn-p" onclick="goStep(7)">Continue &#x2192;</button>
+    <button class="btn-s" onclick="goStep(5)">&#x2190; Back</button>
+  </div>
+</div>
+
+<!-- ══════════ S7: MODULE CONFIRM ══════════ -->
+<div id="s7" class="screen">
+  <div class="prog-wrap">
+    <div class="prog-steps">
+      <div class="prog-step done"></div><div class="prog-step done"></div>
+      <div class="prog-step done"></div><div class="prog-step done"></div>
+      <div class="prog-step done"></div><div class="prog-step done"></div>
+      <div class="prog-step active"></div>
+    </div>
+    <div class="prog-label">Step 7 of 7 &#x2014; Your Module Set</div>
+  </div>
+  <div style="text-align:center;padding:14px 0 18px">
+    <div style="font-size:44px;margin-bottom:8px">&#x1F9E9;</div>
+    <div style="font-family:var(--ff-h);font-size:22px;font-weight:700;line-height:1.3;margin-bottom:8px">
+      Here are the tools<br><span style="color:var(--teal);font-style:italic">selected for you</span>
+    </div>
+    <div style="font-size:13px;color:#6B7280;line-height:1.7">Based on your profile. Toggle any off &#x2014; or add more. Change anytime from Settings.</div>
+  </div>
+  <div id="moduleConfirmList" style="margin-bottom:14px"></div>
+  <div class="card" style="margin-bottom:16px">
+    <div class="card-lbl">&#x2795; Add More Modules</div>
+    <div style="font-size:12px;color:#6B7280;margin-bottom:10px">Tap any to add. Remove from Settings later.</div>
+    <div id="moduleAddList" style="display:flex;flex-wrap:wrap;gap:8px"></div>
+  </div>
+  <div class="px">
+    <button class="btn-p" onclick="s7Confirm()">&#x2705; Looks Good &#x2014; Let's Start &#x2192;</button>
+    <button class="btn-s" onclick="goStep(6)">&#x2190; Back</button>
+  </div>
+</div>
+
+<!-- ══════════ S8 (RESULT) ══════════ -->
 <div id="s8" class="screen">
   <div class="lc-result-hero">
     <span class="lc-pers-icon" id="lcIcon">🧘</span>
@@ -1326,7 +1385,7 @@ strong { font-weight:700 !important; }
 <div id="app">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Cauvery Pulse Score · M1</div></div></div>
-  <div class="vtag">v5.1</div>
+  <div class="vtag">v5.2</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 <!-- WELCOME -->
 <div id="welcome" class="screen active">
@@ -1514,7 +1573,7 @@ strong { font-weight:700 !important; }
 <div id="app2">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Investment School · M2</div></div></div>
-  <div class="vtag">v5.1</div>
+  <div class="vtag">v5.2</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div style="padding:0 20px 80px">
@@ -2050,7 +2109,7 @@ let state = {
 };
 
 // ══════════════════ SCREEN FLOW ══════════════════
-const STEPS = ['s0','s1','s2','s3','s4','s5','s8'];
+const STEPS = ['s0','s1','s2','s3','s4','s5','s6','s7','s8'];
 
 function showScreen(id) {
   var mod0 = document.getElementById('mod0');
@@ -2073,15 +2132,24 @@ function saveS3b(){
 }
 
 function goStep(n) {
-  // Handle 3b — new peer/failures screen between S3 and S4
   if(n === '3b') { showScreen('s3b'); return; }
-  if (n === 2 && !state.olChoice) { toast('Please select your starting point ☝️'); return; }
-  if (n === 3 && !state.genChoice) { toast('Please select your generation ☝️'); return; }
+  if (n === 2 && !state.olChoice) { toast('Please select your starting point'); return; }
+  if (n === 3 && !state.genChoice) { toast('Please select your generation'); return; }
   if (n === 4) {
     const checked = state.declChecked.filter(Boolean).length;
-    if (checked < 2) { toast('Please confirm at least 2 declarations \uD83E\uDE9E'); return; }
+    if (checked < 2) { toast('Please confirm at least 2 declarations'); return; }
   }
-  // No mandatory selection for steps 6 and 7 — peer and resilience are optional
+  if (n === 5 && !state.invCap) { toast('Please select your monthly income range'); return; }
+  if (n === 6) {
+    if(!state.userMode) {
+      var ls = state.lifeStage||'';
+      if(['small_biz','medium_biz','large_biz'].indexOf(ls)>-1) state.userMode='business';
+      else if(ls==='professional') state.userMode='professional';
+      else state.userMode='salaried';
+    }
+    setTimeout(buildIntentGrid, 80);
+  }
+  if (n === 7) setTimeout(buildModuleConfirm, 80);
   showScreen(STEPS[n]);
 }
 
@@ -2189,6 +2257,189 @@ function selInvCap(el) {
   state.invCap = el.dataset.v;
 }
 
+// ── INCOME MIX ──
+state.incomeMix = [];
+function selMix(el){
+  el.classList.toggle('sel');
+  var v = el.dataset.v;
+  var i = state.incomeMix.indexOf(v);
+  if(i>-1) state.incomeMix.splice(i,1); else state.incomeMix.push(v);
+  var wisdom = {
+    salary:      'Salary: M14 Salary Optimiser + M16 Form 16/TDS activated.',
+    fees:        'Professional fees: 44ADA Presumptive Tax + Professional Tax mode.',
+    business:    'Business draw: Business Tax Planner tools activated.',
+    dividend:    'Dividends: LTCG + dividend tracking added.',
+    rental:      'Rental income: ITR-2 requirement flagged.',
+    capital_gain:'Capital gains: LTCG Harvesting + ITR-2 noted.',
+    multiple_co: 'Multiple companies: Multi-entity fields in Net Worth added.',
+    foreign:     'Foreign income: FEMA/DTAA notes. ITR-2 mandatory.',
+    freelance:   'Freelance: Treated as professional fees — 44ADA route.'
+  };
+  var msgs = state.incomeMix.filter(function(k){ return wisdom[k]; }).map(function(k){ return wisdom[k]; });
+  var mw = document.getElementById('mixWisdom');
+  if(mw){ if(msgs.length){ mw.style.display='block'; mw.textContent=msgs.join(' '); } else { mw.style.display='none'; } }
+  var mix=state.incomeMix, hasSal=mix.indexOf('salary')>-1, hasFee=mix.indexOf('fees')>-1||mix.indexOf('freelance')>-1, hasBiz=mix.indexOf('business')>-1||mix.indexOf('multiple_co')>-1;
+  if(hasBiz) state.userMode='business'; else if(hasFee) state.userMode='professional'; else if(hasSal) state.userMode='salaried'; else state.userMode='general';
+  state.isMixed=(hasSal&&(hasFee||hasBiz))||(hasFee&&hasBiz);
+}
+
+// ── INTENT QUESTIONS ──
+var INTENT_Q={
+  salaried:[
+    {i:'&#x1F4B0;',t:'Am I saving enough from my salary?',r:'m6_savings'},
+    {i:'&#x1F9FE;',t:'Old vs New tax regime — which saves me more?',r:'m11_regime'},
+    {i:'&#x1F4B3;',t:'Should I prepay my loan or invest?',r:'m4_prepay'},
+    {i:'&#x1F6EB;',t:'How do I reach my retirement goal?',r:'m13_retire'},
+    {i:'&#x1F6E1;&#xFE0F;',t:'Is my insurance cover adequate?',r:'m7_check'},
+    {i:'&#x1F4C4;',t:'Help me with Form 16 and ITR filing',r:'m16_form16'},
+    {i:'&#x1F4BC;',t:'How do I get more take-home from my CTC?',r:'m14_ctc'},
+    {i:'&#x1F48E;',t:'How do I grow my net worth faster?',r:'m9_nw'},
+    {i:'&#x1FA7A;',t:'Full financial health check',r:'m1_full'},
+    {i:'&#x26A1;',t:'What should I do first this month?',r:'m8_action'}
+  ],
+  professional:[
+    {i:'&#x1F9FE;',t:'How much tax do I actually owe?',r:'m11_pgbp'},
+    {i:'&#x1F4CA;',t:'Should I opt for presumptive tax (44ADA)?',r:'m11_44ada'},
+    {i:'&#x1F4B8;',t:'How do I pay advance tax correctly?',r:'m16_advtax'},
+    {i:'&#x1F9FE;',t:'Do I need to register for GST?',r:'m11_gst'},
+    {i:'&#x1F6E1;&#xFE0F;',t:'Do I need professional indemnity insurance?',r:'m7_indemnity'},
+    {i:'&#x1F4B0;',t:'My income varies — am I saving enough?',r:'m6_variable'},
+    {i:'&#x1F6EB;',t:'I have no EPF — how do I plan retirement?',r:'m13_noepf'},
+    {i:'&#x1F48E;',t:'What is my practice worth?',r:'m9_practice'},
+    {i:'&#x1FA7A;',t:'Full financial health check',r:'m1_full'},
+    {i:'&#x26A1;',t:'What should I do first?',r:'m8_action'}
+  ],
+  business:[
+    {i:'&#x1F4B8;',t:'Salary vs dividend — which suits me better?',r:'m11_salavsdiv'},
+    {i:'&#x1F3E6;',t:'Separate my personal and business finances',r:'m6_biz'},
+    {i:'&#x1F511;',t:'What is my business worth for exit planning?',r:'m9_bizval'},
+    {i:'&#x1F6E1;&#xFE0F;',t:'Do I need keyman insurance?',r:'m7_keyman'},
+    {i:'&#x1F9FE;',t:'Tax planning for my company structure',r:'m11_biz'},
+    {i:'&#x1F6EB;',t:'How do I plan retirement as a business owner?',r:'m13_biz'},
+    {i:'&#x1F48E;',t:'Grow personal net worth alongside business',r:'m9_nw'},
+    {i:'&#x1FA7A;',t:'Full financial health check',r:'m1_full'},
+    {i:'&#x26A1;',t:'What should I do first?',r:'m8_action'}
+  ],
+  general:[
+    {i:'&#x1FA7A;',t:'Full financial health check',r:'m1_full'},
+    {i:'&#x1F4B0;',t:'Am I saving enough?',r:'m6_savings'},
+    {i:'&#x1F6E1;&#xFE0F;',t:'Is my insurance adequate?',r:'m7_check'},
+    {i:'&#x1F6EB;',t:'How do I plan for retirement?',r:'m13_retire'},
+    {i:'&#x1F48E;',t:'How do I grow my net worth?',r:'m9_nw'},
+    {i:'&#x26A1;',t:'What should I do first?',r:'m8_action'}
+  ]
+};
+
+function getIntentQ(){
+  var mode=state.userMode||'general', base=(INTENT_Q[mode]||INTENT_Q.general).slice(), mix=state.incomeMix||[];
+  if(mode==='business'&&mix.indexOf('salary')>-1){ base.unshift({i:'&#x1F4BC;',t:'I draw a director salary — optimise my CTC',r:'m14_ctc'}); base.unshift({i:'&#x1F4C4;',t:'Help me with Form 16 from my company',r:'m16_form16'}); }
+  if(mix.indexOf('capital_gain')>-1||mix.indexOf('dividend')>-1){ if(!base.some(function(q){return q.r==='m11_ltcg';})) base.splice(3,0,{i:'&#x1F4C8;',t:'LTCG harvesting and capital gains tax',r:'m11_ltcg'}); }
+  if(mix.indexOf('rental')>-1){ if(!base.some(function(q){return q.r==='m6_rental';})) base.splice(3,0,{i:'&#x1F3E0;',t:'Manage my rental income and tax',r:'m6_rental'}); }
+  if(mix.indexOf('multiple_co')>-1){ base.splice(2,0,{i:'&#x1F517;',t:'I run multiple companies — track personal wealth separately',r:'m9_multicorp'}); }
+  return base.slice(0,10);
+}
+
+function buildIntentGrid(){
+  var el=document.getElementById('intentGrid'); if(!el) return;
+  var qs=getIntentQ();
+  el.innerHTML=qs.map(function(q){
+    return '<div onclick="selIntent(this)" data-route="'+q.r+'" style="display:flex;align-items:center;gap:12px;padding:13px 16px;background:#fff;border:1.5px solid #E5E7EB;border-radius:14px;cursor:pointer;transition:all .2s" class="intent-opt">'+
+      '<span style="font-size:22px;flex-shrink:0">'+q.i+'</span>'+
+      '<span style="font-size:14px;font-weight:600;color:#111827;flex:1">'+q.t+'</span>'+
+      '<span style="font-size:18px;color:#9CA3AF">&#x203A;</span>'+
+    '</div>';
+  }).join('');
+}
+
+function selIntent(el){
+  document.querySelectorAll('.intent-opt').forEach(function(o){ o.style.borderColor='#E5E7EB'; o.style.background='#fff'; });
+  el.style.borderColor='#059669'; el.style.background='rgba(5,150,105,.06)';
+  state.intent=el.dataset.route;
+}
+
+// ── MODULE SYSTEM ──
+var ALL_MODULES=[
+  {id:'mod0', i:'&#x1F3A8;',n:'Life Canvas',         l:'core'},
+  {id:'mod1', i:'&#x1FA7A;',n:'Pulse Score',          l:'core'},
+  {id:'mod2', i:'&#x1F4DA;',n:'Investment School',    l:'core'},
+  {id:'mod3', i:'&#x1F5FA;&#xFE0F;',n:'Portfolio Blueprint',l:'core'},
+  {id:'mod5', i:'&#x1F3AF;',n:'Goal Planner',         l:'core'},
+  {id:'mod8', i:'&#x1F4CB;',n:'Score Report',         l:'core'},
+  {id:'mod10',i:'&#x1F4C8;',n:'SIP Tracker',          l:'core'},
+  {id:'mod4', i:'&#x1F4B3;',n:'Debt Analyser',        l:'default'},
+  {id:'mod6', i:'&#x1F4CA;',n:'Monthly P&L',          l:'default'},
+  {id:'mod7', i:'&#x1F6E1;&#xFE0F;',n:'Protection Check',l:'default'},
+  {id:'mod9', i:'&#x1F48E;',n:'Net Worth',            l:'default'},
+  {id:'mod11',i:'&#x1F9FE;',n:'Tax Optimiser',        l:'default'},
+  {id:'mod12',i:'&#x1F4C5;',n:'EMI Calendar',         l:'default'},
+  {id:'mod13',i:'&#x1F6EB;',n:'Retirement Runway',    l:'default'},
+  {id:'mod14',i:'&#x1F4BC;',n:'Salary Optimiser',     l:'optin',  modes:['salaried'],            mix:['salary']},
+  {id:'mod16',i:'&#x1F4C4;',n:'Form 16 / TDS Planner',l:'optin',  modes:['salaried','professional'],mix:['salary','fees','freelance']},
+  {id:'mod15',i:'&#x1F916;',n:"Cauvery's View (AI)",  l:'optin',  modes:['salaried','professional','business','general']}
+];
+
+function buildModuleConfirm(){
+  var mode=state.userMode||'general', mix=state.incomeMix||[];
+  state.activeModules=[];
+  ALL_MODULES.forEach(function(m){
+    if(m.l==='core'||m.l==='default'){ state.activeModules.push(m.id); return; }
+    if(m.l==='optin'){
+      var modeOk=!m.modes||m.modes.indexOf(mode)>-1;
+      var mixOk =!m.mix||m.mix.some(function(t){ return mix.indexOf(t)>-1; });
+      if(modeOk&&mixOk) state.activeModules.push(m.id);
+    }
+  });
+  var listEl=document.getElementById('moduleConfirmList'), addEl=document.getElementById('moduleAddList');
+  if(!listEl||!addEl) return;
+  var modeLabel={salaried:'&#x1F4BC; Salaried Employee',professional:'&#x1F3C5; Independent Professional',business:'&#x1F3ED; Business Owner',general:'&#x1F464; General'}[mode]||mode;
+  var mixLabelMap={salary:'Salary',fees:'Prof. Fees',business:'Business Draw',dividend:'Dividends',rental:'Rental',capital_gain:'Cap. Gains',freelance:'Freelance',pension:'Pension',agri:'Agriculture',interest:'FD/Interest',multiple_co:'Multiple Cos',foreign:'Foreign Income'};
+  var mixLabels=mix.map(function(k){ return mixLabelMap[k]||k; });
+  listEl.innerHTML='<div style="background:rgba(5,150,105,.1);border:1px solid rgba(5,150,105,.25);border-radius:12px;padding:10px 14px;margin-bottom:12px;font-size:13px;font-weight:700;color:#059669">'+modeLabel+(mixLabels.length?' &#x00B7; '+mixLabels.join(', '):'')+' &#x00B7; '+state.activeModules.length+' modules active</div>'+
+    ALL_MODULES.filter(function(m){ return state.activeModules.indexOf(m.id)>-1; }).map(function(m){
+      return '<div style="display:flex;align-items:center;gap:10px;padding:10px 12px;background:#fff;border:1px solid #E5E7EB;border-radius:12px;margin-bottom:6px">'+
+        '<span style="font-size:20px">'+m.i+'</span><span style="flex:1;font-size:13px;font-weight:600;color:#111827">'+m.n+'</span>'+
+        (m.l==='core'?'<span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;background:#ECFDF5;color:#059669">Always On</span>':
+         '<label style="display:flex;align-items:center;cursor:pointer"><input type="checkbox" checked data-mod="'+m.id+'" onchange="toggleMod(this)" style="width:18px;height:18px;accent-color:#059669;cursor:pointer"></label>')+
+      '</div>';
+    }).join('');
+  addEl.innerHTML=ALL_MODULES.filter(function(m){ return state.activeModules.indexOf(m.id)<0; }).map(function(m){
+    return '<div onclick="addMod(\x27'+m.id+'\x27)" style="display:flex;align-items:center;gap:7px;padding:7px 12px;border:1.5px dashed #E5E7EB;border-radius:10px;cursor:pointer;font-size:12px;font-weight:600;color:#6B7280" class="mod-add-c" data-mod="'+m.id+'">'+
+      '<span style="font-size:16px">'+m.i+'</span>'+m.n+'</div>';
+  }).join('')||'<div style="font-size:12px;color:#9CA3AF">All modules active.</div>';
+}
+
+function toggleMod(cb){ var id=cb.dataset.mod; if(cb.checked){ if(state.activeModules.indexOf(id)<0) state.activeModules.push(id); } else { state.activeModules=state.activeModules.filter(function(m){return m!==id;}); } }
+function addMod(id){ if(state.activeModules.indexOf(id)<0) state.activeModules.push(id); buildModuleConfirm(); }
+
+function s7Confirm(){
+  try{
+    localStorage.setItem('cp_usermode',  state.userMode||'general');
+    localStorage.setItem('cp_incomemix', JSON.stringify(state.incomeMix||[]));
+    localStorage.setItem('cp_intent',    state.intent||'');
+    localStorage.setItem('cp_activemods',JSON.stringify(state.activeModules||[]));
+    var ft=document.getElementById('intentFreeText'); if(ft) localStorage.setItem('cp_freetext',ft.value||'');
+  }catch(e){}
+  applyModVis();
+  showScreen('s8');
+}
+
+function applyModVis(){
+  try{
+    var active=JSON.parse(localStorage.getItem('cp_activemods')||'[]');
+    if(!active.length) return;
+    var core=['mod0','mod1','mod2','mod3','mod5','mod8','mod10'];
+    document.querySelectorAll('.nav-item[onclick]').forEach(function(el){
+      var fn=el.getAttribute('onclick')||'', m=fn.match(/switchToM(\d+)/);
+      if(!m) return;
+      var mid='mod'+m[1];
+      el.style.display=(core.indexOf(mid)>-1||active.indexOf(mid)>-1)?'':'none';
+    });
+  }catch(e){}
+}
+
+(function(){ try{ var s=localStorage.getItem('cp_activemods'); if(s&&JSON.parse(s).length) setTimeout(applyModVis,300); }catch(e){} })();
+
+
 // ══════════════════ BUILD LIFE CANVAS RESULT ══════════════════
 
 // ── PEER CIRCLE ──
@@ -2291,12 +2542,17 @@ function buildLifeCanvas() {
   const PROF_LABELS = {ca:'CA',lawyer:'Lawyer',cs:'CS',doctor:'Doctor',engineer:'Engineer',fin_advisor:'Financial Advisor'};
   const BIZ_SIZE_LABELS = {small_biz:'Small Business',medium_biz:'Medium Business',large_biz:'Large Business'};
   const BIZ_STRUCT_LABELS = {proprietor:'Proprietorship',partnership:'Partnership',pvt_ltd:'Pvt Ltd',pub_ltd:'Public Ltd',huf:'HUF',trust:'Trust'};
-  const INV_CAP_LABELS = {lt2k:'Below ₹2,000/month',  '2k_10k':'₹2,000 – ₹10,000/month','10k_50k':'₹10,000 – ₹50,000/month',gt50k:'Above ₹50,000/month'};
+  const INV_CAP_LABELS_OLD = {lt2k:'Below ₹2,000/month',  '2k_10k':'₹2,000 – ₹10,000/month','10k_50k':'₹10,000 – ₹50,000/month',gt50k:'Above ₹50,000/month'};
   const INV_CAP_WISDOM = {
-    lt2k:'Every rupee here is precious. Small amounts invested consistently build life-changing wealth.',
-    '2k_10k':'This is the heartbeat of middle India. Disciplined SIPs at this level build crores over 20 years.',
-    '10k_50k':'Significant capital. The focus now shifts to asset allocation and tax efficiency.',
-    gt50k:'At this level, structure matters as much as returns. Estate planning and diversification become critical.'
+    lt10k:'Every rupee here is the beginning of something powerful. Consistency matters more than amount.',
+    '10k_25k':'This is where financial discipline starts showing real results. Start one SIP this week.',
+    '25k_50k':'This income level allows meaningful investing alongside living well. Structure matters now.',
+    '50k_1l':'Solid income. Tax efficiency, insurance, and asset allocation become critical at this level.',
+    '1l_3l':'High income. The gap between earners and wealth-builders is discipline, not income.',
+    '3l_10l':'Significant capacity. Estate planning, diversification, and CA-guided tax planning are essential.',
+    '10l_25l':'Substantial income. Personal CFO-level thinking needed. Separate personal and entity wealth.',
+    '25l_1cr':'HNI territory. Wealth management, PMS, family office structures relevant.',
+    gt1cr:'Ultra-HNI. Family constitution, succession planning, and multi-entity optimisation are the focus.'
   };
   let profHtml = `<strong>Life Stage:</strong> ${LS_LABELS[state.lifeStage]||state.lifeStage}`;
   if (state.profession) profHtml += ` · <strong>Profession:</strong> ${PROF_LABELS[state.profession]||state.profession}`;
@@ -2351,6 +2607,9 @@ function buildLifeCanvas() {
     bizSize: state.bizSize,
     bizStruct: state.bizStruct,
     invCap: state.invCap,
+    incomeMix: state.incomeMix||[],
+    userMode: state.userMode||'',
+    intent: state.intent||'',
     peers: state.peers || [],
     failures: state.failures || [],
     peerInfluence: state.peerInfluence || '',
@@ -3143,7 +3402,7 @@ function toast(msg){
   </div>
   <div style="display:flex;align-items:center;gap:8px">
     <button onclick="openM3Settings()" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:6px 10px;font-size:13px;color:#6B7280;cursor:pointer">⚙️ Rates</button>
-    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.1</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.2</div>
   </div>
 </header>
 
@@ -3569,7 +3828,7 @@ function m3Alloc(p){
   return a;
 }
 
-function m3Amt(invCap,pct){var mid={lt2k:1000,'2k_10k':6000,'10k_50k':30000,gt50k:75000};return Math.round((mid[invCap]||6000)*pct/100/100)*100;}
+function m3Amt(invCap,pct){var mid={lt10k:5000,'10k_25k':17500,'25k_50k':37500,'50k_1l':75000,'1l_3l':200000,'3l_10l':650000,'10l_25l':1750000,'25l_1cr':6250000,gt1cr:2000000};return Math.round((mid[invCap]||37500)*pct/100/100)*100;}
 function fmtInr(n){if(n>=100000)return '₹'+(n/100000).toFixed(1)+'L';if(n>=1000)return '₹'+(n/1000).toFixed(1)+'K';return '₹'+n;}
 
 function m3Donut(alloc){
@@ -3821,7 +4080,7 @@ function switchToM3(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Debt Analyser · M4</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.1</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.2</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m4w">
@@ -4770,7 +5029,7 @@ function m5RenderGoalList(){
     document.getElementById('m5TotalSIP').textContent = fmtM5(totalSIP)+'/mo';
     // Load investment capacity from M0 profile
     var cv = JSON.parse(localStorage.getItem('cp_canvas')||'{}');
-    var mid={lt2k:1000,'2k_10k':6000,'10k_50k':30000,gt50k:75000};
+    var mid={lt10k:5000,'10k_25k':17500,'25k_50k':37500,'50k_1l':75000,'1l_3l':200000,'3l_10l':650000,'10l_25l':1750000,'25l_1cr':6250000,gt1cr:2000000};
     var capacity = mid[cv.invCap]||0;
     var insightEl = document.getElementById('m5TotalInsight');
     if(insightEl){
@@ -4978,7 +5237,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Monthly P&L · M6</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.1</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.2</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m6w">
@@ -5695,7 +5954,7 @@ function switchToM6(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Goal Planner · M5</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.1</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.2</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m5w">
@@ -6072,7 +6331,7 @@ function m5RenderGoalList(){
     document.getElementById('m5TotalSIP').textContent = fmtM5(totalSIP)+'/mo';
     // Load investment capacity from M0 profile
     var cv = JSON.parse(localStorage.getItem('cp_canvas')||'{}');
-    var mid={lt2k:1000,'2k_10k':6000,'10k_50k':30000,gt50k:75000};
+    var mid={lt10k:5000,'10k_25k':17500,'25k_50k':37500,'50k_1l':75000,'1l_3l':200000,'3l_10l':650000,'10l_25l':1750000,'25l_1cr':6250000,gt1cr:2000000};
     var capacity = mid[cv.invCap]||0;
     var insightEl = document.getElementById('m5TotalInsight');
     if(insightEl){
@@ -6251,7 +6510,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Protection Check · M7</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.1</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.2</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m7w">
@@ -6832,7 +7091,7 @@ function switchToM7(){
       <div class="bsub" style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px">Score Report · M8</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v5.1</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v5.2</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m8w">
@@ -6949,7 +7208,7 @@ function switchToM7(){
     <div id="m8WisdomList"></div>
   </div>
 
-  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v5.1<br>Your financial data stays on your device only.</div>
+  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v5.2<br>Your financial data stays on your device only.</div>
 </div>
 </div><!-- #app8 -->
 
@@ -7108,7 +7367,7 @@ function m8LoadReport(){
     first_earner:'First Time Earner',professional:'Professional',homemaker:'Homemaker',
     thirties:'Thirties',forties:'Forties',pre_retire:'Pre-Retirement',
     post_retire:'Post-Retirement',senior65:'65 Plus',senior75:'75 Plus'};
-  var INV={lt2k:'Below ₹2,000/mo','2k_10k':'₹2K–₹10K/mo','10k_50k':'₹10K–₹50K/mo',gt50k:'₹50K+/mo'};
+  var INV={lt10k:'<₹10K/mo','10k_25k':'₹10K-25K/mo','25k_50k':'₹25K-50K/mo','50k_1l':'₹50K-1L/mo','1l_3l':'₹1L-3L/mo','3l_10l':'₹3L-10L/mo','10l_25l':'₹10L-25L/mo','25l_1cr':'₹25L-1Cr/mo',gt1cr:'₹1Cr+/mo'};
   if(ps && cv.lifeStage){
     ps.innerHTML=[
       {icon:'🪪', label:'Life Stage',         val: LS[cv.lifeStage]||cv.lifeStage},
@@ -7576,7 +7835,7 @@ function switchToM8(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Net Worth · M9</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.1</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.2</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m9w">
@@ -8104,8 +8363,17 @@ function switchToM9(){
     <div class="nav-item-icon" style="background:#ECFDF5">🤖</div>
     <div class="nav-item-text"><span class="nav-item-name" style="color:#059669">Cauvery's View</span><span class="nav-item-desc">Personalised financial insights · Consult SEBI adviser before investing</span></div>
   </button>
+  <div class="nav-drawer-section" style="color:#6B7280">&#x2699;&#xFE0F; Settings</div>
+  <button class="nav-item" onclick="closeNavDrawer();openMyModules()">
+    <div class="nav-item-icon" style="background:#F3F4F6">&#x1F9E9;</div>
+    <div class="nav-item-text"><span class="nav-item-name">My Modules</span><span class="nav-item-desc">Add, remove or reorder your tools</span></div>
+  </button>
+  <button class="nav-item" onclick="closeNavDrawer();resetProfile()">
+    <div class="nav-item-icon" style="background:#FEF2F2">&#x1F504;</div>
+    <div class="nav-item-text"><span class="nav-item-name">Change Profile</span><span class="nav-item-desc">Update income type, sources, intent</span></div>
+  </button>
   <div class="nav-drawer-footer">
-    Cauvery Pulse v5.0 · Elango Industries Limited<br>
+    Cauvery Pulse v5.2 &#xB7; Elango Industries Limited<br>
     Your data stays on your device only.
   </div>
 </div>
@@ -8137,6 +8405,49 @@ function closeNavDrawer(){
   document.getElementById('navDrawer').classList.remove('open');
   document.getElementById('navOverlay').classList.remove('open');
   document.body.style.overflow='';
+}
+
+function openMyModules(){
+  closeNavDrawer();
+  // Show a simple modal-style overlay for module management
+  var saved = [];
+  try{ saved=JSON.parse(localStorage.getItem('cp_activemods')||'[]'); }catch(e){}
+  if(!saved.length) saved=ALL_MODULES.filter(function(m){ return m.l!=='optin'; }).map(function(m){ return m.id; });
+  var html='<div style="position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:10000;display:flex;align-items:flex-end;justify-content:center" onclick="this.remove()">'+
+    '<div style="background:#fff;width:100%;max-width:480px;border-radius:20px 20px 0 0;padding:20px;max-height:85vh;overflow-y:auto" onclick="event.stopPropagation()">'+
+    '<div style="font-size:18px;font-weight:700;color:#111827;margin-bottom:4px">&#x1F9E9; My Modules</div>'+
+    '<div style="font-size:13px;color:#6B7280;margin-bottom:16px">Toggle to show or hide. Core modules cannot be removed.</div>'+
+    ALL_MODULES.map(function(m){
+      var on=saved.indexOf(m.id)>-1||m.l==='core';
+      return '<div style="display:flex;align-items:center;gap:10px;padding:10px 12px;border:1px solid #E5E7EB;border-radius:12px;margin-bottom:6px">'+
+        '<span style="font-size:20px">'+m.i+'</span>'+
+        '<span style="flex:1;font-size:13px;font-weight:600;color:#111827">'+m.n+'</span>'+
+        (m.l==='core'
+          ? '<span style="font-size:10px;font-weight:700;padding:2px 8px;border-radius:10px;background:#ECFDF5;color:#059669">Always On</span>'
+          : '<label><input type="checkbox"'+(on?' checked':'')+' onchange="myModToggle(this,\x27'+m.id+'\x27)" style="width:18px;height:18px;accent-color:#059669;cursor:pointer"></label>'
+        )+
+      '</div>';
+    }).join('')+
+    '<button onclick="var p=this;while(p&&p.style&&p.style.position!==\'fixed\')p=p.parentElement;if(p)p.remove();applyModVis();" style="width:100%;padding:13px;background:#059669;color:#fff;font-weight:700;border:none;border-radius:12px;cursor:pointer;font-size:15px;margin-top:8px">Done &#x2714;</button>'+
+    '</div></div>';
+  document.body.insertAdjacentHTML('beforeend',html);
+}
+
+function myModToggle(cb,id){
+  try{
+    var saved=JSON.parse(localStorage.getItem('cp_activemods')||'[]');
+    if(cb.checked){ if(saved.indexOf(id)<0) saved.push(id); }
+    else { saved=saved.filter(function(m){return m!==id;}); }
+    localStorage.setItem('cp_activemods',JSON.stringify(saved));
+  }catch(e){}
+}
+
+function resetProfile(){
+  closeNavDrawer();
+  if(confirm('This will restart the Life Canvas setup. Your financial data will NOT be deleted. Continue?')){
+    switchToM0();
+    setTimeout(function(){ showScreen('s0'); },300);
+  }
 }
 
 function navTo_M(fnName){
@@ -10126,7 +10437,7 @@ function m15BuildContext(){
       var LS={school:'School Student',college:'College Student',young_adult:'Young Adult',first_earner:'First Time Earner',professional:'Professional',homemaker:'Homemaker',thirties:'Thirties',forties:'Forties',pre_retire:'Pre-Retirement',post_retire:'Post-Retirement'};
       ctx+='LIFE STAGE: '+(LS[cv.lifeStage]||cv.lifeStage)+'\n';
       if(cv.profession) ctx+='PROFESSION: '+cv.profession+'\n';
-      var invCap={lt2k:'Below ₹2K/mo','2k_10k':'₹2K-10K/mo','10k_50k':'₹10K-50K/mo',gt50k:'₹50K+/mo'};
+      var invCap={lt10k:'<₹10K/mo','10k_25k':'₹10K-25K/mo','25k_50k':'₹25K-50K/mo','50k_1l':'₹50K-1L/mo','1l_3l':'₹1L-3L/mo','3l_10l':'₹3L-10L/mo','10l_25l':'₹10L-25L/mo','25l_1cr':'₹25L-1Cr/mo',gt1cr:'₹1Cr+/mo'};
       if(cv.invCap) ctx+='INVESTMENT CAPACITY: '+(invCap[cv.invCap]||cv.invCap)+'\n';
     }
   }catch(e){}
