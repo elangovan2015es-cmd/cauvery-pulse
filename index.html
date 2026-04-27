@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Cauvery Pulse | v4.9 | Build: 20260418-0630 | Elango Industries Limited -->
+<!-- Cauvery Pulse | v5.0 | Build: 20260427-1130 | Elango Industries Limited -->
 <title>Cauvery Pulse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
@@ -419,7 +419,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:22px;heigh
   box-sizing:border-box;
 }
 
-/* ── GLOBAL INPUT STYLES v4.9 ── */
+/* ── GLOBAL INPUT STYLES v5.0 ── */
 input[type=number], input[type=text], input[type=email], select, textarea {
   background:#fff !important;
   border:1.5px solid #E5E7EB !important;
@@ -442,7 +442,7 @@ input[type=number]:focus, input[type=text]:focus, select:focus, textarea:focus {
 }
 select { appearance:none; cursor:pointer; }
 
-/* ── GLOBAL FONT STYLES v4.9 ── */
+/* ── GLOBAL FONT STYLES v5.0 ── */
 .m3-card, .m4-card, .m5-card, .m6-card, .m7-card {
   font-size:14px;
   font-weight:500;
@@ -491,7 +491,7 @@ select { appearance:none; cursor:pointer; }
 /* Section headers */
 h1,h2,h3 { font-weight:700; }
 
-/* ── NAV v4.9 ── */
+/* ── NAV v5.0 ── */
 .nb.act { color:#059669 !important; }
 .nb span:last-child { font-weight:700 !important; font-size:9px !important; }
 .nb span:first-child { font-size:21px !important; }
@@ -553,7 +553,7 @@ strong { color:#111827 }
 #mod8 .nb { color:rgba(255,255,255,.4) !important }
 #mod8 .nb.act { color:#34D399 !important }
 
-/* ══ HAMBURGER NAV DRAWER v4.9 ══ */
+/* ══ HAMBURGER NAV DRAWER v5.0 ══ */
 .bnav { display:none !important; }
 
 /* Hamburger button — top right of every header */
@@ -642,7 +642,7 @@ strong { color:#111827 }
   padding-bottom:24px !important;
 }
 
-/* ══ GLOBAL BOLD READABLE FONTS v4.9 ══ */
+/* ══ GLOBAL BOLD READABLE FONTS v5.0 ══ */
 
 /* Body text — heavier weight throughout */
 body { font-weight:500; font-size:15px; line-height:1.7; }
@@ -763,7 +763,7 @@ strong { font-weight:700 !important; }
 <div id="app0">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Life Canvas · M0</div></div></div>
-  <div class="vtag">v4.9</div>
+  <div class="vtag">v5.0</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 <div class="starfield" id="starfield"></div>
 <div class="aurora"></div>
@@ -1324,7 +1324,7 @@ strong { font-weight:700 !important; }
 <div id="app">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Cauvery Pulse Score · M1</div></div></div>
-  <div class="vtag">v4.9</div>
+  <div class="vtag">v5.0</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 <!-- WELCOME -->
 <div id="welcome" class="screen active">
@@ -1347,7 +1347,7 @@ strong { font-weight:700 !important; }
   </div>
   <div id="canvasBadge" style="display:none;background:linear-gradient(135deg,rgba(108,127,255,.12),rgba(46,196,182,.06));border:1px solid rgba(108,127,255,.25);border-radius:14px;padding:14px 16px;margin-bottom:16px;font-size:13px;line-height:1.8;color:#111827"></div>
   <button class="btn-p" id="mainStartBtn" style="animation:pr 2s ease infinite" onclick="goStart()">🩺 &nbsp;Start My Health Check</button>
-  <button class="btn-s" id="viewBtn" style="display:none" onclick="showScreen('results')">📊 &nbsp;View My Last Results</button>
+  <button class="btn-s" id="viewBtn" style="display:none" onclick="showScreenM1('results')">📊 &nbsp;View My Last Results</button>
   <div class="cp-mark">© Elango Industries Limited · Cauvery Pulse</div>
 </div>
 
@@ -1395,7 +1395,7 @@ strong { font-weight:700 !important; }
   </div>
   <div class="px">
     <button class="btn-p" onclick="goPQ()">Continue → Personality Quiz</button>
-    <button class="btn-s" onclick="showScreen('welcome')">← Back</button>
+    <button class="btn-s" onclick="showScreenM1('welcome')">← Back</button>
   </div>
 </div>
 
@@ -1413,7 +1413,7 @@ strong { font-weight:700 !important; }
     <div class="qdesc" id="pqDesc"></div>
     <div class="gopts" id="pqOpts"></div>
     <button class="btn-p" id="pqNext" onclick="pqNext()">Next →</button>
-    <button class="btn-s" onclick="showScreen('profile')">← Back</button>
+    <button class="btn-s" onclick="showScreenM1('profile')">← Back</button>
   </div>
 </div>
 
@@ -1512,7 +1512,7 @@ strong { font-weight:700 !important; }
 <div id="app2">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Investment School · M2</div></div></div>
-  <div class="vtag">v4.9</div>
+  <div class="vtag">v5.0</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div style="padding:0 20px 80px">
@@ -2051,7 +2051,8 @@ let state = {
 const STEPS = ['s0','s1','s2','s3','s4','s5','s8'];
 
 function showScreen(id) {
-  document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
+  var mod0 = document.getElementById('mod0');
+  (mod0 ? mod0 : document).querySelectorAll('.screen').forEach(function(s){ s.classList.remove('active'); });
   document.getElementById(id).classList.add('active');
   window.scrollTo(0, 0);
 }
@@ -2361,7 +2362,7 @@ function goToM1() {
   // If separate file, pass canvas data via URL or localStorage (already saved)
   const hasM1 = document.getElementById('assess');
   if (hasM1) {
-    showScreen('assess');
+    showScreenM1('assess');
   } else {
     // Navigate to M1 file
     window.location.href = 'index.html';
@@ -2617,19 +2618,20 @@ const QS=[
 let profile={},pqAns=[],pqIdx=0,pType=null,aSc={},aIdx=0,selScore=null;
 
 // ══════════════════ NAVIGATION ══════════════════
-function showScreen(id){
-  document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));
+function showScreenM1(id){
+  var mod1 = document.getElementById('mod1');
+  (mod1 ? mod1 : document).querySelectorAll('.screen').forEach(function(s){ s.classList.remove('active'); });
   document.getElementById(id).classList.add('active');
-  ['nb-home','nb-check','nb-res'].forEach(n=>document.getElementById(n)?.classList.remove('act'));
-  const m={welcome:'nb-home',profile:'nb-check',pquiz:'nb-check',assess:'nb-check',results:'nb-res'};
-  document.getElementById(m[id]||'nb-home')?.classList.add('act');
+  ['nb-home','nb-check','nb-res'].forEach(function(n){ var el=document.getElementById(n); if(el) el.classList.remove('act'); });
+  var m={welcome:'nb-home',profile:'nb-check',pquiz:'nb-check',assess:'nb-check',results:'nb-res'};
+  var el=document.getElementById(m[id]||'nb-home'); if(el) el.classList.add('act');
   window.scrollTo(0,0);
 }
 function navTo(t){
   if(t==='results'&&Object.keys(aSc).length<QS.length){toast('Complete the health check first \uD83E\uDE7A');return;}
-  if(t==='welcome')showScreen('welcome');
+  if(t==='welcome')showScreenM1('welcome');
   else if(t==='profile')goStart();
-  else showScreen(t);
+  else showScreenM1(t);
 }
 function goStart(){
   const canvas=localStorage.getItem('cp_canvas');
@@ -2640,10 +2642,10 @@ function goStart(){
     profile.inc=d.inc||'';
     if(d.ptypes&&d.ptypes.length>0){pqAns=d.ptypes;pType=d.primaryType||d.ptypes[0];}
     aSc={};aIdx=0;selScore=null;
-    showScreen('assess');renderA(0);
+    showScreenM1('assess');renderA(0);
   } else {
     pqAns=[];pqIdx=0;pType=null;aSc={};aIdx=0;selScore=null;
-    showScreen('profile');
+    showScreenM1('profile');
   }
 }
 
@@ -2655,7 +2657,7 @@ function selChip(el,g){
 function goPQ(){
   profile.name=document.getElementById('pName').value||'Friend';
   profile.inc=document.getElementById('pInc').value;
-  showScreen('pquiz');renderPQ(0);
+  showScreenM1('pquiz');renderPQ(0);
 }
 
 // ══════════════════ PERSONALITY QUIZ ══════════════════
@@ -2679,7 +2681,7 @@ function pqNext(){
   if(!s){toast('Please select an option ☝️');return;}
   pqAns.push(s.dataset.type);
   if(pqIdx<4){pqIdx++;renderPQ(pqIdx);}
-  else{computePersonality();showScreen('assess');renderA(0);}
+  else{computePersonality();showScreenM1('assess');renderA(0);}
 }
 function computePersonality(){
   const cnt={};pqAns.forEach(t=>cnt[t]=(cnt[t]||0)+1);
@@ -2738,7 +2740,7 @@ function buildResults(){
   else if(tot>=40){grade='Vulnerable — Needs Work';gc='var(--amber)';tag=`${profile.name}, visible weaknesses exist. Consistent action now prevents big stress later.`;}
   else{grade='Financial Stress Zone';gc='var(--red)';tag=`${profile.name}, urgent corrections needed. Start with debt and insurance today.`;}
 
-  showScreen('results');
+  showScreenM1('results');
   setTimeout(()=>{document.getElementById('resRing').style.strokeDashoffset=(502-(502*tot/100));},100);
   animN(document.getElementById('resNum'),tot,900);
   document.getElementById('resNum').style.color=gc;
@@ -2940,7 +2942,7 @@ function goToM1(){
     profile.age=d.gen==='first_gen'?'young':d.gen==='second_gen'?'mid':'young';
     if(d.ptypes&&d.ptypes.length>0){pqAns=d.ptypes;pType=d.primaryType||d.ptypes[0];}
     aSc={};aIdx=0;selScore=null;
-    showScreen('assess');renderA(0);
+    showScreenM1('assess');renderA(0);
   }
 }
 // ══ UNIFIED TOAST ══
@@ -2955,7 +2957,7 @@ function toast(msg){
 
 
 
-<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v4.9 ══════ -->
+<!-- ══════ MODULE 3: PORTFOLIO BLUEPRINT v5.0 ══════ -->
 <div id="mod3" class="mod">
 <style>
 /* ── M3 LIGHT THEME ── */
@@ -3139,7 +3141,7 @@ function toast(msg){
   </div>
   <div style="display:flex;align-items:center;gap:8px">
     <button onclick="openM3Settings()" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:6px 10px;font-size:13px;color:#6B7280;cursor:pointer">⚙️ Rates</button>
-    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.9</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.0</div>
   </div>
 </header>
 
@@ -3174,7 +3176,7 @@ function toast(msg){
 
 <script>
 // ══════════════════════════════════════════════════════
-// M3 PORTFOLIO BLUEPRINT ENGINE v4.9
+// M3 PORTFOLIO BLUEPRINT ENGINE v5.0
 // ══════════════════════════════════════════════════════
 
 // ── COLOURS ──
@@ -3817,7 +3819,7 @@ function switchToM3(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Debt Analyser · M4</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.9</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.0</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button><button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m4w">
@@ -4165,7 +4167,7 @@ function switchToM3(){
 
 <script>
 // ══════════════════════════════════════════════════
-// M4 — DEBT ANALYSER ENGINE v4.9
+// M4 — DEBT ANALYSER ENGINE v5.0
 // ══════════════════════════════════════════════════
 
 // ── HELPERS ──
@@ -4974,7 +4976,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Monthly P&L · M6</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.9</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.0</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m6w">
@@ -5124,7 +5126,7 @@ function switchToM5(){
 
 <script>
 // ══════════════════════════════════════════
-// M6 — MONTHLY P&L ENGINE v4.9
+// M6 — MONTHLY P&L ENGINE v5.0
 // ══════════════════════════════════════════
 
 function fmtM6(n){
@@ -5568,7 +5570,7 @@ function switchToM6(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Goal Planner · M5</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.9</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.0</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m5w">
@@ -5753,7 +5755,7 @@ function switchToM6(){
 
 <script>
 // ══════════════════════════════════════════
-// M5 — GOAL PLANNER ENGINE v4.9
+// M5 — GOAL PLANNER ENGINE v5.0
 // ══════════════════════════════════════════
 
 function fmtM5(n){
@@ -6124,7 +6126,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Protection Check · M7</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.9</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.0</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m7w">
@@ -6363,7 +6365,7 @@ function switchToM5(){
 
 <script>
 // ══════════════════════════════════════════
-// M7 — PROTECTION CHECK ENGINE v4.9
+// M7 — PROTECTION CHECK ENGINE v5.0
 // ══════════════════════════════════════════
 
 function fmtM7(n){
@@ -6696,7 +6698,7 @@ function switchToM7(){
       <div class="bsub" style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px">Score Report · M8</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v4.9</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v5.0</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m8w">
@@ -6811,7 +6813,7 @@ function switchToM7(){
     <div id="m8WisdomList"></div>
   </div>
 
-  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v4.9<br>Your financial data stays on your device only.</div>
+  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v5.0<br>Your financial data stays on your device only.</div>
 </div>
 </div><!-- #app8 -->
 
@@ -6828,7 +6830,7 @@ function switchToM7(){
 
 <script>
 // ══════════════════════════════════════════
-// M8 — SCORE REPORT + DON'T DO LIST v4.9
+// M8 — SCORE REPORT + DON'T DO LIST v5.0
 // ══════════════════════════════════════════
 
 var M8_DONT_LIST = [
@@ -7245,7 +7247,7 @@ function switchToM8(){
 // Nav handled by single master init below
 </script>
 <script>
-// ══ CAUVERY PULSE — MASTER NAV v4.9 — ALL MODULES ══
+// ══ CAUVERY PULSE — MASTER NAV v5.0 — ALL MODULES ══
 (function(){
   var NAV = [
     ['switchToM0', '🎨', 'Canvas'],
@@ -7370,7 +7372,7 @@ function switchToM8(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Net Worth · M9</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v4.9</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.0</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m9w">
@@ -7502,7 +7504,7 @@ function switchToM8(){
 
 <script>
 // ══════════════════════════════════════════
-// M9 — NET WORTH TRACKER v4.9
+// M9 — NET WORTH TRACKER v5.0
 // ══════════════════════════════════════════
 
 var MONTHS9=['January','February','March','April','May','June','July','August','September','October','November','December'];
@@ -7880,7 +7882,7 @@ function switchToM9(){
     <div class="nav-item-text"><span class="nav-item-name" style="color:#059669">Cauvery's View</span><span class="nav-item-desc">Personalised financial insights · Consult SEBI adviser before investing</span></div>
   </button>
   <div class="nav-drawer-footer">
-    Cauvery Pulse v4.9 · Elango Industries Limited<br>
+    Cauvery Pulse v5.0 · Elango Industries Limited<br>
     Your data stays on your device only.
   </div>
 </div>
@@ -8138,7 +8140,7 @@ function navTo_M(fnName){
 
 <script>
 // ══════════════════════════════════════════
-// M10 — SIP TRACKER ENGINE v4.9
+// M10 — SIP TRACKER ENGINE v5.0
 // ══════════════════════════════════════════
 
 var SIP_TYPES={
@@ -8761,7 +8763,7 @@ function switchToM10(){
 
 <script>
 // ══════════════════════════════════════════
-// M11 — TAX OPTIMISER ENGINE v4.9
+// M11 — TAX OPTIMISER ENGINE v5.0
 // ══════════════════════════════════════════
 
 function fmtM11(n){
@@ -9848,7 +9850,7 @@ function switchToM14(){
 
 <script>
 // ══════════════════════════════════════════
-// M15 — AI FINANCIAL ADVISOR v4.9
+// M15 — AI FINANCIAL ADVISOR v5.0
 // ══════════════════════════════════════════
 
 var m15History = [];
