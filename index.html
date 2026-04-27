@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Cauvery Pulse | v5.1 | Build: 20260427-1500 | Elango Industries Limited -->
+<!-- Cauvery Pulse | v5.1 | Build: 20260427-1700 | Elango Industries Limited -->
 <title>Cauvery Pulse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
@@ -5000,6 +5000,7 @@ function switchToM5(){
   <div class="m6-tabs">
     <div class="m6-tab act" onclick="m6ShowTab('entry',this)">✏️ Entry</div>
     <div class="m6-tab" onclick="m6ShowTab('summary',this)">📊 Summary</div>
+    <div class="m6-tab" onclick="m6ShowTab('slip',this)">📋 Salary Slip</div>
     <div class="m6-tab" onclick="m6ShowTab('rule',this)">⚖️ 50-30-20</div>
     <div class="m6-tab" onclick="m6ShowTab('history',this)">📅 History</div>
   </div>
@@ -5081,6 +5082,83 @@ function switchToM5(){
   </div>
 
   <!-- ── TAB 3: 50-30-20 RULE ── -->
+  <!-- ── TAB: SALARY SLIP GUIDE ── -->
+  <div id="m6tab-slip" style="display:none">
+    <div class="m6-card">
+      <div class="m6-card-title" style="color:#1E3A8A">📋 How to Read Your Salary Slip</div>
+      <div style="font-size:12px;color:#6B7280;font-weight:600;margin-bottom:14px;line-height:1.7">Your salary slip has many components. Here is exactly which number goes where in the M6 Entry tab. Use M16 Form 16 / TDS Planner for full tax breakdown.</div>
+
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#059669;margin-bottom:8px">Earnings side → Income</div>
+      <div style="background:#F9FAFB;border-radius:10px;overflow:hidden;margin-bottom:14px">
+        <div style="display:flex;gap:0;padding:8px 12px;background:#ECFDF5;font-size:11px;font-weight:700;color:#065F46;border-bottom:1px solid #E5E7EB">
+          <span style="flex:1">Salary Slip Line Item</span><span style="width:130px;text-align:right">Enter In M6 As</span>
+        </div>
+        <div style="display:flex;gap:0;padding:9px 12px;border-bottom:1px solid #F3F4F6;font-size:12px;font-weight:600;color:#374151"><span style="flex:1">Basic Salary</span><span style="width:130px;text-align:right;color:#059669">Salary / Business Income</span></div>
+        <div style="display:flex;gap:0;padding:9px 12px;border-bottom:1px solid #F3F4F6;font-size:12px;font-weight:600;color:#374151"><span style="flex:1">HRA (House Rent Allowance)</span><span style="width:130px;text-align:right;color:#059669">Salary / Business Income</span></div>
+        <div style="display:flex;gap:0;padding:9px 12px;border-bottom:1px solid #F3F4F6;font-size:12px;font-weight:600;color:#374151"><span style="flex:1">Special / Other Allowances</span><span style="width:130px;text-align:right;color:#059669">Salary / Business Income</span></div>
+        <div style="display:flex;gap:0;padding:9px 12px;border-bottom:1px solid #F3F4F6;font-size:12px;font-weight:600;color:#6B7280"><span style="flex:1">LTA (Leave Travel Allowance)</span><span style="width:130px;text-align:right;color:#059669">Salary / Business Income</span></div>
+        <div style="display:flex;gap:0;padding:9px 12px;font-size:12px;font-weight:600;color:#6B7280"><span style="flex:1">Gross Salary (total earnings)</span><span style="width:130px;text-align:right;font-weight:700;color:#059669">= This one number</span></div>
+      </div>
+
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#7C3AED;margin-bottom:8px">Deductions side → Investments</div>
+      <div style="background:#F9FAFB;border-radius:10px;overflow:hidden;margin-bottom:14px">
+        <div style="display:flex;gap:0;padding:8px 12px;background:#F5F3FF;font-size:11px;font-weight:700;color:#5B21B6;border-bottom:1px solid #E5E7EB">
+          <span style="flex:1">Salary Slip Line Item</span><span style="width:130px;text-align:right">Enter In M6 As</span>
+        </div>
+        <div style="display:flex;gap:0;padding:9px 12px;border-bottom:1px solid #F3F4F6;font-size:12px;font-weight:600;color:#374151"><span style="flex:1">EPF / PF Deduction (employee share)</span><span style="width:130px;text-align:right;color:#7C3AED">EPF / VPF</span></div>
+        <div style="display:flex;gap:0;padding:9px 12px;border-bottom:1px solid #F3F4F6;font-size:12px;font-weight:600;color:#374151"><span style="flex:1">NPS Deduction</span><span style="width:130px;text-align:right;color:#7C3AED">NPS</span></div>
+        <div style="display:flex;gap:0;padding:9px 12px;font-size:12px;font-weight:600;color:#374151"><span style="flex:1">VPF (Voluntary PF)</span><span style="width:130px;text-align:right;color:#7C3AED">EPF / VPF</span></div>
+      </div>
+
+      <div style="font-size:11px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:#DC2626;margin-bottom:8px">Deductions side → Fixed Expenses</div>
+      <div style="background:#F9FAFB;border-radius:10px;overflow:hidden;margin-bottom:14px">
+        <div style="display:flex;gap:0;padding:8px 12px;background:#FEF2F2;font-size:11px;font-weight:700;color:#991B1B;border-bottom:1px solid #E5E7EB">
+          <span style="flex:1">Salary Slip Line Item</span><span style="width:130px;text-align:right">Enter In M6 As</span>
+        </div>
+        <div style="display:flex;gap:0;padding:9px 12px;border-bottom:1px solid #F3F4F6;font-size:12px;font-weight:600;color:#374151"><span style="flex:1">Professional Tax (PT)</span><span style="width:130px;text-align:right;color:#DC2626">Fixed Expenses → Other</span></div>
+        <div style="display:flex;gap:0;padding:9px 12px;border-bottom:1px solid #F3F4F6;font-size:12px;font-weight:600;color:#374151"><span style="flex:1">TDS (Tax Deducted at Source)</span><span style="width:130px;text-align:right;color:#DC2626">Not in M6 — use M16</span></div>
+        <div style="display:flex;gap:0;padding:9px 12px;font-size:12px;font-weight:600;color:#374151"><span style="flex:1">Group Insurance Premium</span><span style="width:130px;text-align:right;color:#DC2626">Insurance Premiums</span></div>
+      </div>
+
+      <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:10px;padding:12px;margin-bottom:12px">
+        <div style="font-size:13px;font-weight:700;color:#1E3A8A;margin-bottom:6px">💡 What to enter as "Salary / Business Income" in M6</div>
+        <div style="font-size:13px;font-weight:600;color:#374151;line-height:1.85">
+          Use your <strong style="color:#1E3A8A">Net Take-Home Pay</strong> — the amount actually credited to your bank account.<br><br>
+          Net Take-Home = Gross Salary − EPF − NPS − PT − TDS − Group Insurance<br><br>
+          This is the most accurate number for your personal P&L. Everything else is handled in the Investments and Expenses sections.
+        </div>
+      </div>
+
+      <div style="background:#FFFBEB;border:1px solid #FCD34D;border-radius:10px;padding:12px">
+        <div style="font-size:12px;font-weight:700;color:#92400E;margin-bottom:4px">⚠️ Employer EPF contribution</div>
+        <div style="font-size:12px;font-weight:600;color:#374151;line-height:1.7">Your employer also contributes ~12% of Basic to EPF. This does NOT appear on your bank statement — it goes directly to your EPFO account. You can enter this in M9 Net Worth → EPF Monthly Contribution to track it in your net worth and retirement projections.</div>
+      </div>
+    </div>
+
+    <div class="m6-card">
+      <div class="m6-card-title" style="color:#1E3A8A">📊 Salary Slip — Quick Pre-fill</div>
+      <div style="font-size:12px;color:#6B7280;font-weight:600;margin-bottom:12px">Enter your key salary slip figures here. We will pre-fill the Entry tab for you.</div>
+      <div class="m6-label">Net Take-Home (bank credit) (₹/month)</div>
+      <input class="m6-input" type="number" id="slip_takehome" placeholder="e.g. 75000">
+      <div class="m6-label">EPF Deduction — Employee Share (₹/month)</div>
+      <input class="m6-input" type="number" id="slip_epf" placeholder="e.g. 3600">
+      <div class="m6-label">NPS Deduction (₹/month)</div>
+      <input class="m6-input" type="number" id="slip_nps" placeholder="0">
+      <div class="m6-label">Home Loan / Car Loan EMI (if debited from salary)</div>
+      <input class="m6-input" type="number" id="slip_emi" placeholder="0">
+      <button style="width:100%;padding:13px;background:linear-gradient(135deg,#1E3A8A,#2563EB);color:#fff;font-weight:700;border:none;border-radius:12px;cursor:pointer;font-size:15px;margin-top:4px" onclick="m6PreFillFromSlip()">📋 Pre-fill Entry Tab from Salary Slip →</button>
+    </div>
+
+    <div class="m6-card">
+      <div class="m6-card-title">🔗 Connected Modules</div>
+      <div style="font-size:13px;font-weight:600;color:#374151;line-height:1.9">
+        <div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #F3F4F6;cursor:pointer" onclick="switchToM16()"><span style="font-size:18px">📄</span><span style="flex:1">Form 16 / TDS Planner (M16) — full salary tax computation, TDS reconciliation, ITR readiness</span><span style="color:#1E3A8A;font-weight:700">→</span></div>
+        <div style="display:flex;align-items:center;gap:10px;padding:8px 0;border-bottom:1px solid #F3F4F6;cursor:pointer" onclick="switchToM14()"><span style="font-size:18px">💼</span><span style="flex:1">Salary Optimiser (M14) — CTC restructuring, more take-home pay</span><span style="color:#1E3A8A;font-weight:700">→</span></div>
+        <div style="display:flex;align-items:center;gap:10px;padding:8px 0;cursor:pointer" onclick="switchToM9()"><span style="font-size:18px">💎</span><span style="flex:1">Net Worth (M9) — enter EPF balance + monthly contribution for retirement projection</span><span style="color:#1E3A8A;font-weight:700">→</span></div>
+      </div>
+    </div>
+  </div>
+
   <div id="m6tab-rule" style="display:none">
     <div class="m6-card">
       <div class="m6-card-title">⚖️ The 50-30-20 Rule</div>
@@ -5457,7 +5535,7 @@ function m6RenderHistory(){
 
 // ── TABS ──
 function m6ShowTab(tab,el){
-  ['entry','summary','rule','history'].forEach(function(t){
+  ['entry','summary','slip','rule','history'].forEach(function(t){
     var e=document.getElementById('m6tab-'+t);if(e)e.style.display='none';
   });
   document.querySelectorAll('.m6-tab').forEach(function(t){t.classList.remove('act');});
@@ -5466,6 +5544,51 @@ function m6ShowTab(tab,el){
   if(tab==='summary')m6RenderSummary();
   if(tab==='rule')m6RenderRule();
   if(tab==='history')m6RenderHistory();
+  if(tab==='slip')m6LoadSlipFromM16();
+}
+
+function m6LoadSlipFromM16(){
+  try{
+    var d=JSON.parse(localStorage.getItem('cp_m16')||'{}');
+    // Pre-fill gross salary from M16 if available
+    if(d.grossSalary && !document.getElementById('slip_takehome').value){
+      // Estimate take-home: gross minus estimated EPF(12%) and TDS
+      var epfEst = (d.grossSalary/12)*0.12*0.4; // rough EPF on basic
+      document.getElementById('slip_epf').value = Math.round(epfEst/12);
+    }
+  }catch(e){}
+}
+
+function m6PreFillFromSlip(){
+  var takehome = parseFloat(document.getElementById('slip_takehome').value)||0;
+  var epf      = parseFloat(document.getElementById('slip_epf').value)||0;
+  var nps      = parseFloat(document.getElementById('slip_nps').value)||0;
+  var emi      = parseFloat(document.getElementById('slip_emi').value)||0;
+
+  if(!takehome){ alert('Please enter your net take-home pay first.'); return; }
+
+  // Pre-fill Entry tab
+  var salEl = document.getElementById('inc_salary');
+  var epfEl = document.getElementById('inv_epf');
+  var npsEl = document.getElementById('inv_nps');
+  var emiEl = document.getElementById('exp_emi');
+  if(salEl) salEl.value = takehome;
+  if(epfEl && epf) epfEl.value = epf;
+  if(npsEl && nps) npsEl.value = nps;
+  if(emiEl && emi) emiEl.value = emi;
+
+  // Also save EPF to M9/M13
+  try{
+    var ret=JSON.parse(localStorage.getItem('cp_retirement_inputs')||'{}');
+    ret.epfMonthly = epf * 2; // employee + employer match
+    localStorage.setItem('cp_retirement_inputs',JSON.stringify(ret));
+  }catch(e){}
+
+  m6Calc();
+  m6ShowTab('entry', document.querySelector('.m6-tab'));
+
+  var t=document.getElementById('toast6')||document.querySelector('#mod6 .toast');
+  if(t){t.textContent='Entry tab pre-filled from salary slip ✓';t.classList.add('show');setTimeout(function(){t.classList.remove('show');},2200);}
 }
 
 // ── MODULE SWITCHER ──
@@ -6763,9 +6886,11 @@ function switchToM7(){
       <div class="m8-section-title">Score Pillars</div>
       <div class="m8-pillars" id="m8Pillars">
         <div class="m8-pillar"><div class="m8-pillar-icon">🎯</div><div class="m8-pillar-val" id="p_goals">—</div><div class="m8-pillar-lbl">Goals Set</div></div>
-        <div class="m8-pillar"><div class="m8-pillar-icon">💳</div><div class="m8-pillar-val" id="p_debt">—</div><div class="m8-pillar-lbl">Debt Health</div></div>
+        <div class="m8-pillar"><div class="m8-pillar-icon">💳</div><div class="m8-pillar-val" id="p_debt">—</div><div class="m8-pillar-lbl">Debt DTI</div></div>
         <div class="m8-pillar"><div class="m8-pillar-icon">🛡️</div><div class="m8-pillar-val" id="p_protect">—</div><div class="m8-pillar-lbl">Protection</div></div>
         <div class="m8-pillar"><div class="m8-pillar-icon">📊</div><div class="m8-pillar-val" id="p_savings">—</div><div class="m8-pillar-lbl">Savings Rate</div></div>
+        <div class="m8-pillar"><div class="m8-pillar-icon">💎</div><div class="m8-pillar-val" id="p_networth">—</div><div class="m8-pillar-lbl">Net Worth</div></div>
+        <div class="m8-pillar"><div class="m8-pillar-icon">📄</div><div class="m8-pillar-val" id="p_tds">—</div><div class="m8-pillar-lbl">Tax Status</div></div>
       </div>
     </div>
 
@@ -6824,7 +6949,7 @@ function switchToM7(){
     <div id="m8WisdomList"></div>
   </div>
 
-  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v5.0<br>Your financial data stays on your device only.</div>
+  <div style="text-align:center;padding:20px;font-size:11px;color:rgba(255,255,255,.2);letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse v5.1<br>Your financial data stays on your device only.</div>
 </div>
 </div><!-- #app8 -->
 
@@ -6939,14 +7064,18 @@ var M8_WISDOM = [
 
 // ── MODULE STATUS ──
 var M8_MODULES = [
-  {id:'mod0', icon:'🎨', name:'Life Canvas',        key:'cp_canvas'},
-  {id:'mod1', icon:'🩺', name:'Pulse Score',         key:'cp_score'},
-  {id:'mod2', icon:'📚', name:'Investment School',   key:null},
-  {id:'mod3', icon:'🗺️', name:'Portfolio Blueprint', key:'cp_canvas'},
-  {id:'mod4', icon:'💳', name:'Debt Analyser',       key:null},
-  {id:'mod5', icon:'🎯', name:'Goal Planner',        key:'cp_goals'},
-  {id:'mod6', icon:'📊', name:'Monthly P&L',         key:'cp_pl'},
-  {id:'mod7', icon:'🛡️', name:'Protection Check',    key:'cp_protection'},
+  {id:'mod0', icon:'🎨', name:'Life Canvas',          key:'cp_canvas'},
+  {id:'mod1', icon:'🩺', name:'Pulse Score',           key:'cp_score'},
+  {id:'mod5', icon:'🎯', name:'Goal Planner',          key:'cp_goals'},
+  {id:'mod4', icon:'💳', name:'Debt Analyser',         key:null},
+  {id:'mod6', icon:'📊', name:'Monthly P&L',           key:'cp_pl'},
+  {id:'mod9', icon:'💎', name:'Net Worth',             key:'cp_networth'},
+  {id:'mod7', icon:'🛡️', name:'Protection Check',      key:'cp_protection'},
+  {id:'mod13',icon:'🛫', name:'Retirement Runway',     key:'cp_retirement_inputs'},
+  {id:'mod11',icon:'🧾', name:'Tax Optimiser',         key:null},
+  {id:'mod16',icon:'📄', name:'Form 16 / TDS Planner', key:'cp_m16'},
+  {id:'mod2', icon:'📚', name:'Investment School',     key:null},
+  {id:'mod3', icon:'🗺️', name:'Portfolio Blueprint',   key:'cp_canvas'},
 ];
 
 function m8LoadReport(){
@@ -6955,6 +7084,9 @@ function m8LoadReport(){
   var goals = JSON.parse(localStorage.getItem('cp_goals')||'[]');
   var pl    = JSON.parse(localStorage.getItem('cp_pl')||'{}');
   var prot  = JSON.parse(localStorage.getItem('cp_protection')||'{}');
+  var nwData= JSON.parse(localStorage.getItem('cp_networth')||'{}');
+  var m16   = JSON.parse(localStorage.getItem('cp_m16')||'{}');
+  var retIn = JSON.parse(localStorage.getItem('cp_retirement_inputs')||'{}');
 
   // ── Overall Pulse Score ──
   var pulseScore = score.total || 0;
@@ -7036,6 +7168,61 @@ function m8LoadReport(){
       savEl.textContent='—';
     }
   }
+
+  // ── Net Worth pillar ──
+  var nwEl=document.getElementById('p_networth');
+  if(nwEl){
+    // Try to get latest net worth snapshot
+    var nwSnaps=JSON.parse(localStorage.getItem('cp_networth')||'null');
+    if(!nwSnaps){ nwSnaps=JSON.parse(localStorage.getItem('cp_nw_history')||'[]'); }
+    var nwVal=0;
+    try{
+      // cp_networth stores current calculated value
+      var nwRaw=localStorage.getItem('cp_networth');
+      if(nwRaw){ var nwObj=JSON.parse(nwRaw); nwVal=nwObj.netWorth||0; }
+    }catch(e){}
+    if(nwVal!==0){
+      var absNW=Math.abs(nwVal);
+      var nwStr=absNW>=10000000?((nwVal<0?'-':'')+'₹'+(absNW/10000000).toFixed(2)+' Cr'):
+                absNW>=100000?((nwVal<0?'-':'')+'₹'+(absNW/100000).toFixed(1)+' L'):
+                (nwVal<0?'-':'')+'₹'+Math.round(absNW).toLocaleString('en-IN');
+      nwEl.textContent=nwStr;
+      nwEl.style.color=nwVal>=0?'#34D399':'#F87171';
+    } else { nwEl.textContent='Enter M9'; nwEl.style.color='rgba(255,255,255,.3)'; }
+  }
+
+  // ── TDS / Tax Status pillar from M16 ──
+  var tdsEl=document.getElementById('p_tds');
+  if(tdsEl){
+    if(m16.totalTax && m16.totalTax>0){
+      var tdsM16=JSON.parse(localStorage.getItem('cp_m16_tds')||'null');
+      var totalPaid=tdsM16?tdsM16.totalPaid:0;
+      var balance=m16.totalTax-(totalPaid||0);
+      var isRefund=balance<0;
+      var absB=Math.abs(balance);
+      var bStr=absB>=100000?'₹'+(absB/100000).toFixed(1)+'L':'₹'+Math.round(absB).toLocaleString('en-IN');
+      tdsEl.textContent=totalPaid>0?(isRefund?'Refund '+bStr:balance===0?'Settled':bStr+' Due'):'Tax: ₹'+(m16.totalTax>=100000?(m16.totalTax/100000).toFixed(1)+'L':Math.round(m16.totalTax).toLocaleString('en-IN'));
+      tdsEl.style.color=totalPaid>0?(isRefund?'#34D399':balance===0?'#34D399':'#F87171'):'rgba(255,255,255,.5)';
+    } else { tdsEl.textContent='Enter M16'; tdsEl.style.color='rgba(255,255,255,.3)'; }
+  }
+
+  // ── Add TDS row to profile summary if M16 has data ──
+  var ps=document.getElementById('m8ProfileSummary');
+  if(ps && cv.lifeStage && m16.totalTax){
+    var tdsNote='Tax: ₹'+(m16.totalTax>=100000?(m16.totalTax/100000).toFixed(1)+' L':Math.round(m16.totalTax).toLocaleString('en-IN'))+' ('+( m16.regime==='new'?'New':'Old')+' Regime)';
+    var epfNote=retIn.epfMonthly?('EPF: ₹'+Math.round(retIn.epfMonthly*2).toLocaleString('en-IN')+'/mo (employee+employer)'):'—';
+    var extra=[
+      {icon:'📄', label:'Tax Liability FY25-26', val:tdsNote},
+      {icon:'🏛️', label:'EPF Monthly Flow',       val:epfNote},
+    ];
+    var existingRows=ps.querySelectorAll('.m8-profile-row');
+    extra.forEach(function(r){
+      var div=document.createElement('div');
+      div.className='m8-profile-row';
+      div.innerHTML='<div class="m8-profile-icon">'+r.icon+'</div><div class="m8-profile-label">'+r.label+'</div><div class="m8-profile-val">'+r.val+'</div>';
+      ps.appendChild(div);
+    });
+  }
 }
 
 // ── DON'T DO LIST ──
@@ -7104,11 +7291,17 @@ function m8CopyReport(){
   var LS={school:'School Student',college:'College Student',young_adult:'Young Adult',
     first_earner:'First Time Earner',professional:'Professional',homemaker:'Homemaker',
     thirties:'Thirties',forties:'Forties',pre_retire:'Pre-Retirement'};
+  var nwCopy=JSON.parse(localStorage.getItem('cp_networth')||'{}');
+  var m16Copy=JSON.parse(localStorage.getItem('cp_m16')||'{}');
+  var tdsCopy=JSON.parse(localStorage.getItem('cp_m16_tds')||'{}');
   var txt='🌊 CAUVERY PULSE — MY FINANCIAL HEALTH REPORT\n';
   txt+='Generated: '+new Date().toLocaleDateString('en-IN')+'\n\n';
   if(cv.lifeStage) txt+='Life Stage: '+(LS[cv.lifeStage]||cv.lifeStage)+'\n';
   if(score.total)  txt+='Pulse Score: '+score.total+'/100\n';
   txt+='Goals Set: '+goals.length+'\n';
+  if(nwCopy.netWorth) txt+='Net Worth: ₹'+(nwCopy.netWorth>=100000?(nwCopy.netWorth/100000).toFixed(1)+' L':Math.round(nwCopy.netWorth).toLocaleString('en-IN'))+'\n';
+  if(m16Copy.totalTax) txt+='Tax Liability FY25-26: ₹'+(m16Copy.totalTax>=100000?(m16Copy.totalTax/100000).toFixed(1)+' L':Math.round(m16Copy.totalTax).toLocaleString('en-IN'))+' ('+( m16Copy.regime==='new'?'New':'Old')+' Regime)\n';
+  if(tdsCopy.balance!==undefined) txt+=(tdsCopy.balance<0?'Refund Due: ₹'+Math.round(Math.abs(tdsCopy.balance)).toLocaleString('en-IN'):'Balance Tax Due: ₹'+Math.round(tdsCopy.balance).toLocaleString('en-IN'))+'\n';
   txt+='\nPowered by Cauvery Pulse · Elango Industries Limited\n';
   txt+='cauvery-pulse.github.io';
   navigator.clipboard&&navigator.clipboard.writeText(txt).then(function(){
@@ -7558,6 +7751,13 @@ function m9Calc(){
   document.getElementById('m9TotalLiab').textContent=fmtM9(liabs);
   document.getElementById('m9NetWorthVal').textContent=fmtM9(nw);
   document.getElementById('m9NetWorthVal').style.color=nwColor;
+
+  // Save live net worth for M8 Score Report
+  try{
+    var existing=JSON.parse(localStorage.getItem('cp_networth')||'{}');
+    existing.netWorth=nw; existing.assets=assets; existing.liabs=liabs; existing.ts=Date.now();
+    localStorage.setItem('cp_networth',JSON.stringify(existing));
+  }catch(e){}
 
   // Quick result
   var qr=document.getElementById('m9QuickResult');
@@ -10642,6 +10842,11 @@ function m16CalcTDS(){
   if(balance > 10000 && (advTax+satTax) === 0){
     advTaxNote = '<div class="m16-alert m16-amber" style="margin-top:10px"><div class="m16-alert-icon">⚠️</div><div class="m16-alert-text"><strong>Advance Tax may apply.</strong> Your balance tax is '+fmt16(balance)+'. If this is from non-salary income (FD, capital gains, rent), advance tax should have been paid in instalments. Interest u/s 234C may be levied.</div></div>';
   }
+
+  // Save TDS reconciliation data for M8 Score Report
+  try{
+    localStorage.setItem('cp_m16_tds', JSON.stringify({totalPaid:totalTDSPaid,balance:balance,ts:Date.now()}));
+  }catch(e){}
 
   var r = document.getElementById('m16TDSResult');
   r.style.display = 'block';
