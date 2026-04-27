@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Cauvery Pulse | v5.0 | Build: 20260427-1130 | Elango Industries Limited -->
+<!-- Cauvery Pulse | v5.1 | Build: 20260427-1430 | Elango Industries Limited -->
 <title>Cauvery Pulse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
@@ -763,7 +763,7 @@ strong { font-weight:700 !important; }
 <div id="app0">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Life Canvas · M0</div></div></div>
-  <div class="vtag">v5.0</div>
+  <div class="vtag">v5.1</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 <div class="starfield" id="starfield"></div>
 <div class="aurora"></div>
@@ -1324,7 +1324,7 @@ strong { font-weight:700 !important; }
 <div id="app">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Cauvery Pulse Score · M1</div></div></div>
-  <div class="vtag">v5.0</div>
+  <div class="vtag">v5.1</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 <!-- WELCOME -->
 <div id="welcome" class="screen active">
@@ -1512,7 +1512,7 @@ strong { font-weight:700 !important; }
 <div id="app2">
 <header>
   <div class="brand"><div class="blogo">🌊</div><div><div class="bname">Cauvery Pulse</div><div class="bsub">Investment School · M2</div></div></div>
-  <div class="vtag">v5.0</div>
+  <div class="vtag">v5.1</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div style="padding:0 20px 80px">
@@ -1937,7 +1937,7 @@ function closeM2Detail(){
 
 // ══ UPDATED MODULE SWITCHER (now includes M2) ══
 function switchToM2(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15','mod16'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod2').classList.add('act');
@@ -1945,14 +1945,14 @@ function switchToM2(){
   renderM2();
 }
 function switchToM1(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15','mod16'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod1').classList.add('act');
   window.scrollTo(0,0);
 }
 function switchToM0(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15','mod16'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod0').classList.add('act');
@@ -3141,7 +3141,7 @@ function toast(msg){
   </div>
   <div style="display:flex;align-items:center;gap:8px">
     <button onclick="openM3Settings()" style="background:#F9FAFB;border:1px solid #E5E7EB;border-radius:8px;padding:6px 10px;font-size:13px;color:#6B7280;cursor:pointer">⚙️ Rates</button>
-    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.0</div>
+    <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.1</div>
   </div>
 </header>
 
@@ -3697,7 +3697,7 @@ function saveM3Rates(){
 
 // ── SWITCHERS ──
 function switchToM3(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15','mod16'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod3').classList.add('act');
@@ -3819,8 +3819,8 @@ function switchToM3(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Debt Analyser · M4</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.0</div>
-<button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button><button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.1</div>
+<button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m4w">
 
@@ -4598,7 +4598,7 @@ function calcInflation(){
 
 // ── MODULE SWITCHER ──
 function switchToM4(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15','mod16'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod4').classList.add('act');
@@ -4858,7 +4858,7 @@ function m5LoadProfile(){
 
 // ── MODULE SWITCHER ──
 function switchToM5(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15','mod16'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod5').classList.add('act');
@@ -4976,7 +4976,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Monthly P&L · M6</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.0</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.1</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m6w">
@@ -5468,7 +5468,7 @@ function m6ShowTab(tab,el){
 
 // ── MODULE SWITCHER ──
 function switchToM6(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15','mod16'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod6').classList.add('act');
@@ -5570,7 +5570,7 @@ function switchToM6(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Goal Planner · M5</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.0</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.1</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m5w">
@@ -6126,7 +6126,7 @@ function switchToM5(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Protection Check · M7</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.0</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.1</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m7w">
@@ -6250,7 +6250,10 @@ function switchToM5(){
         <option value="major">Major — diabetes, heart condition, cancer history</option>
       </select>
 
-      <div class="m7-label">Existing Health Cover (₹ per year)</div>
+      <div class="m7-label">Employer Group Cover (₹) — if salaried</div>
+      <input class="m7-input" type="number" id="hcEmployer" placeholder="0 — check HR letter / ESI card">
+      <div style="font-size:11px;color:#D97706;background:#FFFBEB;border-radius:8px;padding:8px 10px;margin-bottom:12px;font-weight:600">⚠️ Employer cover lapses on resignation. Never rely on it as your only cover.</div>
+      <div class="m7-label">Personal Health Cover (₹) — your own policy</div>
       <input class="m7-input" type="number" id="hcExisting" placeholder="0 — if none">
 
       <button class="m7-btn" onclick="m7CalcHealth()">Calculate Health Cover Need →</button>
@@ -6445,30 +6448,35 @@ function m7CalcHealth(){
   var family = parseInt(document.getElementById('hcFamily').value)||1;
   var age    = parseFloat(document.getElementById('hcAge').value)||35;
   var pre    = document.getElementById('hcPre').value;
+  var empCover = parseFloat(document.getElementById('hcEmployer').value)||0;
   var exist  = parseFloat(document.getElementById('hcExisting').value)||0;
+  var totalExist = exist + empCover; // combined cover
 
   var basePerPerson = {metro:500000, tier1:350000, tier2:250000}[city]||500000;
   var familyMultiplier = family<=2?1.5:family<=4?2.0:2.5;
   var ageMultiplier = age<35?1:age<45?1.2:age<55?1.5:2.0;
   var preMultiplier = {none:1,mild:1.3,major:1.6}[pre]||1;
   var recommended = Math.ceil(basePerPerson * familyMultiplier * ageMultiplier * preMultiplier / 500000) * 500000;
-  var gap = Math.max(0, recommended - exist);
-  var covPct = recommended>0?Math.min(100,Math.round(exist/recommended*100)):0;
+  var gap = Math.max(0, recommended - totalExist);
+  var covPct = recommended>0?Math.min(100,Math.round(totalExist/recommended*100)):0;
+  var personalGap = Math.max(0, recommended - exist); // gap ignoring employer cover
 
   var status, statusClass;
-  if(exist >= recommended){status='✅ Well Covered';statusClass='m7-ok';}
-  else if(exist >= recommended*0.5){status='⚠️ Partial Cover';statusClass='m7-warn';}
+  if(totalExist >= recommended){status='✅ Well Covered';statusClass='m7-ok';}
+  else if(totalExist >= recommended*0.5){status='⚠️ Partial Cover';statusClass='m7-warn';}
   else{status='🔴 Underinsured';statusClass='m7-danger';}
 
   // Premium estimate
-  var annualPremium = Math.round(recommended/100000 * (family<=2?800:600) * (age<35?1:age<45?1.4:1.9));
-  var superTopupPremium = Math.round((recommended*0.8)/100000 * 200);
+  var annualPremium = Math.round(personalGap/100000 * (family<=2?800:600) * (age<35?1:age<45?1.4:1.9));
+  var superTopupPremium = Math.round((personalGap*0.8)/100000 * 200);
 
-  var insight = exist>=recommended ?
-    '<div class="m7-insight m7-insight-ok"><strong>Well protected.</strong> Your health cover of '+fmtM7(exist)+' meets the recommended '+fmtM7(recommended)+' for your family profile. Review every 3 years for inflation adjustment.</div>' :
-    exist>=recommended*0.5 ?
-    '<div class="m7-insight m7-insight-warn"><strong>Gap of '+fmtM7(gap)+'.</strong> Consider a super top-up plan of '+fmtM7(gap)+' over your existing base — costs approximately '+fmtM7(superTopupPremium)+'/year. Much cheaper than buying a new higher base plan.</div>' :
-    '<div class="m7-insight"><strong>Significantly underinsured.</strong> Recommended cover for your profile is '+fmtM7(recommended)+'. A new floater plan costs approximately '+fmtM7(annualPremium)+'/year. Do not delay — premiums rise sharply after '+Math.min(age+5,45)+'.</div>';
+  var empNote = empCover>0?'<div style="background:#FFFBEB;border:1px solid #FCD34D;border-radius:8px;padding:8px 10px;margin-top:8px;font-size:12px;font-weight:600;color:#92400E">⚠️ Employer cover of '+fmtM7(empCover)+' included in total. This lapses if you change jobs. Personal cover of '+fmtM7(exist)+' is your portable protection.</div>':'';
+
+  var insight = totalExist>=recommended ?
+    '<div class="m7-insight m7-insight-ok"><strong>Well protected.</strong> Total cover '+fmtM7(totalExist)+' meets the recommended '+fmtM7(recommended)+'.'+( empCover>0 && exist<recommended*0.5 ? ' However, personal cover of '+fmtM7(exist)+' alone is insufficient — buy a personal policy before job change.':'')+'</div>' :
+    totalExist>=recommended*0.5 ?
+    '<div class="m7-insight m7-insight-warn"><strong>Gap of '+fmtM7(gap)+'.</strong> Consider a super top-up plan of '+fmtM7(personalGap)+' over your existing base — costs approximately '+fmtM7(superTopupPremium)+'/year.</div>' :
+    '<div class="m7-insight"><strong>Significantly underinsured.</strong> Recommended cover for your profile is '+fmtM7(recommended)+'. A new floater plan costs approximately '+fmtM7(annualPremium)+'/year.</div>';
 
   document.getElementById('m7HealthResult').innerHTML =
     '<div class="m7-result-box">'+
@@ -6478,15 +6486,16 @@ function m7CalcHealth(){
       '</div>'+
       '<div class="m7-result-grid">'+
         '<div class="m7-result-cell"><div class="m7-result-val">'+fmtM7(recommended)+'</div><div class="m7-result-lbl">Recommended</div></div>'+
-        '<div class="m7-result-cell"><div class="m7-result-val" style="color:'+(exist>0?'#059669':'#9CA3AF')+'">'+fmtM7(exist)+'</div><div class="m7-result-lbl">Your Cover</div></div>'+
+        '<div class="m7-result-cell"><div class="m7-result-val" style="color:'+(totalExist>0?'#059669':'#9CA3AF')+'">'+fmtM7(totalExist)+'</div><div class="m7-result-lbl">Total Cover</div></div>'+
         '<div class="m7-result-cell"><div class="m7-result-val" style="color:#DC2626">'+fmtM7(gap)+'</div><div class="m7-result-lbl">Gap</div></div>'+
-        '<div class="m7-result-cell"><div class="m7-result-val" style="color:#D97706">'+fmtM7(annualPremium)+'/yr</div><div class="m7-result-lbl">Est. Premium</div></div>'+
+        '<div class="m7-result-cell"><div class="m7-result-val" style="color:'+(exist>0?'#059669':'#9CA3AF')+'">'+fmtM7(exist)+'</div><div class="m7-result-lbl">Personal Cover</div></div>'+
       '</div>'+
+      empNote+
       '<div style="margin-top:10px"><div class="m7-gap-track"><div class="m7-gap-fill" style="width:'+covPct+'%;background:'+(covPct>=100?'#059669':covPct>=50?'#D97706':'#DC2626')+'"></div></div><div class="m7-gap-labels"><span>0</span><span>50%</span><span>100%</span></div></div>'+
     '</div>'+insight;
 
   document.getElementById('m7HealthResult').style.display='block';
-  m7SaveProtectionData('health',{need:recommended,existing:exist,gap:gap,status:statusClass});
+  m7SaveProtectionData('health',{need:recommended,existing:totalExist,personal:exist,employer:empCover,gap:gap,status:statusClass});
 }
 
 // ── PROTECTION SCORE ──
@@ -6604,7 +6613,7 @@ function m7ShowTab(tab, el){
 
 // ── MODULE SWITCHER ──
 function switchToM7(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15','mod16'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod7').classList.add('act');
@@ -6698,7 +6707,7 @@ function switchToM7(){
       <div class="bsub" style="font-size:10px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px">Score Report · M8</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v5.0</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:rgba(255,255,255,.3);background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);padding:4px 8px;border-radius:20px">v5.1</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m8w">
@@ -7236,7 +7245,7 @@ function m8ShowTab(tab, el){
 
 // ── MODULE SWITCHER ──
 function switchToM8(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15','mod16'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod8').classList.add('act');
@@ -7372,7 +7381,7 @@ function switchToM8(){
       <div class="bsub" style="font-size:10px;color:#6B7280;text-transform:uppercase;letter-spacing:1px">Net Worth · M9</div>
     </div>
   </div>
-  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.0</div>
+  <div style="font-family:'DM Mono',monospace;font-size:11px;color:#9CA3AF;background:#F3F4F6;border:1px solid #E5E7EB;padding:4px 8px;border-radius:20px">v5.1</div>
 <button class="nav-burger" onclick="openNavDrawer()" aria-label="Menu"><span></span><span></span><span></span></button></header>
 
 <div class="m9w">
@@ -7410,10 +7419,13 @@ function switchToM8(){
       <div class="m9-row"><div class="m9-row-icon">📈</div><div class="m9-row-label">Mutual Funds (Equity)</div><input class="m9-row-input" type="number" id="a_mf" placeholder="0" oninput="m9Calc()"></div>
       <div class="m9-row"><div class="m9-row-icon">📊</div><div class="m9-row-label">Direct Stocks / Demat</div><input class="m9-row-input" type="number" id="a_stocks" placeholder="0" oninput="m9Calc()"></div>
       <div class="m9-row"><div class="m9-row-icon">🏛️</div><div class="m9-row-label">EPF / VPF Balance</div><input class="m9-row-input" type="number" id="a_epf" placeholder="0" oninput="m9Calc()"></div>
+      <div class="m9-row" style="margin-left:28px"><div class="m9-row-label" style="font-size:11px;color:#6B7280">Monthly EPF contribution (employee+employer)</div><input class="m9-row-input" type="number" id="a_epf_monthly" placeholder="0" oninput="m9Calc();m9SaveEPFToRetirement()" style="width:110px;font-size:12px"></div>
       <div class="m9-row"><div class="m9-row-icon">🎯</div><div class="m9-row-label">NPS Balance</div><input class="m9-row-input" type="number" id="a_nps" placeholder="0" oninput="m9Calc()"></div>
       <div class="m9-row"><div class="m9-row-icon">📦</div><div class="m9-row-label">PPF Balance</div><input class="m9-row-input" type="number" id="a_ppf" placeholder="0" oninput="m9Calc()"></div>
 
-      <div style="font-size:12px;color:#6B7280;font-weight:600;margin:12px 0 10px;text-transform:uppercase;letter-spacing:.6px">Physical Assets</div>
+      <div style="background:#EFF6FF;border:1px solid #BFDBFE;border-radius:10px;padding:10px 12px;margin:12px 0;font-size:12px;font-weight:600;color:#1E3A8A">🔗 EPF balance + monthly contribution auto-feeds the <span style="cursor:pointer;text-decoration:underline" onclick="switchToM13()">Retirement Runway (M13)</span> corpus calculator.</div>
+
+      <div style="font-size:12px;color:#6B7280;font-weight:600;margin:0 0 10px;text-transform:uppercase;letter-spacing:.6px">Physical Assets</div>
       <div class="m9-row"><div class="m9-row-icon">🏠</div><div class="m9-row-label">Property (Market Value)</div><input class="m9-row-input" type="number" id="a_property" placeholder="0" oninput="m9Calc()"></div>
       <div class="m9-row"><div class="m9-row-icon">🚗</div><div class="m9-row-label">Vehicle (Current Value)</div><input class="m9-row-input" type="number" id="a_vehicle" placeholder="0" oninput="m9Calc()"></div>
       <div class="m9-row"><div class="m9-row-icon">🥇</div><div class="m9-row-label">Gold / Jewellery</div><input class="m9-row-input" type="number" id="a_gold" placeholder="0" oninput="m9Calc()"></div>
@@ -7777,8 +7789,21 @@ function m9ShowTab(tab,el){
 }
 
 // ── MODULE SWITCHER ──
+// ── EPF → M13 bridge: save EPF data for Retirement Runway ──
+function m9SaveEPFToRetirement(){
+  try{
+    var epfBal = parseFloat(document.getElementById('a_epf').value)||0;
+    var epfMonthly = parseFloat(document.getElementById('a_epf_monthly').value)||0;
+    var existing = JSON.parse(localStorage.getItem('cp_retirement_inputs')||'{}');
+    existing.epfBalance = epfBal;
+    existing.epfMonthly = epfMonthly;
+    existing.epfUpdated = Date.now();
+    localStorage.setItem('cp_retirement_inputs', JSON.stringify(existing));
+  }catch(e){}
+}
+
 function switchToM9(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15','mod16'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod9').classList.add('act');
@@ -7876,6 +7901,11 @@ function switchToM9(){
     <div class="nav-item-icon" style="background:#EFF6FF">💼</div>
     <div class="nav-item-text"><span class="nav-item-name">Salary Optimiser</span><span class="nav-item-desc">CTC restructuring, more take-home</span></div>
   </button>
+  <div class="nav-drawer-section" style="color:#1E3A8A">🧾 Tax Filing</div>
+  <button class="nav-item" onclick="navTo_M('switchToM16')">
+    <div class="nav-item-icon" style="background:#EFF6FF">📄</div>
+    <div class="nav-item-text"><span class="nav-item-name">Form 16 / TDS Planner</span><span class="nav-item-desc">Salary tax, TDS, advance tax, ITR readiness</span></div>
+  </button>
   <div class="nav-drawer-section" style="color:#059669">✨ Phase 3</div>
   <button class="nav-item" onclick="navTo_M('switchToM15')" style="background:rgba(5,150,105,.05);border-bottom:1px solid #F3F4F6">
     <div class="nav-item-icon" style="background:#ECFDF5">🤖</div>
@@ -7894,8 +7924,8 @@ function openNavDrawer(){
   document.getElementById('navOverlay').classList.add('open');
   document.body.style.overflow='hidden';
   // Highlight active module
-  var mods=['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'];
-  var fns=['switchToM0','switchToM1','switchToM2','switchToM3','switchToM4','switchToM5','switchToM6','switchToM7','switchToM8','switchToM9','switchToM10','switchToM11','switchToM12','switchToM13','switchToM14','switchToM15'];
+  var mods=['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15','mod16'];
+  var fns=['switchToM0','switchToM1','switchToM2','switchToM3','switchToM4','switchToM5','switchToM6','switchToM7','switchToM8','switchToM9','switchToM10','switchToM11','switchToM12','switchToM13','switchToM14','switchToM15','switchToM16'];
   var activeMod='';
   mods.forEach(function(id,i){
     var el=document.getElementById(id);
@@ -8481,7 +8511,7 @@ function m10ShowTab(tab,el){
 
 // ── MODULE SWITCHER ──
 function switchToM10(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15','mod16'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod10').classList.add('act');
@@ -9064,7 +9094,7 @@ function m11ShowTab(tab,el){
 
 // ── MODULE SWITCHER ──
 function switchToM11(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15','mod16'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod11').classList.add('act');
@@ -9363,7 +9393,7 @@ function m12ShowTab(tab,el){
 }
 
 function switchToM12(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15','mod16'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod12').classList.add('act');
@@ -9429,8 +9459,14 @@ function switchToM12(){
     <input class="m13-input" type="number" id="r13Age" placeholder="e.g. 40" oninput="m13Calc()">
     <div class="m13-label">Monthly Expenses (₹)</div>
     <input class="m13-input" type="number" id="r13Expenses" placeholder="e.g. 80000" oninput="m13Calc()">
-    <div class="m13-label">Total Current Corpus (₹)</div>
+    <div class="m13-label">Total Current Corpus (₹) — all investments combined</div>
     <input class="m13-input" type="number" id="r13Corpus" placeholder="e.g. 5000000" oninput="m13Calc()">
+    <div style="background:#ECFDF5;border:1px solid #A7F3D0;border-radius:8px;padding:8px 12px;margin-bottom:10px;font-size:12px;color:#065F46;font-weight:600" id="m13EPFNote" style="display:none">
+      🏛️ Include your EPF balance from <span style="cursor:pointer;text-decoration:underline" onclick="switchToM9()">Net Worth (M9)</span> in the corpus above.
+    </div>
+    <div class="m13-label">Monthly EPF Contribution (₹) — employee + employer</div>
+    <input class="m13-input" type="number" id="r13EPFMonthly" placeholder="0 — if no EPF" oninput="m13Calc()">
+    <div style="font-size:11px;color:#6B7280;font-weight:600;margin-bottom:10px">EPF grows at 8.15% p.a. tax-free. Counted separately in your corpus projection.</div>
     <div class="m13-label">Annual Return on Corpus (%)</div>
     <select class="m13-select" id="r13Return" onchange="m13Calc()">
       <option value="6">6% — Conservative (FD / Debt)</option>
@@ -9477,7 +9513,26 @@ function m13Calc(){
   var ret=parseFloat(document.getElementById('r13Return').value)||7;
   var infl=parseFloat(document.getElementById('r13Infl').value)||6;
   var income=parseFloat(document.getElementById('r13Income').value)||0;
+  var epfMonthly=parseFloat(document.getElementById('r13EPFMonthly').value)||0;
+
+  // Pre-fill EPF from M9 if available
+  try{
+    var saved=JSON.parse(localStorage.getItem('cp_retirement_inputs')||'{}');
+    if(saved.epfMonthly&&!document.getElementById('r13EPFMonthly').value){
+      document.getElementById('r13EPFMonthly').value=saved.epfMonthly;
+      epfMonthly=saved.epfMonthly;
+    }
+  }catch(e){}
+
   if(!exp||!corpus)return;
+
+  // EPF corpus at retirement (project from now to age 60 at 8.15%)
+  var yearsToRetire = Math.max(0, 60 - age);
+  var epfRate = 8.15/12/100;
+  var epfFutureCorpus = epfMonthly > 0 && yearsToRetire > 0
+    ? epfMonthly * (Math.pow(1+epfRate, yearsToRetire*12) - 1) / epfRate
+    : 0;
+  var totalProjectedCorpus = corpus + epfFutureCorpus;
 
   var r=ret/12/100, i=infl/12/100;
   var balance=corpus;
@@ -9499,6 +9554,8 @@ function m13Calc(){
   // Target corpus (33x rule)
   var targetCorpus=annualExp*33;
   var corpusGap=Math.max(0,targetCorpus-corpus);
+  var projectedNote = epfFutureCorpus>0 ?
+    '<div style="background:#ECFDF5;border:1px solid #A7F3D0;border-radius:10px;padding:10px 12px;margin-bottom:10px;font-size:12px;font-weight:600;color:#065F46">🏛️ EPF corpus at 60 (projected): <strong>'+fmt13(epfFutureCorpus)+'</strong> — included in your runway calculation.</div>' : '';
   var sipNeeded=corpusGap>0&&age<60?corpusGap*(ret/12/100)/(Math.pow(1+ret/12/100,(60-age)*12)-1)/(1+ret/12/100):0;
 
   // Ring chart
@@ -9529,12 +9586,13 @@ function m13Calc(){
       '<div class="m13-result-box"><div class="m13-result-val" style="color:#D97706">'+fmt13(targetCorpus)+'</div><div class="m13-result-lbl">Target Corpus (33×)</div></div>'+
       '<div class="m13-result-box"><div class="m13-result-val" style="color:'+(corpusGap>0?'#DC2626':'#059669')+'">'+fmt13(corpusGap>0?-corpusGap:corpus-targetCorpus)+'</div><div class="m13-result-lbl">'+(corpusGap>0?'Corpus Gap':'Corpus Surplus')+'</div></div>'+
     '</div>'+
+    projectedNote+
     (sipNeeded>0?'<div style="background:#FFFBEB;border:1px solid #FCD34D;border-radius:12px;padding:12px 14px;margin-bottom:12px"><div style="font-size:13px;font-weight:700;color:#92400E">To bridge the gap by age 60</div><div style="font-family:\'DM Mono\',monospace;font-size:22px;font-weight:700;color:#D97706;margin-top:4px">'+fmt13(sipNeeded)+'/month SIP</div></div>':'')+
     '<div class="m13-insight">'+insightText+'</div>';
 }
 
 function switchToM13(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15','mod16'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod13').classList.add('act');
@@ -9717,7 +9775,7 @@ function m14Calc(){
 }
 
 function switchToM14(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15','mod16'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod14').classList.add('act');
@@ -10100,7 +10158,7 @@ function m15ClearChat(){
 
 // ── MODULE SWITCHER ──
 function switchToM15(){
-  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15'].forEach(function(id){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15','mod16'].forEach(function(id){
     var el=document.getElementById(id);if(el)el.classList.remove('act');
   });
   document.getElementById('mod15').classList.add('act');
@@ -10122,5 +10180,709 @@ function switchToM15(){
   },300);
 }
 </script>
+
+<!-- ══════ MODULE 16: FORM 16 / TDS PLANNER ══════ -->
+<div id="mod16" class="mod">
+<style>
+#mod16{background:#F5F6FA;min-height:100vh}
+#mod16 header{background:#fff;border-bottom:1px solid #E5E7EB;padding:16px 20px;display:flex;align-items:center;justify-content:space-between}
+.m16w{padding:0 16px 28px;max-width:480px;margin:0 auto}
+.m16-card{background:#fff;border:1px solid #E5E7EB;border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.m16-card-title{font-size:11px;letter-spacing:1.6px;text-transform:uppercase;color:#1E3A8A;margin-bottom:12px;font-weight:800}
+.m16-label{font-size:13px;color:#374151;margin-bottom:5px;font-weight:700}
+.m16-input{width:100%;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;padding:10px 13px;font-size:15px;font-weight:600;color:#111827;font-family:'DM Mono','DM Sans',sans-serif;margin-bottom:10px;box-sizing:border-box;transition:border-color .2s}
+.m16-input:focus{outline:none;border-color:#1E3A8A;box-shadow:0 0 0 3px rgba(30,58,138,.08)}
+.m16-select{width:100%;background:#fff;border:1.5px solid #E5E7EB;border-radius:10px;padding:10px 13px;font-size:14px;font-weight:600;color:#111827;margin-bottom:10px;appearance:none}
+.m16-select:focus{outline:none;border-color:#1E3A8A}
+.m16-btn{width:100%;padding:13px;background:linear-gradient(135deg,#1E3A8A,#2563EB);color:#fff;font-weight:700;border:none;border-radius:12px;cursor:pointer;font-size:15px;margin-top:2px}
+.m16-row{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.m16-row-icon{font-size:18px;width:26px;text-align:center;flex-shrink:0}
+.m16-row-label{font-size:13px;font-weight:600;color:#374151;flex:1;line-height:1.4}
+.m16-row-input{background:#F9FAFB;border:1.5px solid #E5E7EB;border-radius:10px;padding:8px 10px;font-size:13px;font-weight:600;color:#111827;font-family:'DM Mono',monospace;width:120px;text-align:right;box-sizing:border-box}
+.m16-row-input:focus{outline:none;border-color:#1E3A8A}
+.m16-tabs{display:flex;gap:5px;margin-bottom:16px;overflow-x:auto;scrollbar-width:none}
+.m16-tab{flex-shrink:0;padding:8px 12px;background:#fff;border:1.5px solid #E5E7EB;border-radius:20px;font-size:12px;font-weight:700;color:#6B7280;cursor:pointer;white-space:nowrap;transition:all .2s}
+.m16-tab.act{background:#EFF6FF;border-color:#BFDBFE;color:#1E3A8A}
+.m16-result-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.m16-result-box{background:#F9FAFB;border:1px solid #E5E7EB;border-radius:12px;padding:12px;text-align:center}
+.m16-result-val{font-family:'DM Mono',monospace;font-size:17px;font-weight:700;margin-bottom:3px}
+.m16-result-lbl{font-size:10px;color:#9CA3AF;font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+.m16-alert{border-radius:12px;padding:12px 14px;margin-bottom:10px;display:flex;align-items:flex-start;gap:10px}
+.m16-alert-icon{font-size:18px;flex-shrink:0}
+.m16-alert-text{flex:1;font-size:13px;font-weight:600;line-height:1.7}
+.m16-green{background:#ECFDF5;border:1px solid #A7F3D0}
+.m16-amber{background:#FFFBEB;border:1px solid #FCD34D}
+.m16-red{background:#FEF2F2;border:1px solid #FECACA}
+.m16-blue{background:#EFF6FF;border:1px solid #BFDBFE}
+.m16-section-divider{font-size:11px;color:#6B7280;font-weight:700;text-transform:uppercase;letter-spacing:.8px;padding:10px 0 6px;border-top:1px solid #F3F4F6;margin-top:4px}
+.m16-prog-wrap{margin:8px 0}
+.m16-prog-label{display:flex;justify-content:space-between;font-size:12px;font-weight:700;margin-bottom:4px}
+.m16-prog-track{width:100%;background:#F3F4F6;border-radius:6px;height:10px;overflow:hidden}
+.m16-prog-fill{height:10px;border-radius:6px;transition:width .5s}
+.m16-checklist-item{display:flex;align-items:flex-start;gap:10px;padding:9px 0;border-bottom:1px solid #F3F4F6}
+.m16-checklist-item:last-child{border:none}
+.m16-check-dot{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;flex-shrink:0;margin-top:1px}
+.m16-check-ok{background:#ECFDF5;color:#059669}
+.m16-check-warn{background:#FFFBEB;color:#D97706}
+.m16-check-no{background:#FEF2F2;color:#DC2626}
+.m16-tax-slab-row{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid #F3F4F6;font-size:13px}
+.m16-tax-slab-row:last-child{border:none}
+.m16-insight{font-size:13px;font-weight:600;color:#374151;line-height:1.85;padding:12px 14px;border-radius:10px;margin-top:10px}
+.m16-perq-row{display:flex;align-items:center;gap:8px;padding:8px 0;border-bottom:1px solid #F3F4F6}
+.m16-perq-row:last-child{border:none}
+</style>
+
+<div id="app16">
+<header>
+  <div class="brand">
+    <div class="blogo" style="background:linear-gradient(135deg,#1E3A8A,#2563EB)">🌊</div>
+    <div>
+      <div class="bname" style="color:#111827;font-size:17px;font-weight:800">Cauvery Pulse</div>
+      <div class="bsub" style="font-size:10px;color:#6B7280;font-weight:700;text-transform:uppercase;letter-spacing:1px">Form 16 / TDS Planner · M16</div>
+    </div>
+  </div>
+  <button class="nav-burger" onclick="openNavDrawer()"><span></span><span></span><span></span></button>
+</header>
+
+<div class="m16w">
+  <div style="padding:14px 0 12px;text-align:center">
+    <span style="font-size:40px;display:block;margin-bottom:6px">📄</span>
+    <div style="font-family:'Playfair Display',serif;font-size:22px;font-weight:900;color:#111827;margin-bottom:4px">Form 16 / <span style="color:#1E3A8A">TDS Planner</span></div>
+    <div style="font-size:13px;color:#6B7280;font-weight:600;line-height:1.7">FY 2025-26 · AY 2026-27 · Salaried employees</div>
+  </div>
+
+  <div class="m16-tabs" id="m16TabBar">
+    <div class="m16-tab act" onclick="m16ShowTab('salary',this)">💼 Salary</div>
+    <div class="m16-tab" onclick="m16ShowTab('tds',this)">🏛️ TDS</div>
+    <div class="m16-tab" onclick="m16ShowTab('perqs',this)">🎁 Perquisites</div>
+    <div class="m16-tab" onclick="m16ShowTab('sec89',this)">📜 Sec 89</div>
+    <div class="m16-tab" onclick="m16ShowTab('itr',this)">✅ ITR Check</div>
+  </div>
+
+  <!-- ═══ TAB 1: SALARY INCOME ═══ -->
+  <div id="m16tab-salary">
+    <div class="m16-card">
+      <div class="m16-card-title">💼 Form 16 Part B — Salary Breakup</div>
+      <div style="font-size:12px;color:#6B7280;font-weight:600;margin-bottom:12px">Enter as per your Form 16 Part B or salary slip. All amounts are annual (₹).</div>
+
+      <div class="m16-row"><div class="m16-row-icon">💰</div><div class="m16-row-label">Basic Salary</div><input class="m16-row-input" type="number" id="s16Basic" placeholder="0" oninput="m16Calc()"></div>
+      <div class="m16-row"><div class="m16-row-icon">🏠</div><div class="m16-row-label">HRA Received</div><input class="m16-row-input" type="number" id="s16HRA" placeholder="0" oninput="m16Calc()"></div>
+      <div class="m16-row"><div class="m16-row-icon">✈️</div><div class="m16-row-label">LTA (Leave Travel Allowance)</div><input class="m16-row-input" type="number" id="s16LTA" placeholder="0" oninput="m16Calc()"></div>
+      <div class="m16-row"><div class="m16-row-icon">📱</div><div class="m16-row-label">Special / Other Allowances</div><input class="m16-row-input" type="number" id="s16Other" placeholder="0" oninput="m16Calc()"></div>
+      <div class="m16-row"><div class="m16-row-icon">🏢</div><div class="m16-row-label">Employer NPS 80CCD(2)</div><input class="m16-row-input" type="number" id="s16NPS2" placeholder="0" oninput="m16Calc()"></div>
+      <div class="m16-row"><div class="m16-row-icon">🏛️</div><div class="m16-row-label">EPF Employee Contribution</div><input class="m16-row-input" type="number" id="s16EPF" placeholder="0" oninput="m16Calc()"></div>
+
+      <div class="m16-section-divider">Exemptions claimed</div>
+      <div class="m16-row"><div class="m16-row-icon">🏠</div><div class="m16-row-label">HRA Exemption (from M11 HRA calc)</div><input class="m16-row-input" type="number" id="s16HRAexempt" placeholder="0" oninput="m16Calc()"></div>
+      <div class="m16-row"><div class="m16-row-icon">✈️</div><div class="m16-row-label">LTA Exemption claimed</div><input class="m16-row-input" type="number" id="s16LTAexempt" placeholder="0" oninput="m16Calc()"></div>
+
+      <div class="m16-section-divider">Deductions</div>
+      <div class="m16-row"><div class="m16-row-icon">📋</div><div class="m16-row-label">Total 80C (EPF+ELSS+PPF+LIC etc)</div><input class="m16-row-input" type="number" id="s16_80c" placeholder="max 150000" oninput="m16Calc()"></div>
+      <div class="m16-row"><div class="m16-row-icon">🎯</div><div class="m16-row-label">NPS 80CCD(1B) extra ₹50K</div><input class="m16-row-input" type="number" id="s16_nps1b" placeholder="max 50000" oninput="m16Calc()"></div>
+      <div class="m16-row"><div class="m16-row-icon">🏥</div><div class="m16-row-label">80D Health Insurance</div><input class="m16-row-input" type="number" id="s16_80d" placeholder="max 25000" oninput="m16Calc()"></div>
+      <div class="m16-row"><div class="m16-row-icon">🏠</div><div class="m16-row-label">Sec 24(b) Home Loan Interest</div><input class="m16-row-input" type="number" id="s16_24b" placeholder="max 200000" oninput="m16Calc()"></div>
+      <div class="m16-row"><div class="m16-row-icon">🎓</div><div class="m16-row-label">80E Education Loan Interest</div><input class="m16-row-input" type="number" id="s16_80e" placeholder="0" oninput="m16Calc()"></div>
+
+      <div class="m16-section-divider">Regime</div>
+      <div class="m16-label">Tax Regime</div>
+      <select class="m16-select" id="s16Regime" onchange="m16Calc()">
+        <option value="new">New Regime — FY 2025-26 (default)</option>
+        <option value="old">Old Regime — with deductions</option>
+      </select>
+      <div class="m16-label">City (for HRA)</div>
+      <select class="m16-select" id="s16City" onchange="m16Calc()">
+        <option value="metro">Metro — Chennai, Mumbai, Delhi, Kolkata</option>
+        <option value="non_metro">Non-Metro</option>
+      </select>
+    </div>
+
+    <button class="m16-btn" onclick="m16Calc()">Calculate Taxable Income & Tax →</button>
+    <div id="m16SalaryResult" style="display:none;margin-top:14px"></div>
+  </div>
+
+  <!-- ═══ TAB 2: TDS ═══ -->
+  <div id="m16tab-tds" style="display:none">
+    <div class="m16-card">
+      <div class="m16-card-title">🏛️ Form 16 Part A — TDS by Employer</div>
+      <div style="font-size:12px;color:#6B7280;font-weight:600;margin-bottom:12px">Enter TDS deducted by employer each quarter. Check Form 16 Part A or Form 26AS on Income Tax Portal.</div>
+
+      <div class="m16-row"><div class="m16-row-icon">🗓️</div><div class="m16-row-label">Q1 TDS (Apr–Jun 2025)</div><input class="m16-row-input" type="number" id="tds16Q1" placeholder="0" oninput="m16CalcTDS()"></div>
+      <div class="m16-row"><div class="m16-row-icon">🗓️</div><div class="m16-row-label">Q2 TDS (Jul–Sep 2025)</div><input class="m16-row-input" type="number" id="tds16Q2" placeholder="0" oninput="m16CalcTDS()"></div>
+      <div class="m16-row"><div class="m16-row-icon">🗓️</div><div class="m16-row-label">Q3 TDS (Oct–Dec 2025)</div><input class="m16-row-input" type="number" id="tds16Q3" placeholder="0" oninput="m16CalcTDS()"></div>
+      <div class="m16-row"><div class="m16-row-icon">🗓️</div><div class="m16-row-label">Q4 TDS (Jan–Mar 2026)</div><input class="m16-row-input" type="number" id="tds16Q4" placeholder="0" oninput="m16CalcTDS()"></div>
+
+      <div class="m16-section-divider">Other TDS / Advance Tax</div>
+      <div class="m16-row"><div class="m16-row-icon">📈</div><div class="m16-row-label">TDS on FD interest (Sec 194A)</div><input class="m16-row-input" type="number" id="tds16FD" placeholder="0" oninput="m16CalcTDS()"></div>
+      <div class="m16-row"><div class="m16-row-icon">🏘️</div><div class="m16-row-label">TDS on rent received (Sec 194I)</div><input class="m16-row-input" type="number" id="tds16Rent" placeholder="0" oninput="m16CalcTDS()"></div>
+      <div class="m16-row"><div class="m16-row-icon">💵</div><div class="m16-row-label">Advance Tax paid (self)</div><input class="m16-row-input" type="number" id="tds16Adv" placeholder="0" oninput="m16CalcTDS()"></div>
+      <div class="m16-row"><div class="m16-row-icon">💸</div><div class="m16-row-label">Self Assessment Tax paid</div><input class="m16-row-input" type="number" id="tds16SAT" placeholder="0" oninput="m16CalcTDS()"></div>
+    </div>
+
+    <div id="m16TDSResult" style="display:none;margin-top:4px"></div>
+
+    <div class="m16-card">
+      <div class="m16-card-title">📅 Advance Tax Due Dates — FY 2025-26</div>
+      <div style="font-size:12px;color:#6B7280;margin-bottom:10px;font-weight:600">If your total tax liability exceeds ₹10,000 after TDS, advance tax is mandatory. Failure = 1% per month interest u/s 234B & 234C.</div>
+      <div style="font-size:13px;font-weight:600;color:#374151">
+        <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #F3F4F6"><span>15 Jun 2025</span><span style="color:#1E3A8A">15% of total tax</span></div>
+        <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #F3F4F6"><span>15 Sep 2025</span><span style="color:#1E3A8A">45% of total tax (cumulative)</span></div>
+        <div style="display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #F3F4F6"><span>15 Dec 2025</span><span style="color:#1E3A8A">75% of total tax (cumulative)</span></div>
+        <div style="display:flex;justify-content:space-between;padding:8px 0"><span>15 Mar 2026</span><span style="color:#1E3A8A">100% of total tax</span></div>
+      </div>
+      <div class="m16-alert m16-blue" style="margin-top:10px"><div class="m16-alert-icon">ℹ️</div><div class="m16-alert-text"><strong>Salaried employees:</strong> If your only income is salary and full TDS is deducted by employer, advance tax is not applicable. Advance tax applies when you have income from other sources (FD interest, capital gains, rental income, freelance).</div></div>
+    </div>
+  </div>
+
+  <!-- ═══ TAB 3: PERQUISITES ═══ -->
+  <div id="m16tab-perqs" style="display:none">
+    <div class="m16-card">
+      <div class="m16-card-title">🎁 Perquisite Tax Calculator</div>
+      <div style="font-size:12px;color:#6B7280;font-weight:600;margin-bottom:12px">Perquisites are non-cash benefits given by employer. They are taxable unless specifically exempt. Include in your Form 16 Part B gross salary.</div>
+
+      <div class="m16-section-divider">Company Car</div>
+      <div class="m16-label">Car provided by employer?</div>
+      <select class="m16-select" id="p16Car" onchange="m16CalcPerq()">
+        <option value="none">No company car</option>
+        <option value="lt1600">Car ≤ 1600cc</option>
+        <option value="gt1600">Car > 1600cc</option>
+      </select>
+      <div class="m16-label">Driver provided?</div>
+      <select class="m16-select" id="p16Driver" onchange="m16CalcPerq()">
+        <option value="no">No driver</option>
+        <option value="yes">Yes — employer provided driver</option>
+      </select>
+      <div class="m16-label">Car used for</div>
+      <select class="m16-select" id="p16CarUse" onchange="m16CalcPerq()">
+        <option value="both">Both official and personal use</option>
+        <option value="official">Only official use (not taxable)</option>
+      </select>
+
+      <div class="m16-section-divider">Rent-free Accommodation</div>
+      <div class="m16-label">Accommodation provided by employer?</div>
+      <select class="m16-select" id="p16Accom" onchange="m16CalcPerq()">
+        <option value="none">No accommodation benefit</option>
+        <option value="govt">Government employee accommodation</option>
+        <option value="private_metro">Private employer — Metro city</option>
+        <option value="private_other">Private employer — Other city</option>
+      </select>
+      <div class="m16-row"><div class="m16-row-icon">💰</div><div class="m16-row-label">Annual Salary (for accommodation %)</div><input class="m16-row-input" type="number" id="p16Salary" placeholder="0" oninput="m16CalcPerq()"></div>
+
+      <div class="m16-section-divider">ESOP / Stock Options</div>
+      <div class="m16-row"><div class="m16-row-icon">📊</div><div class="m16-row-label">ESOP exercised — FMV on exercise date</div><input class="m16-row-input" type="number" id="p16ESOP_FMV" placeholder="0" oninput="m16CalcPerq()"></div>
+      <div class="m16-row"><div class="m16-row-icon">📊</div><div class="m16-row-label">ESOP exercise price paid</div><input class="m16-row-input" type="number" id="p16ESOP_Price" placeholder="0" oninput="m16CalcPerq()"></div>
+      <div style="font-size:11px;color:#6B7280;font-weight:600;margin-bottom:10px">Taxable perquisite = FMV − Exercise Price. Taxed as salary in the year of exercise (not sale).</div>
+
+      <div class="m16-section-divider">Other Perquisites</div>
+      <div class="m16-row"><div class="m16-row-icon">🍽️</div><div class="m16-row-label">Meal coupons/cards (Sodexo etc)</div><input class="m16-row-input" type="number" id="p16Meal" placeholder="0" oninput="m16CalcPerq()"></div>
+      <div style="font-size:11px;color:#D97706;background:#FFFBEB;border-radius:8px;padding:7px 10px;margin-bottom:10px;font-weight:600">⚠️ Meal coupons exempt up to ₹50/meal × working days. Above this is taxable.</div>
+
+      <button class="m16-btn" onclick="m16CalcPerq()">Calculate Perquisite Tax Value →</button>
+      <div id="m16PerqResult" style="display:none;margin-top:12px"></div>
+    </div>
+
+    <div class="m16-card">
+      <div class="m16-card-title">📖 Perquisite — Key Rules</div>
+      <div style="font-size:13px;font-weight:600;color:#374151;line-height:1.9">
+        <div style="margin-bottom:8px"><strong style="color:#1E3A8A">Car perquisite (Rule 3):</strong> ≤1600cc = ₹1,800/month + ₹900 driver. >1600cc = ₹2,400/month + ₹900 driver. This is taxed even if actual car cost is much higher.</div>
+        <div style="margin-bottom:8px"><strong style="color:#1E3A8A">Rent-free accommodation:</strong> For private employer in metro city — 15% of salary. Non-metro — 10%. Furnished accommodation adds 10% of furniture cost.</div>
+        <div style="margin-bottom:8px"><strong style="color:#1E3A8A">ESOP timing:</strong> Taxed as perquisite on exercise (salary income). Subsequent gain on sale is capital gain (LTCG/STCG depending on holding period). Many employees miss this and get demand notices.</div>
+        <div><strong style="color:#1E3A8A">Laptop / phone provided:</strong> Not a perquisite if used for official purposes. If personal use is dominant, taxable at actual cost basis.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ TAB 4: SEC 89 RELIEF ═══ -->
+  <div id="m16tab-sec89" style="display:none">
+    <div class="m16-card">
+      <div class="m16-card-title">📜 Section 89 — Salary Arrear Relief</div>
+      <div style="font-size:13px;font-weight:600;color:#374151;line-height:1.85;margin-bottom:14px">If you received salary arrears (previous years' dues paid in lump sum this year), you can claim relief under Sec 89(1) to avoid higher tax. File Form 10E on the Income Tax Portal <strong style="color:#DC2626">before filing ITR</strong>.</div>
+
+      <div class="m16-label">Year arrear originally due (previous FY)</div>
+      <select class="m16-select" id="s89PrevFY">
+        <option value="2024">FY 2024-25</option>
+        <option value="2023">FY 2023-24</option>
+        <option value="2022">FY 2022-23</option>
+        <option value="2021">FY 2021-22</option>
+      </select>
+      <div class="m16-row"><div class="m16-row-icon">💰</div><div class="m16-row-label">Arrear amount received in FY 2025-26 (₹)</div><input class="m16-row-input" type="number" id="s89Arrear" placeholder="0" oninput="m16CalcSec89()"></div>
+      <div class="m16-row"><div class="m16-row-icon">📊</div><div class="m16-row-label">Total income this year (including arrear) (₹)</div><input class="m16-row-input" type="number" id="s89IncThis" placeholder="0" oninput="m16CalcSec89()"></div>
+      <div class="m16-row"><div class="m16-row-icon">📊</div><div class="m16-row-label">Total income in the previous year (₹)</div><input class="m16-row-input" type="number" id="s89IncPrev" placeholder="0" oninput="m16CalcSec89()"></div>
+      <div class="m16-label">Tax Regime</div>
+      <select class="m16-select" id="s89Regime">
+        <option value="new">New Regime</option>
+        <option value="old">Old Regime</option>
+      </select>
+
+      <button class="m16-btn" onclick="m16CalcSec89()">Calculate Sec 89 Relief →</button>
+      <div id="m16Sec89Result" style="display:none;margin-top:12px"></div>
+    </div>
+
+    <div class="m16-card">
+      <div class="m16-card-title">⚠️ Form 10E — File Before ITR</div>
+      <div style="background:#FEF2F2;border:1px solid #FECACA;border-radius:10px;padding:12px;margin-bottom:10px">
+        <div style="font-size:13px;font-weight:700;color:#991B1B">Critical: If you claim Sec 89 relief without filing Form 10E first, the department will send a demand notice.</div>
+      </div>
+      <div style="font-size:13px;font-weight:600;color:#374151;line-height:1.9">
+        <div style="margin-bottom:8px"><strong style="color:#1E3A8A">Step 1:</strong> Log in to incometax.gov.in</div>
+        <div style="margin-bottom:8px"><strong style="color:#1E3A8A">Step 2:</strong> Go to e-File → Income Tax Forms → Form 10E</div>
+        <div style="margin-bottom:8px"><strong style="color:#1E3A8A">Step 3:</strong> Fill Table A (salary arrear) and calculate relief</div>
+        <div style="margin-bottom:8px"><strong style="color:#1E3A8A">Step 4:</strong> Submit and download acknowledgement</div>
+        <div><strong style="color:#1E3A8A">Step 5:</strong> Then file your ITR — relief amount auto-populates</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ═══ TAB 5: ITR CHECK ═══ -->
+  <div id="m16tab-itr" style="display:none">
+    <div class="m16-card">
+      <div class="m16-card-title">✅ ITR Filing Readiness Check — AY 2026-27</div>
+      <div style="font-size:12px;color:#6B7280;font-weight:600;margin-bottom:14px">Due date: 31 July 2026 for non-audit cases. Answer each question to check your readiness.</div>
+      <div id="m16ITRForm"></div>
+      <button class="m16-btn" onclick="m16CalcITR()" style="margin-top:12px">Check My ITR Readiness →</button>
+      <div id="m16ITRResult" style="display:none;margin-top:12px"></div>
+    </div>
+
+    <div class="m16-card">
+      <div class="m16-card-title">📋 Which ITR Form?</div>
+      <div style="font-size:13px;font-weight:600;color:#374151;line-height:1.9">
+        <div style="background:#ECFDF5;border-radius:10px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #059669"><strong style="color:#065F46">ITR-1 (Sahaj):</strong> Salary + one house property + other income up to ₹50L. No capital gains. Simplest form — most salaried employees.</div>
+        <div style="background:#EFF6FF;border-radius:10px;padding:10px 12px;margin-bottom:8px;border-left:3px solid #2563EB"><strong style="color:#1E3A8A">ITR-2:</strong> Salary + capital gains (MF/stocks) + multiple house properties + foreign income. Mandatory if you sold MF/stocks this year.</div>
+        <div style="background:#FFFBEB;border-radius:10px;padding:10px 12px;border-left:3px solid #D97706"><strong style="color:#92400E">ITR-3:</strong> Business/professional income in addition to salary. Required if you have freelance income, consulting fees, or NSE F&O trading.</div>
+      </div>
+    </div>
+
+    <div class="m16-card">
+      <div class="m16-card-title">📁 Documents Checklist</div>
+      <div style="font-size:13px;font-weight:600;color:#374151;line-height:1.9">
+        <div style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid #F3F4F6"><span style="color:#059669;flex-shrink:0">✓</span> Form 16 Part A + Part B from employer (by 15 Jun)</div>
+        <div style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid #F3F4F6"><span style="color:#059669;flex-shrink:0">✓</span> Form 26AS — download from IT Portal (verify TDS entries)</div>
+        <div style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid #F3F4F6"><span style="color:#059669;flex-shrink:0">✓</span> AIS (Annual Information Statement) — check for mismatches</div>
+        <div style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid #F3F4F6"><span style="color:#059669;flex-shrink:0">✓</span> Bank interest certificates (all savings accounts)</div>
+        <div style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid #F3F4F6"><span style="color:#059669;flex-shrink:0">✓</span> Mutual fund capital gains statement (CAMS/Karvy)</div>
+        <div style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid #F3F4F6"><span style="color:#059669;flex-shrink:0">✓</span> Home loan interest certificate (from bank)</div>
+        <div style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid #F3F4F6"><span style="color:#059669;flex-shrink:0">✓</span> HRA rent receipts + landlord PAN (if rent > ₹1L/year)</div>
+        <div style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid #F3F4F6"><span style="color:#059669;flex-shrink:0">✓</span> 80C investment proofs (EPF, PPF, ELSS, LIC, tuition fees)</div>
+        <div style="display:flex;gap:8px;padding:7px 0;border-bottom:1px solid #F3F4F6"><span style="color:#059669;flex-shrink:0">✓</span> 80D health insurance premium receipts</div>
+        <div style="display:flex;gap:8px;padding:7px 0"><span style="color:#059669;flex-shrink:0">✓</span> EPF passbook (UAN portal) for balance and interest</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;padding:14px;font-size:11px;color:#9CA3AF;font-weight:600;letter-spacing:.8px">© Elango Industries Limited · Cauvery Pulse · M16<br>Educational guidance only. Consult your CA for filing.</div>
+</div>
+</div><!-- #app16 -->
+<div class="bnav"><!-- controlled by master nav --></div>
+<div class="toast" id="toast16"></div>
+</div><!-- #mod16 -->
+
+<script>
+// ══════════════════════════════════════════
+// M16 — FORM 16 / TDS PLANNER ENGINE v5.0
+// FY 2025-26 | AY 2026-27
+// ══════════════════════════════════════════
+
+function fmt16(n){
+  if(Math.abs(n)>=10000000) return '₹'+(n/10000000).toFixed(2)+' Cr';
+  if(Math.abs(n)>=100000)   return '₹'+(n/100000).toFixed(2)+' L';
+  if(Math.abs(n)>=1000)     return '₹'+(n/1000).toFixed(1)+' K';
+  return '₹'+Math.round(n).toLocaleString('en-IN');
+}
+
+// ── Tax calculation engine ──
+function m16CalcTax(taxableIncome, regime){
+  var tax = 0;
+  if(regime === 'new'){
+    // New regime FY 2025-26 slabs (post Budget 2025)
+    // Rebate u/s 87A: zero tax up to ₹12L (income), ₹12.75L for salaried (std deduction)
+    var slabs = [[300000,0],[300000,0.05],[300000,0.1],[300000,0.15],[300000,0.2],[Infinity,0.3]];
+    var rem = taxableIncome;
+    for(var i=0;i<slabs.length;i++){
+      var band = Math.min(rem, slabs[i][0]);
+      tax += band * slabs[i][1];
+      rem -= band;
+      if(rem<=0) break;
+    }
+    // 87A rebate: if taxable income ≤ 12,00,000 → zero tax
+    if(taxableIncome <= 1200000) tax = 0;
+  } else {
+    // Old regime slabs
+    var slabsOld = [[250000,0],[250000,0.05],[500000,0.2],[Infinity,0.3]];
+    var rem2 = taxableIncome;
+    for(var j=0;j<slabsOld.length;j++){
+      var band2 = Math.min(rem2, slabsOld[j][0]);
+      tax += band2 * slabsOld[j][1];
+      rem2 -= band2;
+      if(rem2<=0) break;
+    }
+    // 87A rebate: if taxable income ≤ 5,00,000 → zero tax (old regime)
+    if(taxableIncome <= 500000) tax = 0;
+  }
+  // Add 4% health & education cess
+  tax = tax * 1.04;
+  // Surcharge (simplified — 10% if 50L-1Cr, 15% if 1Cr-2Cr)
+  if(taxableIncome > 10000000) tax *= 1.15;
+  else if(taxableIncome > 5000000) tax *= 1.10;
+  return Math.round(tax);
+}
+
+// ── Main salary calc ──
+function m16Calc(){
+  var basic   = parseFloat(document.getElementById('s16Basic').value)||0;
+  var hra     = parseFloat(document.getElementById('s16HRA').value)||0;
+  var lta     = parseFloat(document.getElementById('s16LTA').value)||0;
+  var other   = parseFloat(document.getElementById('s16Other').value)||0;
+  var nps2    = parseFloat(document.getElementById('s16NPS2').value)||0;
+  var epf     = parseFloat(document.getElementById('s16EPF').value)||0;
+  var hraEx   = parseFloat(document.getElementById('s16HRAexempt').value)||0;
+  var ltaEx   = parseFloat(document.getElementById('s16LTAexempt').value)||0;
+  var c80     = Math.min(parseFloat(document.getElementById('s16_80c').value)||0, 150000);
+  var nps1b   = Math.min(parseFloat(document.getElementById('s16_nps1b').value)||0, 50000);
+  var d80     = Math.min(parseFloat(document.getElementById('s16_80d').value)||0, 25000);
+  var sec24b  = Math.min(parseFloat(document.getElementById('s16_24b').value)||0, 200000);
+  var d80e    = parseFloat(document.getElementById('s16_80e').value)||0;
+  var regime  = document.getElementById('s16Regime').value;
+
+  if(!basic) return;
+
+  var grossSalary = basic + hra + lta + other;
+  var stdDeduction = 75000; // FY 2025-26
+  var nps2Deduction = nps2; // 80CCD(2) allowed in both regimes
+
+  var taxableNew, taxableOld;
+
+  // New regime: only std deduction + 80CCD(2)
+  taxableNew = grossSalary - stdDeduction - nps2Deduction;
+  taxableNew = Math.max(0, taxableNew);
+
+  // Old regime: all exemptions and deductions
+  var hraExemptActual = Math.min(hraEx, hra);
+  taxableOld = grossSalary - hraExemptActual - ltaEx - stdDeduction - nps2Deduction
+               - Math.min(c80, 150000) - nps1b - d80 - sec24b - d80e;
+  taxableOld = Math.max(0, taxableOld);
+
+  var taxNew = m16CalcTax(taxableNew, 'new');
+  var taxOld = m16CalcTax(taxableOld, 'old');
+  var taxChosen = regime === 'new' ? taxNew : taxOld;
+  var taxableChosen = regime === 'new' ? taxableNew : taxableOld;
+  var saving = taxOld - taxNew;
+  var betterRegime = saving > 0 ? 'New' : 'Old';
+
+  // Save for TDS tab
+  try{
+    var d = JSON.parse(localStorage.getItem('cp_m16')||'{}');
+    d.totalTax = taxChosen; d.regime = regime; d.grossSalary = grossSalary;
+    d.taxableIncome = taxableChosen;
+    localStorage.setItem('cp_m16', JSON.stringify(d));
+  }catch(e){}
+
+  var r = document.getElementById('m16SalaryResult');
+  r.style.display = 'block';
+  r.innerHTML =
+    '<div class="m16-card">'+
+      '<div class="m16-card-title">📊 Your Tax Computation — FY 2025-26</div>'+
+      '<div class="m16-result-grid">'+
+        '<div class="m16-result-box"><div class="m16-result-val" style="color:#1E3A8A">'+fmt16(grossSalary)+'</div><div class="m16-result-lbl">Gross Salary</div></div>'+
+        '<div class="m16-result-box"><div class="m16-result-val" style="color:#374151">'+fmt16(taxableChosen)+'</div><div class="m16-result-lbl">Taxable Income</div></div>'+
+        '<div class="m16-result-box"><div class="m16-result-val" style="color:#DC2626">'+fmt16(taxChosen)+'</div><div class="m16-result-lbl">Total Tax ('+regime.charAt(0).toUpperCase()+regime.slice(1)+' Regime)</div></div>'+
+        '<div class="m16-result-box"><div class="m16-result-val" style="color:#059669">'+fmt16(Math.round(taxChosen/12))+'</div><div class="m16-result-lbl">Monthly TDS Expected</div></div>'+
+      '</div>'+
+      '<div style="background:#F0FDF4;border:1px solid #A7F3D0;border-radius:10px;padding:12px;margin-bottom:8px">'+
+        '<div style="font-size:12px;font-weight:700;color:#065F46;margin-bottom:6px">Deduction Breakdown (Old Regime)</div>'+
+        '<div style="font-size:12px;font-weight:600;color:#374151;line-height:1.9">'+
+          'Standard Deduction: '+fmt16(stdDeduction)+'<br>'+
+          'HRA Exemption: '+fmt16(hraExemptActual)+'<br>'+
+          'LTA Exemption: '+fmt16(ltaEx)+'<br>'+
+          '80C + 80CCC: '+fmt16(Math.min(c80,150000))+'<br>'+
+          'NPS 80CCD(1B): '+fmt16(nps1b)+'<br>'+
+          '80D Health: '+fmt16(d80)+'<br>'+
+          'Sec 24(b): '+fmt16(sec24b)+'<br>'+
+          '80E Edu Loan: '+fmt16(d80e)+'<br>'+
+          '80CCD(2) NPS: '+fmt16(nps2Deduction)+
+        '</div>'+
+      '</div>'+
+      '<div class="m16-alert '+(betterRegime==='New'?'m16-green':'m16-amber')+'">'+
+        '<div class="m16-alert-icon">'+(betterRegime==='New'?'✅':'⚖️')+'</div>'+
+        '<div class="m16-alert-text"><strong>'+betterRegime+' Regime saves more.</strong> '+
+          'New Regime Tax: '+fmt16(taxNew)+' | Old Regime Tax: '+fmt16(taxOld)+'. '+
+          (Math.abs(saving)>0?'Difference: '+fmt16(Math.abs(saving))+'/year.':'')+
+        '</div>'+
+      '</div>'+
+    '</div>';
+  m16CalcTDS();
+}
+
+// ── TDS reconciliation ──
+function m16CalcTDS(){
+  var q1 = parseFloat(document.getElementById('tds16Q1').value)||0;
+  var q2 = parseFloat(document.getElementById('tds16Q2').value)||0;
+  var q3 = parseFloat(document.getElementById('tds16Q3').value)||0;
+  var q4 = parseFloat(document.getElementById('tds16Q4').value)||0;
+  var fdTDS = parseFloat(document.getElementById('tds16FD').value)||0;
+  var rentTDS = parseFloat(document.getElementById('tds16Rent').value)||0;
+  var advTax = parseFloat(document.getElementById('tds16Adv').value)||0;
+  var satTax = parseFloat(document.getElementById('tds16SAT').value)||0;
+
+  var totalTDSPaid = q1+q2+q3+q4+fdTDS+rentTDS+advTax+satTax;
+  var totalTaxLiab = 0;
+  try{ totalTaxLiab = JSON.parse(localStorage.getItem('cp_m16')||'{}').totalTax||0; }catch(e){}
+
+  if(!totalTDSPaid && !totalTaxLiab) return;
+
+  var balance = totalTaxLiab - totalTDSPaid;
+  var isRefund = balance < 0;
+  var isBalance = balance > 0;
+
+  var statusColor = isRefund ? '#059669' : isBalance ? '#DC2626' : '#1E3A8A';
+  var statusText  = isRefund ? '✅ Refund Due: '+fmt16(Math.abs(balance)) :
+                   isBalance ? '⚠️ Balance Tax Due: '+fmt16(balance) :
+                   '✅ Fully Settled — No balance, no refund';
+  var statusNote  = isRefund ?
+    'Your employer has deducted more TDS than your actual liability. Claim refund when filing ITR by 31 July 2026. Refunds are processed within 30–45 days of filing.' :
+    isBalance ?
+    'You owe '+fmt16(balance)+' more. Pay as Self Assessment Tax (Challan 280) before filing ITR. Interest u/s 234A if filed after due date.' :
+    'TDS paid exactly matches your tax liability. File ITR by 31 July 2026.';
+
+  var advTaxNote = '';
+  if(balance > 10000 && (advTax+satTax) === 0){
+    advTaxNote = '<div class="m16-alert m16-amber" style="margin-top:10px"><div class="m16-alert-icon">⚠️</div><div class="m16-alert-text"><strong>Advance Tax may apply.</strong> Your balance tax is '+fmt16(balance)+'. If this is from non-salary income (FD, capital gains, rent), advance tax should have been paid in instalments. Interest u/s 234C may be levied.</div></div>';
+  }
+
+  var r = document.getElementById('m16TDSResult');
+  r.style.display = 'block';
+  r.innerHTML =
+    '<div class="m16-card">'+
+      '<div class="m16-card-title">🏛️ TDS Reconciliation — FY 2025-26</div>'+
+      '<div class="m16-result-grid">'+
+        '<div class="m16-result-box"><div class="m16-result-val" style="color:#DC2626">'+fmt16(totalTaxLiab)+'</div><div class="m16-result-lbl">Total Tax Liability</div></div>'+
+        '<div class="m16-result-box"><div class="m16-result-val" style="color:#059669">'+fmt16(totalTDSPaid)+'</div><div class="m16-result-lbl">Total TDS + Adv Tax</div></div>'+
+        '<div class="m16-result-box"><div class="m16-result-val" style="color:#374151">'+fmt16(q1+q2+q3+q4)+'</div><div class="m16-result-lbl">Employer TDS (Form 16A)</div></div>'+
+        '<div class="m16-result-box"><div class="m16-result-val" style="color:'+statusColor+'">'+fmt16(Math.abs(balance))+'</div><div class="m16-result-lbl">'+(isRefund?'Refund':isBalance?'Balance Due':'Settled')+'</div></div>'+
+      '</div>'+
+      '<div class="m16-prog-wrap">'+
+        '<div class="m16-prog-label"><span>TDS Coverage</span><span style="color:'+statusColor+'">'+Math.round(Math.min(100,totalTaxLiab>0?totalTDSPaid/totalTaxLiab*100:100))+'%</span></div>'+
+        '<div class="m16-prog-track"><div class="m16-prog-fill" style="width:'+Math.round(Math.min(100,totalTaxLiab>0?totalTDSPaid/totalTaxLiab*100:100))+'%;background:'+statusColor+'"></div></div>'+
+      '</div>'+
+      '<div class="m16-alert '+(isRefund?'m16-green':isBalance?'m16-red':'m16-blue')+'" style="margin-top:10px">'+
+        '<div class="m16-alert-icon">'+(isRefund?'💚':isBalance?'🔴':'✅')+'</div>'+
+        '<div class="m16-alert-text"><strong>'+statusText+'</strong><br>'+statusNote+'</div>'+
+      '</div>'+
+      advTaxNote+
+    '</div>';
+}
+
+// ── Perquisite calculator ──
+function m16CalcPerq(){
+  var car = document.getElementById('p16Car').value;
+  var driver = document.getElementById('p16Driver').value;
+  var carUse = document.getElementById('p16CarUse').value;
+  var accom = document.getElementById('p16Accom').value;
+  var salary = parseFloat(document.getElementById('p16Salary').value)||0;
+  var esopFMV = parseFloat(document.getElementById('p16ESOP_FMV').value)||0;
+  var esopPrice = parseFloat(document.getElementById('p16ESOP_Price').value)||0;
+  var meal = parseFloat(document.getElementById('p16Meal').value)||0;
+
+  var carPerq = 0, driverPerq = 0, accomPerq = 0, esopPerq = 0, mealPerq = 0;
+  var lines = [];
+
+  // Car perquisite (Rule 3 — monthly rates, annual = × 12)
+  if(car !== 'none' && carUse === 'both'){
+    carPerq = (car === 'lt1600' ? 1800 : 2400) * 12;
+    driverPerq = driver === 'yes' ? 900 * 12 : 0;
+    lines.push({label: 'Car perquisite ('+(car==='lt1600'?'≤1600cc':'>1600cc')+')', val: carPerq});
+    if(driverPerq) lines.push({label: 'Driver perquisite', val: driverPerq});
+  }
+
+  // Accommodation
+  if(accom === 'private_metro' && salary > 0){
+    accomPerq = salary * 0.15;
+    lines.push({label: 'Rent-free accommodation (15% of salary)', val: accomPerq});
+  } else if(accom === 'private_other' && salary > 0){
+    accomPerq = salary * 0.10;
+    lines.push({label: 'Accommodation benefit (10% of salary)', val: accomPerq});
+  } else if(accom === 'govt'){
+    lines.push({label: 'Govt accommodation — license fee based', val: 0, note: 'Value = license fee × months'});
+  }
+
+  // ESOP
+  esopPerq = Math.max(0, esopFMV - esopPrice);
+  if(esopFMV > 0) lines.push({label: 'ESOP perquisite (FMV − Exercise Price)', val: esopPerq});
+
+  // Meal coupons: ₹50 per meal × ~22 working days × 12 = ₹13,200 exempt
+  var mealExempt = 50 * 22 * 12;
+  mealPerq = Math.max(0, meal - mealExempt);
+  if(meal > 0) lines.push({label: 'Meal coupon taxable (above ₹'+mealExempt.toLocaleString('en-IN')+' exempt)', val: mealPerq});
+
+  var total = carPerq + driverPerq + accomPerq + esopPerq + mealPerq;
+
+  if(!lines.length && total === 0) return;
+
+  var r = document.getElementById('m16PerqResult');
+  r.style.display = 'block';
+  r.innerHTML =
+    '<div class="m16-card">'+
+      '<div class="m16-card-title">🎁 Perquisite Tax Value Summary</div>'+
+      lines.map(function(l){
+        return '<div class="m16-perq-row">'+
+          '<div style="flex:1;font-size:13px;font-weight:600;color:#374151">'+l.label+'</div>'+
+          '<div style="font-family:\'DM Mono\',monospace;font-size:14px;font-weight:700;color:#DC2626">'+fmt16(l.val)+'</div>'+
+        '</div>';
+      }).join('')+
+      '<div style="display:flex;justify-content:space-between;padding:12px 0 0;border-top:2px solid #F3F4F6;margin-top:6px">'+
+        '<span style="font-size:14px;font-weight:700;color:#111827">Total Taxable Perquisites</span>'+
+        '<span style="font-family:\'DM Mono\',monospace;font-size:18px;font-weight:700;color:#DC2626">'+fmt16(total)+'</span>'+
+      '</div>'+
+      '<div class="m16-alert m16-amber" style="margin-top:10px"><div class="m16-alert-icon">⚠️</div><div class="m16-alert-text"><strong>Add '+fmt16(total)+' to your gross salary</strong> in the Salary tab. Employer should include this in Form 16 Part B. If not included, you must declare it manually in ITR under "Salary".</div></div>'+
+    '</div>';
+}
+
+// ── Sec 89 relief ──
+function m16CalcSec89(){
+  var arrear = parseFloat(document.getElementById('s89Arrear').value)||0;
+  var incThis = parseFloat(document.getElementById('s89IncThis').value)||0;
+  var incPrev = parseFloat(document.getElementById('s89IncPrev').value)||0;
+  var regime = document.getElementById('s89Regime').value;
+
+  if(!arrear || !incThis || !incPrev) return;
+
+  var taxWithArrear = m16CalcTax(incThis, regime);
+  var taxWithoutArrear = m16CalcTax(incThis - arrear, regime);
+  var extraTaxThisYear = taxWithArrear - taxWithoutArrear;
+
+  var taxPrevWithArrear = m16CalcTax(incPrev + arrear, regime);
+  var taxPrevNormal = m16CalcTax(incPrev, regime);
+  var extraTaxPrevYear = taxPrevWithArrear - taxPrevNormal;
+
+  var relief = Math.max(0, extraTaxThisYear - extraTaxPrevYear);
+  var hasRelief = relief > 0;
+
+  var r = document.getElementById('m16Sec89Result');
+  r.style.display = 'block';
+  r.innerHTML =
+    '<div class="m16-card">'+
+      '<div class="m16-card-title">📜 Section 89(1) Relief Computation</div>'+
+      '<div class="m16-result-grid">'+
+        '<div class="m16-result-box"><div class="m16-result-val" style="color:#DC2626">'+fmt16(extraTaxThisYear)+'</div><div class="m16-result-lbl">Extra Tax This Year</div></div>'+
+        '<div class="m16-result-box"><div class="m16-result-val" style="color:#D97706">'+fmt16(extraTaxPrevYear)+'</div><div class="m16-result-lbl">Tax if Received in Prev Year</div></div>'+
+        '<div class="m16-result-box"><div class="m16-result-val" style="color:'+(hasRelief?'#059669':'#9CA3AF')+'">'+fmt16(relief)+'</div><div class="m16-result-lbl">Sec 89 Relief</div></div>'+
+        '<div class="m16-result-box"><div class="m16-result-val" style="color:#1E3A8A">'+fmt16(taxWithArrear - relief)+'</div><div class="m16-result-lbl">Net Tax After Relief</div></div>'+
+      '</div>'+
+      '<div class="m16-alert '+(hasRelief?'m16-green':'m16-blue')+'">'+
+        '<div class="m16-alert-icon">'+(hasRelief?'✅':'ℹ️')+'</div>'+
+        '<div class="m16-alert-text">'+
+          (hasRelief ?
+            '<strong>You qualify for Sec 89(1) relief of '+fmt16(relief)+'.</strong> File Form 10E on incometax.gov.in before submitting ITR. Without Form 10E, relief will be disallowed.' :
+            '<strong>No benefit from Sec 89 in this case.</strong> The arrear did not push you into a higher tax slab difference. You may still choose to file Form 10E as a precaution.')+
+        '</div>'+
+      '</div>'+
+    '</div>';
+}
+
+// ── ITR readiness ──
+var M16_ITR_ITEMS = [
+  {id:'f16', q:'Have you received Form 16 from your employer?', opts:['Yes — have it', 'Not yet (due by 15 Jun)', 'No employer / self-employed']},
+  {id:'f26', q:'Have you checked Form 26AS on the IT Portal?', opts:['Yes — TDS entries match', 'Checked — minor mismatch', 'Not checked yet']},
+  {id:'ais', q:'Have you reviewed your AIS (Annual Information Statement)?', opts:['Yes — no surprises', 'Yes — noticed unreported income', 'Not reviewed yet']},
+  {id:'cg',  q:'Do you have any capital gains this year (MF/stocks sold)?', opts:['No capital gains', 'Yes — LTCG only', 'Yes — STCG or LTCG + STCG']},
+  {id:'rent',q:'Did you earn any rental income?', opts:['No rental income', 'Yes — declared to employer', 'Yes — not declared to employer']},
+  {id:'bank',q:'Do you have interest from savings/FD/RD?', opts:['No / below ₹10,000', 'Yes — declared to employer', 'Yes — not declared yet']},
+  {id:'nl',  q:'Did you incur capital loss this year?', opts:['No losses', 'Yes — want to carry forward', 'Not sure']},
+];
+
+function m16BuildITRForm(){
+  var el = document.getElementById('m16ITRForm');
+  if(!el || el.innerHTML) return;
+  el.innerHTML = M16_ITR_ITEMS.map(function(item){
+    return '<div style="margin-bottom:14px;padding-bottom:12px;border-bottom:1px solid #F3F4F6">'+
+      '<div style="font-size:13px;font-weight:700;color:#111827;margin-bottom:8px">'+item.q+'</div>'+
+      item.opts.map(function(opt,i){
+        return '<label style="display:flex;align-items:center;gap:8px;padding:7px 10px;border:1px solid #E5E7EB;border-radius:8px;margin-bottom:5px;cursor:pointer;font-size:12px;font-weight:600;color:#374151">'+
+          '<input type="radio" name="m16_'+item.id+'" value="'+i+'" style="accent-color:#1E3A8A">'+opt+'</label>';
+      }).join('')+
+    '</div>';
+  }).join('');
+}
+
+function m16CalcITR(){
+  var answers = {};
+  M16_ITR_ITEMS.forEach(function(item){
+    var sel = document.querySelector('input[name="m16_'+item.id+'"]:checked');
+    answers[item.id] = sel ? parseInt(sel.value) : -1;
+  });
+
+  // Determine ITR form
+  var itrForm = 'ITR-1';
+  var issues = [];
+  var warnings = [];
+  var ok = [];
+
+  if(answers.f16 === 0) ok.push('Form 16 received ✓');
+  else if(answers.f16 === 1) warnings.push('Form 16 not yet received — wait until 15 Jun 2026 before filing');
+  else if(answers.f16 === 2) warnings.push('No employer TDS — ensure all income is self-declared');
+
+  if(answers.f26 === 0) ok.push('Form 26AS verified — TDS matches ✓');
+  else if(answers.f26 === 1) issues.push('Form 26AS mismatch — reconcile before filing. Mismatched TDS leads to notice');
+
+  if(answers.ais === 1) issues.push('AIS shows unreported income — must include in ITR to avoid notice');
+  else if(answers.ais === 2) warnings.push('Review AIS before filing — it shows all financial transactions registered');
+
+  if(answers.cg === 1){ itrForm = 'ITR-2'; ok.push('LTCG reported → ITR-2 required ✓'); }
+  if(answers.cg === 2){ itrForm = 'ITR-2'; warnings.push('STCG + LTCG → ITR-2 mandatory'); }
+
+  if(answers.rent === 2) issues.push('Rental income not declared to employer — disclose in ITR. Undisclosed rent is flagged by AIS');
+  else if(answers.rent === 1) ok.push('Rental income declared ✓');
+
+  if(answers.bank === 2) warnings.push('Bank interest not declared — include in ITR under "Other sources". Below ₹10,000 savings interest exempt u/s 80TTA');
+  else if(answers.bank === 1) ok.push('Bank interest declared ✓');
+
+  if(answers.nl === 1) { itrForm = 'ITR-2'; ok.push('Capital loss — carry forward needs ITR-2 ✓'); }
+
+  var readinessScore = ok.length;
+  var totalItems = ok.length + warnings.length + issues.length;
+  var pct = totalItems > 0 ? Math.round(readinessScore/totalItems*100) : 0;
+  var color = pct >= 75 ? '#059669' : pct >= 50 ? '#D97706' : '#DC2626';
+
+  var r = document.getElementById('m16ITRResult');
+  r.style.display = 'block';
+  r.innerHTML =
+    '<div class="m16-card">'+
+      '<div class="m16-card-title">✅ ITR Readiness Report</div>'+
+      '<div style="text-align:center;padding:14px 0">'+
+        '<div style="font-family:\'DM Mono\',monospace;font-size:38px;font-weight:700;color:'+color+'">'+pct+'%</div>'+
+        '<div style="font-size:14px;font-weight:700;color:'+color+'">Ready to File</div>'+
+        '<div style="display:inline-block;background:#EFF6FF;border:1px solid #BFDBFE;border-radius:20px;padding:5px 16px;margin-top:8px;font-size:13px;font-weight:700;color:#1E3A8A">Use: '+itrForm+'</div>'+
+      '</div>'+
+      '<div class="m16-prog-wrap">'+
+        '<div class="m16-prog-label"><span>Readiness</span><span style="color:'+color+'">'+pct+'%</span></div>'+
+        '<div class="m16-prog-track"><div class="m16-prog-fill" style="width:'+pct+'%;background:'+color+'"></div></div>'+
+      '</div>'+
+      (issues.length ? '<div class="m16-alert m16-red" style="margin-top:10px"><div class="m16-alert-icon">🔴</div><div class="m16-alert-text"><strong>Action required:</strong><br>'+issues.map(function(i){return '• '+i;}).join('<br>')+'</div></div>' : '')+
+      (warnings.length ? '<div class="m16-alert m16-amber"><div class="m16-alert-icon">⚠️</div><div class="m16-alert-text"><strong>Pending items:</strong><br>'+warnings.map(function(w){return '• '+w;}).join('<br>')+'</div></div>' : '')+
+      (ok.length ? '<div class="m16-alert m16-green"><div class="m16-alert-icon">✅</div><div class="m16-alert-text"><strong>Done:</strong><br>'+ok.map(function(o){return '• '+o;}).join('<br>')+'</div></div>' : '')+
+      '<div style="background:#EFF6FF;border-radius:10px;padding:10px 12px;margin-top:10px;font-size:12px;font-weight:600;color:#1E3A8A">📅 <strong>ITR due: 31 July 2026</strong>. Late filing: ₹5,000 penalty (₹1,000 if income below ₹5L). File by due date even if refund is due.</div>'+
+    '</div>';
+}
+
+// ── Tab switching ──
+function m16ShowTab(tab, el){
+  ['salary','tds','perqs','sec89','itr'].forEach(function(t){
+    var e = document.getElementById('m16tab-'+t);
+    if(e) e.style.display = 'none';
+  });
+  document.querySelectorAll('.m16-tab').forEach(function(t){ t.classList.remove('act'); });
+  document.getElementById('m16tab-'+tab).style.display = 'block';
+  if(el) el.classList.add('act');
+  if(tab === 'itr') m16BuildITRForm();
+}
+
+// ── Module switcher ──
+function switchToM16(){
+  ['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15','mod16'].forEach(function(id){
+    var el = document.getElementById(id); if(el) el.classList.remove('act');
+  });
+  document.getElementById('mod16').classList.add('act');
+  window.scrollTo(0,0);
+}
+</script>
+
 </body>
 </html>
