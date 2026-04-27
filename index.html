@@ -8,7 +8,7 @@
 <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
-<!-- Cauvery Pulse | v5.1 | Build: 20260427-1430 | Elango Industries Limited -->
+<!-- Cauvery Pulse | v5.1 | Build: 20260427-1500 | Elango Industries Limited -->
 <title>Cauvery Pulse</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
 <script>
@@ -585,6 +585,8 @@ strong { color:#111827 }
   transition:right .28s cubic-bezier(.4,0,.2,1);
   box-shadow:-4px 0 24px rgba(0,0,0,.12);
   display:flex; flex-direction:column;
+  pointer-events:all;
+  -webkit-overflow-scrolling:touch;
 }
 .nav-drawer.open { right:0; }
 
@@ -7815,8 +7817,8 @@ function switchToM9(){
 </script>
 
 <!-- ══ NAV DRAWER ══ -->
-<div class="nav-overlay" id="navOverlay" onclick="closeNavDrawer()"></div>
-<div class="nav-drawer" id="navDrawer">
+<div class="nav-overlay" id="navOverlay"></div>
+<div class="nav-drawer" id="navDrawer" onclick="event.stopPropagation()">
   <div class="nav-drawer-header">
     <div class="nav-drawer-title">🌊 Cauvery Pulse</div>
     <button class="nav-drawer-close" onclick="closeNavDrawer()">✕</button>
@@ -7879,15 +7881,6 @@ function switchToM9(){
     <div class="nav-item-icon" style="background:#EFF6FF">🧾</div>
     <div class="nav-item-text"><span class="nav-item-name">Tax Optimiser</span><span class="nav-item-desc">80C, HRA, LTCG, regime comparison</span></div>
   </button>
-  <div class="nav-drawer-section">Track</div>
-  <button class="nav-item" onclick="navTo_M('switchToM10')">
-    <div class="nav-item-icon" style="background:#ECFDF5">📈</div>
-    <div class="nav-item-text"><span class="nav-item-name">SIP Tracker</span><span class="nav-item-desc">All SIPs, XIRR, portfolio summary</span></div>
-  </button>
-  <button class="nav-item" onclick="navTo_M('switchToM11')">
-    <div class="nav-item-icon" style="background:#EFF6FF">🧾</div>
-    <div class="nav-item-text"><span class="nav-item-name">Tax Optimiser</span><span class="nav-item-desc">80C, HRA, LTCG, regime comparison</span></div>
-  </button>
   <div class="nav-drawer-section">Manage</div>
   <button class="nav-item" onclick="navTo_M('switchToM12')">
     <div class="nav-item-icon" style="background:#FEF2F2">📅</div>
@@ -7923,6 +7916,9 @@ function openNavDrawer(){
   document.getElementById('navDrawer').classList.add('open');
   document.getElementById('navOverlay').classList.add('open');
   document.body.style.overflow='hidden';
+  // Bind overlay click once
+  var ov=document.getElementById('navOverlay');
+  ov.onclick=function(e){ if(e.target===ov) closeNavDrawer(); };
   // Highlight active module
   var mods=['mod0','mod1','mod2','mod3','mod4','mod5','mod6','mod7','mod8','mod9','mod10','mod11','mod12','mod13','mod14','mod15','mod16'];
   var fns=['switchToM0','switchToM1','switchToM2','switchToM3','switchToM4','switchToM5','switchToM6','switchToM7','switchToM8','switchToM9','switchToM10','switchToM11','switchToM12','switchToM13','switchToM14','switchToM15','switchToM16'];
